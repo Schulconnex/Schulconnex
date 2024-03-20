@@ -85,6 +85,18 @@ const config = {
             label: 'API Quellsysteme (PaloAlto)',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'apiDiensteSidebarRapiDoc',
+            position: 'left',
+            label: 'API Dienste (RapiDoc)',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'apiQSSidebarRapiDoc',
+            position: 'left',
+            label: 'API Quellsysteme (RapiDoc)',
+          },
+          {
             href: 'https://github.com/Schulconnex/Schulconnex',
             label: 'GitHub',
             position: 'right',
