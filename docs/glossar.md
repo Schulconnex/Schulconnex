@@ -1,0 +1,3 @@
+# Glossar
+
+Platzhalter
