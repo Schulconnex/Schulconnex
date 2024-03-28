@@ -2,6 +2,11 @@
 
 ### Local Development
 
+Generate API Docs:
+```
+$ docusaurus gen-api-docs all && docusaurus gen-api-docs:version apiDienste:all && docusaurus gen-api-docs:version apiQuellsysteme:all
+```
+
 ```
 $ npm start
 ```
