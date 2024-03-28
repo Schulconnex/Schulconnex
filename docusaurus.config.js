@@ -30,8 +30,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'de',
+    locales: ['de'],
   },
 
   presets: [
@@ -45,7 +45,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          docItemComponent: "@theme/ApiItem"
+          docItemComponent: "@theme/ApiItem",
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -97,6 +97,11 @@ const config = {
             label: 'API Quellsysteme (RapiDoc)',
           },
           {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: false,
+          },
+          {
             href: 'https://github.com/Schulconnex/Schulconnex',
             label: 'GitHub',
             position: 'right',
@@ -145,17 +150,39 @@ const config = {
         config: {
           apiDienste: { // is considered the <id> that you will reference in the CLI
             specPath: "static/openapi/api-dienste.yaml", // path or URL to the OpenAPI spec
-            outputDir: "docs/schulconnex-api-by-plugin/dienste", // output directory for generated *.mdx and sidebar.js files
+            outputDir: "docs/schulconnex-api-by-plugin/v1/dienste", // output directory for generated *.mdx and sidebar.js files
             sidebarOptions: {
               groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
             },
+            version: "v1",
+            label: "current",
+            baseUrl: "./",
+            versions: {
+              'v0': {
+                specPath: 'static/openapi/v0/api-dienste.yaml',
+                outputDir: 'docs/schulconnex-api-by-plugin/v0/dienste',
+                label: 'v0',
+                baseUrl: 'schulconnex-api-by-plugin/v0/'
+              }
+            }
           },
           apiQuellsysteme: { // is considered the <id> that you will reference in the CLI
             specPath: "static/openapi/api-qs.yaml", // path or URL to the OpenAPI spec
-            outputDir: "docs/schulconnex-api-by-plugin/qs", // output directory for generated *.mdx and sidebar.js files
+            outputDir: "docs/schulconnex-api-by-plugin/v1/qs", // output directory for generated *.mdx and sidebar.js files
             sidebarOptions: {
               groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
             },
+            version: "v1",
+            label: "current",
+            baseUrl: "./",
+            versions: {
+              'v0': {
+                specPath: 'static/openapi/v0/api-qs.yaml',
+                outputDir: 'docs/schulconnex-api-by-plugin/v0/qs',
+                label: 'v0',
+                baseUrl: 'schulconnex-api-by-plugin/v0/',
+              }
+            }
           }
         }
       },
