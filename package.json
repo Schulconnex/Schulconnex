@@ -16,11 +16,15 @@
   "dependencies": {
     "@docusaurus/core": "3.1.1",
     "@docusaurus/preset-classic": "3.1.1",
+    "@docusaurus/theme-common": "^3.1.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-openapi-docs": "^3.0.0-beta.5",
     "docusaurus-theme-openapi-docs": "^3.0.0-beta.5",
     "prism-react-renderer": "^2.3.0",
+    "rapidoc": "^9.3.4",
+    "rapipdf": "^2.2.1",
+    "raw-loader": "^4.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
