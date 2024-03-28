@@ -1,0 +1,2973 @@
+openapi: 3.0.1
+info:
+  title: 'Sanis Quellsysteme API '
+  contact: {}
+  license:
+    name: ''
+    url: ''
+  version: V1
+paths:
+  /personenkontexte/{personenkontextId}/beziehungen:
+    get:
+      description: |
+        Endpoint to create and initiate a pipeline.
+
+        ### Paragraph
+        In a hole in the ground there lived a hobbit. Not a **nasty**, _dirty_, `wet` hole, filled with the ends
+        of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+        eat: it was a [hobbit-hole](https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"), and that means comfort.
+
+
+        ### Horizontal Rule `---`
+        ---
+
+        ### Number List
+        1. Install `node`.
+        2. Install `npm`.
+        3. Open your editor
+        4. Create a JavaScript file
+
+        ### Blockquotes
+        > This is a sample OpenAPI spec to test the parsing of various markdown styles
+        > (RapiDoc supports common-mark syntax)
+
+        ### Buleted List
+        - Install `node`.
+        - Install `npm`.
+        - Open you editor
+        - Create a JavaScript file
+
+        ### Table
+        | Heading 1 | Left-Justified | Centered | Right-Justified |
+        | --------- | :------------- | :------: | --------------: |
+        | text | text | text | text |
+        | text | text | text | text |
+        | text | text | text | text |
+
+        ### Code
+        ```
+        $ curl -X POST -is -u username:password
+          -H "Content-Type: application/json" https://example.com
+          -d '{
+          "target": {
+            "ref_type": "branch",
+            "type": "pipeline_ref_target",
+            "ref_name": "master"
+          }'
+        }
+        ```
+        ### Code (with syntax highlight)
+        ```bash
+        $ curl -X POST -is -u username:password
+          -H "Content-Type: application/json" https://example.com
+          -d '{
+          "target": {
+            "ref_type": "branch",
+            "type": "pipeline_ref_target",
+            "ref_name": "master"
+          }'
+        }
+        ```
+
+        ### Images
+        Inline Images no-gap - ![appspot image filler](http://ipsumimage.appspot.com/100)![appspot image filler](http://ipsumimage.appspot.com/100)
+
+        Inline Images Single space gap - ![appspot image filler](http://ipsumimage.appspot.com/100)
+        ![appspot image filler](http://ipsumimage.appspot.com/100)
+
+        Next Line Image
+
+        ![appspot image filler](http://ipsumimage.appspot.com/140x100.png)
+      operationId: searchBeziehungen
+      parameters:
+        - name: personenkontextId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: hat_als_beziehungen
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              Der Defaultwert ist "ja", es werden also ohne Filterangabe alle
+              Beziehungen angegeben, welche ein Personenkontext hat.
+            example: '32142342'
+        - name: ist_von_beziehungen
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              Der Defaultwert ist "nein", es werden also ohne Filterangabe keine
+              Beziehungen angegeben, welche zu dem gegebenen Personenkontext
+              bestehen.
+            example: '32142342'
+      responses:
+        '200':
+          description: Die Personenkontexte wurden zurückgeliefert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Beziehungendatensatz'
+              example:
+                - person:
+                    id: 86e6736b-31ee-4b62-b90b-c15918d00cdd
+                  personenkontexte:
+                    - id: e4527a81-32ee-45af-a8d9-1428225436a9
+                      referrer: '342345235'
+                      organisation:
+                        id: b9e65381-9b77-4bf7-8f01-a29e7b057cef
+                        kennung: NI_12345
+                        name: Muster-Schule
+                        namensergaenzung: am Tal
+                        kuerzel: MS
+                        typ: Schule
+                        traegerschaft: '2'
+                      rolle: Lern
+                      personenstatus: Aktiv
+                      revision: '432432'
+    post:
+      description: Es wird eine neue Beziehung zu einem Personenkontext erstellt.
+      operationId: createBeziehung
+      parameters:
+        - name: personenkontextId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Beziehung'
+            example:
+              ktid: e17e88cd-7d08-44f5-b981-b62629e1e58b
+              beziehung: Erziehungsberechtigt
+      responses:
+        '200':
+          description: Die Person wurde erfolgreich angelegt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Beziehung'
+              example:
+                id: b19b49ca-1482-4701-abe9-e47a8cb96d26
+                referrer: Reference_012345
+                mandant: ac8d7077-6e8c-4439-891f-c3068d28e8e8
+                stammorganisation: 2a5cf113-6665-480b-875f-33a1d87addb8
+                name:
+                  familienname: Musterschüler
+                  vorname: Moritz
+                  initialenfamilienname: M.
+                  initialenvorname: M.
+                  rufname: Musterrufname
+                  titel: Dr.
+                  anrede:
+                    - Herr
+                  namenssuffix:
+                    - Lord
+                    - zu Grey
+                  sortierindex: 3
+                geburt:
+                  datum: '2023-11-17'
+                geschlecht: m
+                lokalisierung: de-DE
+                vertrauensstufe: Teil
+                auskunftssperre: NEIN
+                revision: '12323434'
+        '400':
+          description: Die Person konnte nicht angelegt werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+  /beziehungen/{beziehungId}:
+    get:
+      description: Liefert die Beziehung zur angeforderten ID.
+      operationId: readBeziehung
+      parameters:
+        - name: beziehungId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Die Person wurde gefunden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BeziehungReadResponse'
+              example:
+                id: ea8e8bdf-fba8-48e9-b518-4eb8b0aa2b23
+                ktid: e9589f91-ee80-4c36-bc4e-b53d9345bbb0
+                beziehung: Erziehungsberechtigt
+                revision: '12323434'
+                ist_von_ktid: cdda6f3b-e5bb-4bbc-8e7c-9f6bdb2bdb86
+        '403':
+          description: Die Person gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Person konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+    delete:
+      description: Löscht die Beziehung zur angeforderten ID.
+      operationId: deleteBeziehung
+      parameters:
+        - name: beziehungId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteRequest'
+            example:
+              revision: '32142345'
+      responses:
+        '204':
+          description: Die Person wurde erfolgreich gelöscht
+        '400':
+          description: Die Person konnte nicht gelöscht werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+        '403':
+          description: Die Person gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Person konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+        '409':
+          description: Die Person wurde in einer anderen Session verändert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '409'
+                subcode: '00'
+                titel: Konflikt mit dem aktuellen Zustand der Resource.
+                beschreibung: >-
+                  Die Entität wurde eventuell durch Dritte verändert. Die
+                  Revisionsnummer stimmt nicht überein.
+  /gruppen:
+    get:
+      description: Liefert alle Gruppendatensätze zurück, auf die zugegriffen werden kann.
+      operationId: searchGruppen
+      parameters:
+        - name: referrer
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Fremdschlüssel “referrer” zu filtern.
+            example: '32142342'
+        - name: bezeichnung
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “gruppe.bezeichnung” zu filtern.
+            example: Musterklasse 1a
+        - name: optionen
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “gruppe.optionen” zu filtern.
+            example: Option1,Option2
+        - name: differenzierung
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “gruppe.differenzierung” zu filtern.
+            example: G
+        - name: bildungsziele
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) -  Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “gruppe.bildungsziele” zu filtern.
+            example: GY-SEK-I,GS
+        - name: jahrgangsstufen
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “gruppe.jahrgangstufen” zu filtern.
+            example: 01,02
+        - name: faecher
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “gruppe.faecher” zu filtern.
+            example: BI,CH
+        - name: sichtfreigabe
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Erlaubt es Gruppen abhaengig davon aufzulisten, ob
+              diese von einer anderen Organisation zum Lesen freigegeben wurden.
+              Die möglichen Optionen sind "sichtfreigabe=ja", um nur die durch
+              externe Organisationen freigegebenen Gruppen aufzulisten und
+              "sichtfreigabe=nein", um nur eigene Gruppen aufzulisten. Wird
+              nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren
+              Gruppen geliefert.
+            example: nein
+      responses:
+        '200':
+          description: Die Suche wurde ausgeführt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Gruppendatensatz'
+              example:
+                - gruppe:
+                    id: 4aa411d0-5f22-4d6b-b519-19c6c029c808
+                    mandant: 4aea608c-41b9-4fac-b35e-bb62668c9806
+                    referrer: MK1A
+                    bezeichnung: Musterklasse 1a
+                    typ: Klasse
+                    bereich: Pflicht
+                    differenzierung: G
+                    bildungsziele:
+                      - GY-SEK-I
+                    jahrgangsstufen:
+                      - '01'
+                    faecher:
+                      - code: DE
+                      - code: BI
+                    laufzeit:
+                      vonlernperiode: 2022-1
+                      bislernperiode: 2022-2
+                    revision: '12323434'
+                  gruppenzugehoerigkeiten:
+                    - id: 53c9c058-752a-431f-9504-3280bfa1041c
+                      referrer: MK1A
+                      mandant: 884239de-cd2c-4271-be20-8ad92c0a2f15
+                      ktid: e3e62b09-6974-4094-ae58-43783df73ad5
+                      rollen:
+                        - Lehr
+                        - Klassenleitung
+                      von: '2022-08-01'
+                      bis: '2022-01-31'
+                      revision: '12323434'
+    post:
+      description: Es wird ein neuer Datensatz "Gruppe" erstellt.
+      operationId: createGruppe
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Gruppe'
+            example:
+              referrer: MK1A
+              bezeichnung: Musterklasse 1a
+              typ: Klasse
+              bereich: Pflicht
+              differenzierung: G
+              bildungsziele:
+                - GY-SEK-I
+              jahrgangsstufen:
+                - '01'
+              faecher:
+                - code: DE
+                - code: BI
+              laufzeit:
+                vonlernperiode: 2022-1
+                bislernperiode: 2022-2
+      responses:
+        '200':
+          description: Die Gruppe wurde erfolgreich angelegt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gruppe'
+              example:
+                id: 960a6edb-afc5-43de-ade6-2ff466cc5221
+                mandant: e61f2002-b333-49dd-b924-7f90106dee7c
+                referrer: MK1A
+                bezeichnung: Musterklasse 1a
+                typ: Klasse
+                bereich: Pflicht
+                differenzierung: G
+                bildungsziele:
+                  - GY-SEK-I
+                jahrgangsstufen:
+                  - '01'
+                faecher:
+                  - code: DE
+                  - code: BI
+                laufzeit:
+                  vonlernperiode: 2022-1
+                  bislernperiode: 2022-2
+                revision: '12323434'
+        '400':
+          description: Die Gruppe konnte nicht angelegt werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+  /gruppen/{gruppenId}/gruppenzugehoerigkeiten:
+    get:
+      description: Gibt die Gruppenzugehoerigkeiten zur angeforderten Gruppe per ID zurück.
+      operationId: readGruppenzugehoerigkeiten
+      parameters:
+        - name: gruppenId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: referrer
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Fremdschlüssel “referrer” zu filtern.
+            example: '32142342'
+        - name: rollen
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “gruppenzugehoerigkeit.rollen ” zu filtern.
+            example: Klassenleitung
+      responses:
+        '200':
+          description: Die Gruppenzugehoerigkeiten wurden zurückgeliefert
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Gruppenzugehoerigkeit'
+              example:
+                - id: d1de8d97-4d77-42b6-96ac-284458ec2be9
+                  referrer: MK1A
+                  mandant: 529d8fb8-5de5-403d-ad13-49a26023fc0f
+                  ktid: b2890380-b952-4350-80da-6b983fc8cf3f
+                  rollen:
+                    - Lehr
+                    - Klassenleitung
+                  von: '2022-08-01'
+                  bis: '2022-01-31'
+                  revision: '12323434'
+        '404':
+          description: Die Gruppe konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+    post:
+      description: >-
+        Erstellt eine Gruppenzugehoerigkeit zur angegebenen Gruppe und dem
+        angegebenen Personenkontext.
+      operationId: createGruppenzugehoerigkeit
+      parameters:
+        - name: gruppenId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Gruppenzugehoerigkeit'
+            example:
+              referrer: MK1A
+              ktid: d0f795a3-969d-439d-967a-842ff4d0739b
+              rollen:
+                - Lehr
+                - Klassenleitung
+              von: '2022-08-01'
+              bis: '2022-01-31'
+      responses:
+        '200':
+          description: Die Gruppe wurde erfolgreich angelegt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gruppenzugehoerigkeit'
+              example:
+                id: b200d837-46e0-4042-87e5-53f3a28d6fa1
+                referrer: MK1A
+                mandant: 043812a0-df71-451f-b6f8-cf31d0b54559
+                ktid: 35c5e551-e7e0-4f63-b08e-2d418406fcb2
+                rollen:
+                  - Lehr
+                  - Klassenleitung
+                von: '2022-08-01'
+                bis: '2022-01-31'
+                revision: '12323434'
+        '400':
+          description: Die Gruppe konnte nicht angelegt werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+  /gruppen/{gruppenId}:
+    get:
+      description: Liefert den Gruppendatensatz zur angeforderten ID.
+      operationId: readGruppe
+      parameters:
+        - name: gruppenId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Die Gruppe wurde gefunden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gruppendatensatz'
+              example:
+                gruppe:
+                  id: ca7b1b11-2cb0-4e59-a3fb-1502fad2c1eb
+                  mandant: cbbe6693-d4f7-4d36-b3c9-c6e8aee31bf9
+                  referrer: MK1A
+                  bezeichnung: Musterklasse 1a
+                  typ: Klasse
+                  bereich: Pflicht
+                  differenzierung: G
+                  bildungsziele:
+                    - GY-SEK-I
+                  jahrgangsstufen:
+                    - '01'
+                  faecher:
+                    - code: DE
+                    - code: BI
+                  laufzeit:
+                    vonlernperiode: 2022-1
+                    bislernperiode: 2022-2
+                  revision: '12323434'
+                gruppenzugehoerigkeiten:
+                  - id: b11f97d1-7ed6-4b17-a74e-a71146aeda0b
+                    referrer: MK1A
+                    mandant: 02f33d2e-247d-4358-9dbd-af95b9652bb7
+                    ktid: 41a54688-5e90-4ccc-aa62-97acc1178e33
+                    rollen:
+                      - Lehr
+                      - Klassenleitung
+                    von: '2022-08-01'
+                    bis: '2022-01-31'
+                    revision: '12323434'
+        '403':
+          description: Die Gruppe gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Gruppe konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+    put:
+      description: Aktualisiert die Gruppe der angegebenen ID.
+      operationId: updateGruppe
+      parameters:
+        - name: gruppenId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Gruppe'
+            example:
+              id: 960a6edb-afc5-43de-ade6-2ff466cc5221
+              mandant: e61f2002-b333-49dd-b924-7f90106dee7c
+              referrer: MK1A
+              bezeichnung: Musterklasse 1a
+              typ: Klasse
+              bereich: Pflicht
+              differenzierung: G
+              bildungsziele:
+                - GY-SEK-I
+              jahrgangsstufen:
+                - '01'
+              faecher:
+                - code: DE
+                - code: BI
+              laufzeit:
+                vonlernperiode: 2022-1
+                bislernperiode: 2022-2
+              revision: '12323434'
+      responses:
+        '200':
+          description: Die Gruppe wurde erfolgreich aktualisiert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gruppe'
+              example:
+                id: 960a6edb-afc5-43de-ade6-2ff466cc5221
+                mandant: e61f2002-b333-49dd-b924-7f90106dee7c
+                referrer: MK1A
+                bezeichnung: Musterklasse 1a
+                typ: Klasse
+                bereich: Pflicht
+                differenzierung: G
+                bildungsziele:
+                  - GY-SEK-I
+                jahrgangsstufen:
+                  - '01'
+                faecher:
+                  - code: DE
+                  - code: BI
+                laufzeit:
+                  vonlernperiode: 2022-1
+                  bislernperiode: 2022-2
+                revision: '12323434'
+        '400':
+          description: Die Gruppe konnte nicht aktualisiert werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+        '403':
+          description: Die Gruppe gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Gruppe konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+        '409':
+          description: Die Gruppe wurde in einer anderen Session verändert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '409'
+                subcode: '00'
+                titel: Konflikt mit dem aktuellen Zustand der Resource.
+                beschreibung: >-
+                  Die Entität wurde eventuell durch Dritte verändert. Die
+                  Revisionsnummer stimmt nicht überein.
+    delete:
+      description: Löscht die Gruppe zur angegebenen ID.
+      operationId: deleteGruppe
+      parameters:
+        - name: gruppenId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteRequest'
+            example:
+              revision: '32142345'
+      responses:
+        '204':
+          description: Die Gruppe wurde erfolgreich gelöscht
+        '400':
+          description: Die Gruppe konnte nicht gelöscht werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+        '403':
+          description: Die Gruppe gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Gruppe konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+        '409':
+          description: Die Gruppe wurde in einer anderen Session verändert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '409'
+                subcode: '00'
+                titel: Konflikt mit dem aktuellen Zustand der Resource.
+                beschreibung: >-
+                  Die Entität wurde eventuell durch Dritte verändert. Die
+                  Revisionsnummer stimmt nicht überein.
+  /gruppenzugehoerigkeiten/{gruppenzugehoerigkeitId}:
+    get:
+      description: Liefert die Gruppenzugehoerigkeit zur angeforderten ID.
+      operationId: readGruppenzugehoerigkeit
+      parameters:
+        - name: gruppenzugehoerigkeitId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Die Gruppenzugehoerigkeit wurde gefunden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gruppendatensatz'
+              example:
+                gruppe:
+                  id: ca7b1b11-2cb0-4e59-a3fb-1502fad2c1eb
+                  mandant: cbbe6693-d4f7-4d36-b3c9-c6e8aee31bf9
+                  referrer: MK1A
+                  bezeichnung: Musterklasse 1a
+                  typ: Klasse
+                  bereich: Pflicht
+                  differenzierung: G
+                  bildungsziele:
+                    - GY-SEK-I
+                  jahrgangsstufen:
+                    - '01'
+                  faecher:
+                    - code: DE
+                    - code: BI
+                  laufzeit:
+                    vonlernperiode: 2022-1
+                    bislernperiode: 2022-2
+                  revision: '12323434'
+                gruppenzugehoerigkeiten:
+                  - id: b11f97d1-7ed6-4b17-a74e-a71146aeda0b
+                    referrer: MK1A
+                    mandant: 02f33d2e-247d-4358-9dbd-af95b9652bb7
+                    ktid: 41a54688-5e90-4ccc-aa62-97acc1178e33
+                    rollen:
+                      - Lehr
+                      - Klassenleitung
+                    von: '2022-08-01'
+                    bis: '2022-01-31'
+                    revision: '12323434'
+        '403':
+          description: Die Gruppenzugehoerigkeit gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Gruppenzugehoerigkeit konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+    put:
+      description: Aktualisiert die Gruppenzugehoerigkeit zur angegebenen ID.
+      operationId: updateGruppenzugehoerigkeit
+      parameters:
+        - name: gruppenzugehoerigkeitId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Gruppenzugehoerigkeit'
+            example:
+              id: b200d837-46e0-4042-87e5-53f3a28d6fa1
+              referrer: MK1A
+              mandant: 043812a0-df71-451f-b6f8-cf31d0b54559
+              ktid: 35c5e551-e7e0-4f63-b08e-2d418406fcb2
+              rollen:
+                - Lehr
+                - Klassenleitung
+              von: '2022-08-01'
+              bis: '2022-01-31'
+              revision: '12323434'
+      responses:
+        '200':
+          description: Die Gruppenzugehoerigkeit wurde erfolgreich aktualisiert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gruppenzugehoerigkeit'
+              example:
+                id: b200d837-46e0-4042-87e5-53f3a28d6fa1
+                referrer: MK1A
+                mandant: 043812a0-df71-451f-b6f8-cf31d0b54559
+                ktid: 35c5e551-e7e0-4f63-b08e-2d418406fcb2
+                rollen:
+                  - Lehr
+                  - Klassenleitung
+                von: '2022-08-01'
+                bis: '2022-01-31'
+                revision: '12323434'
+        '400':
+          description: Die Gruppenzugehoerigkeit konnte nicht aktualisiert werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+        '403':
+          description: Die Gruppenzugehoerigkeit gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Gruppenzugehoerigkeit konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+        '409':
+          description: Die Gruppenzugehoerigkeit wurde in einer anderen Session verändert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+    delete:
+      description: Löscht die Gruppenzugehoerigkeit zur angeforderten ID.
+      operationId: deleteGruppenzugehoerigkeit
+      parameters:
+        - name: gruppenzugehoerigkeitId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteRequest'
+            example:
+              revision: '32142345'
+      responses:
+        '204':
+          description: Die Gruppenzugehoerigkeit wurde erfolgreich gelöscht
+        '400':
+          description: Die Gruppenzugehoerigkeit konnte nicht gelöscht werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+        '403':
+          description: Die Gruppenzugehoerigkeit gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Gruppenzugehoerigkeit konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+        '409':
+          description: Die Gruppenzugehoerigkeit wurde in einer anderen Session verändert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '409'
+                subcode: '00'
+                titel: Konflikt mit dem aktuellen Zustand der Resource.
+                beschreibung: >-
+                  Die Entität wurde eventuell durch Dritte verändert. Die
+                  Revisionsnummer stimmt nicht überein.
+  /gruppenzugehoerigkeiten:
+    get:
+      description: Liefert alle Personenkontexte zurück, auf die zugegriffen werden kann.
+      operationId: searchGruppenzugehoerigkeiten
+      parameters:
+        - name: referrer
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Fremdschlüssel “referrer” zu filtern.
+            example: '32142342'
+        - name: rollen
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “gruppenzugehoerigkeit.rollen ” zu filtern.
+            example: Klassenleitung
+      responses:
+        '200':
+          description: Die Personenkontexte wurden zurückgeliefert
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Gruppendatensatz'
+              example:
+                - gruppe:
+                    id: 06b31f6b-e077-4a2a-b04d-21d3a63dc8ed
+                  gruppenzugehoerigkeiten:
+                    - id: 910b650d-b05b-4a50-8e52-7ea2b8c80fdd
+                      referrer: MK1A
+                      mandant: 8671945e-1a08-42ce-ad9d-0bc0718e1750
+                      ktid: 50707117-3ae0-49ce-91b4-9010e36c56a5
+                      rollen:
+                        - Lehr
+                        - Klassenleitung
+                      von: '2022-08-01'
+                      bis: '2022-01-31'
+                      revision: '12323434'
+  /organisation-info:
+    get:
+      description: Gibt die Informationen der anfordernden Organisation zurück.
+      operationId: getOrganisationInfo
+      responses:
+        '200':
+          description: Die Organisation wurde gefunden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Organisation'
+              example:
+                id: defb3218-d962-4813-a544-d6dd0c37e55e
+                kennung: NI_12345
+                name: Muster-Schule
+                namensergaenzung: am Tal
+                kuerzel: MS
+                typ: Schule
+                traegerschaft: '2'
+        '404':
+          description: Die Organisation wurde nicht gefunden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+  /organisationen/{organisationsId}:
+    get:
+      description: Liefert die Organisation zur angegebenen id.
+      operationId: readOrganisation
+      parameters:
+        - name: organisationsId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Die Organisation wurde zurückgeliefert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Organisation'
+              example:
+                id: defb3218-d962-4813-a544-d6dd0c37e55e
+                kennung: NI_12345
+                name: Muster-Schule
+                namensergaenzung: am Tal
+                kuerzel: MS
+                typ: Schule
+                traegerschaft: '2'
+        '404':
+          description: Die Organisation konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+  /organisationen:
+    get:
+      description: Liefert alle Organisationen zurück.
+      operationId: searchOrganisationen
+      parameters:
+        - name: kennung
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              “kennung” zu filtern. Der Anmeldeservice überprüft, ob der Wert
+              des Filterparameters ohne Beachtung von Groß- und Kleinschreibung
+              im Filter-Attribut beinhaltet ist (contains).
+            example: NI_12345
+        - name: name
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “organisation.name” zu filtern. Der Anmeldeservice
+              überprüft, ob der Wert des Filter-parameters ohne Beachtung von
+              Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist
+              (contains).
+            example: Organisation 1
+        - name: typ
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “organisation.typ” zu filtern. Der Anmeldeservice
+              überprüft, ob der Wert des Filterparameters mit dem Wert des
+              Filter-Attributs übereinstimmt (equals).
+            example: Schule
+      responses:
+        '200':
+          description: Die Suche wurde ausgeführt.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Organisation'
+              example:
+                - id: 37f2be31-05af-4f28-b170-9def5fff928a
+                  kennung: NI_12345
+                  name: Muster-Schule
+                  namensergaenzung: am Tal
+                  kuerzel: MS
+                  typ: Schule
+                  traegerschaft: '2'
+  /personen:
+    get:
+      description: Liefert alle Personendatensätze zurück, auf die zugegriffen werden kann.
+      operationId: searchPersons
+      parameters:
+        - name: referrer
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Fremdschlüssel “referrer” zu filtern. Der Anmeldeservice
+              überprüft, ob der Wert des Filterparameters ohne Beachtung von
+              Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist
+              (contains).
+            example: '32142342'
+        - name: familienname
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “person.name.familienname” zu filtern. Der
+              Anmeldeservice überprüft, ob der Wert des Filter-parameters ohne
+              Beachtung von Groß- und Kleinschreibung im Filter-Attribut
+              beinhaltet ist (contains).
+            example: Mustermann
+        - name: vorname
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “person.name.vorname” zu filtern. Der Anmeldeservice
+              überprüft, ob der Wert des Filter-parameters ohne Beachtung von
+              Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist
+              (contains).
+            example: Max
+        - name: sichtfreigabe
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Erlaubt es Personen abhaengig davon aufzulisten,
+              ob diese von einer anderen Organisation zum Lesen freigegeben
+              wurden. Die möglichen Optionen sind "sichtfreigabe=ja", um nur die
+              durch externe Organisationen freigegebenen Personen,
+              beziehungsweise Personenkontexte aufzulisten und
+              "sichtfreigabe=nein", um nur eigene Personen beziehungsweise
+              Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe
+              gefiltert, so werden alle lesbaren Personen, beziehungsweise
+              Personenkontexte geliefert.
+            example: nein
+      responses:
+        '200':
+          description: Die Suche wurde ausgeführt
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Personendatensatz'
+              example:
+                - person:
+                    id: 98478bcd-0d78-4afd-a021-9beb48e965fa
+                    referrer: Reference_012345
+                    mandant: c5afbd4a-ede9-451e-aa1e-7555ba941679
+                    stammorganisation: 4d2c1408-1ad3-477a-bba3-9c7b2170e79b
+                    name:
+                      familienname: Musterschüler
+                      vorname: Moritz
+                      initialenfamilienname: M.
+                      initialenvorname: M.
+                      rufname: Musterrufname
+                      titel: Dr.
+                      anrede:
+                        - Herr
+                      namenssuffix:
+                        - Lord
+                        - zu Grey
+                      sortierindex: 3
+                    geburt:
+                      datum: '2023-11-17'
+                    geschlecht: m
+                    lokalisierung: de-DE
+                    vertrauensstufe: Teil
+                    auskunftssperre: NEIN
+                    revision: '12323434'
+                  personenkontexte:
+                    - id: 081cd9b6-5759-4169-b05f-feaab2e02d1d
+                      referrer: '342345235'
+                      organisation:
+                        id: ed95104b-68e0-445d-933d-5171785b99f2
+                        kennung: NI_12345
+                        name: Muster-Schule
+                        namensergaenzung: am Tal
+                        kuerzel: MS
+                        typ: Schule
+                        traegerschaft: '2'
+                      rolle: Lern
+                      personenstatus: Aktiv
+                      revision: '432432'
+    post:
+      description: Es wird eine neue Person erstellt.
+      operationId: createPerson
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+            example:
+              referrer: Reference_012345
+              stammorganisation: 33e82794-e857-455d-907b-f6a718cc37c6
+              name:
+                familienname: Musterschüler
+                vorname: Moritz
+                initialenfamilienname: M.
+                initialenvorname: M.
+                rufname: Musterrufname
+                titel: Dr.
+                anrede:
+                  - Herr
+                namenssuffix:
+                  - Lord
+                  - zu Grey
+                sortierindex: 3
+              geburt:
+                datum: '2023-11-17'
+              geschlecht: m
+              lokalisierung: de-DE
+              vertrauensstufe: Teil
+              auskunftssperre: NEIN
+      responses:
+        '200':
+          description: Die Person wurde erfolgreich angelegt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+              example:
+                id: b19b49ca-1482-4701-abe9-e47a8cb96d26
+                referrer: Reference_012345
+                mandant: ac8d7077-6e8c-4439-891f-c3068d28e8e8
+                stammorganisation: 2a5cf113-6665-480b-875f-33a1d87addb8
+                name:
+                  familienname: Musterschüler
+                  vorname: Moritz
+                  initialenfamilienname: M.
+                  initialenvorname: M.
+                  rufname: Musterrufname
+                  titel: Dr.
+                  anrede:
+                    - Herr
+                  namenssuffix:
+                    - Lord
+                    - zu Grey
+                  sortierindex: 3
+                geburt:
+                  datum: '2023-11-17'
+                geschlecht: m
+                lokalisierung: de-DE
+                vertrauensstufe: Teil
+                auskunftssperre: NEIN
+                revision: '12323434'
+        '400':
+          description: Die Person konnte nicht angelegt werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+  /personen/{personId}/personenkontexte:
+    get:
+      description: Gibt die Personenkontexte zur angeforderten Person per ID zurück.
+      operationId: readPersonenkontexte
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: referrer
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Fremdschlüssel “referrer” zu filtern. Der Anmeldeservice
+              überprüft, ob der Wert des Filterparameters ohne Beachtung von
+              Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist
+              (contains).
+            example: '32142342'
+        - name: rolle
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “personenkontext.rolle” zu filtern. Der
+              Anmeldeservice überprüft, ob der Wert des Filter-parameters mit
+              dem Wert des Filter-Attributs übereinstimmt (equals).
+
+              Dem Filterparameter liegt eine Codeliste (Rolle) zugrunde.
+            example: Lern
+        - name: personenstatus
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “personenkontext.personenstatus” zu filtern. Der
+              Anmeldeservice überprüft, ob der Wert des Filter-parameters mit
+              dem Wert des Filter-Attributs übereinstimmt (equals).
+
+              Dem Filterparameter liegt die Codeliste Personenstatus zugrunde.
+            example: '32142342'
+        - name: sichtfreigabe
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Erlaubt es Personen abhaengig davon aufzulisten,
+              ob diese von einer anderen Organisation zum Lesen freigegeben
+              wurden. Die möglichen Optionen sind "sichtfreigabe=ja", um nur die
+              durch externe Organisationen freigegebenen Personen,
+              beziehungsweise Personenkontexte aufzulisten und
+              "sichtfreigabe=nein", um nur eigene Personen beziehungsweise
+              Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe
+              gefiltert, so werden alle lesbaren Personen, beziehungsweise
+              Personenkontexte geliefert.
+            example: '32142342'
+      responses:
+        '200':
+          description: Die Personenkontexte wurden zurückgeliefert
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Personenkontext'
+              example:
+                - id: 57484af4-6617-4ccf-b468-ee7ec0e44de0
+                  referrer: '342345235'
+                  organisation:
+                    id: eab33855-6423-47a4-975a-8615d7e5c958
+                    kennung: NI_12345
+                    name: Muster-Schule
+                    namensergaenzung: am Tal
+                    kuerzel: MS
+                    typ: Schule
+                    traegerschaft: '2'
+                  rolle: Lern
+                  personenstatus: Aktiv
+                  revision: '432432'
+        '404':
+          description: Die Person konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+    post:
+      description: Erstellt einen Personenkontext zur angegebenen Person per ID.
+      operationId: createPersonenkontext
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Personenkontext'
+            example:
+              referrer: '342345235'
+              organisation:
+                id: 951760a6-6128-446b-9ac8-442b4df107cd
+                kennung: NI_12345
+                name: Muster-Schule
+                namensergaenzung: am Tal
+                kuerzel: MS
+                typ: Schule
+                traegerschaft: '2'
+              rolle: Lern
+              personenstatus: Aktiv
+      responses:
+        '200':
+          description: Die Person wurde erfolgreich angelegt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Personenkontext'
+              example:
+                id: 6e0aa759-7ba1-426b-95df-09cf17fbccea
+                referrer: '342345235'
+                organisation:
+                  id: 037d6656-5623-4c15-b3f7-f640d19005e1
+                  kennung: NI_12345
+                  name: Muster-Schule
+                  namensergaenzung: am Tal
+                  kuerzel: MS
+                  typ: Schule
+                  traegerschaft: '2'
+                rolle: Lern
+                personenstatus: Aktiv
+                revision: '432432'
+        '400':
+          description: Die Person konnte nicht angelegt werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+  /personen/{personId}:
+    get:
+      description: Liefert den Personendatensatz zur angeforderten ID.
+      operationId: readPerson
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Die Person wurde gefunden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Personendatensatz'
+              example:
+                person:
+                  id: 1d6447f9-2642-4c32-9d1b-eb8106fb5b9a
+                  referrer: Reference_012345
+                  mandant: accda8d8-4f6f-4a23-9a38-c0471be3696e
+                  stammorganisation: a0e85fa6-1a64-441a-be1c-8a6fcd40eb50
+                  name:
+                    familienname: Musterschüler
+                    vorname: Moritz
+                    initialenfamilienname: M.
+                    initialenvorname: M.
+                    rufname: Musterrufname
+                    titel: Dr.
+                    anrede:
+                      - Herr
+                    namenssuffix:
+                      - Lord
+                      - zu Grey
+                    sortierindex: 3
+                  geburt:
+                    datum: '2023-11-17'
+                  geschlecht: m
+                  lokalisierung: de-DE
+                  vertrauensstufe: Teil
+                  auskunftssperre: NEIN
+                  revision: '12323434'
+                personenkontexte:
+                  - id: 5568f42b-cc21-44c7-999f-320cd09eacb9
+                    referrer: '342345235'
+                    organisation:
+                      id: 62e7b184-9cbb-45d0-921f-4b248a0637d5
+                      kennung: NI_12345
+                      name: Muster-Schule
+                      namensergaenzung: am Tal
+                      kuerzel: MS
+                      typ: Schule
+                      traegerschaft: '2'
+                    rolle: Lern
+                    personenstatus: Aktiv
+                    revision: '432432'
+        '403':
+          description: Die Person gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Person konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+    put:
+      description: Aktualisiert die Person der angegebenen ID.
+      operationId: updatePerson
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+            example:
+              id: b19b49ca-1482-4701-abe9-e47a8cb96d26
+              referrer: Reference_012345
+              mandant: ac8d7077-6e8c-4439-891f-c3068d28e8e8
+              stammorganisation: 2a5cf113-6665-480b-875f-33a1d87addb8
+              name:
+                familienname: Musterschüler
+                vorname: Moritz
+                initialenfamilienname: M.
+                initialenvorname: M.
+                rufname: Musterrufname
+                titel: Dr.
+                anrede:
+                  - Herr
+                namenssuffix:
+                  - Lord
+                  - zu Grey
+                sortierindex: 3
+              geburt:
+                datum: '2023-11-17'
+              geschlecht: m
+              lokalisierung: de-DE
+              vertrauensstufe: Teil
+              auskunftssperre: NEIN
+              revision: '12323434'
+      responses:
+        '200':
+          description: Die Person wurde erfolgreich aktualisiert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+              example:
+                id: b19b49ca-1482-4701-abe9-e47a8cb96d26
+                referrer: Reference_012345
+                mandant: ac8d7077-6e8c-4439-891f-c3068d28e8e8
+                stammorganisation: 2a5cf113-6665-480b-875f-33a1d87addb8
+                name:
+                  familienname: Musterschüler
+                  vorname: Moritz
+                  initialenfamilienname: M.
+                  initialenvorname: M.
+                  rufname: Musterrufname
+                  titel: Dr.
+                  anrede:
+                    - Herr
+                  namenssuffix:
+                    - Lord
+                    - zu Grey
+                  sortierindex: 3
+                geburt:
+                  datum: '2023-11-17'
+                geschlecht: m
+                lokalisierung: de-DE
+                vertrauensstufe: Teil
+                auskunftssperre: NEIN
+                revision: '12323434'
+        '400':
+          description: Die Person konnte nicht aktualisiert werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+        '403':
+          description: Die Person gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Person konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+        '409':
+          description: Die Person wurde in einer anderen Session verändert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '409'
+                subcode: '00'
+                titel: Konflikt mit dem aktuellen Zustand der Resource.
+                beschreibung: >-
+                  Die Entität wurde eventuell durch Dritte verändert. Die
+                  Revisionsnummer stimmt nicht überein.
+    delete:
+      description: Löscht die Person zur angeforderten ID.
+      operationId: deletePerson
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteRequest'
+            example:
+              revision: '32142345'
+      responses:
+        '204':
+          description: Die Person wurde erfolgreich gelöscht
+        '400':
+          description: Die Person konnte nicht gelöscht werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+        '403':
+          description: Die Person gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Die Person konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+        '409':
+          description: Die Person wurde in einer anderen Session verändert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '409'
+                subcode: '00'
+                titel: Konflikt mit dem aktuellen Zustand der Resource.
+                beschreibung: >-
+                  Die Entität wurde eventuell durch Dritte verändert. Die
+                  Revisionsnummer stimmt nicht überein.
+  /personenkontexte/{personenkontextId}:
+    get:
+      description: Liefert den Personenkontext zur angeforderten ID.
+      operationId: readPersonenkontext
+      parameters:
+        - name: personenkontextId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Der Personenkontext wurde gefunden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Personendatensatz'
+              example:
+                person:
+                  id: 1d6447f9-2642-4c32-9d1b-eb8106fb5b9a
+                  referrer: Reference_012345
+                  mandant: accda8d8-4f6f-4a23-9a38-c0471be3696e
+                  stammorganisation: a0e85fa6-1a64-441a-be1c-8a6fcd40eb50
+                  name:
+                    familienname: Musterschüler
+                    vorname: Moritz
+                    initialenfamilienname: M.
+                    initialenvorname: M.
+                    rufname: Musterrufname
+                    titel: Dr.
+                    anrede:
+                      - Herr
+                    namenssuffix:
+                      - Lord
+                      - zu Grey
+                    sortierindex: 3
+                  geburt:
+                    datum: '2023-11-17'
+                  geschlecht: m
+                  lokalisierung: de-DE
+                  vertrauensstufe: Teil
+                  auskunftssperre: NEIN
+                  revision: '12323434'
+                personenkontexte:
+                  - id: 5568f42b-cc21-44c7-999f-320cd09eacb9
+                    referrer: '342345235'
+                    organisation:
+                      id: 62e7b184-9cbb-45d0-921f-4b248a0637d5
+                      kennung: NI_12345
+                      name: Muster-Schule
+                      namensergaenzung: am Tal
+                      kuerzel: MS
+                      typ: Schule
+                      traegerschaft: '2'
+                    rolle: Lern
+                    personenstatus: Aktiv
+                    revision: '432432'
+        '403':
+          description: Der Personenkontext gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Der Personenkontext konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+    put:
+      description: Aktualisiert den Personenkontext zur angegebenen ID.
+      operationId: updatePersonenkontext
+      parameters:
+        - name: personenkontextId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Personenkontext'
+            example:
+              id: 6e0aa759-7ba1-426b-95df-09cf17fbccea
+              referrer: '342345235'
+              organisation:
+                id: 037d6656-5623-4c15-b3f7-f640d19005e1
+                kennung: NI_12345
+                name: Muster-Schule
+                namensergaenzung: am Tal
+                kuerzel: MS
+                typ: Schule
+                traegerschaft: '2'
+              rolle: Lern
+              personenstatus: Aktiv
+              revision: '432432'
+      responses:
+        '200':
+          description: Der Personenkontext wurde erfolgreich aktualisiert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Personenkontext'
+              example:
+                id: 6e0aa759-7ba1-426b-95df-09cf17fbccea
+                referrer: '342345235'
+                organisation:
+                  id: 037d6656-5623-4c15-b3f7-f640d19005e1
+                  kennung: NI_12345
+                  name: Muster-Schule
+                  namensergaenzung: am Tal
+                  kuerzel: MS
+                  typ: Schule
+                  traegerschaft: '2'
+                rolle: Lern
+                personenstatus: Aktiv
+                revision: '432432'
+        '400':
+          description: Der Personenkontext konnte nicht aktualisiert werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+        '403':
+          description: Der Personenkontext gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Der Personenkontext konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+        '409':
+          description: Der Personenkontext wurde in einer anderen Session verändert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '409'
+                subcode: '00'
+                titel: Konflikt mit dem aktuellen Zustand der Resource.
+                beschreibung: >-
+                  Die Entität wurde eventuell durch Dritte verändert. Die
+                  Revisionsnummer stimmt nicht überein.
+    delete:
+      description: Löscht den Personenkontext zur angeforderten ID.
+      operationId: deletePersonenkontext
+      parameters:
+        - name: personenkontextId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteRequest'
+            example:
+              revision: '32142345'
+      responses:
+        '204':
+          description: Der Personenkontext wurde erfolgreich gelöscht
+        '400':
+          description: Der Personenkontext konnte nicht gelöscht werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '400'
+                subcode: '00'
+                titel: Fehlerhafte Anfrage
+                beschreibung: 'Die Anfrage ist fehlerhaft:'
+        '403':
+          description: Der Personenkontext gehört nicht zum aktuellen Mandanten
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '403'
+                subcode: '00'
+                titel: Fehlende Rechte
+                beschreibung: >-
+                  Die Autorisierung war erfolgreich, aber die erforderlichen
+                  Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden:
+        '404':
+          description: Der Personenkontext konnte nicht gefunden werden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '404'
+                subcode: '01'
+                titel: Angefragte Entität existiert nicht
+                beschreibung: Die angeforderte Entität existiert nicht.
+        '409':
+          description: Der Personenkontext wurde in einer anderen Session verändert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SanisExceptionDetails'
+              example:
+                code: '409'
+                subcode: '00'
+                titel: Konflikt mit dem aktuellen Zustand der Resource.
+                beschreibung: >-
+                  Die Entität wurde eventuell durch Dritte verändert. Die
+                  Revisionsnummer stimmt nicht überein.
+  /personenkontexte:
+    get:
+      description: Liefert alle Personenkontexte zurück, auf die zugegriffen werden kann.
+      operationId: searchPersonenkontexte
+      parameters:
+        - name: referrer
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (UTF-8) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Fremdschlüssel “referrer” zu filtern. Der Anmeldeservice
+              überprüft, ob der Wert des Filterparameters ohne Beachtung von
+              Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist
+              (contains).
+            example: '32142342'
+        - name: rolle
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “personenkontext.rolle” zu filtern. Der
+              Anmeldeservice überprüft, ob der Wert des Filter-parameters mit
+              dem Wert des Filter-Attributs übereinstimmt (equals).
+
+              Dem Filterparameter liegt eine Codeliste (Rolle) zugrunde.
+            example: Lern
+        - name: personenstatus
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Möglichkeit, die Ergebnisliste der Anfrage nach
+              dem Attribut “personenkontext.personenstatus” zu filtern. Der
+              Anmeldeservice überprüft, ob der Wert des Filter-parameters mit
+              dem Wert des Filter-Attributs übereinstimmt (equals).
+
+              Dem Filterparameter liegt die Codeliste Personenstatus zugrunde.
+            example: '32142342'
+        - name: sichtfreigabe
+          in: query
+          schema:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Erlaubt es Personen abhaengig davon aufzulisten,
+              ob diese von einer anderen Organisation zum Lesen freigegeben
+              wurden. Die möglichen Optionen sind "sichtfreigabe=ja", um nur die
+              durch externe Organisationen freigegebenen Personen,
+              beziehungsweise Personenkontexte aufzulisten und
+              "sichtfreigabe=nein", um nur eigene Personen beziehungsweise
+              Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe
+              gefiltert, so werden alle lesbaren Personen, beziehungsweise
+              Personenkontexte geliefert.
+            example: '32142342'
+      responses:
+        '200':
+          description: Die Personenkontexte wurden zurückgeliefert
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Personendatensatz'
+              example:
+                - person:
+                    id: 86e6736b-31ee-4b62-b90b-c15918d00cdd
+                  personenkontexte:
+                    - id: e4527a81-32ee-45af-a8d9-1428225436a9
+                      referrer: '342345235'
+                      organisation:
+                        id: b9e65381-9b77-4bf7-8f01-a29e7b057cef
+                        kennung: NI_12345
+                        name: Muster-Schule
+                        namensergaenzung: am Tal
+                        kuerzel: MS
+                        typ: Schule
+                        traegerschaft: '2'
+                      rolle: Lern
+                      personenstatus: Aktiv
+                      revision: '432432'
+components:
+  schemas:
+    Beziehung:
+      required:
+        - beziehung
+        - id
+        - ktid
+        - revision
+      type: object
+      properties:
+        id:
+          maxLength: 256
+          type: string
+          description: String (UTF-8) - ID der Beziehung
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        ktid:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Id des Personenkontextes, zu dem eine Beziehung
+            besteht
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        beziehung:
+          maxLength: 256
+          type: string
+          description: String (Code) - Beziehung aus Codeliste 12.20 Beziehungen.
+          example: Lern
+        revision:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Revision der Beziehung. Wird vom SchulConneX
+            Server mit der Erstellung des Datensatzes sowie Aktualisierung
+            generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten
+            gesetzt werden.
+          example: '1234334254'
+      description: >-
+        Eine Beziehung beschreibt die Beziehung zweier Personen. Die Beziehungen
+        werden zwischen Personenkontexten der beiden Personen erstellt.
+        Beziehungen werden immer in der Form "hat als" dargestellt. Wenn aus
+        einem Personenkontext von Person A eine Beziehung "SchB" (Schulbegleiter
+        oder Schulbegleiterin) zu einem Personenkontext von Person B  besteht,
+        so hat A die Person B als Schulbegleiter oder Schulbegleiterin.
+      example:
+        id: 99306419-4223-48dd-80cc-152fa231ecd5
+        ktid: 897c493f-dcb5-4da5-a9e5-56ff3ccb3d31
+        beziehung: Erziehungsberechtigt
+        revision: '12323434'
+    SanisExceptionDetails:
+      type: object
+      properties:
+        code:
+          type: string
+        subcode:
+          type: string
+        titel:
+          type: string
+        beschreibung:
+          type: string
+    DeleteRequest:
+      required:
+        - revision
+      type: object
+      properties:
+        revision:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Revision. Wird vom SchulConnectX Server mit der
+            Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser
+            Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+          example: '1'
+    BeziehungReadResponse:
+      required:
+        - beziehung
+        - id
+        - ist_von_ktid
+        - ktid
+        - revision
+      type: object
+      properties:
+        id:
+          maxLength: 256
+          type: string
+          description: String (UTF-8) - ID der Beziehung
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        ktid:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Id des Personenkontextes, zu dem eine Beziehung
+            besteht
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        beziehung:
+          maxLength: 256
+          type: string
+          description: String (Code) - Beziehung aus Codeliste 12.20 Beziehungen.
+          example: Lern
+        revision:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Revision der Beziehung. Wird vom SchulConneX
+            Server mit der Erstellung des Datensatzes sowie Aktualisierung
+            generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten
+            gesetzt werden.
+          example: '1234334254'
+        ist_von_ktid:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Id des Personenkontextes, von dem aus die Beziehung
+            besteht
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+      description: >-
+        Eine Beziehung beschreibt die Beziehung zweier Personen. Die Beziehungen
+        werden zwischen Personenkontexten der beiden Personen erstellt.
+        Beziehungen werden immer in der Form "hat als" dargestellt. Wenn aus
+        einem Personenkontext von Person A eine Beziehung "SchB" (Schulbegleiter
+        oder Schulbegleiterin) zu einem Personenkontext von Person B  besteht,
+        so hat A die Person B als Schulbegleiter oder Schulbegleiterin.
+    Beziehungendatensatz:
+      type: object
+      properties:
+        hat_als_beziehungen:
+          minItems: 0
+          type: array
+          items:
+            $ref: '#/components/schemas/Beziehung'
+        ist_von_beziehungen:
+          minItems: 0
+          type: array
+          items:
+            $ref: '#/components/schemas/Beziehung'
+    Fach:
+      type: object
+      properties:
+        code:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - In der Gruppe behandelte Fächer. Referenz auf Code
+            der Codeliste 11.17 Fächerkanon.
+          example: DE
+      description: >-
+        String (Code) - In der Gruppe behandelte Fächer.  Referenz auf Code der
+        Codeliste 13.1213.17 Fächerkanon.
+      example:
+        code: BI
+    Gruppe:
+      required:
+        - bezeichnung
+        - id
+        - laufzeit
+        - mandant
+        - revision
+        - typ
+      type: object
+      properties:
+        id:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID der Gruppe. Wird vom SchulConnectX Server
+            vergeben und ist eindeutig. Dieses Attribut ist unveränderbar
+            (immutable).
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        mandant:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID des Mandanten, dem die Gruppe zugeordnet ist.
+            Wird vom SchulConnectX Server vergeben und ist eindeutig. Dieses
+            Attribut ist unveränderbar (immutable).
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        orgid:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID des Mandanten, dem die Gruppe zugeordnet ist.
+            Wird vom SchulConnectX Server vergeben und ist eindeutig. Dieses
+            Attribut ist unveränderbar (immutable).
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        referrer:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID der Gruppe im Quellsystem. Wird vom Quellsystem
+            vergeben und muss im Quellsystem eindeutig sein.
+          example: '32142342'
+        bezeichnung:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Beschreibt die Bezeichnung der Gruppe,
+            beispielsweise „Englisch, 2. Klasse“
+          example: Musterklasse 1a
+        thema:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Thema der Gruppe in Kurzform, idealerweise <35
+            Zeichen“
+          example: Werken an der freien Luft.
+        beschreibung:
+          maxLength: 4096
+          type: string
+          description: String (UTF-8) - Zusätzliche optionale Beschreibung der Gruppe“
+          example: Dies ist eine Gruppenbeschreibung.
+        typ:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Typ der Gruppe (Klasse, Kurs) Referenz auf Code der
+            Codeliste 11.13 Gruppentyp.
+          example: Klasse
+        bereich:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Art der Gruppe (Pflicht, Wahl, Grundkurs,
+            Leistungskurs…) Referenz auf Code der Codeliste 11.10
+            Gruppenbereich.
+          example: Pflicht
+        optionen:
+          minItems: 0
+          type: array
+          items:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - zusätzliche Optionen zur Gruppe, meistens
+              sprachbezogen (bilingual, herkunftssprachlich)
+
+              Referenz auf Code der Codeliste 11.12 Gruppenoption.
+            example: Option
+        differenzierung:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Differenzierung bei integriertem Unterricht oder in
+            der gymnasialen Oberstufe (Erweiterungsebene, Grundebene). Referenz
+            auf Code der Codeliste 11.11 Gruppendifferenzierung.
+          example: G
+        bildungsziele:
+          minItems: 0
+          type: array
+          items:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) -  Bildungsziel (Realschule, Hauptschule, Gymnasium,
+              …). Referenz auf Code der Codeliste 11.19 Bildungsziel.
+            example: GY-SEK-I
+        jahrgangsstufen:
+          minItems: 0
+          type: array
+          items:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Jahrgangsstufe (Jahrgangsstufe 1 bis Jahrgangstufe
+              10) Referenz auf Code der Codeliste 11.6 Jahrgangsstufe.
+            example: '01'
+        faecher:
+          minItems: 0
+          type: array
+          items:
+            $ref: '#/components/schemas/Fach'
+        referenzgruppen:
+          minItems: 0
+          type: array
+          items:
+            $ref: '#/components/schemas/Referenzgruppe'
+        laufzeit:
+          $ref: '#/components/schemas/Laufzeit'
+        revision:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Revision der Gruppe. Wird vom SchulConnectX Server
+            mit der Erstellung des Datensatzes sowie Aktualisierung generiert.
+            Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt
+            werden.
+          example: '1'
+    Laufzeit:
+      type: object
+      properties:
+        von:
+          pattern: yyyy-MM-dd
+          type: string
+          description: >-
+            Datum - Anfang des Gültigkeitszeitraumes der Gruppe. Dieser
+            Zeitpunkt kann auch in der Zukunft liegen.
+          format: date
+          example: '2000-01-15'
+        vonlernperiode:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Code der zu einer Gruppe gehörenden Lernperiode.
+            Referenz auf Code der Codeliste 11.15 Lernperiode
+          example: 2023-1
+        bis:
+          pattern: yyyy-MM-dd
+          type: string
+          description: Datum - Ende des Gültigkeitszeitraumes der Gruppe
+          format: date
+          example: '2000-01-15'
+        bislernperiode:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Code der zu einer Gruppe gehörenden Lernperiode.
+            Referenz auf Code der Codeliste 11.15 Lernperiode
+          example: 2023-1
+    Referenzgruppe:
+      required:
+        - grupid
+      type: object
+      properties:
+        grupid:
+          maxLength: 256
+          type: string
+          description: String (UTF-8) - ID der Referenzgruppe
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        rollen:
+          minItems: 0
+          type: array
+          items:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Gruppenrollen aus der Gruppenzugehörigkeit von
+              Personen, welche in die Referenzgruppe übernommen werden. Hinweis:
+              Werden hier keine Gruppenrollen aufgeführt, so werden alle
+              Personen der Referenzgruppe übernommen.
+            example: '01'
+    Gruppenzugehoerigkeit:
+      required:
+        - id
+        - ktid
+        - mandant
+        - revision
+        - rollen
+      type: object
+      properties:
+        id:
+          maxLength: 256
+          type: string
+          description: String (UTF-8) - ID der Gruppenzugehörigkeit.
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        referrer:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID der Gruppenzugehörigkeit im Quellsystem. Wird
+            vom Quellsystem vergeben und muss im Quellsystem eindeutig sein.
+          example: '234534534'
+        mandant:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID des Mandanten, dem die Gruppenzugehoerigkeit
+            zugeordnet ist. Wird vom SchulConnectX Server vergeben und ist
+            eindeutig. Dieses Attribut ist unveränderbar (immutable).
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        ktid:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID des Personenkontexts, welchem die Gruppe
+            zugeordnet ist.
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        rollen:
+          maxItems: 2147483647
+          minItems: 1
+          type: array
+          items:
+            maxLength: 256
+            type: string
+            description: >-
+              String (Code) - Rolle der Person innerhalb der Gruppe. Referenz
+              auf Liste von Rollen der Codeliste 11.1411.14 Gruppenrolle.
+            example: '01'
+        von:
+          pattern: yyyy-MM-dd
+          type: string
+          description: >-
+            Datum - Beginn der Gruppenzugehörigkeit. Dieser Zeitpunkt kann auch
+            in der Zukunft liegen.
+          format: date
+          example: '2000-01-15'
+        bis:
+          pattern: yyyy-MM-dd
+          type: string
+          description: Datum - Ende der Gruppenzugehörigkeit
+          format: date
+          example: '2000-01-15'
+        revision:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Revision der Gruppenzugehoerigkeit. Wird vom
+            SchulConnectX Server mit der Erstellung des Datensatzes sowie
+            Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen
+            oder Diensten gesetzt werden.
+          example: '1'
+    Gruppendatensatz:
+      required:
+        - gruppe
+      type: object
+      properties:
+        gruppe:
+          $ref: '#/components/schemas/Gruppe'
+        gruppenzugehoerigkeiten:
+          minItems: 0
+          type: array
+          items:
+            $ref: '#/components/schemas/Gruppenzugehoerigkeit'
+    Anschrift:
+      type: object
+      properties:
+        postleitzahl:
+          maxLength: 256
+          type: string
+          description: String (UTF-8) - Postleitzahl.
+          example: '30629'
+        ort:
+          maxLength: 256
+          type: string
+          description: String (UTF-8) - Amtlicher Gemeindename.
+          example: Mustergemeinde
+        ortsteil:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Teil eines Ortes, falls genauere Untergliederung
+            gewünscht wird.
+          example: Musterort
+      description: >-
+        Die Anschrift erlaubt es einen Ort zu beschreiben, an dem,
+        beispielsweise, eine Organisation ansässig ist.
+    Organisation:
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID der Organisation. Wird vom SchulConnectX Server
+            vergeben und ist eindeutig. Dieses Attribut ist unveränderbar
+            (immutable).
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        kennung:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Die optionale Kennung (Identifikations-ID) einer
+            "Organisation" muss innerhalb eines Organisationstyps eindeutig
+            sein.
+          example: NI_12345
+        name:
+          maxLength: 256
+          type: string
+          description: String (DIN 91379.B) - Offizieller Name einer Organisation.
+          example: Muster-Schule
+        namensergaenzung:
+          maxLength: 256
+          type: string
+          description: String (DIN 91379.B) - Ergänzender Name einer Organisation.
+          example: Max von Muster
+        kuerzel:
+          maxLength: 64
+          type: string
+          description: String (64) (DIN 91379.B) - Kurzname einer Organisation.
+          example: MS
+        anschrift:
+          $ref: '#/components/schemas/Anschrift'
+        typ:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Typ der Organisation. Referenz auf einen Code der
+            Codeliste 11.5 Organisationstyp.
+          example: Schule
+        traegerschaft:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Art der Trägerschaft der Organisation. Referenz auf
+            einen Code der Codeliste 11.8 Trägerschaft.
+          example: '2'
+      description: >-
+        Eine Organisation stellt eine Schule oder sonstige relevante
+        Organisation im Kontext EINES SchulConneX-Services dar.
+    Geburt:
+      type: object
+      properties:
+        datum:
+          pattern: yyyy-MM-dd
+          type: string
+          description: Datum - Geburtsdatum einer Person
+          format: date
+          example: '2000-01-15'
+        geburtsort:
+          maxLength: 256
+          type: string
+          description: >-
+            String (8) (DIN 91379.A) - Geburtsort einer Person, bestehend aus
+            Ortsname und Land, beispielsweise "Eindhoven, Niederlande". Wird
+            kein Land angegeben, so wird "Deutschland" angenommen.
+          example: Berlin
+      description: Informationen zur Geburt der Person
+    Name:
+      required:
+        - familienname
+        - vorname
+      type: object
+      properties:
+        familienname:
+          maxLength: 256
+          type: string
+          description: >-
+            String (DIN 91379.A) - Familienname(n) der Person. Mehrere
+            Familiennamen werden durch Leerzeichen separiert.
+          example: Musterschüler
+        vorname:
+          maxLength: 256
+          type: string
+          description: >-
+            String (DIN 91379.A) - Mehrere Vornamen werden durch Leerzeichen
+            separiert.
+          example: Moritz
+        initialenfamilienname:
+          maxLength: 8
+          type: string
+          description: >-
+            String (8) (DIN 91379.A) - Initial oder Initialen des
+            Familiennamens.
+          example: M.
+        initialenvorname:
+          maxLength: 8
+          type: string
+          description: String (8) (DIN 91379.A) - Initial oder Initialen des Vornamens.
+          example: M.
+        rufname:
+          maxLength: 32
+          type: string
+          description: >-
+            String (32) (DIN 91379.A) - Bei mehreren Vornamen wird der täglich
+            im Gebrauch genutzte Vorname geführt.
+          example: Musterrufname
+        titel:
+          maxLength: 256
+          type: string
+          description: >-
+            String (DIN 91379.B) - Titel der Person (bspw. ein akademischer
+            Grad, Dienst- und Amtsbezeichnungen oder militärische Ränge).
+          example: Prof.
+        anrede:
+          minItems: 0
+          type: array
+          items:
+            maxLength: 1024
+            type: string
+            description: >-
+              String (64/1024) (DIN 91379.B) - Liste (Array) von Namenszusätzen
+              bei der Anrede.
+
+              Jeder einzelne Namenszusatz hat eine Maximallänge von 64 Zeichen,
+              die Maximallänge für alle Namenszusätze liegt bei 1024 Zeichen.
+            example: Herr
+        namenssuffix:
+          minItems: 0
+          type: array
+          items:
+            maxLength: 1024
+            type: string
+            description: >-
+              String (64/1024) (DIN 91379.A) - Liste (Array) von Namenssuffixen.
+              Jeder einzelne Namenssuffix hat eine Maximallänge von 64 Zeichen,
+              die Maximallänge für alle Namenssuffixe liegt bei 1024 Zeichen.
+            example: Lord
+        sortierindex:
+          maxLength: 8
+          type: integer
+          description: >-
+            String (Nummer) Index des Buchstabens des Nachnamens, nach dem
+            sortiert werden soll. Der Index ist Null-basiert, d.h. ein Wert von
+            "4" zeigt an, dass die ersten vier Buchstaben ignoriert werden ab
+            dem fünften Buchstaben des Nachnamens sortiert werden soll. Ist kein
+            Sortierindex angegeben, so ist der Nachname entsprechend dem ersten
+            Buchstaben in Listen einzusortieren, äquivalent zum Sortierindex
+            "0".
+          format: int32
+          example: 2
+      description: Name der Person
+    Person:
+      required:
+        - auskunftssperre
+        - id
+        - mandant
+        - name
+        - revision
+      type: object
+      properties:
+        id:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID der Person. Wird vom SchulConnectX Server
+            vergeben ist eindeutig. Dieses Attribut ist unveränderbar
+            (immutable).
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        referrer:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Die optionale Identifikations-ID einer Person muss
+            innerhalb eines Quellsystems eindeutig sein (z. B. die einheitliche
+            Personalnummer des Landes Niedersachsen, falls vergeben).
+          example: Reference_012345
+        mandant:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID des Mandanten, dem die Personen zugeordnet ist.
+            Wird vom SchulConnectX Server vergeben und ist eindeutig.
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        stammorganisation:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Personen können einer Organisation angehören,
+            jedoch zeitweise an einer anderen Organisation tätig sein.
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        name:
+          $ref: '#/components/schemas/Name'
+        geburt:
+          $ref: '#/components/schemas/Geburt'
+        geschlecht:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Referenz auf einen Code der Codeliste 11.2
+            Geschlecht.
+          example: m
+        lokalisierung:
+          maxLength: 64
+          type: string
+          description: >-
+            String (Code) - bevorzugte Lokalisierungseinstellung einer Person
+            für Anwendungen gemäß RFC5646. Wenn nicht angegeben wird „de“
+            angenommen. Referenz auf einen Code der Codeliste 11.9
+            Lokalisierung.
+          example: de-DE
+        vertrauensstufe:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - gibt an, wie stark die Personendaten vom erfassenden
+            Mandanten verifiziert wurden. Referenz auf einen Code der Codeliste
+            11.4 Vertrauensstufe.
+          example: Teil
+        auskunftssperre:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Auskunftssperre über eine Person. Dienste erhalten
+            nur einen uneingeschränkten Datensatz, wenn der Wert “NEIN” ist.
+            Sofern nicht explizit “JA” eingeben wurde, ist der Default “NEIN”.
+
+            Referenz auf einen Code der Codeliste 11.7
+
+            Boolean
+          example: NEIN
+        revision:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Revision der Person. Wird vom SchulConnectX Server
+            mit der Erstellung des Datensatzes sowie Aktualisierung generiert.
+            Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt
+            werden.
+          example: '1'
+      description: Datenmodell einer Person
+    Loeschung:
+      required:
+        - zeitpunkt
+      type: object
+      properties:
+        zeitpunkt:
+          pattern: yyyy-MM-dd'T'kk:mm'Z'
+          type: string
+          description: >-
+            String (datetime) - Datum und Uhrzeit der Löschung
+            desPersonenkontexts Das Format des Löschzeitpunktes ist
+            yyyy-MM-dd'T'hh:mm'Z' als UTC-Zeitpunkt. Solange ein Personenkontext
+            nicht gelöscht wurde, kann das Attribut loeschzeitpunkt geändert
+            oder gelöscht werden. Ist das Attribut loeschung vorhanden, so muss
+            der Zeitpunkt gesetzt sein.
+          format: date-time
+          example: '2023-12-01T10:40:00Z'
+    Personenkontext:
+      required:
+        - id
+        - mandant
+        - revision
+        - rolle
+      type: object
+      properties:
+        id:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID des Personenkontexts. Wird vom SchulConnectX
+            Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar
+            (immutable).
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        referrer:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID des Personenkontexts im Quellsystem. Wird vom
+            Quellsystem vergeben und muss im Quellsystem eindeutig sein.
+          example: '1234235434534'
+        mandant:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - ID des Mandanten, dem der Personenkontext
+            zugeordnet ist. Wird vom SchulConnectX Server vergeben und ist
+            eindeutig.
+          example: cd7f015e-eff1-11ed-a05b-0242ac120003
+        organisation:
+          $ref: '#/components/schemas/Organisation'
+        rolle:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Rolle der Person innerhalb der Organisation.
+            Referenz auf einen Code der Codeliste 11.3 Rolle.
+          example: Lern
+        personenstatus:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Status, den eine Person in einer Organisation in
+            Bezug auf eine bestimmte Rolle hat. Referenz auf einen Code der
+            Codeliste 11.1 Personenstatus.
+          example: Aktiv
+        jahrgangsstufe:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Jahrgangsstufe, die eine Person in der Organisation
+            in einer bestimmten Rolle besucht. Referenz auf Code der Codeliste
+            11.6 Jahrgangsstufe.
+          example: Aktiv
+        sichtfreigabe:
+          maxLength: 256
+          type: string
+          description: >-
+            String (Code) - Gibt an, ob dieser Personenkontext aufgrund der
+            Freigabe durch eine andere Organisation sichtbar ist. Ist
+            "sichtfreigabe" nicht gesetzt, so entspricht das dem Wert "nein".
+            Der Wert von Sichtfreigabe ist Boolean nach Codetabelle 11.7
+            Boolean.
+          example: JA
+        loeschung:
+          $ref: '#/components/schemas/Loeschung'
+        revision:
+          maxLength: 256
+          type: string
+          description: >-
+            String (UTF-8) - Revision des Personenkontext. Wird vom
+            SchulConnectX Server mit der Erstellung des Datensatzes sowie
+            Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen
+            oder Diensten gesetzt werden.
+          example: '1234334254'
+      description: >-
+        Der Personenkontext gibt an, in welcher Rolle der Dienst von nutzenden
+        Personen in Anspruch genommen wird. Der Personenkontext umfasst neben
+        der Rolle auch Informationen über die Organisation, an der diese Rolle
+        ausgeführt wird.
+    Personendatensatz:
+      required:
+        - person
+      type: object
+      properties:
+        person:
+          $ref: '#/components/schemas/Person'
+        personenkontexte:
+          minItems: 0
+          type: array
+          items:
+            $ref: '#/components/schemas/Personenkontext'
