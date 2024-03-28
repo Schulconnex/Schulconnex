@@ -1,0 +1,39 @@
+openapi: '3.0.2'
+info:
+  title: Schulconnex
+  version: V0
+  description: |
+    Beschreibung der Schnittstellen von Schulconnex für Dienste und Quellsysteme
+  contact:
+    name: "Landesinitiative n-21: Schulen in Niedersachsen online e. V."
+  license:
+    name: Creative Commons Namensnennung-Keine Bearbeitung 2.0 Deutschland (CC BY-ND 2.0 DE)
+servers:
+  - url: https://api.schulconnex.test/v1
+security:
+  - oAuth: []
+tags:
+  - name: Personen
+paths:
+  /personen-info:
+    get:
+      tags:
+        - Personen
+      summary: Die Schnittstelle person-info bezieht sich auf die Information einer Person.
+      description: |
+        # Beschreibung
+        Dieser Endpunkt bezieht sich nur auf die im Sicherheitskontext angemeldete Person und dient somit dem Abruf der
+        Informationen der jeweiligen Person.
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    oAuth:    # chosen name
+      type: oauth2
+      description: Die API nutzt den OAuth 2.0 Client Credentials Flow.
+      flows:
+        clientCredentials:   # OAuth flow(authorizationCode, implicit, password or clientCredentials)
+          tokenUrl: https://login.schulconnex.test/token
+          scopes:
+            person-info: Enthält Vorname, Nachname, Role und Organisationskennung
