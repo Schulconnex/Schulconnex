@@ -1,0 +1,3 @@
+# Angepasstes Datenmodell
+
+Platzhalter
