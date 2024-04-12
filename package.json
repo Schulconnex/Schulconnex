@@ -20,7 +20,7 @@
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "docusaurus-plugin-openapi-docs": "^3.0.0-beta.10",
-    "docusaurus-theme-openapi-docs": "^3.0.0-beta.5",
+    "docusaurus-theme-openapi-docs": "^3.0.0-beta.10",
     "prism-react-renderer": "^2.3.0",
     "rapidoc": "^9.3.4",
     "rapipdf": "^2.2.1",
