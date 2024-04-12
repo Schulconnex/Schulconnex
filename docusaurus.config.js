@@ -8,187 +8,197 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Schulconnex',
-  tagline: 'Schnittstellen für Dienste und Quellsysteme',
-  favicon: 'img/favicon.ico',
+    title: 'Schulconnex',
+    tagline: 'Schnittstellen für Dienste und Quellsysteme',
+    favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+    // Set the production url of your site here
+    url: 'https://your-docusaurus-site.example.com',
+    // Set the /<baseUrl>/ pathname under which your site is served
+    // For GitHub pages deployment, it is often '/<projectName>/'
+    baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Schulconnex', // Usually your GitHub org/user name.
-  projectName: 'Schulconnex', // Usually your repo name.
+    // GitHub pages deployment config.
+    // If you aren't using GitHub pages, you don't need these.
+    organizationName: 'Schulconnex', // Usually your GitHub org/user name.
+    projectName: 'Schulconnex', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'de',
-    locales: ['de'],
-  },
+    // Even if you don't use internationalization, you can use this field to set
+    // useful metadata like html lang. For example, if your site is Chinese, you
+    // may want to replace "en" with "zh-Hans".
+    i18n: {
+        defaultLocale: 'de',
+        locales: ['de'],
+    },
 
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          docItemComponent: "@theme/ApiItem",
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      }),
+    presets: [
+        [
+            'classic',
+            /** @type {import('@docusaurus/preset-classic').Options} */
+            ({
+                docs: {
+                    sidebarPath: './sidebars.js',
+                    // Please change this to your repo.
+                    // Remove this to remove the "edit this page" links.
+                    // editUrl:
+                    //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    docItemComponent: "@theme/ApiItem",
+                    versions: {
+                        current: {
+                            label: "v1",
+                            path: "./",
+                        },
+                        "v0": {
+                            label: "v0",
+                            path: "version-v0/docs/"
+                        }
+                    }
+                },
+                theme: {
+                    customCss: './src/css/custom.css',
+                },
+            }),
+        ],
     ],
-  ],
 
-  themeConfig:
+    themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'Schulconnex',
-        logo: {
-          alt: 'Schulconnex',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'specSidebar',
-            position: 'left',
-            label: 'Spezifikation',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'apiDiensteSidebarPaloAlto',
-            position: 'left',
-            label: 'API Dienste (PaloAlto)',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'apiQSSidebarPaloAlto',
-            position: 'left',
-            label: 'API Quellsysteme (PaloAlto)',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'apiDiensteSidebarRapiDoc',
-            position: 'left',
-            label: 'API Dienste (RapiDoc)',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'apiQSSidebarRapiDoc',
-            position: 'left',
-            label: 'API Quellsysteme (RapiDoc)',
-          },
-          {
-            type: 'docsVersionDropdown',
-            position: 'right',
-            dropdownActiveClassDisabled: false,
-          },
-          {
-            href: 'https://github.com/Schulconnex/Schulconnex',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Dokumentation',
-            items: [
-              {
-                label: 'Einleitung',
-                to: '/docs/einleitung',
-              },
-              {
-                label: 'Allgemeines',
-                to: '/docs/allgemeines',
-              },
-            ],
-          },
-          {
-            title: 'Extra',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/Schulconnex/Schulconnex',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Niedersächsisches Kultusministerium`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
-  plugins: [
-    [
-      "docusaurus-plugin-openapi-docs",
-      {
-        id: "openapi",
-        docsPluginId: "classic", // e.g. "classic" or the plugin-content-docs id
-        config: {
-          apiDienste: { // is considered the <id> that you will reference in the CLI
-            specPath: "static/openapi/api-dienste.yaml", // path or URL to the OpenAPI spec
-            outputDir: "docs/schulconnex-api-by-plugin/v1/dienste", // output directory for generated *.mdx and sidebar.js files
-            sidebarOptions: {
-              groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+        ({
+            // Replace with your project's social card
+            image: 'img/docusaurus-social-card.jpg',
+            navbar: {
+                title: 'Schulconnex',
+                logo: {
+                    alt: 'Schulconnex',
+                    src: 'img/logo.svg',
+                },
+                items: [
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'specSidebar',
+                        position: 'left',
+                        label: 'Spezifikation',
+                    },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'apiDiensteSidebarPaloAlto',
+                        position: 'left',
+                        label: 'API Dienste (PaloAlto)',
+                    },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'apiQSSidebarPaloAlto',
+                        position: 'left',
+                        label: 'API Quellsysteme (PaloAlto)',
+                    },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'apiDiensteSidebarRapiDoc',
+                        position: 'left',
+                        label: 'API Dienste (RapiDoc)',
+                    },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'apiQSSidebarRapiDoc',
+                        position: 'left',
+                        label: 'API Quellsysteme (RapiDoc)',
+                    },
+                    {
+                        type: 'docsVersionDropdown',
+                        position: 'right',
+                        dropdownActiveClassDisabled: true,
+                    },
+                    {
+                        href: 'https://github.com/Schulconnex/Schulconnex',
+                        label: 'GitHub',
+                        position: 'right',
+                    },
+                ],
             },
-            version: "v1",
-            label: "current",
-            baseUrl: "./",
-            versions: {
-              'v0': {
-                specPath: 'static/openapi/v0/api-dienste.yaml',
-                outputDir: 'docs/schulconnex-api-by-plugin/v0/dienste',
-                label: 'v0',
-                baseUrl: 'schulconnex-api-by-plugin/v0/'
-              }
-            }
-          },
-          apiQuellsysteme: { // is considered the <id> that you will reference in the CLI
-            specPath: "static/openapi/api-qs.yaml", // path or URL to the OpenAPI spec
-            outputDir: "docs/schulconnex-api-by-plugin/v1/qs", // output directory for generated *.mdx and sidebar.js files
-            sidebarOptions: {
-              groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+            footer: {
+                style: 'dark',
+                links: [
+                    {
+                        title: 'Dokumentation',
+                        items: [
+                            {
+                                label: 'Einleitung',
+                                to: '/docs/einleitung',
+                            },
+                            {
+                                label: 'Allgemeines',
+                                to: '/docs/allgemeines',
+                            },
+                        ],
+                    },
+                    {
+                        title: 'Extra',
+                        items: [
+                            {
+                                label: 'GitHub',
+                                href: 'https://github.com/Schulconnex/Schulconnex',
+                            },
+                        ],
+                    },
+                ],
+                copyright: `Copyright © ${new Date().getFullYear()} Niedersächsisches Kultusministerium`,
             },
-            version: "v1",
-            label: "current",
-            baseUrl: "./",
-            versions: {
-              'v0': {
-                specPath: 'static/openapi/v0/api-qs.yaml',
-                outputDir: 'docs/schulconnex-api-by-plugin/v0/qs',
-                label: 'v0',
-                baseUrl: 'schulconnex-api-by-plugin/v0/',
-              }
-            }
-          }
-        }
-      },
-    ]
-  ],
-  themes: ["docusaurus-theme-openapi-docs"] // exports ApiItem and ApiDemoPanel
+            prism: {
+                theme: prismThemes.github,
+                darkTheme: prismThemes.dracula,
+            },
+        }),
+    plugins: [
+        [
+            "docusaurus-plugin-openapi-docs",
+            {
+                id: "openapi",
+                docsPluginId: "classic", // e.g. "classic" or the plugin-content-docs id
+                config: {
+                    apiDienste: { // is considered the <id> that you will reference in the CLI
+                        specPath: "static/openapi/api-dienste.yaml", // path or URL to the OpenAPI spec
+                        outputDir: "docs/schulconnex-api-by-plugin/dienste", // output directory for generated *.mdx and sidebar.js files
+                        sidebarOptions: {
+                            groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+                        },
+                        version: "v1",
+                        label: "current",
+                        baseUrl: "./",
+                        versions: {
+                            'v0': {
+                                specPath: 'static/openapi/v0/api-dienste.yaml',
+                                outputDir: 'versioned_docs/version-v0/schulconnex-api-by-plugin/dienste',
+                                label: 'v0',
+                                baseUrl: 'docs/version-v0/'
+                            }
+                        }
+                    },
+                    apiQuellsysteme: { // is considered the <id> that you will reference in the CLI
+                        specPath: "static/openapi/api-qs.yaml", // path or URL to the OpenAPI spec
+                        outputDir: "docs/schulconnex-api-by-plugin/qs", // output directory for generated *.mdx and sidebar.js files
+                        sidebarOptions: {
+                            groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+                        },
+                        version: "v1",
+                        label: "current",
+                        baseUrl: "./",
+                        versions: {
+                            'v0': {
+                                specPath: 'static/openapi/v0/api-qs.yaml',
+                                outputDir: 'versioned_docs/version-v0/schulconnex-api-by-plugin/qs',
+                                label: 'v0',
+                                baseUrl: 'docs/version-v0/',
+                            }
+                        }
+                    }
+                }
+            },
+        ]
+    ],
+    themes: ["docusaurus-theme-openapi-docs"] // exports ApiItem and ApiDemoPanel
 };
 
 export default config;

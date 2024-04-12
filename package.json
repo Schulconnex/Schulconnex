@@ -11,7 +11,8 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "build-openapi": "docusaurus gen-api-docs all && docusaurus gen-api-docs:version apiDienste:all && docusaurus gen-api-docs:version apiQuellsysteme:all"
   },
   "dependencies": {
     "@docusaurus/core": "^3.2.1",
