@@ -23,9 +23,6 @@
     "docusaurus-plugin-openapi-docs": "^3.0.0-beta.10",
     "docusaurus-theme-openapi-docs": "^3.0.0-beta.10",
     "prism-react-renderer": "^2.3.0",
-    "rapidoc": "^9.3.4",
-    "rapipdf": "^2.2.1",
-    "raw-loader": "^4.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

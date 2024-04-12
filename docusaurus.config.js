@@ -51,10 +51,6 @@ const config = {
                             label: "v1",
                             path: "./",
                         },
-                        "v0": {
-                            label: "v0",
-                            path: "version-v0/docs/"
-                        }
                     }
                 },
                 theme: {
@@ -84,27 +80,15 @@ const config = {
                     },
                     {
                         type: 'docSidebar',
-                        sidebarId: 'apiDiensteSidebarPaloAlto',
+                        sidebarId: 'apiDienste',
                         position: 'left',
-                        label: 'API Dienste (PaloAlto)',
+                        label: 'API Dienste',
                     },
                     {
                         type: 'docSidebar',
-                        sidebarId: 'apiQSSidebarPaloAlto',
+                        sidebarId: 'apiQuellsysteme',
                         position: 'left',
-                        label: 'API Quellsysteme (PaloAlto)',
-                    },
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'apiDiensteSidebarRapiDoc',
-                        position: 'left',
-                        label: 'API Dienste (RapiDoc)',
-                    },
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'apiQSSidebarRapiDoc',
-                        position: 'left',
-                        label: 'API Quellsysteme (RapiDoc)',
+                        label: 'API Quellsysteme',
                     },
                     {
                         type: 'docsVersionDropdown',
@@ -164,17 +148,10 @@ const config = {
                         sidebarOptions: {
                             groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
                         },
-                        version: "v1",
-                        label: "current",
+                        version: "v1.0",
+                        label: "v1.0",
                         baseUrl: "./",
-                        versions: {
-                            'v0': {
-                                specPath: 'static/openapi/v0/api-dienste.yaml',
-                                outputDir: 'versioned_docs/version-v0/schulconnex-api-by-plugin/dienste',
-                                label: 'v0',
-                                baseUrl: 'docs/version-v0/'
-                            }
-                        }
+                        versions: {}
                     },
                     apiQuellsysteme: { // is considered the <id> that you will reference in the CLI
                         specPath: "static/openapi/api-qs.yaml", // path or URL to the OpenAPI spec
@@ -182,17 +159,10 @@ const config = {
                         sidebarOptions: {
                             groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
                         },
-                        version: "v1",
-                        label: "current",
+                        version: "v1.0",
+                        label: "v1.0",
                         baseUrl: "./",
-                        versions: {
-                            'v0': {
-                                specPath: 'static/openapi/v0/api-qs.yaml',
-                                outputDir: 'versioned_docs/version-v0/schulconnex-api-by-plugin/qs',
-                                label: 'v0',
-                                baseUrl: 'docs/version-v0/',
-                            }
-                        }
+                        versions: {}
                     }
                 }
             },
