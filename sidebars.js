@@ -116,6 +116,14 @@ const sidebars = {
       ],
     },
   ],
+
+  apiDiensteSidebarRapiDoc: [
+    'api-dienste-rapidoc'
+  ],
+
+  apiQSSidebarRapiDoc: [
+    'api-qs-rapidoc'
+  ],
 };
 
 export default sidebars;

@@ -72,6 +72,18 @@ const config = {
             label: 'Spezifikation',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'apiDiensteSidebarRapiDoc',
+            position: 'left',
+            label: 'API Dienste',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'apiQSSidebarRapiDoc',
+            position: 'left',
+            label: 'API Quellsysteme',
+          },
+          {
             href: 'https://github.com/Schulconnex/Schulconnex',
             label: 'GitHub',
             position: 'right',
