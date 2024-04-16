@@ -21,18 +21,7 @@ const sidebars = {
     'stand-der-bearbeitung',
     'vorbemerkung',
     'einleitung',
-    {
-      type: 'category',
-      label: 'Allgemeines',
-      link: {
-        type: 'doc',
-        id: 'allgemeines/allgemeines',
-      },
-      items: [
-        'allgemeines/allgemeines-loeschen-qs',
-        'allgemeines/allgemeines-loeschen-dienste',
-      ],
-    },
+    'allgemeines',
     {
       type: 'category',
       label: 'Datenmodell',
