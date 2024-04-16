@@ -1,3 +1,3 @@
 # Stand der Bearbeitung
 
-Platzhalter
+Dieses Dokument befindet sich aktuell im Bearbeitungsstand „Veröffentlichte Spezifikation“ in Version 1.4.
