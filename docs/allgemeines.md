@@ -25,14 +25,14 @@ Aufruf im **Sicherheitskontext einer angemeldeten nutzenden Person mit Zugriff a
 Personenkontext**, mit dem die Person angemeldet ist. Bei dieser Art des Zugriffs werden nur
 die Daten, die sich auf den konkreten Personenkontext beziehen, mit dem die oder der
 Nutzende angemeldet ist, durch die REST-API bereitgestellt. Dies ist der Standard-Zugriff für
-die Dienste. Dieser Zugriff setzt einen Authentisierungs- und Autorisierungsvorgang des oder
+Dienste. Dieser Zugriff setzt einen Authentifizierungs- und Autorisierungsvorgang des oder
 der Nutzenden durch den Server voraus, bei dem ein entsprechender Access-Token für den
 Zugriff auf den Endpunkt ausgestellt wird.
 
 Aufruf im **Sicherheitskontext einer angemeldeten Person mit Zugriff auf alle
 Personenkontexte der Person**. Nur angemeldeten Personen mit besonderem Vertrauensstatus
 kann es ermöglicht werden, auf die vollständigen Daten einer Person (alle Personenkontexte)
-zuzugreifen. Dieser Zugriff setzt ebenfalls einen Authentisierungs- und Autorisierungsvorgang
+zuzugreifen. Dieser Zugriff setzt ebenfalls einen Authentifizierungs- und Autorisierungsvorgang
 des oder der Nutzenden durch den Server voraus, bei dem ein entsprechender Access-Token
 für den Zugriff auf den Endpunkt ausgestellt wird.
 
