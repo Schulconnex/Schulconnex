@@ -39,8 +39,7 @@ an den Quellen werden werden sofort sichtbar und benötigen keinen Webserverneus
 npm build
 ```
 
-Dieser Befehl erzeugt statische Dateien im Verzeichnis `build` welche dazu geeignet sind, gehostet zu werden,
-durch einen statischen Webserver.
+Dieser Befehl erzeugt statische Dateien im Verzeichnis `build`, die von einem Webserver gehostet werden können.
 
 ## Lizenz
 
