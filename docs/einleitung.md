@@ -9,9 +9,8 @@ Strategie zur Einrichtung landesweiter ID-Management-Systeme im schulischen Bere
 verstanden. Ziel ist, ein standardisiertes Anmeldeverfahren für den Zugang zu digitalen
 Bildungsplattformen und -medien zu schaffen, welches eine Anmeldung bei digitalen Diensten
 unter Wahrung des Grundsatzes der Datensparsamkeit ermöglicht, so dass nur die für diesen
-Dienst notwendigen Daten bereitgestellt werden.
-
-Dabei ist herauszuheben, dass hiermit weder eine Vereinheitlichung der bei den Schulverwaltungen
-eingesetzten Systeme noch eine zentrale Datenhaltung beabsichtigt ist.
+Dienst notwendigen Daten bereitgestellt werden. Dabei ist herauszuheben, dass hiermit weder
+eine Vereinheitlichung der bei den Schulverwaltungen eingesetzten Systemen noch eine zentrale
+Datenhaltung beabsichtigt ist.
 
 [1]: https://www.kmk.org/themen/bildung-in-der-digitalen-welt/strategie-bildung-in-der-digitalen-welt.html
