@@ -23,7 +23,7 @@ Attribut | Typ | Anzahl | Bemerkung
 id | String (UTF-8) | 1 | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
 referrer | String (UTF-8) | 0..1 | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein.
 mandant | String (UTF-8) | 1 |  ID des Mandanten, dem der Personenkontext zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
-organisation | String (Code) | 1 | Organisation. (Siehe Datenmodell *Organisation*)
+organisation | Organisation | 1 | Organisation. (Siehe Datenmodell *Organisation*)
 rolle | String (Code) | 1 | Rolle der Person innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*
 erreichbarkeiten | *Array* | 0..n | Liste (Array) von Attributpaaren aus Erreichsbarkeitstyp und Kennung
 erreichbarkeiten[].typ | String (Code) | 1 | Typ der Erreichbarkeit. Referenz auf Liste von Codes der Codeliste *Erreichbarkeitstyp*
