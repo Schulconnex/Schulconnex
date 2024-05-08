@@ -26,9 +26,9 @@ referenzgruppen | *Struktur* | 0..n | Array von Referenzgruppen zu dieser Gruppe
 referenzgruppen.grupid | String (UTF-8) | 1 | ID der Referenzgruppe
 referenzgruppen.rollen | String (Code) | 0..n | Gruppenrollen aus der Gruppenzugehörigkeit von Personenkontexten, welche in die Referenzgruppe übernommen werden. Hinweis:  Werden hier keine Gruppenrollen aufgeführt, so werden alle Personenkontexte der Referenzgruppe übernommen.
 laufzeit | *Struktur* | 1 | Die Laufzeiten von Gruppen können entweder direkt durch Datumsangaben festgelegt werden (`von`/`bis`) oder durch Referenzen auf Lernperioden (`vonlernperiode`/`bislernperiode`). Wird eine Lernperiode referenziert, so steht `vonlernperiode` für das Anfangsdatum der Lernperiode (also das Attribut Beginn) und `bislernperiode` für das Enddatum der Lernperiode. Eine Mischung von Datum- und Perioden-Angaben ist nicht zulässig. Wird der Beginn der Laufzeit als `von` angegeben, so ist das Ende als `bis` anzugeben. Bei Nutzung von `vonlernperiode` ist das Ende mit `bislernperiode` zu spezifizieren.
-laufzeit.von | Datum (siehe Abschnitt Datumsformat) | 1 | Anfang des Gültigkeitszeitraumes der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.
+laufzeit.von | Datum (siehe Abschnitt Datumsformat) | 0..1 | Anfang des Gültigkeitszeitraumes der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.
 laufzeit.vonlernperiode | String (Code) | 0..1 | Code der zu einer Gruppe gehörenden Lernperiode. Referenz auf Code der Codeliste *Lernperiode*.
-laufzeit.bis | Datum (siehe Abschnitt Datumsformat) | 1 | Ende des Gültigkeitszeitraumes der Gruppe.
+laufzeit.bis | Datum (siehe Abschnitt Datumsformat) | 0..1 | Ende des Gültigkeitszeitraumes der Gruppe.
 laufzeit.bislernperiode | String (Code) | 0..1 |  Code der zu einer Gruppe gehörenden Lernperiode. Referenz auf Code der Codeliste *Lernperiode*.
 sichtfreigabe | String (Code) | 0..1 | Gibt an, ob diese Gruppe aufgrund der Freigabe durch eine andere Organisation sichtbar ist. Ist `sichtfreigabe` nicht gesetzt, so entspricht das dem Wert `nein`. Der Wert von Sichtfreigabe ist Boolean nach Codetabelle *Boolean*.
 revision | String (UTF-8) | 1 | Revision der Gruppe. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
