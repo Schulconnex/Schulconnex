@@ -55,8 +55,8 @@ const sidebars = {
       items: [
         'angepasstes-datenmodell/person',
         'angepasstes-datenmodell/personenkontext',
-        'angepasstes-datenmodell/gruppe',
         'angepasstes-datenmodell/organisation',
+        'angepasstes-datenmodell/gruppe',
       ],
     },
     {
