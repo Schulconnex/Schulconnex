@@ -11,16 +11,16 @@ jeweils mit spezifischen Erweiterungen.
 
 ```mermaid
 classDiagram
-  Personendatensatz --> "1" Person
-  Personendatensatz --> "1..n" Personenkontext
-  Beziehung --> "1..n" Personenkontext
-  Organisation "0..1" <-- Person
-  Organisation "0..1" <-- Personenkontext
-  Anschrift <-- "0..1" Organisation
-  Organisation "1" <-- Gruppe
-  Gruppendatensatz --> "0..1" Gruppe
-  Gruppendatensatz --> "1..n" Gruppenzugehörigkeit
-  Gruppe --> "0..1" Lernperiode
+  Personendatensatz --> Person : 1
+  Personendatensatz --> Personenkontext : 1..n
+  Beziehung --> Personenkontext : 1..n
+  Person --> Organisation : 0..1
+  Personenkontext --> Organisation : 0..1
+  Organisation --> Anschrift : 0..1
+  Gruppe --> Organisation : 1
+  Gruppendatensatz --> Gruppe : 0..1
+  Gruppendatensatz --> Gruppenzugehörigkeit : 1..n
+  Gruppe --> Lernperiode : 0..1
   class Personendatensatz {
     person
     personenkontexte
