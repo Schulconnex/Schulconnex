@@ -37,7 +37,7 @@ personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten.
       "geburtsort": "Berlin, Deutschland"
     },
     "geschlecht": "w",
-    "lokalisierung": “de”,
+    "lokalisierung": "de",
     "vertrauensstufe": "VOLL",
     "auskunftssperre": "nein",
     "revision": "1"
@@ -54,19 +54,19 @@ personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten.
         "namensergaenzung": "vorher Heinrich-Heine-Gesamtschule",
         "kuerzel": "Heine-Gym",
         "anschrift" : {
-       "postleitzahl": "30519",
-       "ort": "Hannover",
-       "ortsteil": "Döhren"
-        }",
+          "postleitzahl": "30519",
+          "ort": "Hannover",
+          "ortsteil": "Döhren"
+        },
         "typ": "SCHULE",
         "traegerschaft": "02"
       },
       "rolle": "LERN",
       "erreichbarkeiten": [
-              {
-                  "typ": "E-Mail",
-      "kennung": "Musterfrau@Heinrich-Heine-Gymnasium.de",
-              }
+        {
+          "typ": "E-Mail",
+          "kennung": "Musterfrau@Heinrich-Heine-Gymnasium.de",
+        }
       ],
       "personenstatus": "AKTIV",
       "jahrgangsstufe": "01",
