@@ -62,9 +62,9 @@ classDiagram
     mandant
     organisation
     rolle
-    erreichbarkeit
-    erreichbarkeit.typ
-    erreichbarkeit.kennung
+    erreichbarkeiten
+    erreichbarkeiten.typ
+    erreichbarkeiten.kennung
     personenstatus
     jahrgangsstufe
     sichtfreigabe
