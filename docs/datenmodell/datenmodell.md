@@ -5,8 +5,8 @@ Entitäten in einer Datenhaltung. Im Kontext dieser Spezifikation repräsentiert
 der Nutzlast von Anfragen (Request Payload) und Nutzlast der Antworten (Response Payload)
 bei XHR-Anfragen (HTTP-Anfragen gegen API-Endpunkte).
 
-Das Datenmodell der Schnittstelle basiert auf Datenmodellen der Spezifikationen XBildung und
-[XSchule][1] (bspw. „NatuerlichePerson“ ist die Vorlage für „Person“, auch „Organisation“ ist an XBildung orientiert),
+Das Datenmodell der Schnittstelle basiert auf Datenmodellen der Spezifikationen [XBildung][1] und
+[XSchule][2] (bspw. „NatuerlichePerson“ ist die Vorlage für „Person“, auch „Organisation“ ist an XBildung orientiert),
 jeweils mit spezifischen Erweiterungen.
 
 ```mermaid
@@ -152,4 +152,5 @@ Bei Attributen vom Typ String (Zeichenkette) ist die maximale Länge der Zeichen
 Datenmodellen angegeben. Diese Angabe erfolgt durch Anhang der Maximallänge in Klammern hinter den Datentyp String.
 Die Angabe „String (32)“ definiert einen Text mit der maximalen Länge von 32 Zeichen.
 
-[1]: https://docs.fitko.de/fit-standards/
+[1]: https://www.xrepository.de/details/urn:xoev-de:xbildung-de:def:standard:xbildung
+[2]: https://www.xrepository.de/details/urn:xoev-de:xschule-digital:def:standard:xschule
