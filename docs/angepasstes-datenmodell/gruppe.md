@@ -22,8 +22,8 @@ optionen | String (Code) | 0/0..n | ja | Zusätzliche Optionen zur Gruppe, meist
 differenzierung | String (Code) | 0/0..1 | ja | Differenzierung bei integriertem Unterricht oder in der gymnasialen Oberstufe (Erweiterungsebene, Grundebene). Referenz auf Code der Codeliste *Gruppendifferenzierung*.
 bildungsziele | String (Code) | 0/0..n | ja | Bildungsziel (Realschule, Hauptschule, Gymnasium, …). Referenz auf Code der Codeliste *Bildungsziel*.
 jahrgangsstufen | String (Code) | 0/0..n | ja | Jahrgangsstufe (Jahrgangsstufe 1 bis Jahrgangsstufe 13). Referenz auf Code der Codeliste *Jahrgangsstufe*.
-faecher | *Struktur* | 0/0..n | ja | Liste der in der Gruppe behandelten Fächer.
-faecher.kennung | String (Code) | 0/0..1 | ja | In der Gruppe behandelte Fächer. Referenz auf Code der Codeliste *Fächerkanon*.
+faecher | *Array* | 0/0..n | ja | Array (Liste) der in der Gruppe behandelten Fächer.
+faecher[].kennung | String (Code) | 0/0..1 | ja | Behandeltes Fach. Referenz auf Code der Codeliste *Fächerkanon*.
 laufzeit | *Struktur* | 0/1 | ja | Die Laufzeiten von Gruppen können entweder direkt durch Datumsangaben festgelegt werden (`von`/`bis`) oder durch Referenzen auf Lernperioden (`vonlernperiode`/`bislernperiode`). Wird eine Lernperiode referenziert, so steht `vonlernperiode` für das Anfangsdatum der Lernperiode (also das Attribut Beginn) und `bislernperiode` für das Enddatum der Lernperiode. Eine Mischung von Datum- und Perioden-Angaben ist nicht zulässig. Wird der Beginn der Laufzeit als `von` angegeben, so ist das Ende als `bis` anzugeben. Bei Nutzung von `vonlernperiode` ist das Ende mit `bislernperiode` zu spezifizieren.
 laufzeit.von | Datum (siehe Abschnitt Datumsformat) | 0/0..1 | ja | Anfang des Gültigkeitszeitraumes der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.
 laufzeit.vonlernperiode | String (Code) | 0/0..1 | ja | Code der zu einer Gruppe gehörenden Lernperiode. Referenz auf Code der Codeliste *Lernperiode*.
