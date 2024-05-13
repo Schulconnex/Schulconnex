@@ -141,9 +141,9 @@ classDiagram
 ###	Optionalität und Anzahl
 
 In den Datenmodellen wird für jedes Attribut die Anzahl des Vorkommens definiert. Attribute mit der
-Anzahl 0..1 oder 0..n sind als optional zu verstehen. Je nach Autorisierung kann bei einer erfolgreichen
+Anzahl `0..1` oder `0..n` sind als optional zu verstehen. Je nach Autorisierung kann bei einer erfolgreichen
 HTTP-Anfrage gegen einen API-Endpunkt das minimale Datenmodell ausgegeben werden. Dieses umfasst die Attribute
-mit der Mindestanzahl 1. Beispielsweise kann eine Rückgabe nur das Attribut id (identifier) enthalten.
+mit der Mindestanzahl `1`. Beispielsweise kann eine Rückgabe nur das Attribut `id` (identifier) enthalten.
 
 ### String
 
