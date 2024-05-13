@@ -4,7 +4,7 @@ Eine Lernperiode beschreibt einen Zeitraum, in denen Gruppen von Organisationen 
 Meist handelt es sich bei solchen Zeiträumen um gesetzlich vorgegebene Schuljahre oder Schulhalbjahre.
 
 Beim Datentyp Lernperiode handelt es sich nicht um über API-Calls veränderbare Daten, sondern Lernperioden
-werden über eine Codeliste bereitgestellt. Anders als die meisten anderen Codelisten handelt es sich bei
+werden über eine Codeliste bereitgestellt. Anders als bei den meisten anderen Codelisten handelt es sich bei
 Lernperioden jedoch nicht um eine einfache Code-/Werte-Liste, sondern um einen komplexen Datentyp, dessen
 Struktur in der folgenden Tabelle beschrieben ist.
 
