@@ -16,14 +16,14 @@ aus einem Kontext in einen anderen Kontext übernommen werden sollen.
 Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung
 --- | --- | --- | --- | ---
 id | String (UTF-8) | 1 | nein | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-organisation | Organisation | 0/1 | ja | Organisation. (Siehe Angepasstes Datenmodell *Organisation*)
-rolle | String (Code) | 0/1 | ja | Rolle der Person innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*
-erreichbarkeiten | *Array* | 0..n | ja | Liste (Array) von Attributpaaren aus Erreichsbarkeitstyp und Kennung
-erreichbarkeiten[].typ | String (Code) | 1 | ja | Typ der Erreichbarkeit. Referenz auf Liste von Codes der Codeliste *Erreichbarkeitstyp*
+organisation | Organisation | 0/1 | ja | Organisation (siehe Angepasstes Datenmodell *Organisation*).
+rolle | String (Code) | 0/1 | ja | Rolle der Person innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*.
+erreichbarkeiten | *Array* | 0..n | ja | Liste (Array) von Attributpaaren aus Erreichsbarkeitstyp und Kennung.
+erreichbarkeiten[].typ | String (Code) | 1 | ja | Typ der Erreichbarkeit. Referenz auf Liste von Codes der Codeliste *Erreichbarkeitstyp*.
 erreichbarkeiten[].kennung | String (UTF-8) | 1 | ja | Konkrete Angabe der zum Erreichen der Person oder Organisation notwendigen Information. Derzeit ist nur die Erreichbarkeit über  eine E-Mail- Adresse vorgesehen.
-personenstatus | String (Code) | 0/1 | ja | Status, den eine Person in einer Organisation in Bezug auf eine bestimmte Rolle hat, Referenz auf einen Code der Codeliste *Personenstatus*
+personenstatus | String (Code) | 0/1 | ja | Status, den eine Person in einer Organisation in Bezug auf eine bestimmte Rolle hat, Referenz auf einen Code der Codeliste *Personenstatus*.
 gruppen | *Array* | 0/0..n | ja | Array aus Gruppen und dazugehörende Gruppenzugehörigkeiten.
-gruppen.gruppe.* | *Struktur* | 0/1 | ja | Attribute einer einzelnen Gruppe entsprechend Datenmodell *Gruppe*
+gruppen.gruppe.* | *Struktur* | 0/1 | ja | Attribute einer einzelnen Gruppe entsprechend Datenmodell *Gruppe*.
 gruppen.gruppenzugehoerigkeit | *Struktur* | 0/1 | ja |
 gruppen.gruppenzugehoerigkeit.rollen | String (Code) | 0/1..n | ja | Rollen der Person innerhalb der Gruppe. Liste von Rollen nach Codeliste *Gruppenrolle*.
 gruppen.sonstige_gruppenzugehoerige | Array \{String (Code), String (Code)\} | 0/0..1 | ja | Weitere Zugehörige zu der Gruppe, jeweils als Paare von Kontext-IDs ktid und Rollen (Array von Rollen nach Codeliste *Gruppenrolle*).
