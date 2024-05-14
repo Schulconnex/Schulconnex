@@ -7,7 +7,7 @@ die Gruppenzugehörigkeiten (Attribut `gruppendatensatz.gruppenzugehoerigkeit`) 
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
 gruppe | Gruppe | 1 | Gruppe (siehe *Gruppe*).
-gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Gruppenzugehörigkeiten. (siehe *Gruppenzugehörigkeit*).
+gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Gruppenzugehörigkeiten (siehe *Gruppenzugehörigkeit*).
 
 ## Beispiel JSON des Datentyps Gruppendatensatz
 
