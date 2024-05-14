@@ -31,11 +31,11 @@ nicht zwingend ein Geburtsdatum geliefert wird.
 
 ```mermaid
 classDiagram
-  Organisation "0..1" <-- Person
-  Organisation "0..1" <-- Personenkontext
-  Anschrift "0..1" <-- Organisation
-  Organisation "1" <-- "1" Gruppe
-  Gruppe --> "0..1" Lernperiode
+  Person --> Organisation : 0..1
+  Personenkontext --> Organisation : 0..1
+  Organisation --> Anschrift : 0..1
+  Gruppe --> Organisation : 1
+  Gruppe --> Lernperiode : 0..1
   class Person {
     stammorganisation
     stammorganisation.id
