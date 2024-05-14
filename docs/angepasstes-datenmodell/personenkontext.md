@@ -35,4 +35,4 @@ beziehungen.ist_von | *Array* | 0/0..n | ja | Array der `ist_von` Beziehungen ei
 beziehungen.ist_von[].ktid | String (UTF-8) | 0/1 | ja | Pseudonymisierte ID des Personenkontexts zu dem aus dem aktuellen Personenkontext eine `ist_von` Beziehung besteht.
 beziehungen.ist_von[].beziehung | String (Code) | 0/1 | ja | Art der Beziehung aus Codeliste *Beziehungen*.
 loeschung | *Struktur* | 0/0..1 | nein| Aktuell gibt es zu Löschungen nur ein Attribut (Zeitpunkt), eventuell werden in späteren Versionen weitere Attribute hinzugefügt.
-loeschung.zeitpunkt | String (datetime) | 1 | nein | Datum und Uhrzeit der Löschung des Personenkontexts. Das Format des Löschzeitpunktes ist `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt. Solange ein Personenkontext nicht gelöscht wurde, kann das Attribut `loeschung.zeitpunkt` geändert oder gelöscht werden. Ist das Attribut `loeschung` vorhanden, so muss der Zeitpunkt gesetzt sein.
+loeschung.zeitpunkt | String (datetime) | 1 | nein | Datum und Uhrzeit der Löschung des Personenkontexts. Das Format des Löschzeitpunktes ist `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt.
