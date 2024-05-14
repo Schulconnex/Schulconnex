@@ -9,7 +9,7 @@ Nachfolgend ist das Datenmodell einer Person dargestellt.
 Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung
 --- | --- | --- | --- | ---
 stammorganisation | String (UTF-8) | 0/0..1 | ja | Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Die erste Organisation ist die Stammorganisation. Sie ist unabhängig vom Personenkontext.
-stammorganisation.id | String (UTF-8) | 0/1 | ja | ID der Stammorganisation. wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+stammorganisation.id | String (UTF-8) | 0/1 | ja | ID der Stammorganisation. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
 stammorganisation.kennung | String (UTF-8) | 0/0..1 | ja | Die optionale Kennung (Identifikations-ID) der Stammorganisation ist innerhalb eines Organisationstyps eindeutig.
 stammorganisation.name | String (DIN 91379.B) | 0/0..1 | ja | Offizieller Name der Stammorganisation.
 stammorganisation.anschrift | Anschrift | 0/0..1 | ja | Anschrift der Stammorganisation nach Datenmodell *Anschrift*.
@@ -24,4 +24,5 @@ geburt.datum | Datum (siehe Abschnitt *Datumsformat*) | 0/0..1 | ja | Geburtsdat
 geburt.volljaehrig | String (Code) | 0/0..1 | ja | Gibt an, ob eine Person volljährig ist, ohne weitere Information über Geburtsdatum oder Alter zu vermitteln. Referenz auf einen Code der Codeliste *Boolean*.
 geburt.geburtsort | String (DIN 91379.C) | 0/0..1 | ja | Geburtsort einer Person, bestehend aus Ortsname und Land, beispielsweise „Eindhoven, Niederlande“. Wird kein Land angegeben, so wird als Land „Deutschland“ angenommen, d.h. der Geburtsort „Erfurt“ ist wie „Erfurt, Deutschland“ zu behandeln.
 geschlecht | String (Code) | 0/0..1 | ja | Referenz auf einen Code der Codeliste *Geschlecht*.
-lokalisierung | String (Code) | 0/0..1 | ja | Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden, Referenz auf einen Code der Codeliste *Vertrauensstufe*.
+lokalisierung | String (Code) | 0/0..1 | ja | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen gemäß RFC5646. Wenn nicht angegeben, wird „de“ angenommen. Referenz auf einen Code der Codeliste *Lokalisierung*.
+vertrauensstufe | String (Code) | 0/0..1 | ja | Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden, Referenz auf einen Code der Codeliste *Vertrauensstufe*.
