@@ -6,8 +6,8 @@ Datenmodell eines Personendatensatzes: Personendatensatz ist als Daten-Container
 
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
-person | Person | 1 | Person. (siehe Datenmodell *Person*)
-personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten. (siehe Datenmodell *Personenkontext*)
+person | Person | 1 | Person (siehe Datenmodell *Person*).
+personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten (siehe Datenmodell *Personenkontext*).
 
 ## Beispiel JSON des Datentyps Personendatensatz
 
