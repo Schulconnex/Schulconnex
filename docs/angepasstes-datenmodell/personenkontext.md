@@ -8,10 +8,10 @@ Hat eine Person mehrere Personenkontexte, so wird typischerweise bereits bei der
 Sicherheitskontext einer angemeldeten Person einer dieser Kontexte selektiert. In diesem Fall
 wird auch nur dieser ausgewählte Personenkontext an den Dienst weitergereicht.
 
-Abhängig von vertraglichen Absprachen mit dem Betrieb des Schulconnex-Servers ist es auch möglich,
+Abhängig von vertraglichen Absprachen mit dem Betreiber des Schulconnex-Servers ist es auch möglich,
 alle gespeicherten Personenkontexte mitzuliefern und die Auswahl erst in der Anwendung des Dienstes
-vorzunehmen. Dies ist beispielsweise sinnvoll, wenn Informationen aus einem Kontext in einen anderen
-Kontext übernommen werden sollen, beispielsweise bei Schulwechsel.
+vorzunehmen. Dies ist beispielsweise bei einem Schulwechsel sinnvoll, wenn Informationen
+aus einem Kontext in einen anderen Kontext übernommen werden sollen.
 
 Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung
 --- | --- | --- | --- | ---
