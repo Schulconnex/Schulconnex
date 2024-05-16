@@ -1,3 +1,0 @@
-# Registrierung
-
-Platzhalter
