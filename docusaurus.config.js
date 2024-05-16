@@ -115,6 +115,11 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      mermaid: {
+        options: {
+          mirrorActors: false,
+        }
+      }
     }),
 };
 
