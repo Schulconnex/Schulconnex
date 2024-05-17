@@ -89,6 +89,7 @@ const sidebars = {
         'schnittstellen/vorbedingungen',
       ],
     },
+    'codelisten',
     'glossar',
     {
       type: 'category',
