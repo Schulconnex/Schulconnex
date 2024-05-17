@@ -14,9 +14,7 @@ Nicht alle Attribute stehen allen Diensten zur Verfügung. Welche Daten vom Schu
 geliefert werden, wird durch individuelle Absprachen zwischen Dienstanbieter und Betreiber
 des Schulconnex-Servers festgelegt.
 
-:::note
-Hinweis zur Notation `0/1`, `0/0..1` und `0/0..n` bei der Anzahl
-:::
+## Hinweis zur Notation `0/1`, `0/0..1` und `0/0..n` bei der Anzahl
 
 Bei Attributen mit der Anzahl `0/1` hängt es von der vertraglichen Absprache zwischen Dienstanbieter und
 Betreiber des Schulconnex-Servers ab, ob dieses Attribut geliefert wird. Sieht die Absprache
