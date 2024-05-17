@@ -48,21 +48,21 @@ revision | String (UTF-8) | 1 | Revision des Personenkontext. Wird vom Schulconn
     "name": "Heinrich-Heine-Gymnasium",
     "namensergaenzung": "vorher Heinrich-Heine-Gesamtschule",
     "kuerzel": "Heine-Gym",
-    "anschrift" : {
-  "postleitzahl": "30519",
-  "ort": "Hannover",
-  "ortsteil": "Döhren"
-    }",
+    "anschrift": {
+      "postleitzahl": "30519",
+      "ort": "Hannover",
+      "ortsteil": "Döhren"
+    },
     "typ": "SCHULE",
     "traegerschaft": "02"
   },
-    "rolle": "LERN",
-    "erreichbarkeiten": [
-              {
-                  "typ": "E-Mail",
-      "kennung": "Petra.Muster@gymnasium-lehrte.de",
-              }
-   ],
+  "rolle": "Lern",
+  "erreichbarkeiten": [
+    {
+      "typ": "E-Mail",
+      "kennung": "Petra.Muster@gymnasium-lehrte.de"
+    }
+  ],
   "personenstatus": "AKTIV",
   "jahrgangsstufe": "05",
   "revision": "1"
