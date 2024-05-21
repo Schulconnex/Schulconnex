@@ -24,7 +24,7 @@ gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Grup
     "optionen": [
       "01"
     ],
-    “differenzierung”: “E”,
+    "differenzierung": "E",
     "bildungsziele": [
       "RS"
     ],
@@ -42,7 +42,7 @@ gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Grup
   },
   "gruppenzugehoerigkeiten": [{
       "id": "8722b058-8747-4646-8da0-d523a9f619b8",
-          "mandant": "cb4b7ee1-8651-40a8-b29d-b1bde7f6d21a",
+      "mandant": "cb4b7ee1-8651-40a8-b29d-b1bde7f6d21a",
       "referrer": "adf17dbe-7a72-45de-8c91-5b036fd080c8",
       "ktid": "42865c3f-2806-4488-9d46-dbaeb004bc8e",
       "rollen": ["Lern"],
