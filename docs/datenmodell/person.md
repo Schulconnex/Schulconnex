@@ -54,9 +54,9 @@ revision | String (UTF-8) | 1 | Revision der Person. Wird vom Schulconnex-Server
     "geburtsort": "Berlin, Deutschland"
   },
   "geschlecht": "w",
-  "lokalisierung": “de”,
-  "vertrauensstufe": "VOLL",
-  "auskunftssperre": "nein",
+  "lokalisierung": "de",
+  "vertrauensstufe": "Voll",
+  "auskunftssperre": "Nein",
   "revision": "1"
 }
 ```
