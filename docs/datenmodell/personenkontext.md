@@ -16,7 +16,7 @@ Bei der Abfrage einer Person über die API können mehrere zur Person gehörende
 Liste mit zurückgegeben werden.
 
 Nicht alle Kombinationen von Attributwerten sind sinnvoll. So ist beispielsweise die Kombination
-einer Jahrgangsstufe mit einer anderen Rolle als „LERN” in der Regel nicht sinnvoll.
+einer Jahrgangsstufe mit einer anderen Rolle als `Lern` in der Regel nicht sinnvoll.
 
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
@@ -53,7 +53,7 @@ revision | String (UTF-8) | 1 | Revision des Personenkontext. Wird vom Schulconn
       "ort": "Hannover",
       "ortsteil": "Döhren"
     },
-    "typ": "SCHULE",
+    "typ": "Schule",
     "traegerschaft": "02"
   },
   "rolle": "Lern",
@@ -63,7 +63,7 @@ revision | String (UTF-8) | 1 | Revision des Personenkontext. Wird vom Schulconn
       "kennung": "Petra.Muster@gymnasium-lehrte.de"
     }
   ],
-  "personenstatus": "AKTIV",
+  "personenstatus": "Aktiv",
   "jahrgangsstufe": "05",
   "revision": "1"
 }
