@@ -30,30 +30,30 @@ x | keine Angabe
 
 Code | Bezeichnung
 --- | ---
-LERN | Lernende/r
-LEHR | Lehrende/r
-SORGBER | Sorgeberechtigte/r
-EXTERN | externe Person
-ORGADMIN | Organisationsadministrator
-LEIT | Organisationsleitung
-SYSADMIN | Systemadministrator
+Lern | Lernende/r
+Lehr | Lehrende/r
+SorgBer | Sorgeberechtigte/r
+Extern | externe Person
+OrgAdmin | Organisationsadministrator
+Leit | Organisationsleitung
+SysAdmin | Systemadministrator
 
 ## Vertrauensstufe
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
-KEIN | keine | Der Schlüsselbesitzer ist nicht vertrauenswürdig. Diese Vertrauensstufe wird meist für Test- oder Beispiel-Nutzer vergeben.
-UNBE | unbekannt | Der Schlüsselbesitzer ist unbekannt. Diese Vertrauensstufe wird beispielsweise für selbstregistrierte Nutzer vergeben.
-TEIL | vertraut | Dem Schlüsselbesitzer wird vertraut. Hierbei handelt es sich meist um Nutzer, die von Nutzern mit höherer Stufe angelegt wurden und diesen bekannt sind, sich jedoch nicht einer formalen Identifizierung unterzogen haben.
-VOLL | verifiziert | Der Schlüsselbesitzer ist eindeutig und formal identifiziert (beispielsweise durch Vorlage des Personalausweises).
+Kein | keine | Der Schlüsselbesitzer ist nicht vertrauenswürdig. Diese Vertrauensstufe wird meist für Test- oder Beispiel-Nutzer vergeben.
+Unbe | unbekannt | Der Schlüsselbesitzer ist unbekannt. Diese Vertrauensstufe wird beispielsweise für selbstregistrierte Nutzer vergeben.
+Teil | vertraut | Dem Schlüsselbesitzer wird vertraut. Hierbei handelt es sich meist um Nutzer, die von Nutzern mit höherer Stufe angelegt wurden und diesen bekannt sind, sich jedoch nicht einer formalen Identifizierung unterzogen haben.
+Voll | verifiziert | Der Schlüsselbesitzer ist eindeutig und formal identifiziert (beispielsweise durch Vorlage des Personalausweises).
 
 ## Organisationstyp
 
 Code | Bezeichnung
 --- | ---
-SCHULE | Schule
-ANBIETER | Anbieter
-SONSTIGE | sonstige Organisationen / Einrichtungen
+Schule | Schule
+Anbieter | Anbieter
+Sonstige | sonstige Organisationen / Einrichtungen
 
 ## Jahrgangsstufe
 
@@ -80,8 +80,8 @@ englischen Begriffe „true“ und „false“.
 
 Code | Bemerkung
 --- | ---
-JA | Mapping auf `"true"`.
-NEIN | Mapping auf `"false"`.
+Ja | Mapping auf `"true"`.
+Nein | Mapping auf `"false"`.
 
 ## Trägerschaft
 
@@ -150,8 +150,8 @@ Sonstig | Sonstige Gruppe
 
 Code | Bezeichnung
 --- | ---
-Lern | Schülerin/Schüler
-Lehr | Lehrkraft
+Lern | Lernende/r
+Lehr | Lehrende/r
 KlLeit | Klassenleitung
 Foerd | Förderlehrkraft
 SchB | Schulbegleitung
