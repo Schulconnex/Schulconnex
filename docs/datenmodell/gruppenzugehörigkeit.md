@@ -3,7 +3,7 @@
 Die Gruppenzugehörigkeit repräsentiert eine Verknüpfung zwischen einem Personenkontext und einer Gruppe.
 Hierin werden zusätzlich zu der Rolle im Personenkontext, welcher sich auf die Rolle innerhalb einer
 Organisation bezieht, gruppenspezifische Rollen angegeben. So kann beispielsweise eine Person in einer
-Organisation die allgemeine Rolle `Lern` (Schülerin/Schüler) haben, in einer Gruppe zusätzlich
+Organisation die allgemeine Rolle `Lern` (Lernender oder Lernende) haben, in einer Gruppe zusätzlich
 noch Funktionen wie Klassensprecher oder Klassensprecherin ausüben.
 
 Attribut | Typ | Anzahl | Bemerkung
