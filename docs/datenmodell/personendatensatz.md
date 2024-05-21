@@ -38,8 +38,8 @@ personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten 
     },
     "geschlecht": "w",
     "lokalisierung": "de",
-    "vertrauensstufe": "VOLL",
-    "auskunftssperre": "nein",
+    "vertrauensstufe": "Voll",
+    "auskunftssperre": "Nein",
     "revision": "1"
   },
   "personenkontexte": [
@@ -58,17 +58,17 @@ personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten 
           "ort": "Hannover",
           "ortsteil": "Döhren"
         },
-        "typ": "SCHULE",
+        "typ": "Schule",
         "traegerschaft": "02"
       },
-      "rolle": "LERN",
+      "rolle": "Lern",
       "erreichbarkeiten": [
         {
           "typ": "E-Mail",
           "kennung": "Musterfrau@Heinrich-Heine-Gymnasium.de",
         }
       ],
-      "personenstatus": "AKTIV",
+      "personenstatus": "Aktiv",
       "jahrgangsstufe": "01",
       "revision": "1"
     }
