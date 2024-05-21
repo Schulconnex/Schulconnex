@@ -25,7 +25,7 @@ traegerschaft | String (Code) | 0..1 | Art der Trägerschaft der bei Schul-Organ
   "name": "Heinrich-Heine-Gymnasium",
   "namensergaenzung": "vorher Heinrich-Heine-Gesamtschule",
   "kuerzel": "Heine-Gym",
-  "typ": "SCHULE",
+  "typ": "Schule",
   "traegerschaft": "02"
 }
 ```
