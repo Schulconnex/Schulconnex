@@ -16,7 +16,7 @@ verarbeiten soll. Diese URL-Parameter werden an die URL angehängt.
 #### POST
 
 Per `POST` können große Datenmengen zum Webserver gesendet werden. Dabei werden
-die URL-Parameter nicht in die URL, sondern in den HTTP-Header geschrieben.
+die Parameter nicht in die URL, sondern in den HTTP-Body geschrieben.
 `POST` wird oft bei Formularen benutzt, um mehrere Daten gleichzeitig zu senden
 beziehungsweise Entitäten zu erstellen.
 
