@@ -29,7 +29,7 @@ gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Grup
       "RS"
     ],
     "jahrgangsstufen": [
-      "03"
+      "06"
     ],
     "faecher": [{
       "kennung": "EN"
