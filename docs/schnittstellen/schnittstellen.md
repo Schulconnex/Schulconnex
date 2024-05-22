@@ -6,7 +6,7 @@ Funktionen der einzelnen Endpunkte werden unter „[API-Endpunkte für Dienstanb
 
 Allgemein erfolgen Zugriffe auf Ressourcen über die Endpunkte mit Hilfen von CRUD-Operationen
 (CREATE, READ, UPDATE und DELETE). Welche Zugriffe jeweils erlaubt sind und welche
-HTTP(S)-Methode dabei genutzt werden dürfen, ist bei den Endpunktbeschreibungen im Detail
+HTTP(S)-Methoden dabei genutzt werden dürfen, ist bei den Endpunktbeschreibungen im Detail
 aufgeführt. Dort werden auch die zu verwendenen JSON-Strukturen beschrieben.
 
 ## API-Versionierung
