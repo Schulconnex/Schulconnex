@@ -60,7 +60,7 @@ revision | String (UTF-8) | 1 | Revision des Personenkontext. Wird vom Schulconn
   "erreichbarkeiten": [
     {
       "typ": "E-Mail",
-      "kennung": "Petra.Muster@gymnasium-lehrte.de"
+      "kennung": "Petra.Muster@heine-gym-döhren.de"
     }
   ],
   "personenstatus": "Aktiv",
