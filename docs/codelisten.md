@@ -15,7 +15,7 @@ auch `"ScHuLe"` sind als identisch anzunehmen.
 
 Code | Bezeichnung
 --- | ---
-AKTIV | aktiv
+Aktiv | aktiv
 
 ## Geschlecht
 
