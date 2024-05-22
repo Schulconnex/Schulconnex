@@ -67,9 +67,6 @@ const sidebars = {
         id: 'schnittstellendefinition/schnittstellendefinition',
       },
       items: [
-        'schnittstellendefinition/festlegungen',
-        'schnittstellendefinition/ausführung',
-        'schnittstellendefinition/daten',
         'schnittstellendefinition/fehlerbehandlung',
         'schnittstellendefinition/validierung',
       ],
