@@ -83,11 +83,13 @@ vollständigen Datensatz an Personen und Personenkontexten des Mandanten abrufen
 der Schnittstellen und ihre Rückgabewerte mit Beispielen sind aus der Schnittstellenspezifikation
 für Quellsysteme ersichtlich.
 
-::: note
+:::note[Hinweis]
+
 Eine Person kann in mehreren Rollen im landesweiten Schulsystem vertreten sein, beispielsweise
 gleichzeitig als Lehrkraft und Erziehungsberechtigte oder als Schulleitung und Lehrkraft.
 Daher können zu einer Person mehrere Personenkontexte gehören, wobei der Regelfall jedoch ein
 Personenkontext pro Person ist.
+
 :::
 
 > Anforderungen an das Quellsystem
