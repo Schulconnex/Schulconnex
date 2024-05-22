@@ -5,7 +5,7 @@ Nachfolgend ist das Datenmodell einer Person dargestellt.
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
 id | String (UTF-8) | 1 | ID der Person. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-referrer | String (UTF-8) | 0..1 | Die optionale Identifikations-ID einer Person muss innerhalb eines Quellsystems eindeutig sein (z. B. eine einheitliche Personalnummer).
+referrer | String (UTF-8) | 0..1 | Identifikations-ID einer Person. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein (z. B. eine einheitliche Personalnummer).
 mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Personen zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
 stammorganisation | String (UTF-8) | 0..1 | Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein.
 name | *Struktur* | 1 |
