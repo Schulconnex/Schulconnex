@@ -45,7 +45,7 @@ durch Setzen des Löschzeitpunktes ausgelöst werden.
 Dabei ist der Vorgang wie folgt:
 
 - Es wird ein Löschzeitpunkt für jeden Personenkontext der Person gesetzt.
-- Dieser Löschzeitpunkt darf nicht in der Vergangenheit liegen.
+- Ein Löschzeitpunkt darf nicht in der Vergangenheit liegen.
 - Zum Löschzeitpunkt wird der Personenkontext vom Schulconnex-Service gelöscht.
   Die Daten des Personenkontextes sind nicht mehr direkt zugreifbar.
 - Im Fall, dass es sich um den einzigen Personenkontext der Person handelt, kann nach der Löschung
