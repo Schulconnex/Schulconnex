@@ -1,6 +1,6 @@
 # Lernperiode
 
-Eine Lernperiode beschreibt einen Zeitraum, in denen Gruppen von Organisationen angeboten werden können.
+Eine Lernperiode beschreibt einen Zeitraum, in dem Gruppen von Organisationen angeboten werden können.
 Meist handelt es sich bei solchen Zeiträumen um gesetzlich vorgegebene Schuljahre oder Schulhalbjahre.
 
 Beim Datentyp Lernperiode handelt es sich nicht um über API-Calls veränderbare Daten, sondern Lernperioden
