@@ -38,22 +38,22 @@ Hersteller des Schulverwaltungssystems.
 
 Der Synchronisationsvorgang besteht aus mehreren Schritten.
 
- 1. Auslösen des Synchronisationsvorgangs
- 1. Auswahl der zu synchronisierenden Gruppen
- 1. Abruf der Personen des Mandanten des Quellsystems aus dem Schulconnex-Service
- 1. Abgleich der Datensätze
- 1. Aktualisieren oder Anlegen der jeweiligen Datensätze
- 1. Importieren bestätigter Datensätze in das Quellsystem
- 1. Abruf der Gruppen des Mandanten des Quellsystems aus dem Schulconnex-Service
- 1. Abgleich der Datensätze (Gruppen und Gruppenzugehörigkeiten)
- 1. Aktualisieren und Anlegen der Datensätze (Gruppen und Gruppenzugehörigkeiten)
- 1. Importieren bestätigter Datensätze (Gruppen und Gruppenzugehörigkeiten) in das Quellsystem
- 1. Rückmeldung an den Benutzer oder die Benutzerin
+- Schritt 1: Auslösen des Synchronisationsvorgangs
+- Schritt 2: Auswahl der zu synchronisierenden Gruppen
+- Schritt 3: Abruf der Personen des Mandanten des Quellsystems aus dem Schulconnex-Service
+- Schritt 4: Abgleich der Datensätze
+- Schritt 5: Aktualisieren oder Anlegen der jeweiligen Datensätze
+- Schritt 6: Importieren bestätigter Datensätze in das Quellsystem
+- Schritt 7: Abruf der Gruppen des Mandanten des Quellsystems aus dem Schulconnex-Service
+- Schritt 8: Abgleich der Datensätze (Gruppen und Gruppenzugehörigkeiten)
+- Schritt 9: Aktualisieren und Anlegen der Datensätze (Gruppen und Gruppenzugehörigkeiten)
+- Schritt 10: Importieren bestätigter Datensätze (Gruppen und Gruppenzugehörigkeiten) in das Quellsystem
+- Schritt 11: Rückmeldung an den Benutzer oder die Benutzerin
 
 Diese Schritte, sowie teilweise die daraus resultierenden Anforderungen an ein Quellsystem,
 werden in den folgenden Abschnitten genauer beschrieben.
 
-### Auslösen des Synchronisationsvorgangs
+### Schritt 1: Auslösen des Synchronisationsvorgangs
 
 Benutzer oder Benutzerinnen mit entsprechenden Rechten können diese Funktion, beispielsweise
 über eine Schaltfläche oder einen Menüeintrag, auslösen.
@@ -63,7 +63,7 @@ Benutzer oder Benutzerinnen mit entsprechenden Rechten können diese Funktion, b
 Implementierung eines UI-Elements zum Auslösen des Synchronisationsvorgangs, wie einen Button
 oder eine Menü-Funktion.
 
-### Auswahl der zu synchronisierenden Gruppen
+### Schritt 2: Auswahl der zu synchronisierenden Gruppen
 
 Meistens ist es nicht sinnvoll, sämtliche Personeneinträge der Datenbank des Quellsystems
 ohne Vorauswahl zu synchronisieren. Daher sollte im 2. Schritt die Möglichkeit bestehen,
@@ -75,7 +75,7 @@ auszuwählen.
 
 Implementierung eines Dialogs zur Auswahl von Klassen sowie der Gruppe der Lehrkräfte.
 
-### Abruf der Personen des Mandanten des Quellsystems aus dem Schulconnex-Service
+### Schritt 3: Abruf der Personen des Mandanten des Quellsystems aus dem Schulconnex-Service
 
 Das Quellsystem sollte vor dem Erstellen des Synchronisationsdatensatzes über den
 Endpunkt `/personen` (oder alternativ über `/personenkontexte`) der REST-API zunächst den
@@ -96,7 +96,7 @@ Personenkontext pro Person ist.
 
 Implementierung der Abruffunktion des REST-Endpunkts `/personen`.
 
-### Abgleich der Datensätze
+### Schritt 4: Abgleich der Datensätze
 
 Der Abgleich der Datensätze erfolgt anhand der Schlüssel. Hier kann die UUID des Schulconnex-Services
 verwendet werden. In diesem Fall muss das Quellsystem die UUID aus dem Schulconnex-Service als
@@ -126,7 +126,7 @@ Fall | Beschreibung | Aktion
 *Die Möglichkeit, unbekannte Datensätze aus dem Schulconnex-Service in das Quellsystem
 zu importieren (Fälle 4 und 5) kann auch für eine spätere Ausbaustufe zurückgestellt werden.*
 
-### Aktualisieren und Anlegen der Datensätze
+### Schritt 5: Aktualisieren und Anlegen der Datensätze
 
 Das Quellsystem hat nach Abgleich der Datensätze und eventuell notwendigen Bestätigungen (Fälle 3, 4 und 5)
 je eine Liste von Datensätzen zum Aktualisieren und zum Anlegen. Das Aktualisieren und Anlegen von Personen
@@ -140,7 +140,7 @@ Anlegen | <ul><li>POST `/personen/`</li><li>POST `/personen/{id}/personenkontext
 Eine PATCH-Operation ist nicht vorgesehen. Beim Aktualisieren über PUT muss der gesamte Datensatz
 mitgegeben werden. Es ist darauf zu achten, dass das Quellsystem dabei nicht unbeabsichtigt Daten löscht.
 
-### Importieren bestätigter Datensätze in das Quellsystem
+### Schritt 6: Importieren bestätigter Datensätze in das Quellsystem
 
 Wenn (in den Fällen 4 und 5) dem Import zugestimmt wurde und die Attribute im Schulconnex-Service
 zum Anlegen eines neuen Datensatzes im Quellsystem ausreichen, kann der Import durchgeführt werden.
@@ -148,14 +148,14 @@ zum Anlegen eines neuen Datensatzes im Quellsystem ausreichen, kann der Import d
 Die Möglichkeit, unbekannte Datensätze in das Quellsystem zu importieren (Fälle 4 und 5), kann auch
 für eine spätere Ausbaustufe zurückgestellt werden.
 
-### Abruf der Gruppen des Mandanten des Quellsystems aus dem Schulconnex-Service
+### Schritt 7: Abruf der Gruppen des Mandanten des Quellsystems aus dem Schulconnex-Service
 
 Das Quellsystem sollte vor dem Erstellen des Synchronisationsdatensatzes über den Endpunkt `/gruppen`
 der REST-API zunächst den vollständigen Datensatz an Gruppen und Gruppenzugehörigkeiten des Mandanten
 aus dem Schulconnex-Service abrufen. Die Definition der Schnittstellen und ihre Rückgabewerte mit
 Beispielen sind aus der Schnittstellenspezifikation für Quellsysteme ersichtlich.
 
-### Abgleich der Datensätze (Gruppen und Gruppenzugehörigkeiten)
+### Schritt 8: Abgleich der Datensätze (Gruppen und Gruppenzugehörigkeiten)
 
 Der Abgleich der Datensätze für Gruppen und Gruppenzugehörigkeiten sollte analog zum Abgleich
 der Datensätze für Personen und Personenkontexte in (4) erfolgen. Dieser Import ist optional.
@@ -174,7 +174,7 @@ Fall | Beschreibung | Aktion | Hinweis
 
 Die Möglichkeit, unbekannte Datensätze in das Quellsystem zu importieren (Fälle 2 und 3), ist optional.
 
-### Aktualisieren und Anlegen der Datensätze (Gruppen und Gruppenzugehörigkeiten)
+### Schritt 9: Aktualisieren und Anlegen der Datensätze (Gruppen und Gruppenzugehörigkeiten)
 
 Das Quellsystem hat nach Abgleich der Datensätze und ggf. notwendigen Bestätigungen (Fälle 2 und 3)
 je eine Liste von Datensätzen zum Aktualisieren und zum Anlegen von Gruppen. Das Aktualisieren
@@ -195,13 +195,13 @@ Falls die Synchronisation im Zusammenhang oder direkt nach einem Schuljahres- od
 Schulhalbjahreswechsel stattfindet, müssen Anforderungen berücksichtigt werden, die in
 [Ablauf des Schuljahreswechsels für Quellsysteme beschrieben sind](./ablauf-schuljahrwechsel.md).
 
-### Importieren bestätigter Datensätze (Gruppen und Gruppenzugehörigkeiten) in das Quellsystem
+### Schritt 10: Importieren bestätigter Datensätze (Gruppen und Gruppenzugehörigkeiten) in das Quellsystem
 
 Wenn (in den Fällen 2 und 3) der oder die Nutzende dem Import zugestimmt hat und die Attribute
 im Schulconnex-Service zum Anlegen eines neuen Datensatzes im Quellsystem ausreichen, kann
 der Import durchgeführt werden. Dieser Import ist optional.
 
-### Rückmeldung an den Benutzer oder Benutzerin
+### Schritt 11: Rückmeldung an den Benutzer oder Benutzerin
 
 Zum Abschluss der Synchronisation sollte eine Rückmeldung über Erfolg oder Misserfolg erfolgen,
 beispielsweise als Dialog oder Statusmeldung.
