@@ -79,11 +79,8 @@ const sidebars = {
         id: 'schnittstellen/schnittstellen',
       },
       items: [
-        'schnittstellen/versionierung',
-        'schnittstellen/registrierung',
         'schnittstellen/autorisierung-dienste',
         'schnittstellen/autorisierung-qs',
-        'schnittstellen/vorbedingungen',
       ],
     },
     'glossar',
