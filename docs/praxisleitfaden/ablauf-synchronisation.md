@@ -27,7 +27,7 @@ einzelne Funktionalitäten. Auch das Recht, den Synchronisationsvorgang auszulö
 Rolle oder Benutzende gebunden sein. Diese Entscheidung liegt jedoch beim Betreiber oder
 Hersteller des Schulverwaltungssystems.
 
-## Anforderungen an das Quellsystem
+> Anforderungen an das Quellsystem
 
 - Implementierung eines Unterpunkts im Konfigurationsmenü zur Eingabe und zum Abspeichern
   der Zugangsdaten
@@ -58,7 +58,7 @@ werden in den folgenden Abschnitten genauer beschrieben.
 Benutzer oder Benutzerinnen mit entsprechenden Rechten können diese Funktion, beispielsweise
 über eine Schaltfläche oder einen Menüeintrag, auslösen.
 
-> Anforderungen and das Quellsystem
+> Anforderungen an das Quellsystem
 
 Implementierung eines UI-Elements zum Auslösen des Synchronisationsvorgangs, wie einen Button
 oder eine Menü-Funktion.
@@ -71,7 +71,7 @@ die zu synchronisierenden Gruppen auszuwählen. Es bietet sich ein modaler Dialo
 der Möglichkeit Schulklassen oder andere einschlägige Personengruppen, wie Lehrkräfte,
 auszuwählen.
 
-> Anforderungen and das Quellsystem
+> Anforderungen an das Quellsystem
 
 Implementierung eines Dialogs zur Auswahl von Klassen sowie der Gruppe der Lehrkräfte.
 
@@ -90,7 +90,7 @@ Daher können zu einer Person mehrere Personenkontexte gehören, wobei der Regel
 Personenkontext pro Person ist.
 :::
 
-> Anforderungen and das Quellsystem
+> Anforderungen an das Quellsystem
 
 Implementierung der Abruffunktion des REST-Endpunkts `/personen`.
 
@@ -115,7 +115,7 @@ Fall | Beschreibung | Aktion
 5 | Der Datensatz im Schulconnex-Service kann einem Datensatz im Quellsystem nicht zugeordnet werden. | Vormerken für Import nach Import-Bestätigung
 6 | Nach Abgleichen der Fälle 1, 2, 3 und 4 kann ein Datensatz im Quellsystem nicht einem Datensatz im Schulconnex-Service zugeordnet werden. | Vormerken zum automatischen Anlegen eines neuen Datensatzes im Schulconnex-Service
 
-> Anforderungen and das Quellsystem
+> Anforderungen an das Quellsystem
 
 - Implementierung der Geschäftslogik zum Abgleichen der Datensätze
 - Implementierung eines Dialogs zum Auswählen (Bestätigen) im Fall 3
@@ -165,7 +165,7 @@ Fall | Beschreibung | Aktion | Hinweis
 3 | Der Datensatz aus dem Schulconnex-Service kann einem Datensatz im Quellsystem nicht zugeordnet werden. | Vormerken für Import nach Import-Bestätigung | Dieser Fall tritt auf, wenn Gruppen in der Administrationsoberfläche des Schulconnex-Services manuell oder durch Synchronisation mit einem sekundären Quellsystem angelegt wurden. Ersteres kann bei Arbeitsgruppen/Teams oder ähnlichen Fällen gegeben sein, letzteres, wenn die Unterrichte zu Klassen von einer Stundenplanverwaltung oder einer Oberstufenverwaltung angelegt wurden (sekundäre Quellsysteme). Der Rückimport dieser Gruppen (Unterrichte) in das primäre Quellsystem sollte nicht automatisch passieren, sondern nur nach Rückfrage bzw. entsprechend konfigurierbarer Parameter (z. B. nur Unterrichte und mit bekannten Referenzgruppen).
 4 | Nach Abgleichen der Fälle 1, 2 und 3 kann ein Datensatz im Quellsystem nicht einem Datensatz aus dem Schulconnex-Service zugeordnet werden. | Vormerken zum automatischen Anlegen eines neuen Gruppen-Datensatzes im Schulconnex-Service
 
-> Anforderungen and das Quellsystem
+> Anforderungen an das Quellsystem
 
 - Implementierung der Geschäftslogik zum Abgleichen der Datensätze
 - Implementierung eines Dialogs zum Auswählen (Bestätigen) im Fall 2 und 3
