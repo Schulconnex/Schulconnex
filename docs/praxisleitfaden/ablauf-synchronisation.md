@@ -201,7 +201,7 @@ Wenn (in den Fällen 2 und 3) der oder die Nutzende dem Import zugestimmt hat un
 im Schulconnex-Service zum Anlegen eines neuen Datensatzes im Quellsystem ausreichen, kann
 der Import durchgeführt werden. Dieser Import ist optional.
 
-### Schritt 11: Rückmeldung an den Benutzer oder Benutzerin
+### Schritt 11: Rückmeldung an den Benutzer oder die Benutzerin
 
 Zum Abschluss der Synchronisation sollte eine Rückmeldung über Erfolg oder Misserfolg erfolgen,
 beispielsweise als Dialog oder Statusmeldung.
