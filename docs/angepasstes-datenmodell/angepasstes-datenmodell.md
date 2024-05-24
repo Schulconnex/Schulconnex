@@ -5,10 +5,8 @@ die für die Nutzung des Dienstes erforderlich sind, bereit. Die Daten haben aus
 als an den Endpunkten für Quellsysteme. Außerdem sind nur lesende Abrufe (`GET`) möglich. Zur Referenzierung der Daten
 einer spezifischen Person oder von Personenkontexten wird eine pseudonymisierte ID (`pid`) genutzt, welche aus Sicht
 der einzelnen Dienste jeweils konstant und eindeutig ist. Diese pseudonymisierte ID entspricht nicht notwendig der
-intern in der Datenhaltung des Schulconnex-Services genutzten ID. Sie ist auch nicht identisch mit der
-pseudonymisierten ID für dieselbe Person oder denselben Personenkontext aus Sicht von anderen Diensten,
-um einen automatischen direkten Abgleich der Informationen zwischen zwei Anbietern, unter Umgehung des
-Schulconnex-Services zumindest zu erschweren.
+intern in der Datenhaltung des Schulconnex-Services genutzten ID. Damit kann ein automatischer direkter
+Abgleich der Informationen zwischen zwei Anbietern, unter Umgehung des Schulconnex-Servers, erschwert werden.
 
 Nicht alle Attribute stehen allen Diensten zur Verfügung. Welche Daten vom Schulconnex-Server an den Dienst
 geliefert werden, wird durch individuelle Absprachen zwischen Dienstanbieter und Betreiber
