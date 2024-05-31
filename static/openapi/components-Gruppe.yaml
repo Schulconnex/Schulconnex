@@ -1,0 +1,79 @@
+type: object
+properties:
+  id:
+    description: ID der Gruppe.
+    type: string
+  mandant:
+    description: ID des Mandanten.
+    type: string
+  orgid:
+    description: ID der Organisation.
+    type: string
+  referrer:
+    description: ID der Gruppe im Quellsystem.
+    type: string
+  bezeichnung:
+    description: Bezeichnung der Gruppe.
+    type: string
+  thema:
+    description: Thema der Gruppe in Kurzform.
+    type: string
+  beschreibung:
+    description: Zusätzliche optionale Beschreibung der Gruppe.
+    type: string
+    maxLength: 1024
+  typ:
+    $ref: './components-code-Gruppentyp.yaml'
+  bereich:
+    $ref: './components-code-Gruppenbereich.yaml'
+  optionen:
+    type: array
+    items:
+      $ref: './components-code-Gruppenoption.yaml'
+  differenzierung:
+    $ref: './components-code-Gruppendifferenzierung.yaml'
+  bildungsziele:
+    type: array
+    items:
+      $ref: './components-code-Bildungsziel.yaml'
+  jahrgangsstufen:
+    type: array
+    items:
+      $ref: './components-code-Jahrgangsstufe.yaml'
+  faecher:
+    type: array
+    items:
+      type: object
+      properties:
+        kennung:
+          $ref: './components-code-Fächerkanon.yaml'
+  referenzgruppen:
+    type: object
+    properties:
+      grupid:
+        description:
+        type: string
+      rollen:
+        type: array
+        items:
+          $ref: './components-code-Gruppenrolle.yaml'
+  laufzeit:
+    type: object
+    properties:
+      von:
+        description: Anfang des Gültigkeitszeitraumes der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.
+        type: string
+        format: date
+      vonlernperiode:
+        $ref: './components-code-Lernperiode.yaml'
+      bis:
+        description: Ende des Gültigkeitszeitraumes der Gruppe.
+        type: string
+        format: date
+      bislernperiode:
+        $ref: './components-code-Lernperiode.yaml'
+  sichtfreigabe:
+    $ref: './components-code-Boolean.yaml'
+  revision:
+    description: Revision der Gruppe.
+    type: string

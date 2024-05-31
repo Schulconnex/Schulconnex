@@ -1,0 +1,6 @@
+type: string
+enum:
+  - Aktiv
+description: >
+    Wie folgt:
+      * Aktiv aktiv

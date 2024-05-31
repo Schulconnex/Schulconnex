@@ -1,0 +1,18 @@
+type: string
+enum:
+  - Lern
+  - Lehr
+  - KlLeit
+  - Foerd
+  - SchB
+  - GMit
+  - GLeit
+description: >
+    Wie folgt:
+      * Lern Lernende/r
+      * Lehr Lehrende/r
+      * KlLeit Klassenleitung
+      * Foerd Förderlehrkraft
+      * SchB Schulbegleitung
+      * GMit Gruppenmitglied
+      * GLeit Gruppenleitung

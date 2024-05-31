@@ -1,0 +1,29 @@
+openapi: '3.0.2'
+info:
+  title: Schulconnex
+  version: '1.4'
+  description: |
+    Beschreibung der Schnittstellen von Schulconnex für Dienste und Quellsysteme
+  contact:
+    name: 'Landesinitiative n-21: Schulen in Niedersachsen online e. V.'
+  license:
+    name: Creative Commons Namensnennung-Keine Bearbeitung 2.0 Deutschland (CC BY-ND 2.0 DE)
+servers:
+  - url: https://schulconnex.test/v1
+    description: Lokaler Testserver
+security:
+  - oAuthForServices: []
+  - oAuthForUser: []
+tags:
+  - name: Personen
+paths:
+  /person-info:
+    $ref: './paths-person-info.yaml'
+  /personen-info:
+    $ref: './paths-personen-info.yaml'
+components:
+  securitySchemes:
+    oAuthForServices:
+      $ref: './securitySchema-oAuthForServices.yaml'
+    oAuthForUser:
+      $ref: './securitySchema-oAuthForUser.yaml'

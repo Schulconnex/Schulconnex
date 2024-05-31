@@ -1,0 +1,32 @@
+type: object
+required:
+  - id
+  - mandant
+  - ktid
+  - revision
+properties:
+  id:
+    description: ID der Gruppenzugehörigkeit.
+    type: string
+  mandant:
+    description: ID des Mandanten, dem die Gruppenzugehörigkeit zugeordnet ist.
+    type: string
+  referrer:
+    description: ID der Gruppenzugehörigkeit im Quellsystem.
+    type: string
+  ktid:
+    description: ID des Personenkontexts, welchem die Gruppe zugeordnet ist.
+    type: string
+  rollen:
+    $ref: './components-code-Gruppenrolle.yaml'
+  von:
+    description: Beginn der Gruppenzugehörigkeit. Dieser Zeitpunkt kann auch in der Zukunft liegen.
+    type: string
+    format: date
+  bis:
+    description: Ende der Gruppenzugehörigkeit.
+    type: string
+    format: date
+  revision:
+    description: Revision der Gruppenzugehörigkeit.
+    type: string

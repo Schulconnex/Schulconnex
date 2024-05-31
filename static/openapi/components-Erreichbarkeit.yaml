@@ -1,0 +1,11 @@
+type: object
+required:
+  - typ
+  - kennung
+properties:
+  typ:
+    $ref: './components-code-Erreichbarkeitstyp.yaml'
+  kennung:
+    description: Konkrete Angabe der zum Erreichen der Person oder Organisation notwendigen Information.
+    type: string
+    format: email

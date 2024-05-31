@@ -1,0 +1,11 @@
+type: object
+properties:
+  postleitzahl:
+    description: Postleitzahl.
+    type: string
+  ort:
+    description: Amtlicher Gemeindename.
+    type: string
+  ortsteil:
+    description: Teil eines Ortes, falls genauere Untergliederung gewünscht.
+    type: string

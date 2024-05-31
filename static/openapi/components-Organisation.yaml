@@ -1,0 +1,27 @@
+description: Organisation.
+type: object
+required:
+  - id
+properties:
+  id:
+    description: ID der Organisation.
+    type: string
+  kennung:
+    description: Die optionale Kennung (Identifikations-ID) einer Organisation.
+    type: string
+  name:
+    description: Offizieller Name einer Organisation.
+    type: string
+  namensergaenzung:
+    description: Ergänzender Name einer Organisation.
+    type: string
+  kuerzel:
+    description: Kurzname einer Organisation.
+    type: string
+    maxLength: 64
+  anschrift:
+    $ref: './components-Anschrift.yaml'
+  typ:
+    $ref: './components-code-Organisationstyp.yaml'
+  traegerschaft:
+    $ref: './components-code-Trägerschaft.yaml'
