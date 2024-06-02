@@ -83,6 +83,7 @@ const sidebars = {
         'schnittstellen/autorisierung-qs',
       ],
     },
+    'codelisten',
     'glossar',
     {
       type: 'category',
