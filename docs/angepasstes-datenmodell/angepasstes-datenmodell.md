@@ -29,10 +29,10 @@ nicht zwingend ein Geburtsdatum geliefert wird.
 ```mermaid
 classDiagram
   Person --> Organisation : 0..1
-  Personenkontext --> Organisation : 0..1
+  Personenkontext --> Organisation : 1
   Organisation --> Anschrift : 0..1
   Gruppe --> Organisation : 1
-  Gruppe --> Lernperiode : 0..1
+  Gruppe --> Lernperiode : 0 oder 2
   class Person {
     stammorganisation
     stammorganisation.id
