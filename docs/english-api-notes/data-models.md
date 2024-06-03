@@ -41,10 +41,10 @@ name.sortierindex | Sort index, denoting the index of the letter of the last nam
 geburt | Birth information entity.
 geburt.datum | Date of birth.
 geburt.geburtsort | Place of birth, usually town and country. If no country is provided, Germany is assumed.
-geschlecht | Sex of person. Refer to code list *Geschlecht*.
-lokalisierung | Localisation according to RFC5646. If none is provided `de` is assumed. Refer to code list *Lokalisierung*.
-vertrauensstufe | Describes the level of trust in the data provided Refer to code list *Vertrauensstufe*.
-auskunftssperre | Blocked information. Is set to `Ja` (yes) if access to information of this person is blocked. Refer to code list *Boolean*.
+geschlecht | Sex of person. Refers to code list *Geschlecht*.
+lokalisierung | Localisation according to RFC5646. If none is provided `de` is assumed. Refers to code list *Lokalisierung*.
+vertrauensstufe | Describes the level of trust in the data provided. Refers to code list *Vertrauensstufe*.
+auskunftssperre | Blocked information. Is set to `Ja` (yes) if access to information of this person is blocked. Refers to code list *Boolean*.
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system.
 
 ## Personenkontext
@@ -61,9 +61,9 @@ id | ID of the person context. Provided by the server and unique.
 referrer | The ID that the local client system uses. It is used to map the ID provided by the registry server to the data stored in the local school management software.
 mandant | ID of the organisation the person context is attached to.
 organisation | Organisation the person has a role in. See *Organisation*.
-rolle | Role the person has in the organisation. Refer to code list *Rolle*.
+rolle | Role the person has in the organisation. Refers to code list *Rolle*.
 personenstatus | Status the person has in relation to a role. See code list *Personenstatus*.
-jahrgangsstufe | School grade or form a person is currently in or associated with. Refer to code list *Jahrgangsstufe*.
+jahrgangsstufe | School grade or form a person is currently in or associated with. Refers to code list *Jahrgangsstufe*.
 sichtfreigabe | Boolean value that denotes whether the data is only visible due to another organisation providing read access.
 loeschung.zeitpunkt | Date and time when the person context is to be deleted.
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there has been any changes to the data since it was retrieved by the client system.
@@ -92,22 +92,22 @@ referrer | Referrer is the ID that the local client system uses.  It is used to 
 bezeichnung | Describes the group.
 thema | Keywords describing the theme of the group, short text, ideally less than 35 characters.
 beschreibung | Additional optional description of the purpose of the group.
-typ | Type of the group. Refer to code list *Gruppentyp*.
-Bereich | Additional group qualifyer (mandatory, optional, basic, advanced...). Refer to code list *Gruppenbereich*.
-Optionen | Additional group options. Usually referring to language used (bilingual, native language) Refer to code list *Gruppenoption*.
+typ | Type of the group. Refers to code list *Gruppentyp*.
+Bereich | Additional group qualifyer (mandatory, optional, basic, advanced...). Refers to code list *Gruppenbereich*.
+Optionen | Additional group options. Usually referring to language used (bilingual, native language). Refers to code list *Gruppenoption*.
 differenzierung | Specific differentiation in some educational branches. Refers to code list *Gruppendifferenzierung*.
 bildungsziele | Educational branch. Refers to code list *Bildungsziel*.
 jahrgangsstufen | Form or course level. Refers to code list *Jahrgangsstufe*.
 faecher | Array to list the topics covered in the group.
 faecher.code | Topic covered. Refers to code list *Fächerkanon*.
-referenzgruppen | Array of reference groups for this group. Allows the association of members in one or more other groups to this group. The aim is to simplify the handling of courses and school classes by allowing, for example, to attach a whole class to a course, without the need to assign every pupil individually.
+referenzgruppen | Array of reference groups for this group. Allows the association of members in one or more other groups to this group. The aim is to simplify the handling of courses and school classes by allowing, for example, to attach a whole class to a course, without the need to assign every student individually.
 referenzgruppen.grupid | ID of the reference group.
-referenzgruppe.rollen | Roles in the reference group („Gruppenrollen”) to be selected for the group. If no roles are specified, all persons are selected. (The main purpose for this filter is that a class might contain a teacher and pupils, but only the pupils from this reference group participate in another group.)
+referenzgruppe.rollen | Roles in the reference group („Gruppenrollen”) to be selected for the group. If no roles are specified, all persons are selected. (The main purpose for this filter is that a class might contain a teacher and students, but only the students from this reference group participate in another group.)
 laufzeit | Defines the start and end date of a group. Both dates can be either defined by directly specifying a date or, alternatively, by associating a teaching period (like a year or a semester) with the group.
 laufzeit.von | Start date of the group as a date.
-laufzeit.vonlernperiode | Start date of the group as a reference to a teaching period Refer to code list *Lernperiode*.
+laufzeit.vonlernperiode | Start date of the group as a reference to a teaching period. Refers to code list *Lernperiode*.
 laufzeit.bis | End date of the group as a date.
-laufzeit.bislernperiode | End date of the group as a reference to a teaching period Refer to code list *Lernperiode*.
+laufzeit.bislernperiode | End date of the group as a reference to a teaching period. Refers to code list *Lernperiode*.
 sichtfreigabe | Boolean value that denotes whether the data is only visible due to another organisation providing read access.
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system.
 
@@ -122,7 +122,7 @@ id | ID of the group membership. Provided by the server and unique.
 mandant | ID of the organisation that owns the group dataset.
 referrer | Referrer is the ID that the local client system uses. It is used to map the ID provided by the registry server to the data stored in the local school management software.
 ktid | ID of the person context associated with the group.
-rollen | Role of a person within the group. Refer to code list *Gruppenrolle*.
+rollen | Role of a person within the group. Refers to code list *Gruppenrolle*.
 von | Begin of the group membership.
 bis | End of the group membership.
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system.

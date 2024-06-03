@@ -22,10 +22,10 @@ Geschlecht  | Options for the sex of a person (male/female/divers/not-given).
 Rolle | The role within an organisation, such as student, teacher or administrator.
 Vertrauensstufe | Verification level of the owner of a (digital access) key, from untrusted or unknown to fully trusted.
 Organisationstyp | Type of an organisation. Usually a school, but can be an external provider of educational content.
-Jahrgangsstufe | Describes which form or level a pupil is in and for which a course is suitable for.
+Jahrgangsstufe | Describes which form or level a student is in and for which a course is suitable for.
 Boolean | Defines what terms are used for boolean values („ja” for true and „nein” for false).
 Trägerschaft | The „ownership” of an organisation. Describes whether it is owned by the state, the county, the church or privately owned.
-Lokalisierung | Provides localisation information. Usually „de-de“ to denote German language content.
+Lokalisierung | Provides localisation information. Usually „de-DE“ to denote German language content.
 Gruppenbereich | Denotes whether participation in a group is optional („Wahl”), mandatory („Pflicht”) or a combination of both for its members.
 Gruppendifferenzierung | An attribute to specify a specific level of a course. Conceptually similar to denoting courses in the UK education system as „A-Level” or „O-Level“ courses.
 Gruppenoption | Currently there are only two options available, one being „bilingual” and the other „taught in (students’s) native language”.
