@@ -145,6 +145,10 @@ Anzahl `0..1` oder `0..n` sind als optional zu verstehen. Je nach Autorisierung 
 HTTP-Anfrage gegen einen API-Endpunkt das minimale Datenmodell ausgegeben werden. Dieses umfasst die Attribute
 mit der Mindestanzahl `1`. Beispielsweise kann eine Rückgabe nur das Attribut `id` (identifier) enthalten.
 
+Die Angabe `0 oder 2` für „Gruppe“ assoziiert mit der Klasse „Lernperiode“ bedeutet, dass eine Gruppe entweder
+keine Lernperioden oder genau zwei Lernperioden (`vonlernperiode` und `bislernperiode`) haben kann, siehe auch
+[Datenmodell Gruppe Attribut `laufzeit`](./gruppe.md).
+
 ### String
 
 Bei Attributen vom Typ String (Zeichenkette) ist die maximale Länge der Zeichenkette standardmäßig mit
