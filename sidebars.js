@@ -87,6 +87,18 @@ const sidebars = {
     'glossar',
     {
       type: 'category',
+      label: 'English API Notes',
+      link: {
+        type: 'doc',
+        id: 'english-api-notes/english-api-notes',
+      },
+      items: [
+        'english-api-notes/data-models',
+        'english-api-notes/code-lists',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Praxisleitfaden für die Implementierung',
       link: {
         type: 'doc',
