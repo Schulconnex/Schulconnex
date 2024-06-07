@@ -116,3 +116,9 @@ classDiagram
     ende
   }
 ```
+
+:::note[Hinweis]
+Die Angabe `0 oder 2` für „Gruppe“ assoziiert mit der Klasse „Lernperiode“ bedeutet, dass eine Gruppe entweder
+keine Lernperioden oder genau zwei Lernperioden (`vonlernperiode` und `bislernperiode`) haben kann, siehe auch
+[Datenmodell Gruppe Attribut `laufzeit`](./gruppe.md).
+:::
