@@ -111,6 +111,21 @@ const sidebars = {
       ],
     },
   ],
+
+  apiDiensteSidebarOpenAPIDocs: [
+    {
+      type: 'category',
+      label: 'API Dienste',
+      link: {
+        type: 'doc',
+        id: 'generated/openapi-docs/dienste/schulconnex',
+      },
+      items: [
+        'generated/openapi-docs/dienste/informationen-der-angemeldeten-person',
+        'generated/openapi-docs/dienste/liste-bekannter-personenkontexte',
+      ],
+    },
+  ],
 };
 
 export default sidebars;
