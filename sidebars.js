@@ -30,7 +30,6 @@ const sidebars = {
         id: 'datenmodell/datenmodell',
       },
       items: [
-        'datenmodell/konventionen',
         'datenmodell/datumsformat',
         'datenmodell/organisation',
         'datenmodell/person',
