@@ -123,8 +123,3 @@ get:
         Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '500':
-      description: |
-        Interner Serverfehler
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
