@@ -1,0 +1,6 @@
+type: string
+enum:
+  - E-Mail
+description: >
+    Wie folgt:
+      * E-Mail E-Mail-Adressen müssen RFC 5322 (Internet Message Format) erfüllen

@@ -1,0 +1,8 @@
+type: string
+enum:
+  - "01"
+  - "02"
+description: >
+    Wie folgt:
+      * 01 bilingual
+      * 02 herkunftssprachlich

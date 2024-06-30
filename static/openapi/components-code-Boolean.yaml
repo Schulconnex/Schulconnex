@@ -1,0 +1,8 @@
+type: string
+enum:
+  - Ja
+  - Nein
+description: >
+    Die Codeliste „Boolean“ regelt das Mapping der deutschen Wörter „ja“ und „nein“ auf die englischen Begriffe „true“ und „false“:
+      * Ja `true`
+      * Nein `false`

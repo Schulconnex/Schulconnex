@@ -1,0 +1,12 @@
+type: string
+enum:
+  - Kein
+  - Unbe
+  - Teil
+  - Voll
+description: >
+    Wie folgt:
+      * Kein - kein - Der Schlüsselbesitzer ist nicht vertrauenswürdig.
+      * Unbe - unbekannt - Der Schlüsselbesitzer ist unbekannt.
+      * Teil - vertraut - Dem Schlüsselbesitzer wird vertraut.
+      * Voll - verifiziert - Der Schlüsselbesitzer ist eindeutig und formal identifiziert.

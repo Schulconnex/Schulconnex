@@ -93,11 +93,3 @@ Die zu verändernde Entität wurde durch Dritte verändert und führt daher zu e
 Code | Sub-Code | Titel | Beschreibung
 --- | --- | --- | ---
 409 | 00 | `"Konflikt mit dem aktuellen Zustand der Ressource."` | `"Die Entität wurde eventuell durch Dritte verändert. Die Revisionsnummer stimmt nicht überein."`
-
-## `500` - Interner Serverfehler
-
-Aufgrund eines Serverfehlers kann der Aufruf nicht ausgeführt werden.
-
-Code | Sub-Code | Titel | Beschreibung
---- | --- | --- | ---
-500 | 00 | `"Interner Serverfehler"` | `"Es ist ein interner Fehler aufgetreten."` + spezifische Fehlermeldung der Schnittstelle, die nicht in eine der anderen Kategorien fällt.

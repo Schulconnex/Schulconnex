@@ -1,0 +1,8 @@
+type: string
+enum:
+  - SorgBer
+  - SchB
+description: >
+    Beziehungen ist eine Liste von Beziehungen, welche zwischen zwei Personen innerhalb von Personenkontexten bestehen können:
+      * SorgBer Sorgeberechtigter oder Sorgeberechtigte
+      * SchB Schulbegleiter oder Schulbegleiterin

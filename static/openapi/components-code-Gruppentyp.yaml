@@ -1,0 +1,10 @@
+type: string
+enum:
+  - Klasse
+  - Kurs
+  - Sonstig
+description: >
+    Wie folgt:
+      * Klasse Schulklasse
+      * Kurs Kurs/Unterricht
+      * Sonstig Sonstige Gruppe

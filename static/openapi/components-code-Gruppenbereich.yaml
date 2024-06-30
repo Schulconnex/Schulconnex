@@ -1,0 +1,10 @@
+type: string
+enum:
+  - Pflicht
+  - Wahl
+  - Wahlpflicht
+description: >
+    Diese Codeliste ist spezifisch für das Bundesland Niedersachsen:
+      * Pflicht Pflichtunterricht
+      * Wahl Wahlunterricht
+      * Wahlpflicht Wahlpflichtunterricht

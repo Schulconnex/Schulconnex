@@ -1,0 +1,125 @@
+get:
+  tags:
+    - Personen
+  security:
+    - oAuthForServices: []
+  summary: Liste bekannter Personenkontexte.
+  description: |
+    Liefert die Personenkontext-IDs der dem Dienst bekannten und derzeit aktiven
+    Personenkontexte sowie gegebenenfalls den Löschzeitpunkt.
+
+    Der Aufruf dieses Endpunktes erfolgt immer im Kontext des Dienstes. Der Dienst
+    authentisiert sich durch den Client Credentials Flow.
+
+    Die Anfrage erfolgt als HTTP-GET. Als Antwort erfolgt eine Liste aus Datenobjekten,
+    welche jeweils die Struktur einer Antwort der API person-info haben, jedoch nur
+    drei Daten-Attribute enthalten: `pid`, `id` und gegebenenfalls den Löschzeitpunkt.
+
+    Personen und Personenkontexte, welche in der Liste nicht aufgeführt sind, sind
+    als gelöscht anzunehmen und alle lokalen Daten des Dienstes zu dieser Person und
+    diesem Personenkontext sind zu löschen.
+
+    Bei der Auslieferung von `/personen-info` wird im HTTP-Header ein ETag mitgeliefert.
+    Bei nachfolgenden Abrufen der Personen-Information vom Schulconnex-Service kann
+    der Dienst ein „If-None-Match“ Tag mit diesem ETag in den Request-Header mit aufnehmen.
+
+    Hat sich der Datensatz seit Auslieferung des ETag-Headers nicht geändert, so antwortet
+    der Server mit einem Status 304 (Not Modified) und sendet den Datensatz nicht erneut.
+
+    Die Personenkontext-ID `id` ist die für den jeweiligen Dienst individuell pseudonymisierte
+    ID des Personenkontextes.
+
+    Die Schnittstelle `/personen-info` ermöglicht das Verwenden eines Filterparameters zum Auslesen
+    der vollständigen Datensätze der gelisteten Personen oder Personenkontexte im selben Umfang,
+    wie sie auch bei `/person-info` geliefert werden.
+
+    Der Filter vollstaendig kann die Werte `personen`, `personenkontexte`, `organisationen`,
+    `gruppen` oder `beziehungen` annehmen. Mehrere Werte können, getrennt durch Kommas, in einem
+    Filter genutzt werden.
+
+    Darüber hinaus kann auch eine Filterung nach Personen, Personenkontexten, Gruppen und
+    Organisationen anhand der jeweiligen ID erfolgen.
+
+    Welche Filterfunktionen genutzt werden können, wird durch eine vertragliche Absprache
+    zwischen Dienstanbieter und Betreiber des Schulconnex-Servers geregelt.
+
+    Filter | Typ | Parameter | Beschreibung
+    --- | --- | --- | ---
+    `vollstaendig` | String | `personen` | Möglichkeit, statt nur der `pid` zu jeder der gelisteten Personen die vollständige Beschreibung nach [Angepasstes Datenmodell Person für Dienstanbieter](/docs/angepasstes-datenmodell/person), anzuzeigen.
+    ||| `personenkontexte` | Möglichkeit, statt nur `id` und `loeschung` zu jedem der gelisteten Personenkontexte die vollständige Beschreibung nach [Angepasstes Datenmodell Personenkontext für Dienstanbieter](/docs/angepasstes-datenmodell/personkontext), anzuzeigen.
+    ||| `gruppen` | Möglichkeit, statt nur der Gruppen-ID zu jeder gelisteten Gruppe die vollständige Beschreibung nach [Angepasstes Datenmodell Gruppe für Dienstanbieter](/docs/angepasstes-datenmodell/gruppe) anzuzeigen.
+    ||| `organisationen` | Möglichkeit, statt nur der Organisations-ID zu jeder gelisteten Organisation die vollständige Beschreibung nach [Organisation](/docs/datenmodell/organisation) anzuzeigen.
+    ||| `beziehungen` | Möglichkeit, die Beziehungen, welche aus einem Personenkontext heraus bestehen, aufzulisten Es werden nur die `hat_als` Beziehungen ausgegeben. Der Default ist keine Ausgabe von Beziehungen.
+    `pid` | String || Mit diesem Filter kann der Datensatz einer einzelnen Person anhand ihrer `pid` ausgelesen werden.
+    `personenkontext.id` | String || Mit diesem Filter kann der Datensatz einer einzelnen Person mit einem einzelnen Personenkontext anhand der Kontext-ID ausgelesen werden. Die Informationen zur entsprechenden Person werden, unter Berücksichtigung des Filters `vollstaendig`, entsprechend der Client-Berechtigungen ausgeliefert.
+    `gruppe.id` | String || Mit diesem Filter können die Datensätze aller Personen ausgegeben werden, welche einer Gruppe zugeordnet sind. Die Informationen zur entsprechenden Person werden, unter Berücksichtigung des Filters `vollstaendig`, entsprechend der Client-Berechtigungen ausgeliefert.
+    `organisation.id` | String || Mit diesem Filter können die Datensätze aller Personen ausgegeben werden, welche einer Organisation zugeordnet sind. Die Informationen zur entsprechenden Person werden, unter Berücksichtigung des Filters `vollstaendig`, entsprechend der Client-Berechtigungen ausgeliefert.
+  parameters:
+    - in: query
+      name: vollstaendig
+      style: form
+      explode: false
+      allowReserved: true
+      schema:
+        type: array
+        items:
+          type: string
+          enum:
+            - personen
+            - personenkontexte
+            - organisationen
+            - gruppen
+    - in: query
+      name: pid
+      schema:
+        type: string
+    - in: query
+      name: personenkontext.id
+      schema:
+        type: string
+    - in: query
+      name: gruppe.id
+      schema:
+        type: string
+    - in: query
+      name: organisation.id
+      schema:
+        type: string
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: './components-PersonenInfo.yaml'
+    '304':
+      description: Not Modified
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

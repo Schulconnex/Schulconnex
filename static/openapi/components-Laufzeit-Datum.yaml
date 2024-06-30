@@ -1,0 +1,12 @@
+type: object
+properties:
+  von:
+    description: Anfang des Gültigkeitszeitraumes der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.
+    type: string
+    format: date
+    example: 2022-08-12
+  bis:
+    description: Ende des Gültigkeitszeitraumes der Gruppe.
+    type: string
+    format: date
+    example: 2023-01-30
