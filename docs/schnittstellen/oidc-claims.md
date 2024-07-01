@@ -1,20 +1,20 @@
 ---
-title: OIDC Claims
+title: OIDC-Claims
 ---
 
-# Person-Info über OIDC Claims
+# Person-Info über OIDC-Claims
 
 Der bevorzugte Weg, um nach einer Anmeldung auf die Informationen der sich anmeldenden Person
 zuzugreifen, ist über die API `/person-info`.
 
-In einigen Fällen, insbesondere, wenn nur ein kleiner Teil der möglichen Informationen,
+In einigen Fällen, insbesondere wenn nur ein kleiner Teil der möglichen Informationen,
 beispielsweise nur ID, Vorname und Nachname benötigt wird, ist es für Dienstanbieter einfacher,
-wenn kein gesonderter REST Call auf die API erfolgen muss, sondern die Information direkt
-als Teil des OIDC ID-Tokens mitgeliefert wird.
+wenn kein gesonderter REST-Call auf die API erfolgen muss, sondern die Information direkt
+als Teil des OIDC-ID-Tokens mitgeliefert wird.
 
 Die hier über Claims bereitgestellten Informationen entsprechen den durch `/person-info`
 bereitgestellten Informationen. Wie auch bei den durch die API `/person-info` bereitgestellten
-Informationen, sind diese im Schulconnex-Server konfigurierbar. Welche Konfiguration vorgenommen
+Informationen sind diese im Schulconnex-Server konfigurierbar. Welche Konfiguration vorgenommen
 wird, ist von der vertraglichen Vereinbarung zwischen dem Dienstanbieter und dem Betreiber
 des Schulconnex-Servers abhängig.
 
@@ -34,7 +34,7 @@ Attribut-Name | Claim-Name
 `personenkontext.organisation.kennung` | `urn:schulconnex:de:personenkontext:organisation:kennung`
 
 Die gelieferten Werte zu den einzelnen Attributen entsprechen immer den Konventionen, die auch
-bei `/person-info` genutzt werden und nicht den Werten, welche den Standard OIDC Claims entsprechen.
+bei `/person-info` genutzt werden und nicht den Werten, welche den Standard OIDC-Claims entsprechen.
 
 Wird kein Scope Request verwendet, so wird nur der Claim `sub` (entspricht der
 pseudonymisierten Personen-ID) geliefert.
