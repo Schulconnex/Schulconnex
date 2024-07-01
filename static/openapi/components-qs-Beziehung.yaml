@@ -1,30 +1,19 @@
 type: object
-required:
-  - id
-  - mandant
-  - ktid
-  - beziehung
-  - revision
 properties:
   id:
     description: ID der Beziehung.
     type: string
     format: uuid
-    example: 4de182f3-4a8b-468b-9050-76dd1cae95f3
-  mandant:
-    description: ID des Mandanten.
+  ist_von_ktid:
+    description: ID des Personenkontexts aus dem heraus die Beziehung besteht.
     type: string
-    format: uuid
-    example: 6325b810-6b27-423d-a16b-f4b4cfa9f073
     readOnly: true
   ktid:
     description: ID des Personenkontextes, zu dem eine Beziehung besteht.
     type: string
-    format: uuid
-    example: 553f984f-5fea-48c8-ae26-089420465803
   beziehung:
     $ref: './components-code-Beziehungen.yaml'
   revision:
     description: Revision der Beziehung.
     type: string
-    example: "1"
+    example: "2"

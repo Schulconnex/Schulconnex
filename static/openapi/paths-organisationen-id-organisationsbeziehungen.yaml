@@ -1,0 +1,97 @@
+get:
+  tags:
+    - Organisationen
+  security:
+    - oAuthForServices: []
+  summary: Auflistung von Organisationenbeziehungen.
+  description: |
+    Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` erlaubt das
+    Lesen von zu einer Organisation gehörenden Organisationsbeziehungen.
+
+    Organisationsbeziehungen sind immer von der Form `hat_als`. Besteht von einer
+    Organisation A eine Organisationsbeziehung vom Typ `SchBeh` zu einer
+    Organisation B, so bedeutet dieses, das Organisation A die Organisation B
+    als Schulbehörde hat.
+
+    Bestehen zwischen zwei Organisationen mehrere Beziehungen (ist beispielsweise
+    eine Organisation sowohl Schulbehörde als auch Schulträger einer anderen Organisation),
+    so hat jede Beziehung ein eigenes Organisationsbeziehungsobjekt.
+
+    Dieser Schnittstellenendpunkt gibt die Organisationsbeziehungen zur angegebenen
+    Organisations-ID zurück.
+
+    Ein READ ist nur mit HTTP-GET auf die API `/organisationen/{id}/organisationsbeziehungen`
+    zum Abfragen der Organisationsbeziehungen per Organisations-ID zugelassen. Die
+    Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array
+    des Datentyps Organisationsbeziehungen.
+
+    Siehe auch Datenmodell [`Organisationsbeziehung`](/docs/datenmodell/organisationsbeziehung).
+
+    Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` ermöglicht das
+    Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.
+
+    Folgende Tabelle listet die zur Verfügung stehenden Filter auf:
+
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `hat_als_organisationsbeziehungen` | String (Boolean) | listet alle Organisationsbeziehungen auf, welche die, durch die Organsations-ID gegebene, Organisation hat. Die Organisationsbeziehungen werden unter `hat_als_organisationsbeziehungen` aufgelistet. Der Defaultwert ist `Ja`, es werden also ohne Filterangabe alle Organisationsbeziehungen angegeben, welche eine Organisation hat.
+    `ist_von_organisationsbeziehungen` | String (Boolean) | listet alle Organisationsbeziehungen auf, welche von anderen Organisationen zu dem, durch die Organisations-ID gegebenen, Organisation bestehen. Die Organisationsbeziehungen werden unter `ist_von_organisationsbeziehungen` aufgelistet. Der Defaultwert ist `Nein`, es werden also ohne Filterangabe keine Organisationsbeziehungen angegeben, welche aus der gegebenen Organisation heraus bestehen.
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
+      description: Der Pfad-Parameter bezieht sich auf die ID der Organisation.
+    - in: query
+      name: hat_als_organisationsbeziehungen
+      schema:
+        type: string
+        enum:
+          - Ja
+          - Nein
+    - in: query
+      name: ist_von_organisationsbeziehungen
+      schema:
+        type: string
+        enum:
+          - Ja
+          - Nein
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Organisationsbeziehungen.yaml'
+    '304':
+      description: Not Modified
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

@@ -1,0 +1,79 @@
+get:
+  tags:
+    - Organisationen
+  security:
+    - oAuthForServices: []
+  summary: Auflistung von Organisationen.
+  description: |
+    Die Schnittstelle `/organisationen` bezieht sich auf die Auflistung von Organisationen.
+
+    Die Schnittstelle `/organisationen` ermöglicht das Verwenden von Filterparametern zur
+    Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind sie als
+    mit „und“ verknüpft anzusehen. Die mehrfache Nutzung des gleichen Filters in einer Anfrage
+    ist nicht zulässig. Folgende Tabelle listet die zur Verfügung stehenden Filter auf:
+
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `kennung` | String | Möglichkeit, die Ergebnisliste der Anfrage nach `kennung` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `name` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `organisation.name` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `typ` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `organisation.typ` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt eine Codeliste (Organisationstyp) zugrunde.
+
+    Dieser Schnittstellenendpunkt gibt die Organisationen zurück, die vom Anfrager ausgelesen
+    werden dürfen.
+
+    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
+    (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Organisation,
+    sofern Einträge (ggf. passend zu den optionalen Filtern) existieren.
+
+    Siehe auch Datenmodell [`Organisation`](/docs/datenmodell/organisation).
+  parameters:
+    - in: query
+      name: kennung
+      schema:
+        type: string
+    - in: query
+      name: name
+      schema:
+        type: string
+    - in: query
+      name: typ
+      schema:
+        type: string
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Organisationen.yaml'
+    '304':
+      description: Not Modified
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

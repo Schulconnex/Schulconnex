@@ -8,25 +8,33 @@ properties:
   id:
     description: ID der Gruppenzugehörigkeit.
     type: string
+    format: uuid
+    example: c85af1ac-ddaa-4a77-ba74-1836682b9afa
   mandant:
     description: ID des Mandanten, dem die Gruppenzugehörigkeit zugeordnet ist.
     type: string
   referrer:
     description: ID der Gruppenzugehörigkeit im Quellsystem.
     type: string
+    format: uuid
+    example: c85af1ac-ddaa-4a77-ba74-1836682bacac
   ktid:
     description: ID des Personenkontexts, welchem die Gruppe zugeordnet ist.
     type: string
+    format: uuid
+    example: 23643c9e-956a-4baa-af4e-813e0a7efa4b
   rollen:
     $ref: './components-code-Gruppenrolle.yaml'
   von:
     description: Beginn der Gruppenzugehörigkeit. Dieser Zeitpunkt kann auch in der Zukunft liegen.
     type: string
     format: date
+    example: "2022-08-01"
   bis:
     description: Ende der Gruppenzugehörigkeit.
     type: string
     format: date
+    example: "2023-07-31"
   revision:
     description: Revision der Gruppenzugehörigkeit.
     type: string

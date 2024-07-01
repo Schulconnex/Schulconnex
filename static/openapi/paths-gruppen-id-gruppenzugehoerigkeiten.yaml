@@ -1,0 +1,165 @@
+post:
+  tags:
+    - Gruppen
+    - Gruppenzugehörigkeiten
+  security:
+    - oAuthForServices: []
+  summary: Erstellen einer Gruppenzugehörigkeit.
+  description: |
+    Dieser Schnittstellenendpunkt erstellt eine Gruppenzugehörigkeit zur angegebenen
+    Gruppe per ID `gruppe.id`.
+
+    Ein CREATE ist nur mit HTTP-POST auf die API `/gruppen/{gruppe.id}/gruppenzugehoerigkeiten`
+    zum Erstellen von Gruppenzugehörigkeiten zu einer Gruppe zugelassen. Die Anfrage-Nutzdaten
+    (Request Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeiten.
+
+    Siehe auch Datenmodell [Gruppenzugehörigkeit](/docs/datenmodell/gruppenzugehörigkeit).
+
+    Die folgende Tabelle listet die Attribute einer Gruppenzugehörigkeit auf, welche von
+    einem Quellsystem oder Dienst nicht verändert werden können.
+
+    Attribut | In den Anfrage Nutzdaten erforderlich? | Bemerkung
+    --- | --- | ---
+    `id` | nein | ID der Gruppenzugehörigkeit. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+    `revision` | nein | Revision der Gruppenzugehörigkeit. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+
+    Bei einer erfolgreichen Anforderung zum Erstellen einer Gruppenzugehörigkeit zu einer
+    Gruppe wird diese Anforderung mit einer Repräsentation der Gruppenzugehörigkeit in den
+    Antwort-Nutzdaten und dem HTTP-Status-Code 200 quittiert.
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID der Gruppe.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: './components-Gruppenzugehörigkeit.yaml'
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: './components-Gruppenzugehörigkeit.yaml'
+    '304':
+      description: Not Modified
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+get:
+  tags:
+    - Gruppen
+    - Gruppenzugehörigkeiten
+  security:
+    - oAuthForServices: []
+  summary: Auflistung von Gruppenzugehörigkeiten.
+  description: |
+    Dieser Schnittstellenendpunkt gibt die Gruppenzugehörigkeiten zur angegebenen `gruppe.id` zurück.
+
+    Ein READ ist nur mit HTTP-GET auf die API `/gruppen/{gruppe.id}/gruppenzugehoerigkeiten`
+    zum Abfragen der Gruppenzugehörigkeiten per `gruppe.id` zugelassen. Die Antwort-Nutzdaten
+    (Response Payload) beinhalten ein JSON-Objekt mit einem Array des Datentyps Gruppenzugehörigkeit.
+
+    Siehe auch Datenmodell [Gruppenzugehörigkeit](/docs/datenmodell/gruppenzugehörigkeit).
+
+    Die Schnittstelle `/gruppen/{gruppe.id}/gruppenzugehoerigkeiten` ermöglicht das Verwenden
+    von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.
+
+    Durch das Setzen von Filterparametern (query-parameter) wird mit der HTTP-GET-Anfrage
+    eine Filteroperation mitgeschickt, welche die Ergebnismenge der Antwort-Nutzdaten
+    (Response Payload) beeinflusst, beispielsweise mit den Filterparametern `?referrer=123&rollen=Lehr`.
+
+    Bei Filtern vom Typ „String” überprüft der Schulconnex-Server, ob der Wert des
+    Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut
+    beinhaltet ist (contains). Bei Filtern vom Typ „String (Code)” überprüft der Schulconnex-Server,
+    ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung gleich
+    dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so sind sie als
+    mit „und“ verknüpft anzusehen.
+
+    Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig.
+
+    Folgende Tabelle listet die zur Verfügung stehenden Filter:
+
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern .
+    `rollen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `gruppenzugehoerigkeit.rollen` zu filtern. Mehrere Rollen können durch Komma separiert werden.
+  parameters:
+    - in: query
+      name: referrer
+      schema:
+        type: string
+    - in: query
+      name: rollen
+      schema:
+        type: string
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Gruppenzugehörigkeiten.yaml'
+    '304':
+      description: Not Modified
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

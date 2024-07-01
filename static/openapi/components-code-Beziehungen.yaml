@@ -1,7 +1,7 @@
 type: string
 enum:
-  - SorgBer
   - SchB
+  - SorgBer
 description: >
     Beziehungen ist eine Liste von Beziehungen, welche zwischen zwei Personen innerhalb von Personenkontexten bestehen können:
       * SorgBer Sorgeberechtigter oder Sorgeberechtigte
