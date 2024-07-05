@@ -3,9 +3,12 @@ properties:
   postleitzahl:
     description: Postleitzahl.
     type: string
+    example: "30519"
   ort:
     description: Amtlicher Gemeindename.
     type: string
+    example: Hannover
   ortsteil:
     description: Teil eines Ortes, falls genauere Untergliederung gewünscht.
     type: string
+    example: Döhren

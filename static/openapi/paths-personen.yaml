@@ -1,0 +1,201 @@
+get:
+  tags:
+    - Personen
+  security:
+    - oAuthForServices: []
+  summary: Personendatensätze des Quellsystemanbieters.
+  description: |
+    Mittels dieses Endpunktes werden alle Personendatensätze zurückgegeben, auf die
+    der Quellsystemanbieter zugreifen darf.
+
+    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen.
+    Die Schnittstelle `/personen` ermöglicht das Verwenden von Filterparametern zur
+    Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind
+    sie als mit „und“ verknüpft anzusehen. Die mehrfache Nutzung des gleichen Filters
+    in einer Anfrage ist nicht zulässig.
+
+    Folgende Tabelle listet die zur Verfügung stehenden Filter:
+
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `familienname` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `person.name.familienname` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filter-parameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `vorname` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `person.name.vorname` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filter-parameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `sichtfreigabe` | String | Erlaubt es Personen, abhängig davon aufzulisten, ob diese von einer anderen Organisation zum Lesen freigegeben wurden. Die möglichen Optionen sind `sichtfreigabe=ja`, um nur die durch externe Organisationen freigegebenen Personen beziehungsweise Personenkontexte aufzulisten und `sichtfreigabe=nein`, um nur eigene Personen beziehungsweise Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren Personen, beziehungsweise Personenkontexte geliefert.
+
+    Die Antwort-Nutzdaten (Response Payload) beinhalten ein Array von JSON-Objekten
+    vom Datentyp „Personendatensatz“, sofern Einträge (ggf. passend zu den optionalen Filtern)
+    existieren. Siehe auch die einzelnen Datenmodelle zu
+    [`Personendatensatz`](/docs/datenmodell/personendatensatz) und [`Person`](/docs/datenmodell/person).
+
+    Die Ergebnisliste beinhaltet ausschließlich Datensätze vom Datentyp „Person“ beziehungsweise
+    erweitert über das Attribut `personendatensatz.personenkontexte` Personenkontexte, welche
+    der eigenen Organisation zugeordnet werden können. Der Schulconnex-Server übernimmt diese
+    Information aus dem `access_token`.
+  parameters:
+    - in: query
+      name: referrer
+      schema:
+        type: string
+    - in: query
+      name: familienname
+      schema:
+        type: string
+    - in: query
+      name: vorname
+      schema:
+        type: string
+    - in: query
+      name: sichtfreigabe
+      schema:
+        type: string
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: './components-Personen.yaml'
+    '304':
+      description: Not Modified
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+post:
+  tags:
+    - Personen
+  security:
+    - oAuthForServices: []
+  summary: Erstellen eines Personendatensatzes.
+  description: |
+    Mittels dieser Schnittstelle wird ein neuer Datensatz „Person“ erstellt.
+
+    Ein CREATE ist nur mit HTTP-POST auf die API `/personen` zum Erstellen von Personendatensätzen
+    zugelassen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps
+    Personendatensatz. Siehe auch die einzelnen Datenmodelle zu
+    [`Personendatensatz`](/docs/datenmodell/personendatensatz) und
+    [`Person`](/docs/datenmodell/person).
+
+    Die folgende Tabelle listet die Attribute einer Person (`personendatensatz.person`),
+    welche von einem Quellsystem oder Dienst nicht gesetzt werden können.
+
+    Attribut | In den Anfrage-Nutzdaten erforderlich? | Bemerkung
+    --- | --- | ---
+    `id` | nein | ID der Person. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+    `mandant` | nein | ID des Mandanten, dem die Person zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieser Wert ist eine Referenz auf einen Mandanten.
+    `revision` | nein | Revision der Person. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+
+    In Anbetracht der Attribute, die von einem Quellsystem oder Dienst bei der Erstellung
+    einer Person nicht gesetzt oder verändert werden können, ergibt sich folgende
+    JSON-Struktur der Anfrage-Nutzdaten (Request Payload):
+
+    ```json
+    {
+      "referrer": <String>, // ID der Person im Quellsystem.
+      "name": {
+        "familienname": <String>,
+        //Familienname der Person. Dieses Feld ist ein Pflichtfeld.
+        "vorname": <String>,
+        // Vorname der Person. Dieses Feld ist ein Pflichtfeld.
+        "initialenfamilienname": <String>,
+        //Initial oder Initialen des Familiennames der Person. D
+        "initialenvorname ": <String>,
+        // Initial oder Initialen des Vornamens der Person.
+        "rufname": <String>, // Rufname der Person.
+        "titel": <String>, // Titel der Person.
+        "anrede": [
+          <String> // Liste von Anreden der Person.
+        ],
+        "namenssuffix": [
+          <String> // Liste von Namenssuffixe der Person.
+        ],
+        "sortierindex": <String> // sortierindex des Nachnamens
+      },
+      "geburt": {
+        "datum": <Datum>, // Geburtsdatum der Person.
+        "geburtsort": <String> // Geburtsort der Person.
+      },
+      "geschlecht": <Code>,
+      // Geschlecht der Person. Siehe Code-Liste „Geschlecht“.
+      "lokalisierung": <Code>, // Lokalisierung. Siehe RFC5646.
+      "vertrauensstufe": <Code>,
+      // Vertrauensstufe. Siehe Code-Liste „Vertrauensstufe“.
+      "auskunftssperre": <Code>
+      // Auskunftssperre. Siehe Code-Liste „Boolean“.
+      // Dieses Feld ist ein Pflichtfeld.
+     }
+    ```
+
+    Bei einer erfolgreichen Anforderung zum Erstellen eines Personendatensatzes wird
+    diese Anforderung mit einer Repräsentation des Personendatensatzes in den
+    Antwort-Nutzdaten und dem HTTP Status Code 200 quittiert.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: './components-Person.yaml'
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            $ref: './components-Person.yaml'
+    '304':
+      description: Not Modified
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

@@ -9,3 +9,4 @@ properties:
     description: Konkrete Angabe der zum Erreichen der Person oder Organisation notwendigen Information.
     type: string
     format: email
+    example: Max.Muster@Muster-Schule.de

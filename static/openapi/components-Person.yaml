@@ -8,12 +8,17 @@ properties:
     description: ID der Person. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     type: string
     readOnly: true
+    format: uuid
+    example: a6e1a860-8d44-4b2b-aef7-aa2c8bf5beb5
   referrer:
     description: Identifikations-ID einer Person. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein (z. B. eine einheitliche Personalnummer).
     type: string
+    example: "125"
   mandant:
     description: ID des Mandanten, dem die Personen zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
     type: string
+    format: uuid
+    example: 58f45270-8e54-40c6-a212-980307fc19be
   stammorganisation:
     description: Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein.
     type: string
@@ -23,17 +28,21 @@ properties:
       familienname:
         description: Familienname(n) der Person. Mehrere Familiennamen werden durch Leerzeichen separiert.
         type: string
+        example: von Musterfrau
       vorname:
         description: Mehrere Vornamen werden durch Leerzeichen separiert.
         type: string
+        example: Natalie
       initialenfamilienname:
         description: Initial oder Initialen des Familiennamens, maximal acht Zeichen.
         type: string
         maxLength: 8
+        example: M
       initialenvorname:
         description: Initial oder Initialen des Vornamens, maximal acht Zeichen.
         type: string
         maxLength: 8
+        example: N
       rufname:
         description: Bei mehreren Vornamen wird der täglich im Gebrauch genutzte Vorname geführt, maximal 32 Zeichen.
         type: string
@@ -58,15 +67,19 @@ properties:
         description: Index des Buchstabens des Nachnamens, nach dem sortiert werden soll. Der Index ist Null-basiert, d. h. ein Wert von „4“ zeigt an, dass die ersten vier Buchstaben ignoriert und ab dem fünften Buchstaben des Nachnamens sortiert werden soll. Ist kein Sortierindex angegeben, so ist der Nachname entsprechend dem ersten Buchstaben in Listen einzusortieren, äquivalent zum Sortierindex „0“.
         type: string
         pattern: "^[0-9]+$"
+        example: "4"
   geburt:
     type: object
     properties:
       datum:
         description: Geburtsdatum einer Person.
         type: string
+        format: date
+        example: "2005-05-01"
       geburtsort:
         description: Geburtsort einer Person, bestehend aus Ortsname und Land, beispielsweise „Eindhoven, Niederlande“. Wird kein Land angegeben, so wird als Land „Deutschland“ angenommen, d.h. der Geburtsort „Erfurt“ ist wie „Erfurt, Deutschland“ zu behandeln.
         type: string
+        example: Berlin, Deutschland
   geschlecht:
     $ref: './components-code-Geschlecht.yaml'
   lokalisierung:
@@ -78,3 +91,4 @@ properties:
   revision:
     description: Revision der Person. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
     type: string
+    example: "1"

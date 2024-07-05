@@ -1,0 +1,8 @@
+type: object
+properties:
+  person:
+    $ref: './components-Person.yaml'
+  personenkontexte:
+    type: array
+    items:
+      $ref: './components-PersonenKontext.yaml'

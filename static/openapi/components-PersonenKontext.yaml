@@ -9,12 +9,17 @@ properties:
   id:
     description: ID des Personenkontexts.
     type: string
+    format: uuid
+    example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
   referrer:
     description: ID des Personenkontexts im Quellsystem.
     type: string
+    example: PeKt_54321
   mandant:
     description: ID des Mandanten, dem der Personenkontext zugeordnet ist.
     type: string
+    format: uuid
+    example: 58f45270-8e54-40c6-a212-980307fc19be
   organisation:
     $ref: './components-Organisation.yaml'
   rolle:
@@ -58,3 +63,4 @@ properties:
   revision:
     description: Revision des Personenkontext.
     type: string
+    example: "2"
