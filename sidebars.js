@@ -80,6 +80,7 @@ const sidebars = {
       items: [
         'schnittstellen/autorisierung-dienste',
         'schnittstellen/autorisierung-qs',
+        'schnittstellen/oidc-claims',
       ],
     },
     'codelisten',
