@@ -115,7 +115,7 @@ get:
     Filter | Typ | Beschreibung
     --- | --- | ---
     `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern .
-    `rollen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `gruppenzugehoerigkeit.rollen` zu filtern. Mehrere Rollen können durch Komma separiert werden.
+    `rollen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `gruppenzugehoerigkeit.rollen` zu filtern. Mehrere Rollen können durch Kommas separiert werden.
   parameters:
     - in: query
       name: referrer

@@ -34,8 +34,8 @@ get:
 
     Filter | Typ | Beschreibung
     --- | --- | ---
-    `hat_als_organisationsbeziehungen` | String (Boolean) | listet alle Organisationsbeziehungen auf, welche die, durch die Organsations-ID gegebene, Organisation hat. Die Organisationsbeziehungen werden unter `hat_als_organisationsbeziehungen` aufgelistet. Der Defaultwert ist `Ja`, es werden also ohne Filterangabe alle Organisationsbeziehungen angegeben, welche eine Organisation hat.
-    `ist_von_organisationsbeziehungen` | String (Boolean) | listet alle Organisationsbeziehungen auf, welche von anderen Organisationen zu dem, durch die Organisations-ID gegebenen, Organisation bestehen. Die Organisationsbeziehungen werden unter `ist_von_organisationsbeziehungen` aufgelistet. Der Defaultwert ist `Nein`, es werden also ohne Filterangabe keine Organisationsbeziehungen angegeben, welche aus der gegebenen Organisation heraus bestehen.
+    `hat_als_organisationsbeziehungen` | String (Boolean) | Listet alle Organisationsbeziehungen auf, welche die durch die Organsations-ID gegebene Organisation hat. Die Organisationsbeziehungen werden unter `hat_als_organisationsbeziehungen` aufgelistet. Der Defaultwert ist `Ja`, es werden also ohne Filterangabe alle Organisationsbeziehungen angegeben, welche eine Organisation hat.
+    `ist_von_organisationsbeziehungen` | String (Boolean) | Listet alle Organisationsbeziehungen auf, welche von anderen Organisationen zu dem, durch die Organisations-ID gegebenen, Organisation bestehen. Die Organisationsbeziehungen werden unter `ist_von_organisationsbeziehungen` aufgelistet. Der Defaultwert ist `Nein`, es werden also ohne Filterangabe keine Organisationsbeziehungen angegeben, welche aus der gegebenen Organisation heraus bestehen.
   parameters:
     - in: path
       name: id

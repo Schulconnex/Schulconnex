@@ -96,7 +96,7 @@ get:
     Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig.
 
     Bei Attributen, welche eine Liste von Codes enthalten können (deren „Anzahl“ im
-    Datenmodell die Form „0..n“ oder „1..n“ hat), kann als Filterwert eine durch Komma
+    Datenmodell die Form „0..n“ oder „1..n“ hat), kann als Filterwert eine durch Kommas
     getrennte Liste von Werten angegeben werden. Es werden dann nur die Gruppen zurück
     geliefert, in denen alle diese Codes in der Liste vorkommen. Die Parameter sind auch
     hier als mit „und“ verknüpft anzusehen. Der Filter `&faecher=NL,IT,SN` liefert alle Gruppen,
