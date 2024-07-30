@@ -18,7 +18,7 @@ post:
 
     Bei einer erfolgreichen Anforderung zum Erstellen einer Gruppe wird diese Anforderung
     mit einer Repräsentation der Gruppe in den Antwort-Nutzdaten (Response Payload) und
-    dem HTTP-Status-Code 200 quittiert.
+    dem HTTP-Status-Code 201 quittiert.
   requestBody:
     required: true
     content:
@@ -26,7 +26,7 @@ post:
         schema:
           $ref: './components-Gruppe.yaml'
   responses:
-    '200':
+    '201':
       content:
         application/json:
           schema:

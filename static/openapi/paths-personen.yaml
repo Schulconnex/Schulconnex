@@ -154,7 +154,7 @@ post:
 
     Bei einer erfolgreichen Anforderung zum Erstellen eines Personendatensatzes wird
     diese Anforderung mit einer Repräsentation des Personendatensatzes in den
-    Antwort-Nutzdaten und dem HTTP Status Code 200 quittiert.
+    Antwort-Nutzdaten und dem HTTP Status Code 201 quittiert.
   requestBody:
     required: true
     content:
@@ -162,7 +162,7 @@ post:
         schema:
           $ref: './components-Person.yaml'
   responses:
-    '200':
+    '201':
       content:
         application/json:
           schema:
