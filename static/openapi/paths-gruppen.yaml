@@ -93,7 +93,7 @@ get:
 
     Werden mehrere Filter angegeben, so sind sie als mit „und“ verknüpft anzusehen.
 
-    Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig.
+    Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert. 
 
     Bei Attributen, welche eine Liste von Codes enthalten können (deren „Anzahl“ im
     Datenmodell die Form „0..n“ oder „1..n“ hat), kann als Filterwert eine durch Kommas

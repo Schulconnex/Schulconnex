@@ -43,6 +43,8 @@ get:
     Welche Filterfunktionen genutzt werden können, wird durch eine vertragliche Absprache
     zwischen Dienstanbieter und Betreiber des Schulconnex-Servers geregelt.
 
+    Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
+
     Filter | Typ | Parameter | Beschreibung
     --- | --- | --- | ---
     `vollstaendig` | String | `personen` | Möglichkeit, statt nur der `pid` zu jeder der gelisteten Personen die vollständige Beschreibung nach [Angepasstes Datenmodell Person für Dienstanbieter](/docs/angepasstes-datenmodell/person), anzuzeigen.

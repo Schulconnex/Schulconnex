@@ -28,7 +28,8 @@ get:
     beinhaltet ist (contains). Bei Filtern vom Typ „String (Code)” überprüft der Schulconnex-Server,
     ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung gleich
     dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so sind sie als
-    mit „und“ verknüpft anzusehen.
+    mit „und“ verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als 
+    Resultat eine leere Liste geliefert.
 
     Filter | Typ | Beschreibung
     --- | --- | ---

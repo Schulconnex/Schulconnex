@@ -16,7 +16,14 @@ get:
     Siehe auch Datenmodell [`Personenkontext`](/docs/datenmodell/personenkontext).
 
     Die Anfrage erfordert keine Nutzdaten (Request Payload).
-
+    
+    Die Schnittstelle ermöglicht das Verwenden von Filterparametern
+    zur Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter 
+    angegeben, so sind sie als mit 'und' verknüpft anzusehen. Die mehrfache 
+    Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig. 
+    Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat 
+    eine leere Liste geliefert. 
+    
     Folgende Tabelle listet die zur Verfügung stehenden Filter:
 
     Filter | Typ | Beschreibung
