@@ -37,6 +37,8 @@ Extern | externe Person
 OrgAdmin | Organisationsadministrator
 Leit | Organisationsleitung
 SysAdmin | Systemadministrator
+SchB | Schulbegleiter/in
+NLehr | Nicht-lehrendes Personal
 
 ## Vertrauensstufe
 
@@ -154,6 +156,7 @@ Lern | Lernende/r
 Lehr | Lehrende/r
 KlLeit | Klassenleitung
 Foerd | Förderlehrkraft
+VLehr | Vertretungslehrkraft
 SchB | Schulbegleitung
 GMit | Gruppenmitglied
 GLeit | Gruppenleitung

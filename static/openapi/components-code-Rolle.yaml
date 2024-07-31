@@ -7,6 +7,9 @@ enum:
   - OrgAdmin
   - Leit
   - SysAdmin
+  - SchB
+  - NLehr
+
 description: >
     Wie folgt:
       * Lern Lernende/r
@@ -16,3 +19,5 @@ description: >
       * OrgAdmin Organisationsadministrator
       * Leit Organisationsleitung
       * SysAdmin Systemadministrator
+      * Schulbegleiter/in
+      * Nicht-lehrendes Personal

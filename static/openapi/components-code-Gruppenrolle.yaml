@@ -4,6 +4,7 @@ enum:
   - Lehr
   - KlLeit
   - Foerd
+  - VLehr
   - SchB
   - GMit
   - GLeit
@@ -12,6 +13,7 @@ description: >
       * Lern Lernende/r
       * Lehr Lehrende/r
       * KlLeit Klassenleitung
+      * Vertretungslehrkraft
       * Foerd Förderlehrkraft
       * SchB Schulbegleitung
       * GMit Gruppenmitglied
