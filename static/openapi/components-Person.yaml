@@ -20,7 +20,7 @@ properties:
     format: uuid
     example: 58f45270-8e54-40c6-a212-980307fc19be
   stammorganisation:
-    description: Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein.
+    description: Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Der häufigste Anwendungsfall ist die Abordnung eines Lehrenden an eine andere Dienststelle. Die Stammorganisation ist unabhängig vom Personenkontext.
     type: string
   name:
     type: object
