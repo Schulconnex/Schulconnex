@@ -39,7 +39,7 @@ Code | Sub-Code | Titel | Beschreibung
 400 | 13 | `"Personenkontext wird genutzt."` | `"Personenkontexte können über die API /personenkontexte/{id} nur dann direkt gelöscht werden, wenn sie von keinem anderen System genutzt wurden. Wurde der Personenkontext bereits extern genutzt, so muss die Löschung über andere APIs erfolgen."`
 400 | 14 | `"Zyklische Referenzgruppe"` | `"Referenzgruppen dürfen keine zirkulären Referenzen haben."`
 400 | 15 | `"Text zu lang"` | `"Die Länge eines übergebenen Textattributes überschreitet die in der Spezifikation angegebene Maximallänge."`
-400 | 16 | `"Inkonsistente Laufzeitangabe"` | `"Laufzeiten (von Lernperioden) müssen entweder als von/bis oder als vonlernperiode/bislernperiode angegeben werden. Eine Mischung (von/bislernperiode oder vonlernperiode/bis) ist nicht zulässig."`
+400 | 16 | `"Inkonsistente Laufzeitangabe"` | `"Laufzeiten (von Lernperioden) dürfen nur einen Startzeitpunkt (entweder von oder vonlernperiode) und einen Endzeitpunkt haben (bis oder bislernperiode). Mehrere Anfangs- oder Endangaben (beispielsweise bis und bislernperiode) sind nicht zulässig"`
 400 | 17 | `"Doppelter Filter"` | `"Jeder Filter darf in der URL nur einmal benutzt werden. Filter wie ?pid=123&pid=124 sind nicht zulässig."`
 400 | 18 | `"Beziehung kann nicht erstellt werden."` | `"Die Beziehung zwischen zwei Personenkontexten darf so nicht erzeugt werden."` + spezifische Fehlermeldung der Schnittstelle.
 400 | 19 | `"Erreichbarkeit kann nicht hinzugefügt werden."` | `"Diese Erreichbarkeit ist so nicht zulässig."` + spezifische Fehlermeldung der Schnittstelle.
