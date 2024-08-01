@@ -80,6 +80,18 @@ const config = {
             label: 'Spezifikation',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'apiDiensteSidebar',
+            position: 'left',
+            label: 'API Dienste',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'apiQSSidebar',
+            position: 'left',
+            label: 'API Quellsysteme',
+          },
+          {
             href: 'https://github.com/Schulconnex/Schulconnex',
             label: 'GitHub',
             position: 'right',
