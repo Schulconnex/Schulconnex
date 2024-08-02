@@ -1,13 +1,8 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: 'Schulconnex',
   tagline: 'Schnittstellen für Dienste und Quellsysteme',
   favicon: 'img/favicon.ico',
@@ -40,15 +35,15 @@ const config = {
       footnoteLabel: 'Fußnoten',
     }
   },
+
   themes: ['@docusaurus/theme-mermaid'],
 
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -57,13 +52,12 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-      }),
+      } satisfies Preset.Options,
     ],
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -123,7 +117,7 @@ const config = {
           mirrorActors: false,
         }
       }
-    }),
+    }  satisfies Preset.ThemeConfig,
 };
 
 export default config;
