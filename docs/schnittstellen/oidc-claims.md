@@ -30,7 +30,7 @@ Attribut-Name | Claim-Name
 `id` | `sub`
 `familienname` | `family_name`
 `vorname` | `given_name`
-`erreichbarkeiten[0].kennung` | `email (existieren mehrere Erreichbarkeiten des Typs „E-Mail“. so wird die erste E-Mail Kennung übermittelt)`
+`erreichbarkeiten[0].kennung` | `email (existieren mehrere Erreichbarkeiten des Typs „E-Mail“, so wird die erste E-Mail Kennung übermittelt)`
 `personenkontext.rolle` | `urn:schulconnex:de:personenkontext:rolle`
 `personenkontext.organisation.kennung` | `urn:schulconnex:de:personenkontext:organisation:kennung`
 
