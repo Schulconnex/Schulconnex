@@ -155,15 +155,17 @@ get:
                   }
                 ],
                 "laufzeit": {
-                  "von": "2022-08-01",
-                  "bis": "2023-07-31"
+                  "von": "2026-01-01",
+                  "bis": "2028-12-31"
                 }
               },
               "gruppenzugehoerigkeit": [
                 {
                   "rollen": [
                     "Lern"
-                  ]
+                  ],
+                  "von": "2026-01-01"
+                  "bis": "2027-12-31"
                 }
               ],
               "sonstige_gruppenzugehoerige": [
