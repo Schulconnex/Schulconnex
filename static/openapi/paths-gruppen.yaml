@@ -114,7 +114,7 @@ get:
     Filter | Typ | Beschreibung
     --- | --- | ---
     `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern.
-    `mandant` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `mandant` zu filtern Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `mandant` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `mandant` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters unabhängig von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains). 
     `bezeichnung` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.bezeichnung` zu filtern.
     `optionen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.optionen` zu filtern.
     `differenzierung` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.differenzierung` zu filtern.
