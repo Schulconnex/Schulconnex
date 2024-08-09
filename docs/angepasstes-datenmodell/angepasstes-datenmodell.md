@@ -45,6 +45,7 @@ classDiagram
     name.vorname
     name.initialenfamilienname
     name.initialenvorname
+    name.rufname
     geburt
     geburt.datum
     geburt.volljaehrig

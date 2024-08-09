@@ -19,6 +19,7 @@ name.familienname | String (DIN 91379.A) | 0/1 | ja | Familienname(n) der Person
 name.vorname | String (DIN 91379.A) | 0/1 | ja | Mehrere Vornamen werden durch Leerzeichen separiert.
 name.initialenfamilienname | String (DIN 91379.A) | 0/0..1 | ja | Initial oder Initialen des Familiennamens.
 name.initialenvorname | String (DIN 91379.A) | 0/0..1 | ja | Initial oder Initialen des Vornamens.
+name.rufname | String (32) (DIN 91379.A) | 0/0..1 | ja | Bei mehreren Vornamen wird der täglich im Gebrauch genutzte Vorname geführt, maximal 32 Zeichen.
 geburt | *Struktur* | 0/0..1 | ja |
 geburt.datum | Datum (siehe Abschnitt *Datumsformat*) | 0/0..1 | ja | Geburtsdatum einer Person.
 geburt.volljaehrig | String (Code) | 0/0..1 | ja | Gibt an, ob eine Person volljährig ist, ohne weitere Information über Geburtsdatum oder Alter zu vermitteln. Referenz auf einen Code der Codeliste *Boolean*.
