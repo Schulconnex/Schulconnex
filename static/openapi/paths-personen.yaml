@@ -39,6 +39,10 @@ get:
       schema:
         type: string
     - in: query
+      name: mandant
+      schema:
+        type: string
+    - in: query
       name: familienname
       schema:
         type: string

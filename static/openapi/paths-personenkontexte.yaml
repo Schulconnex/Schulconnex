@@ -46,6 +46,10 @@ get:
       schema:
         type: string
     - in: query
+      name: mandant
+      schema:
+        type: string
+    - in: query
       name: rolle
       schema:
         type: string
