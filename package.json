@@ -11,7 +11,9 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "write-dereferenced-openapi-for-qs": "redocly bundle --dereferenced --remove-unused-components static/openapi/api-qs.yaml -o openapi-out/api-qs-deref.yaml",
+    "write-dereferenced-openapi-for-dienste": "redocly bundle --dereferenced --remove-unused-components static/openapi/api-dienste.yaml -o openapi-out/api-dienste-deref.yaml"
   },
   "dependencies": {
     "@docusaurus/core": "^3.4.0",
@@ -27,6 +29,7 @@
     "@docusaurus/module-type-aliases": "^3.4.0",
     "@docusaurus/tsconfig": "^3.4.0",
     "@docusaurus/types": "^3.4.0",
+    "@redocly/cli": "^1.17.1",
     "prettier": "^3.2.5",
     "typescript": "~5.2.2"
   },

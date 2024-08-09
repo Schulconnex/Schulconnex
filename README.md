@@ -41,6 +41,23 @@ npm build
 
 Dieser Befehl erzeugt statische Dateien im Verzeichnis `build`, die von einem Webserver gehostet werden können.
 
+### OpenAPI-Definitionen
+
+Falls benötigt können dereferenzierte OpenAPI-Definitionen erzeugt werden, bei denen sämtliche Definitionen der Dienste-
+oder Quellsysteme-API in einer einzelnen Datei exportiert werden.
+
+Für die Dienste-API:
+
+```bash
+npm run write-dereferenced-openapi-for-dienste
+```
+
+Für die Quellsysteme-API:
+
+```bash
+npm run write-dereferenced-openapi-for-qs
+```
+
 ## Lizenz
 
 Der Quellcode sowie die Releases sind lizenziert unter [CC BY-ND 2.0 DE](https://creativecommons.org/licenses/by-nd/2.0/de/legalcode)
