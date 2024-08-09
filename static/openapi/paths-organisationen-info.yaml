@@ -19,7 +19,7 @@ get:
 
     Die Schnittstelle /v1/organisationen-info ermöglicht das Verwenden von Filterparametern zur 
     Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind sie als mit 
-    'und' verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat 
+    „und“ verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat 
     eine leere Liste geliefert.Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist 
     nicht zulässig. 
     
@@ -31,7 +31,7 @@ get:
     `name` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „organisation.name” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `typ` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „organisation.typ” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt die Codeliste [Organisationstyp](/docs/codelisten#organisationstyp) zugrunde.
 
-    Über weitere Filter ist es möglich sich zusätzliche Informationen zu Beziehungen von Organisationen untereinande ausgeben zu lassen.
+    Über weitere Filter ist es möglich, sich zusätzliche Informationen zu Beziehungen von Organisationen untereinande ausgeben zu lassen.
      Filter | Typ | Beschreibung
     --- | --- | ---
     `hat_als_organisationsbeziehungen` | String (Boolean) | Listet alle Organisationsbeziehungen auf, welche die, durch die Organsations-ID gegebene, Organisation hat. Die Organisationsbeziehungen werden unter 'hat_als_organisationsbeziehungen' aufgelistet. Der Defaultwert ist „ja“, es werden also ohne Filterangabe alle Organisationsbeziehungen angegeben, welche eine Organisation hat.
