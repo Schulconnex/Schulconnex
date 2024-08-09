@@ -8,7 +8,7 @@ Eine Person kann einen oder mehrere Personenkontexte besitzen, indem sie beispie
 Schule sowohl die Rollen „Schulleiter“ als auch „Erziehungsberechtigter“ hat, oder an einer Schule
 die Rolle „Lehrender“ und an einer weiteren Organisation „Lernender“ ist.
 
-In einem Personenkontext kann einer Person jeweils nur eine Organisation und eine Rolle in dieser Organisation zugewiesen werden. Diese Rollen sind soweit wie möglich disjunkt, um zu vermeiden, dass es zu Unschärfen in der Nutzung von Personenkontexten kommt. Hat eine Person mehrere Rollen (beispielsweise Organisationsadministratorin und Lehrende), so sind entsprechend mehrere Personenkontexte zu erstellen und dafür Sorge zu tragen, dass diesen Personenkontexten zugeordnete Informationen (wie Gruppen, Beziehungen, Sichtfreigaben) der der Rolle des jeweiligen Personenkontexts entsprechen.
+In einem Personenkontext kann einer Person jeweils nur eine Organisation und eine Rolle in dieser Organisation zugewiesen werden. Diese Rollen sind soweit wie möglich disjunkt, um zu vermeiden, dass es zu Unschärfen in der Nutzung von Personenkontexten kommt. Hat eine Person mehrere Rollen (beispielsweise Organisationsadministratorin und Lehrende), so sind entsprechend mehrere Personenkontexte zu erstellen und dafür Sorge zu tragen, dass diesen Personenkontexten zugeordnete Informationen (wie Gruppen, Beziehungen, Sichtfreigaben) der Rolle des jeweiligen Personenkontexts entsprechen.
 
 Es dürfen jedoch keine inhaltlich identischen Personenkontexte angelegt werden. Insbesondere ist es
 unzulässig, dieselbe Kombination aus Organisation und Rolle einer Person in unterschiedlichen
