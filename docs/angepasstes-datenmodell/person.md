@@ -8,7 +8,7 @@ Nachfolgend ist das Datenmodell einer Person dargestellt.
 
 Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung
 --- | --- | --- | --- | ---
-stammorganisation | String (UTF-8) | 0/0..1 | ja | Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Die erste Organisation ist die Stammorganisation. Sie ist unabhängig vom Personenkontext.
+stammorganisation | String (UTF-8) | 0/0..1 | ja | Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Die erste Organisation ist die Stammorganisation. Der häufigste Anwendungsfall ist die Abordnung eines Lehrenden an eine andere Dienststelle. Die Stammorganisation ist unabhängig vom Personenkontext.
 stammorganisation.id | String (UTF-8) | 0/1 | ja | ID der Stammorganisation. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
 stammorganisation.kennung | String (UTF-8) | 0/0..1 | ja | Die optionale Kennung (Identifikations-ID) der Stammorganisation ist innerhalb eines Organisationstyps eindeutig.
 stammorganisation.name | String (DIN 91379.B) | 0/0..1 | ja | Offizieller Name der Stammorganisation.
