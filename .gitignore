@@ -4,6 +4,9 @@
 # Production
 /build
 
+# redocly
+/openapi-out
+
 # Generated files
 .docusaurus
 .cache-loader
