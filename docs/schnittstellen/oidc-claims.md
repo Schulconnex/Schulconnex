@@ -30,11 +30,12 @@ Attribut-Name | Claim-Name
 `id` | `sub`
 `familienname` | `family_name`
 `vorname` | `given_name`
+`erreichbarkeiten[0].kennung` | `email` (existieren mehrere Erreichbarkeiten des Typs „E-Mail“, so wird die erste E-Mail Kennung übermittelt)
 `personenkontext.rolle` | `urn:schulconnex:de:personenkontext:rolle`
 `personenkontext.organisation.kennung` | `urn:schulconnex:de:personenkontext:organisation:kennung`
 
-Die gelieferten Werte zu den einzelnen Attributen entsprechen immer den Konventionen, die auch
-bei `/person-info` genutzt werden und nicht den Werten, welche den Standard OIDC-Claims entsprechen.
+Die gelieferten Werte zu den einzelnen Attributen entsprechen **immer** den Konventionen, die auch
+bei `/person-info` genutzt werden und **nicht** den Werten, welche den Standard OIDC-Claims entsprechen.
 
 Wird kein Scope Request verwendet, so wird nur der Claim `sub` (entspricht der
 pseudonymisierten Personen-ID) geliefert.
@@ -53,6 +54,7 @@ Nachname, Rolle und Organisationskennung mitgeliefert werden.
   "sub": "af3a88fc-d766-11ec-9d64-0242ac120002",
   "family_name": "Muster",
   "given_name": "Max",
+  "email": "Max.Muster@schule_1234.de",  
   "urn:schulconnex:de:personenkontext:rolle": "Lern",
   "urn:schulconnex:de:personenkontext:organisation:kennung": "NI_12345"
 }
