@@ -41,7 +41,7 @@ post:
 
     Bei einer erfolgreichen Anforderung zum Erstellen einer Beziehung zu einem Personenkontext
     wird diese Anforderung mit einer Repräsentation der Beziehung in den Antwort-Nutzdaten
-    und dem HTTP-Status-Code 200 quittiert.
+    und dem HTTP-Status-Code 201 quittiert.
   parameters:
     - in: path
       name: id
@@ -57,7 +57,7 @@ post:
         schema:
           $ref: './components-Beziehung.yaml'
   responses:
-    '200':
+    '201':
       content:
         application/json:
           schema:
