@@ -65,6 +65,8 @@ classDiagram
     gruppen.gruppe
     gruppen.gruppenzugehoerigkeit
     gruppen.gruppenzugehoerigkeit.rollen
+    gruppen.gruppenzugehoerigkeit.von
+    gruppen.gruppenzugehoerigkeit.bis
     beziehungen
     beziehungen.hat_als
     beziehungen.hat_als.ktid

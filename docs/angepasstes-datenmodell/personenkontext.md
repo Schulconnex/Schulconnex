@@ -26,6 +26,8 @@ gruppen | *Array* | 0/0..n | ja | Array aus Gruppen und dazugehörende Gruppenzu
 gruppen.gruppe.* | *Struktur* | 0/1 | ja | Attribute einer einzelnen Gruppe entsprechend Datenmodell *Gruppe*.
 gruppen.gruppenzugehoerigkeit | *Struktur* | 0/1 | ja |
 gruppen.gruppenzugehoerigkeit.rollen | String (Code) | 0/1..n | ja | Rollen der Person innerhalb der Gruppe. Liste von Rollen nach Codeliste *Gruppenrolle*.
+gruppen.gruppenzugehoerigkeit.von | String (Code) | 0/1..n | ja | Beginn der Gruppenzugehörigkeit. Dieser Zeitpunkt kann auch in der Zukunft liegen.
+gruppen.gruppenzugehoerigkeit.bis | String (Code) | 0/1..n | ja | Ende der Gruppenzugehörigkeit.
 gruppen.sonstige_gruppenzugehoerige | *Array* | 0/0..n | ja | Liste (Array) von weiteren Zugehörigen zu der Gruppe, jeweils als Paare von Kontext-IDs ktid und Rollen.
 gruppen.sonstige_gruppenzugehoerige[].ktid | String (Code) | 0/1 | ja | Pseudonymisierte ID des Personenkontexts.
 gruppen.sonstige_gruppenzugehoerige[].rollen | String (Code) | 0/1..n | ja | Rollen der Person innerhalb der Gruppe. Liste von Rollen nach Codeliste *Gruppenrolle*.
