@@ -60,6 +60,9 @@ properties:
         description: Datum und Uhrzeit der Löschung des Personenkontexts.
         type: string
         format: date-time
+      verwaistepersonloeschen:
+        description: Gibt an, ob Person mitgelöscht wird, wenn der letzte Personenkontext zu dieser Person gelöscht wurde.
+        $ref: './components-code-Boolean.yaml'
   revision:
     description: Revision des Personenkontext.
     type: string
