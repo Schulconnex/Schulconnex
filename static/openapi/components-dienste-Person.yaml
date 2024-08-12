@@ -2,7 +2,6 @@ type: object
 required:
   - id
   - mandant
-  - name
 properties:
   id:
     description: ID der Person. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
@@ -16,6 +15,9 @@ properties:
       - $ref: './components-Organisation.yaml'
   name:
     type: object
+    required:
+      - familienname
+      - vorname
     properties:
       familienname:
         description: Familienname(n) der Person. Mehrere Familiennamen werden durch Leerzeichen separiert.
