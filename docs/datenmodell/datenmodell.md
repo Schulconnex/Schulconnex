@@ -70,6 +70,7 @@ classDiagram
     sichtfreigabe
     loeschung
     loeschung.zeitpunkt
+    loeschung.verwaistepersonloeschen
     revision
   }
   class Gruppendatensatz {

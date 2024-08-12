@@ -66,6 +66,7 @@ personenstatus | Status the person has in relation to a role. See code list *Per
 jahrgangsstufe | School grade or form a person is currently in or associated with. Refers to code list *Jahrgangsstufe*.
 sichtfreigabe | Boolean value that denotes whether the data is only visible due to another organisation providing read access.
 loeschung.zeitpunkt | Date and time when the person context is to be deleted.
+loeschung.verwaistepersonloeschen | Indicator whether the `person` data entry should be automatically deleted when the last person context for this person has been deleted.
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there has been any changes to the data since it was retrieved by the client system.
 
 ## Personendatensatz
