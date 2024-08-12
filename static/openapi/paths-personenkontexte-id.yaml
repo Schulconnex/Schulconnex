@@ -7,9 +7,8 @@ get:
   description: |
     Ein READ ist nur mit HTTP-GET auf die API `/personenkontexte/{personendatensatz.personenkontext.id`
     zum Abfragen eines Personenkontexts per ID zugelassen. Die Antwort-Nutzdaten
-    (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Personendatensatz
-    mit dem jeweiligen Personenkontext und der zugeordneten Person, sofern Einträge
-    (ggf. passend zu den optionalen Filtern) existieren.
+    (Response Payload) beinhalten ein JSON-Objekt vom Datentyp Personendatensatz
+    mit dem jeweiligen Personenkontext und der zugeordneten Person.
 
     Siehe auch Datenmodell [`Personendatensatz`](/docs/datenmodell/personendatensatz),
     Datenmodell [`Person`](/docs/datenmodell/person) und
