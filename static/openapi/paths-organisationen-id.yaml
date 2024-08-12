@@ -32,6 +32,7 @@ get:
             allOf:
               - $ref: './components-Organisation-basis.yaml'
               - $ref: './components-Organisation.yaml'
+              - $ref: './components-qs-Organisation.yaml'
     '304':
       description: Not Modified
     '400':

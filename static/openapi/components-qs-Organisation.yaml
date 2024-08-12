@@ -1,0 +1,14 @@
+description: Organisation.
+type: object
+properties:
+  namensergaenzung:
+    description: Ergänzender Name einer Organisation.
+    type: string
+    example: vorher Heinrich-Heine-Gesamtschule
+  kuerzel:
+    description: Kurzname einer Organisation.
+    type: string
+    maxLength: 64
+    example: Heine-Gym
+  traegerschaft:
+    $ref: './components-code-Trägerschaft.yaml'

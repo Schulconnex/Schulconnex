@@ -9,18 +9,7 @@ properties:
     description: Offizieller Name einer Organisation.
     type: string
     example: Heinrich-Heine-Gymnasium
-  namensergaenzung:
-    description: Ergänzender Name einer Organisation.
-    type: string
-    example: vorher Heinrich-Heine-Gesamtschule
-  kuerzel:
-    description: Kurzname einer Organisation.
-    type: string
-    maxLength: 64
-    example: Heine-Gym
   anschrift:
     $ref: './components-Anschrift.yaml'
   typ:
     $ref: './components-code-Organisationstyp.yaml'
-  traegerschaft:
-    $ref: './components-code-Trägerschaft.yaml'
