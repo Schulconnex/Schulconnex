@@ -42,4 +42,5 @@ properties:
   revision:
     description: Revision des Personenkontext.
     type: string
+    readOnly: true
     example: "2"
