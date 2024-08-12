@@ -6,7 +6,7 @@ properties:
     description: Pseudonymisierte ID.
     type: string
   person:
-    $ref: './components-Person.yaml'
+    $ref: './components-dienste-Person.yaml'
   personenkontexte:
     type: array
     items:
