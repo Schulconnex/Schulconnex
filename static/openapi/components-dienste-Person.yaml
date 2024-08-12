@@ -1,14 +1,7 @@
 type: object
 required:
-  - id
-  - mandant
+  - name
 properties:
-  id:
-    description: ID der Person. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-    type: string
-    readOnly: true
-    format: uuid
-    example: a6e1a860-8d44-4b2b-aef7-aa2c8bf5beb5
   stammorganisation:
     allOf:
       - $ref: './components-Organisation-basis.yaml'
@@ -70,6 +63,9 @@ properties:
         type: string
         format: date
         example: "2005-05-01"
+      volljaehrig:
+        description: Gibt an, ob eine Person volljährig ist.
+        $ref: './components-code-Boolean.yaml'
       geburtsort:
         description: Geburtsort einer Person, bestehend aus Ortsname und Land, beispielsweise „Eindhoven, Niederlande“. Wird kein Land angegeben, so wird als Land „Deutschland“ angenommen, d.h. der Geburtsort „Erfurt“ ist wie „Erfurt, Deutschland“ zu behandeln.
         type: string
@@ -80,9 +76,3 @@ properties:
     $ref: './components-code-Lokalisierung.yaml'
   vertrauensstufe:
     $ref: './components-code-Vertrauensstufe.yaml'
-  auskunftssperre:
-    $ref: './components-code-Boolean.yaml'
-  revision:
-    description: Revision der Person. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
-    type: string
-    example: "1"

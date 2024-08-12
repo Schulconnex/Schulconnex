@@ -2,7 +2,6 @@ type: object
 required:
   - id
   - mandant
-  - organisation
   - rolle
   - revision
 properties:

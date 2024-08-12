@@ -1,5 +1,7 @@
 description: Organisation.
 type: object
+required:
+  - id
 properties:
   id:
     description: ID der Organisation.
