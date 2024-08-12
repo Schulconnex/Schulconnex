@@ -1,0 +1,14 @@
+type: object
+required:
+  - gruppe
+properties:
+  gruppe:
+    $ref: './components-Gruppe.yaml'
+  gruppenzugehoerigkeit:
+    type: array
+    items:
+      $ref: './components-dienste-Gruppenzugehörigkeit.yaml'
+  sonstige_gruppenzugehoerige:
+    type: array
+    items:
+      $ref: './components-dienste-Gruppenzugehörigkeit.yaml'
