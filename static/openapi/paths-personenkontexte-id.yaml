@@ -100,9 +100,8 @@ put:
     aktualisierenden Attribute in der Anfrage Nutzlast mitgeschickt werden.
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren eines Personenkontexts wird diese
-    Anforderung mit einer Repräsentation des Personenkontexts als Personendatensatz mit den
-    beiden Attributen Person `personendatensatz.person` und Personenkontexte `personendatensatz.personenkontexte`
-    in den Antwort-Nutzdaten und dem HTTP-Status-Code 200 quittiert.
+    Anforderung mit einer Repräsentation des Personenkontexts in den Antwort-Nutzdaten und
+    dem HTTP-Status-Code 200 quittiert.
 
     Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut
     `personendatensatz.personenkontext.organisation` mit dem Datentyp Organisation
