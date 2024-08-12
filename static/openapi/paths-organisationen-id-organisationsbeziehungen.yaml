@@ -28,7 +28,8 @@ get:
     Siehe auch Datenmodell [`Organisationsbeziehung`](/docs/datenmodell/organisationsbeziehung).
 
     Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` ermöglicht das
-    Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.
+    Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET. 
+    Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
 
     Folgende Tabelle listet die zur Verfügung stehenden Filter auf:
 
