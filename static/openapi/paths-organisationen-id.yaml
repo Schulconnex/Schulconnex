@@ -18,12 +18,14 @@ get:
   parameters:
     - in: path
       name: id
+      required: true
       schema:
         type: string
         format: uuid
       description: Der Pfad-Parameter bezieht sich auf die ID der Organisation.
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:

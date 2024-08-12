@@ -18,6 +18,7 @@ get:
     Siehe auch Datenmodell [`Organisation`](/docs/datenmodell/organisation).
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:

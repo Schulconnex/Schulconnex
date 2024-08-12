@@ -39,6 +39,7 @@ get:
   parameters:
     - in: path
       name: id
+      required: true
       schema:
         type: string
         format: uuid
@@ -59,6 +60,7 @@ get:
           - Nein
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:

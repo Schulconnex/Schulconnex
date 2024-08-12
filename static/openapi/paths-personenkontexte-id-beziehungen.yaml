@@ -58,6 +58,7 @@ post:
           $ref: './components-Beziehung.yaml'
   responses:
     '201':
+      description: OK
       content:
         application/json:
           schema:
@@ -137,6 +138,13 @@ get:
     `hat_als_beziehungen` | String (Boolean) | listet alle Beziehungen auf, welche der, durch die Personenkontext-ID gegebenen, Personenkontext hat. Die Beziehungen werden unter `hat_als_beziehungen` aufgelistet. Der Defaultwert ist `Ja`, es werden also ohne Filterangabe alle Beziehungen angegeben, welche ein Personenkontext hat.
     `ist_von_beziehungen` | String (Boolean) | listet alle Beziehungen auf, welche von anderen Personenkontexten zu dem, durch die Personenkontext-ID gegebenen, Personenkontext bestehen. Die Beziehungen werden unter `ist_von_beziehungen` aufgelistet. Der Defaultwert ist `Nein`, es werden also ohne Filterangabe keine Beziehungen angegeben, welche zu dem gegebenen Personenkontext bestehen.
   parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontextes.
     - in: query
       name: hat_als_beziehungen
       schema:
@@ -153,6 +161,7 @@ get:
           - Nein
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:

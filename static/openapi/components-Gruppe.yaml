@@ -56,7 +56,7 @@ properties:
     type: object
     properties:
       grupid:
-        description:
+        description: ''
         type: string
       rollen:
         type: array

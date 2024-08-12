@@ -24,6 +24,7 @@ get:
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppe.
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
@@ -122,6 +123,7 @@ put:
           $ref: './components-Gruppe.yaml'
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:

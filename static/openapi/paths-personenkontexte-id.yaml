@@ -28,6 +28,7 @@ get:
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
@@ -130,6 +131,7 @@ put:
           $ref: './components-PersonenKontext.yaml'
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
