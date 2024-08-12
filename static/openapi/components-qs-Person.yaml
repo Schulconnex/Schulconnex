@@ -5,4 +5,4 @@ properties:
   personenkontexte:
     type: array
     items:
-      $ref: './components-qs-PersonenKontext-GET-response.yaml'
+      $ref: './components-qs-PersonenKontext.yaml'

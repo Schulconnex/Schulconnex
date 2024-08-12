@@ -133,7 +133,7 @@ put:
       content:
         application/json:
           schema:
-            $ref: './components-qs-PersonenKontext-GET-response.yaml'
+            $ref: './components-qs-PersonenKontext.yaml'
     '304':
       description: Not Modified
     '400':
