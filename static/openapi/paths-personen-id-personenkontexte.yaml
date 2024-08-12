@@ -122,6 +122,7 @@ post:
     Attribut | In den Anfrage Nutzdaten erforderlich? | Bemerkung
     --- | --- | ---
     `id` | nein | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+    `referrer` | nein | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und ist eindeutig.
     `mandant` | nein | ID des Mandanten, dem die Personen zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieser Wert ist eine Referenz auf einen Mandanten.
     `organisation` | nein |
     `organisation.id` | nein | ID der Organisation. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
