@@ -24,7 +24,10 @@ properties:
     format: uuid
     example: 23643c9e-956a-4baa-af4e-813e0a7efa4b
   rollen:
-    $ref: './components-code-Gruppenrolle.yaml'
+    description: ''
+    type: array
+    items:
+     $ref: './components-code-Gruppenrolle.yaml'
   von:
     description: Beginn der Gruppenzugehörigkeit. Dieser Zeitpunkt kann auch in der Zukunft liegen.
     type: string
