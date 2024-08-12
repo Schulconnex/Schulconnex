@@ -60,7 +60,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-PersonenKontext.yaml'
+            $ref: './components-qs-PersonenKontext-GET-response.yaml'
     '304':
       description: Not Modified
     '400':
@@ -149,14 +149,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: './components-PersonenKontext.yaml'
+          $ref: './components-qs-PersonenKontext-POST-request.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-PersonenKontext.yaml'
+            $ref: './components-qs-PersonenKontext-GET-response.yaml'
     '304':
       description: Not Modified
     '400':

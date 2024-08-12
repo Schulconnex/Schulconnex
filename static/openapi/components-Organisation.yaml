@@ -1,13 +1,6 @@
 description: Organisation.
 type: object
-required:
-  - id
 properties:
-  id:
-    description: ID der Organisation.
-    type: string
-    format: uuid
-    example: b0d7b0dd-3477-4122-a38d-095ec242e786
   kennung:
     description: Die optionale Kennung (Identifikations-ID) einer Organisation.
     type: string

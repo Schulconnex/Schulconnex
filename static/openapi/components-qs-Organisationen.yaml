@@ -1,3 +1,5 @@
 type: array
 items:
-  $ref: './components-Organisation.yaml'
+  allOf:
+    - $ref: './components-Organisation-basis.yaml'
+    - $ref: './components-Organisation.yaml'

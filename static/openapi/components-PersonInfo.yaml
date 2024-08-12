@@ -10,4 +10,4 @@ properties:
   personenkontexte:
     type: array
     items:
-      $ref: './components-PersonenKontext.yaml'
+      $ref: './components-dienste-PersonenKontext.yaml'
