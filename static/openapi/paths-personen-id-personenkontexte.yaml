@@ -60,7 +60,9 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-qs-PersonenKontext.yaml'
+            type: array
+            items:
+              $ref: './components-qs-PersonenKontext.yaml'
     '304':
       description: Not Modified
     '400':
