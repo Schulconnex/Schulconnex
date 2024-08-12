@@ -3,11 +3,15 @@ required:
   - gruppe
 properties:
   gruppe:
-    $ref: './components-Gruppe.yaml'
+    $ref: './components-dienste-Gruppe.yaml'
   gruppenzugehoerigkeit:
-    type: array
-    items:
-      $ref: './components-dienste-Gruppenzugehörigkeit.yaml'
+    type: object
+    properties:
+      rollen:
+        description: ''
+        type: array
+        items:
+          $ref: './components-code-Gruppenrolle.yaml'
   sonstige_gruppenzugehoerige:
     type: array
     items:
