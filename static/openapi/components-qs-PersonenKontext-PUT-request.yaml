@@ -5,17 +5,21 @@ properties:
   id:
     description: ID des Personenkontexts.
     type: string
-    readOnly: true
     format: uuid
     example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
   mandant:
     description: ID des Mandanten, dem der Personenkontext zugeordnet ist.
     type: string
-    readOnly: true
     format: uuid
     example: 58f45270-8e54-40c6-a212-980307fc19be
   organisation:
-    $ref: './components-Organisation-basis.yaml'
+    type: object
+    properties:
+      id:
+        description: ID der Organisation.
+        type: string
+        format: uuid
+        example: b0d7b0dd-3477-4122-a38d-095ec242e786
   referrer:
     description: ID des Personenkontexts im Quellsystem.
     type: string
