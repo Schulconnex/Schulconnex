@@ -10,7 +10,6 @@ properties:
     description: ID des Personenkontexts.
     type: string
     readOnly: true
-    format: uuid
     example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
   mandant:
     description: ID des Mandanten, dem der Personenkontext zugeordnet ist.

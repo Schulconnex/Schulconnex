@@ -3,8 +3,7 @@ properties:
   id:
     description: ID des Personenkontexts.
     type: string
-    format: uuid
-    example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
+    example: 4d0f579c0b9a4d3ab48487b3bee8a2ad4d0f579c0b9a4d3ab48487b3bee8a2ad
   organisation:
     allOf:
       - $ref: './components-Organisation-basis.yaml'
