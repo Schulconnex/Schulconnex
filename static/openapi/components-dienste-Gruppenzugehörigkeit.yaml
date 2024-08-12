@@ -1,6 +1,7 @@
 type: object
 required:
   - ktid
+  - rollen
 properties:
   ktid:
     description: ID des Personenkontexts, welchem die Gruppe zugeordnet ist.

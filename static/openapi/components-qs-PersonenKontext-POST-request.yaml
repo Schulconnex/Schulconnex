@@ -1,4 +1,6 @@
 type: object
+required:
+  - rolle
 properties:
   referrer:
     description: ID des Personenkontexts im Quellsystem.

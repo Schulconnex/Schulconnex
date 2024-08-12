@@ -3,6 +3,7 @@ required:
   - id
   - mandant
   - ktid
+  - rollen
   - revision
 properties:
   id:
