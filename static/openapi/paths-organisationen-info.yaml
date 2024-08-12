@@ -3,26 +3,25 @@ get:
     - Organisationen
   security:
     - oAuthForUser: []
-  summary: Organisationen auflisten 
+  summary: Organisationen auflisten.
   description: |
-    Die Schnittstelle /organisationen-info ermöglicht 
-    die Auflistung von Organisationen durch Dienste. 
+    Die Schnittstelle /organisationen-info ermöglicht die Auflistung von Organisationen durch Dienste.
     Der Zugriff erfordert die Client Credentials eines Dienstes.
-    
+
     Dieser Schnittstellenendpunkt gibt die Organisationen zurück, die vom Dienst ausgelesen werden dürfen.
 
-    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen. 
-    
-    Die Antwort-Nutzdaten (Response Payload) beinhalten ein 
-    Array von JSON-Objekten vom Datentyp Organisation, sofern 
+    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen.
+
+    Die Antwort-Nutzdaten (Response Payload) beinhalten ein
+    Array von JSON-Objekten vom Datentyp Organisation, sofern
     Einträge (ggf. passend zu den optionalen Filtern) existieren. Siehe auch Datenmodell [`Organisation`](/docs/datenmodell/organisation).
 
-    Die Schnittstelle /v1/organisationen-info ermöglicht das Verwenden von Filterparametern zur 
-    Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind sie als mit 
-    „und“ verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat 
-    eine leere Liste geliefert.Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist 
-    nicht zulässig. 
-    
+    Die Schnittstelle /v1/organisationen-info ermöglicht das Verwenden von Filterparametern zur
+    Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind sie als mit
+    „und“ verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat
+    eine leere Liste geliefert.Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist
+    nicht zulässig.
+
     Folgende Tabelle listet die zur Verfügung stehenden Filter auf:
      Filter | Typ | Beschreibung
     --- | --- | ---
@@ -36,8 +35,6 @@ get:
     --- | --- | ---
     `hat_als_organisationsbeziehungen` | String (Boolean) | Listet alle Organisationsbeziehungen auf, welche die, durch die Organsations-ID gegebene, Organisation hat. Die Organisationsbeziehungen werden unter 'hat_als_organisationsbeziehungen' aufgelistet. Der Defaultwert ist „ja“, es werden also ohne Filterangabe alle Organisationsbeziehungen angegeben, welche eine Organisation hat.
     `ist_von_organisationsbeziehungen` | String (Boolean) | Listet alle Organisationsbeziehungen auf, welche von anderen Organisationen zu dem, durch die Organisations-ID gegebenen, Organisation bestehen. Die Organisationsbeziehungen werden unter 'ist_von_organisationsbeziehungen' aufgelistet. Der Defaultwert ist „nein“, es werden also ohne Filterangabe keine Organisationsbeziehungen angegeben, welche aus der gegebenen Organisation heraus bestehen.
-
-
   responses:
     '200':
       content:
