@@ -25,6 +25,7 @@ get:
       description: Der Pfad-Parameter bezieht sich auf die vom Quellsystem vergebene ID der Person.
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
@@ -110,6 +111,7 @@ put:
           $ref: './components-Person.yaml'
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:

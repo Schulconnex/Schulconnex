@@ -7,9 +7,8 @@ get:
   description: |
     Ein READ ist nur mit HTTP-GET auf die API `/personenkontexte/{personendatensatz.personenkontext.id`
     zum Abfragen eines Personenkontexts per ID zugelassen. Die Antwort-Nutzdaten
-    (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Personendatensatz
-    mit dem jeweiligen Personenkontext und der zugeordneten Person, sofern Einträge
-    (ggf. passend zu den optionalen Filtern) existieren.
+    (Response Payload) beinhalten ein JSON-Objekt vom Datentyp Personendatensatz
+    mit dem jeweiligen Personenkontext und der zugeordneten Person.
 
     Siehe auch Datenmodell [`Personendatensatz`](/docs/datenmodell/personendatensatz),
     Datenmodell [`Person`](/docs/datenmodell/person) und
@@ -28,6 +27,7 @@ get:
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
@@ -100,9 +100,8 @@ put:
     aktualisierenden Attribute in der Anfrage Nutzlast mitgeschickt werden.
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren eines Personenkontexts wird diese
-    Anforderung mit einer Repräsentation des Personenkontexts als Personendatensatz mit den
-    beiden Attributen Person `personendatensatz.person` und Personenkontexte `personendatensatz.personenkontexte`
-    in den Antwort-Nutzdaten und dem HTTP-Status-Code 200 quittiert.
+    Anforderung mit einer Repräsentation des Personenkontexts in den Antwort-Nutzdaten und
+    dem HTTP-Status-Code 200 quittiert.
 
     Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut
     `personendatensatz.personenkontext.organisation` mit dem Datentyp Organisation
@@ -127,13 +126,14 @@ put:
     content:
       application/json:
         schema:
-          $ref: './components-PersonenKontext.yaml'
+          $ref: './components-qs-PersonenKontext-PUT-request.yaml'
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
-            $ref: './components-PersonenKontext.yaml'
+            $ref: './components-qs-PersonenKontext.yaml'
     '304':
       description: Not Modified
     '400':

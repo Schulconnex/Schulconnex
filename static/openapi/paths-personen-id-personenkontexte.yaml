@@ -63,10 +63,13 @@ get:
         type: string
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
-            $ref: './components-PersonenKontext.yaml'
+            type: array
+            items:
+              $ref: './components-qs-PersonenKontext.yaml'
     '304':
       description: Not Modified
     '400':
@@ -128,14 +131,20 @@ post:
     Attribut | In den Anfrage Nutzdaten erforderlich? | Bemerkung
     --- | --- | ---
     `id` | nein | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+    `referrer` | nein | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und ist eindeutig.
     `mandant` | nein | ID des Mandanten, dem die Personen zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieser Wert ist eine Referenz auf einen Mandanten.
     `organisation` | nein |
     `organisation.id` | nein | ID der Organisation. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `revision` | nein | Revision des Personenkontexts. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
 
-    Bei einer erfolgreichen Anforderung zum Erstellen eines Personenkontexts zu einem Personendatensatz wird diese Anforderung mit einer Repräsentation des Personenkontexts in den Antwort-Nutzdaten und dem HTTP-Status-Code 201 quittiert.
+    Bei einer erfolgreichen Anforderung zum Erstellen eines Personenkontexts zu einem Personendatensatz
+    wird diese Anforderung mit einer Repräsentation des Personenkontexts in den Antwort-Nutzdaten
+    und dem HTTP-Status-Code 201 quittiert.
 
-    Die Organisation wird beim Erstellen eines Personenkontexts vom Schulconnex-Server aus dem `access_token` übernommen und per `personenkontext.organisation.id` referenziert. Die Antwort-Nutzdaten umfassen für das Attribut `personenkontext.organisation` mit dem Datentyp Organisation nur die ID `personenkontext.organisation.id`.
+    Die Organisation wurde beim Erstellen eines Personenkontexts vom Schulconnex-Server
+    aus dem `access_token` übernommen und per `personenkontext.organisation.id` referenziert.
+    Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut `personenkontext.organisation`
+    mit dem Datentyp Organisation alle nicht optionalen Attribute – nur die ID `personenkontext.organisation.id`.
   parameters:
     - in: path
       name: id
@@ -149,13 +158,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: './components-PersonenKontext.yaml'
+          $ref: './components-qs-PersonenKontext-POST-request.yaml'
   responses:
     '201':
+      description: OK
       content:
         application/json:
           schema:
-            $ref: './components-PersonenKontext.yaml'
+            $ref: './components-qs-PersonenKontext.yaml'
     '304':
       description: Not Modified
     '400':

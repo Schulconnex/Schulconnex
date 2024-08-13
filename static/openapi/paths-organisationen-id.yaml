@@ -18,16 +18,21 @@ get:
   parameters:
     - in: path
       name: id
+      required: true
       schema:
         type: string
         format: uuid
       description: Der Pfad-Parameter bezieht sich auf die ID der Organisation.
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
-            $ref: './components-Organisation.yaml'
+            allOf:
+              - $ref: './components-Organisation-basis.yaml'
+              - $ref: './components-Organisation.yaml'
+              - $ref: './components-qs-Organisation.yaml'
     '304':
       description: Not Modified
     '400':

@@ -27,6 +27,7 @@ post:
           $ref: './components-Gruppe.yaml'
   responses:
     '201':
+      description: OK
       content:
         application/json:
           schema:
@@ -161,6 +162,7 @@ get:
         type: string
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:

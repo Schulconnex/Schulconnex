@@ -2,58 +2,44 @@ type: object
 required:
   - id
   - mandant
-  - organisation
   - rolle
   - revision
 properties:
   id:
     description: ID des Personenkontexts.
     type: string
-    format: uuid
+    readOnly: true
     example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
+  mandant:
+    description: ID des Mandanten, dem der Personenkontext zugeordnet ist.
+    type: string
+    readOnly: true
+    format: uuid
+    example: 58f45270-8e54-40c6-a212-980307fc19be
+  organisation:
+    readOnly: true
+    $ref: './components-Organisation-basis.yaml'
   referrer:
     description: ID des Personenkontexts im Quellsystem.
     type: string
     example: PeKt_54321
-  mandant:
-    description: ID des Mandanten, dem der Personenkontext zugeordnet ist.
-    type: string
-    format: uuid
-    example: 58f45270-8e54-40c6-a212-980307fc19be
-  organisation:
-    $ref: './components-Organisation.yaml'
-  rolle:
-    $ref: './components-code-Rolle.yaml'
   erreichbarkeiten:
-    description:
+    description: ''
     type: array
     items:
       $ref: './components-Erreichbarkeit.yaml'
   personenstatus:
     $ref: './components-code-Personenstatus.yaml'
-  gruppen:
-    description:
-    type: array
-    items:
-      $ref: './components-Gruppendatensatz.yaml'
-  beziehungen:
-    description:
-    type: object
-    properties:
-      hat_als_beziehungen:
-        type: array
-        items:
-          $ref: './components-Beziehung.yaml'
-      ist_von_beziehungen:
-        type: array
-        items:
-          $ref: './components-Beziehung.yaml'
   jahrgangsstufe:
     $ref: './components-code-Jahrgangsstufe.yaml'
+  rolle:
+    readOnly: true
+    $ref: './components-code-Rolle.yaml'
   sichtfreigabe:
+    readOnly: true
     $ref: './components-code-Boolean.yaml'
   loeschung:
-    description:
+    description: ''
     type: object
     properties:
       zeitpunkt:
@@ -63,4 +49,5 @@ properties:
   revision:
     description: Revision des Personenkontext.
     type: string
+    readOnly: true
     example: "2"

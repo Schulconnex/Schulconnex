@@ -42,6 +42,7 @@ post:
           $ref: './components-Gruppenzugehörigkeit.yaml'
   responses:
     '201':
+      description: OK
       content:
         application/json:
           schema:
@@ -117,6 +118,13 @@ get:
     `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern .
     `rollen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `gruppenzugehoerigkeit.rollen` zu filtern. Mehrere Rollen können durch Kommas separiert werden.
   parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID der Gruppe.
     - in: query
       name: referrer
       schema:
@@ -127,6 +135,7 @@ get:
         type: string
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:

@@ -37,12 +37,6 @@ get:
     `mandant` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `mandant` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters unabhängig von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `rollen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `gruppenzugehoerigkeit.rollen` zu filtern.
   parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-        format: uuid
-      description: Der Pfad-Parameter bezieht sich auf die ID der Organisation.
     - in: query
       name: referrer
       schema:
@@ -57,6 +51,7 @@ get:
         type: string
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
