@@ -136,6 +136,20 @@ Attribute | Description
 gruppe | Group (See [Gruppe](../datenmodell/gruppe.md)).
 gruppenzugehoerigkeiten | Array of group memberships (See [Gruppenzugehörigkeit](../datenmodell/gruppenzugehörigkeit.md)).
 
+## Sichtfreigabe
+
+This data model allows organisations to make information about a person context or group
+available to another organisation. Information provided as read-only. (The word
+„Sichtfreigabe“ means „permission for viewing.“)
+
+Attribute | Description
+--- | ---
+id | ID of the viewing permission.
+orgid | ID of the organisation that is allowed to view this.
+von	 | Date when access starts.
+bis | Date when access ends.
+revision | Revision number of the information. This is used to check on updates and deletes, whether there have been any changes to the data since it was retrieved by the client system.
+
 ## Lernperiode
 
 A teaching period („Lernperiode”) is a time period in which organisations can offer groups.

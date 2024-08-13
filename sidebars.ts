@@ -35,6 +35,7 @@ const sidebars: SidebarsConfig = {
         'datenmodell/personendatensatz',
         'datenmodell/gruppe',
         'datenmodell/gruppenzugehörigkeit',
+        'datenmodell/sichtfreigabe',
         'datenmodell/gruppendatensatz',
         'datenmodell/lernperiode',
         'datenmodell/beziehung',

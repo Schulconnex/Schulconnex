@@ -16,11 +16,13 @@ classDiagram
   Beziehung --> Personenkontext : 1..n
   Person --> Organisation : 0..1
   Personenkontext --> Organisation : 1
+  Personenkontext --> Sichtfreigabe : 0..1
   Organisation --> Anschrift : 0..1
   Gruppe --> Organisation : 1
   Gruppendatensatz --> Gruppe : 1
   Gruppendatensatz --> Gruppenzugehörigkeit : 0..n
   Gruppe --> Lernperiode : 0 oder 2
+  Gruppe --> Sichtfreigabe : 0..1
   class Personendatensatz {
     person
     personenkontexte
@@ -133,6 +135,13 @@ classDiagram
     typ
     beginn
     ende
+  }
+  class Sichtfreigabe {
+    id
+    orgid
+    von
+    bis
+    revision
   }
 ```
 
