@@ -11,7 +11,7 @@ delete:
 
     Eine solche Löschung ist eher ein Ausnahmefall. 
     
-    Im Normalfall wird eine Sichtfreigabe über das in ihr enthaltenen Enddatum terminiert.
+    Im Normalfall wird eine Sichtfreigabe über das in ihr enthaltene Enddatum terminiert.
     
     Ein DELETE kann nur mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload) 
     beinhalten die Revisionsnummer.
