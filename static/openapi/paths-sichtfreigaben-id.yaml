@@ -5,7 +5,7 @@ delete:
     - oAuthForServices: []
   summary: Freigaben für Personenkontexte löschen
   description: |
-    Die Schnittstelle /sichtfreigaben/{sichtfreigabe.id} erlaubt es Sichtfreigaben von 
+    Die Schnittstelle /sichtfreigaben/{sichtfreigabe.id} erlaubt es, Sichtfreigaben von 
     Personenkontexten für andere Organisationen wieder zu löschen. 
     Der Pfad-Parameter {sichtfreigabe.id} bezieht sich auf die ID der Freigabe.
 
