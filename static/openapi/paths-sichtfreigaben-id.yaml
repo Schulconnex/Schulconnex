@@ -18,7 +18,7 @@ delete:
 
     Siehe auch das Datenmodell zu  [`Sichtfeigabe`](/docs/datenmodell/sichtfreigabe).
 
-    Es ist erforderlich, dass für eine Löschanfrage einer Freigabe das Attribut “revision” der 
+    Es ist erforderlich, dass für eine Löschanfrage einer Freigabe das Attribut „revision“ der 
     zugrunde liegenden Freigabe mitgeschickt wird. Der Anmeldeservice überprüft anhand des 
     mitgeschickten Wertes des Attributs “revision”, ob der Datensatz der Freigabe in der 
     Zwischenzeit keine Änderung erfahren hat.
