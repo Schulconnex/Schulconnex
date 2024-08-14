@@ -138,7 +138,7 @@ gruppenzugehoerigkeiten | Array of group memberships (See [Gruppenzugehörigkeit
 
 ## Sichtfreigabe
 
-This data model allows organisations to make information about a person context or group
+This data model allows organisations to make information about a person context
 available to another organisation. Information provided as read-only. (The word
 „Sichtfreigabe“ means „permission for viewing.“)
 
