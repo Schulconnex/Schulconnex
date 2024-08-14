@@ -22,7 +22,6 @@ classDiagram
   Gruppendatensatz --> Gruppe : 1
   Gruppendatensatz --> Gruppenzugehörigkeit : 0..n
   Gruppe --> Lernperiode : 0 oder 2
-  Gruppe --> Sichtfreigabe : 0..1
   class Personendatensatz {
     person
     personenkontexte
