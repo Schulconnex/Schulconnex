@@ -117,7 +117,6 @@ classDiagram
     laufzeit.vonlernperiode
     laufzeit.bis
     laufzeit.bislernperiode
-    sichtfreigabe
     revision
   }
   class Gruppenzugehörigkeit {
