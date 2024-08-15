@@ -4,11 +4,7 @@ required:
 properties:
   gruppe:
     $ref: './components-Gruppe.yaml'
-  gruppenzugehoerigkeit:
-    type: array
-    items:
-      $ref: './components-Gruppenzugehörigkeit.yaml'
-  sonstige_gruppenzugehoerige:
+  gruppenzugehoerigkeiten:
     type: array
     items:
       $ref: './components-Gruppenzugehörigkeit.yaml'
