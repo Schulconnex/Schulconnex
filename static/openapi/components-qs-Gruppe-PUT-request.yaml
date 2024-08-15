@@ -1,0 +1,79 @@
+type: object
+required:
+  - bezeichnung
+  - typ
+  - laufzeit
+properties:
+  id:
+    description: ID der Gruppe.
+    type: string
+    format: uuid
+    example: b3201d00-f21f-4986-a39d-02a09c8da26c
+  mandant:
+    description: ID des Mandanten.
+    type: string
+  orgid:
+    description: ID der Organisation.
+    type: string
+    format: uuid
+    example: 9b3f36ad-9d15-49f9-9660-6cf9746ba446
+  referrer:
+    description: ID der Gruppe im Quellsystem.
+    type: string
+  bezeichnung:
+    description: Bezeichnung der Gruppe.
+    type: string
+    example: Englisch 6b
+  thema:
+    description: Thema der Gruppe in Kurzform.
+    type: string
+  beschreibung:
+    description: Zusätzliche optionale Beschreibung der Gruppe.
+    type: string
+    maxLength: 1024
+  typ:
+    $ref: './components-code-Gruppentyp.yaml'
+  bereich:
+    $ref: './components-code-Gruppenbereich.yaml'
+  optionen:
+    type: array
+    items:
+      $ref: './components-code-Gruppenoption.yaml'
+  differenzierung:
+    $ref: './components-code-Gruppendifferenzierung.yaml'
+  bildungsziele:
+    type: array
+    items:
+      $ref: './components-code-Bildungsziel.yaml'
+  jahrgangsstufen:
+    type: array
+    items:
+      $ref: './components-code-Jahrgangsstufe.yaml'
+  faecher:
+    type: array
+    items:
+      type: object
+      properties:
+        kennung:
+          $ref: './components-code-Fächerkanon.yaml'
+  referenzgruppen:
+    type: object
+    required:
+      - grupid
+    properties:
+      grupid:
+        description: ''
+        type: string
+      rollen:
+        type: array
+        items:
+          $ref: './components-code-Gruppenrolle.yaml'
+  laufzeit:
+    oneOf:
+      - $ref: './components-Laufzeit-Datum.yaml'
+      - $ref: './components-Laufzeit-Periode.yaml'
+  sichtfreigabe:
+    $ref: './components-code-Boolean.yaml'
+  revision:
+    description: Revision der Gruppe.
+    type: string

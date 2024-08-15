@@ -3,7 +3,7 @@ required:
   - gruppe
 properties:
   gruppe:
-    $ref: './components-Gruppe.yaml'
+    $ref: './components-qs-Gruppe.yaml'
   gruppenzugehoerigkeiten:
     type: array
     items:
