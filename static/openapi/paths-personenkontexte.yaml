@@ -68,8 +68,6 @@ get:
         application/json:
           schema:
             $ref: './components-Personen.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request

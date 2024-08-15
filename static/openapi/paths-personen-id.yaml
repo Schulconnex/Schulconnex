@@ -30,8 +30,6 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Person.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -116,8 +114,6 @@ put:
         application/json:
           schema:
             $ref: './components-Person.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -195,8 +191,6 @@ delete:
         No Content
 
         Bei einer erfolgreichen Ausführung der Löschanfrage wird es keine Antwort-Nutzdaten (Response Payload) geben.
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request

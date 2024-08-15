@@ -63,8 +63,6 @@ post:
         application/json:
           schema:
             $ref: './components-Beziehung.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -129,7 +127,7 @@ get:
     Siehe auch Datenmodell [Beziehung](/docs/datenmodell/beziehung).
 
     Die Schnittstelle `/personenkontexte/{personenkontext.id}/beziehungen` ermöglicht
-    das Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET. 
+    das Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.
     Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
 
     Folgende Tabelle listet die zur Verfügung stehenden Filter auf:
@@ -167,8 +165,6 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Beziehungen.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request

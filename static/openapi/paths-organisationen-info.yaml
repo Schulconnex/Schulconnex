@@ -42,8 +42,6 @@ get:
         application/json:
           schema:
             $ref: './components-Organisationen-Info.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request

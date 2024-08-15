@@ -70,8 +70,6 @@ get:
             type: array
             items:
               $ref: './components-qs-PersonenKontext.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -166,8 +164,6 @@ post:
         application/json:
           schema:
             $ref: './components-qs-PersonenKontext.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
