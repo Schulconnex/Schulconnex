@@ -1,7 +1,7 @@
 type: object
 properties:
   person:
-    $ref: './components-Person.yaml'
+    $ref: './components-qs-Person.yaml'
   personenkontexte:
     type: array
     items:

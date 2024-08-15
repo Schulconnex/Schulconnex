@@ -103,14 +103,16 @@ put:
     content:
       application/json:
         schema:
-          $ref: './components-Person.yaml'
+          $ref: './components-qs-Person-PUT-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-Person.yaml'
+            $ref: './components-qs-Person.yaml'
+    '304':
+      description: Not Modified
     '400':
       description: |
         Bad Request
