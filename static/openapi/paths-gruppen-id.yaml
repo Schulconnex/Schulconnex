@@ -28,7 +28,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-Gruppendatensatz.yaml'
+            $ref: './components-qs-Gruppendatensatz.yaml'
     '400':
       description: |
         Bad Request
