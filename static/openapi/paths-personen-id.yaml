@@ -55,11 +55,6 @@ get:
         Method not allowed
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
 put:
   tags:
     - Personen
