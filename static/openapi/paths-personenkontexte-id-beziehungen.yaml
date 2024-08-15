@@ -55,14 +55,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: './components-Beziehung.yaml'
+          $ref: './components-qs-Beziehung-POST-request.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-Beziehung.yaml'
+            $ref: './components-qs-Beziehung-basis.yaml'
     '400':
       description: |
         Bad Request
