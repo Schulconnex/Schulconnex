@@ -3,7 +3,7 @@ get:
     - Gruppenzugehörigkeiten
   security:
     - oAuthForServices: []
-  summary: Auflistung von Gruppenzugehörigkeiten.
+  summary: Auflistung aller Gruppenzugehörigkeiten.
   description: |
     Dieser Schnittstellenendpunkt gibt alle Gruppenzugehörigkeiten zurück, auf die
     der Quellsystemanbieter zugreifen kann.

@@ -83,7 +83,7 @@ get:
     - Gruppenzugehörigkeiten
   security:
     - oAuthForServices: []
-  summary: Auflistung von Gruppenzugehörigkeiten.
+  summary: Auflistung von Gruppenzugehörigkeiten zur Gruppe.
   description: |
     Dieser Schnittstellenendpunkt gibt die Gruppenzugehörigkeiten zur angegebenen `gruppe.id` zurück.
 
