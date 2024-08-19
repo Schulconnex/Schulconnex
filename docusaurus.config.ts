@@ -84,7 +84,7 @@ const config: Config = {
         style: 'dark',
         links: [
           {
-            title: 'Dokumentation',
+            title: 'Schulconnex',
             items: [
               {
                 label: 'Einleitung',
@@ -97,7 +97,7 @@ const config: Config = {
             ],
           },
           {
-            title: 'Extra',
+            title: 'Community',
             items: [
               {
                 label: 'GitHub',
@@ -105,6 +105,23 @@ const config: Config = {
               },
             ],
           },
+          {
+            title: 'Rechtliches',
+            items: [
+              {
+                label: 'Impressum',
+                to: '/docs/footer/impressum',
+              },
+              {
+                label: 'Datenschutz',
+                to: '/docs/footer/datenschutz',
+              },
+              {
+                label: 'Barrierefreiheit',
+                to: '/docs/footer/barrierefreiheit',
+              }
+            ],
+          }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Niedersächsisches Kultusministerium`,
       },

@@ -1,0 +1,1 @@
+# Erklärung zur Barrierefreiheit
