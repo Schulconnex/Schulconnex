@@ -70,8 +70,6 @@ get:
             type: array
             items:
               $ref: './components-qs-PersonenKontext.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -95,11 +93,6 @@ get:
     '405':
       description: |
         Method not allowed
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
 post:
@@ -166,8 +159,6 @@ post:
         application/json:
           schema:
             $ref: './components-qs-PersonenKontext.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request

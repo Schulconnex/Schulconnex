@@ -28,7 +28,7 @@ get:
     Siehe auch Datenmodell [`Organisationsbeziehung`](/docs/datenmodell/organisationsbeziehung).
 
     Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` ermöglicht das
-    Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET. 
+    Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.
     Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
 
     Folgende Tabelle listet die zur Verfügung stehenden Filter auf:
@@ -66,8 +66,6 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Organisationsbeziehungen.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -91,10 +89,5 @@ get:
     '405':
       description: |
         Method not allowed
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

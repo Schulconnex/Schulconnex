@@ -32,8 +32,6 @@ post:
         application/json:
           schema:
             $ref: './components-Gruppe.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -94,7 +92,8 @@ get:
 
     Werden mehrere Filter angegeben, so sind sie als mit „und“ verknüpft anzusehen.
 
-    Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert. 
+    Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig. Entsprechen keine Werte
+    den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
 
     Bei Attributen, welche eine Liste von Codes enthalten können (deren „Anzahl“ im
     Datenmodell die Form „0..n“ oder „1..n“ hat), kann als Filterwert eine durch Kommas
@@ -167,8 +166,6 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Gruppendatensätze.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -192,10 +189,5 @@ get:
     '405':
       description: |
         Method not allowed
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

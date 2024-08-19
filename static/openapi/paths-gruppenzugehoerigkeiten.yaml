@@ -3,7 +3,7 @@ get:
     - Gruppenzugehörigkeiten
   security:
     - oAuthForServices: []
-  summary: Auflistung von Gruppenzugehörigkeiten.
+  summary: Auflistung aller Gruppenzugehörigkeiten.
   description: |
     Dieser Schnittstellenendpunkt gibt alle Gruppenzugehörigkeiten zurück, auf die
     der Quellsystemanbieter zugreifen kann.
@@ -28,7 +28,7 @@ get:
     beinhaltet ist (contains). Bei Filtern vom Typ „String (Code)” überprüft der Schulconnex-Server,
     ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung gleich
     dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so sind sie als
-    mit „und“ verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als 
+    mit „und“ verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als
     Resultat eine leere Liste geliefert.
 
     Filter | Typ | Beschreibung
@@ -56,8 +56,6 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Gruppendatensätze.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -81,10 +79,5 @@ get:
     '405':
       description: |
         Method not allowed
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

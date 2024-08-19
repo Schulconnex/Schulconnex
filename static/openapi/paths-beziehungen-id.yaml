@@ -34,8 +34,6 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Beziehung.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -59,11 +57,6 @@ get:
     '405':
       description: |
         Method not allowed
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
 delete:
@@ -107,8 +100,6 @@ delete:
         No Content
 
         Bei einer erfolgreichen Ausführung der Löschanfrage wird es keine Antwort-Nutzdaten (Response Payload) geben.
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request

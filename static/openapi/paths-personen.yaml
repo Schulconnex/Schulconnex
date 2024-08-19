@@ -12,7 +12,8 @@ get:
     Die Schnittstelle `/personen` ermöglicht das Verwenden von Filterparametern zur
     Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind
     sie als mit „und“ verknüpft anzusehen. Die mehrfache Nutzung des gleichen Filters
-    in einer Anfrage ist nicht zulässig. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert. 
+    in einer Anfrage ist nicht zulässig. Entsprechen keine Werte den angegebenen Filtern,
+    so wird als Resultat eine leere Liste geliefert.
 
     Folgende Tabelle listet die zur Verfügung stehenden Filter:
 
@@ -61,8 +62,6 @@ get:
         application/json:
           schema:
             $ref: './components-Personen.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -86,11 +85,6 @@ get:
     '405':
       description: |
         Method not allowed
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
 post:
@@ -174,8 +168,6 @@ post:
         application/json:
           schema:
             $ref: './components-Person.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request

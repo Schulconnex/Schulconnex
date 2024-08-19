@@ -68,8 +68,6 @@ get:
         application/json:
           schema:
             $ref: './components-Personen.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -93,10 +91,5 @@ get:
     '405':
       description: |
         Method not allowed
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

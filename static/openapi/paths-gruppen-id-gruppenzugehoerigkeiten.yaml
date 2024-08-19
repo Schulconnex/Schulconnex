@@ -47,8 +47,6 @@ post:
         application/json:
           schema:
             $ref: './components-Gruppenzugehörigkeit.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -85,7 +83,7 @@ get:
     - Gruppenzugehörigkeiten
   security:
     - oAuthForServices: []
-  summary: Auflistung von Gruppenzugehörigkeiten.
+  summary: Auflistung von Gruppenzugehörigkeiten zur Gruppe.
   description: |
     Dieser Schnittstellenendpunkt gibt die Gruppenzugehörigkeiten zur angegebenen `gruppe.id` zurück.
 
@@ -109,7 +107,8 @@ get:
     dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so sind sie als
     mit „und“ verknüpft anzusehen.
 
-    Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert. 
+    Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig. Entsprechen keine
+    Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
 
     Folgende Tabelle listet die zur Verfügung stehenden Filter:
 
@@ -140,8 +139,6 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Gruppenzugehörigkeiten.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -165,10 +162,5 @@ get:
     '405':
       description: |
         Method not allowed
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
