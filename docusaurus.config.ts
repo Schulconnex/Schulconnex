@@ -63,6 +63,7 @@ const config: Config = {
         logo: {
           alt: 'Schulconnex',
           src: 'img/logo.svg',
+          srcDark: 'img/logo_dark.svg',
         },
         items: [
           {
