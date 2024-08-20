@@ -1,0 +1,17 @@
+.footerLogoLink {
+  opacity: 0.5;
+  transition: opacity var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+}
+
+.footerLogoLink:hover {
+  opacity: 1;
+}
+
+.kontaktLogo {
+  /* Kopiert von footer__logo, orig.
+  margin-top: 1rem;
+  max-width: var(--ifm-footer-logo-max-width); ist min(30rem, 90vw)*/
+  margin-top: 1rem;
+  max-width: min(26rem, 80vw);
+}
