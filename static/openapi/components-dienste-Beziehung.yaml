@@ -1,18 +1,11 @@
 type: object
 required:
-  - id
   - ktid
   - beziehung
 properties:
-  id:
-    description: ID der Beziehung.
-    type: string
-    format: uuid
-    example: 4de182f3-4a8b-468b-9050-76dd1cae95f3
   ktid:
     description: ID des Personenkontextes, zu dem eine Beziehung besteht.
     type: string
-    format: uuid
     example: 553f984f-5fea-48c8-ae26-089420465803
   beziehung:
     $ref: './components-code-Beziehungen.yaml'
