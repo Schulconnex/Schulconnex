@@ -103,14 +103,18 @@ put:
     content:
       application/json:
         schema:
-          $ref: './components-qs-Person-PUT-request.yaml'
+          allOf:
+            - $ref: './components-qs-Person-PUT-request.yaml'
+            - $ref: './components-qs-Person-basis.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-Person.yaml'
+            allOf:
+              - $ref: './components-qs-Person.yaml'
+              - $ref: './components-qs-Person-basis.yaml'
     '304':
       description: Not Modified
     '400':
