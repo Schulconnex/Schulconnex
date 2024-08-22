@@ -58,15 +58,6 @@ function KontaktColumn() {
         sources={sources}
       />
     </Link>
-
- {/*      <ul className="footer__items clean-list">
-        <li className="footer__item">
-          Adresse1
-        </li>
-        <li className="footer__item">
-          Adresse2
-        </li>
-      </ul> */}
     </div>
   );
 }
