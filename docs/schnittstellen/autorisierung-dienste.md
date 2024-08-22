@@ -69,7 +69,7 @@ In einigen Fällen ist es für Dienstanbieter wünschenswert, neben der PID bere
 Autorisierung weitere Informationen über die angemeldete Person zu erhalten. Dieses kann, nach
 Absprache mit dem Betreiber des Schulconnex-Servers, durch die Nutzung von OIDC Claims geschehen.
 Die Nutzung von OIDC Claims zur Übermittlung von Schulconnex-Informationen ist in Kapitel
-„[Person-Info über OIDC Claims](./../api/person-info.md)“ beschrieben. Im Regelfall sollten
+„[Person-Info über OIDC Claims](./oidc-claims.md)“ beschrieben. Im Regelfall sollten
 aber die REST-APIs zur Abfrage von Informationen genutzt werden.
 
 Für darauffolgende Anfragen der Client-Anwendungen gegen einen API-Endpunkt des Schulconnex-Services
