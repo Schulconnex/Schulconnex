@@ -2,6 +2,7 @@ type: object
 required:
   - name
   - auskunftssperre
+  - revision
 properties:
   id:
     description: ID der Person. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
