@@ -6,6 +6,8 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
+import HomepageText from './_homepage-text.md';
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -28,16 +30,27 @@ export default function Home() {
       description="">
       <HomepageHeader />
       <main>
-      <div className={styles.buttons}>
-        <br />
-        <br />
-        <br />
-        <br />
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/stand-der-bearbeitung">
-            zur Spezifikation
-          </Link>
+        <div class="container">
+          <div className='row padding-top--lg padding-top--lg padding-bottom--md'>
+            <div className='col'>
+              <article>
+                <div className="theme-doc-markdown markdown">
+                  <HomepageText />
+                </div>
+              </article>
+            </div>
+          </div>
+          <div className='row padding-top--lg padding-bottom--xl'>
+            <div className='col'>
+              <div className={styles.buttons}>
+                <Link
+                  className="button button--secondary button--lg"
+                  to="/docs/stand-der-bearbeitung">
+                  zur Spezifikation
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </Layout>
