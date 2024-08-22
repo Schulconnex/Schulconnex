@@ -4,7 +4,7 @@ required:
   - rollen
 properties:
   ktid:
-    description: ID des Personenkontexts, welchem die Gruppe zugeordnet ist.
+    description: ID des Personenkontexts, welcher der Gruppe zugeordnet ist.
     type: string
     format: uuid
     example: 23643c9e-956a-4baa-af4e-813e0a7efa4b
