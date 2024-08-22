@@ -1,21 +1,18 @@
 # Impressum
 
-Angaben gem. §5 TMG (Telemediengesetz)
+Angaben gem. § 5 TMG (Telemediengesetz)
 
-Landesinitiative n-21: Schulen in Niedersachsen online e.V.
-Schiffgraben 27, 30159 Hannover
-Telefon: 0511/3536621-0
-Telefax: 0511/3536621-99
-E-Mail: <info@n-21.de>
+Landesinitiative n-21: Schulen in Niedersachsen online e.V. \
+Schiffgraben 27, 30159 Hannover \
+Telefon: 0511/3536621-0 \
+Telefax: 0511/3536621-99 \
+E-Mail: info@n-21.de
 
-Vertreten durch:
-Michael Sternberg, Geschäftsführer
+Vertreten durch: Michael Sternberg, Geschäftsführer
 
-Registereintrag:
-Eintragung im Vereinsregister. Registergericht: Amtsgericht Hannover
-Registernummer: VR 7905
-
-Umsatzsteuer-ID:
+Registereintrag: Eintragung im Vereinsregister \
+Registergericht: Amtsgericht Hannover \
+Registernummer: VR 7905 \
 Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE226221908
 
 ## Haftungsausschluss
