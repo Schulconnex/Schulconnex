@@ -3,7 +3,9 @@ required:
   - gruppe
 properties:
   gruppe:
-    $ref: './components-qs-Gruppe.yaml'
+    allOf:
+      - $ref: './components-qs-Gruppe.yaml'
+      - $ref: './components-qs-Gruppe-basis.yaml'
   gruppenzugehoerigkeiten:
     type: array
     items:

@@ -24,14 +24,16 @@ post:
     content:
       application/json:
         schema:
-          $ref: './components-qs-Gruppe-POST-request.yaml'
+          $ref: './components-qs-Gruppe-basis.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-Gruppe.yaml'
+            allOf:
+              - $ref: './components-qs-Gruppe.yaml'
+              - $ref: './components-qs-Gruppe-basis.yaml'
     '400':
       description: |
         Bad Request

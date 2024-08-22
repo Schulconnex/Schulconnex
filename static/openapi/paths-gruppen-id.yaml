@@ -113,14 +113,18 @@ put:
     content:
       application/json:
         schema:
-          $ref: './components-qs-Gruppe-PUT-request.yaml'
+          allOf:
+            - $ref: './components-qs-Gruppe-PUT-request.yaml'
+            - $ref: './components-qs-Gruppe-basis.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-Gruppe.yaml'
+            allOf:
+              - $ref: './components-qs-Gruppe.yaml'
+              - $ref: './components-qs-Gruppe-basis.yaml'
     '400':
       description: |
         Bad Request

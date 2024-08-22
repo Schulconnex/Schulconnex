@@ -44,17 +44,20 @@ properties:
         kennung:
           $ref: './components-code-Fächerkanon.yaml'
   referenzgruppen:
-    type: object
-    required:
-      - grupid
-    properties:
-      grupid:
-        description: ''
-        type: string
-      rollen:
-        type: array
-        items:
-          $ref: './components-code-Gruppenrolle.yaml'
+    type: array
+    items:
+      type: object
+      required:
+        - grupid
+      properties:
+        grupid:
+          description: ''
+          type: string
+          example: e70663cb-65c4-4ad5-a9f1-7edbc3c36c4b
+        rollen:
+          type: array
+          items:
+            $ref: './components-code-Gruppenrolle.yaml'
   laufzeit:
     oneOf:
       - $ref: './components-Laufzeit-Datum.yaml'
