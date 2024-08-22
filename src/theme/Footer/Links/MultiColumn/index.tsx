@@ -47,7 +47,6 @@ function KontaktColumn() {
   };
   return (
     <div className="col footer__col">
-      {/* <div className="footer__title">Landesinitiative n-21</div> */}
       <Link
         href="https:\\n-21.de"
         className={styles.footerLogoLink}
