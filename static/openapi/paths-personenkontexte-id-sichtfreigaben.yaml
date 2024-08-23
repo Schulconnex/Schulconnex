@@ -43,6 +43,7 @@ post:
           $ref: './components-Sichtfreigabe.yaml'
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:
@@ -101,6 +102,7 @@ get:
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontextes.
   responses:
     '200':
+      description: OK
       content:
         application/json:
           schema:

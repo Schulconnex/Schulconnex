@@ -1,6 +1,8 @@
+description: Sichtfreigabe
 type: object
 required:
   - id
+  - orgid
   - von
   - bis
   - revision
@@ -21,7 +23,7 @@ properties:
     format: date
     example: "2027-01-01"
   bis:
-    description: Beginn der Sichtfreigabeperiode. 
+    description: Ende der Sichtfreigabeperiode. 
     type: string
     format: date
     example: "2029-12-31"
