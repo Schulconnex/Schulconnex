@@ -16,6 +16,7 @@ classDiagram
   Beziehung --> Personenkontext : 1..n
   Person --> Organisation : 0..1
   Personenkontext --> Organisation : 1
+  Personenkontext --> Sichtfreigabe : 0..1
   Organisation --> Anschrift : 0..1
   Gruppe --> Organisation : 1
   Gruppendatensatz --> Gruppe : 1
@@ -115,7 +116,6 @@ classDiagram
     laufzeit.vonlernperiode
     laufzeit.bis
     laufzeit.bislernperiode
-    sichtfreigabe
     revision
   }
   class Gruppenzugehörigkeit {
@@ -133,6 +133,13 @@ classDiagram
     typ
     beginn
     ende
+  }
+  class Sichtfreigabe {
+    id
+    orgid
+    von
+    bis
+    revision
   }
 ```
 
