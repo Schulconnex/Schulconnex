@@ -6,28 +6,27 @@ post:
     - oAuthForServices: []
   summary: Erstellen von Sichtfreigabem.
   description: |
-    Mittels dieser Schnittstelle wird eine neue Sichtfreigabe für einen Personenkontext erstellt
+    Mittels dieser Schnittstelle wird eine neue Sichtfreigabe für einen Personenkontext erstellt.
 
     Der Anmeldeserver ermöglicht es, dass Personenkontexte von einer Organisation für eine andere Organisation zur
-    Einsicht freigegeben werden. Dabei kann die andere Organisation auf diese freigegebenen Daten 
-    nur lesend zugreifen. Das Erstellen oder Ändern der Daten durch die andere Organisation ist nicht zulässig oder möglich.  
-    
-    Sichtfreigaben können nur für Personenkontexte erteilt werden. Dabei ist über die API immer nur die Sichtfreigabe 
-    einzelner Personenkontexte möglich. Es besteht nicht die Möglichkeit, über die API alle Personenkontexte einer 
-    Organisation pauschal einer anderen Organisation bereit zu stellen.  
-  
+    Einsicht freigegeben werden. Dabei kann die andere Organisation auf diese freigegebenen Daten
+    nur lesend zugreifen. Das Erstellen oder Ändern der Daten durch die andere Organisation ist nicht zulässig oder möglich.
+
+    Sichtfreigaben können nur für Personenkontexte erteilt werden. Dabei ist über die API immer nur die Sichtfreigabe
+    einzelner Personenkontexte möglich. Es besteht nicht die Möglichkeit, über die API alle Personenkontexte einer
+    Organisation pauschal einer anderen Organisation bereit zu stellen.
+
     Wird ein Personenkontext für eine andere Organisation freigegeben, so hat die andere Organisation auch
-    automatisch Lese-Zugriff auf die im Datenmodell „Person“ beschriebenen Attribute der zu dem Personenkontext 
-    gehörenden Person, jedoch nicht auf andere, nicht freigegebene Personenkontexte dieser Person oder auf 
-    Gruppenzugehörigkeiten. 
-    
-    Ein Personenkontext kann für mehr als eine andere Organisation freigegeben werden. 
-    Dazu sind mehrere Sichtfreigaben zu erstellen. 
+    automatisch Lese-Zugriff auf die im Datenmodell [Person](/docs/datenmodell/person) beschriebenen Attribute der zu
+    dem Personenkontext gehörenden Person, jedoch nicht auf andere, nicht freigegebene Personenkontexte dieser Person oder
+    auf Gruppenzugehörigkeiten.
+
+    Ein Personenkontext kann für mehr als eine andere Organisation freigegeben werden.
+    Dazu sind mehrere Sichtfreigaben zu erstellen.
 
     Bei einer erfolgreichen Anforderung zum Erstellen einer Sichtfreigaben zu einem Personenkontext
     wird diese Anforderung mit einer Repräsentation der Sichtfreigaben in den Antwort-Nutzdaten
     und dem HTTP-Status-Code 201 quittiert.
-
   parameters:
     - in: path
       name: id
@@ -48,8 +47,6 @@ post:
         application/json:
           schema:
             $ref: './components-Sichtfreigabe.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -88,12 +85,12 @@ get:
     - oAuthForServices: []
   summary: Auflistung von Sichtfreigaben.
   description: |
-   Dieser Schnittstellenendpunkt gibt eine Liste der existierenden Sichtfreigaben eines 
-   Personenkontextes zurück. 
+   Dieser Schnittstellenendpunkt gibt eine Liste der existierenden Sichtfreigaben eines
+   Personenkontextes zurück.
 
-   Ein READ ist nur mit HTTP-GET auf die API /personenkontexte/{personenkontext.id}/sichtfreigaben zum Abfragen 
-   der Sichtfreigaben per personenkontext.id zugelassen. 
-   
+   Ein READ ist nur mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` zum Abfragen
+   der Sichtfreigaben per `personenkontext.id` zugelassen.
+
    Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array des Datentyps Beziehung.
   parameters:
     - in: path
@@ -108,8 +105,6 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Sichtfreigaben.yaml'
-    '304':
-      description: Not Modified
     '400':
       description: |
         Bad Request
@@ -133,10 +128,5 @@ get:
     '405':
       description: |
         Method not allowed
-
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
-    '409':
-      description: |
-        Conflict
 
         Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
