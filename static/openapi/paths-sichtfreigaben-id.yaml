@@ -5,22 +5,22 @@ delete:
     - oAuthForServices: []
   summary: Freigaben für Personenkontexte löschen
   description: |
-    Die Schnittstelle /sichtfreigaben/{sichtfreigabe.id} erlaubt es, Sichtfreigaben von 
-    Personenkontexten für andere Organisationen wieder zu löschen. 
-    Der Pfad-Parameter {sichtfreigabe.id} bezieht sich auf die ID der Freigabe.
+    Die Schnittstelle `/sichtfreigaben/{sichtfreigabe.id}` erlaubt es, Sichtfreigaben von
+    Personenkontexten für andere Organisationen wieder zu löschen.
+    Der Pfad-Parameter `sichtfreigabe.id` bezieht sich auf die ID der Freigabe.
 
-    Eine solche Löschung ist eher ein Ausnahmefall. 
-    
+    Eine solche Löschung ist eher ein Ausnahmefall.
+
     Im Normalfall wird eine Sichtfreigabe über das in ihr enthaltene Enddatum terminiert.
-    
-    Ein DELETE kann nur mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload) 
+
+    Ein DELETE kann nur mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload)
     beinhalten die Revisionsnummer.
 
-    Siehe auch das Datenmodell zu  [`Sichtfeigabe`](/docs/datenmodell/sichtfreigabe).
+    Siehe auch das Datenmodell zu [`Sichtfeigabe`](/docs/datenmodell/sichtfreigabe).
 
-    Es ist erforderlich, dass für eine Löschanfrage einer Freigabe das Attribut „revision“ der 
-    zugrunde liegenden Freigabe mitgeschickt wird. Der Anmeldeservice überprüft anhand des 
-    mitgeschickten Wertes des Attributs „revision“, ob der Datensatz der Freigabe in der 
+    Es ist erforderlich, dass für eine Löschanfrage einer Freigabe das Attribut `revision` der
+    zugrunde liegenden Freigabe mitgeschickt wird. Der Anmeldeservice überprüft anhand des
+    mitgeschickten Wertes des Attributs `revision`, ob der Datensatz der Freigabe in der
     Zwischenzeit keine Änderung erfahren hat.
 
   parameters:
