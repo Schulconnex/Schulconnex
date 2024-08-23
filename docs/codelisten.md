@@ -135,10 +135,11 @@ eA | erhöhtes Anforderungsniveau
 
 ## Gruppenoption
 
+ Hinweis: In der aktuellen Version sind noch keine Werte vorhanden.  
+ Hinweis: Diese Codeliste ist nicht länderübergreifend und potentiell von Bundesland zu Bundesland abweichend.
+
 Code | Bezeichnung
 --- | ---
-01 | bilingual
-02 | herkunftssprachlich
 
 ## Gruppentyp
 
