@@ -1,3 +1,5 @@
 type: array
 items:
-  $ref: './components-Sichtfreigabe.yaml'
+  allOf:
+    - $ref: './components-Sichtfreigabe.yaml'
+    - $ref: './components-Sichtfreigabe-basis.yaml'

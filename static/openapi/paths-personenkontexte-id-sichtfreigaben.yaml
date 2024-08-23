@@ -4,7 +4,7 @@ post:
     - Sichtfreigaben
   security:
     - oAuthForServices: []
-  summary: Erstellen von Sichtfreigabem.
+  summary: Erstellen von Sichtfreigaben.
   description: |
     Mittels dieser Schnittstelle wird eine neue Sichtfreigabe für einen Personenkontext erstellt.
 
@@ -40,14 +40,16 @@ post:
     content:
       application/json:
         schema:
-          $ref: './components-Sichtfreigabe.yaml'
+          $ref: './components-Sichtfreigabe-basis.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-Sichtfreigabe.yaml'
+            allOf:
+              - $ref: './components-Sichtfreigabe.yaml'
+              - $ref: './components-Sichtfreigabe-basis.yaml'
     '400':
       description: |
         Bad Request

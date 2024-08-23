@@ -3,8 +3,6 @@ type: object
 required:
   - id
   - orgid
-  - von
-  - bis
   - revision
 properties:
   id:
@@ -17,16 +15,6 @@ properties:
     type: string
     format: uuid
     example: c1966d20-50b6-4bb1-afc7-96663523891e
-  von:
-    description: Beginn der Sichtfreigabeperiode. 
-    type: string
-    format: date
-    example: "2027-01-01"
-  bis:
-    description: Ende der Sichtfreigabeperiode. 
-    type: string
-    format: date
-    example: "2029-12-31"
   revision:
     description: Revision der Beziehung.
     type: string
