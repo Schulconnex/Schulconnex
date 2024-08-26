@@ -17,6 +17,7 @@ tags:
   - name: Personen
   - name: Organisationen
   - name: Gruppen
+  - name: Sichtfreigaben
 paths:
   /personen:
     $ref: './paths-personen.yaml'
@@ -50,6 +51,8 @@ paths:
     $ref: './paths-gruppenzugehoerigkeiten.yaml'
   /gruppenzugehoerigkeiten/{id}:
     $ref: './paths-gruppenzugehoerigkeiten-id.yaml'
+  /sichtfreigaben/{id}:
+    $ref: './paths-sichtfreigaben-id.yaml'
 components:
   securitySchemes:
     oAuthForServices:
