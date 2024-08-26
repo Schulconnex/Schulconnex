@@ -160,14 +160,18 @@ post:
     content:
       application/json:
         schema:
-          $ref: './components-Person.yaml'
+          $ref: './components-qs-Person-basis.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-Person.yaml'
+            allOf:
+              - $ref: './components-qs-Person.yaml'
+              - $ref: './components-qs-Person-basis.yaml'
+    '304':
+      description: Not Modified
     '400':
       description: |
         Bad Request

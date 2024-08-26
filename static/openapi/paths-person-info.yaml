@@ -207,7 +207,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-PersonInfo.yaml'
+            $ref: './components-dienste-Personendatensatz.yaml'
     '304':
       description: Not Modified
     '400':

@@ -24,11 +24,11 @@ properties:
       hat_als_beziehungen:
         type: array
         items:
-          $ref: './components-Beziehung.yaml'
+          $ref: './components-dienste-Beziehung.yaml'
       ist_von_beziehungen:
         type: array
         items:
-          $ref: './components-Beziehung.yaml'
+          $ref: './components-dienste-Beziehung.yaml'
   erreichbarkeiten:
     description: ''
     type: array

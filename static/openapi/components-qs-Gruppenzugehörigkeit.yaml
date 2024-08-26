@@ -1,8 +1,23 @@
 type: object
 required:
+  - id
+  - mandant
   - ktid
   - rollen
+  - revision
 properties:
+  id:
+    description: ID der Gruppenzugehörigkeit.
+    type: string
+    format: uuid
+    example: c85af1ac-ddaa-4a77-ba74-1836682b9afa
+  mandant:
+    description: ID des Mandanten, dem die Gruppenzugehörigkeit zugeordnet ist.
+    type: string
+  referrer:
+    description: ID der Gruppenzugehörigkeit im Quellsystem.
+    type: string
+    example: c85af1ac-ddaa-4a77-ba74-1836682bacac
   ktid:
     description: ID des Personenkontexts, welcher der Gruppe zugeordnet ist.
     type: string
@@ -23,3 +38,6 @@ properties:
     type: string
     format: date
     example: "2023-07-31"
+  revision:
+    description: Revision der Gruppenzugehörigkeit.
+    type: string

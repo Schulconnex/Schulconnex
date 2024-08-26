@@ -34,7 +34,7 @@ properties:
         description: Bei mehreren Vornamen wird der täglich im Gebrauch genutzte Vorname geführt, maximal 32 Zeichen.
         type: string
         maxLength: 32
-      title:
+      titel:
         description: Titel der Person (bspw. ein akademischer Grad, Dienst- und Amtsbezeichnungen oder militärische Ränge), maximal 128 Zeichen.
         type: string
         maxLength: 128

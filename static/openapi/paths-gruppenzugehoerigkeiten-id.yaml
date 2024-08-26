@@ -31,7 +31,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-Gruppendatensatz.yaml'
+            $ref: './components-qs-Gruppendatensatz.yaml'
     '400':
       description: |
         Bad Request
@@ -113,14 +113,14 @@ put:
     content:
       application/json:
         schema:
-          $ref: './components-Gruppenzugehörigkeit.yaml'
+          $ref: './components-qs-Gruppenzugehörigkeit-PUT-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-Gruppenzugehörigkeit.yaml'
+            $ref: './components-qs-Gruppenzugehörigkeit.yaml'
     '400':
       description: |
         Bad Request

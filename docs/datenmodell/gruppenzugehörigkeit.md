@@ -11,7 +11,7 @@ Attribut | Typ | Anzahl | Bemerkung
 id | String (UTF-8) | 1 | ID der Gruppenzugehörigkeit.
 mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Gruppenzugehörigkeit zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
 referrer | String (UTF-8) | 0..1 | ID der Gruppenzugehörigkeit im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein.
-ktid | String (UTF-8) | 1 | ID des Personenkontexts, welchem die Gruppe zugeordnet ist.
+ktid | String (UTF-8) | 1 | ID des Personenkontexts, welcher der Gruppe zugeordnet ist.
 rollen | String (Code) | 1..n | Liste der Rollen der Person innerhalb der Gruppe. Rolle ist jeweils eine Referenz auf einen Code der Codeliste *Gruppenrolle*.
 von | Datum (siehe Abschnitt Datumsformat) | 0..1 | Beginn der Gruppenzugehörigkeit. Dieser Zeitpunkt kann auch in der Zukunft liegen.
 bis | Datum (siehe Abschnitt Datumsformat) | 0..1 | Ende der Gruppenzugehörigkeit. Laufzeiten schliessen den ersten und letzten Tag immer mit ein. Ist als `bis` der 31.Oktober 2025 angegeben, so endet die Laufzeit der Gruppenzugehörigkeit am 01.11.2025 um 00:00.
