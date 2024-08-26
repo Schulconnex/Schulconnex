@@ -31,6 +31,8 @@ paths:
     $ref: './paths-personenkontexte-id.yaml'
   /personenkontexte/{id}/beziehungen:
     $ref: './paths-personenkontexte-id-beziehungen.yaml'
+  /personenkontexte/{id}/sichtfreigaben:
+    $ref: './paths-personenkontexte-id-sichtfreigaben.yaml'
   /beziehungen/{id}:
     $ref: './paths-beziehungen-id.yaml'
   /organisationen:
