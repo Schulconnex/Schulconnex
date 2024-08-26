@@ -47,7 +47,7 @@
     - Betriebssystem und dessen Oberfläche
     - Sprache und Version der Browsersoftware
 
-2. Um einige Leistungen erbringen zu können bedienen wir uns externer Dienstleister. Diese wurden von uns sorgfältig ausgewählt und beauftragt, sind an unsere Weisungen gebunden und werden regelmäßig kontrolliert. ~Unsere Dienstleister oder Partner haben ihren Sitz in einem Staat innerhalb des Europäischen Wirtschaftsraumen (EWR) bzw. innerhalb Deutschlands.~
+2. Um einige Leistungen erbringen zu können, bedienen wir uns externer Dienstleister. Diese wurden von uns sorgfältig ausgewählt und beauftragt, sind an unsere Weisungen gebunden und werden regelmäßig kontrolliert. ~Unsere Dienstleister oder Partner haben ihren Sitz in einem Staat innerhalb des Europäischen Wirtschaftsraumen (EWR) bzw. innerhalb Deutschlands.~
 
 ## § 5 Widerspruch oder Widerruf gegen die Verarbeitung Ihrer Daten
 
