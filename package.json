@@ -19,10 +19,13 @@
   "dependencies": {
     "@docusaurus/core": "^3.4.0",
     "@docusaurus/preset-classic": "^3.4.0",
+    "@docusaurus/theme-common": "^3.4.0",
     "@docusaurus/theme-mermaid": "^3.4.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
+    "rapidoc": "^9.3.4",
+    "rapipdf": "^2.2.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
