@@ -43,6 +43,13 @@ const config: Config = {
       'classic',
       {
         docs: {
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Version 1.5-rc1',
+              path: '1.5',
+            },
+          },
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -71,6 +78,11 @@ const config: Config = {
             sidebarId: 'specSidebar',
             position: 'left',
             label: 'Spezifikation',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: true,
           },
           {
             href: 'https://github.com/Schulconnex/Schulconnex',
