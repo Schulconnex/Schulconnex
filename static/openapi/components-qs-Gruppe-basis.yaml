@@ -62,3 +62,5 @@ properties:
     oneOf:
       - $ref: './components-Laufzeit-Datum.yaml'
       - $ref: './components-Laufzeit-Periode.yaml'
+      - $ref: './components-Laufzeit-Datum-Periode.yaml'
+      - $ref: './components-Laufzeit-Periode-Datum.yaml'

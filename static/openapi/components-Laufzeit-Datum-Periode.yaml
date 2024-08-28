@@ -1,0 +1,9 @@
+type: object
+properties:
+  von:
+    description: Anfang des Gültigkeitszeitraumes der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.
+    type: string
+    format: date
+    example: "2022-08-12"
+  bislernperiode:
+    $ref: './components-code-Lernperiode.yaml'

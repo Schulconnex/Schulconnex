@@ -1,0 +1,9 @@
+type: object
+properties:
+  vonlernperiode:
+    $ref: './components-code-Lernperiode.yaml'
+  bis:
+    description: Ende des Gültigkeitszeitraumes der Gruppe.
+    type: string
+    format: date
+    example: "2023-01-30"
