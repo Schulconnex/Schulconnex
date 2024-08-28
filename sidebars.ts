@@ -80,6 +80,7 @@ const sidebars: SidebarsConfig = {
         'schnittstellen/autorisierung-dienste',
         'schnittstellen/autorisierung-qs',
         'schnittstellen/oidc-claims',
+        'schnittstellen/vendor-extensions',
       ],
     },
     'codelisten',
