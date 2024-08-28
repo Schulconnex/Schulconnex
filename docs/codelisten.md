@@ -198,7 +198,6 @@ Hinweis: Die folgende Codeliste ist spezifisch für das Bundesland Niedersachsen
 Bundesländer nur als Beispiel, da der Fächerkanon abweichen kann. Der lokal gültige Fächerkanon
 ist beim jeweiligen Betreiber des Schulconnex-Servers nachzufragen.
 
-
 Code | Bezeichnung
 --- | ---
 BI | Biologie
