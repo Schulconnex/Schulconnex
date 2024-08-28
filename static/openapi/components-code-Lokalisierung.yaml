@@ -4,7 +4,7 @@ enum:
   - de-XX
   - en-GB
 description: >
-    Basierend auf RFC 56461. Beispiele finden sich in nachfolgend:
+    Basierend auf RFC 5646. Beispiele finden sich in nachfolgend:
       * de deutsch
       * de-XX deutsch, Anrede du, einfache Sprache
       * en-GB englisch (Vereinigtes Königreich)
