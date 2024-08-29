@@ -3,7 +3,6 @@ required:
   - id
   - bezeichnung
   - typ
-  - laufzeit
 properties:
   id:
     description: ID der Gruppe.

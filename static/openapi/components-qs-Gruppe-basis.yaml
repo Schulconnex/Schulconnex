@@ -2,7 +2,6 @@ type: object
 required:
   - bezeichnung
   - typ
-  - laufzeit
 properties:
   referrer:
     description: ID der Gruppe im Quellsystem.
