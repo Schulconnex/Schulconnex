@@ -5,8 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus gen-api-docs all && docusaurus build"
-    "prebuild": "echo 'build:api-docs' && echo 'building...' && echo 'done'",
+    "build": "docusaurus gen-api-docs all && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
