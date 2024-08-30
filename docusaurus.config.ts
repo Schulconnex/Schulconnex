@@ -36,7 +36,10 @@ const config: Config = {
     }
   },
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    '@docusaurus/theme-mermaid',
+    'docusaurus-theme-openapi-docs'
+  ],
 
   presets: [
     [
@@ -55,6 +58,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          docItemComponent: "@theme/ApiItem",
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -78,6 +82,18 @@ const config: Config = {
             sidebarId: 'specSidebar',
             position: 'left',
             label: 'Spezifikation',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'apiDiensteSidebarOpenAPIDocs',
+            position: 'left',
+            label: 'API Dienste',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'apiQuellsystemeSidebarOpenAPIDocs',
+            position: 'left',
+            label: 'API Quellsysteme',
           },
           {
             type: 'docsVersionDropdown',
@@ -146,6 +162,32 @@ const config: Config = {
         }
       }
     }  satisfies Preset.ThemeConfig,
+
+    plugins: [
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "openapi",
+        docsPluginId: "classic", // e.g. "classic" or the plugin-content-docs id
+        config: {
+          apiDienste: { // is considered the <id> that you will reference in the CLI
+            specPath: "static/openapi/api-dienste.yaml", // path or URL to the OpenAPI spec
+            outputDir: "docs/generated/openapi/dienste", // output directory for generated *.mdx and sidebar.js files
+            sidebarOptions: {
+              groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+            },
+          },
+          apiQuellsysteme: { // is considered the <id> that you will reference in the CLI
+            specPath: "static/openapi/api-qs.yaml", // path or URL to the OpenAPI spec
+            outputDir: "docs/generated/openapi/quellsysteme", // output directory for generated *.mdx and sidebar.js files
+            sidebarOptions: {
+              groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+            },
+          }
+        }
+      },
+    ]
+  ],
 };
 
 export default config;

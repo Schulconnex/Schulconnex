@@ -1,4 +1,5 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import {default as itemsQuellsysteme} from './docs/generated/openapi/quellsysteme/sidebar'
 
 /**
  * Creating a sidebar enables you to:
@@ -109,6 +110,33 @@ const sidebars: SidebarsConfig = {
         'praxisleitfaden/rolle-in-organisation',
         'praxisleitfaden/ablauf-löschen',
       ],
+    },
+  ],
+
+  apiDiensteSidebarOpenAPIDocs: [
+    {
+      type: 'category',
+      label: 'API Dienste',
+      link: {
+        type: 'doc',
+        id: 'generated/openapi/dienste/schulconnex',
+      },
+      items: [
+        'generated/openapi/dienste/informationen-der-angemeldeten-person',
+        'generated/openapi/dienste/liste-bekannter-personenkontexte',
+      ],
+    },
+  ],
+
+  apiQuellsystemeSidebarOpenAPIDocs: [
+    {
+      type: 'category',
+      label: 'API Quellsysteme',
+      link: {
+        type: 'doc',
+        id: 'generated/openapi/quellsysteme/schulconnex',
+      },
+      items: itemsQuellsysteme,
     },
   ],
 };
