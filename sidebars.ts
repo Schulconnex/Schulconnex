@@ -111,6 +111,14 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+
+  apiDiensteSidebar: [
+    'api-dienste'
+  ],
+
+  apiQSSidebar: [
+    'api-qs'
+  ],
 };
 
 export default sidebars;
