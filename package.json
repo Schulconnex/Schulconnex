@@ -14,9 +14,9 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "build-openapi-docs": "npx docusaurus gen-api-docs all",
     "clean-openapi-docs": "git clean -dxf -- docs/generated/",
-    "write-dereferenced-openapi-for-qs": "redocly bundle --dereferenced --remove-unused-components static/openapi/api-qs.yaml -o openapi-out/api-qs-deref.yaml",
-    "write-dereferenced-openapi-for-dienste": "redocly bundle --dereferenced --remove-unused-components static/openapi/api-dienste.yaml -o openapi-out/api-dienste-deref.yaml",
-    "validate-openapi": "npx @redocly/cli lint static/openapi/api-dienste.yaml static/openapi/api-qs.yaml"
+    "write-dereferenced-openapi-for-qs": "redocly bundle --dereferenced --remove-unused-components src/openapi/api-qs.yaml -o static/dist/openapi/api-qs.yaml",
+    "write-dereferenced-openapi-for-dienste": "redocly bundle --dereferenced --remove-unused-components src/openapi/api-dienste.yaml -o static/dist/openapi/api-dienste.yaml",
+    "validate-openapi": "npx @redocly/cli lint src/openapi/api-dienste.yaml src/openapi/api-qs.yaml"
   },
   "dependencies": {
     "@docusaurus/core": "^3.4.0",
