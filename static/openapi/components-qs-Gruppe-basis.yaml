@@ -2,7 +2,6 @@ type: object
 required:
   - bezeichnung
   - typ
-  - laufzeit
 properties:
   referrer:
     description: ID der Gruppe im Quellsystem.
@@ -60,5 +59,11 @@ properties:
             $ref: './components-code-Gruppenrolle.yaml'
   laufzeit:
     oneOf:
-      - $ref: './components-Laufzeit-Datum.yaml'
-      - $ref: './components-Laufzeit-Periode.yaml'
+      - $ref: './components-Laufzeit-von-bis.yaml'
+      - $ref: './components-Laufzeit-vonlernperiode-bislernperiode.yaml'
+      - $ref: './components-Laufzeit-von-bislernperiode.yaml'
+      - $ref: './components-Laufzeit-vonlernperiode-bis.yaml'
+      - $ref: './components-Laufzeit-von.yaml'
+      - $ref: './components-Laufzeit-vonlernperiode.yaml'
+      - $ref: './components-Laufzeit-bis.yaml'
+      - $ref: './components-Laufzeit-bislernperiode.yaml'
