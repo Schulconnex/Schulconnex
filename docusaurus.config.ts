@@ -36,18 +36,29 @@ const config: Config = {
     },
   },
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    '@docusaurus/theme-mermaid',
+    'docusaurus-theme-openapi-docs'
+  ],
 
   presets: [
     [
       'classic',
       {
         docs: {
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Version 1.5-rc1',
+              path: '1.5',
+            },
+          },
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          docItemComponent: "@theme/ApiItem",
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -73,6 +84,23 @@ const config: Config = {
             label: 'Spezifikation',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'apiDiensteSidebarOpenAPIDocs',
+            position: 'left',
+            label: 'API Dienste',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'apiQuellsystemeSidebarOpenAPIDocs',
+            position: 'left',
+            label: 'API Quellsysteme',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: true,
+          },
+          {
             href: 'https://github.com/Schulconnex/Schulconnex',
             label: 'GitHub',
             position: 'right',
@@ -83,7 +111,7 @@ const config: Config = {
         style: 'dark',
         links: [
           {
-            title: 'Dokumentation',
+            title: 'Schulconnex',
             items: [
               {
                 label: 'Einleitung',
@@ -96,7 +124,7 @@ const config: Config = {
             ],
           },
           {
-            title: 'Extra',
+            title: 'Community',
             items: [
               {
                 label: 'GitHub',
@@ -104,6 +132,23 @@ const config: Config = {
               },
             ],
           },
+          {
+            title: 'Rechtliches',
+            items: [
+              {
+                label: 'Impressum',
+                to: '/docs/footer/impressum',
+              },
+              {
+                label: 'Datenschutz',
+                to: '/docs/footer/datenschutz',
+              },
+              {
+                label: 'Barrierefreiheit',
+                to: '/docs/footer/barrierefreiheit',
+              }
+            ],
+          }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Niedersächsisches Kultusministerium`,
       },
@@ -117,6 +162,32 @@ const config: Config = {
         },
       },
     }  satisfies Preset.ThemeConfig,
+
+    plugins: [
+    [
+      "docusaurus-plugin-openapi-docs",
+      {
+        id: "openapi",
+        docsPluginId: "classic", // e.g. "classic" or the plugin-content-docs id
+        config: {
+          apiDienste: { // is considered the <id> that you will reference in the CLI
+            specPath: "static/openapi/api-dienste.yaml", // path or URL to the OpenAPI spec
+            outputDir: "docs/generated/openapi/dienste", // output directory for generated *.mdx and sidebar.js files
+            sidebarOptions: {
+              groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+            },
+          },
+          apiQuellsysteme: { // is considered the <id> that you will reference in the CLI
+            specPath: "static/openapi/api-qs.yaml", // path or URL to the OpenAPI spec
+            outputDir: "docs/generated/openapi/quellsysteme", // output directory for generated *.mdx and sidebar.js files
+            sidebarOptions: {
+              groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+            },
+          }
+        }
+      },
+    ]
+  ],
 };
 
 export default config;

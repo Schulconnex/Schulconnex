@@ -22,7 +22,7 @@ gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Grup
     "typ": "Kurs",
     "bereich": "Pflicht",
     "optionen": [
-      "01"
+      ""
     ],
     "differenzierung": "E",
     "bildungsziele": [

@@ -1,3 +1,3 @@
 # Stand der Bearbeitung
 
-Dieses Dokument befindet sich aktuell im Bearbeitungsstand „Veröffentlichte Spezifikation“ in Version 1.4.
+Dieses Dokument befindet sich aktuell im Bearbeitungsstand „Veröffentlichungskandidat“ der Version 1.5.

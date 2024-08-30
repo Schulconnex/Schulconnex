@@ -33,7 +33,9 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-qs-Beziehung.yaml'
+            allOf:
+              - $ref: './components-qs-Beziehung-basis.yaml'
+              - $ref: './components-qs-Beziehung.yaml'
     '400':
       description: |
         Bad Request

@@ -140,7 +140,7 @@ get:
                 "typ": "Kurs",
                 "bereich": "Pflicht",
                 "optionen": [
-                  "01"
+                  ""
                 ],
                 "differenzierung": "E",
                 "bildungsziele": [
@@ -207,7 +207,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-PersonInfo.yaml'
+            $ref: './components-dienste-Personendatensatz.yaml'
     '304':
       description: Not Modified
     '400':

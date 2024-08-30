@@ -1,3 +1,3 @@
 type: array
 items:
-  $ref: './components-Gruppendatensatz.yaml'
+  $ref: './components-qs-Gruppendatensatz.yaml'

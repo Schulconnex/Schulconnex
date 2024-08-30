@@ -1,8 +1,6 @@
 type: string
 enum:
-  - "01"
-  - "02"
+  - ""
 description: >
-    Wie folgt:
-      * 01 bilingual
-      * 02 herkunftssprachlich
+    Hinweis: In der aktuellen Version sind noch keine Werte vorhanden.
+    Hinweis: Diese Codeliste ist nicht länderübergreifend und potentiell von Bundesland zu Bundesland abweichend.

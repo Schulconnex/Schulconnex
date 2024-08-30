@@ -28,7 +28,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-Gruppendatensatz.yaml'
+            $ref: './components-qs-Gruppendatensatz.yaml'
     '400':
       description: |
         Bad Request
@@ -113,14 +113,18 @@ put:
     content:
       application/json:
         schema:
-          $ref: './components-Gruppe.yaml'
+          allOf:
+            - $ref: './components-qs-Gruppe-PUT-request.yaml'
+            - $ref: './components-qs-Gruppe-basis.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-Gruppe.yaml'
+            allOf:
+              - $ref: './components-qs-Gruppe.yaml'
+              - $ref: './components-qs-Gruppe-basis.yaml'
     '400':
       description: |
         Bad Request

@@ -93,7 +93,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-PersonenInfo.yaml'
+            $ref: './components-dienste-Personendatensätze.yaml'
     '304':
       description: Not Modified
     '400':

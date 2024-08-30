@@ -28,7 +28,7 @@ Trägerschaft | The „ownership” of an organisation. Describes whether it is 
 Lokalisierung | Provides localisation information. Usually „de-DE“ to denote German language content.
 Gruppenbereich | Denotes whether participation in a group is optional („Wahl”), mandatory („Pflicht”) or a combination of both for its members.
 Gruppendifferenzierung | An attribute to specify a specific level of a course. Conceptually similar to denoting courses in the UK education system as „A-Level” or „O-Level“ courses.
-Gruppenoption | Currently there are only two options available, one being „bilingual” and the other „taught in (students’s) native language”.
+Gruppenoption | Currently there are no options implemented.
 Gruppentyp | Classification of a group as „class”, „course“ or „other”. Classes are generally mandatory, while courses are often optional.
 Gruppenrolle | Similar to „Rolle”, but as this refers to roles in a group and not in an organisation, the options differ slightly. For example, groups cannot have system administrator, while organisations don't have group leaders.
 Lernperiode | A teaching period, usually a year or a semester (trimesters are rare in Germany). A more specific description of the structure of codes from this list is given in 13.1.9 Lernperiode.

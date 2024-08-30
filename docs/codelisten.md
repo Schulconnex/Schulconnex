@@ -98,7 +98,7 @@ Code | Bezeichnung
 
 ## Lokalisierung
 
-Basierend auf [RFC 56461][1]. Beispiele finden sich in nachfolgender Tabelle.
+Basierend auf [RFC 5646][1]. Beispiele finden sich in nachfolgender Tabelle.
 
 [1]: https://www.rfc-editor.org/rfc/rfc5646
 
@@ -135,10 +135,11 @@ eA | erhöhtes Anforderungsniveau
 
 ## Gruppenoption
 
+ Hinweis: In der aktuellen Version sind noch keine Werte vorhanden.
+ Hinweis: Diese Codeliste ist nicht länderübergreifend und potentiell von Bundesland zu Bundesland abweichend.
+
 Code | Bezeichnung
 --- | ---
-01 | bilingual
-02 | herkunftssprachlich
 
 ## Gruppentyp
 
@@ -193,8 +194,9 @@ HJ | Schulhalbjahr
 
 ## Fächerkanon
 
-Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
-dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung finden.
+Hinweis: Die folgende Codeliste ist spezifisch für das Bundesland Niedersachsen und dient für andere
+Bundesländer nur als Beispiel, da der Fächerkanon abweichen kann. Der lokal gültige Fächerkanon
+ist beim jeweiligen Betreiber des Schulconnex-Servers nachzufragen.
 
 Code | Bezeichnung
 --- | ---
