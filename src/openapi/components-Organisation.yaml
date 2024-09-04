@@ -1,0 +1,15 @@
+description: Organisation.
+type: object
+properties:
+  kennung:
+    description: Die optionale Kennung (Identifikations-ID) einer Organisation.
+    type: string
+    example: NI_12345
+  name:
+    description: Offizieller Name einer Organisation.
+    type: string
+    example: Heinrich-Heine-Gymnasium
+  anschrift:
+    $ref: './components-Anschrift.yaml'
+  typ:
+    $ref: './components-code-Organisationstyp.yaml'

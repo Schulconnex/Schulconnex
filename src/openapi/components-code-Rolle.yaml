@@ -1,0 +1,22 @@
+type: string
+enum:
+  - Lern
+  - Lehr
+  - SorgBer
+  - Extern
+  - OrgAdmin
+  - Leit
+  - SysAdmin
+  - SchB
+  - NLehr
+description: >
+    Wie folgt:
+      * Lern Lernende/r
+      * Lehr Lehrende/r
+      * SorgBer Sorgeberechtigte/r
+      * Extern externe Person
+      * OrgAdmin Organisationsadministrator
+      * Leit Organisationsleitung
+      * SysAdmin Systemadministrator
+      * Schulbegleiter/in
+      * Nicht-lehrendes Personal

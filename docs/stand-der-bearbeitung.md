@@ -1,3 +1,3 @@
 # Stand der Bearbeitung
 
-Platzhalter
+Dieses Dokument befindet sich aktuell im Bearbeitungsstand „Veröffentlichungskandidat“ der Version 1.5.

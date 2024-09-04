@@ -1,0 +1,27 @@
+type: object
+required:
+  - id
+  - mandant
+  - ktid
+  - beziehung
+  - revision
+properties:
+  id:
+    description: ID der Beziehung.
+    type: string
+    format: uuid
+  mandant:
+    description: ID des Mandanten.
+    type: string
+    format: uuid
+    example: 6325b810-6b27-423d-a16b-f4b4cfa9f073
+    readOnly: true
+  ktid:
+    description: ID des Personenkontextes, zu dem eine Beziehung besteht.
+    type: string
+  beziehung:
+    $ref: './components-code-Beziehungen.yaml'
+  revision:
+    description: Revision der Beziehung.
+    type: string
+    example: "2"

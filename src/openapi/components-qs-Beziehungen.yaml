@@ -1,0 +1,10 @@
+type: object
+properties:
+  hat_als_beziehungen:
+    type: array
+    items:
+      $ref: './components-qs-Beziehung-basis.yaml'
+  ist_von_beziehungen:
+    type: array
+    items:
+      $ref: './components-qs-Beziehung-basis.yaml'

@@ -1,0 +1,53 @@
+type: object
+required:
+  - id
+  - mandant
+  - rolle
+  - revision
+properties:
+  id:
+    description: ID des Personenkontexts.
+    type: string
+    readOnly: true
+    example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
+  mandant:
+    description: ID des Mandanten, dem der Personenkontext zugeordnet ist.
+    type: string
+    readOnly: true
+    format: uuid
+    example: 58f45270-8e54-40c6-a212-980307fc19be
+  organisation:
+    readOnly: true
+    $ref: './components-Organisation-basis.yaml'
+  referrer:
+    description: ID des Personenkontexts im Quellsystem.
+    type: string
+    example: PeKt_54321
+  erreichbarkeiten:
+    description: ''
+    type: array
+    items:
+      $ref: './components-Erreichbarkeit.yaml'
+  personenstatus:
+    $ref: './components-code-Personenstatus.yaml'
+  jahrgangsstufe:
+    $ref: './components-code-Jahrgangsstufe.yaml'
+  rolle:
+    readOnly: true
+    $ref: './components-code-Rolle.yaml'
+  sichtfreigabe:
+    readOnly: true
+    $ref: './components-code-Boolean.yaml'
+  loeschung:
+    description: ''
+    type: object
+    properties:
+      zeitpunkt:
+        description: Datum und Uhrzeit der Löschung des Personenkontexts.
+        type: string
+        format: date-time
+  revision:
+    description: Revision des Personenkontext.
+    type: string
+    readOnly: true
+    example: "2"

@@ -1,0 +1,86 @@
+type: string
+enum:
+  - BI
+  - CH
+  - CI
+  - DE
+  - DS
+  - EK
+  - EN
+  - FR
+  - GR
+  - NL
+  - IT
+  - SN
+  - KU
+  - LA
+  - RS
+  - GE
+  - PO
+  - PW
+  - RE
+  - RI
+  - RK
+  - SP
+  - SU
+  - TE
+  - TG
+  - WE
+  - WN
+  - WS
+  - DA
+  - MA
+  - HW
+  - MU
+  - PA
+  - PH
+  - IF
+  - AW
+  - GL
+  - PWI
+  - PTE
+  - PGUS
+  - NAT
+description: >
+    Diese Codeliste ist spezifisch für das Bundesland Niedersachsen:
+      * BI Biologie
+      * CH Chemie
+      * CI Chinesisch
+      * DE Deutsch
+      * DS Darstellendes Spiel
+      * EK Erdkunde
+      * EN Englisch
+      * FR Französisch
+      * GR Griechisch
+      * NL Niederländisch
+      * IT Italienisch
+      * SN Spanisch
+      * KU Kunst
+      * LA Latein
+      * RS Russisch
+      * GE Geschichte
+      * PO Politik
+      * PW Politik/Wirtschaft
+      * RE Evangelische Religion
+      * RI Islamische Religion
+      * RK Katholische Religion
+      * SP Sport
+      * SU Sachunterricht
+      * TE Technik
+      * TG Textiles Gestalten
+      * WE Gestaltendes Werken
+      * WN Werte und Normen
+      * WS Wirtschaft
+      * DA Deutsch als Zweitsprache
+      * MA Mathematik
+      * HW Hauswirtschaft
+      * MU Musik
+      * PA Pädagogik
+      * PH Physik
+      * IF Informatik
+      * AW Arbeit-Wirtschaft-Technik
+      * GL Gesellschaftslehre
+      * PWI Profil Wirtschaft
+      * PTE Profil Technik
+      * PGUS Profil Gesundheit und Soziales
+      * NAT Naturwissenschaften

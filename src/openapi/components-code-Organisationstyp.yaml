@@ -1,0 +1,10 @@
+type: string
+enum:
+  - Schule
+  - Anbieter
+  - Sonstige
+description: >
+    Wie folgt:
+      * Schule
+      * Anbieter
+      * Sonstige sonstige Organisationen / Einrichtungen

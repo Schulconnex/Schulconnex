@@ -1,0 +1,9 @@
+type: object
+properties:
+  orgid:
+    description: ID der Organisation.
+    type: string
+    format: uuid
+  organisationsbeziehung:
+    description: Beziehung aus Codeliste [Organisationsbeziehungen](/docs/codelisten#organisationsbeziehungen).
+    type: string

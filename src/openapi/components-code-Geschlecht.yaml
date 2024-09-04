@@ -1,0 +1,12 @@
+type: string
+enum:
+  - m
+  - w
+  - d
+  - x
+description: >
+    Geschlecht:
+      * m männlich
+      * w weiblich
+      * d divers
+      * x keine Angabe

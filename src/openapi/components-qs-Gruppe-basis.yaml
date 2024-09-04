@@ -1,0 +1,69 @@
+type: object
+required:
+  - bezeichnung
+  - typ
+properties:
+  referrer:
+    description: ID der Gruppe im Quellsystem.
+    type: string
+  bezeichnung:
+    description: Bezeichnung der Gruppe.
+    type: string
+    example: Englisch 6b
+  thema:
+    description: Thema der Gruppe in Kurzform.
+    type: string
+  beschreibung:
+    description: Zusätzliche optionale Beschreibung der Gruppe.
+    type: string
+    maxLength: 1024
+  typ:
+    $ref: './components-code-Gruppentyp.yaml'
+  bereich:
+    $ref: './components-code-Gruppenbereich.yaml'
+  optionen:
+    type: array
+    items:
+      $ref: './components-code-Gruppenoption.yaml'
+  differenzierung:
+    $ref: './components-code-Gruppendifferenzierung.yaml'
+  bildungsziele:
+    type: array
+    items:
+      $ref: './components-code-Bildungsziel.yaml'
+  jahrgangsstufen:
+    type: array
+    items:
+      $ref: './components-code-Jahrgangsstufe.yaml'
+  faecher:
+    type: array
+    items:
+      type: object
+      properties:
+        kennung:
+          $ref: './components-code-Fächerkanon.yaml'
+  referenzgruppen:
+    type: array
+    items:
+      type: object
+      required:
+        - grupid
+      properties:
+        grupid:
+          description: ''
+          type: string
+          example: e70663cb-65c4-4ad5-a9f1-7edbc3c36c4b
+        rollen:
+          type: array
+          items:
+            $ref: './components-code-Gruppenrolle.yaml'
+  laufzeit:
+    oneOf:
+      - $ref: './components-Laufzeit-von-bis.yaml'
+      - $ref: './components-Laufzeit-vonlernperiode-bislernperiode.yaml'
+      - $ref: './components-Laufzeit-von-bislernperiode.yaml'
+      - $ref: './components-Laufzeit-vonlernperiode-bis.yaml'
+      - $ref: './components-Laufzeit-von.yaml'
+      - $ref: './components-Laufzeit-vonlernperiode.yaml'
+      - $ref: './components-Laufzeit-bis.yaml'
+      - $ref: './components-Laufzeit-bislernperiode.yaml'

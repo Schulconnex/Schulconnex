@@ -1,0 +1,63 @@
+openapi: '3.0.2'
+info:
+  title: Schulconnex
+  version: '1.4'
+  description: |
+    Beschreibung der Schnittstellen von Schulconnex für Quellsysteme
+  contact:
+    name: 'Landesinitiative n-21: Schulen in Niedersachsen online e. V.'
+  license:
+    name: Creative Commons Namensnennung-Keine Bearbeitung 2.0 Deutschland (CC BY-ND 2.0 DE)
+servers:
+  - url: https://schulconnex.test/v1
+    description: Lokaler Testserver
+security:
+  - oAuthForServices: []
+tags:
+  - name: Personen
+  - name: Organisationen
+  - name: Gruppen
+  - name: Sichtfreigaben
+paths:
+  /personen:
+    $ref: './paths-personen.yaml'
+  /personen/{id}:
+    $ref: './paths-personen-id.yaml'
+  /personen/{id}/personenkontexte:
+    $ref: './paths-personen-id-personenkontexte.yaml'
+  /personenkontexte:
+    $ref: './paths-personenkontexte.yaml'
+  /personenkontexte/{id}:
+    $ref: './paths-personenkontexte-id.yaml'
+  /personenkontexte/{id}/beziehungen:
+    $ref: './paths-personenkontexte-id-beziehungen.yaml'
+  /personenkontexte/{id}/sichtfreigaben:
+    $ref: './paths-personenkontexte-id-sichtfreigaben.yaml'
+  /beziehungen/{id}:
+    $ref: './paths-beziehungen-id.yaml'
+  /organisationen:
+    $ref: './paths-organisationen.yaml'
+  /organisationen/{id}:
+    $ref: './paths-organisationen-id.yaml'
+  /organisationen/{id}/organisationsbeziehungen:
+    $ref: './paths-organisationen-id-organisationsbeziehungen.yaml'
+  /organisation-info:
+    $ref: './paths-organisation-info.yaml'
+  /gruppen:
+    $ref: './paths-gruppen.yaml'
+  /gruppen/{id}:
+    $ref: './paths-gruppen-id.yaml'
+  /gruppen/{id}/gruppenzugehoerigkeiten:
+    $ref: './paths-gruppen-id-gruppenzugehoerigkeiten.yaml'
+  /gruppenzugehoerigkeiten:
+    $ref: './paths-gruppenzugehoerigkeiten.yaml'
+  /gruppenzugehoerigkeiten/{id}:
+    $ref: './paths-gruppenzugehoerigkeiten-id.yaml'
+  /sichtfreigaben/{id}:
+    $ref: './paths-sichtfreigaben-id.yaml'
+components:
+  securitySchemes:
+    oAuthForServices:
+      $ref: './securitySchema-oAuthForServices.yaml'
+    oAuthForUser:
+      $ref: './securitySchema-oAuthForUser.yaml'

@@ -1,0 +1,81 @@
+type: object
+required:
+  - name
+  - auskunftssperre
+properties:
+  referrer:
+    description: Identifikations-ID einer Person. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein (z. B. eine einheitliche Personalnummer).
+    type: string
+    example: "125"
+  stammorganisation:
+    description: Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Der häufigste Anwendungsfall ist die Abordnung eines Lehrenden an eine andere Dienststelle. Die Stammorganisation ist unabhängig vom Personenkontext.
+    type: string
+  name:
+    type: object
+    required:
+      - familienname
+      - vorname
+    properties:
+      familienname:
+        description: Familienname(n) der Person. Mehrere Familiennamen werden durch Leerzeichen separiert.
+        type: string
+        example: von Musterfrau
+      vorname:
+        description: Mehrere Vornamen werden durch Leerzeichen separiert.
+        type: string
+        example: Natalie
+      initialenfamilienname:
+        description: Initial oder Initialen des Familiennamens, maximal acht Zeichen.
+        type: string
+        maxLength: 8
+        example: M
+      initialenvorname:
+        description: Initial oder Initialen des Vornamens, maximal acht Zeichen.
+        type: string
+        maxLength: 8
+        example: N
+      rufname:
+        description: Bei mehreren Vornamen wird der täglich im Gebrauch genutzte Vorname geführt, maximal 32 Zeichen.
+        type: string
+        maxLength: 32
+      titel:
+        description: Titel der Person (bspw. ein akademischer Grad, Dienst- und Amtsbezeichnungen oder militärische Ränge), maximal 128 Zeichen.
+        type: string
+        maxLength: 128
+      anrede:
+        description: Liste (Array) von Namenszusätzen bei der Anrede. Jeder einzelne Namenszusatz hat eine Maximallänge von 64 Zeichen, die Maximallänge für alle Namenszusätze liegt bei 512 Zeichen.
+        type: array
+        items:
+          type: string
+          maxLength: 64
+      namenssuffix:
+        description: Liste (Array) von Namenssuffixen. Jeder einzelne Namenssuffix hat eine Maximallänge von 64 Zeichen, die Maximallänge für alle Namenssuffixe liegt bei 1024 Zeichen.
+        type: array
+        items:
+          type: string
+          maxLength: 64
+      sortierindex:
+        description: Index des Buchstabens des Nachnamens, nach dem sortiert werden soll. Der Index ist Null-basiert, d. h. ein Wert von „4“ zeigt an, dass die ersten vier Buchstaben ignoriert und ab dem fünften Buchstaben des Nachnamens sortiert werden soll. Ist kein Sortierindex angegeben, so ist der Nachname entsprechend dem ersten Buchstaben in Listen einzusortieren, äquivalent zum Sortierindex „0“.
+        type: string
+        pattern: "^[0-9]+$"
+        example: "4"
+  geburt:
+    type: object
+    properties:
+      datum:
+        description: Geburtsdatum einer Person.
+        type: string
+        format: date
+        example: "2005-05-01"
+      geburtsort:
+        description: Geburtsort einer Person, bestehend aus Ortsname und Land, beispielsweise „Eindhoven, Niederlande“. Wird kein Land angegeben, so wird als Land „Deutschland“ angenommen, d.h. der Geburtsort „Erfurt“ ist wie „Erfurt, Deutschland“ zu behandeln.
+        type: string
+        example: Berlin, Deutschland
+  geschlecht:
+    $ref: './components-code-Geschlecht.yaml'
+  lokalisierung:
+    $ref: './components-code-Lokalisierung.yaml'
+  vertrauensstufe:
+    $ref: './components-code-Vertrauensstufe.yaml'
+  auskunftssperre:
+    $ref: './components-code-Boolean.yaml'

@@ -1,0 +1,16 @@
+type: string
+enum:
+  - "01"
+  - "02"
+  - "03"
+  - "04"
+  - "05"
+  - "06"
+description: >
+    Wie folgt:
+      * 01 Bund
+      * 02 Land
+      * 03 Kommune
+      * 04 Privat
+      * 05 Kirchlich
+      * 06 Sonstige

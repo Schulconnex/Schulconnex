@@ -1,0 +1,22 @@
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: OpenAPI-Validierung
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validiere Dienste-API
+        uses: DeltaLaboratory/redocly-cli-action@v1.0.0
+        with:
+          args: 'lint src/openapi/api-dienste.yaml'
+      - name: Validiere Quellsysteme-API
+        uses: DeltaLaboratory/redocly-cli-action@v1.0.0
+        with:
+          args: 'lint src/openapi/api-qs.yaml'

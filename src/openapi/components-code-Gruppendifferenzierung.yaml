@@ -1,0 +1,14 @@
+type: string
+enum:
+  - G
+  - E
+  - Z
+  - gA
+  - eA
+description: >
+    Diese Codeliste ist spezifisch für das Bundesland Niedersachsen:
+      * G G-Kurs
+      * E E-Kurs
+      * Z Z-Kurs
+      * gA grundlegendes Anforderungsniveau
+      * eA erhöhtes Anforderungsniveau

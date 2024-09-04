@@ -1,0 +1,6 @@
+type: array
+items:
+  allOf:
+    - $ref: './components-Organisation-basis.yaml'
+    - $ref: './components-Organisation.yaml'
+    - $ref: './components-qs-Organisation.yaml'

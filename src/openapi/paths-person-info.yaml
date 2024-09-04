@@ -1,0 +1,237 @@
+get:
+  tags:
+    - Personen
+  security:
+    - oAuthForUser: []
+  summary: Informationen der angemeldeten Person.
+  description: |
+    Dieser Endpunkt bezieht sich nur auf die im Sicherheitskontext angemeldete Person und
+    dient somit dem Abruf der Informationen der jeweiligen Person.
+
+    Die Anfrage erfolgt als HTTP-GET. Die Antwort erfolgt mit einer pseudonymisierten ID,
+    dem JSON-Objekt der betreffenden Person sowie einer Liste aller für die Sichtbarkeit
+    freigegebenen Personenkontexte.
+
+    Bei der Auslieferung von Person-Info wird im HTTP-Header ein ETag mitgeliefert. Bei nachfolgenden
+    Abrufen der Personen-Information vom Schulconnex-Service kann der Dienst ein „If-None-Match“
+    Tag mit diesem ETag in den Request-Header mit aufnehmen.
+
+    Hat sich der Datensatz seit Auslieferung des ETag-Headers nicht geändert, so antwortet
+    der Server mit einem Status 304 (Not Modified) und sendet den Datensatz nicht erneut.
+
+    ```json
+    {
+      "pid": <String>, // pseudonymisierte ID
+      "person": <Objekt>, // Objekt vom Typ Person, siehe Datenmodell
+      "personenkontexte": [ // Array mit Objekten
+        {
+          <Objekt>, // Objekt vom Typ Personenkontext, siehe Datenmodell
+          "gruppen": [
+            // Array von Gruppen und Gruppenzugehoerigkeiten eines Personenkontexts
+            "gruppe": ": <Objekt>, // Objekt vom Typ Gruppe
+          ],
+          "beziehungen": {
+            "hat_als_beziehungen": [ // Array von Beziehungen, welche vom Personenkontext ausgehen
+              {
+                "ktid": <Personenkontext-ID welche der Bezug in der angegebenen Rolle ist>
+                "beziehung": <Art der Beziehung>
+              },
+              ...
+            ],
+            "ist_von beziehungen": [
+              {
+                "ktid": <Personenkontext-ID der den Bezug hat >,
+                "beziehung": <Art der Beziehung>
+              }
+            ]
+          }
+        }
+      ]
+    }
+    ```
+
+    Die pseudonymisierte ID `pid` in der Rückgabe repräsentiert die `id` im aktuell ausgewählten
+    Sicherheitskontext und folgt der gleichen Definition wie die `id`.
+
+    Im Sicherheitskontext einer angemeldeten nutzenden Person mit ausschließlichem Zugriff
+    auf den Personenkontext, mit dem sie angemeldet ist, steht nur der ausgewählte und dadurch
+    aktive Personenkontext in der Liste `personenkontexte`. Die `pid` entspricht in diesem Fall
+    der `id` des einen angegebenen Personenkontexts.
+
+    Es ist möglich, dass zu einer angemeldeten Person mehrere Personenkontexte bereitgestellt
+    werden. Im Sicherheitskontext einer angemeldeten nutzenden Person mit Zugriff auf mehrere
+    Personenkontexte, die für den Dienst freigegeben sind, umfasst die Liste der Personenkontexte
+    `personenkontexte` alle freigegebenen Personenkontexte. In diesem Fall entspricht die `pid` der
+    Identität der Person und jeder Personenkontext hat die eigene `id`, welche bei Anmeldung
+    im Sicherheitskontext mit ausschließlichem Zugriff auf diesen Personenkontext als `pid`
+    ausgeliefert würde. Siehe auch die einzelnen Datenmodelle zu [`Person`](/docs/datenmodell/person)
+    und [`Personenkontext`](/docs/datenmodell/personenkontext).
+
+    Es ist weiterhin möglich, dass eine angemeldete Person mehreren Gruppen zugeordnet ist.
+    In diesem Fall können, geregelt durch eine vertragliche Absprache zwischen Dienstanbieter
+    und Betreiber des Schulconnex-Servers, neben der Gruppenzugehörigkeit im aktuellen
+    Anmeldekontext auch andere Gruppenzugehörigkeiten durch `/person-info` geliefert werden.
+
+    Abhängig von einer vertraglichen Absprache zwischen Dienstanbieter und Betreiber des
+    Schulconnex-Servers ist es möglich, bei der Gruppenzugehörigkeit gegebenenfalls auch
+    die Personenkontext-IDs und Rollen anderer Mitglieder derselben Gruppe mit auszugeben.
+    Die Personenkontext-IDs und Rollen werden dann in einem Array namens `sonstige_gruppenzugehoerige`,
+    jeweils mit dem Namen „ID“ und „Rolle“ als Teil der Gruppenzugehörigkeit geliefert.
+
+    Typischerweise ist dieses eine Liste von Schüler und Schülerinnen in einer Gruppe, wenn
+    sich eine Lehrkraft mit der Gruppenrolle `Lehr` anmeldet.
+
+    Bei der Ausgabe von Beziehungen zwischen Personenkontexten ist es abhängig vom
+    Schulconnex-Server ob alle existierenden und als einsehbar freigegebenen Beziehungen
+    unter `beziehungen` mit aufgeführt werden oder nur solche Beziehungen, zu denen der
+    Personenkontext, mit dem eine Beziehung besteht, vorher schon von dem Dienst abgerufen
+    wurde und damit dem Dienst bekannt ist.
+
+    ```json
+    {
+      "pid": "af3a88fc-d766-11ec-9d64-0242ac120002",
+      "person": {
+        "stammorganisation": {
+          "id": "fe963bff-e837-4799-91e2-5680222188a5",
+          "kennung": "NI_54321",
+          "name": "Otto Hahn Schule",
+          "anschrift": {
+            "postleitzahl": "29614",
+            "ort": "Soltau",
+            "ortsteil": "Ahlften"
+          },
+          "typ": "Schule"
+        },
+        "name": {
+          "familienname": "Muster",
+          "vorname": "Max"
+        },
+        "geburt": {
+          "datum": "2010-01-01",
+          "volljaehrig": "Ja"
+        },
+        "geschlecht": "m",
+        "lokalisierung": "de",
+        "vertrauensstufe": "Voll"
+      },
+      "personenkontexte": [
+        {
+          "id": "af3a88fc-d766-11ec-9d64-0242ac120002",
+          "organisation": {
+            "id": "15685758-d18e-49c1-a644-f9996eb0bf08",
+            "kennung": "NI_12345",
+            "name": "Muster-Schule",
+            "typ": "Schule"
+          },
+          "rolle": "Lern",
+          "erreichbarkeiten": [
+            {
+              "typ": "E-Mail",
+              "kennung": "Max.Muster@Muster-Schule.de"
+            }
+          ],
+          "personenstatus": "Aktiv",
+          "gruppen": [
+            {
+              "gruppe": {
+                "id": "b3201d00-f21f-4986-a39d-02a09c8da26c",
+                "orgid": "9b3f36ad-9d15-49f9-9660-6cf9746ba446",
+                "bezeichnung": "Englisch 6b",
+                "typ": "Kurs",
+                "bereich": "Pflicht",
+                "optionen": [
+                  ""
+                ],
+                "differenzierung": "E",
+                "bildungsziele": [
+                  "RS"
+                ],
+                "jahrgangsstufen": [
+                  "03"
+                ],
+                "faecher": [
+                  {
+                    "kennung": "EN"
+                  }
+                ],
+                "laufzeit": {
+                  "von": "2026-01-01",
+                  "bis": "2028-12-31"
+                }
+              },
+              "gruppenzugehoerigkeit": [
+                {
+                  "rollen": [
+                    "Lern"
+                  ],
+                  "von": "2026-01-01",
+                  "bis": "2027-12-31"
+                }
+              ],
+              "sonstige_gruppenzugehoerige": [
+                {
+                  "ktid": "a687aa37-b048-46f8-8a61-64a1ff8e9784",
+                  "rollen": [
+                    "Lern",
+                    "GMit"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "beziehungen": {
+        "hat_als_beziehungen": [
+          {
+            "ktid": "ade920cc-7ae4-451e-a739-d5f39da7efa0",
+            "beziehung": "SchB"
+          },
+          {
+            "ktid": "c757802e-f9e3-40ea-8274-eb404d3a39ce",
+            "beziehung": "SchB"
+          }
+        ],
+        "ist_von_beziehungen": [
+          {
+            "ktid": "5adb98ef-cdeb-4715-8a48-44a452dd6894",
+            "beziehung": "SorgBer"
+          }
+        ]
+      }
+    }
+    ```
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: './components-dienste-Personendatensatz.yaml'
+    '304':
+      description: Not Modified
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

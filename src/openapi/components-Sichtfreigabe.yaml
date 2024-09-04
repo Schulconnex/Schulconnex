@@ -1,0 +1,21 @@
+description: Sichtfreigabe
+type: object
+required:
+  - id
+  - orgid
+  - revision
+properties:
+  id:
+    description: ID der Sichtfreigabe.
+    type: string
+    format: uuid
+    example: 488dfea40-5fe9-427e-a92f-811af17d022c
+  orgid:
+    description: ID der Organisation für welche die Sichtfreigabe erteilt wurde.
+    type: string
+    format: uuid
+    example: c1966d20-50b6-4bb1-afc7-96663523891e
+  revision:
+    description: Revision der Beziehung.
+    type: string
+    example: "1"

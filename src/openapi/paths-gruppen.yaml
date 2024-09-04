@@ -1,0 +1,195 @@
+post:
+  tags:
+    - Gruppen
+  security:
+    - oAuthForServices: []
+  summary: Erstellen einer Gruppe.
+  description: |
+    Mittels dieser Schnittstelle wird ein neuer Datensatz „Gruppe” erstellt.
+
+    Ein CREATE ist nur mit HTTP-POST auf die API `/gruppen` zum Erstellen von Gruppen
+    zugelassen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des
+    Datentyps Gruppe.
+
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppe`](/docs/datenmodell/gruppe).
+
+    Die Gruppen-ID, die Mandanten-ID, die Organisations-ID und die Revisionsnummer werden vom
+    Schulconnex-Service vergeben und hinzugefügt.
+
+    Bei einer erfolgreichen Anforderung zum Erstellen einer Gruppe wird diese Anforderung
+    mit einer Repräsentation der Gruppe in den Antwort-Nutzdaten (Response Payload) und
+    dem HTTP-Status-Code 201 quittiert.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: './components-qs-Gruppe-basis.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: './components-qs-Gruppe.yaml'
+              - $ref: './components-qs-Gruppe-basis.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+get:
+  tags:
+    - Gruppen
+  security:
+    - oAuthForServices: []
+  summary: Gruppendatensätzen des Quellsystemanbieters.
+  description: |
+    Dieser Schnittstellenendpunkt gibt ein Array von Gruppendatensätzen zurück, die vom
+    Anfrager ausgelesen werden dürfen.
+
+    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten (Response
+    Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Gruppendatensatz, sofern
+    Einträge existieren.
+
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](/docs/datenmodell/gruppendatensatz).
+
+    Die Schnittstelle `/gruppen` ermöglicht das Verwenden von Filterparametern zur
+    Präzisierung der Anfrage bei HTTP-GET.
+
+    Durch das Setzen von Filterparametern (query-parameter) wird mit der HTTP-GET-Anfrage
+    eine Filteroperation mitgeschickt, welche die Ergebnismenge der Antwort-Nutzdaten
+    (Response Payload) beeinflusst, beispielsweise mit den Filterparametern `?referrer=123&faecher=EN`.
+
+    Bei Filtern vom Typ „String” überprüft der Schulconnex-Server, ob der Wert des Filterparameters
+    ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    Bei Filtern vom Typ „String (Code)” überprüft der Schulconnex-Server, ob der Wert des Filterparameters
+    ohne Beachtung von Groß- und Kleinschreibung gleich dem Filter-Attribut ist (equals).
+
+    Werden mehrere Filter angegeben, so sind sie als mit „und“ verknüpft anzusehen.
+
+    Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig. Entsprechen keine Werte
+    den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
+
+    Bei Attributen, welche eine Liste von Codes enthalten können (deren „Anzahl“ im
+    Datenmodell die Form „0..n“ oder „1..n“ hat), kann als Filterwert eine durch Kommas
+    getrennte Liste von Werten angegeben werden. Es werden dann nur die Gruppen zurück
+    geliefert, in denen alle diese Codes in der Liste vorkommen. Die Parameter sind auch
+    hier als mit „und“ verknüpft anzusehen. Der Filter `&faecher=NL,IT,SN` liefert alle Gruppen,
+    in denen kumulativ sowohl Niederländisch, Italienisch und Spanisch gelehrt wird.
+
+    Ein Sonderfall ist hier bei dem Filter `faecher`  gegeben. Ein Suchparameter bei diesem
+    Filter sucht sowohl bei dem Unterattribut `kennung` als auch dem Unterattribut `text`. Wird
+    in einer Gruppe beispielsweise das Standard-Fach Englisch unterrichtet und auch das Thema
+    „Filmschnitt“, das nicht in der Fächer-Codeliste vorhanden ist und daher über das Attribut
+    `text` hinzugefügt wurde, so kann diese Gruppe mit dem Filter `&faecher=EN,Filmschnitt`
+    gesucht werden.
+
+    Folgende Tabelle listet die zur Verfügung stehenden Filter:
+
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern.
+    `mandant` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `mandant` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters unabhängig von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `bezeichnung` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.bezeichnung` zu filtern.
+    `optionen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.optionen` zu filtern.
+    `differenzierung` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.differenzierung` zu filtern.
+    `bildungsziele` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.bildungsziele` zu filtern.
+    `jahrgangsstufen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.jahrgangsstufen` zu filtern.
+    `faecher` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.faecher.kennung` und  `gruppe.faecher.text` zu filtern.
+    `sichtfreigabe` | String | Erlaubt es Gruppen, abhängig davon aufzulisten, ob diese von einer anderen Organisation zum Lesen freigegeben wurden. Die möglichen Optionen sind  `sichtfreigabe=Ja`, um nur die durch externe Organisationen freigegebenen Gruppen aufzulisten, und `sichtfreigabe=Nein`, um nur eigene Gruppen aufzulisten. Wird nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren Gruppen geliefert.
+  parameters:
+    - in: query
+      name: referrer
+      schema:
+        type: string
+    - in: query
+      name: mandant
+      schema:
+        type: string
+    - in: query
+      name: bezeichnung
+      schema:
+        type: string
+    - in: query
+      name: optionen
+      schema:
+        type: string
+    - in: query
+      name: differenzierung
+      schema:
+        type: string
+    - in: query
+      name: bildungsziele
+      schema:
+        type: string
+    - in: query
+      name: jahrgangsstufen
+      schema:
+        type: string
+    - in: query
+      name: faecher
+      schema:
+        type: string
+    - in: query
+      name: sichtfreigabe
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Gruppendatensätze.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

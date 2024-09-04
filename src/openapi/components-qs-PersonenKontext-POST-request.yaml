@@ -1,0 +1,29 @@
+type: object
+required:
+  - rolle
+properties:
+  referrer:
+    description: ID des Personenkontexts im Quellsystem.
+    type: string
+    example: PeKt_54321
+  rolle:
+    $ref: './components-code-Rolle.yaml'
+  erreichbarkeiten:
+    description: ''
+    type: array
+    items:
+      $ref: './components-Erreichbarkeit.yaml'
+  personenstatus:
+    $ref: './components-code-Personenstatus.yaml'
+  jahrgangsstufe:
+    $ref: './components-code-Jahrgangsstufe.yaml'
+  sichtfreigabe:
+    $ref: './components-code-Boolean.yaml'
+  loeschung:
+    description: ''
+    type: object
+    properties:
+      zeitpunkt:
+        description: Datum und Uhrzeit der Löschung des Personenkontexts.
+        type: string
+        format: date-time

@@ -1,0 +1,192 @@
+post:
+  tags:
+    - Personenkontexte
+    - Beziehungen
+  security:
+    - oAuthForServices: []
+  summary: Erstellen von Beziehungen.
+  description: |
+    Die Schnittstelle `/personenkontexte/{personenkontext.id}/beziehungen` erlaubt
+    das Erstellen von zu einem Personenkontext gehörenden Beziehungen.
+
+    Beziehungen sind immer von der Form „hat_als“. Besteht zum Beispiel aus einem
+    Personenkontext von Person A eine Beziehung vom Typ `SchB` zu einem Personenkontext
+    (`ktid`) von Person B, so bedeutet dieses, dass Person A die Person B als Schulbegleiter
+    (oder Schulbegleiterin) hat.
+
+    Im schulischen Gebrauch bedeutet das meistens, dass Beziehungen den Kontexten von Schülern
+    und Schülerinnen zugeordnet sind. Schüler und Schülerinnen haben Betreuer oder Betreuerinnen,
+    Tutoren oder Tutorinnen oder Erziehungsberechtigte. Der Personenkontext von beispielsweise
+    Erziehungsberechtigten enthält keine Beziehungs-Relation.
+
+    Dieser Schnittstellenendpunkt erstellt eine Beziehung aus einem Personenkontext per ID `personenkontext.id`.
+
+    Ein CREATE ist nur mit HTTP-POST auf die API `/personenkontext/{personenkontext.id}/beziehungen`
+    zum Erstellen von Beziehungen aus einem Personenkontext zugelassen. Die Anfrage-Nutzdaten
+    (Request Payload) beinhalten ein JSON-Objekt des Datentyps Beziehungen.
+
+    Siehe auch Datenmodell [Beziehung](/docs/datenmodell/beziehung).
+
+    Bestehen zwischen zwei Personenkontexten mehrere Beziehungen (ist beispielsweise eine
+    Person sowohl erziehungsberechtigt als auch betreuend für eine andere Person), so ist
+    für jede Einzelbeziehung ein eigenes Beziehungsobjekt zu erstellen.
+
+    Die folgende Tabelle listet die Attribute einer Beziehung auf, welche von einem
+    Quellsystem oder Dienst nicht verändert werden können.
+
+    Attribut | In den Anfrage Nutzdaten erforderlich? | Bemerkung
+    --- | --- | ---
+    `id` | nein | ID der Beziehung. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+    `revision` | nein | Revision der Beziehung. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+
+    Bei einer erfolgreichen Anforderung zum Erstellen einer Beziehung zu einem Personenkontext
+    wird diese Anforderung mit einer Repräsentation der Beziehung in den Antwort-Nutzdaten
+    und dem HTTP-Status-Code 201 quittiert.
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontextes.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: './components-qs-Beziehung-POST-request.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Beziehung-basis.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Subcode 18: „Beziehung kann nicht erstellt werden.“ Dieser Fehler wird gemeldet,
+        wenn die zu erstellende Beziehung nicht unterstützt werden kann, beispielsweise,
+        da Minderjährige nicht sorgeberechtigt sein können.
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+get:
+  tags:
+    - Personenkontexte
+    - Beziehungen
+  security:
+    - oAuthForServices: []
+  summary: Auflistung von Beziehungen.
+  description: |
+    Die Schnittstelle `/personenkontexte/{personenkontext.id}/beziehungen` erlaubt
+    das Lesen von zu einem Personenkontext gehörenden Beziehungen.
+
+    Beziehungen sind immer von der Form „hat_als“. Besteht zum Beispiel aus einem
+    Personenkontext von Person A eine Beziehung vom Typ `SchB` zu einem Personenkontext
+    (`ktid`) von Person B, so bedeutet dieses, dass Person A die Person B als Schulbegleiter
+    (oder Schulbegleiterin) hat.
+
+    Im schulischen Gebrauch bedeutet das meistens, dass Beziehungen den Kontexten von Schülern
+    und Schülerinnen zugeordnet sind. Schüler und Schülerinnen haben Betreuer oder Betreuerinnen,
+    Tutoren oder Tutorinnen oder Erziehungsberechtigte. Der Personenkontext von beispielsweise
+    Erziehungsberechtigten enthält keine Beziehungs-Relation.
+
+    Dieser Schnittstellenendpunkt gibt die Beziehungen zur angegebenen `personenkontext.id` zurück.
+
+    Ein READ ist nur mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/beziehungen`
+    zum Abfragen der Beziehung per personenkontext.id zugelassen. Die Antwort-Nutzdaten (Response
+    Payload) beinhalten ein JSON-Objekt mit einem Array des Datentyps Beziehung.
+
+    Siehe auch Datenmodell [Beziehung](/docs/datenmodell/beziehung).
+
+    Die Schnittstelle `/personenkontexte/{personenkontext.id}/beziehungen` ermöglicht
+    das Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.
+    Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
+
+    Folgende Tabelle listet die zur Verfügung stehenden Filter auf:
+
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `hat_als_beziehungen` | String (Boolean) | listet alle Beziehungen auf, welche der, durch die Personenkontext-ID gegebenen, Personenkontext hat. Die Beziehungen werden unter `hat_als_beziehungen` aufgelistet. Der Defaultwert ist `Ja`, es werden also ohne Filterangabe alle Beziehungen angegeben, welche ein Personenkontext hat.
+    `ist_von_beziehungen` | String (Boolean) | listet alle Beziehungen auf, welche von anderen Personenkontexten zu dem, durch die Personenkontext-ID gegebenen, Personenkontext bestehen. Die Beziehungen werden unter `ist_von_beziehungen` aufgelistet. Der Defaultwert ist `Nein`, es werden also ohne Filterangabe keine Beziehungen angegeben, welche zu dem gegebenen Personenkontext bestehen.
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        format: uuid
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontextes.
+    - in: query
+      name: hat_als_beziehungen
+      schema:
+        type: string
+        enum:
+          - Ja
+          - Nein
+    - in: query
+      name: ist_von_beziehungen
+      schema:
+        type: string
+        enum:
+          - Ja
+          - Nein
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Beziehungen.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

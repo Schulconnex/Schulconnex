@@ -1,0 +1,10 @@
+type: object
+properties:
+  hat_als_organisationsbeziehungen:
+    type: array
+    items:
+      $ref: './components-qs-Organisationsbeziehung.yaml'
+  ist_von_organisationsbeziehungen:
+    type: array
+    items:
+      $ref: './components-qs-Organisationsbeziehung.yaml'

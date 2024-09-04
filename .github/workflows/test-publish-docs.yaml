@@ -1,0 +1,24 @@
+name: Test Deployment to GitHub Pages
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  test-build:
+    name: Test deployment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+      - name: Test build website
+        run: npm run build

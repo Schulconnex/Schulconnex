@@ -1,0 +1,83 @@
+get:
+  tags:
+    - Gruppenzugehörigkeiten
+  security:
+    - oAuthForServices: []
+  summary: Auflistung aller Gruppenzugehörigkeiten.
+  description: |
+    Dieser Schnittstellenendpunkt gibt alle Gruppenzugehörigkeiten zurück, auf die
+    der Quellsystemanbieter zugreifen kann.
+
+    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
+    (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Gruppendatensatz
+    mit den jeweiligen Gruppenzugehörigkeiten und der zugeordneten Gruppe, sofern Einträge existieren.
+
+    Siehe auch Datenmodell [`Gruppendatensatz`](/docs/datenmodell/gruppendatensatz),
+    Datenmodell [`Gruppe`](/docs/datenmodell/gruppe) und Datenmodell
+    [`Gruppenzugehörigkeit`](/docs/datenmodell/gruppenzugehörigkeit).
+
+    Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut `gruppe` die Gruppen-ID
+    über das Attribut `gruppe.id`.
+
+    Durch das Setzen von Filterparametern (query-parameter) wird mit der HTTP-GET-Anfrage
+    eine Filteroperation mitgeschickt, welche die Ergebnismenge der Antwort-Nutzdaten
+    (Response Payload) beeinflusst, beispielsweise mit dem Filterparameter `?rollen=Lehr`.
+
+    Bei Filtern vom Typ „String” überprüft der Schulconnex-Server, ob der Wert des
+    Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut
+    beinhaltet ist (contains). Bei Filtern vom Typ „String (Code)” überprüft der Schulconnex-Server,
+    ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung gleich
+    dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so sind sie als
+    mit „und“ verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als
+    Resultat eine leere Liste geliefert.
+
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern.
+    `mandant` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `mandant` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters unabhängig von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `rollen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `gruppenzugehoerigkeit.rollen` zu filtern.
+  parameters:
+    - in: query
+      name: referrer
+      schema:
+        type: string
+    - in: query
+      name: mandant
+      schema:
+        type: string
+    - in: query
+      name: rollen
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Gruppendatensätze.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)

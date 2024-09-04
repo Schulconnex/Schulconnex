@@ -1,0 +1,8 @@
+type: object
+required:
+  - ist_von_ktid
+properties:
+  ist_von_ktid:
+    description: ID des Personenkontexts, aus dem heraus die Beziehung besteht.
+    type: string
+    readOnly: true

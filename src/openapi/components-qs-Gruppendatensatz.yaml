@@ -1,0 +1,12 @@
+type: object
+required:
+  - gruppe
+properties:
+  gruppe:
+    allOf:
+      - $ref: './components-qs-Gruppe.yaml'
+      - $ref: './components-qs-Gruppe-basis.yaml'
+  gruppenzugehoerigkeiten:
+    type: array
+    items:
+      $ref: './components-qs-Gruppenzugehörigkeit.yaml'

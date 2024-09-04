@@ -1,0 +1,14 @@
+type: string
+enum:
+  - GS
+  - HS
+  - RS
+  - GY-SEK-I
+  - GY-SEK-II
+description: >
+    Diese Codeliste ist spezifisch für das Bundesland Niedersachsen:
+      * GS Grundschule
+      * HS Hauptschule
+      * RS Realschule
+      * GY-SEK-I Gymnasium Sekundarstufe I
+      * GY-SEK-II Gymnasium Sekundarstufe II

@@ -1,0 +1,6 @@
+type: object
+properties:
+  von:
+    $ref: './components-Datum-von.yaml'
+  bislernperiode:
+    $ref: './components-code-Lernperiode.yaml'

@@ -1,0 +1,13 @@
+type: object
+required:
+  - pid
+properties:
+  pid:
+    description: Pseudonymisierte ID.
+    type: string
+  person:
+    $ref: './components-dienste-Person.yaml'
+  personenkontexte:
+    type: array
+    items:
+      $ref: './components-dienste-PersonenKontext.yaml'

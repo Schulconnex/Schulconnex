@@ -1,3 +1,0 @@
-# Allgemeines
-
-Platzhalter

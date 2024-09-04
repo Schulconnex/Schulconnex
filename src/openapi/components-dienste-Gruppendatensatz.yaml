@@ -1,0 +1,21 @@
+type: object
+required:
+  - gruppe
+properties:
+  gruppe:
+    $ref: './components-dienste-Gruppe.yaml'
+  gruppenzugehoerigkeit:
+    type: object
+    required:
+      - rollen
+    properties:
+      rollen:
+        description: ''
+        type: array
+        minItems: 1
+        items:
+          $ref: './components-code-Gruppenrolle.yaml'
+  sonstige_gruppenzugehoerige:
+    type: array
+    items:
+      $ref: './components-dienste-Gruppenzugehörigkeit.yaml'
