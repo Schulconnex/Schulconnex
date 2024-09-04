@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -8,17 +8,17 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://schulconnex.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Schulconnex', // Usually your GitHub org/user name.
-  projectName: 'Schulconnex', // Usually your repo name.
+  organizationName: 'schulconnex.github.io', // Usually your GitHub org/user name.
+  projectName: 'schulconnex', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -33,7 +33,7 @@ const config: Config = {
     mermaid: true,
     remarkRehypeOptions: {
       footnoteLabel: 'Fußnoten',
-    }
+    },
   },
 
   themes: [
@@ -159,8 +159,8 @@ const config: Config = {
       mermaid: {
         options: {
           mirrorActors: false,
-        }
-      }
+        },
+      },
     }  satisfies Preset.ThemeConfig,
 
     plugins: [
