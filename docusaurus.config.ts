@@ -150,7 +150,7 @@ const config: Config = {
             ],
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Niedersächsisches Kultusministerium`,
+        copyright: '<a href=https://creativecommons.org/licenses/by-nd/4.0/legalcode target=_blank>CC BY-ND 4.0</a>',
       },
       prism: {
         theme: prismThemes.github,
