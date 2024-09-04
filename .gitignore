@@ -8,7 +8,7 @@
 /build
 
 # redocly
-/openapi-out
+/static/dist/openapi
 
 # Generated files
 .docusaurus

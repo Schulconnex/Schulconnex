@@ -171,14 +171,14 @@ const config: Config = {
         docsPluginId: "classic", // e.g. "classic" or the plugin-content-docs id
         config: {
           apiDienste: { // is considered the <id> that you will reference in the CLI
-            specPath: "static/openapi/api-dienste.yaml", // path or URL to the OpenAPI spec
+            specPath: "src/openapi/api-dienste.yaml", // path or URL to the OpenAPI spec
             outputDir: "docs/generated/openapi/dienste", // output directory for generated *.mdx and sidebar.js files
             sidebarOptions: {
               groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
             },
           },
           apiQuellsysteme: { // is considered the <id> that you will reference in the CLI
-            specPath: "static/openapi/api-qs.yaml", // path or URL to the OpenAPI spec
+            specPath: "src/openapi/api-qs.yaml", // path or URL to the OpenAPI spec
             outputDir: "docs/generated/openapi/quellsysteme", // output directory for generated *.mdx and sidebar.js files
             sidebarOptions: {
               groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag

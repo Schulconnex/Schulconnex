@@ -15,8 +15,8 @@ jobs:
       - name: Validiere Dienste-API
         uses: DeltaLaboratory/redocly-cli-action@v1.0.0
         with:
-          args: 'lint static/openapi/api-dienste.yaml'
+          args: 'lint src/openapi/api-dienste.yaml'
       - name: Validiere Quellsysteme-API
         uses: DeltaLaboratory/redocly-cli-action@v1.0.0
         with:
-          args: 'lint static/openapi/api-qs.yaml'
+          args: 'lint src/openapi/api-qs.yaml'
