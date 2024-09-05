@@ -1,13 +1,15 @@
 openapi: '3.0.2'
 info:
   title: Schulconnex
-  version: '1.4'
+  version: '1.5'
   description: |
     Beschreibung der Schnittstellen von Schulconnex für Dienste
   contact:
     name: 'Landesinitiative n-21: Schulen in Niedersachsen online e. V.'
+    url: https://www.n-21.de/
   license:
-    name: Creative Commons Namensnennung-Keine Bearbeitung 2.0 Deutschland (CC BY-ND 2.0 DE)
+    name: Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+    url: https://creativecommons.org/licenses/by-nd/4.0/legalcode
 servers:
   - url: https://schulconnex.test/v1
     description: Lokaler Testserver
