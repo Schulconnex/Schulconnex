@@ -136,7 +136,7 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'generated/openapi/quellsysteme/schulconnex',
       },
-      items: itemsQuellsysteme,
+      items: itemsQuellsysteme.splice(1),
     },
   ],
 };
