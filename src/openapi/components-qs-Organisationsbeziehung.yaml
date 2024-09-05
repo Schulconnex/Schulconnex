@@ -5,5 +5,5 @@ properties:
     type: string
     format: uuid
   organisationsbeziehung:
-    description: Beziehung aus Codeliste [Organisationsbeziehungen](/docs/codelisten#organisationsbeziehungen).
+    description: Beziehung aus Codeliste [Organisationsbeziehungen](../../../codelisten#organisationsbeziehungen).
     type: string

@@ -16,7 +16,7 @@ delete:
     Ein DELETE kann nur mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload)
     beinhalten die Revisionsnummer.
 
-    Siehe auch das Datenmodell zu [`Sichtfeigabe`](/docs/datenmodell/sichtfreigabe).
+    Siehe auch das Datenmodell zu [`Sichtfeigabe`](../../../datenmodell/sichtfreigabe).
 
     Es ist erforderlich, dass für eine Löschanfrage einer Freigabe das Attribut `revision` der
     zugrunde liegenden Freigabe mitgeschickt wird. Der Anmeldeservice überprüft anhand des
@@ -55,29 +55,29 @@ delete:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
