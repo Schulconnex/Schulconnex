@@ -1,5 +1,5 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
-import {default as itemsQuellsysteme} from './docs/generated/openapi/quellsysteme/sidebar'
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import { default as itemsQuellsysteme } from './docs/generated/openapi/quellsysteme/sidebar';
 
 /**
  * Creating a sidebar enables you to:
@@ -92,10 +92,7 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'english-api-notes/english-api-notes',
       },
-      items: [
-        'english-api-notes/data-models',
-        'english-api-notes/code-lists',
-      ],
+      items: ['english-api-notes/data-models', 'english-api-notes/code-lists'],
     },
     {
       type: 'category',
@@ -122,8 +119,18 @@ const sidebars: SidebarsConfig = {
         id: 'generated/openapi/dienste/schulconnex',
       },
       items: [
-        'generated/openapi/dienste/informationen-der-angemeldeten-person',
-        'generated/openapi/dienste/liste-bekannter-personenkontexte',
+        {
+          type: 'doc',
+          id: 'generated/openapi/dienste/informationen-der-angemeldeten-person',
+          label: 'Person-Info',
+          className: 'api-method get',
+        },
+        {
+          type: 'doc',
+          id: 'generated/openapi/dienste/liste-bekannter-personenkontexte',
+          label: 'Personen-Info',
+          className: 'api-method get',
+        },
       ],
     },
   ],
@@ -136,7 +143,302 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'generated/openapi/quellsysteme/schulconnex',
       },
-      items: itemsQuellsysteme.splice(1),
+      items: [
+        {
+          type: 'doc',
+          id: 'generated/openapi/quellsysteme/schulconnex',
+        },
+        {
+          type: 'category',
+          label: 'Personen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/personendatensatze-des-quellsystemanbieters',
+              label: 'Personen',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-eines-personendatensatzes',
+              label: 'Personen',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/personendatensatz-zur-angeforderten-id',
+              label: 'Personen/\u200B:ID',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/aktualisiert-den-personendatensatz-der-angegebenen-id',
+              label: 'Personen/\u200B:ID',
+              className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/loscht-den-personendatensatz-zur-angeforderten-id',
+              label: 'Personen/\u200B:ID',
+              className: 'api-method delete',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/personenkontexte-zur-angeforderten-id',
+              label: 'Personen/\u200B:ID/\u200BPersonenkontexte',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-eines-personenkontexts-zu-einem-bestimmten-personendatensatz',
+              label: 'Personen/\u200B:ID/\u200BPersonenkontexte',
+              className: 'api-method post',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Organisationen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-von-organisationen',
+              label: 'Auflistung von Organisationen.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/organisation-zur-angeforderten-id',
+              label: 'Organisation zur angeforderten ID.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-von-organisationenbeziehungen',
+              label: 'Auflistung von Organisationenbeziehungen.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/informationen-zu-der-organisation-des-quellsystems',
+              label: 'Informationen zu der Organisation des Quellsystems.',
+              className: 'api-method get',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Gruppen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-einer-gruppe',
+              label: 'Erstellen einer Gruppe.',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/gruppendatensatzen-des-quellsystemanbieters',
+              label: 'Gruppendatensätzen des Quellsystemanbieters.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/gruppe-zur-angeforderten-id',
+              label: 'Gruppe zur angeforderten ID.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/aktualisiert-die-gruppe-der-angegebenen-id',
+              label: 'Aktualisiert die Gruppe der angegebenen ID.',
+              className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/loscht-die-gruppe-zur-angeforderten-id',
+              label: 'Löscht die Gruppe zur angeforderten ID.',
+              className: 'api-method delete',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-einer-gruppenzugehorigkeit',
+              label: 'Erstellen einer Gruppenzugehörigkeit.',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-von-gruppenzugehorigkeiten-zur-gruppe',
+              label: 'Auflistung von Gruppenzugehörigkeiten zur Gruppe.',
+              className: 'api-method get',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Sichtfreigaben',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-von-sichtfreigaben',
+              label: 'Personenkontexte/\u200B:ID/\u200BSichtfreigaben',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-von-sichtfreigaben',
+              label: 'Auflistung von Sichtfreigaben.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/freigaben-fur-personenkontexte-loschen',
+              label: 'Freigaben für Personenkontexte löschen',
+              className: 'api-method delete',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Personenkontexte',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/personenkontexte-zur-angeforderten-id',
+              label: 'Personenkontexte zur angeforderten ID.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-eines-personenkontexts-zu-einem-bestimmten-personendatensatz',
+              label:
+                'Erstellen eines Personenkontexts zu einem bestimmten Personendatensatz.',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-von-personenkontexten',
+              label: 'Auflistung von Personenkontexten.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/personenkontext-zur-angeforderten-id',
+              label: 'Personenkontext zur angeforderten ID.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/aktualisiert-den-personenkontext-der-angegebenen-id',
+              label: 'Aktualisiert den Personenkontext der angegebenen ID.',
+              className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/loscht-den-personenkontext-zur-angeforderten-id',
+              label: 'Löscht den Personenkontext zur angeforderten ID.',
+              className: 'api-method delete',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-von-beziehungen',
+              label: 'Erstellen von Beziehungen.',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-von-beziehungen',
+              label: 'Auflistung von Beziehungen.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-von-sichtfreigaben',
+              label: 'Erstellen von Sichtfreigaben.',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-von-sichtfreigaben',
+              label: 'Auflistung von Sichtfreigaben.',
+              className: 'api-method get',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Beziehungen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-von-beziehungen',
+              label: 'Erstellen von Beziehungen.',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-von-beziehungen',
+              label: 'Auflistung von Beziehungen.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/beziehung-zur-angeforderten-id',
+              label: 'Beziehung zur angeforderten ID.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/loscht-die-beziehung-zur-angeforderten-id',
+              label: 'Löscht die Beziehung zur angeforderten ID.',
+              className: 'api-method delete',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Gruppenzugehörigkeiten',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/erstellen-einer-gruppenzugehorigkeit',
+              label: 'Erstellen einer Gruppenzugehörigkeit.',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-von-gruppenzugehorigkeiten-zur-gruppe',
+              label: 'Auflistung von Gruppenzugehörigkeiten zur Gruppe.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/auflistung-aller-gruppenzugehorigkeiten',
+              label: 'Auflistung aller Gruppenzugehörigkeiten.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/gruppenzugehorigkeit-zur-angeforderten-id',
+              label: 'Gruppenzugehörigkeit zur angeforderten ID.',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/aktualisiert-die-gruppenzugehorigkeit-der-angegebenen-id',
+              label:
+                'Aktualisiert die Gruppenzugehörigkeit der angegebenen ID.',
+              className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/loscht-die-gruppenzugehorigkeit-zur-angeforderten-id',
+              label: 'Löscht die Gruppenzugehörigkeit zur angeforderten ID.',
+              className: 'api-method delete',
+            },
+          ],
+        },
+      ],
     },
   ],
 };

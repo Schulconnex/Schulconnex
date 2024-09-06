@@ -178,6 +178,7 @@ const config: Config = {
             sidebarOptions: {
               groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
             },
+            template: 'src/generators/markdown/template.mustache',
           },
           apiQuellsysteme: { // is considered the <id> that you will reference in the CLI
             specPath: "src/openapi/api-qs.yaml", // path or URL to the OpenAPI spec
@@ -185,6 +186,7 @@ const config: Config = {
             sidebarOptions: {
               groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
             },
+            template: 'src/generators/markdown/template.mustache',
           }
         }
       },

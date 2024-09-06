@@ -69,7 +69,7 @@
 }
 
 .delete > .menu__link::before {
-  content: "del";
+  content: "delete";
   background-color: var(--ifm-color-danger-contrast-background);
   color: var(--ifm-color-danger-contrast-foreground);
   border-color: var(--ifm-color-danger-dark);
