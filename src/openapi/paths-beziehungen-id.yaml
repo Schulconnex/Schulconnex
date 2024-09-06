@@ -11,7 +11,7 @@ get:
     einer Beziehung per ID zugelassen. Die Antwort-Nutzdaten (Response Payload) beinhalten
     ein JSON-Objekt des Datentyps Beziehung.
 
-    Siehe auch Datenmodell [`Beziehung`](/docs/datenmodell/beziehung).
+    Siehe auch Datenmodell [`Beziehung`](../../../datenmodell/beziehung).
 
     Zusätzlich zu den Informationen aus dem Datenmodell wird ein Attribut `ist_von_ktid`
     mitgeliefert, welches angibt, welchen Personenkontext die Beziehung referenziert.
@@ -40,27 +40,27 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
 delete:
   tags:
     - Beziehungen
@@ -113,29 +113,29 @@ delete:
         informiert werden und eventuell existierende Information bei den Diensten gelöscht
         werden können.
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)

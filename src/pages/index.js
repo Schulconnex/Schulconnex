@@ -45,7 +45,7 @@ export default function Home() {
               <div className={styles.buttons}>
                 <Link
                   className="button button--secondary button--lg"
-                  to="/docs/stand-der-bearbeitung">
+                  to={`/docs/${siteConfig.presets[0][1].docs.versions.current.path}/stand-der-bearbeitung`}>
                   zur Spezifikation
                 </Link>
               </div>

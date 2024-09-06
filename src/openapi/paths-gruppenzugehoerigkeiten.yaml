@@ -12,9 +12,9 @@ get:
     (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Gruppendatensatz
     mit den jeweiligen Gruppenzugehörigkeiten und der zugeordneten Gruppe, sofern Einträge existieren.
 
-    Siehe auch Datenmodell [`Gruppendatensatz`](/docs/datenmodell/gruppendatensatz),
-    Datenmodell [`Gruppe`](/docs/datenmodell/gruppe) und Datenmodell
-    [`Gruppenzugehörigkeit`](/docs/datenmodell/gruppenzugehörigkeit).
+    Siehe auch Datenmodell [`Gruppendatensatz`](../../../datenmodell/gruppendatensatz),
+    Datenmodell [`Gruppe`](../../../datenmodell/gruppe) und Datenmodell
+    [`Gruppenzugehörigkeit`](../../../datenmodell/gruppenzugehörigkeit).
 
     Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut `gruppe` die Gruppen-ID
     über das Attribut `gruppe.id`.
@@ -60,24 +60,24 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)

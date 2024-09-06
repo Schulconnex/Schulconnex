@@ -28,7 +28,7 @@ get:
     Die Antwort-Nutzdaten (Response Payload) beinhalten ein Array von JSON-Objekten
     vom Datentyp „Personendatensatz“, sofern Einträge (ggf. passend zu den optionalen Filtern)
     existieren. Siehe auch die einzelnen Datenmodelle zu
-    [`Personendatensatz`](/docs/datenmodell/personendatensatz) und [`Person`](/docs/datenmodell/person).
+    [`Personendatensatz`](../../../datenmodell/personendatensatz) und [`Person`](../../../datenmodell/person).
 
     Die Ergebnisliste beinhaltet ausschließlich Datensätze vom Datentyp „Person“ beziehungsweise
     erweitert über das Attribut `personendatensatz.personenkontexte` Personenkontexte, welche
@@ -66,27 +66,27 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
 post:
   tags:
     - Personen
@@ -99,8 +99,8 @@ post:
     Ein CREATE ist nur mit HTTP-POST auf die API `/personen` zum Erstellen von Personendatensätzen
     zugelassen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps
     Personendatensatz. Siehe auch die einzelnen Datenmodelle zu
-    [`Personendatensatz`](/docs/datenmodell/personendatensatz) und
-    [`Person`](/docs/datenmodell/person).
+    [`Personendatensatz`](../../../datenmodell/personendatensatz) und
+    [`Person`](../../../datenmodell/person).
 
     Die folgende Tabelle listet die Attribute einer Person (`personendatensatz.person`),
     welche von einem Quellsystem oder Dienst nicht gesetzt werden können.
@@ -176,29 +176,29 @@ post:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)

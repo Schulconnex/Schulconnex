@@ -25,7 +25,7 @@ get:
     Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array
     des Datentyps Organisationsbeziehungen.
 
-    Siehe auch Datenmodell [`Organisationsbeziehung`](/docs/datenmodell/organisationsbeziehung).
+    Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell/organisationsbeziehung).
 
     Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` ermöglicht das
     Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.
@@ -70,24 +70,24 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
