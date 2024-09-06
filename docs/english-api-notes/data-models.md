@@ -76,7 +76,7 @@ the associated person contexts of that person.
 Attribute | Description
 --- | ---
 person | Person. (See [Personen](../datenmodell/person.md)).
-personenkontexte | Array of person contexts (see 5.5 [Personenkontext](../datenmodell/personenkontext.md)).
+personenkontexte | Array of person contexts (see [Personenkontext](../datenmodell/personenkontext.md)).
 
 ## Gruppe
 

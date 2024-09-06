@@ -64,8 +64,8 @@ get:
     `personenkontexte` alle freigegebenen Personenkontexte. In diesem Fall entspricht die `pid` der
     Identität der Person und jeder Personenkontext hat die eigene `id`, welche bei Anmeldung
     im Sicherheitskontext mit ausschließlichem Zugriff auf diesen Personenkontext als `pid`
-    ausgeliefert würde. Siehe auch die einzelnen Datenmodelle zu [`Person`](/docs/datenmodell/person)
-    und [`Personenkontext`](/docs/datenmodell/personenkontext).
+    ausgeliefert würde. Siehe auch die einzelnen Datenmodelle zu [`Person`](../../../datenmodell/person)
+    und [`Personenkontext`](../../../datenmodell/personenkontext).
 
     Es ist weiterhin möglich, dass eine angemeldete Person mehreren Gruppen zugeordnet ist.
     In diesem Fall können, geregelt durch eine vertragliche Absprache zwischen Dienstanbieter
@@ -214,24 +214,24 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)

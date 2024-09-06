@@ -13,7 +13,7 @@ get:
     (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Personenkontext,
     sofern Einträge (ggf. passend zu den optionalen Filtern) existieren.
 
-    Siehe auch Datenmodell [`Personenkontext`](/docs/datenmodell/personenkontext).
+    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell/personenkontext).
 
     Die Anfrage erfordert keine Nutzdaten (Request Payload).
 
@@ -29,8 +29,8 @@ get:
     Filter | Typ | Beschreibung
     --- | --- | ---
     `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
-    `rolle` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `personenkontext.rolle` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt die Codeliste [Rolle](/docs/codelisten#rolle) zugrunde.
-    `personenstatus` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „personenkontext.personenstatus” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filter-parameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt eine Codeliste [Personenstatus](/docs/codelisten#personenstatus) zugrunde.
+    `rolle` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `personenkontext.rolle` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt die Codeliste [Rolle](../../../codelisten#rolle) zugrunde.
+    `personenstatus` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „personenkontext.personenstatus” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filter-parameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt eine Codeliste [Personenstatus](../../../codelisten#personenstatus) zugrunde.
     `sichtfreigabe` | String | erlaubt es Personen, abhängig davon aufzulisten, ob diese von einer anderen Organisation zum Lesen freigegeben wurden. Die möglichen Optionen sind `sichtfreigabe=ja`, um nur die durch externe Organisationen freigegebenen Personen beziehungsweise Personenkontexte aufzulisten, und `sichtfreigabe=nein`, um nur eigene Personen beziehungsweise Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren Personen, beziehungsweise Personenkontexte geliefert.
 
     Die Organisation wurde beim Erstellen eines Personenkontexts vom Schulconnex-Server
@@ -74,27 +74,27 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
 post:
   tags:
     - Personen
@@ -110,7 +110,7 @@ post:
     zum Erstellen von Personenkontexten zu einem Personendatensatz zugelassen. Die
     Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps Personenkontext.
 
-    Siehe auch Datenmodell [`Personenkontext`](/docs/datenmodell/personenkontext).
+    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell/personenkontext).
 
     Beim Erstellen eines Personenkontexts ist der Default-Status des Attributes `personenstatus` der Wert `Aktiv`.
 
@@ -168,29 +168,29 @@ post:
         Erreichbarkeit. In diesem Fall liefert der Server den Fehlercode 400/19, wenn
         versucht wird ein Erreichbarkeiten-Array mit mehr als einem Eintrag zu erstellen.
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](/docs/schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
