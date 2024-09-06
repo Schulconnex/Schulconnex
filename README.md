@@ -60,4 +60,4 @@ npm run write-dereferenced-openapi-for-qs
 
 ## Lizenz
 
-Der Quellcode sowie die Releases sind lizenziert unter [CC BY-ND 2.0 DE](https://creativecommons.org/licenses/by-nd/2.0/de/legalcode)
+Der Quellcode sowie die Releases sind lizenziert unter [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/legalcode)
