@@ -2,9 +2,10 @@ post:
   tags:
     - Personenkontexte
     - Sichtfreigaben
+  operationId: createSichtfreigabe
   security:
     - oAuthForServices: []
-  summary: Erstellen von Sichtfreigaben.
+  summary: Erstellen einer Sichtfreigabe.
   description: |
     Mittels dieser Schnittstelle wird eine neue Sichtfreigabe für einen Personenkontext erstellt.
 
@@ -84,6 +85,7 @@ get:
   tags:
     - Personenkontexte
     - Sichtfreigaben
+  operationId: readSichtfreigaben
   security:
     - oAuthForServices: []
   summary: Auflistung von Sichtfreigaben.

@@ -1,6 +1,7 @@
 get:
   tags:
     - Personen
+  operationId: readPersonenkontexte
   security:
     - oAuthForServices: []
   summary: Liste bekannter Personenkontexte.

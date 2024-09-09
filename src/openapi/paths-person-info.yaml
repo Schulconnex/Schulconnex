@@ -1,6 +1,7 @@
 get:
   tags:
     - Personen
+  operationId: readPerson
   security:
     - oAuthForUser: []
   summary: Informationen der angemeldeten Person.

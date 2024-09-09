@@ -1,6 +1,7 @@
 get:
   tags:
     - Personen
+  operationId: readPersonendatensatzId
   security:
     - oAuthForServices: []
   summary: Personendatensatz zur angeforderten ID.
@@ -60,6 +61,7 @@ get:
 put:
   tags:
     - Personen
+  operationId: updatePersonendatensatzId
   security:
     - oAuthForServices: []
   summary: Aktualisiert den Personendatensatz der angegebenen ID.
@@ -150,6 +152,7 @@ put:
 delete:
   tags:
     - Personen
+  operationId: deletePersonendatensatzId
   security:
     - oAuthForServices: []
   summary: Löscht den Personendatensatz zur angeforderten ID.

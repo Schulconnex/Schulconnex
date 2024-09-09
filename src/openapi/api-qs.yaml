@@ -17,9 +17,19 @@ security:
   - oAuthForServices: []
 tags:
   - name: Personen
+    description: Alles zu Personen und Personendatensätzen
   - name: Organisationen
+    description: Schulen oder sonstige relevante Organisationen
   - name: Gruppen
+    description: Zusammenfassung von mehreren Personen
   - name: Sichtfreigaben
+    description: Regelt zeitliche Sichtfreigabe für Organisationen
+  - name: Personenkontexte
+    description: Gibt Rolle an
+  - name: Beziehungen
+    description: Beziehung zwischen Personen
+  - name: Gruppenzugehörigkeiten
+    description: Verknüpfung von Personenkontext und Gruppe
 paths:
   /personen:
     $ref: './paths-personen.yaml'

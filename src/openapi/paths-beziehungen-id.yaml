@@ -1,6 +1,7 @@
 get:
   tags:
     - Beziehungen
+  operationId: readBeziehungId
   security:
     - oAuthForServices: []
   summary: Beziehung zur angeforderten ID.
@@ -64,6 +65,7 @@ get:
 delete:
   tags:
     - Beziehungen
+  operationId: deleteBeziehungId
   security:
     - oAuthForServices: []
   summary: Löscht die Beziehung zur angeforderten ID.

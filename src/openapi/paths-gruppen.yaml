@@ -1,6 +1,7 @@
 post:
   tags:
     - Gruppen
+  operationId: createGruppe
   security:
     - oAuthForServices: []
   summary: Erstellen einer Gruppe.
@@ -67,6 +68,7 @@ post:
 get:
   tags:
     - Gruppen
+  operationId: readGruppendatensaetze
   security:
     - oAuthForServices: []
   summary: Gruppendatensätzen des Quellsystemanbieters.

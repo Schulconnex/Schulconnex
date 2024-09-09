@@ -1,6 +1,7 @@
 delete:
   tags:
     - Sichtfreigaben
+  operationId: deleteSichtfreigabeId
   security:
     - oAuthForServices: []
   summary: Freigaben für Personenkontexte löschen

@@ -2,6 +2,7 @@ post:
   tags:
     - Gruppen
     - Gruppenzugehörigkeiten
+  operationId: createGruppenzugehoerigkeit
   security:
     - oAuthForServices: []
   summary: Erstellen einer Gruppenzugehörigkeit.
@@ -81,6 +82,7 @@ get:
   tags:
     - Gruppen
     - Gruppenzugehörigkeiten
+  operationId: getGruppenzugehoerigkeiten
   security:
     - oAuthForServices: []
   summary: Auflistung von Gruppenzugehörigkeiten zur Gruppe.

@@ -1,6 +1,7 @@
 get:
   tags:
     - Gruppenzugehörigkeiten
+  operationId: readGruppenzugehoerigkeiten
   security:
     - oAuthForServices: []
   summary: Auflistung aller Gruppenzugehörigkeiten.
