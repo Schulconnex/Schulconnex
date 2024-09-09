@@ -23,7 +23,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     image: {
       src: '/img/lotus-flower-1805784_640.png',
-      width: 200,
+      height: 200,
     },
     text: (
         <Translate id="homepage.testimonials.name1">
@@ -45,7 +45,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     image: {
       src: '/img/tick-763800_640.png',
-      width: 200,
+      height: 200,
     },
     text: (
         <Translate id="homepage.testimonials.name2">
@@ -62,7 +62,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     image: {
       src: '/img/lotus-flower-1805784_640.png',
-      width: 200,
+      height: 200,
     },
     text: (
         <Translate id="homepage.testimonials.name3">
@@ -82,7 +82,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     image: {
       src: '/img/company-7759278_640.png',
-      width: 200,
+      height: 200,
     },
     text: (
         <Translate id="homepage.testimonials.name4">
@@ -104,7 +104,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     image: {
       src: '/img/star-2822548_640.png',
-      width: 200,
+      height: 200,
     },
     text: (
         <Translate id="homepage.testimonials.name5">
