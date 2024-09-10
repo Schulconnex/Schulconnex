@@ -56,57 +56,57 @@
 
 .get > .menu__link::before {
   content: "get";
-  background-color: var(--ifm-color-info-contrast-background);
-  color: var(--ifm-color-info-contrast-foreground);
-  border-color: var(--ifm-color-info-dark);
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-badge-color);
+  border-color: var(--ifm-color-primary);
 }
 
 .post > .menu__link::before {
   content: "post";
-  background-color: var(--ifm-color-success-contrast-background);
-  color: var(--ifm-color-success-contrast-foreground);
-  border-color: var(--ifm-color-success-dark);
+  background-color: var(--ifm-color-success);
+  color: var(--ifm-badge-color);
+  border-color: var(--ifm-color-success);
 }
 
 .delete > .menu__link::before {
   content: "delete";
-  background-color: var(--ifm-color-danger-contrast-background);
-  color: var(--ifm-color-danger-contrast-foreground);
-  border-color: var(--ifm-color-danger-dark);
+  background-color: var(--ifm-color-danger);
+  color: var(--ifm-badge-color);
+  border-color: var(--ifm-color-danger);
 }
 
 .put > .menu__link::before {
   content: "put";
-  background-color: var(--ifm-color-warning-contrast-background);
-  color: var(--ifm-color-warning-contrast-foreground);
-  border-color: var(--ifm-color-warning-dark);
+  background-color: var(--ifm-color-info);
+  color: var(--ifm-badge-color);
+  border-color: var(--ifm-color-info);
 }
 
 .patch > .menu__link::before {
   content: "patch";
-  background-color: var(--ifm-color-success-contrast-background);
-  color: var(--ifm-color-success-contrast-foreground);
-  border-color: var(--ifm-color-success-dark);
+  background-color: var(--ifm-color-warning);
+  color: var(--ifm-badge-color);
+  border-color: var(--ifm-color-warning);
 }
 
 .head > .menu__link::before {
   content: "head";
   background-color: var(--ifm-color-secondary-contrast-background);
-  color: var(--ifm-color-secondary-contrast-foreground);
+  color: var(--ifm-badge-color);
   border-color: var(--ifm-color-secondary-dark);
 }
 
 .event > .menu__link::before {
   content: "event";
   background-color: var(--ifm-color-secondary-contrast-background);
-  color: var(--ifm-color-secondary-contrast-foreground);
+  color: var(--ifm-badge-color);
   border-color: var(--ifm-color-secondary-dark);
 }
 
 .schema > .menu__link::before {
   content: "schema";
   background-color: var(--ifm-color-secondary-contrast-background);
-  color: var(--ifm-color-secondary-contrast-foreground);
+  color: var(--ifm-badge-color);
   border-color: var(--ifm-color-secondary-dark);
 }
 /* Ende Übernahme aus dem Repository */
