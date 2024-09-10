@@ -10,8 +10,8 @@ import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 
 import HomepageText from './_homepage-text.md';
 
-import Testimonials from // type TestimonialItem,
-'@site/src/data/testimonials';
+import Testimonials from '@site/src/data/testimonials'; // type TestimonialItem,
+import { shuffle } from './utils';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -61,8 +61,9 @@ function Testimonial(
 }
 
 function TestimonialsContainer() {
-  const firstRow = Testimonials.slice(0, 3);
-  const secondRow = Testimonials.slice(3);
+  const testimonials = shuffle([...Testimonials]);
+  const firstRow = testimonials.slice(0, 3);
+  const secondRow = testimonials.slice(3);
 
   return (
     <div className="container text--center">
