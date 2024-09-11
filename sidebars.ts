@@ -1,5 +1,6 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
-import {default as itemsQuellsysteme} from './docs/generated/openapi/quellsysteme/sidebar'
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import { default as itemsDienste } from './docs/generated/openapi/dienste/sidebar'
+import { default as itemsQuellsysteme } from './docs/generated/openapi/quellsysteme/sidebar'
 
 /**
  * Creating a sidebar enables you to:
@@ -121,10 +122,7 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'generated/openapi/dienste/schulconnex',
       },
-      items: [
-        'generated/openapi/dienste/informationen-der-angemeldeten-person',
-        'generated/openapi/dienste/liste-bekannter-personenkontexte',
-      ],
+      items: itemsDienste.splice(1),
     },
   ],
 
