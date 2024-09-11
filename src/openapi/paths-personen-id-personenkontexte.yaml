@@ -2,7 +2,7 @@ get:
   tags:
     - Personen
     - Personenkontexte
-  operationId: readPersonenkontexteId
+  operationId: readPersonIdPersonenkontexte
   security:
     - oAuthForServices: []
   summary: Personenkontexte zur angeforderten ID.

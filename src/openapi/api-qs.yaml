@@ -25,9 +25,9 @@ tags:
   - name: Sichtfreigaben
     description: Regelt zeitliche Sichtfreigabe für Organisationen
   - name: Personenkontexte
-    description: Gibt Rolle an
+    description: Gibt Rolle, Schule bzw. Organisation an
   - name: Beziehungen
-    description: Beziehung zwischen Personen
+    description: Beziehung zwischen Personenkontexten
   - name: Gruppenzugehörigkeiten
     description: Verknüpfung von Personenkontext und Gruppe
 paths:

@@ -91,7 +91,7 @@ get:
 post:
   tags:
     - Personen
-  operationId: createPersonendatensatz
+  operationId: createPerson
   security:
     - oAuthForServices: []
   summary: Erstellen eines Personendatensatzes.

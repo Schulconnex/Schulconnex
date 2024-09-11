@@ -61,7 +61,7 @@ get:
 put:
   tags:
     - Personen
-  operationId: updatePersonendatensatzId
+  operationId: updatePersonId
   security:
     - oAuthForServices: []
   summary: Aktualisiert den Personendatensatz der angegebenen ID.
