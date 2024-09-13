@@ -21,7 +21,7 @@ Anbieterkennung, Attributsobjektname und die Namen der zusätzlichen Attribute m
 
 `<anbieterkennung>` muss dabei eine einzigartige, vom Anbieter vergebenen Kennung sein. Hierbei sollte allgemein der Herstellername oder eine Variante davon genommen werden. In Ausnahmefällen, wenn mehre Produkte eines Herstellers Attribute benötigen, bei denen die Zuordenbarkeit zu einem spezifischen Produkt notwendig ist, kann es sich auch um einen Produktnamen handeln.
 
-* `<attributsobjektname>` ist der Name des spezifischen Attribut-Objektes. Der Name sollte die Funktion der in dem Objekt enthaltenen Attribute beschreiben.
+`<attributsobjektname>` ist der Name des spezifischen Attribut-Objektes. Der Name sollte die Funktion der in dem Objekt enthaltenen Attribute beschreiben.
 
 Innerhalb eines Attribut-Objektes können auch mehrere Attribute, hierarchische Attribute, Arrays von Attributen und Attribute unterschiedlicher Typen aufgeführt werden.
 
