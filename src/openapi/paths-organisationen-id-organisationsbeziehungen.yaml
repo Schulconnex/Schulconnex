@@ -1,7 +1,7 @@
 get:
   tags:
     - Organisationen
-  operationId: readOrganisationsbeziehungen
+  operationId: readOrganisationIdOrganisationsbeziehungen
   security:
     - oAuthForServices: []
   summary: Auflistung von Organisationsbeziehungen.

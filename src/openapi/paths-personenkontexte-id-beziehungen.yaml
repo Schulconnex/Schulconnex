@@ -2,7 +2,7 @@ post:
   tags:
     - Personenkontexte
     - Beziehungen
-  operationId: createBeziehung
+  operationId: createPersonenkontextIdBeziehung
   security:
     - oAuthForServices: []
   summary: Erstellen einer Beziehung.
@@ -102,7 +102,7 @@ get:
   tags:
     - Personenkontexte
     - Beziehungen
-  operationId: readBeziehungen
+  operationId: readPersonenkontextIdBeziehungen
   security:
     - oAuthForServices: []
   summary: Auflistung von Beziehungen.

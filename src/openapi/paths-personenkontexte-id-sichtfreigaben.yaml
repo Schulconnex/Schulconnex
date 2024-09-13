@@ -2,7 +2,7 @@ post:
   tags:
     - Personenkontexte
     - Sichtfreigaben
-  operationId: createSichtfreigabe
+  operationId: createPersonenkontextIdSichtfreigabe
   security:
     - oAuthForServices: []
   summary: Erstellen einer Sichtfreigabe.
@@ -85,7 +85,7 @@ get:
   tags:
     - Personenkontexte
     - Sichtfreigaben
-  operationId: readSichtfreigaben
+  operationId: readPersonenkontextIdSichtfreigaben
   security:
     - oAuthForServices: []
   summary: Auflistung von Sichtfreigaben.

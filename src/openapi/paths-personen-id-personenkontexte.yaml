@@ -100,7 +100,7 @@ post:
   tags:
     - Personen
     - Personenkontexte
-  operationId: createPersonenkontext
+  operationId: createPersonIdPersonenkontext
   security:
     - oAuthForServices: []
   summary: Erstellen eines Personenkontexts zu einem bestimmten Personendatensatz.
