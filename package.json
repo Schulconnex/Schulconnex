@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus gen-api-docs all && docusaurus build",
+    "build": "npm run write-dereferenced-openapi && docusaurus gen-api-docs all && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -16,6 +16,7 @@
     "clean-openapi-docs": "git clean -dxf -- docs/generated/",
     "write-dereferenced-openapi-for-qs": "redocly bundle --dereferenced --remove-unused-components src/openapi/api-qs.yaml -o static/dist/openapi/api-qs.yaml",
     "write-dereferenced-openapi-for-dienste": "redocly bundle --dereferenced --remove-unused-components src/openapi/api-dienste.yaml -o static/dist/openapi/api-dienste.yaml",
+    "write-dereferenced-openapi": "npm run write-dereferenced-openapi-for-dienste && npm run write-dereferenced-openapi-for-qs",
     "validate-openapi": "npx @redocly/cli lint src/openapi/api-dienste.yaml src/openapi/api-qs.yaml"
   },
   "dependencies": {
