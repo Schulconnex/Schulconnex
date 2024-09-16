@@ -1,6 +1,7 @@
 get:
   tags:
     - Gruppenzugehörigkeiten
+  operationId: readGruppenzugehoerigkeitId
   security:
     - oAuthForServices: []
   summary: Gruppenzugehörigkeit zur angeforderten ID.
@@ -60,6 +61,7 @@ get:
 put:
   tags:
     - Gruppenzugehörigkeiten
+  operationId: updateGruppenzugehoerigkeitId
   security:
     - oAuthForServices: []
   summary: Aktualisiert die Gruppenzugehörigkeit der angegebenen ID.
@@ -154,6 +156,7 @@ put:
 delete:
   tags:
     - Gruppenzugehörigkeiten
+  operationId: deleteGruppenzugehoerigkeitId
   security:
     - oAuthForServices: []
   summary: Löscht die Gruppenzugehörigkeit zur angeforderten ID.

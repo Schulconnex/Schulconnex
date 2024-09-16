@@ -1,6 +1,7 @@
 get:
   tags:
     - Gruppen
+  operationId: readGruppeId
   security:
     - oAuthForServices: []
   summary: Gruppe zur angeforderten ID.
@@ -57,6 +58,7 @@ get:
 put:
   tags:
     - Gruppen
+  operationId: updateGruppeId
   security:
     - oAuthForServices: []
   summary: Aktualisiert die Gruppe der angegebenen ID.
@@ -158,6 +160,7 @@ put:
 delete:
   tags:
     - Gruppen
+  operationId: deleteGruppeId
   security:
     - oAuthForServices: []
   summary: Löscht die Gruppe zur angeforderten ID.

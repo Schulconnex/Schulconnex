@@ -2,6 +2,7 @@ get:
   tags:
     - Personen
     - Personenkontexte
+  operationId: readPersonIdPersonenkontexte
   security:
     - oAuthForServices: []
   summary: Personenkontexte zur angeforderten ID.
@@ -99,6 +100,7 @@ post:
   tags:
     - Personen
     - Personenkontexte
+  operationId: createPersonIdPersonenkontext
   security:
     - oAuthForServices: []
   summary: Erstellen eines Personenkontexts zu einem bestimmten Personendatensatz.

@@ -18,7 +18,9 @@ security:
   - oAuthForUser: []
 tags:
   - name: Personen
+    description: Alles zu Personen und Personendatensätzen
   - name: Organisationen
+    description: Schulen oder sonstige relevante Organisationen
 paths:
   /person-info:
     $ref: './paths-person-info.yaml'
