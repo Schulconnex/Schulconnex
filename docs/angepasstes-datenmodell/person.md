@@ -26,4 +26,4 @@ geburt.volljaehrig | String (Code) | 0/0..1 | ja | Gibt an, ob eine Person vollj
 geburt.geburtsort | String (DIN 91379.C) | 0/0..1 | ja | Geburtsort einer Person, bestehend aus Ortsname und Land, beispielsweise „Eindhoven, Niederlande“. Wird kein Land angegeben, so wird als Land „Deutschland“ angenommen, d.h. der Geburtsort „Erfurt“ ist wie „Erfurt, Deutschland“ zu behandeln.
 geschlecht | String (Code) | 0/0..1 | ja | Referenz auf einen Code der Codeliste *Geschlecht*.
 lokalisierung | String (Code) | 0/0..1 | ja | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Referenz auf einen Code der Codeliste *Lokalisierung*. Wenn nicht angegeben, wird „de“ angenommen.
-vertrauensstufe | String (Code) | 0/0..1 | ja | Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden, Referenz auf einen Code der Codeliste *Vertrauensstufe*.
+vertrauensstufe | String (Code) | 0/1 | ja | Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden, Referenz auf einen Code der Codeliste *Vertrauensstufe*.
