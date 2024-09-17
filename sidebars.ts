@@ -111,6 +111,7 @@ const sidebars: SidebarsConfig = {
         'praxisleitfaden/ablauf-löschen',
       ],
     },
+    'aenderungen',
   ],
 
   apiDiensteSidebarOpenAPIDocs: [
