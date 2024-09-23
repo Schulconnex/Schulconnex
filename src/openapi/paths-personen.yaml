@@ -1,6 +1,7 @@
 get:
   tags:
     - Personen
+  operationId: readPersonen
   security:
     - oAuthForServices: []
   summary: Personendatensätze des Quellsystemanbieters.
@@ -90,6 +91,7 @@ get:
 post:
   tags:
     - Personen
+  operationId: createPerson
   security:
     - oAuthForServices: []
   summary: Erstellen eines Personendatensatzes.

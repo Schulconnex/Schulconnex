@@ -1,6 +1,7 @@
 get:
   tags:
     - Organisationen
+  operationId: readOrganisationInfo
   security:
     - oAuthForUser: []
   summary: Informationen zu der Organisation des Quellsystems.

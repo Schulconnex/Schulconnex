@@ -1,6 +1,7 @@
 get:
   tags:
     - Personen
+  operationId: readPersonenInfo
   security:
     - oAuthForServices: []
   summary: Liste bekannter Personenkontexte.
@@ -36,6 +37,13 @@ get:
     Der Filter vollstaendig kann die Werte `personen`, `personenkontexte`, `organisationen`,
     `gruppen` oder `beziehungen` annehmen. Mehrere Werte können, getrennt durch Kommas, in einem
     Filter genutzt werden.
+
+    Zu beachten ist hierbei, dass bei Objekt-Hierarchien untergeordnete Objekte nur dann
+    ausgegeben werden, wenn auch die in der Hierarchie direkt darüber liegenden Objekte ausgegeben
+    werden. So werden bei der Auswahl von `vollstaendig=personen,organisationen` Informationen
+    zu den Organisationen nicht mit ausgegeben, da diese nicht Teil von `personen` sind, sondern
+    von `personenkontexten`. Sollen Informationen zu Organisationen mit ausgegeben werden, so
+    ist als Filter `vollstaendig=personen,personenkontexte,organisationen` zu benutzen.
 
     Darüber hinaus kann auch eine Filterung nach Personen, Personenkontexten, Gruppen und
     Organisationen anhand der jeweiligen ID erfolgen.

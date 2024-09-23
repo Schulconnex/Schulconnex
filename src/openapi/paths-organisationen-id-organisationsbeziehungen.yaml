@@ -1,9 +1,10 @@
 get:
   tags:
     - Organisationen
+  operationId: readOrganisationIdOrganisationsbeziehungen
   security:
     - oAuthForServices: []
-  summary: Auflistung von Organisationenbeziehungen.
+  summary: Auflistung von Organisationsbeziehungen.
   description: |
     Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` erlaubt das
     Lesen von zu einer Organisation gehörenden Organisationsbeziehungen.

@@ -1,6 +1,7 @@
 get:
   tags:
     - Organisationen
+  operationId: readOrganisationen
   security:
     - oAuthForServices: []
   summary: Auflistung von Organisationen.

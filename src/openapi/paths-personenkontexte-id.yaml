@@ -1,6 +1,7 @@
 get:
   tags:
     - Personenkontexte
+  operationId: readPersonenkontextId
   security:
     - oAuthForServices: []
   summary: Personenkontext zur angeforderten ID.
@@ -62,6 +63,7 @@ get:
 put:
   tags:
     - Personenkontexte
+  operationId: updatePersonenkontextId
   security:
     - oAuthForServices: []
   summary: Aktualisiert den Personenkontext der angegebenen ID.
@@ -167,6 +169,7 @@ put:
 delete:
   tags:
     - Personenkontexte
+  operationId: deletePersonenkontextId
   security:
     - oAuthForServices: []
   summary: Löscht den Personenkontext zur angeforderten ID.
