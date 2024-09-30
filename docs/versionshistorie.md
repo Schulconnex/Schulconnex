@@ -1,39 +1,33 @@
 # Versionshistorie
 
-Die Versionshistorie beschreibt die wichtigsten inhaltlichen Änderungen zwischen
-den veröffentlichten Releases von Schulconnex.
+Die Versionshistorie beschreibt die wichtigsten inhaltlichen Änderungen zwischen den veröffentlichten Versionen von Schulconnex.
 
-Detailierte Informationen zu Änderungen finden sich in der Historie
-der Github-Issues und der entsprechenden Pull-Requests.
+Detailierte Informationen zu den Änderungen finden sich in der Historie der Github Issues und der entsprechenden Pull Requests.
 
 ## Änderungen von Version 1.4 zu Version 1.5
 
-### Neue Datenmodelle
-•	Sichtfreigabe
-### Neue APIs
-* APIs Sichtfreigabe
+### Allgemeines
+
+* Regeln für herstellereigene Attribute definiert
+
+### Neue Datenmodell und APIs
+
+* API Sichtfreigabe
   * POST /personenkontexte/:id/sichtfreigaben
   * GET /personenkontexte/:id/sichtfreigaben
   * DELETE /sichtfreigaben/:id
 * API Organisationen für Dienstanbieter
-  * GET /organisation-info
-* Regelungen für herstellereigene Attribute
+  * GET /organisationen-info
+
 ### Geänderte APIs
-* Anbieter können auch eigene Attribute hinzufügen
-* Möglichkeit auch nach Mandanten zu filtern
-* Attribut rufname in Datenmodell Person für Dienstanbieter
-* Attribut gruppenzugehoerigkeit.von und gruppenzugehoerigkeit.bis an Dienstanbieter auslieferbar
-* Attribut "verwaistepersonloeschen" bei  Datenmodell Personenkontext und Personpersonenkontext für Dienste hinzugefügt
-* Bei Gruppen sind auch Mischungen von Datums- und Lernperiode-basierten Anfangs- und Endzeiten möglich.
-* Über OIDC kann jetzt auch die E-Mail abgefragt werden
-* Bei erfolgreichem Create/POST wird jetzt Code 201 statt 200 geliefert
+
+* Filterattribut `mandant` für Quellsysteme definiert
+* Attribut `rufname` in das Datenmodell Person für Dienstanbieter aufgenommen
+* Attribute `gruppenzugehoerigkeit.von` und `gruppenzugehoerigkeit.bis` in das Datenmodell Gruppe für Dienstanbieter aufgenommen
+* Erfolgreiche `HTTP POST`-Aufrufe werden mit dem Code `201` quittiert. **Diese Änderung ist nicht rückwärtskompatibel.**
+
 ### Geänderte Codelisten
-* Neue Rollen SchB und NLehr in Codeliste Rolle
-* Neue Rolle VLehr in Codeliste Gruppenrolle
-* Codeliste Gruppenoptionen enthält derzeit keine Werte
-### Geänderte Beschreibungen
-* Nutzung der Schnittstelle durch Quellsysteme unter Allgemeines
-* Lieferung leerer Listen bei nicht passenden Filtern
-* Personenkontexte bei Personen mit mehren Rollen
 
-
+* Codeliste Rollen: Neue Rollen `SchB` (Schulbetreuung) und `NLehr` (Nichtlehrendes Personal) definiert
+* Codeliste Gruppenrollen: Neue Rolle `VLehr` (Vertretungslehrkraft) definiert
+* Die Codeliste Gruppenoptionen enthält derzeit keine Werte.
