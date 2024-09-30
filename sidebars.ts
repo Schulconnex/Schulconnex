@@ -131,7 +131,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "doc",
               id: "generated/openapi/dienste/read-organisationen-info",
-              label: "Organisationen auflisten.",
+              label: "/organisationen-info",
               className: "api-method get",
             },
           ],
@@ -143,13 +143,13 @@ const sidebars: SidebarsConfig = {
             {
               type: "doc",
               id: "generated/openapi/dienste/read-person-info",
-              label: "Informationen der angemeldeten Person.",
+              label: "/person-info",
               className: "api-method get",
             },
             {
               type: "doc",
               id: "generated/openapi/dienste/read-personen-info",
-              label: "Liste bekannter Personenkontexte.",
+              label: "/personen-info",
               className: "api-method get",
             },
           ],
