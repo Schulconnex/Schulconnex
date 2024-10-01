@@ -86,7 +86,6 @@ put:
     `id` | ID der Gruppe. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `mandant` | Mandanten-ID der Gruppe. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `orgid` | Organisations-ID der Gruppe. Wird automatisch vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-    `sichtfreigabe` | Gibt an, ob diese Gruppe nur aufgrund einer Freigabe durch eine andere Organisation sichtbar ist. Sollte der Wert von Sichtfreigabe `Ja` sein, führt ein Update auf diese Gruppe zu einer Fehlermeldung, da eine Sichtfreigabe nur das Lesen der Gruppe erlaubt.
     `revision` | Revision der Gruppe. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
 
     Die Attribute `id`, `mandant` und `orgid` können im Request ausgelassen werden. Sind ein

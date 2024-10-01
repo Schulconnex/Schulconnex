@@ -15,8 +15,6 @@ properties:
     type: string
     format: uuid
     example: 9b3f36ad-9d15-49f9-9660-6cf9746ba446
-  sichtfreigabe:
-    $ref: './components-code-Boolean.yaml'
   revision:
     description: Revision der Gruppe.
     type: string

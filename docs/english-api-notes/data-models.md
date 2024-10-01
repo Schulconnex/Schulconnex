@@ -108,7 +108,6 @@ laufzeit.von | Start date of the group as a date.
 laufzeit.vonlernperiode | Start date of the group as a reference to a teaching period. Refers to code list *Lernperiode*.
 laufzeit.bis | End date of the group as a date.
 laufzeit.bislernperiode | End date of the group as a reference to a teaching period. Refers to code list *Lernperiode*.
-sichtfreigabe | Boolean value that denotes whether the data is only visible due to another organisation providing read access.
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system.
 
 ## Gruppenzugehörigkeit

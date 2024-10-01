@@ -125,7 +125,6 @@ get:
     `bildungsziele` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.bildungsziele` zu filtern.
     `jahrgangsstufen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.jahrgangsstufen` zu filtern.
     `faecher` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.faecher.kennung` und  `gruppe.faecher.text` zu filtern.
-    `sichtfreigabe` | String | Erlaubt es Gruppen, abhängig davon aufzulisten, ob diese von einer anderen Organisation zum Lesen freigegeben wurden. Die möglichen Optionen sind  `sichtfreigabe=Ja`, um nur die durch externe Organisationen freigegebenen Gruppen aufzulisten, und `sichtfreigabe=Nein`, um nur eigene Gruppen aufzulisten. Wird nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren Gruppen geliefert.
   parameters:
     - in: query
       name: referrer
@@ -157,10 +156,6 @@ get:
         type: string
     - in: query
       name: faecher
-      schema:
-        type: string
-    - in: query
-      name: sichtfreigabe
       schema:
         type: string
   responses:

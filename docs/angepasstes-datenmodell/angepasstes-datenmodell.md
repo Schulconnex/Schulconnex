@@ -109,7 +109,6 @@ classDiagram
     laufzeit.vonlernperiode
     laufzeit.bis
     laufzeit.bislernperiode
-    sichtfreigabe
   }
   class Lernperiode {
     code
