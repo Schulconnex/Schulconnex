@@ -174,7 +174,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "doc",
               id: "generated/openapi/quellsysteme/read-organisationen",
-              label: "/organisationen/\u200B:id",
+              label: "/organisationen",
               className: "api-method get",
             },
             {
