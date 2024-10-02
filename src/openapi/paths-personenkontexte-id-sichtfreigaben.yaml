@@ -103,6 +103,7 @@ get:
       schema:
         type: string
         format: uuid
+      required: true
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontextes.
   responses:
     '200':
