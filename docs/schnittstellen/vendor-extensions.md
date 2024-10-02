@@ -18,7 +18,7 @@ Betreiber von Schulconnex-Servern, die herstellereigene Attribute verwenden, mü
 
 ## Beispiel: Erweiterung von Person um eine Personalnummer
 
-Im folgenden Beispiel wird der Datensatz einer Person um das herstellereigene Attribut "Personalnummer" dieser Person bei der Stammorganisation erweitert. `schulsystemix` ist hierbei der Name eines fiktionalen Herstellers.
+Im folgenden Beispiel wird der Datensatz einer Person um das herstellereigene Attribut `personalnummer` dieser Person bei der Stammorganisation erweitert. `schulsystemix` ist hierbei der Name eines fiktionalen Herstellers.
 
 ```json
 {
