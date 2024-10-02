@@ -10,7 +10,7 @@ Detailierte Informationen zu den Änderungen finden sich in der Historie der Git
 
 * Regeln für herstellereigene Attribute definiert
 
-### Neue Datenmodell und APIs
+### Neue Datenmodelle und APIs
 
 * API Sichtfreigabe
   * POST /personenkontexte/:id/sichtfreigaben
