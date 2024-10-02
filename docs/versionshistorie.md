@@ -30,4 +30,4 @@ Detailierte Informationen zu den Änderungen finden sich in der Historie der Git
 
 * Codeliste Rollen: Neue Rollen `SchB` (Schulbetreuung) und `NLehr` (Nichtlehrendes Personal) definiert
 * Codeliste Gruppenrollen: Neue Rolle `VLehr` (Vertretungslehrkraft) definiert
-* Die Codeliste Gruppenoptionen enthält derzeit keine Werte.
+* Die Codeliste Gruppenoptionen enthält derzeit keine Werte
