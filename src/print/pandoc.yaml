@@ -1,0 +1,12 @@
+from: markdown
+pdf-engine: xelatex
+variables:
+  geometry: a4paper
+  mainfont: Roboto
+  colorlinks: true
+filters:
+  - pandoc-include
+template: src/print/eisvogel
+number-sections: true
+toc: true
+listings: true
