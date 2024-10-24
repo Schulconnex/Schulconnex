@@ -23,7 +23,7 @@ get:
       name: id
       schema:
         type: string
-        format: uuid
+        example: grupz_2343_eng
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
   responses:
@@ -107,7 +107,7 @@ put:
       name: id
       schema:
         type: string
-        format: uuid
+        example: grupz_2343_eng
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
   requestBody:
@@ -184,7 +184,7 @@ delete:
       name: id
       schema:
         type: string
-        format: uuid
+        example: grupz_2343_eng
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
   requestBody:

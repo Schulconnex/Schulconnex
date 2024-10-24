@@ -10,6 +10,7 @@ properties:
   stammorganisation:
     description: Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Der häufigste Anwendungsfall ist die Abordnung eines Lehrenden an eine andere Dienststelle. Die Stammorganisation ist unabhängig vom Personenkontext.
     type: string
+    example: ad4a5d27-631d-49a3-bc0a-cc28614f8443
   name:
     type: object
     required:

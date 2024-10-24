@@ -6,6 +6,7 @@ properties:
   referrer:
     description: ID der Gruppe im Quellsystem.
     type: string
+    example: grup_678
   bezeichnung:
     description: Bezeichnung der Gruppe.
     type: string

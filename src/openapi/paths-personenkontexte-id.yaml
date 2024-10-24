@@ -23,7 +23,7 @@ get:
       name: id
       schema:
         type: string
-        format: uuid
+        example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   responses:
@@ -115,7 +115,7 @@ put:
       name: id
       schema:
         type: string
-        format: uuid
+        example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   requestBody:
@@ -192,7 +192,7 @@ delete:
       name: id
       schema:
         type: string
-        format: uuid
+        example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   requestBody:

@@ -6,8 +6,7 @@ properties:
   ktid:
     description: ID des Personenkontexts, welcher der Gruppe zugeordnet ist.
     type: string
-    format: uuid
-    example: 23643c9e-956a-4baa-af4e-813e0a7efa4b
+    example: 2931ecbf5ff4349efcb2cd90858da604f5f9be2a4cd675993d2680e98af5b6ec
   rollen:
     description: ''
     type: array
