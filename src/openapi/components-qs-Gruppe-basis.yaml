@@ -51,7 +51,7 @@ properties:
         - grupid
       properties:
         grupid:
-          description: ''
+          description: ID der Referenzgruppe.
           type: string
           example: e70663cb-65c4-4ad5-a9f1-7edbc3c36c4b
         rollen:
