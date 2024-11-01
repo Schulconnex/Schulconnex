@@ -1,6 +1,6 @@
 # Organisationsbeziehung
 
-Das Datenmodell Organisationsbeziehung beschreibt die Beziehung zweier Organisationen.
+Das Datenmodell Organisationsbeziehung beschreibt die Beziehung zweier [Organisationen](./organisation.md).
 
 Das Attribut `organisationsbeziehung` ist in der Form „hat_als“ zu verstehen. Ist eine
 Organisation A mit Organisationsbeziehung `"SchBeh"` zur `orgid` einer Organisation B

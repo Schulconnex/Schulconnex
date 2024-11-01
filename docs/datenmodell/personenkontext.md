@@ -1,14 +1,12 @@
 # Personenkontext
 
 Der Personenkontext gibt an, in welcher Rolle der Dienst von nutzenden Personen in Anspruch genommen wird.
-Der Personenkontext umfasst neben der Rolle auch Informationen über die Organisation, an der
-diese Rolle ausgeführt wird.
-
-Eine Person kann einen oder mehrere Personenkontexte besitzen, indem sie beispielsweise an derselben
+Der Personenkontext umfasst neben der Rolle auch Informationen über die [Organisation](./organisation.md), an der diese Rolle ausgeführt wird.
+Eine [Person](./person.md) kann einen oder mehrere Personenkontexte besitzen, indem sie beispielsweise an derselben
 Schule sowohl die Rollen „Schulleiter“ als auch „Erziehungsberechtigter“ hat, oder an einer Schule
 die Rolle „Lehrender“ und an einer weiteren Organisation „Lernender“ ist.
 
-In einem Personenkontext kann einer Person jeweils nur eine Organisation und eine Rolle in dieser Organisation zugewiesen werden. Diese Rollen sind soweit wie möglich disjunkt, um zu vermeiden, dass es zu Unschärfen in der Nutzung von Personenkontexten kommt. Hat eine Person mehrere Rollen (beispielsweise Organisationsadministratorin und Lehrende), so sind entsprechend mehrere Personenkontexte zu erstellen und dafür Sorge zu tragen, dass diesen Personenkontexten zugeordnete Informationen (wie Gruppen, Beziehungen, Sichtfreigaben) der Rolle des jeweiligen Personenkontexts entsprechen.
+In einem Personenkontext kann einer [Person](./person.md) jeweils nur eine Organisation und eine Rolle in dieser Organisation zugewiesen werden. Diese Rollen sind soweit wie möglich disjunkt, um zu vermeiden, dass es zu Unschärfen in der Nutzung von Personenkontexten kommt. Hat eine Person mehrere Rollen (beispielsweise Organisationsadministratorin und Lehrende), so sind entsprechend mehrere Personenkontexte zu erstellen und dafür Sorge zu tragen, dass diesen Personenkontexten zugeordnete Informationen (wie Gruppen, Beziehungen, Sichtfreigaben) der Rolle des jeweiligen Personenkontexts entsprechen.
 
 Es dürfen jedoch keine inhaltlich identischen Personenkontexte angelegt werden. Insbesondere ist es
 unzulässig, dieselbe Kombination aus Organisation und Rolle einer Person in unterschiedlichen
@@ -25,14 +23,14 @@ Attribut | Typ | Anzahl | Bemerkung
 id | String (UTF-8) | 1 | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
 referrer | String (UTF-8) | 0..1 | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein.
 mandant | String (UTF-8) | 1 |  ID des Mandanten, dem der Personenkontext zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
-organisation | Organisation | 1 | Organisation. (Siehe Datenmodell *Organisation*).
-rolle | String (Code) | 1 | Rolle der Person innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*.
+organisation | [Organisation](./organisation.md) | 1 | Siehe [Organisation](./organisation.md).
+rolle | String (Code) | 1 | Rolle der [Person](./person.md) innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*.
 erreichbarkeiten | *Array* | 0..n | Liste (Array) von Attributpaaren aus Erreichsbarkeitstyp und Kennung.
 erreichbarkeiten[].typ | String (Code) | 1 | Typ der Erreichbarkeit. Referenz auf Liste von Codes der Codeliste *Erreichbarkeitstyp*.
-erreichbarkeiten[].kennung | String (UTF-8) | 1 | Konkrete Angabe der zum Erreichen der Person oder Organisation notwendigen Information. Derzeit ist nur die Erreichbarkeit über  eine E-Mail- Adresse vorgesehen.
-personenstatus | String (Code) | 0..1 | Status, den eine Person in einer Organisation in Bezug auf eine bestimmte Rolle hat, Referenz auf einen Code der Codeliste *Personenstatus*.
-jahrgangsstufe | String (Code) | 0..1 | Jahrgangsstufe, die eine Person in der Organisation in einer bestimmten Rolle besucht, Referenz auf Code der Codeliste *Jahrgangsstufe*.
-sichtfreigabe | String (Code) | 0..1 | Attribut gibt an, ob dieser Personenkontext aufgrund der Freigabe durch eine andere Organisation sichtbar ist. Ist `sichtfreigabe` nicht gesetzt, so entspricht das dem Wert `nein`. Der Wert von Sichtfreigabe ist Boolean nach Codetabelle *Boolean*.
+erreichbarkeiten[].kennung | String (UTF-8) | 1 | Konkrete Angabe der zum Erreichen der [Person](./person.md) oder Organisation notwendigen Information. Derzeit ist nur die Erreichbarkeit über  eine E-Mail- Adresse vorgesehen.
+personenstatus | String (Code) | 0..1 | Status, den eine [Person](./person.md) in einer [Organisation](./organisation.md) in Bezug auf eine bestimmte Rolle hat, Referenz auf einen Code der Codeliste *Personenstatus*.
+jahrgangsstufe | String (Code) | 0..1 | Jahrgangsstufe, die eine [Person](./person.md) in der [Organisation](./organisation.md) in einer bestimmten Rolle besucht, Referenz auf Code der Codeliste *Jahrgangsstufe*.
+sichtfreigabe | String (Code) | 0..1 | Attribut gibt an, ob dieser Personenkontext aufgrund der Freigabe durch eine andere [Organisation](./organisation.md) sichtbar ist. Ist `sichtfreigabe` nicht gesetzt, so entspricht das dem Wert `nein`. Der Wert von Sichtfreigabe ist Boolean nach Codetabelle *Boolean*.
 loeschung | *Struktur* | 0..1 | Aktuell gibt es zu Löschungen nur ein Attribut (Zeitpunkt), eventuell werden in späteren Versionen weitere Attribute hinzugefügt.
 loeschung.zeitpunkt | String (datetime) | 1 | Datum und Uhrzeit der Löschung des Personenkontexts. Das Format des Löschzeitpunktes ist `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt. Solange ein Personenkontext nicht gelöscht wurde, kann das Attribut `loeschung.zeitpunkt` geändert oder gelöscht werden. Ist das Attribut `loeschung` vorhanden, so muss der Zeitpunkt gesetzt sein.
 revision | String (UTF-8) | 1 | Revision des Personenkontext. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.

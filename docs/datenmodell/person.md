@@ -19,7 +19,7 @@ name.anrede | String (64/512) (DIN 91379.B) | 0..n | Liste (Array) von Namenszus
 name.namenssuffix | String (64/1024) (DIN 91379.A) | 0..n | Liste (Array) von Namenssuffixen. Jeder einzelne Namenssuffix hat eine Maximallänge von 64 Zeichen, die Maximallänge für alle Namenssuffixe liegt bei 1024 Zeichen.
 name.sortierindex | String (Nummer) | 0..1 | Index des Buchstabens des Nachnamens, nach dem sortiert werden soll. Der Index ist Null-basiert, d. h. ein Wert von „4“ zeigt an, dass die ersten vier Buchstaben ignoriert und ab dem fünften Buchstaben des Nachnamens sortiert werden soll. Ist kein Sortierindex angegeben, so ist der Nachname entsprechend dem ersten Buchstaben in Listen einzusortieren, äquivalent zum Sortierindex „0“.
 geburt | *Struktur* | 0..1 |
-geburt.datum | Datum (siehe Abschnitt *Datumsformat*) | 0..1 | Geburtsdatum einer Person.
+geburt.datum | [Datum](./datumsformat.md) | 0..1 | Geburtsdatum einer Person.
 geburt.geburtsort | String (DIN 91379.C) | 0..1 | Geburtsort einer Person, bestehend aus Ortsname und Land, beispielsweise „Eindhoven, Niederlande“. Wird kein Land angegeben, so wird als Land „Deutschland“ angenommen, d.h. der Geburtsort „Erfurt“ ist wie „Erfurt, Deutschland“ zu behandeln.
 geschlecht | String (Code) | 0..1 | Referenz auf einen Code der Codeliste *Geschlecht*.
 lokalisierung | String (Code) | 0..1 | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Referenz auf einen Code der Codeliste *Lokalisierung*. Wenn nicht angegeben, wird „de“ angenommen.

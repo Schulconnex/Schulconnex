@@ -1,6 +1,6 @@
 # Anschrift
 
-Die Anschrift erlaubt es, einen Ort zu beschreiben, an dem, beispielsweise, eine Organisation ansässig ist.
+Die Anschrift erlaubt es, einen Ort zu beschreiben, an dem, beispielsweise, eine [Organisation](./organisation.md) ansässig ist.
 
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---

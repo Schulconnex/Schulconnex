@@ -1,13 +1,10 @@
 # Datenmodell
 
-Der Begriff Datenmodell steht im Kontext dieser Spezifikationen nicht für das Datenmodell zur Persistierung von
-Entitäten in einer Datenhaltung. Im Kontext dieser Spezifikation repräsentiert der Begriff die Datenstruktur
-der Nutzlast von Anfragen (Request Payload) und Nutzlast der Antworten (Response Payload)
+Der Begriff Datenmodell steht im Kontext dieser Spezifikationen nicht für das Datenmodell zur Persistierung von Entitäten in einer Datenhaltung. Im Kontext dieser Spezifikation repräsentiert der Begriff die Datenstruktur der Nutzlast von Anfragen (Request Payload) und Nutzlast der Antworten (Response Payload)
 bei XHR-Anfragen (HTTP-Anfragen gegen API-Endpunkte).
 
 Das Datenmodell der Schnittstelle basiert auf Datenmodellen der Spezifikationen [XBildung][1] und
-[XSchule][2] (bspw. „NatuerlichePerson“ ist die Vorlage für „Person“, auch „Organisation“ ist an XBildung orientiert),
-jeweils mit spezifischen Erweiterungen.
+[XSchule][2] (bspw. „NatuerlichePerson“ ist die Vorlage für „[Person](./person.md)“, auch „[Organisation](./organisation.md)“ ist an XBildung orientiert), jeweils mit spezifischen Erweiterungen.
 
 ```mermaid
 classDiagram

@@ -1,13 +1,13 @@
 # Gruppendatensatz
 
 Datenmodell eines Gruppendatensatzes: Der Gruppendatensatz ist als Daten-Container (WrapperObject) zu verstehen.
-Über den Gruppendatensatz werden Gruppe (Attribut `gruppendatensatz.gruppe`) sowie
-die Gruppenzugehörigkeiten (Attribut `gruppendatensatz.gruppenzugehoerigkeit`) zusammengeführt
+Über den Gruppendatensatz werden [Gruppe](./gruppe.md) (Attribut `gruppendatensatz.gruppe`) sowie
+die [Gruppenzugehörigkeiten](./gruppenzugehörigkeit.md) (Attribut `gruppendatensatz.gruppenzugehoerigkeit`) zusammengeführt
 
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
-gruppe | Gruppe | 1 | Gruppe (siehe *Gruppe*).
-gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Gruppenzugehörigkeiten (siehe *Gruppenzugehörigkeit*).
+gruppe | [Gruppe](./gruppe.md) | 1 | Siehe [Gruppe](./gruppe.md).
+gruppenzugehoerigkeiten | [Gruppenzugehörigkeit](./gruppenzugehörigkeit.md) | 0..n  | Liste (Array) von [Gruppenzugehörigkeit](./gruppenzugehörigkeit.md).
 
 ## Beispiel JSON des Datentyps Gruppendatensatz
 

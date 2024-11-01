@@ -13,5 +13,5 @@ Attribut | Typ | Anzahl | Bemerkung
 code | String (UTF-8) | 1 | Code der Lernperiode.
 bezeichnung | String (UTF-8) | 1 | Bezeichnung der Lernperiode, beispielsweise „Schuljahr 2023/2024”.
 typ | String (UTF-8) | 1 | Typ der Lernperiode. Referenz auf einen Code der Codeliste *Lernperiodentyp*.
-beginn | Datum (siehe Abschnitt Datumsformat) | 1 | Datum, an dem die Lernperiode beginnt.
-ende | Datum (siehe Abschnitt Datumsformat) | 1 | Datum, an dem die Lernperiode endet.
+beginn | [Datum](./datumsformat.md) | 1 | [Datum](./datumsformat.md), an dem die Lernperiode beginnt.
+ende | [Datum](./datumsformat.md) | 1 | [Datum](./datumsformat.md), an dem die Lernperiode endet.
