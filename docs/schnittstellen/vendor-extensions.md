@@ -18,7 +18,7 @@ Es besteht nicht die Notwendigkeit für Attribute innerhalb eines Attribut-Objek
 
 Anbieterspezifische Attribute sind vor der Verwendung mit dem Betreiber des jeweiligen Schulconnex-Servers zu vereinbaren. Insbesondere ist dabei auch zu vereinbaren, ob und nach welchen Kriterien solche Attribute auch an Dienste ausgeliefert werden und wie viele Elemente die Antwort enthalten kann oder muss.
 
-Hierzu sind das angepasstes Datenmodell für Diensteanbieter, wo benötigt, um diese Attribute zu erweitern und, analog zu den standardisierten Attributen, die aue auszuliefernde Anzahl und die Notwendigkeit einer Freigabe zu spezifizieren.
+Hierzu sind das angepasste Datenmodell für Diensteanbieter, wo benötigt, um diese Attribute zu erweitern und, analog zu den standardisierten Attributen, die auszuliefernde Anzahl und die Notwendigkeit einer Freigabe zu spezifizieren.
 
 ## Beispiel der Erweiterung um eine Personalnummer
 
