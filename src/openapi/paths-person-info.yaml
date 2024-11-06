@@ -185,17 +185,17 @@ get:
       "beziehungen": {
         "hat_als_beziehungen": [
           {
-            "ktid": "ade920cc-7ae4-451e-a739-d5f39da7efa0",
+            "ktid": "1706e0e9cbc89ec256db8552955b981cf9590dffb71c2b586f9f9edae52f980b",
             "beziehung": "SchB"
           },
           {
-            "ktid": "c757802e-f9e3-40ea-8274-eb404d3a39ce",
+            "ktid": "032b0499c3ff360791eb778adad23fa56039b26ad39b3f675e6f6ec6e17f280c",
             "beziehung": "SchB"
           }
         ],
         "ist_von_beziehungen": [
           {
-            "ktid": "5adb98ef-cdeb-4715-8a48-44a452dd6894",
+            "ktid": "a91cb0d4fc25a551e909147cfc0e38ebe13462a898c0eda5219762bd96f6782e",
             "beziehung": "SorgBer"
           }
         ]
