@@ -113,6 +113,83 @@ const sidebars: SidebarsConfig = {
         'praxisleitfaden/ablauf-löschen',
       ],
     },
+    {
+      type: 'category',
+      label: 'Lizenzerweiterung',
+      link: {
+        type: 'doc',
+        id: 'lizenzerweiterung/einleitung',
+      },
+      items: [
+        'lizenzerweiterung/stand-der-bearbeitung',
+        {
+          type: 'category',
+          label: 'Allgemeines',
+          link: {
+            type: 'doc',
+            id: 'lizenzerweiterung/allgemeines/allgemeines',
+          },
+          items: [
+            // 'lizenzerweiterung/allgemeines/allgemeines',
+            'lizenzerweiterung/allgemeines/einfuehrung-zu-odrl',
+            'lizenzerweiterung/allgemeines/mapping-zu-spezifikationen',
+            'lizenzerweiterung/allgemeines/motivation',
+            'lizenzerweiterung/allgemeines/nutzung-von-identifikatoren',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Datenmodell',
+          link: {
+            type: 'doc',
+            id: 'lizenzerweiterung/datenmodell/datenmodell',
+          },
+          items: [
+
+            'lizenzerweiterung/datenmodell/nutzungsrecht',
+            'lizenzerweiterung/datenmodell/providerfehlermeldung',
+            'lizenzerweiterung/datenmodell/zugriffsinfo',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Praxisleitfaden',
+          link: {
+            type: 'doc',
+            id: 'lizenzerweiterung/praxisleitfaden/praxisleitfaden',
+          },
+          items: [
+            'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Schnittstellen',
+          link: {
+            type: 'doc',
+            id: 'lizenzerweiterung/schnittstellen/schnittstellen',
+          },
+          items: [
+            'lizenzerweiterung/schnittstellen/versionierung',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Schnittstellendefinition',
+          link: {
+            type: 'doc',
+            id: 'lizenzerweiterung/schnittstellendefinition/schnittstellendefinition',
+          },
+          items: [
+            'lizenzerweiterung/schnittstellendefinition/ausführung',
+            'lizenzerweiterung/schnittstellendefinition/daten',
+            'lizenzerweiterung/schnittstellendefinition/fehlerbehandlung',
+          ],
+        },
+        'lizenzerweiterung/glossar',
+
+      ]
+    },
     'versionshistorie',
   ],
 

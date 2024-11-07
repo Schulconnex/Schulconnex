@@ -1,0 +1,23 @@
+sequenceDiagram
+    actor X as User
+    participant LMS as NBC
+    participant IDM as moin.schule
+    participant LV as Lizenzkomponente<br/>moin.schule
+    participant Target as Anwendung
+    X->>LMS: Login
+    LMS->>IDM: GET /person-info
+    IDM->>LMS: 
+    LMS->>LV: GET /lizenz-info
+    LV->>LMS: 
+    X->>LMS: Aufruf Medienregal
+    Note over LMS: Medienregal<br/>(LTI-)Links zu den<br/>verfügbaren Anwendungen
+    X->>LMS: Aufruf Anwendung
+    LMS->>+Target: (LTI-)Launch
+    Target->>IDM: SSO-Auth, Access Token
+    Target->>IDM: GET /person-info
+    IDM->>Target: 
+    Target->>LV: GET /lizenz-info/{uid}?access_control=true
+    LV->>Target: 
+    Note over Target: Validierung Lizenzschlüssel
+    X->>Target: Logout
+    Target->>-LMS: Zurück zum LMS

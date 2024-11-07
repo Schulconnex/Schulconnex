@@ -1,0 +1,30 @@
+[
+  {
+    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "target": {
+      "uid": "urn:bilo:medium:123456789",
+      "partOf": "https://exampleprovider.tld/api/media/d63d8a3d-f196-4cc6-af55-357a43db9209"
+    },
+    "permission": [
+      {
+        "action": [
+          "execute"
+        ]
+      }
+    ]
+  },
+  {
+    "provider": {
+      "identifier": "https://exampleprovider.tld"
+    },
+    "startTime": "2024-08-02T09:00:00Z",
+    "actionStatus": "FailedActionStatus",
+    "error": {
+      "description": "404 - Not Found",
+      "url": "https://exampleprovider.tld/api/policies",
+      "status": "404",
+      "title": "Not Found",
+      "detail": "The requested resource could not be found."
+    }
+  }
+]
