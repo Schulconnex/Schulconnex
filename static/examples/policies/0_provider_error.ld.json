@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://schema.org"
+  ],
+  "@type": "https://schema.org/DiscoverAction",
+  "provider": {
+    "@type": "Organization",
+    "identifier": "https://exampleprovider.tld"
+  },
+  "startTime": "2024-08-02T09:00:00Z",
+  "actionStatus": "FailedActionStatus",
+  "error": {
+    "@type": "Thing",
+    "description": "404 - Not Found",
+    "url": "https://exampleprovider.tld/api/policies",
+    "additionalType": "http://schulconnex.de/policies-info/ns/1/RFC7807/ErrorDetails",
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "propertyID": "status",
+        "value": "404"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "title",
+        "value": "Not Found"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "detail",
+        "value": "The requested resource could not be found."
+      }
+    ]
+  }
+}
