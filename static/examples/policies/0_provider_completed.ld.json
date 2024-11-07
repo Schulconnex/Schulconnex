@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://schema.org"
+  ],
+  "@type": "https://schema.org/DiscoverAction",
+  "provider": {
+    "@type": "Organization",
+    "identifier": "https://exampleprovider.tld"
+  },
+  "startTime": "2024-08-02T09:00:00Z",
+  "actionStatus": "CompletedActionStatus"
+}

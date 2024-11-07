@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="ife6c3152cbc3f055b596a033fad66b4c" xmlns="http://www.imsglobal.org/xsd/imslticc_v1p0">
+    <metadata>
+        <schema>IMS Common Cartridge</schema>
+        <schemaversion>1.0.0</schemaversion>
+    </metadata>
+    <organizations>
+       <organization identifier="scx" structure="rooted-hierarchy">
+            <item identifier="Meine digitalen Inhalte">
+                <item identifier="Medienregal">
+                    <title>Medienregal</title>
+                    <item identifier="ife2bc6ca8062a4f5a3923fdbf687b597"
+                        identifierref="903db991-ab4b-40dc-af2b-71fdb0979089">
+                        <title>Linear Algebra</title>
+                    </item>
+                    <item identifier="i115b5cd9f1266b1f2919150dd0638e2c"
+                        identifierref="07eaaf59-52b8-4d2c-9597-01a2218f59e6">
+                        <title>Childrens Literature</title>
+                    </item>
+                </item>
+            </item>
+        </organization> 
+    </organizations>
+    <resources>
+        <resource type="imsbasiclti_xmlv1p0" identifier="903db991-ab4b-40dc-af2b-71fdb0979089">
+            <cartridge_basiclti_link xmlns:blti="http://www.imsglobal.org/xsd/imsbasiclti_v1p0">
+                <blti:title>Linear Algebra</blti:title>
+                <blti:launch_url>https://api.scx/medium/1278a045-3690-49d8-80b8-9fae95eae123</blti:launch_url>
+                <blti:secure_launch_url>https://api.scx/medium/1278a045-3690-49d8-80b8-9fae95eae123</blti:secure_launch_url>
+                <blti:oauth_consumer_key>e4615bef-6942-42a7-ac64-c20143bf738a</blti:oauth_consumer_key>
+                <blti:target>iframe</blti:target>
+            </cartridge_basiclti_link>
+        </resource>
+        <resource type="imsbasiclti_xmlv1p0" identifier="07eaaf59-52b8-4d2c-9597-01a2218f59e6">
+            <cartridge_basiclti_link xmlns:blti="http://www.imsglobal.org/xsd/imsbasiclti_v1p0">
+                <blti:title>Childrens Literature</blti:title>
+                <blti:launch_url>https://api.scx/medium/11cc0ce3-0fc6-4397-8a24-b5a4755a659d</blti:launch_url>
+                <blti:secure_launch_url>https://api.scx/medium/11cc0ce3-0fc6-4397-8a24-b5a4755a659d</blti:secure_launch_url>
+                <blti:oauth_consumer_key>668ea592-33e3-4ce1-988d-6c2ff155d5ca</blti:oauth_consumer_key>
+                <blti:target>iframe</blti:target>
+            </cartridge_basiclti_link>
+        </resource>
+    </resources>
+</manifest>

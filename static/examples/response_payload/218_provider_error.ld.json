@@ -1,0 +1,55 @@
+[
+  {
+    "@context": [
+      "http://www.w3.org/ns/odrl.jsonld"
+    ],
+    "@type": "Set",
+    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "target": {
+      "uid": "urn:bilo:medium:123456789",
+      "partOf": "https://exampleprovider.tld/api/media/d63d8a3d-f196-4cc6-af55-357a43db9209"
+    },
+    "permission": [
+      {
+        "action": [
+          "execute"
+        ]
+      }
+    ]
+  },
+  {
+    "@context": [
+      "https://schema.org"
+    ],
+    "@type": "https://schema.org/DiscoverAction",
+    "provider": {
+      "@type": "Organization",
+      "identifier": "https://exampleprovider.tld"
+    },
+    "startTime": "2024-08-02T09:00:00Z",
+    "actionStatus": "FailedActionStatus",
+    "error": {
+      "@type": "Thing",
+      "description": "404 - Not Found",
+      "url": "https://exampleprovider.tld/api/policies",
+      "additionalType": "http://schulconnex.de/policies-info/ns/1/RFC7807/ErrorDetails",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "status",
+          "value": "404"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "title",
+          "value": "Not Found"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "detail",
+          "value": "The requested resource could not be found."
+        }
+      ]
+    }
+  }
+]

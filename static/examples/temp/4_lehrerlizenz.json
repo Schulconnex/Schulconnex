@@ -1,0 +1,30 @@
+{
+    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "target": {
+        "uid": "urn:bilo:medium:123456789",
+        "partOf": "https://www.bildungslogin-test.de/api/external/univention/media"
+    },
+    "permission": [
+        {
+            "action": [
+                "execute"
+            ],
+            "assignee": {
+                "refinement": [
+                    {
+                        "leftOperand": "urn:schulconnex:de:personenkontext:rolle",
+                        "operator": "eq",
+                        "rightOperand": "lehr"
+                    }
+                ]
+            }
+        }
+    ],
+    "anlagen": {
+        "lizenzschluessel": [
+            {
+                "code": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
+            }
+        ]
+    }
+}
