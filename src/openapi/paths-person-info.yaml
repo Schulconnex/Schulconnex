@@ -153,6 +153,8 @@ get:
                 "faecher": [
                   {
                     "kennung": "EN"
+                  },{
+                    "bezeichnung": "Erste Hilfe"
                   }
                 ],
                 "laufzeit": {

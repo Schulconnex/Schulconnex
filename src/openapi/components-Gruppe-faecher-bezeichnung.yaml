@@ -1,0 +1,5 @@
+type: object
+properties:
+  bezeichnung:
+    $ref: './components-Gruppe-Bezeichnung.yaml'
+    example: 'Erste Hilfe'
