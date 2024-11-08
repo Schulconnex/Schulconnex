@@ -5,7 +5,7 @@ required:
   - rolle
 properties:
   id:
-    description: ID des Personenkontexts.
+    description: ID des Personenkontexts. Referenziert ein bestehendes Objekt des Schulconnex-Servers.
     type: string
     example: 4d0f579c0b9a4d3ab48487b3bee8a2ad4d0f579c0b9a4d3ab48487b3bee8a2ad
   organisation:

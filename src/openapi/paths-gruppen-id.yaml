@@ -20,7 +20,7 @@ get:
       name: id
       schema:
         type: string
-        format: uuid
+        example: e70663cb-65c4-4ad5-a9f1-7edbc3c36c4b
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppe.
   responses:
@@ -106,7 +106,7 @@ put:
       name: id
       schema:
         type: string
-        format: uuid
+        example: e70663cb-65c4-4ad5-a9f1-7edbc3c36c4b
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppe.
   requestBody:
@@ -184,7 +184,7 @@ delete:
       name: id
       schema:
         type: string
-        format: uuid
+        example: e70663cb-65c4-4ad5-a9f1-7edbc3c36c4b
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppe.
   requestBody:

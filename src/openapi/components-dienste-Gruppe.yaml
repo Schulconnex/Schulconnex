@@ -7,12 +7,10 @@ properties:
   id:
     description: ID der Gruppe.
     type: string
-    format: uuid
     example: b3201d00-f21f-4986-a39d-02a09c8da26c
   orgid:
     description: ID der Organisation.
     type: string
-    format: uuid
     example: 9b3f36ad-9d15-49f9-9660-6cf9746ba446
   bezeichnung:
     description: Bezeichnung der Gruppe.

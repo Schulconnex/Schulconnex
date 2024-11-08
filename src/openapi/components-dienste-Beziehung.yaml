@@ -4,8 +4,8 @@ required:
   - beziehung
 properties:
   ktid:
-    description: ID des Personenkontextes, zu dem eine Beziehung besteht.
+    description: ID des Personenkontextes, zu dem eine Beziehung besteht. Referenziert ein bestehendes Objekt des Schulconnex-Servers.
     type: string
-    example: 553f984f-5fea-48c8-ae26-089420465803
+    example: 2931ecbf5ff4349efcb2cd90858da604f5f9be2a4cd675993d2680e98af5b6ec
   beziehung:
     $ref: './components-code-Beziehungen.yaml'

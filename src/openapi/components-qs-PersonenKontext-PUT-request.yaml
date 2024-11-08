@@ -9,7 +9,6 @@ properties:
   mandant:
     description: ID des Mandanten, dem der Personenkontext zugeordnet ist.
     type: string
-    format: uuid
     example: 58f45270-8e54-40c6-a212-980307fc19be
   organisation:
     type: object
@@ -17,7 +16,6 @@ properties:
       id:
         description: ID der Organisation.
         type: string
-        format: uuid
         example: b0d7b0dd-3477-4122-a38d-095ec242e786
   referrer:
     description: ID des Personenkontexts im Quellsystem.
