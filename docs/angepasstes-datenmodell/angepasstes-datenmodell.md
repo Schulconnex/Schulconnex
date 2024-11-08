@@ -104,6 +104,7 @@ classDiagram
     jahrgangsstufen
     faecher
     faecher.kennung
+    faecher.bezeichnung
     laufzeit
     laufzeit.von
     laufzeit.vonlernperiode

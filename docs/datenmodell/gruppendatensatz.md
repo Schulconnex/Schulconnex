@@ -33,6 +33,8 @@ gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Grup
     ],
     "faecher": [{
       "kennung": "EN"
+    },{
+      "bezeichnung": "Erste Hilfe"
     }],
     "laufzeit": {
       "von": "2022-08-01",
