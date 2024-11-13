@@ -4,5 +4,5 @@ properties:
     $ref: './components-code-Fächerkanon.yaml'
     example: EN
   bezeichnung:
-    $ref: './components-Gruppe-Bezeichnung.yaml'
+    $ref: './components-Gruppe-faecherbezeichnung.yaml'
     example: Englisch

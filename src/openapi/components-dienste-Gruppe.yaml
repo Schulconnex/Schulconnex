@@ -48,9 +48,9 @@ properties:
     example: [{kennung: "DE"},{bezeichnung: "Erste Hilfe"}]
     items:
      oneOf:
-     - $ref: './components-Gruppe-faecher-kennung.yaml'
-     - $ref: './components-Gruppe-faecher-bezeichnung.yaml'
-     - $ref: './components-Gruppe-faecher-kennung-bezeichnung.yaml'
+      - $ref: './components-Gruppe-faecher-kennung.yaml'
+      - $ref: './components-Gruppe-faecher-bezeichnung.yaml'
+      - $ref: './components-Gruppe-faecher-kennung-bezeichnung.yaml'
   laufzeit:
     oneOf:
       - $ref: './components-Laufzeit-von-bis.yaml'
