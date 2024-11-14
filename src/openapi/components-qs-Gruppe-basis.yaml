@@ -57,6 +57,10 @@ properties:
           type: array
           items:
             $ref: './components-code-Gruppenrolle.yaml'
+  uebergeordnetegruppe:
+    description: ID der in der Hierarchie übergeordneten Gruppe
+    type: string
+    example: 4e5b19b3-7bdf-416b-8d86-71941c9b4b73
   laufzeit:
     oneOf:
       - $ref: './components-Laufzeit-von-bis.yaml'
