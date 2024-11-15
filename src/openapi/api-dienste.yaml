@@ -28,6 +28,8 @@ paths:
     $ref: './paths-personen-info.yaml'
   /organisationen-info:
     $ref: './paths-organisationen-info.yaml'
+  /policies-info:
+    $ref: './paths-policies-info.yaml'
 components:
   securitySchemes:
     oAuthForServices:

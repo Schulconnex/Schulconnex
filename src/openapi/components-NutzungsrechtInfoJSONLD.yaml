@@ -1,0 +1,65 @@
+title: Nutzungsrecht (Policy) JSON+LD Schema (ODRL JSON Schema v2p2)
+type: object
+required:
+  - "@context"
+  - "@type"
+  - uid
+properties:
+  "@context":
+    type: array
+    items:
+      oneOf:
+        - type: string
+          format: uri
+          default: "http://www.w3.org/ns/odrl.jsonld"
+        - $ref: "./components-ContextType.yaml"
+  "@type":
+    type: string
+    enum:
+      - "Offer"
+      - "Agreement"
+      - "Set"
+      - "Asset"
+      - "Privacy"
+      - "Ticket"
+    default: Set
+  uid:
+    type: string
+    format: uri
+  conflict:
+    type: string
+    enum:
+      - "perm"
+      - "prohibit"
+      - "invalid"
+  undefined:
+    type: string
+    enum:
+      - "invalid"
+      - "support"
+      - "ignore"
+  inheritallowed:
+    type: boolean
+  inheritfrom:
+    type: string
+  inheritrelation:
+    type: string
+    format: uri
+  policyprofile:
+    type: string
+    format: uri
+  permissions:
+    type: array
+    items:
+      $ref: "./components-Permission.yaml"
+  prohibitions:
+    type: array
+    items:
+      $ref: "./components-Prohibdutytype.yaml"
+additionalProperties:
+  type: object
+  properties:
+    code:
+      type: string
+    text:
+      type: string

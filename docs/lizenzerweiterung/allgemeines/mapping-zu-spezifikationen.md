@@ -9,7 +9,7 @@ Dieses Dokument soll dabei helfen zu verstehen, dass beim Mapping keine relevant
 
 > Anmerkungen: Das Dokument [`einführung-zu-odrl.md`](./einfuehrung-zu-odrl.md) gibt eine Einführung in ODRL, die Basiskonzepte und das Datenmodell.
 
-> Anmerkungen: Die Beispiele sind aus der OpenAPI Specification [`lizenz-info.openapi.yml`](../../oas/lizenz-info.openapi.yml) entnommen.
+<!-- > Anmerkungen: Die Beispiele sind aus der OpenAPI Specification [`lizenz-info.openapi.yml`](../../oas/lizenz-info.openapi.yml) entnommen. -->
 
 Inhaltsverzeichnis
 - [Mapping von W3C Open Digital Rights Language (ODRL) Version 2.2 zu anderen Datenmodellen, Standards und Spezifikationen](#mapping-von-w3c-open-digital-rights-language-odrl-version-22-zu-anderen-datenmodellen-standards-und-spezifikationen)

@@ -4,9 +4,10 @@ title: Schnittstellen
 
 # Schnittstellen
 
-Die bereitgestellten Endpunkte sind als REST-API realisiert. Die spezifischen
+Die bereitgestellten Endpunkte sind als REST-API realisiert.
+ <!-- Die spezifischen
 Funktionen der einzelnen Endpunkte werden unter „[API-Endpunkte für Nutzungsrechte als Policies](./api-policies-info)“ und
-„[API-Endpunkte für Zugriffsrechte als Access-Rights](./api-access-rights-info)“ beschrieben.
+„[API-Endpunkte für Zugriffsrechte als Access-Rights](./api-access-rights-info)“ beschrieben. -->
 
 ## Registrierung
 

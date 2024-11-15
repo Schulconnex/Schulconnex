@@ -1,0 +1,44 @@
+type: object
+required:
+  - uid
+properties:
+  uid:
+    type: string
+    format: uri
+  conflict:
+    type: string
+    enum:
+      - "perm"
+      - "prohibit"
+      - "invalid"
+  undefined:
+    type: string
+    enum:
+      - "invalid"
+      - "support"
+      - "ignore"
+  inheritallowed:
+    type: boolean
+  inheritfrom:
+    type: string
+  inheritrelation:
+    type: string
+    format: uri
+  policyprofile:
+    type: string
+    format: uri
+  permissions:
+    type: array
+    items:
+      $ref: "./components-Permission.yaml"
+  prohibitions:
+    type: array
+    items:
+      $ref: "./components-Prohibdutytype.yaml"
+additionalProperties:
+  type: object
+  properties:
+    code:
+      type: string
+    text:
+      type: string
