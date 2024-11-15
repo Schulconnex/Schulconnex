@@ -1,0 +1,34 @@
+title: DiscoverAction JSON+LD Schema
+type: object
+required:
+  - provider
+  - startTime
+  - actionStatus
+properties:
+  "@context":
+    type: array
+    items:
+      oneOf:
+        - type: string
+          format: uri
+          default: "https://schema.org"
+        - $ref: "./components-ContextType.yaml"
+  "@type":
+    type: string
+    enum:
+      - "DiscoverAction"
+    default: DiscoverAction
+  provider:
+    $ref: "./components-ProviderJSONLD.yaml"
+  startTime:
+    type: string
+    format: date
+  actionStatus:
+    type: string
+    enum:
+      - "ActiveActionStatus"
+      - "CompletedActionStatus"
+      - "FailedActionStatus"
+      - "PotentialActionStatus"
+  error:
+    $ref: "./components-ProviderErrorJSONLD.yaml"

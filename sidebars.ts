@@ -131,9 +131,9 @@ const sidebars: SidebarsConfig = {
           },
           items: [
             // 'lizenzerweiterung/allgemeines/allgemeines',
+            'lizenzerweiterung/allgemeines/motivation',
             'lizenzerweiterung/allgemeines/einfuehrung-zu-odrl',
             'lizenzerweiterung/allgemeines/mapping-zu-spezifikationen',
-            'lizenzerweiterung/allgemeines/motivation',
             'lizenzerweiterung/allgemeines/nutzung-von-identifikatoren',
           ],
         },
@@ -228,6 +228,18 @@ const sidebars: SidebarsConfig = {
               type: "doc",
               id: "generated/openapi/dienste/read-personen-info",
               label: "/personen-info",
+              className: "api-method get",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Lizenzen",
+          items: [
+            {
+              type: "doc",
+              id: "generated/openapi/dienste/nutzungsrechte-als-policies-odrl-policy-type-set-im-kontext-eines-benutzers-abrufen",
+              label: "/policies-info",
               className: "api-method get",
             },
           ],

@@ -604,14 +604,8 @@ Die Definition und Veröffentlichung eines ODRL Application Profiles beinhalten 
 
 Die Schnittstelle `/lizenz-info` wird nicht alle ODRL PolicyTypes behandeln. Das wird von Lizenzverwaltungssystemen adressiert. Die REST-API Schnittstelle `/lizenz-info` fokussiert sich auf die Abfrage von Lizenzzuweisungen für den autorisierten Benutzer als Liste von ODRL Policies vom PolicyType "Set" - alternativ auch "Ticket" (`Array<ODRL>`).
 
-In dem Nachfolgenden Diagramm markiert als "Consumer" auf der rechten Seite.
-
-<!-- ![Highlevel betrachtung eines Lizenzverwaltungssystem](../../assets/diagrams/highlevel/controlconnect.highlevel.svg)
-Highlevel betrachtung eines Lizenzverwaltungssystem -->
-
 Scope der Schnittstelle "lizenz-info"
+![Highlevel betrachtung des Scope der Schnittstelle "lizenz-info"](../../../static/diagrams/highlevel/lizenz-info.highlevel.svg)
+Highlevel betrachtung des Scope der Schnittstelle "lizenz-info"
 
-<!-- ![Highlevel betrachtung des Scope der Schnittstelle "lizenz-info"](../../assets/diagrams/highlevel/lizenz-info.highlevel.svg)
-Highlevel betrachtung des Scope der Schnittstelle "lizenz-info" -->
-
-Eine Beispielhafte Schnittstellenbeschreibung nach OpenAPI Specification (OAS) finden Sie im [Verzeichnis OAS](../oas/lizenz-info.openapi.yml)
+<!-- Eine Beispielhafte Schnittstellenbeschreibung nach OpenAPI Specification (OAS) finden Sie im [Verzeichnis OAS](../oas/lizenz-info.openapi.yml) -->

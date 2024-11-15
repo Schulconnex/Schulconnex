@@ -1,0 +1,12 @@
+title: Zugriffs-Information (Access-control) JSON Schema
+description: Datenmodell für Zugriffs-Information (Access-control)
+type: object
+required:
+  - access_control
+properties:
+  access_control:
+    type: array
+    items:
+      oneOf:
+        - $ref: "#/components/schemas/ZugriffInfo_SCX_Key"
+        - $ref: "#/components/schemas/ZugriffInfo_SCX_Link"
