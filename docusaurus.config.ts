@@ -2,8 +2,6 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-const VERSION_PATH = '1.5';
-
 const config: Config = {
   title: 'Schulconnex',
   tagline: 'Schnittstellen für Dienste und Quellsysteme',
@@ -51,8 +49,8 @@ const config: Config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'Version 1.5-rc2',
-              path: VERSION_PATH,
+              label: 'Version 1.',
+              // path: '1.5',
             },
           },
           sidebarPath: './sidebars.ts',
@@ -117,11 +115,11 @@ const config: Config = {
             items: [
               {
                 label: 'Einleitung',
-                to: `docs/${VERSION_PATH}/einleitung`,
+                to: `docs/einleitung`,
               },
               {
                 label: 'Allgemeines',
-                to: `docs/${VERSION_PATH}/allgemeines`,
+                to: `docs/allgemeines`,
               },
             ],
           },
@@ -139,15 +137,15 @@ const config: Config = {
             items: [
               {
                 label: 'Impressum',
-                to: `docs/${VERSION_PATH}/footer/impressum`,
+                to: `docs/footer/impressum`,
               },
               {
                 label: 'Datenschutz',
-                to: `docs/${VERSION_PATH}/footer/datenschutz`,
+                to: `docs/footer/datenschutz`,
               },
               {
                 label: 'Barrierefreiheit',
-                to: `docs/${VERSION_PATH}/footer/barrierefreiheit`,
+                to: `docs/footer/barrierefreiheit`,
               }
             ],
           }
