@@ -5,12 +5,10 @@ properties:
   id:
     description: ID der Person. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     type: string
-    format: uuid
     example: a6e1a860-8d44-4b2b-aef7-aa2c8bf5beb5
   mandant:
     description: ID des Mandanten, dem die Personen zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
     type: string
-    format: uuid
     example: 58f45270-8e54-40c6-a212-980307fc19be
   revision:
     description: Revision der Person. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.

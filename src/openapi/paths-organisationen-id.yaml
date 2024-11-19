@@ -22,7 +22,7 @@ get:
       required: true
       schema:
         type: string
-        format: uuid
+        example: 9b3f36ad-9d15-49f9-9660-6cf9746ba446
       description: Der Pfad-Parameter bezieht sich auf die ID der Organisation.
   responses:
     '200':

@@ -6,5 +6,6 @@ properties:
   ktid:
     description: ID des Personenkontextes, zu dem eine Beziehung besteht.
     type: string
+    example: 553f984f-5fea-48c8-ae26-089420465803
   beziehung:
     $ref: './components-code-Beziehungen.yaml'

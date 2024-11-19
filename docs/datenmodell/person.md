@@ -7,7 +7,7 @@ Attribut | Typ | Anzahl | Bemerkung
 id | String (UTF-8) | 1 | ID der Person. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
 referrer | String (UTF-8) | 0..1 | Identifikations-ID einer Person. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein (z. B. eine einheitliche Personalnummer).
 mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Personen zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
-stammorganisation | String (UTF-8) | 0..1 | Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Der häufigste Anwendungsfall ist die Abordnung eines Lehrenden an eine andere Dienststelle. Die Stammorganisation ist unabhängig vom Personenkontext.
+stammorganisation | String (UTF-8) | 0..1 | ID der Stammorganisation. Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Der häufigste Anwendungsfall ist die Abordnung eines Lehrenden an eine andere Dienststelle. Die Stammorganisation ist unabhängig vom Personenkontext.
 name | *Struktur* | 1 |
 name.familienname | String (DIN 91379.A) | 1 | Familienname(n) der Person. Mehrere Familiennamen werden durch Leerzeichen separiert.
 name.vorname | String (DIN 91379.A) | 1 | Mehrere Vornamen werden durch Leerzeichen separiert.

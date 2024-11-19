@@ -1,7 +1,7 @@
 openapi: '3.0.2'
 info:
   title: Schulconnex
-  version: '1.5-rc2'
+  version: '1.5'
   description: |
     Beschreibung der Schnittstellen von Schulconnex für Quellsysteme
   contact:
@@ -16,20 +16,20 @@ servers:
 security:
   - oAuthForServices: []
 tags:
-  - name: Personen
-    description: Alles zu Personen und Personendatensätzen
   - name: Organisationen
     description: Schulen oder sonstige relevante Organisationen
-  - name: Gruppen
-    description: Zusammenfassung von mehreren Personen
-  - name: Sichtfreigaben
-    description: Regelt zeitliche Sichtfreigabe für Organisationen
+  - name: Personen
+    description: Alles zu Personen und Personendatensätzen
   - name: Personenkontexte
     description: Gibt Rolle, Schule bzw. Organisation an
   - name: Beziehungen
     description: Beziehung zwischen Personenkontexten
+  - name: Gruppen
+    description: Zusammenfassung von mehreren Personen
   - name: Gruppenzugehörigkeiten
     description: Verknüpfung von Personenkontext und Gruppe
+  - name: Sichtfreigaben
+    description: Regelt zeitliche Sichtfreigabe für Organisationen
 paths:
   /personen:
     $ref: './paths-personen.yaml'

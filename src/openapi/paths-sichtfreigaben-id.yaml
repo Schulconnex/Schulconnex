@@ -29,7 +29,7 @@ delete:
       name: id
       schema:
         type: string
-        format: uuid
+        example: 1fd95f6f-bc28-408b-8e03-41972b414a07
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Sichtfreigabe.
   requestBody:

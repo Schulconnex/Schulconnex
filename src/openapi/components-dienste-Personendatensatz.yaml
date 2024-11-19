@@ -3,8 +3,9 @@ required:
   - pid
 properties:
   pid:
-    description: Pseudonymisierte ID.
+    description: Pseudonymisierte ID. Referenziert ein bestehendes Objekt des Schulconnex-Servers.
     type: string
+    example: df6588cf8dc649ef79fcc852e1064761442a32bf3496ecd9bde0f66a18685aaa
   person:
     $ref: './components-dienste-Person.yaml'
   personenkontexte:

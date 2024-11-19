@@ -29,4 +29,3 @@ laufzeit.von | Datum (siehe Abschnitt Datumsformat) | 0/0..1 | ja | Anfang des G
 laufzeit.vonlernperiode | String (Code) | 0/0..1 | ja | Code der zu einer Gruppe gehörenden Lernperiode. Referenz auf Code der Codeliste *Lernperiode*.
 laufzeit.bis | Datum (siehe Abschnitt Datumsformat) | 0/0..1 | ja | Ende des Gültigkeitszeitraumes der Gruppe. Laufzeiten schliessen den ersten und letzten Tag immer mit ein. Ist als `laufzeit.bis` der 31.Oktober 2025 angegeben, so endet die Laufzeit der Gruppe am 01.11.2025 um 00:00.
 laufzeit.bislernperiode | String (Code) | 0/0..1 | ja |  Code der zu einer Gruppe gehörenden Lernperiode. Referenz auf Code der Codeliste *Lernperiode*.
-sichtfreigabe | String (Code) | 0/0..1 | ja | Gibt an, ob diese Gruppe aufgrund der Freigabe durch eine andere Organisation sichtbar ist. Ist `sichtfreigabe` nicht gesetzt, so entspricht das dem Wert `nein`. Der Wert von Sichtfreigabe ist Boolean nach Codetabelle *Boolean*.
