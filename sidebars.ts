@@ -61,26 +61,29 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Schnittstellendefinition',
+      label: 'Nutzung der REST-API',
       link: {
         type: 'doc',
-        id: 'schnittstellendefinition/schnittstellendefinition',
+        id: 'schnittstellen/schnittstellen',
       },
       items: [
+        'schnittstellendefinition/schnittstellendefinition',
         'schnittstellendefinition/fehlerbehandlung',
         'schnittstellendefinition/validierung',
       ],
     },
     {
       type: 'category',
-      label: 'Schnittstellen für Dienste und Quellsysteme',
-      link: {
-        type: 'doc',
-        id: 'schnittstellen/schnittstellen',
-      },
+      label: 'Autorisierung und Authentifizierung',
       items: [
         'schnittstellen/autorisierung-dienste',
         'schnittstellen/autorisierung-qs',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Erweiterungen',
+      items: [
         'schnittstellen/oidc-claims',
         'schnittstellen/vendor-extensions',
       ],
