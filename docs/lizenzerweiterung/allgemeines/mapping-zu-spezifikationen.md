@@ -37,8 +37,8 @@ Das bereitgestellte JSON-Datenmodell repräsentiert eine Konfiguration der Open 
     "@type": "Set",
     "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
-        "uid": "urn:bilo:medium:123456789",
-        "partOf": "https://www.bildungslogin-test.de/api/external/univention/media"
+        "uid": "urn:schule:medium:123456789",
+        "partOf": "https://www.schule-test.de/api/external/univention/media"
     },
     "permission": [
         {
@@ -55,7 +55,7 @@ Hier ist eine Erläuterung der einzelnen Schlüssel und ihrer Bedeutung innerhal
 - **@context**:	Dies ist ein Schlüsselwort in JSON-LD, das verwendet wird, um den Kontext der im Dokument verwendeten Begriffe zu definieren. JSON-LD (JavaScript Object Notation for Linked Data) ist eine Methode zur Kodierung verknüpfter Daten mittels JSON. In diesem Beispiel umfasst es einen Link zum ODRL-Standard (`http://www.w3.org/ns/odrl.jsonld`) und einen benutzerdefinierten Namensraum (`scx`), der auf `http://schulconnex.de/lizenz-info/ns/1#` verweist. Dieser benutzerdefinierte Namensraum ist spezifisch für die Organisation oder das System (SchulConnex), das dieses Datenmodell verwendet.  
 - **@type**: Dies gibt den Typ des durch das JSON-Dokument beschriebenen Objekts an. In diesem Fall ist der Typ `"Set"`, was im Kontext von ODRL eine Sammlung von Berechtigungen, Verboten und Pflichten definiert.
 - **uid**: Steht für "Unique Identifier" (eindeutiger Bezeichner) und repräsentiert eine spezifische Instanz des Objekts. Hier wird auf die zukünftig zu entwickelende Schnittstelle verwiesen, von wo diese Lizenzinformation aufrufbar ist.
-- **target**: Spezifiziert das Objekt oder Asset, auf das sich die Rechte in der ODRL-Politik beziehen. Die `uid` innerhalb des Ziels (`urn:bilo:medium:123456789`) ist ein Identifikator für ein spezifisches Medium (wie ein digitales Buch, Video usw.), und die URL `partOf` (`https://www.bildungslogin-test.de/api/external/univention/media`) zeigt an, dass das Medium Teil einer größeren Sammlung ist, die von einer externen API verwaltet wird. 
+- **target**: Spezifiziert das Objekt oder Asset, auf das sich die Rechte in der ODRL-Politik beziehen. Die `uid` innerhalb des Ziels (`urn:schule:medium:123456789`) ist ein Identifikator für ein spezifisches Medium (wie ein digitales Buch, Video usw.), und die URL `partOf` (`https://www.schule-test.de/api/external/univention/media`) zeigt an, dass das Medium Teil einer größeren Sammlung ist, die von einer externen API verwaltet wird. 
 - **permission**: Listet die Aktionen auf, die in Bezug auf das Ziel erlaubt sind. Hier ist die spezifizierte Berechtigung `execute`, was das Recht bedeuten könnte, den digitalen Inhalt oder die Software, die durch den Zielidentifikator spezifiziert ist, auszuführen oder zu nutzen. Die Struktur erlaubt es, mehrere Aktionen oder verschiedene Arten von Berechtigungen anzugeben, die auf unterschiedliche Bedürfnisse oder Rollen zugeschnitten sind.
 
 ## JSON
@@ -68,8 +68,8 @@ Die JSON-Version ist einfacher und möglicherweise direkter zu verwenden in Anwe
 {
     "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
-        "uid": "urn:bilo:medium:123456789",
-        "partOf": "https://www.bildungslogin-test.de/api/external/univention/media"
+        "uid": "urn:schule:medium:123456789",
+        "partOf": "https://www.schule-test.de/api/external/univention/media"
     },
     "permission": [
         {
@@ -95,8 +95,8 @@ Das bereitgestellte XML ist ein Beispiel für eine IMS Common Cartridge-Manifest
     </metadata>
     <organizations>
         <organization identifier="scx" structure="rooted-hierarchy">
-            <item identifier="https://www.bildungslogin-test.de/api/external/univention/media">
-                <item identifier="urn:bilo:medium:123456789" identifierref="903db991-ab4b-40dc-af2b-71fdb0979089">
+            <item identifier="https://www.schule-test.de/api/external/univention/media">
+                <item identifier="urn:schule:medium:123456789" identifierref="903db991-ab4b-40dc-af2b-71fdb0979089">
                     <title>Linear Algebra</title>
                 </item>
             </item>

@@ -160,6 +160,7 @@ const sidebars: SidebarsConfig = {
           },
           items: [
             'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
+            'praxisleitfaden/semantik',
           ],
         },
         {
