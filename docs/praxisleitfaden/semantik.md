@@ -9,7 +9,6 @@ Hier wird die generische Klasse "Set" verwendet. Semantisch passender wäre die 
 Wenn es sich bei dem Zielobjekt (target) um eine Software, wie z. B. ein Online-Schulbuch oder eine Lernanwendung, handelt, erlaubt die Nutzungsvereinbarung, diese Software remote auszuführen ("execute"). Die Verwendung von "use" scheint nach https://w3c.github.io/odrl/bp/#x7-how-to-generalize-actions eher den Elterntyp aller Rechte abzubilden oder alle anderen Rechte zu implizieren. Im letzteren Fall würde die Verwendung von "use" die Übertragung weitgehender Nutzungsrechte bedeuten, was nicht gemeint sein kann. 
 
 Das Attribut "uid" muss einen IRI sein, entsprechende Endpunkte müssen also in moin.schule implementiert werden. Der Endpunkt würde das aktuelle Objekt zurückliefern. 
-
 ```json
 {
     "@context": [
@@ -30,10 +29,66 @@ Das Attribut "uid" muss einen IRI sein, entsprechende Endpunkte müssen also in 
     ]
 }
 ```
-
 #### Semantik:
 * Die Klasse Agreement beschreibt eine explizite Nutzungsvereinbarung zwischen dem Medienanbieter und der Organisation.
 * Praktikabilität: Eignet sich für allgemeine Lizenzverträge ohne spezifische Einschränkungen.
+
+
+### Erweiterung durch Nutzungseinschränkungen
+
+Das Recht, die Anwendung auszuführen, ist durch zwei zusätzliche Bedingungen eingeschränkt: 
+
+* Die Nutzung muss im aktuellen Schuljahr, also zwischen dem 1.8.2023 00:00 Uhr MESZ inklusiv und dem 1.8.2024 00:00 Uhr MESZ exklusiv, liegen. 
+* Der Lizenzstatus darf nicht "deactivated" sein. Wenn man annimmt, dass Lizenzstatus die Werte "provisioned", "activated" und "deactivated" annehmen kann, wäre die Nutzung beim aktuellen Status "provisioned" also erlaubt. Würde die Bedingung `urn:schulconnex:de:odrl:lizenzstatus eq activated` gesetzt werden, müsste der Client das so interpretieren, dass ein Aufruf nicht erfolgreich ist, weil nicht alle Bedingungen für die Nutzung erfüllt sind. 
+
+```json
+{
+    "@context": [
+        "http://www.w3.org/ns/odrl.jsonld",
+        {
+            "scx": "http://schulconnex.de/lizenz-info/ns/1#"
+        }
+    ],
+    "@type": "Set",
+    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "target": {
+        "uid": "urn:schule:medium:123456789",
+        "partOf": "https://www.schule-test.de/api/external/univention/media"
+    },
+    "permission": [
+        {
+            "action": [
+                "execute"
+            ],
+            "constraint": [
+                {
+                  "leftOperand": "urn:schulconnex:de:odrl:lizenzstatus",
+                  "operator": "neq",
+                  "rightOperand": "deactivated",
+                  "status": "provisioned"
+                },
+                {
+                  "leftOperand": "dateTime",
+                  "operator": "gteq",
+                  "rightOperand": "2023-08-01T00:00+0200"
+                },
+                {
+                  "leftOperand": "dateTime",
+                  "operator": "lt",
+                  "rightOperand": "2024-08-01T00:00+0200"
+                }
+              ]
+        }
+    ],
+    "scx:anlagen": {
+        "scx:lizenzschluessel": [
+            {
+                "scx:code": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
+            }
+        ]
+    }
+}
+```
 
 
 ### **Schullizenz (Eingeschränkte Nutzung auf eine bestimmte Schule)**
