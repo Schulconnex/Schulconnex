@@ -4,8 +4,6 @@ title: Zugriffsinfo
 
 # Zugriffsinfo
 
-TODO: TEXT
-
 ## ZugriffsinfoContainer
 
 > Antwort-Nutzlast als JSON-Objekt mit Diskriminator

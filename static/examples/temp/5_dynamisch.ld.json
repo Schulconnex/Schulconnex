@@ -8,8 +8,8 @@
     "@type": "Ticket",
     "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
-        "uid": "urn:bilo:medium:123456789",
-        "partOf": "https://www.bildungslogin-test.de/api/external/univention/media"
+        "uid": "urn:schule:medium:123456789",
+        "partOf": "https://www.schule-test.de/api/external/univention/media"
     },
     "permission": [
         {

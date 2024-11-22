@@ -4,8 +4,6 @@ title: Provider-Fehlermeldung
 
 # Provider-Fehlermeldung
 
-TODO: TEXT
-
 Nachfolgend ist das Datenmodell einer Provider-Fehlermeldung dargestellt.
 
 ## Datenmodell Nutzungsrecht
