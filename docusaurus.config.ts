@@ -118,6 +118,14 @@ const config: Config = {
                 to: `docs/einleitung`,
               },
               {
+                label: 'Schnelleinstieg Dienste',
+                to: `docs/schnelleinstieg-dienste`,
+              },
+              {
+                label: 'Schnelleinstieg Quellsysteme',
+                to: `docs/schnelleinstieg-quellsysteme`,
+              },
+              {
                 label: 'Allgemeines',
                 to: `docs/allgemeines`,
               },
