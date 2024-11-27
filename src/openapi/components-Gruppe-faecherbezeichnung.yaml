@@ -1,3 +1,3 @@
 type: string
-description: Bezeichnung eines Faches wenn nicht im Fächerkanon vorhanden
+description: Bezeichnung eines Faches, wenn nicht im Fächerkanon vorhanden
 example: 'Erste Hilfe'
