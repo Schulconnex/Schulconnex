@@ -15,7 +15,7 @@ get:
 
     Die Antwort-Nutzdaten (Response Payload) beinhalten ein
     Array von JSON-Objekten vom Datentyp Organisation, sofern
-    Einträge (ggf. passend zu den optionalen Filtern) existieren. Siehe auch Datenmodell [`Organisation`](../../../datenmodell/organisation).
+    Einträge (ggf. passend zu den optionalen Filtern) existieren. Siehe auch Datenmodell [`Organisation`](../../../angepasstes-datenmodell/organisation).
 
     Die Schnittstelle /v1/organisationen-info ermöglicht das Verwenden von Filterparametern zur
     Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind sie als mit

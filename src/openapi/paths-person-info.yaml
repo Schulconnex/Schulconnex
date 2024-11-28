@@ -65,8 +65,8 @@ get:
     `personenkontexte` alle freigegebenen Personenkontexte. In diesem Fall entspricht die `pid` der
     Identität der Person und jeder Personenkontext hat die eigene `id`, welche bei Anmeldung
     im Sicherheitskontext mit ausschließlichem Zugriff auf diesen Personenkontext als `pid`
-    ausgeliefert würde. Siehe auch die einzelnen Datenmodelle zu [`Person`](../../../datenmodell/person)
-    und [`Personenkontext`](../../../datenmodell/personenkontext).
+    ausgeliefert würde. Siehe auch die einzelnen Datenmodelle zu [`Person`](../../../angepasstes-datenmodell/person)
+    und [`Personenkontext`](../../../angepasstes-datenmodell/personenkontext).
 
     Es ist weiterhin möglich, dass eine angemeldete Person mehreren Gruppen zugeordnet ist.
     In diesem Fall können, geregelt durch eine vertragliche Absprache zwischen Dienstanbieter
