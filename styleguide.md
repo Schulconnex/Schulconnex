@@ -8,13 +8,13 @@ Bei der Beschreibung der Schulconnex Schnittstelle sind Begriffe einheitlich zu 
 
 Darüber hinaus ist erstrebenswert, dass Formatierungen von Texten, die Benennung von Dateien und andere formale Aspekte der Spezifikation konsistent gehandhabt werden.
 
-Derzeit beruht dieser Styleguide primäre auf Entscheidungen, welche beim Redigieren der Spezifikation getroffen wurden, in der Absicht diese Entscheidungen an zentraler Stelle zu dokumentieren. Daher ist dieser Styleguide derzeit nur grob strukturiert.
+Derzeit beruht dieser Styleguide primär auf Entscheidungen, welche beim Redigieren der Spezifikation getroffen wurden, in der Absicht diese Entscheidungen an zentraler Stelle zu dokumentieren. Daher ist dieser Styleguide derzeit nur grob strukturiert.
 
-Es besteht die Absicht dass, wenn ausreichend viele Informationen gesammelt wurden, der Styleguide neu strukturiert wird.
+Es besteht die Absicht, dass, wenn ausreichend viele Informationen gesammelt wurden, der Styleguide neu strukturiert wird.
 
 ## Begriffe und Schreibweisen
 - Schulconnex wird in einem Wort geschrieben und hat nur einen Großbuchstaben. "Schul-Connex", "SchulConneX" oder "SchulconneX" sind keine zulässigen Schreibweisen.
-- Nicht durch die Schulconnex Spezifikation vorgegebene Attribute heissen "herstellereigene Attribute" und nicht "anwendungsfallspezifische Attribute"  oder "anwendungsspezifische Attribute".
+- Nicht durch die Schulconnex Spezifikation vorgegebene Attribute heißen "anbieterspezifische Attribute" und nicht "anwendungsfallspezifische Attribute", "herstellerspezifische Attribute"  oder "anwendungsspezifische Attribute".
 - Der Begriff "REST-API" ist mit Bindestrich zu schreiben und nicht als "REST API".
 - Der Begriff "OIDC-Claims" ist mit Bindestrich zu schreiben und nicht als "OIDC Claims".
 - Entsprechendes gilt für Wortkombinationen mit "HTTP", beispielsweise "HTTP-Anfragen", jedoch **nicht** bei "HTTP ContentType".
