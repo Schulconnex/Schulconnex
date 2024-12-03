@@ -108,6 +108,7 @@ classDiagram
     jahrgangsstufen
     faecher
     faecher.kennung
+    faecher.bezeichnung
     referenzgruppen
     referenzgruppen.grupid
     referenzgruppen.rollen
