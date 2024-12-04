@@ -37,7 +37,7 @@ Code | Sub-Code | Titel | Beschreibung
 400 | 11 | `"Attribut darf nicht mit diesem Wert gesetzt oder verändert werden."` | `"Attribut x darf aufgrund fehlender Berechtigung nicht mit diesem Wert gesetzt oder verändert werden"`, wobei „x“ der Attributname ist, beispielsweise `person.rolle`.
 400 | 12 | `"Person enthält noch Personenkontexte."` | `"Daten vom Typ „Person“ können nur gelöscht werden, wenn für diese Person keine Personenkontexte mehr existieren."`
 400 | 13 | `"Personenkontext wird genutzt."` | `"Personenkontexte können über die API /personenkontexte/{id} nur dann direkt gelöscht werden, wenn sie von keinem anderen System genutzt wurden. Wurde der Personenkontext bereits extern genutzt, so muss die Löschung über andere APIs erfolgen."`
-400 | 14 | `"Zyklische Referenzgruppe"` | `"Referenzgruppen dürfen keine zirkulären Referenzen haben."`
+400 | 14 | `"Zyklische Gruppen"` | `"Referenzgruppen und hierarchische Gruppen dürfen keine zirkulären Referenzen haben."`
 400 | 15 | `"Text zu lang"` | `"Die Länge eines übergebenen Textattributes überschreitet die in der Spezifikation angegebene Maximallänge."`
 400 | 16 | `"Inkonsistente Laufzeitangabe"` | `"Laufzeiten (von Lernperioden) dürfen nur einen Startzeitpunkt (entweder von oder vonlernperiode) und einen Endzeitpunkt haben (bis oder bislernperiode). Mehrere Anfangs- oder Endangaben (beispielsweise bis und bislernperiode) sind nicht zulässig."`
 400 | 17 | `"Doppelter Filter"` | `"Jeder Filter darf in der URL nur einmal benutzt werden. Filter wie ?pid=123&pid=124 sind nicht zulässig."`

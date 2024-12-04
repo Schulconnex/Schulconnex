@@ -112,6 +112,7 @@ classDiagram
     referenzgruppen
     referenzgruppen.grupid
     referenzgruppen.rollen
+    uebergeordnetegruppe
     laufzeit
     laufzeit.von
     laufzeit.vonlernperiode

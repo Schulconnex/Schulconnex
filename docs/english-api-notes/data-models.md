@@ -104,6 +104,7 @@ faecher.bezeichnung | Name of a topic if it is not in the code list *Fächerkano
 referenzgruppen | Array of reference groups for this group. Allows the association of members in one or more other groups to this group. The aim is to simplify the handling of courses and school classes by allowing, for example, to attach a whole class to a course, without the need to assign every student individually.
 referenzgruppen.grupid | ID of the reference group.
 referenzgruppe.rollen | Roles in the reference group („Gruppenrollen”) to be selected for the group. If no roles are specified, all persons are selected. (The main purpose for this filter is that a class might contain a teacher and students, but only the students from this reference group participate in another group.)
+uebergeordnetegruppe | Group hierarchies can be represented by specifying the id of the superordinate group.
 laufzeit | Defines the start and end date of a group. Both dates can be either defined by directly specifying a date or, alternatively, by associating a teaching period (like a year or a semester) with the group.
 laufzeit.von | Start date of the group as a date.
 laufzeit.vonlernperiode | Start date of the group as a reference to a teaching period. Refers to code list *Lernperiode*.
