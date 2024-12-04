@@ -21,6 +21,8 @@ const sidebars: SidebarsConfig = {
     'stand-der-bearbeitung',
     'vorbemerkung',
     'einleitung',
+    'schnelleinstieg-dienste',
+    'schnelleinstieg-quellsysteme',
     'allgemeines',
     {
       type: 'category',
