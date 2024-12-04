@@ -1,20 +1,20 @@
 ---
-title: Herstellereigene Attribute
+title: Anbieterspezifische Attribute
 ---
 
-# Erweiterung der API um herstellereigene Attribute
+# Erweiterung der API um anbieterspezifische Attribute
 
-Für Hersteller von Serverimplementierungen besteht die Möglichkeit, Schulconnex um eigene, anwendungsfallspezifische Attribute (Vendor Extensions) zu erweitern.
+Für Anbieter von Serverimplementierungen besteht die Möglichkeit, Schulconnex um eigene, anbieterspezifische Attribute (Vendor Extensions) zu erweitern.
 
-Herstellereigene Attribute werden innerhalb eines herstellerspezifischen Objekts gekapselt.
+Anbieterspezifische Attribute werden innerhalb eines anbieterspezifischen Objekts gekapselt.
 
-Der Name eines herstellereigenen Attributs muss ein gültiger Uniform Resource Name (URN) (nach [RFC 3986][1]) sein.
+Der Name eines anbieterspezifischen Attributs muss ein gültiger Uniform Resource Name (URN) (nach [RFC 3986][1]) sein.
 
 [1]: https://datatracker.ietf.org/doc/html/rfc3986
 
-Der Wert eines herstellereigenen Attributes kann ein primitiver Typ, ein Array von primitiven Typen, ein komplexes Objekt oder ein Array von Objekten sein. Es besteht nicht die Notwendigkeit, für Attributnamen innerhalb von herstellereigenen Objekten URNs zu nutzen.
+Der Wert eines anbieterspezifischen Attributes kann ein primitiver Typ, ein Array von primitiven Typen, ein komplexes Objekt oder ein Array von Objekten sein. Es besteht nicht die Notwendigkeit, für Attributnamen innerhalb von anbieterspezifischen Objekten URNs zu nutzen.
 
-Betreiber von Schulconnex-Servern, die herstellereigene Attribute verwenden, müssen definieren, ob und nach welchen Kriterien solche Attribute auch an Dienste ausgeliefert werden und wie viele Elemente die Antwort enthalten kann oder muss. Hierzu sind das angepasstes Datenmodell für Diensteanbieter, wo benötigt, um diese Attribute zu erweitern und, analog zu den standardisierten Attributen, die auszuliefernde Anzahl und die Notwendigkeit einer Freigabe zu spezifizieren.
+Betreiber von Schulconnex-Servern, die anbieterspezifische Attribute verwenden, müssen definieren, ob und nach welchen Kriterien solche Attribute auch an Dienste ausgeliefert werden und wie viele Elemente die Antwort enthalten kann oder muss. Hierzu sind das angepasstes Datenmodell für Diensteanbieter, wo benötigt, um diese Attribute zu erweitern und, analog zu den standardisierten Attributen, die auszuliefernde Anzahl und die Notwendigkeit einer Freigabe zu spezifizieren.
 
 ## Beispiel: Erweiterung von Person um eine Personalnummer
 
