@@ -134,7 +134,7 @@ post:
 
     Bei einer erfolgreichen Anforderung zum Erstellen eines Personenkontexts zu einem Personendatensatz
     wird diese Anforderung mit einer Repräsentation des Personenkontexts in den Antwort-Nutzdaten
-    und dem HTTP-Status-Code 201 quittiert.
+    und dem HTTP-Statuscode 201 quittiert.
 
     Die Organisation wurde beim Erstellen eines Personenkontexts vom Schulconnex-Server
     aus dem `access_token` übernommen und per `personenkontext.organisation.id` referenziert.

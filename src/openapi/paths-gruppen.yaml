@@ -19,7 +19,7 @@ post:
 
     Bei einer erfolgreichen Anforderung zum Erstellen einer Gruppe wird diese Anforderung
     mit einer Repräsentation der Gruppe in den Antwort-Nutzdaten (Response Payload) und
-    dem HTTP-Status-Code 201 quittiert.
+    dem HTTP-Statuscode 201 quittiert.
   requestBody:
     required: true
     content:

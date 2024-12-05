@@ -27,7 +27,7 @@ post:
 
     Bei einer erfolgreichen Anforderung zum Erstellen einer Sichtfreigaben zu einem Personenkontext
     wird diese Anforderung mit einer Repräsentation der Sichtfreigaben in den Antwort-Nutzdaten
-    und dem HTTP-Status-Code 201 quittiert.
+    und dem HTTP-Statuscode 201 quittiert.
   parameters:
     - in: path
       name: id

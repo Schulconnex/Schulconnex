@@ -26,7 +26,7 @@ post:
 
     Bei einer erfolgreichen Anforderung zum Erstellen einer Gruppenzugehörigkeit zu einer
     Gruppe wird diese Anforderung mit einer Repräsentation der Gruppenzugehörigkeit in den
-    Antwort-Nutzdaten und dem HTTP-Status-Code 201 quittiert.
+    Antwort-Nutzdaten und dem HTTP-Statuscode 201 quittiert.
   parameters:
     - in: path
       name: id

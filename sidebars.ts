@@ -68,7 +68,7 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'schnittstellendefinition/schnittstellendefinition',
-        'schnittstellendefinition/fehlerbehandlung',
+        'schnittstellendefinition/http-statuscodes',
         'schnittstellendefinition/validierung',
       ],
     },

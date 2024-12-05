@@ -1,4 +1,27 @@
-# Fehlerbehandlung
+# HTTP-Statuscodes
+
+## Erfolgreiche Ausführung
+
+### `200` (Erfolgreiche Ausführung)
+
+Die angeforderten Daten werden mit der HTTP-Response übermittelt, beispielsweise werden
+die Daten einer Person im JSON-Datenformat übergeben.
+
+### `201` (Erstellt)
+
+Eine neue Ressource wurde erstellt.
+
+## Daten unverändert
+
+### `304` (Not Modified)
+
+Die angeforderten Daten wurden seit dem letzten Zugriff nicht verändert und nicht erneut
+ausgeliefert. Dieser Rückgabewert erfolgt nur dann, wenn beim vorhergehenden Zugriff auf
+den Datensatz ein ETag geliefert wurde und beim erneuten Zugriff If-None-Match mit dem ETag
+im HTTP-Anfrage-Header benutzt wurde sowie der aktuelle ETag des Servers und der ETag
+im HTTP-Anfrage-Header übereinstimmen.
+
+## Fehlerbehandlung
 
 Fehler bei der Nutzung der Schnittstelle werden grundsätzlich mit einem der unten gelisteten
 Response Codes zurückgegeben. Zusätzlich besitzt die Response auch einen Error Payload, welcher
@@ -15,7 +38,7 @@ Format des Error Payloads mit Beispielwerten:
 }
 ```
 
-## `400` - Bad Request
+### `400` - Bad Request
 
 Der Aufruf ist nicht vollständig beziehungsweise fehlerhaft, so dass die Bearbeitung
 nicht durchgeführt werden kann. Die Angaben beim Aufruf müssen vervollständigt
@@ -44,7 +67,7 @@ Code | Sub-Code | Titel | Beschreibung
 400 | 18 | `"Beziehung kann nicht erstellt werden."` | `"Die Beziehung zwischen zwei Personenkontexten darf so nicht erzeugt werden."` + spezifische Fehlermeldung der Schnittstelle.
 400 | 19 | `"Erreichbarkeit kann nicht hinzugefügt werden."` | `"Diese Erreichbarkeit ist so nicht zulässig."` + spezifische Fehlermeldung der Schnittstelle.
 
-## `401` - Unauthorized
+### `401` - Unauthorized
 
 Eine Autorisierung wurde nicht angegeben beziehungsweise kann nicht bestätigt werden.
 Es ist auch möglich, dass die Authentifizierung erneut durchgeführt werden muss,
@@ -57,7 +80,7 @@ Code | Sub-Code | Titel | Beschreibung
 401 | 02 | `"Invalider Access-Token"` | `"Invalider Access-Token. Autorisierung fehlgeschlagen."` Dieser Fehler tritt auf, wenn der Access-Token nicht valide ist oder nicht vollständig.
 401 | 03 | `"Falsche Autorisierungsmethode"` | `"Die Anfrage konnte aufgrund einer nicht unterstützten Autorisierungsmethode nicht verarbeitet werden"` + spezifische Fehlermeldung der Schnittstelle, welche Autorisierungsmethode benutzt werden kann, beispielsweise `Authorization: Bearer`.
 
-## `403` - Forbidden
+### `403` - Forbidden
 
 Der Aufruf wird nicht ausgeführt, da nicht ausreichend Rechte vorhanden sind.
 
@@ -68,7 +91,7 @@ Code | Sub-Code | Titel | Beschreibung
 --- | --- | --- | ---
 403 | 00 | `"Fehlende Rechte"` | `"Die Autorisierung war erfolgreich, aber die erforderlichen Rechte für die Nutzung dieses Endpunktes sind nicht vorhanden."` + spezifische Fehlermeldung der Schnittstelle, die nicht in eine der anderen Kategorien fällt.
 
-## `404` - Not found
+### `404` - Not found
 
 Der Endpunkt existiert nicht beziehungsweise eine geforderte Entität ist nicht verfügbar.
 
@@ -77,7 +100,7 @@ Code | Sub-Code | Titel | Beschreibung
 404 | 00 | `"Endpunkt existiert nicht"` | `"Der aufgerufene Endpunkt existiert nicht."`
 404 | 01 | `"Angefragte Entität existiert nicht"` | `"Die angeforderte Entität existiert nicht."`
 
-## `405` - Method not allowed
+### `405` - Method not allowed
 
 Die konkrete Anfrage ist nicht erlaubt.
 
@@ -86,7 +109,7 @@ Code | Sub-Code | Titel | Beschreibung
 405 | 00 | `"Nicht erlaubt"` | `"Dieser Aufruf ist nicht erlaubt"` + spezifische Fehlermeldung der Schnittstelle, die nicht in eine andere Kategorie fällt.
 405 | 01 | `"POST/PUT nicht erlaubt"` | `"Für diesen Endpunkt ist ein POST/PUT nicht erlaubt."`
 
-## `409` - Conflict
+### `409` - Conflict
 
 Die zu verändernde Entität wurde durch Dritte verändert und führt daher zu einem Versionskonflikt.
 

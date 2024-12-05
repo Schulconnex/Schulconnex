@@ -98,7 +98,7 @@ put:
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren eines Personenkontexts wird diese
     Anforderung mit einer Repräsentation des Personenkontexts in den Antwort-Nutzdaten und
-    dem HTTP-Status-Code 200 quittiert.
+    dem HTTP-Statuscode 200 quittiert.
 
     Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut
     `personendatensatz.personenkontext.organisation` mit dem Datentyp Organisation
