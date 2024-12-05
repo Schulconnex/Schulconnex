@@ -538,8 +538,8 @@ Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nut
             "action": "execute",
             "conditions": [
                 {
-                    "key": "usageCount",
-                    "operator": "equals",
+                    "key": "count",
+                    "operator": "eq",
                     "value": 1
                 }
             ]
