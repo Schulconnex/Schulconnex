@@ -34,27 +34,27 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
 put:
   tags:
     - Gruppen
@@ -130,32 +130,32 @@ put:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
 delete:
   tags:
     - Gruppen
@@ -209,29 +209,29 @@ delete:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)

@@ -75,27 +75,27 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
 post:
   tags:
     - Personen
@@ -170,29 +170,29 @@ post:
         Erreichbarkeit. In diesem Fall liefert der Server den Fehlercode 400/19, wenn
         versucht wird ein Erreichbarkeiten-Array mit mehr als einem Eintrag zu erstellen.
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
