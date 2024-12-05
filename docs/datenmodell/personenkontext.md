@@ -27,9 +27,7 @@ referrer | String (UTF-8) | 0..1 | ID des Personenkontexts im Quellsystem. Wird 
 mandant | String (UTF-8) | 1 |  ID des Mandanten, dem der Personenkontext zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
 organisation | Organisation | 1 | Organisation. (Siehe Datenmodell *Organisation*).
 rolle | String (Code) | 1 | Rolle der Person innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*.
-erreichbarkeiten | *Array* | 0..n | Liste (Array) von Attributpaaren aus Erreichsbarkeitstyp und Kennung.
-erreichbarkeiten[].typ | String (Code) | 1 | Typ der Erreichbarkeit. Referenz auf Liste von Codes der Codeliste *Erreichbarkeitstyp*.
-erreichbarkeiten[].kennung | String (UTF-8) | 1 | Konkrete Angabe der zum Erreichen der Person oder Organisation notwendigen Information. Derzeit ist nur die Erreichbarkeit über  eine E-Mail- Adresse vorgesehen.
+erreichbarkeiten | *Array[Erreichbarkeit]* | 0..n | Liste (Array) Erreichbarkeiten.
 personenstatus | String (Code) | 0..1 | Status, den eine Person in einer Organisation in Bezug auf eine bestimmte Rolle hat, Referenz auf einen Code der Codeliste *Personenstatus*.
 jahrgangsstufe | String (Code) | 0..1 | Jahrgangsstufe, die eine Person in der Organisation in einer bestimmten Rolle besucht, Referenz auf Code der Codeliste *Jahrgangsstufe*.
 sichtfreigabe | String (Code) | 0..1 | Attribut gibt an, ob dieser Personenkontext aufgrund der Freigabe durch eine andere Organisation sichtbar ist. Ist `sichtfreigabe` nicht gesetzt, so entspricht das dem Wert `nein`. Der Wert von Sichtfreigabe ist Boolean nach Codetabelle *Boolean*.
