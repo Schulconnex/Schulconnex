@@ -11,7 +11,7 @@ Organisation die allgemeine Rolle `Lern` (Lernender oder Lernende) haben, in ein
 noch Funktionen wie Klassensprecher oder Klassensprecherin ausüben.
 
 Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung
---- | --- | --- | ---
+--- | --- | --- | --- | ---
 ktid | String (Code) | 0/1 | ja | Pseudonymisierte ID des Personenkontexts.
 rollen | String (Code) | 0/1..n | ja | Rollen der Person innerhalb der Gruppe. Liste von Rollen nach Codeliste *Gruppenrolle*.
 von | String (Code) | 0/1..n | ja | Beginn der Gruppenzugehörigkeit. Dieser Zeitpunkt kann auch in der Zukunft liegen.

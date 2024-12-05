@@ -20,7 +20,7 @@ optionen | String (Code) | 0..n | Zusätzliche Optionen zur Gruppe, meistens spr
 differenzierung | String (Code) | 0..1 | Differenzierung bei integriertem Unterricht oder in der gymnasialen Oberstufe (Erweiterungsebene, Grundebene). Referenz auf Code der Codeliste *Gruppendifferenzierung*.
 bildungsziele | String (Code) | 0..n | Bildungsziel (Realschule, Hauptschule, Gymnasium, …). Referenz auf Code der Codeliste *Bildungsziel*.
 jahrgangsstufen | String (Code) | 0..n | Jahrgangsstufe (Jahrgangsstufe 1 bis Jahrgangsstufe 13). Referenz auf Code der Codeliste *Jahrgangsstufe*.
-faecher | *Array[Fach]* | 0..n | Liste (Array) der in der Gruppe behandelten Fächer vom Typ *Fach*.
-referenzgruppen | *Array[Referenzgruppe]* | 0..n | Liste (Array) von Referenzgruppen zu dieser Gruppe.
-laufzeit | *Laufzeit* | 0..1 | Die Laufzeit einer Gruppe.
+faecher | *Array[[Fach](fach)]* | 0..n | Liste (Array) der in der Gruppe behandelten Fächer.
+referenzgruppen | *Array[[Referenzgruppe](referenzgruppe)]* | 0..n | Liste (Array) von Referenzgruppen zu dieser Gruppe.
+laufzeit | *[Laufzeit](laufzeit)* | 0..1 | Die Laufzeit einer Gruppe.
 revision | String (UTF-8) | 1 | Revision der Gruppe. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
