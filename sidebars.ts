@@ -86,6 +86,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'schnittstellen/oidc-claims',
         'schnittstellen/vendor-extensions',
+        'schnittstellen/vendor-extensions-best-practices',
       ],
     },
     'codelisten',
