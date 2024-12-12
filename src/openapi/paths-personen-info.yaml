@@ -55,9 +55,9 @@ get:
 
     Filter | Typ | Parameter | Beschreibung
     --- | --- | --- | ---
-    `vollstaendig` | String | `personen` | Möglichkeit, statt nur der `pid` zu jeder der gelisteten Personen die vollständige Beschreibung nach [Angepasstes Datenmodell Person für Dienstanbieter](../../../datenmodell-dienste/person), anzuzeigen.
-    ||| `personenkontexte` | Möglichkeit, statt nur `id` und `loeschung` zu jedem der gelisteten Personenkontexte die vollständige Beschreibung nach [Angepasstes Datenmodell Personenkontext für Dienstanbieter](../../../datenmodell-dienste/personenkontext), anzuzeigen.
-    ||| `gruppen` | Möglichkeit, statt nur der Gruppen-ID zu jeder gelisteten Gruppe die vollständige Beschreibung nach [Angepasstes Datenmodell Gruppe für Dienstanbieter](../../../datenmodell-dienste/gruppe) anzuzeigen.
+    `vollstaendig` | String | `personen` | Möglichkeit, statt nur der `pid` zu jeder der gelisteten Personen die vollständige Beschreibung nach [Datenmodell Person für Dienstanbieter](../../../datenmodell-dienste/person), anzuzeigen.
+    ||| `personenkontexte` | Möglichkeit, statt nur `id` und `loeschung` zu jedem der gelisteten Personenkontexte die vollständige Beschreibung nach [Datenmodell Personenkontext für Dienstanbieter](../../../datenmodell-dienste/personenkontext), anzuzeigen.
+    ||| `gruppen` | Möglichkeit, statt nur der Gruppen-ID zu jeder gelisteten Gruppe die vollständige Beschreibung nach [Datenmodell Gruppe für Dienstanbieter](../../../datenmodell-dienste/gruppe) anzuzeigen.
     ||| `organisationen` | Möglichkeit, statt nur der Organisations-ID zu jeder gelisteten Organisation die vollständige Beschreibung nach [Organisation](../../../datenmodell/organisation) anzuzeigen.
     ||| `beziehungen` | Möglichkeit, die Beziehungen, welche aus einem Personenkontext heraus bestehen, aufzulisten Es werden nur die `hat_als` Beziehungen ausgegeben. Der Default ist keine Ausgabe von Beziehungen.
     `pid` | String || Mit diesem Filter kann der Datensatz einer einzelnen Person anhand ihrer `pid` ausgelesen werden.

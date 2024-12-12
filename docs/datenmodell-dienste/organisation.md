@@ -2,7 +2,7 @@
 title: Organisation
 ---
 
-# Angepasstes Datenmodell Organisation für Diensteanbieter
+# Datenmodell Organisation für Diensteanbieter
 
 Attribut | Typ | Anzahl | Freigabe erforderlich[^1] | Bemerkung
 --- | --- | --- | --- | ---

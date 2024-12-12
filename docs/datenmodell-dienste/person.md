@@ -2,7 +2,7 @@
 title: Person
 ---
 
-# Angepasstes Datenmodell Person für Diensteanbieter
+# Datenmodell Person für Diensteanbieter
 
 Nachfolgend ist das Datenmodell einer Person dargestellt.
 

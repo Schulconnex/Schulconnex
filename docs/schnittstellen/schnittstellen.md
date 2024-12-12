@@ -1,8 +1,6 @@
-# Schnittstellen für Quellsysteme und Dienste
+# Nutzung der REST-API
 
-Die von Schulconnex-Servern bereitgestellten Endpunkte sind als REST-API realisiert. Die spezifischen
-Funktionen der einzelnen Endpunkte werden unter „[API-Endpunkte für Dienstanbieter](../generated/openapi/dienste/schulconnex)“ und
-„[API-Endpunkte für Quellsysteme](../generated/openapi/quellsysteme/schulconnex)“ beschrieben.
+Die von Schulconnex-Servern bereitgestellten Endpunkte sind als REST-API realisiert.
 
 Allgemein erfolgen Zugriffe auf Ressourcen über die Endpunkte mit Hilfen von CRUD-Operationen
 (CREATE, READ, UPDATE und DELETE). Welche Zugriffe jeweils erlaubt sind und welche

@@ -48,7 +48,11 @@ const sidebars: SidebarsConfig = {
           id: 'datenmodell-dienste/datumsformat',
           label: 'Datumsformat',
         },
-        { type: 'doc', id: 'datenmodell-dienste/gruppe', label: 'Gruppe' },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/gruppe',
+          label: 'Gruppe'
+        },
         {
           type: 'doc',
           id: 'datenmodell-dienste/gruppendatensatz',
@@ -74,7 +78,11 @@ const sidebars: SidebarsConfig = {
           id: 'datenmodell-dienste/organisationsbeziehung',
           label: 'Organisationsbeziehung',
         },
-        { type: 'doc', id: 'datenmodell-dienste/person', label: 'Person' },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/person',
+          label: 'Person'
+        },
         {
           type: 'doc',
           id: 'datenmodell-dienste/personendatensatz',
@@ -97,25 +105,49 @@ const sidebars: SidebarsConfig = {
       label: 'Nutzung der REST-API',
       link: {
         type: 'doc',
-        id: 'schnittstellen/schnittstellen',
+        id: 'schnittstellen/schnittstellen-dienste',
       },
       items: [
-        'schnittstellendefinition/schnittstellendefinition',
-        'schnittstellendefinition/http-statuscodes',
-        'schnittstellendefinition/validierung',
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/schnittstellendefinition-dienste',
+          label: 'Schnittstellendefinition'
+        },
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/http-statuscodes-dienste',
+          label: 'HTTP-Statuscodes'
+        },
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/validierung-dienste',
+          label: 'Validierung'
+        }
       ],
     },
     {
-      type: 'category',
+      type: 'doc',
       label: 'Autorisierung und Authentifizierung',
+      id: 'schnittstellen/autorisierung-dienste',
+    },
+    {
+      type: 'category',
+      label: 'Erweiterungen',
       items: [
-        'schnittstellen/autorisierung-dienste',
         'schnittstellen/oidc-claims',
         'schnittstellen/vendor-extensions',
       ],
     },
-    'codelisten',
-    'glossar',
+    {
+      type: 'doc',
+      id: 'codelisten-dienste',
+      label: 'Codelisten'
+    },
+    {
+      type: 'doc',
+      id: 'glossar-dienste',
+      label: 'Glossar'
+    },
     {
       type: 'category',
       label: 'English API Notes',
@@ -173,37 +205,44 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Schnittstellendefinition',
+      label: 'Nutzung der REST-API',
       link: {
         type: 'doc',
-        id: 'schnittstellendefinition/schnittstellendefinition',
+        id: 'schnittstellen/schnittstellen-qs',
       },
       items: [
-        'schnittstellendefinition/fehlerbehandlung',
-        'schnittstellendefinition/validierung',
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/schnittstellendefinition-qs',
+          label: 'Schnittstellendefinition'
+        },
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/http-statuscodes-qs',
+          label: 'HTTP-Statuscodes'
+        },
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/validierung-qs',
+          label: 'Validierung'
+        }
       ],
     },
     {
-      type: 'category',
-      label: 'Schnittstellen für Dienste und Quellsysteme',
-      link: {
-        type: 'doc',
-        id: 'schnittstellen/schnittstellen',
-      },
-      items: [
-        'schnittstellen/autorisierung-qs',
-      ],
+      type: 'doc',
+      label: 'Autorisierung und Authentifizierung',
+      id: 'schnittstellen/autorisierung-qs',
     },
     {
-      type: 'category',
-      label: 'Erweiterungen',
-      items: [
-        'schnittstellen/oidc-claims',
-        'schnittstellen/vendor-extensions',
-      ],
+      type: 'doc',
+      id: 'codelisten-qs',
+      label: 'Codelisten'
     },
-    'codelisten',
-    'glossar',
+    {
+      type: 'doc',
+      id: 'glossar-qs',
+      label: 'Glossar'
+    },
     {
       type: 'category',
       label: 'English API Notes',

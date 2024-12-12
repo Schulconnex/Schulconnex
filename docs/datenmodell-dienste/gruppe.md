@@ -2,7 +2,7 @@
 title: Gruppe
 ---
 
-# Angepasstes Datenmodell Gruppe für Diensteanbieter
+# Datenmodell Gruppe für Diensteanbieter
 
 Eine Gruppe erlaubt es, mehrere Personen in einer Gruppe zusammenzufassen. Typischerweise handelt es sich
 bei einer Gruppe um eine Schulklasse oder eine ähnliche Struktur in einer Schule oder anderen Organisation.

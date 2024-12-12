@@ -14,7 +14,7 @@ Der Name eines anbieterspezifischen Attributs muss ein gültiger Uniform Resourc
 
 Der Wert eines anbieterspezifischen Attributes kann ein primitiver Typ, ein Array von primitiven Typen, ein komplexes Objekt oder ein Array von Objekten sein. Es besteht nicht die Notwendigkeit, für Attributnamen innerhalb von anbieterspezifischen Objekten URNs zu nutzen.
 
-Betreiber von Schulconnex-Servern, die anbieterspezifische Attribute verwenden, müssen definieren, ob und nach welchen Kriterien solche Attribute auch an Dienste ausgeliefert werden und wie viele Elemente die Antwort enthalten kann oder muss. Hierzu sind das angepasstes Datenmodell für Diensteanbieter, wo benötigt, um diese Attribute zu erweitern und, analog zu den standardisierten Attributen, die auszuliefernde Anzahl und die Notwendigkeit einer Freigabe zu spezifizieren.
+Betreiber von Schulconnex-Servern, die anbieterspezifische Attribute verwenden, müssen definieren, ob und nach welchen Kriterien solche Attribute auch an Dienste ausgeliefert werden und wie viele Elemente die Antwort enthalten kann oder muss. Hierzu sind das Datenmodell für Diensteanbieter, wo benötigt, um diese Attribute zu erweitern und, analog zu den standardisierten Attributen, die auszuliefernde Anzahl und die Notwendigkeit einer Freigabe zu spezifizieren.
 
 ## Beispiel: Erweiterung von Person um eine Personalnummer
 
@@ -48,7 +48,7 @@ Im folgenden Beispiel wird der Datensatz einer Person um die Personalnummer dies
 
 ## Richtlinen für anbieterspezifische Attribute
 
-* Anbieter von anbieterspezifischen Attributen sollten dabei die geltenden IT-Sicherheitsrichtlinien und Datenschutzrichtlinien beachten. Die Verantwortung dafür liegt beim Betreiber des jeweiligen Schulconnex-Servers. 
+* Anbieter von anbieterspezifischen Attributen sollten dabei die geltenden IT-Sicherheitsrichtlinien und Datenschutzrichtlinien beachten. Die Verantwortung dafür liegt beim Betreiber des jeweiligen Schulconnex-Servers.
 * Inhalte von anbieterspezifischen Attributen sollen sich nicht mit Inhalten von reguläeren Schulconnex-Attributen überlappen.
 * Schnittstellen-Clients, welche anbieterspezifische Attribute nicht verarbeiten, müssen diese beim Update von Datenbankobjekten unverändert mitliefern. Die Regeln für PUT-Operationen gelten auch für anbieterspezifische Attribute.
 * Löscht eine Anwendung ein Datenobjekt oder ein Teil davon, so werden dabei auch anbieterspezifische Attribute darin gelöscht. Anwendungen können davon ausgehen, dass solche Attribute nur im Zusammenhang mit den übergeordneten Objekten oder Attributen sinnvoll sind. Wird beispielsweise das Attribut `Geburt` einer Person entfernt, so kann eine Anwendung davon ausgehen, dass darin enthaltene anbieterspezifische Attribute ohne die Standardattribute (`datum` und `geburtsort`) nicht weiter relevant sind.
