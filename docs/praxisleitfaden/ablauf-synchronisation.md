@@ -1,5 +1,7 @@
 ---
 title: Synchronisation Quellsystem
+tags: 
+- Informativ
 ---
 
 # Ablaufbeschreibung: Synchronisation mit dem primären Quellsystem

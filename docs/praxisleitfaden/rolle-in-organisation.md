@@ -1,5 +1,7 @@
 ---
 title: Rollenänderung
+tags: 
+- Informativ
 ---
 
 # Änderung der Rolle in einer Organisation

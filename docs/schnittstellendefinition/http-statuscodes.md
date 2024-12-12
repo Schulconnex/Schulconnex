@@ -1,3 +1,7 @@
+---
+tags: 
+- Verbindlich
+---
 # HTTP-Statuscodes
 
 ## Erfolgreiche Ausführung

@@ -1,5 +1,7 @@
 ---
 title: Anbieterspezifische Attribute
+tags: 
+- Verbindlich
 ---
 
 # Erweiterung der API um anbieterspezifische Attribute

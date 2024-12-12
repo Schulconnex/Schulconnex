@@ -1,5 +1,7 @@
 ---
 title: Autorisierung Dienstanbieter
+tags: 
+- Informativ
 ---
 
 # API-Autorisierung und Authentifikation bei Dienstanbietern
