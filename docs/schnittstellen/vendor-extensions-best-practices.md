@@ -1,5 +1,7 @@
 ---
 title: Empfehlungen für anbieterspezifische Attribute
+tags: 
+- Informativ
 ---
 
 * Anbieter von anbieterspezifischen Attributen sollten dabei die geltenden IT-Sicherheitsrichtlinien und Datenschutzrichtlinien beachten. Die Verantwortung dafür liegt beim Betreiber des jeweiligen Schulconnex-Servers.

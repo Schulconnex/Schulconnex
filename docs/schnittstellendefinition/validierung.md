@@ -1,7 +1,8 @@
 ---
 title: Validierung
+tags: 
+- Verbindlich
 ---
-
 # Validierung der Anfrage
 
 Alle Anfragen werden validiert und auf Korrektheit überprüft. Sobald eine Anfrage die
