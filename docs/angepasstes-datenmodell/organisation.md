@@ -4,6 +4,10 @@ title: Organisation
 
 # Angepasstes Datenmodell Organisation für Diensteanbieter
 
+Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Die erste
+Organisation ist die Stammorganisation. Der häufigste Anwendungsfall ist die Abordnung eines Lehrenden an eine
+andere Dienststelle. Die Stammorganisation ist unabhängig vom Personenkontext.
+
 Attribut | Typ | Anzahl | Freigabe erforderlich[^1] | Bemerkung
 --- | --- | --- | --- | ---
 id | String (UTF-8) | 1 | nein | ID der Organisation. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
