@@ -1,5 +1,7 @@
 ---
 title: Löschen von Personen
+tags: 
+- Informativ
 ---
 
 # Ablauf Löschen von Personenkontexten und Personen

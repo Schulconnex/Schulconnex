@@ -1,3 +1,7 @@
+---
+tags: 
+- Verbindlich
+---
 # Schnittstellendefinition
 
 ## Allgemeine Festlegungen

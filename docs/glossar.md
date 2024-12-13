@@ -1,3 +1,7 @@
+---
+tags: 
+- Informativ
+---
 # Glossar
 
 Begriff | Erklärung
