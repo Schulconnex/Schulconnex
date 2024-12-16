@@ -94,7 +94,7 @@ eines Dienstangebots (den OAuth `access_token`) und die Authentifikation einer n
 wird vom Dienst ein Zugriffstoken (`access_token`) außerhalb des Sicherheitskontexts einer
 angemeldeten nutzenden Person angefordert. In diesem Fall wird kein `id_token` ausgestellt.
 Basierend auf der Spezifikation OAuth 2.0 ist der Antwort-Typ eines OAuth 2.0 Token Exchange
-ein JSON-Dokument (HTTP ContentType `application/json`), welches der
+ein JSON-Dokument (HTTP-ContentType `application/json`), welches der
 [IETF RFC8693][9]-Spezifikation entspricht.
 
 [8]: https://datatracker.ietf.org/doc/html/rfc6749#section-4.4
