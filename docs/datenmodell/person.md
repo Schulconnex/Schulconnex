@@ -22,7 +22,7 @@ geburt | *Struktur* | 0..1 |
 geburt.datum | Datum (siehe Abschnitt *Datumsformat*) | 0..1 | Geburtsdatum einer Person.
 geburt.geburtsort | String (DIN 91379.C) | 0..1 | Geburtsort einer Person, bestehend aus Ortsname und Land, beispielsweise „Eindhoven, Niederlande“. Wird kein Land angegeben, so wird als Land „Deutschland“ angenommen, d.h. der Geburtsort „Erfurt“ ist wie „Erfurt, Deutschland“ zu behandeln.
 geschlecht | String (Code) | 0..1 | Referenz auf einen Code der Codeliste *Geschlecht*.
-lokalisierung | String (Code) | 0..1 | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Referenz auf einen Code der Codeliste *Lokalisierung*. Wenn nicht angegeben, wird „de“ angenommen.
+lokalisierung | String | 0..1 | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Wert basiert auf Definition in RFC 5646. Wenn nicht angegeben, wird „de“ angenommen.
 vertrauensstufe | String (Code) | 1 | Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden, Referenz auf einen Code der Codeliste *Vertrauensstufe*.
 auskunftssperre | String (Code) | 1 | Auskunftssperre über eine Person. Dienste erhalten nur einen uneingeschränkten Datensatz, wenn der Wert „nein” ist. Sofern nicht explizit „ja” eingeben wurde, ist der Default „nein”. Referenz auf einen Code der Codeliste *Boolean*.
 revision | String (UTF-8) | 1 | Revision der Person. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.

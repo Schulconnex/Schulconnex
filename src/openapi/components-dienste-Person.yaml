@@ -74,6 +74,12 @@ properties:
   geschlecht:
     $ref: './components-code-Geschlecht.yaml'
   lokalisierung:
-    $ref: './components-code-Lokalisierung.yaml'
+    description: >
+        Basierend auf RFC 5646. Mögliche Beispiele:
+          * de deutsch
+          * de-XX deutsch, Anrede du, einfache Sprache
+          * en-GB englisch (Vereinigtes Königreich)
+    type: string
+    example: de
   vertrauensstufe:
     $ref: './components-code-Vertrauensstufe.yaml'
