@@ -12,5 +12,5 @@ stammorganisation | [Organisation](organisation) | 0/0..1 | ja | Personen könne
 name | [Name](name) | 0/1 | ja | Der Name der Person.
 geburt | [Geburt](geburt) | 0/0..1 | ja | Zur Geburt der Person.
 geschlecht | String (Code) | 0/0..1 | ja | Referenz auf einen Code der Codeliste *Geschlecht*.
-lokalisierung | String (Code) | 0/0..1 | ja | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Referenz auf einen Code der Codeliste *Lokalisierung*. Wenn nicht angegeben, wird „de“ angenommen.
+lokalisierung | String | 0/0..1 | ja | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Wert basiert auf Definition in RFC 5646. Wenn nicht angegeben, wird „de“ angenommen.
 vertrauensstufe | String (Code) | 0/1 | ja | Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden, Referenz auf einen Code der Codeliste *Vertrauensstufe*.

@@ -145,7 +145,7 @@ post:
       },
       "geschlecht": <Code>,
       // Geschlecht der Person. Siehe Code-Liste „Geschlecht“.
-      "lokalisierung": <Code>, // Siehe Code-Liste „Lokalisierung“.
+      "lokalisierung": <String>, // Zm Beispiel "de", String basierend auf RFC 5646.
       "vertrauensstufe": <Code>,
       // Vertrauensstufe. Siehe Code-Liste „Vertrauensstufe“.
       "auskunftssperre": <Code>

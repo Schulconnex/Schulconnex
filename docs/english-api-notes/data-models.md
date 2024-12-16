@@ -42,7 +42,7 @@ geburt | Birth information entity.
 geburt.datum | Date of birth.
 geburt.geburtsort | Place of birth, usually town and country. If no country is provided, Germany is assumed.
 geschlecht | Sex of person. Refers to code list *Geschlecht*.
-lokalisierung | Localisation according to RFC5646. If none is provided `de` is assumed. Refers to code list *Lokalisierung*.
+lokalisierung | Localisation based on RFC5646. If none is provided `de` is assumed.
 vertrauensstufe | Describes the level of trust in the data provided. Refers to code list *Vertrauensstufe*.
 auskunftssperre | Blocked information. Is set to `Ja` (yes) if access to information of this person is blocked. Refers to code list *Boolean*.
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system.
