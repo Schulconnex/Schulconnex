@@ -164,13 +164,12 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
-      type: 'doc',
-      label: 'Autorisierung und Authentifizierung',
-      id: 'schnittstellen/autorisierung-dienste',
-    },
-    {
       type: 'category',
-      label: 'Erweiterungen',
+      label: 'Autorisierung und Authentifizierung',
+      link: {
+        type: 'doc',
+        id: 'schnittstellen/autorisierung-dienste',
+      },
       items: [
         'schnittstellen/oidc-claims',
       ],
