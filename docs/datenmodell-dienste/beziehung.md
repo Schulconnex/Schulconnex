@@ -2,7 +2,7 @@
 title: Beziehung
 ---
 
-# Angepasstes Datenmodell Beziehung
+# Datenmodell Beziehung für Dienste
 
 Das Datenmodell Beziehung beschreibt die Beziehung zweier Personen. Die Beziehungen werden zwischen
 Personenkontexten der beiden Personen erstellt. Beziehungen werden immer in der Form "hat_als" dargestellt.

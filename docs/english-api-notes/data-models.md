@@ -75,8 +75,8 @@ the associated person contexts of that person.
 
 Attribute | Description
 --- | ---
-person | Person. (See [Personen](../datenmodell/person.md)).
-personenkontexte | Array of person contexts (see [Personenkontext](../datenmodell/personenkontext.md)).
+person | Person.
+personenkontexte | Array of person contexts.
 
 ## Gruppe
 
@@ -133,8 +133,8 @@ The „group data set” is a wrapper object to link a group to a number of grou
 
 Attribute | Description
 --- | ---
-gruppe | Group (See [Gruppe](../datenmodell/gruppe.md)).
-gruppenzugehoerigkeiten | Array of group memberships (See [Gruppenzugehörigkeit](../datenmodell/gruppenzugehörigkeit.md)).
+gruppe | Group.
+gruppenzugehoerigkeiten | Array of group memberships.
 
 ## Sichtfreigabe
 

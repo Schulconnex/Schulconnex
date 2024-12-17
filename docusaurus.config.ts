@@ -81,19 +81,41 @@ const config: Config = {
             type: 'docSidebar',
             sidebarId: 'specSidebar',
             position: 'left',
-            label: 'Spezifikation',
+            label: 'Einleitung',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'apiDiensteSidebarOpenAPIDocs',
+            type: 'dropdown',
+            label: 'Dienste',
             position: 'left',
-            label: 'API Dienste',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'spezDiensteSidebar',
+                label: 'Spezifikation',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'apiDiensteSidebarOpenAPIDocs',
+                label: 'API Dienste',
+              },
+            ],
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'apiQuellsystemeSidebarOpenAPIDocs',
+            type: 'dropdown',
+            label: 'Quellsysteme',
             position: 'left',
-            label: 'API Quellsysteme',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'spezQuellsystemeSidebar',
+                label: 'Spezifikation',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'apiQuellsystemeSidebarOpenAPIDocs',
+                label: 'API Quellsysteme',
+              }
+            ],
           },
           {
             type: 'docsVersionDropdown',

@@ -14,3 +14,15 @@ eine Vereinheitlichung der bei den Schulverwaltungen eingesetzten Systemen noch 
 Datenhaltung beabsichtigt ist.
 
 [1]: https://www.kmk.org/themen/bildung-in-der-digitalen-welt/strategie-bildung-in-der-digitalen-welt.html
+
+## Vorbemerkung
+
+Dieses Dokument beschreibt die Schnittstellen für Schulconnex. Diese Schnittstellenspezifikation
+wird iterativ erweitert. Dabei wird angestrebt, dass die Schnittstellen-Versionen mit der
+gleichen führenden Versionsnummer (Ziffer vor dem ersten Punkt) insofern kompatibel sind,
+dass auf einer älteren Version aufbauende Dienste auch mit neueren Versionen der Schnittstelle
+nutzbar bleiben.
+
+## Stand der Bearbeitung
+
+Dieses Dokument befindet sich aktuell im Bearbeitungsstand Version 1.5.
