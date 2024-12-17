@@ -20,6 +20,14 @@ const sidebars: SidebarsConfig = {
   specSidebar: [
     'einleitung',
     'allgemeines',
+    {
+      type: 'category',
+      label: 'Erweiterungen',
+      items: [
+        'schnittstellen/vendor-extensions',
+        'schnittstellen/vendor-extensions-best-practices',
+      ]
+    },
     'codelisten',
     'glossar',
     {
@@ -160,22 +168,6 @@ const sidebars: SidebarsConfig = {
       label: 'Erweiterungen',
       items: [
         'schnittstellen/oidc-claims',
-        'schnittstellen/vendor-extensions',
-        'schnittstellen/vendor-extensions-best-practices',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Praxisleitfaden für die Implementierung',
-      link: {
-        type: 'doc',
-        id: 'praxisleitfaden/praxisleitfaden',
-      },
-      items: [
-        'praxisleitfaden/ablauf-synchronisation',
-        'praxisleitfaden/ablauf-schuljahrwechsel',
-        'praxisleitfaden/rolle-in-organisation',
-        'praxisleitfaden/ablauf-löschen',
       ],
     },
   ],
@@ -244,15 +236,6 @@ const sidebars: SidebarsConfig = {
       type: 'doc',
       label: 'Autorisierung und Authentifizierung',
       id: 'schnittstellen/autorisierung-qs',
-    },
-    {
-      type: 'category',
-      label: 'English API Notes',
-      link: {
-        type: 'doc',
-        id: 'english-api-notes/english-api-notes',
-      },
-      items: ['english-api-notes/data-models', 'english-api-notes/code-lists'],
     },
     {
       type: 'category',
