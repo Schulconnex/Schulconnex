@@ -15,7 +15,7 @@ get:
     einer Organisation per ID zugelassen. Die Antwort-Nutzdaten (Response Payload) beinhalten
     ein JSON-Objekt des Datentyps Organisation.
 
-    Siehe auch Datenmodell [`Organisation`](../../../datenmodell/organisation).
+    Siehe auch Datenmodell [`Organisation`](../../../datenmodell-qs/organisation).
   parameters:
     - in: path
       name: id

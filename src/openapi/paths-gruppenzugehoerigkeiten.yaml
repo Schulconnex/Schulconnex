@@ -13,8 +13,8 @@ get:
     (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Gruppendatensatz
     mit den jeweiligen Gruppenzugehörigkeiten und der zugeordneten Gruppe, sofern Einträge existieren.
 
-    Siehe auch Datenmodell [`Gruppendatensatz`](../../../datenmodell/gruppendatensatz),
-    Datenmodell [`Gruppe`](../../../datenmodell/gruppe) und Datenmodell
+    Siehe auch Datenmodell [`Gruppendatensatz`](../../../datenmodell-qs/gruppendatensatz),
+    Datenmodell [`Gruppe`](../../../datenmodell-qs/gruppe) und Datenmodell
     [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
 
     Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut `gruppe` die Gruppen-ID

@@ -26,7 +26,7 @@ get:
     Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array
     des Datentyps Organisationsbeziehungen.
 
-    Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell/organisationsbeziehung).
+    Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell-qs/organisationsbeziehung).
 
     Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` ermöglicht das
     Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.

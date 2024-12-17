@@ -12,7 +12,7 @@ get:
     einer Beziehung per ID zugelassen. Die Antwort-Nutzdaten (Response Payload) beinhalten
     ein JSON-Objekt des Datentyps Beziehung.
 
-    Siehe auch Datenmodell [`Beziehung`](../../../datenmodell/beziehung).
+    Siehe auch Datenmodell [`Beziehung`](../../../datenmodell-qs/beziehung).
 
     Zusätzlich zu den Informationen aus dem Datenmodell wird ein Attribut `ist_von_ktid`
     mitgeliefert, welches angibt, welchen Personenkontext die Beziehung referenziert.

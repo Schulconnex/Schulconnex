@@ -13,7 +13,7 @@ get:
     zum Abfragen einer Gruppenzugehörigkeit per ID zugelassen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein JSON-Objekt des Datentyps Gruppendatensatz.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell/gruppendatensatz).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell-qs/gruppendatensatz).
 
     Aus Konsistenzgründen mit dem Datenmodell Gruppendatensatz wird das Attribut
     `gruppenzugehoerigkeiten` als Array geliefert, auch wenn aufgrund des Zugriffs über
