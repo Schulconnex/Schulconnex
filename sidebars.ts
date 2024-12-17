@@ -44,6 +44,11 @@ const sidebars: SidebarsConfig = {
 
   spezDiensteSidebar: [
     {
+      type: 'html',
+      value: '<span style="font-weight: 600;">Dienste-API</span>',
+      defaultStyle: true,
+    },
+    {
       type: 'doc',
       id: 'allgemeines-dienste',
       label: 'Allgemeines',
@@ -173,6 +178,11 @@ const sidebars: SidebarsConfig = {
   ],
 
   spezQuellsystemeSidebar: [
+    {
+      type: 'html',
+      value: '<span style="font-weight: 600;">Quellsysteme-API</span>',
+      defaultStyle: true,
+    },
     {
       type: 'doc',
       id: 'allgemeines-qs',
