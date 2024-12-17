@@ -13,7 +13,7 @@ get:
     zum Abfragen einer Gruppenzugehörigkeit per ID zugelassen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein JSON-Objekt des Datentyps Gruppendatensatz.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell/gruppendatensatz).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell-qs/gruppendatensatz).
 
     Aus Konsistenzgründen mit dem Datenmodell Gruppendatensatz wird das Attribut
     `gruppenzugehoerigkeiten` als Array geliefert, auch wenn aufgrund des Zugriffs über
@@ -73,7 +73,7 @@ put:
     zum Aktualisieren einer Gruppenzugehörigkeit per ID zugelassen. Die Anfrage-Nutzdaten
     (Request Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeit.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell/gruppenzugehörigkeit).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
 
     Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Gruppenzugehörigkeit
     das Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
@@ -168,7 +168,7 @@ delete:
     zum Löschen einer Gruppe per `gruppe.id` zugelassen. Die Anfrage-Nutzdaten (Request
     Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeit.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell/gruppenzugehörigkeit).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
 
     Es ist erforderlich, dass für eine Löschanfrage einer Gruppenzugehörigkeit das
     Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.

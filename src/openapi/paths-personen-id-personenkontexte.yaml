@@ -14,7 +14,7 @@ get:
     (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Personenkontext,
     sofern Einträge (ggf. passend zu den optionalen Filtern) existieren.
 
-    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell/personenkontext).
+    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell-qs/personenkontext).
 
     Die Anfrage erfordert keine Nutzdaten (Request Payload).
 
@@ -112,7 +112,7 @@ post:
     zum Erstellen von Personenkontexten zu einem Personendatensatz zugelassen. Die
     Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps Personenkontext.
 
-    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell/personenkontext).
+    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell-qs/personenkontext).
 
     Beim Erstellen eines Personenkontexts ist der Default-Status des Attributes `personenstatus` der Wert `Aktiv`.
 

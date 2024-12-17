@@ -2,7 +2,7 @@
 title: Gruppendatensatz
 ---
 
-# Angepasstes Datenmodell Gruppendatensatz
+# Datenmodell Gruppendatensatz für Dienste
 
 Datenmodell eines Gruppendatensatzes: Der Gruppendatensatz ist als Daten-Container (WrapperObject) zu verstehen.
 Über den Gruppendatensatz werden Gruppe (Attribut `gruppe`) sowie die Gruppenzugehörigkeiten (Attribut

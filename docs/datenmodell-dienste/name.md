@@ -2,7 +2,7 @@
 title: Name
 ---
 
-# Angepasstes Datenmodell Name
+# Datenmodell Name für Dienste
 
 Datenmodell des Namens einer [Person](person).
 

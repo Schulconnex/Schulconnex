@@ -16,7 +16,7 @@ get:
     zu einer Organisation zugelassen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein
     JSON-Objekt des Datentyps Organisation.
 
-    Siehe auch Datenmodell [`Organisation`](../../../datenmodell/organisation).
+    Siehe auch Datenmodell [`Organisation`](../../../datenmodell-dienste/organisation).
   responses:
     '200':
       description: OK

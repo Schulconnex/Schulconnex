@@ -2,7 +2,7 @@
 title: Personenkontext
 ---
 
-# Angepasstes Datenmodell Personenkontext für Diensteanbieter
+# Datenmodell Personenkontext für Diensteanbieter
 
 Hat eine Person mehrere Personenkontexte, so wird typischerweise bereits bei der Anmeldung im
 Sicherheitskontext einer angemeldeten Person einer dieser Kontexte selektiert. In diesem Fall
@@ -16,7 +16,7 @@ aus einem Kontext in einen anderen Kontext übernommen werden sollen.
 Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung
 --- | --- | --- | --- | ---
 id | String (UTF-8) | 1 | nein | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-organisation | [Organisation](organisation) | 0/1 | ja | Organisation (siehe Angepasstes Datenmodell *Organisation*).
+organisation | [Organisation](organisation) | 0/1 | ja | Organisation (siehe Datenmodell *Organisation*).
 rolle | String (Code) | 0/1 | ja | Rolle der Person innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*.
 erreichbarkeiten | *Array[Erreichbarkeit]* | 0..n | ja | Liste (Array) von Erreichbarkeiten.
 personenstatus | String (Code) | 0/1 | ja | Status, den eine Person in einer Organisation in Bezug auf eine bestimmte Rolle hat, Referenz auf einen Code der Codeliste *Personenstatus*.

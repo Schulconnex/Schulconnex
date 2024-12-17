@@ -2,7 +2,7 @@
 title: Gruppenzugehörigkeit
 ---
 
-# Angepasstes Datenmodell Gruppenzugehörigkeit
+# Datenmodell Gruppenzugehörigkeit für Dienste
 
 Die Gruppenzugehörigkeit repräsentiert eine Verknüpfung zwischen einem Personenkontext und einer Gruppe.
 Hierin werden zusätzlich zu der Rolle im Personenkontext, welcher sich auf die Rolle innerhalb einer
