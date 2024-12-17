@@ -1,4 +1,4 @@
-# Angepasstes Datenmodell
+# Datenmodell
 
 Der Datenabruf durch einen Dienst erfolgt im Kontext eines Nutzers oder einer Nutzerin und stellt nur die Daten,
 die für die Nutzung des Dienstes erforderlich sind, bereit. Die Daten haben aus diesem Grund eine andere Struktur

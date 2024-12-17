@@ -81,7 +81,7 @@ const config: Config = {
             type: 'docSidebar',
             sidebarId: 'specSidebar',
             position: 'left',
-            label: 'Einleitung',
+            label: 'Allgemeines',
           },
           {
             type: 'dropdown',

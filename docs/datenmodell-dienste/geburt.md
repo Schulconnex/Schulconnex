@@ -2,7 +2,7 @@
 title: Geburt
 ---
 
-# Angepasstes Datenmodell Geburt
+# Datenmodell Geburt für Dienste
 
 Datenmodell der Geburt einer [Person](person).
 
