@@ -15,7 +15,7 @@ get:
 
     Siehe auch Datenmodell [`Gruppendatensatz`](../../../datenmodell/gruppendatensatz),
     Datenmodell [`Gruppe`](../../../datenmodell/gruppe) und Datenmodell
-    [`Gruppenzugehörigkeit`](../../../datenmodell/gruppenzugehörigkeit).
+    [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
 
     Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut `gruppe` die Gruppen-ID
     über das Attribut `gruppe.id`.

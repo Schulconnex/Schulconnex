@@ -31,9 +31,9 @@ get:
     mit dem jeweiligen Personenkontext und der zugeordneten Person, sofern Einträge
     (ggf. passend zu den optionalen Filtern) existieren.
 
-    Siehe auch Datenmodell [`Personendatensatz`](../../../datenmodell/personendatensatz),
-    Datenmodell [`Person`](../../../datenmodell/person) und
-    Datenmodell [`Personenkontext`](../../../datenmodell/personenkontext).
+    Siehe auch Datenmodell [`Personendatensatz`](../../../datenmodell-qs/personendatensatz),
+    Datenmodell [`Person`](../../../datenmodell-qs/person) und
+    Datenmodell [`Personenkontext`](../../../datenmodell-qs/personenkontext).
 
     Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut `personendatensatz.person`
     mit dem Datentyp Person nur die ID über das Attribut `personenkontext.person.id`.

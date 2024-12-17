@@ -18,7 +18,7 @@ post:
     Organisation pauschal einer anderen Organisation bereit zu stellen.
 
     Wird ein Personenkontext für eine andere Organisation freigegeben, so hat die andere Organisation auch
-    automatisch Lese-Zugriff auf die im Datenmodell [Person](../../../datenmodell/person) beschriebenen Attribute der zu
+    automatisch Lese-Zugriff auf die im Datenmodell [Person](../../../datenmodell-qs/person) beschriebenen Attribute der zu
     dem Personenkontext gehörenden Person, jedoch nicht auf andere, nicht freigegebene Personenkontexte dieser Person oder
     auf Gruppenzugehörigkeiten.
 
