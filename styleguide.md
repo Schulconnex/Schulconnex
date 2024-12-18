@@ -26,6 +26,7 @@ strukturiert wird.
 - Entsprechendes gilt für Wortkombinationen mit "HTTP", beispielsweise "HTTP-Anfragen".
 - Wird "Schulconnex" zusammen mit einem anderen Begriff benutzt ("Schulconnex-Server", "Schulconnex-Spezifikation"),
   werden die Begriffe mit einem Bindestrich verbunden.
+- Als Genitiv von Personenkontext wird "Personenkontexts", nicht "Personenkontextes" beutzt.
 
 ## Attributnamen
 
@@ -40,6 +41,7 @@ strukturiert wird.
 - Beschreibungen von Attributen enden immer mit einem Punkt, auch wenn es sich um keinen vollständigen Satz handelt.
   So ist die Beschreibung zu `geburt.datum` beispielsweise in der Form "Geburtsdatum einer Person." zu schreiben
   und nicht als "Geburtsdatum einer Person".
+- Bei der Kardinalität von Attributwerten werden Minimal- und Maximal-Wert durch zwei Punkte getrennt, also beispielsweise "0..1" oder "1..n".
 
 ## Formatierungen in Markdown-Dateien
 
