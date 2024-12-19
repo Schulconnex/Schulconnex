@@ -80,7 +80,7 @@ Beispiel:
 Die Datei `paths-personen-id-personenkontexte.yaml` beschreibt den Endpunkt
 `/personen/{id}/personenkontexte`.
 
-### Dateien mit Components-Definitionen (Schemas)
+### Dateien mit Components-Definitionen (JSON-Schemas)
 
 Diese Dateien unterteilen sich in Dateien, welche 1) die Datenmodelle definieren, 2) die
 Codelisten definieren und 3) die Authentifizierung definieren.
