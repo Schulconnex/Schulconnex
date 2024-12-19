@@ -77,7 +77,7 @@ put:
 
     Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Gruppenzugehörigkeit
     das Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
-    Der Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs `revision`,
+    Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs `revision`,
     ob der Datensatz der Gruppenzugehörigkeit in der Zwischenzeit keine Änderung erfahren
     hat. Der Wert des Attributs kann von einem Quellsystem oder Dienst nicht verändert
     werden; dieser wird mit der Erstellung (Create) des Datensatzes Gruppenzugehörigkeit
@@ -172,7 +172,7 @@ delete:
 
     Es ist erforderlich, dass für eine Löschanfrage einer Gruppenzugehörigkeit das
     Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
-    Der Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs
+    Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs
     `revision`, ob der Datensatz des Personenkontext in der Zwischenzeit keine Änderung
     erfahren hat.
 

@@ -34,7 +34,7 @@ sequenceDiagram
   participant Auth as Anmeldeserver Authentication
   participant API as Anmeldeserver REST API
   N->>D: Login auswählen
-  D->>Auth: Authorisierung anfordern
+  D->>Auth: Autorisierung anfordern
   Auth->>N: Umleitung auf Login-Seite des Anmeldeservers
   N->>Auth: Einloggen und zustimmen
   Auth->>D: Autorisierungscode

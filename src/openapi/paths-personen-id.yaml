@@ -77,7 +77,7 @@ put:
 
     Es ist erforderlich, dass zur Aktualisierungsanfrage im bearbeiteten Personendatensatz
     das Attribut `personendatensatz.person.revision` des zugrunde liegenden Personendatensatzes
-    mitgeschickt wird. Der Schulconnex-Service überprüft anhand des mitgeschickten Wertes
+    mitgeschickt wird. Der Schulconnex-Service überprüft anhand des mitgeschickten Werts
     des Attributs `personendatensatz.person.revision`, ob der Datensatz der Person
     in der Zwischenzeit keine Änderung erfahren hat. Der Wert des Attributs kann von
     einem Quellsystem oder Dienst nicht verändert werden; dieser wird mit der Erstellung
@@ -168,7 +168,7 @@ delete:
 
     Es ist erforderlich, dass für eine Löschanfrage einer Person das Attribut
     `personendatensatz.person.revision` des zugrunde liegenden Personendatensatzes mitgeschickt
-    wird. Der Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs
+    wird. Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs
     `personendatensatz.person.revision`, ob der Datensatz der Person in der Zwischenzeit
     keine Änderung erfahren hat.
   parameters:

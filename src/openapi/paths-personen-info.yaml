@@ -9,7 +9,7 @@ get:
     Liefert die Personenkontext-IDs der dem Dienst bekannten und derzeit aktiven
     Personenkontexte sowie gegebenenfalls den Löschzeitpunkt.
 
-    Der Aufruf dieses Endpunktes erfolgt immer im Kontext des Dienstes. Der Dienst
+    Der Aufruf dieses Endpunkts erfolgt immer im Kontext des Dienstes. Der Dienst
     authentisiert sich durch den Client Credentials Flow.
 
     Die Anfrage erfolgt als HTTP-GET. Als Antwort erfolgt eine Liste aus Datenobjekten,
@@ -28,7 +28,7 @@ get:
     der Server mit einem Status 304 (Not Modified) und sendet den Datensatz nicht erneut.
 
     Die Personenkontext-ID `id` ist die für den jeweiligen Dienst individuell pseudonymisierte
-    ID des Personenkontextes.
+    ID des Personenkontexts.
 
     Die Schnittstelle `/personen-info` ermöglicht das Verwenden eines Filterparameters zum Auslesen
     der vollständigen Datensätze der gelisteten Personen oder Personenkontexte im selben Umfang,
