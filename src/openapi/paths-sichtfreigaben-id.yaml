@@ -17,11 +17,11 @@ delete:
     Ein DELETE kann nur mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload)
     beinhalten die Revisionsnummer.
 
-    Siehe auch das Datenmodell zu [`Sichtfeigabe`](../../../datenmodell-qs/sichtfreigabe).
+    Siehe auch das Datenmodell zu [`Sichtfreigabe`](../../../datenmodell-qs/sichtfreigabe).
 
     Es ist erforderlich, dass für eine Löschanfrage einer Freigabe das Attribut `revision` der
     zugrunde liegenden Freigabe mitgeschickt wird. Der Anmeldeservice überprüft anhand des
-    mitgeschickten Wertes des Attributs `revision`, ob der Datensatz der Freigabe in der
+    mitgeschickten Werts des Attributs `revision`, ob der Datensatz der Freigabe in der
     Zwischenzeit keine Änderung erfahren hat.
 
   parameters:

@@ -35,7 +35,7 @@ post:
         type: string
         example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontextes.
+      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontexts.
   requestBody:
     required: true
     content:
@@ -91,7 +91,7 @@ get:
   summary: Auflistung von Sichtfreigaben.
   description: |
    Dieser Schnittstellenendpunkt gibt eine Liste der existierenden Sichtfreigaben eines
-   Personenkontextes zurück.
+   Personenkontexts zurück.
 
    Ein READ ist nur mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` zum Abfragen
    der Sichtfreigaben per `personenkontext.id` zugelassen.
@@ -104,7 +104,7 @@ get:
         type: string
         example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontextes.
+      description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   responses:
     '200':
       description: OK
