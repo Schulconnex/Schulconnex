@@ -10,7 +10,7 @@ Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
 id | String (UTF-8) | 1 | ID der Beziehung.
 mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Beziehung zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-ktid | String (UTF-8) | 1 | ID des Personenkontextes, zu dem eine Beziehung besteht.
+ktid | String (UTF-8) | 1 | ID des Personenkontexts, zu dem eine Beziehung besteht.
 beziehung | String (UTF-8) | 1 | Beziehung aus Codeliste *Beziehungen*.
 revision | String (UTF-8) | 1 | Revision der Beziehung. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
 
