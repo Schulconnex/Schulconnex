@@ -68,7 +68,7 @@ oder eine Menü-Funktion.
 ### Schritt 2: Auswahl der zu synchronisierenden Gruppen
 
 Meistens ist es nicht sinnvoll, sämtliche Personeneinträge der Datenbank des Quellsystems
-ohne Vorauswahl zu synchronisieren. Daher sollte im 2. Schritt die Möglichkeit bestehen,
+ohne Vorauswahl zu synchronisieren. Daher sollte im zweiten Schritt die Möglichkeit bestehen,
 die zu synchronisierenden Gruppen auszuwählen. Es bietet sich ein modaler Dialog an, mit
 der Möglichkeit Schulklassen oder andere einschlägige Personengruppen, wie Lehrkräfte,
 auszuwählen.
