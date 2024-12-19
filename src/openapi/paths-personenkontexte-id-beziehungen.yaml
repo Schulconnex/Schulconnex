@@ -13,7 +13,7 @@ post:
     Beziehungen sind immer von der Form „hat_als“. Besteht zum Beispiel aus einem
     Personenkontext von Person A eine Beziehung vom Typ `SchB` zu einem Personenkontext
     (`ktid`) von Person B, so bedeutet dieses, dass Person A die Person B als Schulbegleiter
-    (oder Schulbegleiterin) hat.
+    oder Schulbegleiterin hat.
 
     Im schulischen Gebrauch bedeutet das meistens, dass Beziehungen den Kontexten von Schülern
     und Schülerinnen zugeordnet sind. Schüler und Schülerinnen haben Betreuer oder Betreuerinnen,
@@ -35,7 +35,7 @@ post:
     Die folgende Tabelle listet die Attribute einer Beziehung auf, welche von einem
     Quellsystem oder Dienst nicht verändert werden können.
 
-    Attribut | In den Anfrage Nutzdaten erforderlich? | Bemerkung
+    Attribut | In den Anfrage-Nutzdaten erforderlich? | Bemerkung
     --- | --- | ---
     `id` | nein | ID der Beziehung. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `revision` | nein | Revision der Beziehung. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
@@ -50,7 +50,7 @@ post:
         type: string
         example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontextes.
+      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontexts.
   requestBody:
     required: true
     content:
@@ -145,7 +145,7 @@ get:
         type: string
         example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontextes.
+      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontexts.
     - in: query
       name: hat_als_beziehungen
       schema:

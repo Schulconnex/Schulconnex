@@ -27,7 +27,7 @@ get:
       required: true
       schema:
         type: string
-      description: Der Pfad-Parameter bezieht sich auf die ID des Beziehung.
+      description: Der Pfad-Parameter bezieht sich auf die ID der Beziehung.
   responses:
     '200':
       description: OK
@@ -77,7 +77,7 @@ delete:
 
     Es ist erforderlich, dass für eine Löschanfrage einer Beziehung das Attribut `revision`
     der zugrunde liegenden Beziehung mitgeschickt wird. Der Schulconnex-Server überprüft
-    anhand des mitgeschickten Wertes des Attributs `revision`, ob der Datensatz in
+    anhand des mitgeschickten Werts des Attributs `revision`, ob der Datensatz in
     der Zwischenzeit keine Änderung erfahren hat.
   parameters:
     - in: path
@@ -85,7 +85,7 @@ delete:
       schema:
         type: string
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID des Beziehung.
+      description: Der Pfad-Parameter bezieht sich auf die ID der Beziehung.
   requestBody:
     required: true
     content:

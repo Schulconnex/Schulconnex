@@ -32,7 +32,7 @@ personenstatus | String (Code) | 0..1 | Status, den eine Person in einer Organis
 jahrgangsstufe | String (Code) | 0..1 | Jahrgangsstufe, die eine Person in der Organisation in einer bestimmten Rolle besucht, Referenz auf Code der Codeliste *Jahrgangsstufe*.
 sichtfreigabe | String (Code) | 0..1 | Attribut gibt an, ob dieser Personenkontext aufgrund der Freigabe durch eine andere Organisation sichtbar ist. Ist `sichtfreigabe` nicht gesetzt, so entspricht das dem Wert `nein`. Der Wert von Sichtfreigabe ist Boolean nach Codetabelle *Boolean*.
 loeschung | *Struktur* | 0..1 | Aktuell gibt es zu Löschungen nur ein Attribut (Zeitpunkt), eventuell werden in späteren Versionen weitere Attribute hinzugefügt.
-loeschung.zeitpunkt | String (datetime) | 1 | Datum und Uhrzeit der Löschung des Personenkontexts. Das Format des Löschzeitpunktes ist `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt. Solange ein Personenkontext nicht gelöscht wurde, kann das Attribut `loeschung.zeitpunkt` geändert oder gelöscht werden. Ist das Attribut `loeschung` vorhanden, so muss der Zeitpunkt gesetzt sein.
+loeschung.zeitpunkt | String (datetime) | 1 | Datum und Uhrzeit der Löschung des Personenkontexts. Das Format des Löschzeitpunkts ist `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt. Solange ein Personenkontext nicht gelöscht wurde, kann das Attribut `loeschung.zeitpunkt` geändert oder gelöscht werden. Ist das Attribut `loeschung` vorhanden, so muss der Zeitpunkt gesetzt sein.
 revision | String (UTF-8) | 1 | Revision des Personenkontext. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
 
 ## Beispiel JSON des Datentyps Personenkontext
