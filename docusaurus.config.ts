@@ -89,6 +89,11 @@ const config: Config = {
             position: 'left',
             items: [
               {
+                type: 'doc',
+                docId: 'schnelleinstieg-dienste',
+                label: 'Schnelleinstieg',
+              },
+              {
                 type: 'docSidebar',
                 sidebarId: 'spezDiensteSidebar',
                 label: 'Spezifikation',
@@ -105,6 +110,11 @@ const config: Config = {
             label: 'Quellsysteme',
             position: 'left',
             items: [
+              {
+                type: 'doc',
+                docId: 'schnelleinstieg-qs',
+                label: 'Schnelleinstieg',
+              },
               {
                 type: 'docSidebar',
                 sidebarId: 'spezQuellsystemeSidebar',
