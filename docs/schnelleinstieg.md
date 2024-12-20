@@ -9,7 +9,7 @@ Die Quellsystem-API dient der Bereitstellung, dem Austausch und der Synchronisat
 Kontextdaten zwischen schulischen Identitätsmanagementsystemen. Die Quellsystem-API erlaubt lesenden und
 schreibenden Zugriff auf Informationen.
 
-Die Dienste-API dient primär der Bereitstellung von Anmeldeinformationen zur Anmeldung von Nutzern an externe
+Die Dienste-API dient primär der Bereitstellung von Kontextinformationen zur Anmeldung von Nutzern an externe
 Dienste. Die Dienste API stellt nur einen lesenden Zugriff auf Information bereit.
 
 Das Kapitel Datenmodelle spezifiziert dabei sämtliche verfügbare Datenmodelle zur Nutzung der jeweiligen API.
@@ -23,4 +23,4 @@ soll dazu dienen, Entwicklern, deren Muttersprache nicht Deutsch ist, das Verst�
 erleichtern, welche bei automatischer Übersetzung leicht fehlübersetzt werden.
 
 Die eigentliche REST-API ist jeweils für Dienste und Quellsysteme im OpenAPI-Format spezifiziert und steht
-sowohl als Webseite als auch als herunterladbare Spezifikation im YAML-Format zur Verfügung.
+sowohl als Webseite als auch zum Herunterladen im OpenAPI-YAML-Format zur Verfügung.

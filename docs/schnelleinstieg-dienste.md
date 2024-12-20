@@ -8,7 +8,7 @@ import Text from './schnelleinstieg.md';
 
 Das Kapitel zu [Datenmodellen](datenmodell-dienste/datenmodell) ist als Beschreibung der maximal verfügbaren Informationen
 zu sehen. Im Einzelfall vereinbart jeder Dienstanbieter mit dem Betreiber eines Schulconnex-Servers
-vertraglich welche der definierten Attribute für den Betrieb des Dienstes notwendig sind. Zur Wahrung des
+vertraglich, welche der definierten Attribute für den Betrieb des Dienstes notwendig sind. Zur Wahrung des
 Grundsatzes der Datensparsamkeit werden dann nur die vereinbarten Attribute und Werte an der Schnittstelle bereitgestellt.
 
 Das Kapitel [API-Autorisierung und Authentifikation](schnittstellen/autorisierung-dienste) für Dienstanbieter
