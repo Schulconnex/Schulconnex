@@ -72,11 +72,11 @@ put:
 
     Ein UPDATE ist nur mit HTTP-PUT auf die API /v1/personenkontexte/{personendatensatz.personenkontext.id} zum Aktualisieren eines Personenkontexts per ID zugelassen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps Personenkontext. Das Datenmodell „Personenkontext“ ist in 5.5 beschrieben.
 
-    Es ist erforderlich, dass zur Aktualisierungsanfrage im bearbeiteten Personenkontext das Attribut „personenkontext.revision” des zugrunde liegenden Personenkontexts mitgeschickt wird. Der Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs „personenkontext.revision”, ob der Datensatz des Personenkontexts in der Zwischenzeit keine Änderung erfahren hat. Der Wert des Attributs kann von einem Quellsystem oder Dienst nicht verändert werden; dieser wird mit der Erstellung (Create) des Datensatzes Personenkontext und jeder erfolgreichen Änderung (Update) vom Schulconnex-Server neu generiert.
+    Es ist erforderlich, dass zur Aktualisierungsanfrage im bearbeiteten Personenkontext das Attribut „personenkontext.revision” des zugrunde liegenden Personenkontexts mitgeschickt wird. Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs „personenkontext.revision”, ob der Datensatz des Personenkontexts in der Zwischenzeit keine Änderung erfahren hat. Der Wert des Attributs kann von einem Quellsystem oder Dienst nicht verändert werden; dieser wird mit der Erstellung (Create) des Datensatzes Personenkontext und jeder erfolgreichen Änderung (Update) vom Schulconnex-Server neu generiert.
 
     Die folgende Tabelle listet die Attribute eines Personenkontexts auf, welche von einem Quellsystem oder Dienst nicht verändert werden können.
 
-    Attribut | In den Anfrage Nutzdaten erforderlich? | Bemerkung
+    Attribut | In den Anfrage-Nutzdaten erforderlich? | Bemerkung
     --- | --- | ---
     `id` | nein | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `mandant` | nein | ID des Mandanten, dem die Person zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieser Wert ist eine Referenz auf einen Mandanten.
@@ -185,7 +185,7 @@ delete:
 
     Es ist erforderlich, dass für eine Löschanfrage eines Personenkontexts das Attribut
     `personenkontext.revision` des zugrunde liegenden Personenkontexts mitgeschickt wird.
-    Der Anmeldeservice überprüft anhand des mitgeschickten Wertes des Attributs `personenkontext.revision`,
+    Der Anmeldeservice überprüft anhand des mitgeschickten Werts des Attributs `personenkontext.revision`,
     ob der Datensatz des Personenkontexts in der Zwischenzeit keine Änderung erfahren hat.
   parameters:
     - in: path

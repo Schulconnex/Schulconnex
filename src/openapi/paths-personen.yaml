@@ -6,7 +6,7 @@ get:
     - oAuthForServices: []
   summary: Personendatensätze des Quellsystemanbieters.
   description: |
-    Mittels dieses Endpunktes werden alle Personendatensätze zurückgegeben, auf die
+    Mittels dieses Endpunkts werden alle Personendatensätze zurückgegeben, auf die
     der Quellsystemanbieter zugreifen darf.
 
     Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen.

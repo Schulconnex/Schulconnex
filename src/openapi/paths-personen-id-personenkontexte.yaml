@@ -123,7 +123,7 @@ post:
     Die folgende Tabelle listet die Attribute eines Personenkontext (`personendatensatz.personenkontexte`),
     welche von einem Quellsystem oder Dienst nicht verändert werden können.
 
-    Attribut | In den Anfrage Nutzdaten erforderlich? | Bemerkung
+    Attribut | In den Anfrage-Nutzdaten erforderlich? | Bemerkung
     --- | --- | ---
     `id` | nein | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `referrer` | nein | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und ist eindeutig.

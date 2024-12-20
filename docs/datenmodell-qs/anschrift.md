@@ -6,7 +6,7 @@ Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
 postleitzahl | String (UTF-8) | 0..1 | Postleitzahl.
 ort | String (UTF-8) | 0..1 | Amtlicher Gemeindename.
-ortsteil | String (UTF-8) | 0..1 | Teil eines Ortes, falls genauere Untergliederung gewünscht.
+ortsteil | String (UTF-8) | 0..1 | Teil eines Orts, falls genauere Untergliederung gewünscht.
 
 ## Beispiel JSON einer Anschrift
 

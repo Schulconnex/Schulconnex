@@ -46,7 +46,7 @@ properties:
         type: string
         format: date-time
   revision:
-    description: Revision des Personenkontext.
+    description: Revision des Personenkontexts.
     type: string
     readOnly: true
     example: "2"

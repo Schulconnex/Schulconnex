@@ -73,7 +73,7 @@ put:
 
     Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Gruppe das
     Attribut `gruppe.revision` der zugrunde liegenden Gruppe mitgeschickt wird. Der
-    Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs `gruppe.revision`,
+    Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs `gruppe.revision`,
     ob der Datensatz der Gruppe in der Zwischenzeit keine Änderung erfahren hat. Der Wert des
     Attributs kann von einem Quellsystem oder Dienst nicht verändert werden; dieser wird mit
     der Erstellung (Create) des Datensatzes Gruppe und jeder erfolgreichen Änderung (Update)
@@ -174,7 +174,7 @@ delete:
 
     Es ist erforderlich, dass für eine Löschanfrage einer Gruppe das Attribut `gruppe.revision`
     der zugrunde liegenden Gruppe mitgeschickt wird. Der Schulconnex-Server überprüft
-    anhand des mitgeschickten Wertes des Attributs `gruppe.revision`, ob der Datensatz
+    anhand des mitgeschickten Werts des Attributs `gruppe.revision`, ob der Datensatz
     der Gruppe in der Zwischenzeit keine Änderung erfahren hat.
 
     **Wichtig**: Das Löschen einer Gruppe löscht auch gleichzeitig alle zu der Gruppe
