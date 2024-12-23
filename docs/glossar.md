@@ -1,5 +1,5 @@
 ---
-tags: 
+tags:
 - Informativ
 ---
 # Glossar
@@ -16,7 +16,7 @@ DIN 91379.C | DIN 91379.C ist umfasst alle Zeichen von DIN 92379.B und darüber 
 Freigaben | Organisationen können individuelle Datensätze zur Einsicht für andere Organisationen freigeben. Alle Freigaben sind derzeit Sichtfreigaben.
 HTTP | Das Hypertext Transfer Protocol ist das Übertragungsprotokoll für Daten. In den meisten Fällen wird heutzutage die sicherere Version HTTPS eingesetzt.
 HTTPS | HTTPS steht für Hypertext Transfer Protocol Secure und bietet eine verschlüsselte Kommunikation zwischen Client und Server. Zusätzlich wird der Webserver durch ein Zertifikat authentifiziert, welches die Vertrauenswürdigkeit der Domäne bescheinigt. Als Verschlüsselungsprotokoll wird TLS genutzt.
-JSON | JSON ist die Abkürzung für JavaScript Object Notation und wird als kompaktes Datenformat strukturierter Daten eingesetzt. Ein JSON besteht aus verschiedenen Elementen. Beispielsweise ist JSON-Objekt eine ungeordnete Menge von Namen-Wertepaaren, dargestellt mit geschweiften Klammern. Innerhalb eines Objektes gibt es mehrere Namen-Wertepaare. Ein JSON-Array, dargestellt mit eckigen Klammern, beinhaltet dagegen indizierte Listen von Elementen gleichen oder verschiedenen Typs.
+JSON | JSON ist die Abkürzung für JavaScript Object Notation und wird als kompaktes Datenformat strukturierter Daten eingesetzt. Eine JSON-Struktur besteht aus verschiedenen Elementen. Beispielsweise ist JSON-Objekt eine ungeordnete Menge von Namen-Wertepaaren, dargestellt mit geschweiften Klammern. Innerhalb eines Objektes gibt es mehrere Namen-Wertepaare. Ein JSON-Array, dargestellt mit eckigen Klammern, beinhaltet dagegen indizierte Listen von Elementen gleichen oder verschiedenen Typs.
 JSON Web Token | Ein auf JSON basierender Access-Token. Authentifizierungsrelevante Informationen sind im Token enthalten, wodurch Sessions nicht auf einem Server gespeichert werden müssen. Ein signiertes JWT besteht aus drei Teilen, die jeweils mit Base64 kodiert werden und durch einen Punkt getrennt sind: Header, Payload und Signature.
 JWT | Siehe: JSON Web Token
 Mandantschaft (Mandant) | Als Mandantschaft im datenschutzrechtlichen Sinne (z. B. §4 DSGVO) wird die für bestimmte Daten verantwortlichen Stelle bezeichnet. Die Mandantschaft stellt einen abgeschlossenen und gegenüber anderen Mandantschaften klar abgegrenzten Datenhaltungs- und Verarbeitungskontext im Schulconnex-Server dar.

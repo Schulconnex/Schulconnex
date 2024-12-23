@@ -7,9 +7,9 @@ referenziert werden.
 Codes aus Codelisten werden generell als Strings zurückgegeben, d. h. die JSON-Form für das
 weibliche Geschlecht ist als `"geschlecht": "w"` und nicht `"geschlecht": w` zu erwarten.
 
-Alle Codes sind als nicht abhängig von Groß-/Kleinschreibung zu interpretieren
+Alle Codes müssen als nicht abhängig von Groß-/Kleinschreibung interpretiert werden
 (sind nicht Case-sensitiv). Die Organisationsarten `"SCHULE"`, `"schule"`, `"Schule"` oder
-auch `"ScHuLe"` sind als identisch anzunehmen.
+auch `"ScHuLe"` müssen als identisch angenommen werden.
 
 ## Personenstatus
 
@@ -34,9 +34,9 @@ Lern | Lernende/r
 Lehr | Lehrende/r
 SorgBer | Sorgeberechtigte/r
 Extern | externe Person
-OrgAdmin | Organisationsadministrator
+OrgAdmin | Organisationsadministrator/in
 Leit | Organisationsleitung
-SysAdmin | Systemadministrator
+SysAdmin | Systemadministrator/in
 SchB | Schulbegleiter/in
 NLehr | Nicht-lehrendes Personal
 
@@ -275,8 +275,8 @@ einer Schule können darüber abgebildet werden.
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
-SorgBer | Sorgeberechtigter oder Sorgeberechtigte | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Sorgeberechtigten oder Sorgeberechtigte die Person B.
-SchB | Schulbegleiter oder Schulbegleiterin | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Schulbegleiter oder Schulbegleiterin die Person B.
+SorgBer | Sorgeberechtigte/r | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Sorgeberechtigten oder Sorgeberechtigte die Person B.
+SchB | Schulbegleiter/in | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Schulbegleiter oder Schulbegleiterin die Person B.
 
 ## Organisationsbeziehungen
 

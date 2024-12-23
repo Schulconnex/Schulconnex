@@ -98,6 +98,11 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
+          id: 'datenmodell-dienste/laufzeit',
+          label: 'Laufzeit',
+        },
+        {
+          type: 'doc',
           id: 'datenmodell-dienste/lernperiode',
           label: 'Lernperiode',
         },
@@ -155,11 +160,6 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'schnittstellendefinition/http-statuscodes-dienste',
           label: 'HTTP-Statuscodes'
-        },
-        {
-          type: 'doc',
-          id: 'schnittstellendefinition/validierung-dienste',
-          label: 'Validierung'
         }
       ],
     },

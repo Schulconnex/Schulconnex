@@ -9,7 +9,7 @@ referrer | String (UTF-8) | 0..1 | Identifikations-ID einer Person. Wird vom Que
 mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Personen zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
 stammorganisation | String (UTF-8) | 0..1 | ID der Stammorganisation. Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Der häufigste Anwendungsfall ist die Abordnung eines Lehrenden an eine andere Dienststelle. Die Stammorganisation ist unabhängig vom Personenkontext.
 name | *[Name](name)* | 1 | Der Name der Person.
-geburt | *[Geburt](geburt)* | 0..1 | Zur Geburt der Person.
+geburt | *[Geburt](geburt)* | 0..1 | Information zu Geburtsdatum und Geburtsort der Person.
 geschlecht | String (Code) | 0..1 | Referenz auf einen Code der Codeliste *Geschlecht*.
 lokalisierung | String | 0..1 | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Wert basiert auf Definition in RFC 5646. Wenn nicht angegeben, wird „de“ angenommen.
 vertrauensstufe | String (Code) | 1 | Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden, Referenz auf einen Code der Codeliste *Vertrauensstufe*.
