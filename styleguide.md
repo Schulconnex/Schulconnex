@@ -15,19 +15,6 @@ derzeit nur grob strukturiert.
 Es besteht die Absicht, dass, wenn ausreichend viele Informationen gesammelt wurden, der Styleguide neu
 strukturiert wird.
 
-## Begriffe und Schreibweisen
-
-- Schulconnex wird in einem Wort geschrieben und hat nur einen Großbuchstaben. "Schul-Connex", "SchulConneX" oder
-  "SchulconneX" sind keine zulässigen Schreibweisen.
-- Nicht durch die Schulconnex-Spezifikation vorgegebene Attribute heißen "anbieterspezifische Attribute" und nicht
-  "anwendungsfallspezifische Attribute", "herstellerspezifische Attribute"  oder "anwendungsspezifische Attribute".
-- Der Begriff "REST-API" ist mit Bindestrich zu schreiben und nicht als "REST API".
-- Der Begriff "OIDC-Claims" ist mit Bindestrich zu schreiben und nicht als "OIDC Claims".
-- Entsprechendes gilt für Wortkombinationen mit "HTTP", beispielsweise "HTTP-Anfragen".
-- Wird "Schulconnex" zusammen mit einem anderen Begriff benutzt ("Schulconnex-Server", "Schulconnex-Spezifikation"),
-  werden die Begriffe mit einem Bindestrich verbunden.
-- Als Genitiv von Personenkontext wird "Personenkontexts", nicht "Personenkontextes" beutzt.
-
 ## Attributnamen
 
 - Alle Attributnamen werden durchgehend klein geschrieben. Also `kennung` und `id` statt `Kennung` und `ID`
@@ -50,6 +37,17 @@ strukturiert wird.
   `sichtfreigabe` nicht gesetzt, so entspricht das dem Wert `Nein`."
 - Wird der Name einer Codeliste in einer Attributbeschreibung erwähnt, so wird der Name kursiv geschrieben.
   Beispiel: "Referenz auf einen Code der Codeliste *Personenstatus*."
+
+## Begriffe und Schreibweisen
+
+- Schulconnex wird in einem Wort geschrieben und hat nur einen Großbuchstaben. 
+- Nicht durch die Schulconnex-Spezifikation vorgegebene Attribute heißen "anbieterspezifische Attribute".
+- Der Begriff "REST-API" ist mit Bindestrich zu schreiben.
+- Der Begriff "OIDC-Claims" ist mit Bindestrich zu schreiben.
+- Entsprechendes gilt für Wortkombinationen mit "HTTP", beispielsweise "HTTP-Anfragen".
+- Wird "Schulconnex" zusammen mit einem anderen Begriff benutzt ("Schulconnex-Server", "Schulconnex-Spezifikation"),
+  werden die Begriffe mit einem Bindestrich verbunden.
+- Als Genitiv von Personenkontext wird "Personenkontexts" beutzt.
 
 ## Schulconnex-OpenAPI Dateinamen-Konventionen
 
