@@ -38,7 +38,7 @@ strukturiert wird.
 - Wird der Name einer Codeliste in einer Attributbeschreibung erwähnt, so wird der Name kursiv geschrieben.
   Beispiel: "Referenz auf einen Code der Codeliste *Personenstatus*."
 
-## Begriffe und Schreibweisen
+### Begriffe und Schreibweisen
 
 - Schulconnex wird in einem Wort geschrieben und hat nur einen Großbuchstaben. 
 - Nicht durch die Schulconnex-Spezifikation vorgegebene Attribute heißen "anbieterspezifische Attribute".
