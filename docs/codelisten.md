@@ -30,14 +30,14 @@ x | keine Angabe
 
 Code | Bezeichnung
 --- | ---
-Lern | Lernende/r
-Lehr | Lehrende/r
-SorgBer | Sorgeberechtigte/r
+Lern | Lernende/-r
+Lehr | Lehrende/-r
+SorgBer | Sorgeberechtigte/-r
 Extern | externe Person
-OrgAdmin | Organisationsadministrator/in
+OrgAdmin | Organisationsadministrator/-in
 Leit | Organisationsleitung
-SysAdmin | Systemadministrator/in
-SchB | Schulbegleiter/in
+SysAdmin | Systemadministrator/-in
+SchB | Schulbegleiter/-in
 NLehr | Nicht-lehrendes Personal
 
 ## Vertrauensstufe
@@ -153,8 +153,8 @@ Sonstig | Sonstige Gruppe
 
 Code | Bezeichnung
 --- | ---
-Lern | Lernende/r
-Lehr | Lehrende/r
+Lern | Lernende/-r
+Lehr | Lehrende/-r
 KlLeit | Klassenleitung
 Foerd | Förderlehrkraft
 VLehr | Vertretungslehrkraft
@@ -275,8 +275,8 @@ einer Schule können darüber abgebildet werden.
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
-SorgBer | Sorgeberechtigte/r | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Sorgeberechtigten oder Sorgeberechtigte die Person B.
-SchB | Schulbegleiter/in | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Schulbegleiter oder Schulbegleiterin die Person B.
+SorgBer | Sorgeberechtigte/-r | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Sorgeberechtigten oder Sorgeberechtigte die Person B.
+SchB | Schulbegleiter/-in | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Schulbegleiter oder Schulbegleiterin die Person B.
 
 ## Organisationsbeziehungen
 

@@ -28,6 +28,6 @@ Detailierte Informationen zu den Änderungen finden sich in der Historie der Git
 
 ### Geänderte Codelisten
 
-* Codeliste Rollen: Neue Rollen `SchB` (Schulbegleiter/in) und `NLehr` (Nichtlehrendes Personal) definiert
+* Codeliste Rollen: Neue Rollen `SchB` (Schulbegleiter/-in) und `NLehr` (Nichtlehrendes Personal) definiert
 * Codeliste Gruppenrollen: Neue Rolle `VLehr` (Vertretungslehrkraft) definiert
 * Die Codeliste Gruppenoptionen enthält derzeit keine Werte
