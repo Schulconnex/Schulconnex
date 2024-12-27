@@ -9,7 +9,7 @@ get:
     Dieser Schnittstellenendpunkt gibt alle Gruppenzugehörigkeiten zurück, auf die
     der Quellsystemanbieter zugreifen kann.
 
-    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
+    Ein READ muss mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Gruppendatensatz
     mit den jeweiligen Gruppenzugehörigkeiten und der zugeordneten Gruppe, sofern Einträge existieren.
 
@@ -28,8 +28,8 @@ get:
     Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut
     beinhaltet ist (contains). Bei Filtern vom Typ „String (Code)” überprüft der Schulconnex-Server,
     ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung gleich
-    dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so sind sie als
-    mit „und“ verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als
+    dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so müssen sie als
+    mit „und“ verknüpft angesehen werden. Entsprechen keine Werte den angegebenen Filtern, so wird als
     Resultat eine leere Liste geliefert.
 
     Filter | Typ | Beschreibung

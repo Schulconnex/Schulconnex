@@ -11,8 +11,7 @@ get:
 
     Dieser Schnittstellenendpunkt gibt die Organisation zur angegebenen `organisation.id` zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/organisationen/{organisation.id}` zum Abfragen
-    einer Organisation per ID zugelassen. Die Antwort-Nutzdaten (Response Payload) beinhalten
+    Ein READ zum Abfragen einer Organisation per ID muss mit HTTP-GET auf die API `/organisationen/{organisation.id}`erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten
     ein JSON-Objekt des Datentyps Organisation.
 
     Siehe auch Datenmodell [`Organisation`](../../../datenmodell-qs/organisation).

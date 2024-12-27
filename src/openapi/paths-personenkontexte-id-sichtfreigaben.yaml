@@ -93,8 +93,7 @@ get:
    Dieser Schnittstellenendpunkt gibt eine Liste der existierenden Sichtfreigaben eines
    Personenkontexts zurück.
 
-   Ein READ ist nur mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` zum Abfragen
-   der Sichtfreigaben per `personenkontext.id` zugelassen.
+   Ein READ zum Abfragen der Sichtfreigaben per `personenkontext.id` muss mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` erfolgen.
 
    Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array des Datentyps Beziehung.
   parameters:

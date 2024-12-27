@@ -22,8 +22,8 @@ post:
 
     Dieser Schnittstellenendpunkt erstellt eine Beziehung aus einem Personenkontext per ID `personenkontext.id`.
 
-    Ein CREATE ist nur mit HTTP-POST auf die API `/personenkontext/{personenkontext.id}/beziehungen`
-    zum Erstellen von Beziehungen aus einem Personenkontext zugelassen. Die Anfrage-Nutzdaten
+    Ein CREATE zum Erstellen von Beziehungen aus einem Personenkontext muss mit HTTP-POST auf die API `/personenkontext/{personenkontext.id}/beziehungen`
+    erfolgen. Die Anfrage-Nutzdaten
     (Request Payload) beinhalten ein JSON-Objekt des Datentyps Beziehungen.
 
     Siehe auch Datenmodell [Beziehung](../../../datenmodell-qs/beziehung).
@@ -122,8 +122,8 @@ get:
 
     Dieser Schnittstellenendpunkt gibt die Beziehungen zur angegebenen `personenkontext.id` zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/beziehungen`
-    zum Abfragen der Beziehung per personenkontext.id zugelassen. Die Antwort-Nutzdaten (Response
+    Ein READ zum Abfragen der Beziehung per personenkontext.id muss mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/beziehungen`
+    erfolgen. Die Antwort-Nutzdaten (Response
     Payload) beinhalten ein JSON-Objekt mit einem Array des Datentyps Beziehung.
 
     Siehe auch Datenmodell [Beziehung](../../../datenmodell-qs/beziehung).

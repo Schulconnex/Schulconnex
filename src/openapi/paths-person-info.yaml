@@ -9,7 +9,7 @@ get:
     Dieser Endpunkt bezieht sich nur auf die im Sicherheitskontext angemeldete Person und
     dient somit dem Abruf der Informationen der jeweiligen Person.
 
-    Die Anfrage erfolgt als HTTP-GET. Die Antwort erfolgt mit einer pseudonymisierten ID,
+    Die Anfrage muss als HTTP-GET gestellt werden. Die Antwort erfolgt mit einer pseudonymisierten ID,
     dem JSON-Objekt der betreffenden Person sowie einer Liste aller für die Sichtbarkeit
     freigegebenen Personenkontexte.
 
