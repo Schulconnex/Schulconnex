@@ -10,7 +10,8 @@ Wenn aus einem Personenkontext von Person A eine Beziehung `"SchB"` (Schulbeglei
 zu einem Personenkontext (`ktid`) von Person B besteht, so **hat** A die Person B **als** Schulbegleiter oder
 Schulbegleiterin und Person A ist schulbegleitet **von** Person B.
 
-Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung
---- | --- | --- | --- | ---
-ktid | String (UTF-8) | 0/1 | ja | Pseudonymisierte ID des Personenkontexts.
-beziehung | String (Code) | 0/1 | ja | Art der Beziehung aus Codeliste *Beziehungen*.
+| Attribut  | Typ            | Anzahl | Freigabe erforderlich | Bemerkung                                                                 | Qualifizierter Name                       |
+|-----------|----------------|--------|-----------------------|---------------------------------------------------------------------------|-------------------------------------------|
+| ktid      | String (UTF-8) | 0/1    | ja                    | Pseudonymisierte ID des Personenkontexts.                                | `urn:schulconnex:de:beziehung:ktid`      |
+| beziehung | String (Code)  | 0/1    | ja                    | Art der Beziehung aus Codeliste *Beziehungen*.                           | `urn:schulconnex:de:beziehung:beziehung` |
+

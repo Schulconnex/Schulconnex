@@ -8,10 +8,11 @@ werden über eine Codeliste bereitgestellt. Anders als bei den meisten anderen C
 Lernperioden jedoch nicht um eine einfache Code-/Werte-Liste, sondern um einen komplexen Datentyp, dessen
 Struktur in der folgenden Tabelle beschrieben ist.
 
-Attribut | Typ | Anzahl | Bemerkung
---- | --- | --- | ---
-code | String (UTF-8) | 1 | Code der Lernperiode.
-bezeichnung | String (UTF-8) | 1 | Bezeichnung der Lernperiode, beispielsweise „Schuljahr 2023/2024”.
-typ | String (UTF-8) | 1 | Typ der Lernperiode. Referenz auf einen Code der Codeliste *Lernperiodentyp*.
-beginn | Datum (siehe Abschnitt Datumsformat) | 1 | Datum, an dem die Lernperiode beginnt.
-ende | Datum (siehe Abschnitt Datumsformat) | 1 | Datum, an dem die Lernperiode endet.
+| Attribut     | Typ                                | Anzahl | Bemerkung                                                          | Qualifizierter Name                              |
+|--------------|------------------------------------|--------|--------------------------------------------------------------------|-------------------------------------------------|
+| code         | String (UTF-8)                    | 1      | Code der Lernperiode.                                              | `urn:schulconnex:de:lernperiode:code`           |
+| bezeichnung  | String (UTF-8)                    | 1      | Bezeichnung der Lernperiode, beispielsweise „Schuljahr 2023/2024”. | `urn:schulconnex:de:lernperiode:bezeichnung`    |
+| typ          | String (UTF-8)                    | 1      | Typ der Lernperiode. Referenz auf einen Code der Codeliste *Lernperiodentyp*. | `urn:schulconnex:de:lernperiode:typ`            |
+| beginn       | Datum (siehe Abschnitt Datumsformat) | 1      | Datum, an dem die Lernperiode beginnt.                             | `urn:schulconnex:de:lernperiode:beginn`         |
+| ende         | Datum (siehe Abschnitt Datumsformat) | 1      | Datum, an dem die Lernperiode endet.                               | `urn:schulconnex:de:lernperiode:ende`           |
+

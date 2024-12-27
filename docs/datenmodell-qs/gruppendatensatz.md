@@ -4,10 +4,11 @@ Datenmodell eines Gruppendatensatzes: Der Gruppendatensatz ist als Daten-Contain
 Über den Gruppendatensatz werden Gruppe (Attribut `gruppendatensatz.gruppe`) sowie
 die Gruppenzugehörigkeiten (Attribut `gruppendatensatz.gruppenzugehoerigkeit`) zusammengeführt
 
-Attribut | Typ | Anzahl | Bemerkung
---- | --- | --- | ---
-gruppe | Gruppe | 1 | Gruppe (siehe *Gruppe*).
-gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Gruppenzugehörigkeiten (siehe *Gruppenzugehörigkeit*).
+| Attribut              | Typ                      | Anzahl   | Bemerkung                                                    | Qualifizierter Name                              |
+|-----------------------|--------------------------|----------|-------------------------------------------------------------|-------------------------------------------------|
+| gruppe                | Gruppe                   | 1        | Gruppe (siehe *Gruppe*).                                    | `urn:schulconnex:de:gruppendatensatz:gruppe`    |
+| gruppenzugehoerigkeiten | Gruppenzugehörigkeit     | 0..n     | Liste (Array) von Gruppenzugehörigkeiten (siehe *Gruppenzugehörigkeit*). | `urn:schulconnex:de:gruppendatensatz:gruppenzugehoerigkeiten` |
+
 
 ## Beispiel JSON des Datentyps Gruppendatensatz
 

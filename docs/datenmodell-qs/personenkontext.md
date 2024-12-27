@@ -20,20 +20,21 @@ Liste mit zurückgegeben werden.
 Nicht alle Kombinationen von Attributwerten sind sinnvoll. So ist beispielsweise die Kombination
 einer Jahrgangsstufe mit einer anderen Rolle als `Lern` in der Regel nicht sinnvoll.
 
-Attribut | Typ | Anzahl | Bemerkung
---- | --- | --- | ---
-id | String (UTF-8) | 1 | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-referrer | String (UTF-8) | 0..1 | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein.
-mandant | String (UTF-8) | 1 |  ID des Mandanten, dem der Personenkontext zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
-organisation | [Organisation](organisation) | 1 | Organisation.
-rolle | String (Code) | 1 | Rolle der Person innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*.
-erreichbarkeiten | *Array[[Erreichbarkeit](erreichbarkeit)]* | 0..n | Liste (Array) Erreichbarkeiten.
-personenstatus | String (Code) | 0..1 | Status, den eine Person in einer Organisation in Bezug auf eine bestimmte Rolle hat, Referenz auf einen Code der Codeliste *Personenstatus*.
-jahrgangsstufe | String (Code) | 0..1 | Jahrgangsstufe, die eine Person in der Organisation in einer bestimmten Rolle besucht, Referenz auf Code der Codeliste *Jahrgangsstufe*.
-sichtfreigabe | String (Code) | 0..1 | Attribut gibt an, ob dieser Personenkontext aufgrund der Freigabe durch eine andere Organisation sichtbar ist. Ist `sichtfreigabe` nicht gesetzt, so entspricht das dem Wert `nein`. Der Wert von Sichtfreigabe ist Boolean nach Codetabelle *Boolean*.
-loeschung | *Struktur* | 0..1 | Aktuell gibt es zu Löschungen nur ein Attribut (Zeitpunkt), eventuell werden in späteren Versionen weitere Attribute hinzugefügt.
-loeschung.zeitpunkt | String (datetime) | 1 | Datum und Uhrzeit der Löschung des Personenkontexts. Das Format des Löschzeitpunkts ist `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt. Solange ein Personenkontext nicht gelöscht wurde, kann das Attribut `loeschung.zeitpunkt` geändert oder gelöscht werden. Ist das Attribut `loeschung` vorhanden, so muss der Zeitpunkt gesetzt sein.
-revision | String (UTF-8) | 1 | Revision des Personenkontext. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+| Attribut             | Typ                                | Anzahl   | Bemerkung                                                                                                                                                                      | Qualifizierter Name                              |
+|----------------------|------------------------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| id                   | String (UTF-8)                   | 1        | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).                                              | `urn:schulconnex:de:personenkontext:id`         |
+| referrer             | String (UTF-8)                   | 0..1     | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein.                                                                | `urn:schulconnex:de:personenkontext:referrer`   |
+| mandant              | String (UTF-8)                   | 1        | ID des Mandanten, dem der Personenkontext zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.                                                            | `urn:schulconnex:de:personenkontext:mandant`    |
+| organisation         | [Organisation](organisation)     | 1        | Organisation.                                                                                                                                                                | `urn:schulconnex:de:personenkontext:organisation` |
+| rolle                | String (Code)                    | 1        | Rolle der Person innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*.                                                                                 | `urn:schulconnex:de:personenkontext:rolle`      |
+| erreichbarkeiten     | *Array[[Erreichbarkeit](erreichbarkeit)]* | 0..n     | Liste (Array) von Erreichbarkeiten.                                                                                                                                          | `urn:schulconnex:de:personenkontext:erreichbarkeiten` |
+| personenstatus       | String (Code)                    | 0..1     | Status, den eine Person in einer Organisation in Bezug auf eine bestimmte Rolle hat, Referenz auf einen Code der Codeliste *Personenstatus*.                                 | `urn:schulconnex:de:personenkontext:personenstatus` |
+| jahrgangsstufe       | String (Code)                    | 0..1     | Jahrgangsstufe, die eine Person in der Organisation in einer bestimmten Rolle besucht, Referenz auf Code der Codeliste *Jahrgangsstufe*.                                     | `urn:schulconnex:de:personenkontext:jahrgangsstufe` |
+| sichtfreigabe        | String (Code)                    | 0..1     | Gibt an, ob dieser Personenkontext aufgrund der Freigabe durch eine andere Organisation sichtbar ist. Ist `sichtfreigabe` nicht gesetzt, so entspricht das dem Wert `nein`. Der Wert ist Boolean nach Codetabelle *Boolean*. | `urn:schulconnex:de:personenkontext:sichtfreigabe` |
+| loeschung            | *Struktur*                       | 0..1     | Aktuell gibt es zu Löschungen nur ein Attribut (Zeitpunkt), eventuell werden in späteren Versionen weitere Attribute hinzugefügt.                                             | `urn:schulconnex:de:personenkontext:loeschung`  |
+| loeschung.zeitpunkt  | String (datetime)                | 1        | Datum und Uhrzeit der Löschung des Personenkontexts. Format ist `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt. Solange der Kontext nicht gelöscht ist, kann der Wert geändert werden. | `urn:schulconnex:de:personenkontext:loeschung.zeitpunkt` |
+| revision             | String (UTF-8)                   | 1        | Revision des Personenkontexts. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden. | `urn:schulconnex:de:personenkontext:revision`   |
+
 
 ## Beispiel JSON des Datentyps Personenkontext
 
