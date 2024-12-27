@@ -10,7 +10,8 @@ gehören (Gruppe und Referenzgruppe müssen eine identische `orgid` haben). Refe
 sein, d. h. Referenzgruppen von Referenzgruppen einer Gruppe werden behandelt wie Referenzgruppen der Gruppe.
 Zyklische Verweise sind jedoch untersagt und führen zu einer Fehlermeldung.
 
-Attribut | Typ | Anzahl | Bemerkung
---- | --- | --- | ---
-grupid | String (UTF-8) | 1 | ID der Referenzgruppe.
-rollen | String (Code) | 0..n | Gruppenrollen aus der Gruppenzugehörigkeit von Personenkontexten, welche in die Referenzgruppe übernommen werden. Hinweis:  Werden hier keine Gruppenrollen aufgeführt, so werden alle Personenkontexte der Referenzgruppe übernommen.
+| Attribut | Typ            | Anzahl | Bemerkung                                                                                                                                  | Qualifizierter Name                              |
+|----------|----------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| grupid   | String (UTF-8) | 1      | ID der Referenzgruppe.                                                                                                                     | `urn:schulconnex:de:referenzgruppe:grupid`      |
+| rollen   | String (Code)  | 0..n   | Gruppenrollen aus der Gruppenzugehörigkeit von Personenkontexten, welche in die Referenzgruppe übernommen werden. Hinweis: Werden hier keine Gruppenrollen aufgeführt, so werden alle Personenkontexte der Referenzgruppe übernommen. | `urn:schulconnex:de:referenzgruppe:rollen`      |
+

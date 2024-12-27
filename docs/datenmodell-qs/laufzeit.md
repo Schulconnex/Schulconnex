@@ -13,9 +13,9 @@ so darf der Endzeitpunkt nicht davor liegen. Ist kein Startdatum gegeben, so ers
 der Gruppe über jeden Zeitpunkt vor dem Enddatum. Ist kein Enddatum angegeben, so ist jedes Datum nach
 dem Startdatum innerhalb der Laufzeit.
 
-Attribut | Typ | Anzahl | Bemerkung
---- | --- | --- | ---
-von | Datum (siehe Abschnitt Datumsformat) | 0..1 | Anfang des Gültigkeitszeitraums der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.
-vonlernperiode | String (Code) | 0..1 | Code der zu einer Gruppe gehörenden Lernperiode. Referenz auf Code der Codeliste *Lernperiode*.
-bis | Datum (siehe Abschnitt Datumsformat) | 0..1 | Ende des Gültigkeitszeitraums der Gruppe. Ende der Gruppenzugehörigkeit. Laufzeiten schliessen den ersten und letzten Tag immer mit ein. Ist als `bis` der 31. Oktober 2025 angegeben, so endet die Laufzeit der Gruppe am 01.11.2025 um 00:00.
-bislernperiode | String (Code) | 0..1 |  Code der zu einer Gruppe gehörenden Lernperiode. Referenz auf Code der Codeliste *Lernperiode*.
+| Attribut        | Typ                              | Anzahl   | Bemerkung                                                                                                                           | Qualifizierter Name                         |
+|------------------|----------------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| von              | Datum (siehe Abschnitt Datumsformat) | 0..1     | Anfang des Gültigkeitszeitraums der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.                                       | `urn:schulconnex:de:gruppe:laufzeit:von`   |
+| vonlernperiode   | String (Code)                   | 0..1     | Code der zu einer Gruppe gehörenden Lernperiode. Referenz auf Code der Codeliste *Lernperiode*.                                     | `urn:schulconnex:de:gruppe:laufzeit:vonlernperiode` |
+| bis              | Datum (siehe Abschnitt Datumsformat) | 0..1     | Ende des Gültigkeitszeitraums der Gruppe. Ende der Gruppenzugehörigkeit. Laufzeiten schließen den ersten und letzten Tag immer mit ein. Ist als `bis` der 31. Oktober 2025 angegeben, so endet die Laufzeit der Gruppe am 01.11.2025 um 00:00. | `urn:schulconnex:de:gruppe:laufzeit:bis`   |
+| bislernperiode   | String (Code)                   | 0..1     | Code der zu einer Gruppe gehörenden Lernperiode. Referenz auf Code der Codeliste *Lernperiode*.                                     | `urn:schulconnex:de:gruppe:laufzeit:bislernperiode` |

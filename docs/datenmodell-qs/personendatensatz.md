@@ -4,10 +4,11 @@ Datenmodell eines Personendatensatzes: Personendatensatz ist als Daten-Container
 Über Personendatensatz werden Person (Attribut `personendatensatz.person`) sowie die Personenkontexte
 (Attribut `personendatensatz.personenkontexte`) zusammengeführt.
 
-Attribut | Typ | Anzahl | Bemerkung
---- | --- | --- | ---
-person | Person | 1 | Person (siehe Datenmodell *Person*).
-personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten (siehe Datenmodell *Personenkontext*).
+| Attribut          | Typ                | Anzahl   | Bemerkung                                                    | Qualifizierter Name                              |
+|-------------------|--------------------|----------|-------------------------------------------------------------|-------------------------------------------------|
+| person            | Person             | 1        | Person (siehe Datenmodell *Person*).                        | `urn:schulconnex:de:datensatz:person`           |
+| personenkontexte  | Personenkontext    | 0..n     | Liste (Array) von Personenkontexten (siehe Datenmodell *Personenkontext*). | `urn:schulconnex:de:datensatz:personenkontexte` |
+
 
 ## Beispiel JSON des Datentyps Personendatensatz
 
