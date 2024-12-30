@@ -109,7 +109,7 @@ get:
     dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so müssen sie als
     mit „und“ verknüpft angesehen werden.
 
-    Eine mehrfache Nutzung des gleichen Filters in einer Anfrage ist darf nicht erfolgen. Entsprechen keine
+    Eine mehrfache Nutzung des gleichen Filters in einer Anfrage darf nicht erfolgen. Entsprechen keine
     Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
 
     Folgende Tabelle listet die zur Verfügung stehenden Filter:
