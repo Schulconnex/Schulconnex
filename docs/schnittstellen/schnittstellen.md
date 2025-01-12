@@ -34,7 +34,7 @@ Die konkrete URL für die Schnittstelle erhalten Sie von dem Betreiber des Schu
 ## Registrierung
 
 Gemäß der Spezifikation OAuth muss ein Dienst oder ein Quellsystem (Client-Anwendung) gegenüber
-Schulconnex bekannt sein — diesbezüglich wird die Client-Anwendung über einen organisatorischen
+Schulconnex bekannt sein. Diesbezüglich wird die Client-Anwendung über einen organisatorischen
 Prozess registriert.
 
 Durch die Registrierung wird dem Quellsystem eine Client-ID und das dazugehörige Client Secret

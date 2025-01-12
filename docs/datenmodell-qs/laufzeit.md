@@ -1,7 +1,7 @@
 # Laufzeit
 
 Die Laufzeiten von Gruppen können entweder direkt durch Datumsangaben festgelegt werden (`von`/`bis`) oder
-durch Referenzen aufLernperioden (`vonlernperiode`/`bislernperiode`). Wird eine Lernperiode referenziert, so
+durch Referenzen auf Lernperioden (`vonlernperiode`/`bislernperiode`). Wird eine Lernperiode referenziert, so
 steht `vonlernperiode` für das Anfangsdatum der Lernperiode (also das Attribut Beginn) und `bislernperiode`
 für das Enddatum der Lernperiode. Eine Mischung von Datum- und Perioden-Angaben ist zulässig. So kann
 beispielsweise eine Gruppe mit Anfang einer Lernperiode aktiv werden, aber mit Ablauf des Kalenderjahres

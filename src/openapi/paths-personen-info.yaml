@@ -12,7 +12,7 @@ get:
     Der Aufruf dieses Endpunkts erfolgt immer im Kontext des Dienstes. Der Dienst
     authentisiert sich durch den Client Credentials Flow.
 
-    Die Anfrage erfolgt als HTTP-GET. Als Antwort erfolgt eine Liste aus Datenobjekten,
+    Die Anfrage muss mit HTTP-GET gestellt werden. Als Antwort erfolgt eine Liste aus Datenobjekten,
     welche jeweils die Struktur einer Antwort der API person-info haben, jedoch nur
     drei Daten-Attribute enthalten: `pid`, `id` und gegebenenfalls den Löschzeitpunkt.
 

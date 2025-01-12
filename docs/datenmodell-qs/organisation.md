@@ -15,17 +15,3 @@ kuerzel | String (64) (DIN 91379.B) | 0..1 | Kurzname einer Organisation, maxima
 anschrift | *[Anschrift](anschrift)* | 0..1 | Anschrift der Organisation.
 typ | String (Code) | 0..1 | Typ der Organisation, Referenz auf einen Code der Codeliste *Organisationstyp*.
 traegerschaft | String (Code) | 0..1 | Art der Trägerschaft der bei Schul-Organisationen,  Referenz auf einen Code der Codeliste *Trägerschaft*.
-
-## Beispiel JSON des Datentyps Organisation
-
-```json
-{
-  "id": "b0d7b0dd-3477-4122-a38d-095ec242e786",
-  "kennung": "NI_12345",
-  "name": "Heinrich-Heine-Gymnasium",
-  "namensergaenzung": "vorher Heinrich-Heine-Gesamtschule",
-  "kuerzel": "Heine-Gym",
-  "typ": "Schule",
-  "traegerschaft": "02"
-}
-```

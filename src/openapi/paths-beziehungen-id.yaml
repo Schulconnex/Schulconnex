@@ -8,8 +8,7 @@ get:
   description: |
     Dieser Schnittstellenendpunkt gibt die Beziehung zur angegebenen `beziehung.id` zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/beziehungen/{beziehung.id}` zum Abfragen
-    einer Beziehung per ID zugelassen. Die Antwort-Nutzdaten (Response Payload) beinhalten
+    Ein READ zum Abfragen einer Beziehung per ID muss mit HTTP-GET auf die API `/beziehungen/{beziehung.id}` erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten
     ein JSON-Objekt des Datentyps Beziehung.
 
     Siehe auch Datenmodell [`Beziehung`](../../../datenmodell-qs/beziehung).
@@ -72,8 +71,7 @@ delete:
   description: |
     Dieser Schnittstellenendpunkt löscht die Beziehung zur angegebenen `beziehung.id`.
 
-    Ein DELETE ist nur mit HTTP-DELETE auf die API `/beziehungen/{beziehung.id}` zum
-    Löschen einer Beziehung per `beziehung.id` zugelassen.
+    Ein DELETE zum Löschen einer Beziehung per `beziehung.id` muss mit HTTP-DELETE auf die API `/beziehungen/{beziehung.id}` erfolgen.
 
     Es ist erforderlich, dass für eine Löschanfrage einer Beziehung das Attribut `revision`
     der zugrunde liegenden Beziehung mitgeschickt wird. Der Schulconnex-Server überprüft

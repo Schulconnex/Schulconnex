@@ -8,8 +8,7 @@ get:
   description: |
     Dieser Schnittstellenendpunkt gibt die Gruppe zur angegebenen `gruppe.id` zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/gruppen/{gruppe.id}` zum Abfragen einer
-    Gruppe per ID zugelassen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein
+    Ein READ zum Abfragen einer Gruppe per ID muss mit HTTP-GET auf die API `/gruppen/{gruppe.id}` erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein
     JSON-Objekt des Datentyps Gruppendatensatz.
 
     Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell-qs/gruppendatensatz).
@@ -65,8 +64,7 @@ put:
   description: |
     Dieser Schnittstellenendpunkt aktualisiert die Gruppe zur angegebenen `gruppen.id`.
 
-    Ein UPDATE ist nur mit HTTP-PUT auf die API `/gruppen/{gruppen.id}` zum Aktualisieren
-    einer Gruppe per ID zugelassen. Die Anfrage-Nutzdaten (Request Payload) beinhalten
+    Ein UPDATE zum Aktualisieren einer Gruppe per ID muss mit HTTP-PUT auf die API `/gruppen/{gruppen.id}` erfolgen. Die Anfrage-Nutzdaten (Request Payload) beinhalten
     ein JSON-Objekt des Datentyps Gruppe.
 
     Siehe auch die einzelnen Datenmodelle zu [`Gruppe`](../../../datenmodell-qs/gruppe).
@@ -166,8 +164,7 @@ delete:
   description: |
     Dieser Schnittstellenendpunkt löscht die Gruppe zur angegebenen `gruppe.id`.
 
-    Ein DELETE ist nur mit HTTP-DELETE auf die API `/gruppen/{gruppe.id}` zum Löschen
-    einer Gruppe per `gruppe.id` zugelassen. Die Anfrage-Nutzdaten (Request Payload)
+    Ein DELETE zum Löschen einer Gruppe per `gruppe.id` muss mit HTTP-DELETE auf die API `/gruppen/{gruppe.id}` erfolgen. Die Anfrage-Nutzdaten (Request Payload)
     beinhalten ein JSON-Objekt des Datentyps Gruppe.
 
     Siehe auch die einzelnen Datenmodelle zu [`Gruppe`](../../../datenmodell-qs/gruppe).

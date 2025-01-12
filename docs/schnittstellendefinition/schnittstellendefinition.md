@@ -1,5 +1,5 @@
 ---
-tags: 
+tags:
 - Verbindlich
 ---
 # Schnittstellendefinition
@@ -21,8 +21,8 @@ verarbeiten soll. Diese URL-Parameter werden an die URL angehängt.
 
 Per `POST` können große Datenmengen zum Webserver gesendet werden. Dabei werden
 die Parameter nicht in die URL, sondern in den HTTP-Body geschrieben.
-`POST` wird oft bei Formularen benutzt, um mehrere Daten gleichzeitig zu senden
-beziehungsweise Entitäten zu erstellen.
+`POST` wird oft benutzt, um mehrere Daten gleichzeitig zu senden oder um
+Entitäten zu erstellen.
 
 #### PUT
 

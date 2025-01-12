@@ -12,8 +12,7 @@ get:
 
     Dieser Schnittstellenendpunkt gibt die Informationen der anfordernden Organisation zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/organisation-info` zum Abfragen einer Information
-    zu einer Organisation zugelassen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein
+    Ein READ zum Abfragen einer Information zu einer Organisation muss mit HTTP-GET auf die API `/organisation-info` erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein
     JSON-Objekt des Datentyps Organisation.
 
     Siehe auch Datenmodell [`Organisation`](../../../datenmodell-dienste/organisation).

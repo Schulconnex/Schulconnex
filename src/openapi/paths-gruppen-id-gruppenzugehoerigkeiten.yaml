@@ -10,8 +10,8 @@ post:
     Dieser Schnittstellenendpunkt erstellt eine Gruppenzugehörigkeit zur angegebenen
     Gruppe per ID `gruppe.id`.
 
-    Ein CREATE ist nur mit HTTP-POST auf die API `/gruppen/{gruppe.id}/gruppenzugehoerigkeiten`
-    zum Erstellen von Gruppenzugehörigkeiten zu einer Gruppe zugelassen. Die Anfrage-Nutzdaten
+    Ein CREATE zum Erstellen von Gruppenzugehörigkeiten zu einer Gruppe muss mit HTTP-POST auf die API `/gruppen/{gruppe.id}/gruppenzugehoerigkeiten`
+    erfolgen. Die Anfrage-Nutzdaten
     (Request Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeiten.
 
     Siehe auch Datenmodell [Gruppenzugehörigkeit](../../../datenmodell-dienste/gruppenzugehörigkeit).
@@ -89,8 +89,8 @@ get:
   description: |
     Dieser Schnittstellenendpunkt gibt die Gruppenzugehörigkeiten zur angegebenen `gruppe.id` zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/gruppen/{gruppe.id}/gruppenzugehoerigkeiten`
-    zum Abfragen der Gruppenzugehörigkeiten per `gruppe.id` zugelassen. Die Antwort-Nutzdaten
+    Ein READ zum Abfragen der Gruppenzugehörigkeiten per `gruppe.id` muss mit HTTP-GET auf die API `/gruppen/{gruppe.id}/gruppenzugehoerigkeiten`
+    erfolgen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein JSON-Objekt mit einem Array des Datentyps Gruppenzugehörigkeit.
 
     Siehe auch Datenmodell [Gruppenzugehörigkeit](../../../datenmodell-dienste/gruppenzugehörigkeit).
@@ -106,10 +106,10 @@ get:
     Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut
     beinhaltet ist (contains). Bei Filtern vom Typ „String (Code)” überprüft der Schulconnex-Server,
     ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung gleich
-    dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so sind sie als
-    mit „und“ verknüpft anzusehen.
+    dem Filter-Attribut ist (equals). Werden mehrere Filter angegeben, so müssen sie als
+    mit „und“ verknüpft angesehen werden.
 
-    Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig. Entsprechen keine
+    Eine mehrfache Nutzung des gleichen Filters in einer Anfrage darf nicht erfolgen. Entsprechen keine
     Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
 
     Folgende Tabelle listet die zur Verfügung stehenden Filter:

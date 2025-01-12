@@ -12,7 +12,7 @@ get:
     Die Schnittstelle `/personenkontexte` ermöglicht das Verwenden von Filterparametern
     zur Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind
     sie als mit 'und' verknüpft anzusehen. Die mehrfache Nutzung des gleichen Filters
-    in einer Anfrage ist nicht zulässig. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert. Folgende Tabelle listet die zur Verfügung
+    in einer Anfrage darf nicht erfolgen. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert. Folgende Tabelle listet die zur Verfügung
     stehenden Filter auf:
 
     Filter | Typ | Beschreibung
@@ -26,7 +26,7 @@ get:
     Dieser Schnittstellenendpunkt gibt alle Personenkontexte zurück, auf die der
     Quellsystemanbieter zugreifen kann.
 
-    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
+    Ein READ muss mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Personendatensatz
     mit dem jeweiligen Personenkontext und der zugeordneten Person, sofern Einträge
     (ggf. passend zu den optionalen Filtern) existieren.

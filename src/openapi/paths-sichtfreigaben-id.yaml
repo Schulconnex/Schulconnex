@@ -14,7 +14,7 @@ delete:
 
     Im Normalfall wird eine Sichtfreigabe über das in ihr enthaltene Enddatum terminiert.
 
-    Ein DELETE kann nur mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload)
+    Ein DELETE muss mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload)
     beinhalten die Revisionsnummer.
 
     Siehe auch das Datenmodell zu [`Sichtfreigabe`](../../../datenmodell-qs/sichtfreigabe).
