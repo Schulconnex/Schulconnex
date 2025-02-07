@@ -75,8 +75,8 @@ the associated person contexts of that person.
 
 Attribute | Description
 --- | ---
-person | Person. (See [Personen](../datenmodell/person.md)).
-personenkontexte | Array of person contexts (see [Personenkontext](../datenmodell/personenkontext.md)).
+person | Person.
+personenkontexte | Array of person contexts.
 
 ## Gruppe
 
@@ -99,7 +99,8 @@ differenzierung | Specific differentiation in some educational branches. Refers 
 bildungsziele | Educational branch. Refers to code list *Bildungsziel*.
 jahrgangsstufen | Form or course level. Refers to code list *Jahrgangsstufe*.
 faecher | Array to list the topics covered in the group.
-faecher.code | Topic covered. Refers to code list *Fächerkanon*.
+faecher.kennung | Topic covered. Refers to code list *Fächerkanon*.
+faecher.bezeichnung | Name of a topic if it is not in the code list *Fächerkanon*.
 referenzgruppen | Array of reference groups for this group. Allows the association of members in one or more other groups to this group. The aim is to simplify the handling of courses and school classes by allowing, for example, to attach a whole class to a course, without the need to assign every student individually.
 referenzgruppen.grupid | ID of the reference group.
 referenzgruppe.rollen | Roles in the reference group („Gruppenrollen”) to be selected for the group. If no roles are specified, all persons are selected. (The main purpose for this filter is that a class might contain a teacher and students, but only the students from this reference group participate in another group.)
@@ -132,8 +133,8 @@ The „group data set” is a wrapper object to link a group to a number of grou
 
 Attribute | Description
 --- | ---
-gruppe | Group (See [Gruppe](../datenmodell/gruppe.md)).
-gruppenzugehoerigkeiten | Array of group memberships (See [Gruppenzugehörigkeit](../datenmodell/gruppenzugehörigkeit.md)).
+gruppe | Group.
+gruppenzugehoerigkeiten | Array of group memberships.
 
 ## Sichtfreigabe
 

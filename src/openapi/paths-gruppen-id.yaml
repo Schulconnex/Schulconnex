@@ -8,11 +8,10 @@ get:
   description: |
     Dieser Schnittstellenendpunkt gibt die Gruppe zur angegebenen `gruppe.id` zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/gruppen/{gruppe.id}` zum Abfragen einer
-    Gruppe per ID zugelassen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein
+    Ein READ zum Abfragen einer Gruppe per ID muss mit HTTP-GET auf die API `/gruppen/{gruppe.id}` erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein
     JSON-Objekt des Datentyps Gruppendatensatz.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell/gruppendatensatz).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell-qs/gruppendatensatz).
 
     Die Anfrage erfordert keine Nutzdaten (Request Payload).
   parameters:
@@ -34,27 +33,27 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
 put:
   tags:
     - Gruppen
@@ -65,15 +64,14 @@ put:
   description: |
     Dieser Schnittstellenendpunkt aktualisiert die Gruppe zur angegebenen `gruppen.id`.
 
-    Ein UPDATE ist nur mit HTTP-PUT auf die API `/gruppen/{gruppen.id}` zum Aktualisieren
-    einer Gruppe per ID zugelassen. Die Anfrage-Nutzdaten (Request Payload) beinhalten
+    Ein UPDATE zum Aktualisieren einer Gruppe per ID muss mit HTTP-PUT auf die API `/gruppen/{gruppen.id}` erfolgen. Die Anfrage-Nutzdaten (Request Payload) beinhalten
     ein JSON-Objekt des Datentyps Gruppe.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppe`](../../../datenmodell/gruppe).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppe`](../../../datenmodell-qs/gruppe).
 
     Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Gruppe das
     Attribut `gruppe.revision` der zugrunde liegenden Gruppe mitgeschickt wird. Der
-    Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs `gruppe.revision`,
+    Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs `gruppe.revision`,
     ob der Datensatz der Gruppe in der Zwischenzeit keine Änderung erfahren hat. Der Wert des
     Attributs kann von einem Quellsystem oder Dienst nicht verändert werden; dieser wird mit
     der Erstellung (Create) des Datensatzes Gruppe und jeder erfolgreichen Änderung (Update)
@@ -100,7 +98,7 @@ put:
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren einer Gruppe wird diese
     Anforderung mit einer Repräsentation der Gruppe in den Antwort-Nutzdaten und
-    dem HTTP-Status-Code 200 quittiert.
+    dem HTTP-Statuscode 200 quittiert.
   parameters:
     - in: path
       name: id
@@ -130,32 +128,32 @@ put:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
 delete:
   tags:
     - Gruppen
@@ -166,15 +164,14 @@ delete:
   description: |
     Dieser Schnittstellenendpunkt löscht die Gruppe zur angegebenen `gruppe.id`.
 
-    Ein DELETE ist nur mit HTTP-DELETE auf die API `/gruppen/{gruppe.id}` zum Löschen
-    einer Gruppe per `gruppe.id` zugelassen. Die Anfrage-Nutzdaten (Request Payload)
+    Ein DELETE zum Löschen einer Gruppe per `gruppe.id` muss mit HTTP-DELETE auf die API `/gruppen/{gruppe.id}` erfolgen. Die Anfrage-Nutzdaten (Request Payload)
     beinhalten ein JSON-Objekt des Datentyps Gruppe.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppe`](../../../datenmodell/gruppe).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppe`](../../../datenmodell-qs/gruppe).
 
     Es ist erforderlich, dass für eine Löschanfrage einer Gruppe das Attribut `gruppe.revision`
     der zugrunde liegenden Gruppe mitgeschickt wird. Der Schulconnex-Server überprüft
-    anhand des mitgeschickten Wertes des Attributs `gruppe.revision`, ob der Datensatz
+    anhand des mitgeschickten Werts des Attributs `gruppe.revision`, ob der Datensatz
     der Gruppe in der Zwischenzeit keine Änderung erfahren hat.
 
     **Wichtig**: Das Löschen einer Gruppe löscht auch gleichzeitig alle zu der Gruppe
@@ -209,29 +206,29 @@ delete:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)

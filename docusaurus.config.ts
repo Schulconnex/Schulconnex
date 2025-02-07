@@ -49,7 +49,7 @@ const config: Config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'Version 1.5',
+              label: 'Version 1.5.1',
               // path: '1.5',
             },
           },
@@ -81,19 +81,51 @@ const config: Config = {
             type: 'docSidebar',
             sidebarId: 'specSidebar',
             position: 'left',
-            label: 'Spezifikation',
+            label: 'Allgemeines',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'apiDiensteSidebarOpenAPIDocs',
+            type: 'dropdown',
+            label: 'Dienste',
             position: 'left',
-            label: 'API Dienste',
+            items: [
+              {
+                type: 'doc',
+                docId: 'schnelleinstieg-dienste',
+                label: 'Schnelleinstieg',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'spezDiensteSidebar',
+                label: 'Spezifikation',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'apiDiensteSidebarOpenAPIDocs',
+                label: 'API Dienste',
+              },
+            ],
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'apiQuellsystemeSidebarOpenAPIDocs',
+            type: 'dropdown',
+            label: 'Quellsysteme',
             position: 'left',
-            label: 'API Quellsysteme',
+            items: [
+              {
+                type: 'doc',
+                docId: 'schnelleinstieg-qs',
+                label: 'Schnelleinstieg',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'spezQuellsystemeSidebar',
+                label: 'Spezifikation',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'apiQuellsystemeSidebarOpenAPIDocs',
+                label: 'API Quellsysteme',
+              }
+            ],
           },
           {
             type: 'docsVersionDropdown',

@@ -1,0 +1,3 @@
+type: string
+description: Bezeichnung eines Fachs, wenn nicht im Fächerkanon vorhanden
+example: 'Erste Hilfe'

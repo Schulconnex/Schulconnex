@@ -16,7 +16,7 @@ properties:
     example: 6325b810-6b27-423d-a16b-f4b4cfa9f073
     readOnly: true
   ktid:
-    description: ID des Personenkontextes, zu dem eine Beziehung besteht.
+    description: ID des Personenkontexts, zu dem eine Beziehung besteht.
     type: string
     example: 553f984f-5fea-48c8-ae26-089420465803
   beziehung:

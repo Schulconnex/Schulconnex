@@ -1,0 +1,8 @@
+type: object
+properties:
+  kennung:
+    $ref: './components-code-Fächerkanon.yaml'
+    example: EN
+  bezeichnung:
+    $ref: './components-Gruppe-faecherbezeichnung.yaml'
+    example: Englisch

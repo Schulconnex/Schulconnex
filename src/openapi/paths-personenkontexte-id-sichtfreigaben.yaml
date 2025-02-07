@@ -18,7 +18,7 @@ post:
     Organisation pauschal einer anderen Organisation bereit zu stellen.
 
     Wird ein Personenkontext für eine andere Organisation freigegeben, so hat die andere Organisation auch
-    automatisch Lese-Zugriff auf die im Datenmodell [Person](../../../datenmodell/person) beschriebenen Attribute der zu
+    automatisch Lese-Zugriff auf die im Datenmodell [Person](../../../datenmodell-qs/person) beschriebenen Attribute der zu
     dem Personenkontext gehörenden Person, jedoch nicht auf andere, nicht freigegebene Personenkontexte dieser Person oder
     auf Gruppenzugehörigkeiten.
 
@@ -27,7 +27,7 @@ post:
 
     Bei einer erfolgreichen Anforderung zum Erstellen einer Sichtfreigaben zu einem Personenkontext
     wird diese Anforderung mit einer Repräsentation der Sichtfreigaben in den Antwort-Nutzdaten
-    und dem HTTP-Status-Code 201 quittiert.
+    und dem HTTP-Statuscode 201 quittiert.
   parameters:
     - in: path
       name: id
@@ -35,7 +35,7 @@ post:
         type: string
         example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontextes.
+      description: Der Pfad-Parameter bezieht sich auf die ID des eigenen Personenkontexts.
   requestBody:
     required: true
     content:
@@ -55,32 +55,32 @@ post:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
 get:
   tags:
     - Personenkontexte
@@ -91,10 +91,9 @@ get:
   summary: Auflistung von Sichtfreigaben.
   description: |
    Dieser Schnittstellenendpunkt gibt eine Liste der existierenden Sichtfreigaben eines
-   Personenkontextes zurück.
+   Personenkontexts zurück.
 
-   Ein READ ist nur mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` zum Abfragen
-   der Sichtfreigaben per `personenkontext.id` zugelassen.
+   Ein READ zum Abfragen der Sichtfreigaben per `personenkontext.id` muss mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` erfolgen.
 
    Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array des Datentyps Beziehung.
   parameters:
@@ -104,7 +103,7 @@ get:
         type: string
         example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontextes.
+      description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   responses:
     '200':
       description: OK
@@ -116,24 +115,24 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)

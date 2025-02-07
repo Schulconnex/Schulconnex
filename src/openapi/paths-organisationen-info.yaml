@@ -11,17 +11,17 @@ get:
 
     Dieser Schnittstellenendpunkt gibt die Organisationen zurück, die vom Dienst ausgelesen werden dürfen.
 
-    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen.
+    Ein READ muss mit einer HTTP-GET Anfrage erfolgen.
 
     Die Antwort-Nutzdaten (Response Payload) beinhalten ein
     Array von JSON-Objekten vom Datentyp Organisation, sofern
-    Einträge (ggf. passend zu den optionalen Filtern) existieren. Siehe auch Datenmodell [`Organisation`](../../../datenmodell/organisation).
+    Einträge (ggf. passend zu den optionalen Filtern) existieren. Siehe auch Datenmodell [`Organisation`](../../../datenmodell-dienste/organisation).
 
     Die Schnittstelle /v1/organisationen-info ermöglicht das Verwenden von Filterparametern zur
-    Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind sie als mit
-    „und“ verknüpft anzusehen. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat
-    eine leere Liste geliefert.Die mehrfache Nutzung des gleichen Filters in einer Anfrage ist
-    nicht zulässig.
+    Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so müssen sie als mit
+    „und“ verknüpft angesehen werden. Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat
+    eine leere Liste geliefert. Die mehrfache Nutzung des gleichen Filters in einer Anfrage darf
+    nicht erfolgen.
 
     Folgende Tabelle listet die zur Verfügung stehenden Filter auf:
      Filter | Typ | Beschreibung
@@ -47,24 +47,24 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
