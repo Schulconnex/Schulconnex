@@ -4,6 +4,14 @@ Die Versionshistorie beschreibt die wichtigsten inhaltlichen Änderungen zwische
 
 Detailierte Informationen zu den Änderungen finden sich in der Historie der Github Issues und der entsprechenden Pull Requests.
 
+## Änderungen von Version 1.5 zu Version 1.5.1
+
+### Allgemeines
+
+* Verbesserte Gliederung der Webseite
+* Kennzeichnung der Teile der Spezifikation als verbindlich oder informativ
+* Sprachliche Verbesserungen
+
 ## Änderungen von Version 1.4 zu Version 1.5
 
 ### Allgemeines
