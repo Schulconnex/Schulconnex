@@ -11,6 +11,26 @@ Alle Codes müssen als nicht abhängig von Groß-/Kleinschreibung interpretiert 
 (sind nicht Case-sensitiv). Die Organisationsarten `"SCHULE"`, `"schule"`, `"Schule"` oder
 auch `"ScHuLe"` müssen als identisch angenommen werden.
 
+### Zukünftige Nutzung URI-basierter Codelisten
+
+Schulconnex wird ab der Version 2.0 URI-basierte Codelisten nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Decription Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
+
+URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorteilen:
+
+* __Eindeutige Identifikation__: Jede Ressource erhält eine eindeutige URI, die Verwechslungen und Missverständnisse verhindert.
+
+* __Interoperabilität__: URIs sind universell und können problemlos zwischen verschiedenen Systemen und Plattformen verwendet werden. Dies erleichtert die Integration und den Datenaustausch zwischen unterschiedlichen Schulverwaltungssystemen.
+
+* __Wiederverwendbarkeit__: Einmal definierte URIs können in verschiedenen Kontexten und Anwendungen wiederverwendet werden, was die Konsistenz und Effizienz erhöht.
+
+* __Erweiterbarkeit__: URI-basierte Codelisten können leicht erweitert werden, indem neue URIs hinzugefügt werden, ohne bestehende Systeme zu beeinträchtigen.
+
+* __Lesbarkeit und Verständlichkeit__: URIs sind oft menschenlesbar und können leicht interpretiert werden, was die Dokumentation und das Debugging erleichtert.
+
+* __Standardisierung__: Die Verwendung von URIs fördert die Einhaltung von Standards und Best Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
+
+Als technisches Format werden wir für alle Codelisten OASIS Genericode verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu "Erreichbarkeit" (KoSIT) oder "Jahrgangsstufe" (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifische Listen wie z.B. "Gruppenbereich", "Bildungsziel" oder "Fächerkanon", damit die Bundesländer auch ihre spezifischen Anforderungen abbilden können.
+
 ## Beziehungen
 
 Beziehungen ist eine Liste von Beziehungen, welche zwischen zwei Personen innerhalb von
