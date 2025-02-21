@@ -29,7 +29,7 @@ URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorte
 
 * __Standardisierung__: Die Verwendung von URIs fördert die Einhaltung von Standards und Best Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
 
-Als technisches Format werden wir für alle Codelisten OASIS Genericode verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu "Erreichbarkeit" (KoSIT) oder "Jahrgangsstufe" (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifische Listen wie z.B. "Gruppenbereich", "Bildungsziel" oder "Fächerkanon", damit die Bundesländer auch ihre spezifischen Anforderungen abbilden können.
+Als technisches Format ist geplant für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifische Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, damit die Bundesländer auch ihre spezifischen Anforderungen abbilden können.
 
 ## Beziehungen
 
