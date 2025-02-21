@@ -222,9 +222,8 @@ HJ | Schulhalbjahr
 
 Basierend auf [RFC 5646][1]. Beispiele finden sich in nachfolgender Tabelle.
 
-Hinweis: Die folgende Codeliste ist spezifisch für das Bundesland Niedersachsen und dient für andere
-Bundesländer nur als Beispiel, da die Lokalisierung abweichen kann. Der jeweils gültigen Lokalisierungen
-sind beim jeweiligen Betreiber des Schulconnex-Servers nachzufragen.
+Hinweis: Die folgende Codeliste ist die aktuell vom „schulischen Anmeldeservice des Landes Niedersachsen (moin.schule)“
+unterstützte Codeliste und kann auf anderen Schulconnex-Servern abweichen. Der jeweils gültigen Lokalisierungen
 
 [1]: https://www.rfc-editor.org/rfc/rfc5646
 
