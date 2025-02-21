@@ -13,7 +13,7 @@ auch `"ScHuLe"` müssen als identisch angenommen werden.
 
 ### Zukünftige Nutzung URI-basierter Codelisten
 
-Schulconnex wird ab der Version 2.0 URI-basierte Codelisten nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Decription Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
+Schulconnex plant ab der Version 2.0 URI-basierte Codelisten nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Decription Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
 
 URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorteilen:
 
