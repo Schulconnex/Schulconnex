@@ -1,6 +1,6 @@
 ---
 title: Autorisierung Dienstanbieter
-tags: 
+tags:
 - Informativ
 ---
 
@@ -80,8 +80,8 @@ Das Attribut `token_type` beim OAuth 2.0 Token Exchange Request referenziert die
 des `access_token` – gemäß IETF RFC 6750 „The OAuth 2.0 Authorization Framework: Bearer Token Usage“ oder
 den [Basic][6] und [Digest][7] Authentifizierungsschemata.
 
-[6]: https://www.rfc-editor.org/rfc/rfc7617
-[7]: https://www.rfc-editor.org/rfc/rfc7616
+[6]: https://datatracker.ietf.org/doc/html/rfc7617
+[7]: https://datatracker.ietf.org/doc/html/rfc7616
 
 Im Kontext der Spezifikation OpenID Connect muss das Attribut `token_type` den Wert `"Bearer"` führen.
 
@@ -126,7 +126,7 @@ als Subject-Identifier-Typ „pairwise“ zugeordnet ist (siehe Spezifikation [O
 Kapitel 8.0 „Subject Identifier Type” und Kapitel 8.1 „Pairwise Identifier Algorithm” der
 Spezifikation OpenID Connect 1.0).
 
-[15]: https://www.rfc-editor.org/rfc/rfc7519
+[15]: https://datatracker.ietf.org/doc/html/rfc7519
 [16]: https://openid.net/specs/openid-connect-core-1_0.html
 
 Attribut Ebene 0 | Typ | Anzahl | Bemerkung
