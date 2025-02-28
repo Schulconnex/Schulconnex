@@ -2,9 +2,13 @@ type: string
 enum:
   - Schule
   - Anbieter
+  - Behoerde
+  - SchTrae
   - Sonstige
 description: >
     Wie folgt:
       * Schule
       * Anbieter
+      * Behörde
+      * Schulträger
       * Sonstige sonstige Organisationen / Einrichtungen
