@@ -243,6 +243,8 @@ Code | Bezeichnung
 --- | ---
 Schule | Schule
 Anbieter | Anbieter
+Behoerde | Behörde
+SchTrae | Schulträger
 Sonstige | sonstige Organisationen / Einrichtungen
 
 ## Personenstatus
