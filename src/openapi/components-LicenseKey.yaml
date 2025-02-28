@@ -1,0 +1,14 @@
+type: object
+properties:
+  temporaryURL:
+    type: string
+    format: uricomp
+    description: "Die temporäre URL."
+  gueltigkeit_von:
+    type: string
+    format: date-time
+    description: "Datum und Uhrzeit des Beginns der Gültigkeit (YYYY-MM-DD'T'HH:mm'Z' UTC)."
+  gueltigkeit_bis:
+    type: string
+    format: date-time
+    description: "Datum und Uhrzeit des Endes der Gültigkeit (YYYY-MM-DD'T'HH:mm'Z' UTC)."
