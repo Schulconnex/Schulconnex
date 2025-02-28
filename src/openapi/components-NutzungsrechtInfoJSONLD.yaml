@@ -4,7 +4,22 @@ required:
   - "@context"
   - "@type"
   - uid
+  - access_control
 properties:
+  access_control:
+    type: array
+    description: "ID der Zugriffsinfo. Wird vom Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable)."
+    items:
+      type: object
+      properties:
+        "@type":
+          type: string
+          description: "Attribut @type wird als Diskriminator genutzt und gibt das Datenmodell für das Attribut access_control[].value vor."
+        value:
+          oneOf:
+            - $ref: "./components-LicenseKey.yaml"
+            - $ref: "./components-TempLicenseKey.yaml"
+          description: "Datenobjekt nach dem variablen Datenmodell Zugriffsinfo. Abhängig vom Wert des Diskriminators @type."
   "@context":
     type: array
     items:

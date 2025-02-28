@@ -108,16 +108,14 @@ Das gegebene Beispiel zeigt, wie erweiterte Nutzungseinschränkungen durch die V
               ]
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
+    "access_control": [
             {
-                "@type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
+                "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "value": {
                     "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
                 }
             }
         ]
-    }
 }
 ```
 
@@ -153,16 +151,15 @@ Das gegebene Beispiel zeigt, wie erweiterte Nutzungseinschränkungen durch die V
             ]
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+    "access_control": [
+        {
+            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
-    }
+        }
+    ]
+    
 }
 ```
 
@@ -222,16 +219,15 @@ Das gegebene Beispiel zeigt, wie eine Gruppenlizenz in ODRL modelliert werden ka
             }
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "@type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+    "access_control": [
+        {
+            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
-    }
+        }
+    ]
+    
 }
 ```
 
@@ -261,16 +257,15 @@ Das gegebene Beispiel zeigt, wie eine Gruppenlizenz in ODRL modelliert werden ka
             }
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+    "access_control": [
+        {
+            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
-    }
+        }
+    ]
+
 }
 ```
 
@@ -284,7 +279,7 @@ Die Realisierung erfolgt durch:
   * Das Attribut assignee verweist auf die Gruppe, der die Lizenz zugewiesen ist.
   * Die Eigenschaft partOf im assignee-Block beschreibt die Zugehörigkeit der Gruppe zu einer übergeordneten Einheit, z. B. einer Schule.
 * **Erweiterbare Metadaten**:
-  * Der Lizenzschlüssel im Namespace scx:anlagen identifiziert die spezifische Gruppenlizenz eindeutig.
+  * Der Lizenzschlüssel im Namespace urn:scx:lizenz:zugriffsinfo:licensekey identifiziert die spezifische Gruppenlizenz eindeutig.
 
 Die Gruppe, die die Lizenz erhält, wird eindeutig durch eine IRI beschrieben, z. B. https://api.schule.de/group/klasse10a. Die IRI der Gruppe wird im assignee-Attribut hinterlegt. Optional kann die Zugehörigkeit der Gruppe zu einer Schule oder Organisation über partOf angegeben werden.
 Weitere Bedingungen wie zeitliche Einschränkungen oder der Status der Lizenz können hinzugefügt werden, um die Nutzung präzise zu regeln.
@@ -325,16 +320,15 @@ Das vorliegende Beispiel zeigt die Modellierung einer Schullizenz mit ODRL. Die 
             }
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "@type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+    "urn:schulconnex:de:lizenzen:zugriffsinfo": [
+        {
+            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
-    }
+        }
+    ]
+
 }
 ```
 
@@ -364,16 +358,15 @@ Das vorliegende Beispiel zeigt die Modellierung einer Schullizenz mit ODRL. Die 
             }
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+    "access_control": [
+        {
+            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
-    }
+        }
+    ]
+
 }
 ```
 
@@ -418,16 +411,15 @@ Das gezeigte JSON-Beispiel beschreibt eine Lehrerlizenz, die die Nutzung eines M
             }
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "@type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+    "access_control": [
+        {
+            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
-    }
+        }
+    ]
+    
 }
 ```
 
@@ -455,16 +447,15 @@ Das gezeigte JSON-Beispiel beschreibt eine Lehrerlizenz, die die Nutzung eines M
             }
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+    "access_control": [
+        {
+            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
-    }
+        }
+    ]
+
 }
 ```
 
@@ -512,16 +503,15 @@ Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nut
             ]
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "@type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+    "access_control": [
+        {
+            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
-    }
+        }
+    ]
+
 }
 ```
 **JSON-Äquivalent**
@@ -545,16 +535,15 @@ Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nut
             ]
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "type": "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+    "urn:schulconnex:de:lizenzen:zugriffsinfo": [
+        {
+            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
-    }
+        }
+    ]
+
 }
 ```
 
@@ -606,18 +595,17 @@ Das ODRL-Beispiel beschreibt die Lizenz für ein gestreamtes Medium. Es stellt s
             ]
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "@type": "urn:schulconnex:de:lizenzen:zugriffsinfo:temporaereurl",
-                "value": {
-                    "temporaryURL": "https://exampleprovider/tmp/123455677",
-                    "gueltigkeit_von": "2024-12-05",
-                    "gueltigkeit_bis": "2024-12-06"
-                }
+    "access_control": [
+        {
+            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "temporaryURL": "https://exampleprovider/tmp/123455677",
+                "gueltigkeit_von": "2024-12-05",
+                "gueltigkeit_bis": "2024-12-06"
             }
-        ]
-    }
+        }
+    ]
+
 }
 ```
 
@@ -643,18 +631,17 @@ Das ODRL-Beispiel beschreibt die Lizenz für ein gestreamtes Medium. Es stellt s
             ]
         }
     ],
-    "urn:schulconnex:de:lizenzen:anlagen": {
-        "urn:schulconnex:de:lizenzen:zugriffsinfo": [
-            {
-                "type": "urn:schulconnex:de:lizenzen:zugriffsinfo:temporaereurl",
-                "value": {
-                    "temporaryURL": "https://exampleprovider/tmp/123455677",
-                    "gueltigkeit_von": "2024-12-05",
-                    "gueltigkeit_bis": "2024-12-06"
-                }
+    "access_control": [
+        {
+            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "value": {
+                "temporaryURL": "https://exampleprovider/tmp/123455677",
+                "gueltigkeit_von": "2024-12-05",
+                "gueltigkeit_bis": "2024-12-06"
             }
-        ]
-    }
+        }
+    ]
+
 }
 ```
 
