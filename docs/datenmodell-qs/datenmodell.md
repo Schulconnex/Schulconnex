@@ -9,11 +9,9 @@ Das Datenmodell der Schnittstelle basiert auf Datenmodellen der Spezifikationen 
 [XSchule][2] (bspw. „NatuerlichePerson“ ist die Vorlage für „Person“, auch „Organisation“ ist an XBildung orientiert),
 jeweils mit spezifischen Erweiterungen.
 
-## Hinweis zur Reihenfolge in Arrays
+import Text from './datenmodell-arrays.md';
 
-Die Spezifikation gibt nicht die Reihenfolge vor, in der Einträge eines JSON Arrays vom Schulconnex-Server geliefert werden.
-
-Eine Anwendung kann nicht davon ausgehen, dass Einträge in der Reihenfolge geliefert werden in der sie gespeichert wurden. Oder dass Einträge in alphabetischer Reihenfolge geliefert werden. Auch sollte nicht davon ausgegangen werden, dass bei mehrfachem Aufruf derselben API die Werte innerhalb von Arrays in derselben Reihenfolge geliefert werden.
+<Text />
 
 ```mermaid
 classDiagram
