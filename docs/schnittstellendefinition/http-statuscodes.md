@@ -1,5 +1,5 @@
 ---
-tags: 
+tags:
 - Verbindlich
 ---
 # HTTP-Statuscodes
@@ -120,3 +120,14 @@ Die zu verändernde Entität wurde durch Dritte verändert und führt daher zu e
 Code | Sub-Code | Titel | Beschreibung
 --- | --- | --- | ---
 409 | 00 | `"Konflikt mit dem aktuellen Zustand der Ressource."` | `"Die Entität wurde eventuell durch Dritte verändert. Die Revisionsnummer stimmt nicht überein."`
+
+## Nicht implementiert
+
+### `501` - Not Implemented
+
+Der Endpunkt wird vom Server nicht zur Verfügung gestellt.
+
+Code | Sub-Code | Titel | Beschreibung
+--- | --- | --- | ---
+501 | 00 | `"Der Endpunkt ist nicht implementiert."` | `"Der aufgerufene Endpunkt ist spezifiziert, wird jedoch auf diesem Server nicht bereitgestellt."`
+501 | 01 | `"Der Endpunkt ist noch nicht implementiert."` | `"Der aufgerufene Endpunkt ist spezifiziert, wird jedoch auf diesem Server noch nicht bereitgestellt."`
