@@ -174,84 +174,6 @@ const sidebars: SidebarsConfig = {
         'schnittstellen/oidc-claims',
       ],
     },
-    {
-      type: 'category',
-      label: 'Lizenzerweiterung',
-      link: {
-        type: 'doc',
-        id: 'lizenzerweiterung/einleitung',
-      },
-      items: [
-        'lizenzerweiterung/stand-der-bearbeitung',
-        {
-          type: 'category',
-          label: 'Allgemeines',
-          link: {
-            type: 'doc',
-            id: 'lizenzerweiterung/allgemeines/allgemeines',
-          },
-          items: [
-            // 'lizenzerweiterung/allgemeines/allgemeines',
-            'lizenzerweiterung/allgemeines/motivation',
-            'lizenzerweiterung/allgemeines/einfuehrung-zu-odrl',
-            'lizenzerweiterung/allgemeines/mapping-zu-spezifikationen',
-            'lizenzerweiterung/allgemeines/nutzung-von-identifikatoren',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Datenmodell',
-          link: {
-            type: 'doc',
-            id: 'lizenzerweiterung/datenmodell/datenmodell',
-          },
-          items: [
-
-            'lizenzerweiterung/datenmodell/nutzungsrecht',
-            'lizenzerweiterung/datenmodell/providerfehlermeldung',
-            'lizenzerweiterung/datenmodell/zugriffsinfo',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Praxisleitfaden',
-          link: {
-            type: 'doc',
-            id: 'lizenzerweiterung/praxisleitfaden/praxisleitfaden',
-          },
-          items: [
-            'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
-            'praxisleitfaden/semantik',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Schnittstellen',
-          link: {
-            type: 'doc',
-            id: 'lizenzerweiterung/schnittstellen/schnittstellen',
-          },
-          items: [
-            'lizenzerweiterung/schnittstellen/versionierung',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Schnittstellendefinition',
-          link: {
-            type: 'doc',
-            id: 'lizenzerweiterung/schnittstellendefinition/schnittstellendefinition',
-          },
-          items: [
-            'lizenzerweiterung/schnittstellendefinition/ausführung',
-            'lizenzerweiterung/schnittstellendefinition/daten',
-            'lizenzerweiterung/schnittstellendefinition/fehlerbehandlung',
-          ],
-        },
-        'lizenzerweiterung/glossar',
-
-      ]
-    },
   ],
 
   spezQuellsystemeSidebar: [
@@ -341,6 +263,75 @@ const sidebars: SidebarsConfig = {
     'versionshistorie',
   ],
 
+  spezLizenzenSidebar: [
+    {
+      type: 'html',
+      value: '<span style="font-weight: 600;">Lizenzen-API</span>',
+      defaultStyle: true,
+    },
+    {
+      type: 'category',
+      label: 'Allgemeines',
+      link: {
+        type: 'doc',
+        id: 'lizenzerweiterung/einleitung',
+      },
+      items: [
+        'lizenzerweiterung/allgemeines/motivation',
+        'lizenzerweiterung/allgemeines/einfuehrung-zu-odrl',
+        'lizenzerweiterung/allgemeines/mapping-zu-spezifikationen',
+        'lizenzerweiterung/allgemeines/nutzung-von-identifikatoren',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Datenmodell',
+      items: [
+        'lizenzerweiterung/datenmodell/nutzungsrecht',
+        'lizenzerweiterung/datenmodell/providerfehlermeldung',
+        'lizenzerweiterung/datenmodell/zugriffsinfo',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Nutzung der REST-API',
+      link: {
+        type: 'doc',
+        id: 'lizenzerweiterung/schnittstellen/schnittstellen',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'lizenzerweiterung/schnittstellendefinition/schnittstellendefinition',
+          label: 'Schnittstellendefinition'
+        },
+        {
+          type: 'doc',
+          id: 'lizenzerweiterung/schnittstellendefinition/http-statuscodes',
+          label: 'HTTP-Statuscodes'
+        },
+        {
+          type: 'doc',
+          id: 'lizenzerweiterung/schnittstellendefinition/custom-header',
+          label: 'Teilweise Fehlerhafte Verarbeitung'
+        }
+      ],
+    },
+    {
+      type: 'doc',
+      label: 'Autorisierung und Authentifizierung',
+      id: 'lizenzerweiterung/schnittstellen/autorisierung',
+    },
+    {
+      type: 'category',
+      label: 'Praxisleitfaden',
+      items: [
+        'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
+        'lizenzerweiterung/praxisleitfaden/semantik',
+      ],
+    },
+  ],
+
   apiDiensteSidebarOpenAPIDocs: [
     {
       type: 'category',
@@ -386,7 +377,7 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               type: "doc",
-              id: "generated/openapi/dienste/nutzungsrechte-als-policies-odrl-policy-type-set-im-kontext-eines-benutzers-abrufen",
+              id: "generated/openapi/lizenzen/nutzungsrechte-als-policies-odrl-policy-type-set-im-kontext-eines-benutzers-abrufen",
               label: "/policies-info",
               className: "api-method get",
             },
@@ -690,6 +681,31 @@ const sidebars: SidebarsConfig = {
               id: 'generated/openapi/quellsysteme/delete-sichtfreigabe-id',
               label: '/sichtfreigaben/\u200B:id',
               className: 'api-method delete',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+
+  apiLizenzenSidebarOpenAPIDocs: [
+    {
+      type: 'category',
+      label: 'API Lizenzen',
+      link: {
+        type: 'doc',
+        id: 'generated/openapi/lizenzen/schulconnex',
+      },
+      items: [
+        {
+          type: "category",
+          label: "Lizenzen",
+          items: [
+            {
+              type: "doc",
+              id: "generated/openapi/lizenzen/nutzungsrechte-als-policies-odrl-policy-type-set-im-kontext-eines-benutzers-abrufen",
+              label: "/policies-info",
+              className: "api-method get",
             },
           ],
         },

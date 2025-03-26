@@ -3,7 +3,7 @@ info:
   title: Schulconnex
   version: '1.5.1'
   description: |
-    Beschreibung der Schnittstellen von Schulconnex für Dienste
+    Beschreibung der Schnittstellen von Schulconnex für Dienste (Erweiterung Lizenzen)
   contact:
     name: 'Landesinitiative n-21: Schulen in Niedersachsen online e. V.'
     url: https://www.n-21.de/
@@ -22,12 +22,8 @@ tags:
   - name: Personen
     description: Alles zu Personen und Personendatensätzen
 paths:
-  /person-info:
-    $ref: './paths-person-info.yaml'
-  /personen-info:
-    $ref: './paths-personen-info.yaml'
-  /organisationen-info:
-    $ref: './paths-organisationen-info.yaml'
+  /policies-info:
+    $ref: './paths-policies-info.yaml'
 components:
   securitySchemes:
     oAuthForServices:

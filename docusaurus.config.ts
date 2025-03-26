@@ -128,6 +128,23 @@ const config: Config = {
             ],
           },
           {
+            type: 'dropdown',
+            label: 'Lizenzen',
+            position: 'left',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'spezLizenzenSidebar',
+                label: 'Spezifikation',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'apiLizenzenSidebarOpenAPIDocs',
+                label: 'API Lizenzen',
+              },
+            ],
+          },
+          {
             type: 'docsVersionDropdown',
             position: 'right',
             dropdownActiveClassDisabled: true,
@@ -217,7 +234,15 @@ const config: Config = {
               groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
             },
             template: 'src/generators/markdown/template.mustache',
-          }
+          },
+          apiLizenzen: { // is considered the <id> that you will reference in the CLI
+            specPath: "src/openapi/api-lizenzen.yaml", // path or URL to the OpenAPI spec
+            outputDir: "docs/generated/openapi/lizenzen", // output directory for generated *.mdx and sidebar.js files
+            sidebarOptions: {
+              groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+            },
+            template: 'src/generators/markdown/template.mustache',
+          },
         }
       },
     ]
