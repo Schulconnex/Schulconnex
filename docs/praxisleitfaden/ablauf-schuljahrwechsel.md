@@ -1,5 +1,7 @@
 ---
 title: Ablauf Schuljahrwechsel
+tags: 
+- Informativ
 ---
 
 # Ablauf des Schuljahreswechsels für Quellsysteme

@@ -1,0 +1,5 @@
+type: object
+properties:
+  kennung:
+    $ref: './components-code-Fächerkanon.yaml'
+    example: EN

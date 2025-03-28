@@ -1,5 +1,7 @@
 ---
 title: OIDC-Claims
+tags: 
+- Verbindlich
 ---
 
 # Person-Info über OIDC-Claims

@@ -14,14 +14,14 @@ delete:
 
     Im Normalfall wird eine Sichtfreigabe über das in ihr enthaltene Enddatum terminiert.
 
-    Ein DELETE kann nur mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload)
+    Ein DELETE muss mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload)
     beinhalten die Revisionsnummer.
 
-    Siehe auch das Datenmodell zu [`Sichtfeigabe`](../../../datenmodell/sichtfreigabe).
+    Siehe auch das Datenmodell zu [`Sichtfreigabe`](../../../datenmodell-qs/sichtfreigabe).
 
     Es ist erforderlich, dass für eine Löschanfrage einer Freigabe das Attribut `revision` der
     zugrunde liegenden Freigabe mitgeschickt wird. Der Anmeldeservice überprüft anhand des
-    mitgeschickten Wertes des Attributs `revision`, ob der Datensatz der Freigabe in der
+    mitgeschickten Werts des Attributs `revision`, ob der Datensatz der Freigabe in der
     Zwischenzeit keine Änderung erfahren hat.
 
   parameters:
@@ -56,29 +56,29 @@ delete:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
