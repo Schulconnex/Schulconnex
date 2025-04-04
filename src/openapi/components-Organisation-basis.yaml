@@ -7,5 +7,4 @@ properties:
     description: ID der Organisation.
     type: string
     readOnly: true
-    format: uuid
     example: b0d7b0dd-3477-4122-a38d-095ec242e786

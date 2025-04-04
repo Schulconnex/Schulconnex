@@ -8,12 +8,10 @@ properties:
   id:
     description: ID der Sichtfreigabe.
     type: string
-    format: uuid
     example: 1fd95f6f-bc28-408b-8e03-41972b414a07
   orgid:
     description: ID der Organisation für welche die Sichtfreigabe erteilt wurde.
     type: string
-    format: uuid
     example: c1966d20-50b6-4bb1-afc7-96663523891e
   revision:
     description: Revision der Beziehung.

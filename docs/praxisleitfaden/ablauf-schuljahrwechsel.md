@@ -24,7 +24,7 @@ zukünftige Lernperioden ist nicht notwendig.
 
 Für Quellsysteme sind keine besonderen Funktionen oder API-Endpunkte für den Wechsel der Lernperioden
 vorgesehen. Findet eine Datensynchronisation allerdings im Zusammenhang oder direkt nach einem Wechsel
-der Lernperiode statt, müssen einige Besonderheiten berücksichtigt werden. Grundsätzliche sollte der Ablauf
+der Lernperiode statt, müssen einige Besonderheiten berücksichtigt werden. Grundsätzlich sollte der Ablauf
 der Datensynchronisation der gleiche wie bei einer unterjährigen Synchronisation sein. So ist unter anderem
 auch sichergestellt, dass nachträgliche Änderungen beispielsweise am Stundenplan und bei Lerngruppen
 im Zusammenhang mit der Regelsynchronisation wie bei einem Lernperiodenwechsel übernommen werden.
