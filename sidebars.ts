@@ -371,18 +371,6 @@ const sidebars: SidebarsConfig = {
             },
           ],
         },
-        {
-          type: "category",
-          label: "Lizenzen",
-          items: [
-            {
-              type: "doc",
-              id: "generated/openapi/lizenzen/nutzungsrechte-als-policies-odrl-policy-type-set-im-kontext-eines-benutzers-abrufen",
-              label: "/policies-info",
-              className: "api-method get",
-            },
-          ],
-        },
       ],
     },
   ],
