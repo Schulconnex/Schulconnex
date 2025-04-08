@@ -318,11 +318,6 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
-      type: 'doc',
-      label: 'Autorisierung und Authentifizierung',
-      id: 'lizenzerweiterung/schnittstellen/autorisierung',
-    },
-    {
       type: 'category',
       label: 'Praxisleitfaden',
       items: [
