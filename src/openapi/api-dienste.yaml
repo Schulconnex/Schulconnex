@@ -1,7 +1,7 @@
 openapi: '3.0.2'
 info:
   title: Schulconnex
-  version: '1.5'
+  version: '1.5.1'
   description: |
     Beschreibung der Schnittstellen von Schulconnex für Dienste
   contact:
@@ -28,8 +28,6 @@ paths:
     $ref: './paths-personen-info.yaml'
   /organisationen-info:
     $ref: './paths-organisationen-info.yaml'
-  /policies-info:
-    $ref: './paths-policies-info.yaml'
 components:
   securitySchemes:
     oAuthForServices:

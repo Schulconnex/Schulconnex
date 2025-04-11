@@ -1,7 +1,7 @@
 openapi: '3.0.2'
 info:
   title: Schulconnex
-  version: '1.5'
+  version: '1.5.1'
   description: |
     Beschreibung der Schnittstellen von Schulconnex für Quellsysteme
   contact:

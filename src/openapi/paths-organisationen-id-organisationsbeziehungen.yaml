@@ -21,12 +21,12 @@ get:
     Dieser Schnittstellenendpunkt gibt die Organisationsbeziehungen zur angegebenen
     Organisations-ID zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/organisationen/{id}/organisationsbeziehungen`
-    zum Abfragen der Organisationsbeziehungen per Organisations-ID zugelassen. Die
+    Ein READ zum Abfragen der Organisationsbeziehungen per Organisations-ID muss mit HTTP-GET auf die API `/organisationen/{id}/organisationsbeziehungen`
+    erfolgen. Die
     Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array
     des Datentyps Organisationsbeziehungen.
 
-    Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell/organisationsbeziehung).
+    Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell-qs/organisationsbeziehung).
 
     Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` ermöglicht das
     Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.
@@ -71,24 +71,24 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)

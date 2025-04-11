@@ -12,9 +12,7 @@ von schulischen Kontextdaten von Nutzerinnen und Nutzern für digitale Bildungsm
 
 Weitere Informationen bei der [Landesinitiative n-21](https://www.n-21.de/portal/seiten/moin-schule-900000111-10056.html).
 
-## Lokale Entwicklung
-
-Abhängigkeiten
+## Abhängigkeiten
 
 * Node.js / npm
 
@@ -24,22 +22,31 @@ Installieren der notwendigen NPM-Module:
 npm install
 ```
 
+## Lokale Entwicklung
+
+### Markdown-Generierung
+
+```bash
+npm run build-openapi-docs
+```
+
+Generiert die notwendigen Markdown-Kapitel aus den OpenAPI-YAML-Definitionen. Jede Änderung an den YAML-Definitionen
+wird in Docusaurus erst dann sichtbar, wenn dieser Schritt ausgeführt wird.
+
+Bereits erzeugte Markdown-Kapitel lassen sich löschen mit:
+
+```bash
+npm run clean-openapi-docs
+```
+
 ### Starten
 
 ```bash
 npm start
 ```
 
-Dieser Befehl startet einen lokalen Webserver für die Entwicklung und öffnet einen Webbrowser. Die meisten Änderungen
+Startet einen lokalen Webserver für die Entwicklung und öffnet einen Webbrowser. Die meisten Änderungen
 an den Quellen werden werden sofort sichtbar und benötigen keinen Webserverneustart.
-
-### Kompilieren
-
-```bash
-npm build
-```
-
-Dieser Befehl erzeugt statische Dateien im Verzeichnis `build`, die von einem Webserver gehostet werden können.
 
 ### OpenAPI-Definitionen
 
@@ -57,6 +64,14 @@ Für die Quellsysteme-API:
 ```bash
 npm run write-dereferenced-openapi-for-qs
 ```
+
+## Deployment
+
+```bash
+npm run build
+```
+
+Erzeugt statische Dateien im Verzeichnis `build`, die von einem Webserver gehostet werden können.
 
 ## Lizenz
 

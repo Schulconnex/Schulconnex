@@ -8,12 +8,12 @@ get:
   description: |
     Dieser Schnittstellenendpunkt liefert den Personendatensatz zur angeforderten ID.
 
-    Ein READ ist nur mit HTTP-GET auf die API `personen/{personendatensatz.person.id}`
-    zum Abfragen eines Personendatensatzes per ID zugelassen. Die Antwort-Nutzdaten
+    Ein READ zum Abfragen eines Personendatensatzes per ID muss mit HTTP-GET auf die API `personen/{personendatensatz.person.id}`
+    erfolgen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein JSON-Objekt des Datentyps Personendatensatz.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Personendatensatz`](../../../datenmodell/personendatensatz)
-    und [`Person`](../../../datenmodell/person).
+    Siehe auch die einzelnen Datenmodelle zu [`Personendatensatz`](../../../datenmodell-qs/personendatensatz)
+    und [`Person`](../../../datenmodell-qs/person).
 
     Die Anfrage erfordert keine Nutzdaten (Request Payload).
   parameters:
@@ -37,27 +37,27 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
 put:
   tags:
     - Personen
@@ -68,16 +68,16 @@ put:
   description: |
     Dieser Schnittstellenendpunkt aktualisiert den Personendatensatz der angegebenen ID.
 
-    Ein UPDATE ist nur mit HTTP-PUT auf die API `/personen/{personendatensatz.person.id}`
-    zum Aktualisieren eines Personendatensatzes per ID zugelassen. Die Anfrage-Nutzdaten
+    Ein UPDATE zum Aktualisieren eines Personendatensatzes per ID muss mit HTTP-PUT auf die API `/personen/{personendatensatz.person.id}`
+    erfolgen. Die Anfrage-Nutzdaten
     (Request Payload) beinhalten ein JSON-Objekt des Datentyps Personendatensatz.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Personendatensatz`](../../../datenmodell/personendatensatz)
-    und [`Person`](../../../datenmodell/person).
+    Siehe auch die einzelnen Datenmodelle zu [`Personendatensatz`](../../../datenmodell-qs/personendatensatz)
+    und [`Person`](../../../datenmodell-qs/person).
 
     Es ist erforderlich, dass zur Aktualisierungsanfrage im bearbeiteten Personendatensatz
     das Attribut `personendatensatz.person.revision` des zugrunde liegenden Personendatensatzes
-    mitgeschickt wird. Der Schulconnex-Service überprüft anhand des mitgeschickten Wertes
+    mitgeschickt wird. Der Schulconnex-Service überprüft anhand des mitgeschickten Werts
     des Attributs `personendatensatz.person.revision`, ob der Datensatz der Person
     in der Zwischenzeit keine Änderung erfahren hat. Der Wert des Attributs kann von
     einem Quellsystem oder Dienst nicht verändert werden; dieser wird mit der Erstellung
@@ -123,32 +123,32 @@ put:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
 delete:
   tags:
     - Personen
@@ -159,16 +159,16 @@ delete:
   description: |
     Dieser Schnittstellenendpunkt löscht die Person zur angeforderten ID.
 
-    Ein DELETE ist nur mit HTTP-DELETE auf die API `/personen/{personendatensatz.person.id}`
-    zum Löschen einer Person per ID zugelassen. Bevor eine Person gelöscht werden
+    Ein DELETE zum Löschen einer Person per ID muss mit HTTP-DELETE auf die API `/personen/{personendatensatz.person.id}`
+    erfolgen. Bevor eine Person gelöscht werden
     kann, müssen sämtliche Personenkontexte der Person vorher gelöscht werden.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Personendatensatz`](../../../datenmodell/personendatensatz)
-    und [`Person`](../../../datenmodell/person).
+    Siehe auch die einzelnen Datenmodelle zu [`Personendatensatz`](../../../datenmodell-qs/personendatensatz)
+    und [`Person`](../../../datenmodell-qs/person).
 
     Es ist erforderlich, dass für eine Löschanfrage einer Person das Attribut
     `personendatensatz.person.revision` des zugrunde liegenden Personendatensatzes mitgeschickt
-    wird. Der Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs
+    wird. Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs
     `personendatensatz.person.revision`, ob der Datensatz der Person in der Zwischenzeit
     keine Änderung erfahren hat.
   parameters:
@@ -204,29 +204,29 @@ delete:
         Subcode 12: „Person enthält noch Personenkontexte.“ Dieser tritt dann auf, wenn
         versucht wird, den Datensatz einer Person zu löschen, für die noch Personenkontexte bestehen.
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
