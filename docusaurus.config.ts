@@ -129,18 +129,18 @@ const config: Config = {
           },
           {
             type: 'dropdown',
-            label: 'Lizenzen',
+            label: 'Nutzungsrechte',
             position: 'left',
             items: [
               {
                 type: 'docSidebar',
-                sidebarId: 'spezLizenzenSidebar',
+                sidebarId: 'spezPoliciesSidebar',
                 label: 'Spezifikation',
               },
               {
                 type: 'docSidebar',
-                sidebarId: 'apiLizenzenSidebarOpenAPIDocs',
-                label: 'API Lizenzen',
+                sidebarId: 'apiPoliciesSidebarOpenAPIDocs',
+                label: 'API Nutzungsrechte',
               },
             ],
           },
