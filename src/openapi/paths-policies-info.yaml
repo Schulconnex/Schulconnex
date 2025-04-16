@@ -1,7 +1,11 @@
 get:
-  tags:
-    - Erweiterung SchulConneX
-  summary: Nutzungsrechte als Policies (ODRL PolicyType "Set") im Kontext eines Benutzers abrufen
+  # tags:
+  #   - Personen
+  operationId: readPoliciesInfo
+  security:
+    - oAuthForUser: []
+  summary: Nutzungsrechte im Kontext
+  # summary: Nutzungsrechte als Policies (ODRL PolicyType "Set") im Kontext eines Benutzers abrufen
   description: |
     # Nutzungsrechte-Informationen (Policies)
     Gibt eine Liste von Informationen zu Nutzungsrechten (als ODRL vom PolicyType "Set") für den autorisierten Benutzer zurück.
@@ -16,13 +20,6 @@ get:
     Der API-Endpunkt unterstützt Client-seitige `Content negotiation` über den Accept-Header.
     Der Client kann das Datenmodell der Antwort-Nutzlast festlegen, sofern diese Unterstützt werden.
   parameters:
-    - name: Authorization
-      in: header
-      description: Der OIDC Access-Token des Benutzers.
-      required: true
-      schema:
-        type: string
-      example: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
     - name: Accept
       in: header
       description: Parameter für die Festlegung des Datenmodells der Antwort-Nutzlast. ([Content negotiation on mdn](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation)).
@@ -36,58 +33,34 @@ get:
       example: application/json
     - name: target.uid
       in: query
-      description: Die ID eines spezifischen Mediums als Query-Filter-Parameter.
+      description: Die UID eines spezifischen Mediums als Filter-Parameter
       required: false
       schema:
         type: string
-        example: "urn:example:medium:123456789"
+        example: "urn:example-provider:media:123456789"
     - name: target.partOf
       in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen eines spezifischen Medienkatalogs.
+      description: Der Name eines spezifischen Medienkatalogs als Filter-Parameter
       required: false
-      allowEmptyValue: true
       schema:
         type: string
-      example: "urn:exampleprovider:media:catalog"
-    - name: permission.action
-      in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Art von Nutzungsrecht.
-      required: false
-      allowEmptyValue: true
-      schema:
-        type: string
-        enum:
-          - "distribute"
-          - "execute"
-          - "move"
-          - "play"
-          - "print"
-          - "view"
-      example: "execute"
-    - name: personenkontext.organisation.kennung
-      in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Schulzugehörigkeit.
-      required: false
-      allowEmptyValue: true
-      schema:
-        type: string
-      example: "NI_12345"
-    - name: personenkontext.gruppe
-      in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Gruppenzugehörigkeit.
-      required: false
-      allowEmptyValue: true
-      schema:
-        type: string
-      example: "ffceeb40-01e6-483f-a909-382ff576b429"
-    - name: personenkontext.rolle
-      in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Rolle.
-      required: false
-      allowEmptyValue: true
-      schema:
-        type: string
-      example: "lehr"
+        example: "urn:example-provider:media:catalog"
+    # Nicht in Version 1.6
+    # - name: permission.action
+    #   in: query
+    #   description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Art von Nutzungsrecht.
+    #   required: false
+    #   allowEmptyValue: true
+    #   schema:
+    #     type: string
+    #     enum:
+    #       - "distribute"
+    #       - "execute"
+    #       - "move"
+    #       - "play"
+    #       - "print"
+    #       - "view"
+    #   example: "execute"
     - name: access_control
       in: query
       description: Ein optionaler Filter-Parameter zum zusätzlichen Abfragen der Zugriffs-Informationen als Attribute `scx:access_control`.
@@ -111,7 +84,7 @@ get:
       example: false
   responses:
     200:
-      description: Returns an array of policies
+      description: OK
       headers:
         Content-Partial-Error:
           schema:
@@ -124,7 +97,7 @@ get:
             type: array
             items:
               anyOf:
-                - $ref: "./components-NutzungsrechtInfoJSON.yaml"
+                - $ref: "./components-policies-Mediendatensatz.yaml"
                 - $ref: "./components-DiscoverActionJSON.yaml"
           # examples:
           #   "Nutzungsrecht ohne Zugriffs-Informationen":
@@ -141,7 +114,7 @@ get:
             type: array
             items:
               anyOf:
-                - $ref: "./components-NutzungsrechtInfoJSONLD.yaml"
+                - $ref: "./components-policies-Mediendatensatz.yaml"
                 - $ref: "./components-DiscoverActionJSONLD.yaml"
           # examples:
           #   "Nutzungsrecht ohne Zugriffs-Informationen":
@@ -154,10 +127,13 @@ get:
           #     value:
           #       $ref: "../../static/examples/response_payload/218_provider_error.ld.json"
     401:
-      description: Unauthorized
-    404:
-      description: Not found
-    500:
-      description: Internal Server Error
-    503:
-      description: Service Unavailable
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    # 404:
+    #   description: Not found
+    # 500:
+    #   description: Internal Server Error
+    # 503:
+    #   description: Service Unavailable

@@ -1,9 +1,9 @@
 openapi: '3.0.2'
 info:
   title: Schulconnex
-  version: '1.5.1'
+  version: '1.6'
   description: |
-    Beschreibung der Schnittstellen von Schulconnex für Dienste (Erweiterung Lizenzen)
+    Beschreibung der Schnittstellen von Schulconnex für Nuztungsrechte
   contact:
     name: 'Landesinitiative n-21: Schulen in Niedersachsen online e. V.'
     url: https://www.n-21.de/
@@ -16,11 +16,9 @@ servers:
 security:
   - oAuthForServices: []
   - oAuthForUser: []
-tags:
-  - name: Organisationen
-    description: Schulen oder sonstige relevante Organisationen
-  - name: Personen
-    description: Alles zu Personen und Personendatensätzen
+# tags:
+#   - name: Organisationen
+#     description: Schulen oder sonstige relevante Organisationen
 paths:
   /policies-info:
     $ref: './paths-policies-info.yaml'

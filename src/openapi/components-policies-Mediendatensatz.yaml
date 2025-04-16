@@ -1,0 +1,18 @@
+title: Mediendatensatz
+type: object
+required:
+  - policy
+properties:
+  policy:
+    description: Das Nutzungsrechtsobjekt entsprechend der ODRL-Spezifikation
+    type: object
+  access_control:
+    type: object
+    required:
+      - "@type"
+      - value
+    properties:
+      "@type":
+        type: string
+      value:
+        type: object
