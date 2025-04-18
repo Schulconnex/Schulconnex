@@ -96,9 +96,10 @@ get:
           schema:
             type: array
             items:
-              anyOf:
-                - $ref: "./components-policies-Mediendatensatz.yaml"
-                - $ref: "./components-DiscoverActionJSON.yaml"
+              $ref: "./components-policies-Mediendatensatz.yaml"
+              # anyOf:
+              #   - $ref: "./components-policies-Mediendatensatz.yaml"
+              #   - $ref: "./components-DiscoverActionJSONLD.yaml"
           # examples:
           #   "Nutzungsrecht ohne Zugriffs-Informationen":
           #     value:
@@ -113,9 +114,10 @@ get:
           schema:
             type: array
             items:
-              anyOf:
-                - $ref: "./components-policies-Mediendatensatz.yaml"
-                - $ref: "./components-DiscoverActionJSONLD.yaml"
+              $ref: "./components-policies-Mediendatensatz.yaml"
+              # anyOf:
+              #   - $ref: "./components-policies-Mediendatensatz.yaml"
+              #   - $ref: "./components-DiscoverActionJSONLD.yaml"
           # examples:
           #   "Nutzungsrecht ohne Zugriffs-Informationen":
           #     value:
