@@ -323,6 +323,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
         'lizenzerweiterung/praxisleitfaden/semantik',
+        'lizenzerweiterung/praxisleitfaden/odrl-beispiele',
       ],
     },
   ],
