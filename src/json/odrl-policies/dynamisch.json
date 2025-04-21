@@ -9,11 +9,13 @@
             "action": [
                 "execute"
             ],
+            // highlight-start
             "constraint": {
                 "leftOperand": "concurrentUses",
                 "operator": "lteq",
                 "rightOperand": "100"
             }
+            // highlight-end
         }
     ]
 }
