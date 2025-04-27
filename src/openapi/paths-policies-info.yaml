@@ -64,17 +64,18 @@ get:
     #   example: "execute"
     - name: access_control
       in: query
-      description: Ein optionaler Filter-Parameter zum zusätzlichen Abfragen der Zugriffs-Informationen als Attribute `scx:access_control`.
+      description: Mit dem Parameter wird die optionale Auslieferung des `access_control`-Objekts angefordert.
       required: false
       allowEmptyValue: true
       schema:
-        type: string
-        enum:
-          - "none"
-          - "urn:scx:lizenz:zugriffsinfo:licensekey"
-          - "urn:scx:lizenz:zugriffsinfo:temporaryurl"
-          - "all"
-      example: "none"
+        type: boolean
+        default: false
+        # enum:
+        #   - "none"
+        #   - "urn:scx:lizenz:zugriffsinfo:licensekey"
+        #   - "urn:scx:lizenz:zugriffsinfo:temporaryurl"
+        #   - "all"
+      # example: "none"
     - name: discover_error
       in: query
       description: Ein optionaler Filter-Parameter zum Abfragen von Discover-Fehlerinformationen von Providern. Führt bei Auftreten einer Fehlerinformation zum führen des Custom-Header `Content-Partial-Error` mit dem Wert "true" in der Antwort.
