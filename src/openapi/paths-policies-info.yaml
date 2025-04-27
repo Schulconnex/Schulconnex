@@ -22,7 +22,7 @@ get:
   parameters:
     - name: Accept
       in: header
-      description: Parameter für die Festlegung des Datenmodells der Antwort-Nutzlast. ([Content negotiation on mdn](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation)).
+      description: Legt den Content-Type der Antwort fest (JSON oder JSON-LD).
       required: false
       schema:
         type: string
