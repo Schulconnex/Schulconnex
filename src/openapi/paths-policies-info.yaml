@@ -134,8 +134,11 @@ get:
               '@context':
                 description: Der Context gemäß JSON-LD-Spezfikation
                 example:
-                  type: '@type'
-                  odrl: http://www.w3.org/ns/odrl.jsonld
+                  - http://schulconnex.de/policies.jsonld
+                  -
+                    odrl: http://www.w3.org/ns/odrl.jsonld
+                  -
+                    type: '@type'
               pid:
                 description: Pseudonymisierte ID. Referenziert ein bestehendes Objekt des Schulconnex-Servers.
                 type: string

@@ -18,10 +18,10 @@ properties:
     description: Ein gültiges Zugangsdatenobjekt
     type: object
     required:
-      - "@type"
+      - type
       - value
     properties:
-      "@type":
+      type:
         description: Der Typ (Klasse) des Zugangsdatenobjekts
         type: string
         example: "licensekey"
