@@ -38,14 +38,14 @@ get:
       nullable: true
       schema:
         type: string
-        example: "urn:example-provider:media:123456789"
+        example: "urn:issuer:media:123456789"
     - name: target.partOf
       in: query
       description: Der Name eines spezifischen Medienkatalogs als Filter-Parameter
       required: false
       schema:
         type: string
-        example: "urn:example-provider:media:catalog"
+        example: "urn:issuer:catalog"
     # Nicht in Version 1.6
     # - name: permission.action
     #   in: query
