@@ -35,6 +35,7 @@ get:
       in: query
       description: Die UID eines spezifischen Mediums als Filter-Parameter
       required: false
+      nullable: true
       schema:
         type: string
         example: "urn:example-provider:media:123456789"
