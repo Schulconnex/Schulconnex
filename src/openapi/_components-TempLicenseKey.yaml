@@ -1,5 +1,0 @@
-type: object
-properties:
-  licenseKey:
-    type: string
-    description: "Der Lizenz-Schlüssel."

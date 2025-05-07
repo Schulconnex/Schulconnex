@@ -4,6 +4,7 @@ properties:
     type: string
     format: uricomp
     description: "Die temporäre URL."
+    example: "https://exampleprovider.org/tmp/123455677"
   gueltigkeit_von:
     type: string
     format: date-time
