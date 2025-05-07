@@ -266,7 +266,7 @@ const sidebars: SidebarsConfig = {
   spezPoliciesSidebar: [
     {
       type: 'html',
-      value: '<span style="font-weight: 600;">Policies-API</span>',
+      value: '<span style="font-weight: 600;">Nutzungsrechte-API</span>',
       defaultStyle: true,
     },
     {
