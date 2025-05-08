@@ -11,12 +11,12 @@ enum:
   - NLehr
 description: >
     Wie folgt:
-      * Lern Lernende/r
-      * Lehr Lehrende/r
-      * SorgBer Sorgeberechtigte/r
+      * Lern Lernende/-r
+      * Lehr Lehrende/-r
+      * SorgBer Sorgeberechtigte/-r
       * Extern externe Person
       * OrgAdmin Organisationsadministrator
       * Leit Organisationsleitung
       * SysAdmin Systemadministrator
-      * Schulbegleiter/in
+      * Schulbegleiter/-in
       * Nicht-lehrendes Personal

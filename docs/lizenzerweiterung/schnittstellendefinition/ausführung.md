@@ -1,3 +1,0 @@
-# Erfolgreiche Ausführung
-
-Platzhalter

@@ -2,7 +2,7 @@
 
 ## § 1 Information über die Verarbeitung personenbezogener Daten
 
-Im Folgenden informieren wir über die Verarbeitung personenbezogener Daten bei Nutzung der Webseite https://schulconnex.de. Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z. B. Personalien, Name, Adresse, Geburtsdatum, E-Mail-Adressen, IP-Adresse, Dienstort, Zugehörigkeit zu einer Organisation, Gruppenzugehörigkeit, etc.
+Im Folgenden informieren wir über die Verarbeitung personenbezogener Daten bei Nutzung der Website https://schulconnex.de. Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z. B. Personalien, Name, Adresse, Geburtsdatum, E-Mail-Adressen, IP-Adresse, Dienstort, Zugehörigkeit zu einer Organisation, Gruppenzugehörigkeit, etc.
 Die technische Bereitstellung (Hosting) der Website erfolgt unter Einsatz von GitHub Pages, einem Service des Anbieters GitHub, Inc. Datenverarbeitungen, welche durch den Plattformbetreiber im Rahmen des Hostings durchgeführt werden, unterfallen nicht dem Verantwortungsbereich von n-21.
 
 Verantwortlicher gem. Art. 4 Abs. 7 Datenschutz-Grundverordnung (DSGVO) ist
@@ -59,7 +59,7 @@ hinsichtlich der vom jeweiligen Verantwortlichen durchgeführten Verarbeitungen.
 
 ## § 3 Erhebung personenbezogener Daten beim Aufruf von [schulconnex.de](https://schulconnex.de)
 
-Im Folgenden informieren wir über die Verarbeitung personenbezogener Daten bei Nutzung der Webseite https://schulconnex.de durch den jeweiligen Verantwortlichen.
+Im Folgenden informieren wir über die Verarbeitung personenbezogener Daten bei Nutzung der Website https://schulconnex.de durch den jeweiligen Verantwortlichen.
 
 ### Verarbeitung personenbezogener Daten durch GitHub, Inc.
 

@@ -1,5 +1,7 @@
 ---
 title: Praxisleitfaden
+tags: 
+- Informativ
 ---
 
 # Praxisleitfaden für die Implementierung
