@@ -1,4 +1,4 @@
-# Analyse und Semantik der Lizenzbeispiele
+# Lizenzbeispiele
 Im Folgenden werden verschiedene Lizenzbeispiele im ODRL-Format dargestellt. Diese Beispiele zeigen, wie unterschiedliche Nutzungsszenarien mithilfe von ODRL modelliert werden können, um die Semantik und Einschränkungen der Nutzungsrechte präzise und maschinenlesbar abzubilden.
 
 ---
@@ -10,7 +10,7 @@ Im Folgenden werden verschiedene Lizenzbeispiele im ODRL-Format dargestellt. Die
         "http://www.w3.org/ns/odrl.jsonld"
     ],
     "@type": "Agreement",
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -37,7 +37,7 @@ Die generische Klasse "Set" wurde durch die semantisch passendere Klasse "Agreem
 
 Die Nutzungsvereinbarung erlaubt explizit die Remote-Ausführung des Zielobjekts (z. B. einer Software) und nutzt hierfür die ODRL-Aktion "execute". Diese spezifische Aktion wurde gewählt, da sie technisch präzise die Ausführbarkeit beschreibt. Die Alternative "use" wäre zu allgemein und könnte fälschlicherweise implizieren, dass die Vereinbarung umfassendere Nutzungsrechte gewährt. Laut den Empfehlungen der W3C-Best-Practices für ODRL repräsentiert "use" den Elterntyp aller Rechte oder könnte andere Rechte implizieren. In diesem Fall wäre dies unangebracht, da nur die Ausführung gestattet wird.
 
-Das Attribut "uid" verweist auf eine eindeutige IRI, die als Endpunkt in der Systemlandschaft, z. B. unter "https://api-dienste.moin.schule", implementiert werden muss. Dieser Endpunkt liefert das aktuelle Objekt der Vereinbarung zurück und gewährleistet somit Nachvollziehbarkeit und Interoperabilität. Das Einbinden eines solchen spezifischen Endpunkts ermöglicht eine klare Identifikation und erleichtert die Integration in bestehende Systeme.
+Das Attribut "uid" verweist auf eine eindeutige IRI, die als Endpunkt in der Systemlandschaft, z. B. unter "https://api.schule-cloud.de", implementiert werden muss. Dieser Endpunkt liefert das aktuelle Objekt der Vereinbarung zurück und gewährleistet somit Nachvollziehbarkeit und Interoperabilität. Das Einbinden eines solchen spezifischen Endpunkts ermöglicht eine klare Identifikation und erleichtert die Integration in bestehende Systeme.
 
 Zusammengefasst beschreibt die Klasse "Agreement" eine eindeutige und verbindliche Nutzungsvereinbarung zwischen Medienanbieter und Organisation, die auf ein spezifisches Zielobjekt verweist. Durch die Verwendung von präzisen Begrifflichkeiten und eindeutigen Referenzen wird die technische und rechtliche Klarheit sichergestellt, ohne die Intention der Vereinbarung zu erweitern oder ungenau zu formulieren.
 
@@ -46,7 +46,7 @@ Das ODRL-Beispiels könnte man auch in einem vereinfachten, nicht-ODRL-spezifisc
 ```json
 {
     "type": "LicenseAgreement",
-    "id": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "id": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "id": "urn:schule:medium:123456789",
         "source": "https://www.schule-test.de/api/external/univention/media"
@@ -86,7 +86,7 @@ Das gegebene Beispiel zeigt, wie erweiterte Nutzungseinschränkungen durch die V
         }
     ],
     "@type": "Set",
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -98,22 +98,22 @@ Das gegebene Beispiel zeigt, wie erweiterte Nutzungseinschränkungen durch die V
             ],
             "constraint": [
                 {
-                  "leftOperand": "urn:schulconnex:de:odrl:lizenzstatus",
-                  "operator": "neq",
-                  "rightOperand": "deactivated",
-                  "status": "provisioned"
+                    "leftOperand": "licenseStatus",
+                    "operator": "neq",
+                    "rightOperand": "deactivated",
+                    "status": "provisioned"
                 },
                 {
-                  "leftOperand": "dateTime",
-                  "operator": "gteq",
-                  "rightOperand": "2023-08-01T00:00+0200"
+                    "leftOperand": "dateTime",
+                    "operator": "gteq",
+                    "rightOperand": "2023-08-01T00:00+0200"
                 },
                 {
-                  "leftOperand": "dateTime",
-                  "operator": "lt",
-                  "rightOperand": "2024-08-01T00:00+0200"
+                    "leftOperand": "dateTime",
+                    "operator": "lt",
+                    "rightOperand": "2024-08-01T00:00+0200"
                 }
-              ]
+            ]
         }
     ],
     "access_control": [
@@ -131,7 +131,7 @@ Das gegebene Beispiel zeigt, wie erweiterte Nutzungseinschränkungen durch die V
 ```json
 {
     "type": "LicenseSet",
-    "id": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "id": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "id": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -139,30 +139,30 @@ Das gegebene Beispiel zeigt, wie erweiterte Nutzungseinschränkungen durch die V
     "permissions": [
         {
             "action": "execute",
-            "constraints": [
+            "constraint": [
                 {
-                    "field": "licenseStatus",
+                    "leftOperand": "licenseStatus",
                     "operator": "notEqual",
-                    "value": "deactivated",
+                    "rightOperand": "deactivated",
                     "currentStatus": "provisioned"
                 },
                 {
-                    "field": "dateTime",
+                    "leftOperand": "dateTime",
                     "operator": "greaterOrEqual",
-                    "value": "2023-08-01T00:00+0200"
+                    "rightOperand": "2023-08-01T00:00+0200"
                 },
                 {
-                    "field": "dateTime",
+                    "leftOperand": "dateTime",
                     "operator": "lessThan",
-                    "value": "2024-08-01T00:00+0200"
+                    "rightOperand": "2024-08-01T00:00+0200"
                 }
             ]
         }
     ],
     "access_control": [
         {
-            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
         }
@@ -172,7 +172,7 @@ Das gegebene Beispiel zeigt, wie erweiterte Nutzungseinschränkungen durch die V
 ```
 
 #### Zeitliche Einschränkungen
-Die zeitliche Einschränkung wird durch zwei Constraints modelliert, die den Beginn und das Ende der zulässigen Nutzungsperiode definieren. Diese Einschränkungen werden mithilfe der ODRL-Operatoren gteq (größer oder gleich) und lt (kleiner als) implementiert:
+Die zeitliche Einschränkung wird durch zwei Constraint-Bedingungen modelliert, die den Beginn und das Ende der zulässigen Nutzungsperiode definieren. Diese Einschränkungen werden mithilfe der ODRL-Operatoren gteq (größer oder gleich) und lt (kleiner als) implementiert:
 * `gteq`: Das Nutzungsrecht gilt ab dem 1. August 2023, 00:00 Uhr MESZ, einschließlich dieses Datums. 
 * `lt`: Das Nutzungsrecht endet vor dem 1. August 2024, 00:00 Uhr MESZ, sodass dieses Datum selbst nicht mehr eingeschlossen ist.
 
@@ -212,7 +212,7 @@ Das gegebene Beispiel zeigt, wie eine Gruppenlizenz in ODRL modelliert werden ka
         }
     ],
     "@type": "Set",
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -222,9 +222,13 @@ Das gegebene Beispiel zeigt, wie eine Gruppenlizenz in ODRL modelliert werden ka
             "action": [
                 "execute"
             ],
-            "assignee": {
-                "partOf": "urn:schulconnex:de:personenkontext:gruppe:ffceeb40-01e6-483f-a909-382ff576b429"
-            }
+            "constraint": [
+                {
+                    "leftOperand": "urn:schulconnex:de:personenkontext:gruppe",
+                    "operator": "eq",
+                    "rightOperand": "ffceeb40-01e6-483f-a909-382ff576b429"
+                }
+            ]
         }
     ],
     "access_control": [
@@ -242,7 +246,7 @@ Das gegebene Beispiel zeigt, wie eine Gruppenlizenz in ODRL modelliert werden ka
 **JSON-Äquivalent**
 ```JSON
 {
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -253,22 +257,20 @@ Das gegebene Beispiel zeigt, wie eine Gruppenlizenz in ODRL modelliert werden ka
                 "execute"
             ],
             "assignee": {
-                "partOf": {
-                    "refinement": [
-                        {
-                            "leftOperand": "urn:schulconnex:de:personenkontext:gruppe",
-                            "operator": "eq",
-                            "rightOperand": "ffceeb40-01e6-483f-a909-382ff576b429"
-                        }
-                    ]
-                }
+                "constraint": [
+                    {
+                        "leftOperand": "urn:schulconnex:de:personenkontext:gruppe",
+                        "operator": "eq",
+                        "rightOperand": "ffceeb40-01e6-483f-a909-382ff576b429"
+                    }
+                ]
             }
         }
     ],
     "access_control": [
         {
-            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
         }
@@ -305,7 +307,7 @@ Das vorliegende Beispiel zeigt die Modellierung einer Schullizenz mit ODRL. Die 
         }
     ],
     "@type": "Set",
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -315,17 +317,13 @@ Das vorliegende Beispiel zeigt die Modellierung einer Schullizenz mit ODRL. Die 
             "action": [
                 "execute"
             ],
-            "assignee": {
-                "partOf": {
-                    "refinement": [
-                        {
-                            "leftOperand": "urn:schulconnex:de:personenkontext:organisation:kennung",
-                            "operator": "eq",
-                            "rightOperand": "NI_12345"
-                        }
-                    ]
+            "constraint": [
+                {
+                    "leftOperand": "urn:schulconnex:de:personenkontext:organisation:kennung",
+                    "operator": "eq",
+                    "rightOperand": "NI_12345"
                 }
-            }
+            ]
         }
     ],
     "access_control": [
@@ -343,7 +341,7 @@ Das vorliegende Beispiel zeigt die Modellierung einer Schullizenz mit ODRL. Die 
 **JSON-Äquivalent**
 ```json
 {
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -353,23 +351,19 @@ Das vorliegende Beispiel zeigt die Modellierung einer Schullizenz mit ODRL. Die 
             "action": [
                 "execute"
             ],
-            "assignee": {
-                "partOf": {
-                    "refinement": [
-                        {
-                            "leftOperand": "urn:schulconnex:de:personenkontext:organisation:kennung",
-                            "operator": "eq",
-                            "rightOperand": "NI_12345"
-                        }
-                    ]
+            "constraint": [
+                {
+                    "leftOperand": "urn:schulconnex:de:personenkontext:organisation:kennung",
+                    "operator": "eq",
+                    "rightOperand": "NI_12345"
                 }
-            }
+            ]
         }
     ],
     "access_control": [
         {
-            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
         }
@@ -383,7 +377,7 @@ Im Beispiel gilt das Nutzungsrecht unter der folgenden Bedingung:
 * Die Lizenz ist an die Organisation mit der Schulnummer NI_12345 gebunden.
 * Nur Personen, die Teil dieser Organisation sind, dürfen die Software ausführen (action: execute).
 
-Das Medium wird durch eine eindeutige Kennung (uid) identifiziert: urn:schule:medium:123456789. Zusätzlich wird angegeben, dass das Medium Teil eines größeren Medienkatalogs ist (partOf). Das assignee-Attribut beschreibt, dass die Lizenz einer Gruppe zugewiesen ist. Die partOf-Eigenschaft innerhalb von assignee referenziert eine PartyCollection, die durch die Bedingung (refinement) definiert wird. Die Bedingung prüft, ob die Organisation die Schulnummer NI_12345 besitzt (urn:schulconnex:de:personenkontext:organisation:kennung eq NI_12345). Auf ähnliche Weise können weitere Bedingungen hinzugefügt werden, z. B. Einschränkungen auf spezifische Gruppen innerhalb der Organisation, wie eine Klasse oder Fachgruppe. Der Lizenzschlüssel (urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel) identifiziert die Schullizenz eindeutig und erleichtert die Nachverfolgbarkeit.
+Das Medium wird durch eine eindeutige Kennung (uid) identifiziert: urn:schule:medium:123456789. Zusätzlich wird angegeben, dass das Medium Teil eines größeren Medienkatalogs ist (partOf). Die Nutzungserlaubnis ist durch eine Bedingung (`constraint`) eingeschränkt, die prüft, ob die Organisation die Schulnummer NI_12345 besitzt (urn:schulconnex:de:personenkontext:organisation:kennung eq NI_12345). Auf ähnliche Weise können weitere Bedingungen hinzugefügt werden, z. B. Einschränkungen auf spezifische Gruppen innerhalb der Organisation, wie eine Klasse oder Fachgruppe. Der Lizenzschlüssel (urn:scx:lizenz:zugriffsinfo:licensekey) identifiziert die Schullizenz eindeutig und erleichtert die Nachverfolgbarkeit.
 
 ### Lehrerlizenz (an spezifische Rolle gebunden)
 
@@ -398,7 +392,7 @@ Das gezeigte JSON-Beispiel beschreibt eine Lehrerlizenz, die die Nutzung eines M
         }
     ],
     "@type": "Set",
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -408,15 +402,13 @@ Das gezeigte JSON-Beispiel beschreibt eine Lehrerlizenz, die die Nutzung eines M
             "action": [
                 "execute"
             ],
-            "assignee": {
-                "refinement": [
-                    {
-                        "leftOperand": "urn:schulconnex:de:personenkontext:rolle",
-                        "operator": "eq",
-                        "rightOperand": "lehrend"
-                    }
-                ]
-            }
+            "constraint": [
+                {
+                    "leftOperand": "urn:schulconnex:de:personenkontext:rolle",
+                    "operator": "eq",
+                    "rightOperand": "lehrend"
+                }
+            ]
         }
     ],
     "access_control": [
@@ -434,7 +426,7 @@ Das gezeigte JSON-Beispiel beschreibt eine Lehrerlizenz, die die Nutzung eines M
 **JSON-Äquivalent**
 ```json
 {
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -445,7 +437,7 @@ Das gezeigte JSON-Beispiel beschreibt eine Lehrerlizenz, die die Nutzung eines M
                 "execute"
             ],
             "assignee": {
-                "refinement": [
+                "constraint": [
                     {
                         "leftOperand": "urn:schulconnex:de:personenkontext:rolle",
                         "operator": "eq",
@@ -457,8 +449,8 @@ Das gezeigte JSON-Beispiel beschreibt eine Lehrerlizenz, die die Nutzung eines M
     ],
     "access_control": [
         {
-            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
         }
@@ -472,13 +464,13 @@ Die Lehrerlizenz wird durch folgende Elemente definiert:
 * **Zielmedium (Target)**: 
   * Das Medium wird durch eine eindeutige Kennung (`uid`) identifiziert, z. B. `urn:schule:medium:123456789`.
   * Über die Eigenschaft partOf wird angegeben, dass das Medium Teil eines Medienkatalogs ist.
-* **Rollenbasierte Einschränkung (Assignee mit Refinement)**:
-  * Das Attribut `assignee` spezifiziert, wer die Berechtigung erhält. Hier wird die Einschränkung auf Lehrkräfte durch die refinement-Bedingung realisiert.
+* **Rollenbasierte Einschränkung (Constraint)**:
+  * Die Einschränkung auf Lehrkräfte wird durch eine `constraint`-Bedingung realisiert.
   * Die Bedingung prüft mithilfe des ODRL-Operators `eq`, ob der Wert der Eigenschaft `urn:schulconnex:de:personenkontext:rolle` auf **"lehrend"** gesetzt ist.
 * **Zusätzliche Metadaten**:
   * Der Lizenzschlüssel (`urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel`) ermöglicht die eindeutige Nachverfolgung und Identifikation der Lizenz.
 
-Die Rolle, die Zugriff auf das Medium erhalten soll, wird durch den Wert "lehrend" eindeutig definiert. Diese Rolle kann beispielsweise in einem Benutzerverwaltungssystem einer Organisation hinterlegt sein. Die Bedingung wird im Attribut assignee mit einem refinement beschrieben. Hier wird geprüft, ob die Rolle der Person, die das Medium nutzen möchte, den Wert "lehrend" aufweist. Systeme, die diese Lizenz prüfen, müssen in der Lage sein, die Rolle des Nutzenden anhand der definierten Bedingung zu ermitteln und zu verifizieren.
+Die Rolle, die Zugriff auf das Medium erhalten soll, wird durch den Wert "lehrend" eindeutig definiert. Diese Rolle kann beispielsweise in einem Benutzerverwaltungssystem einer Organisation hinterlegt sein. Die Bedingung wird durch ein `constraint`-Attribut beschrieben. Hier wird geprüft, ob die Rolle der Person, die das Medium nutzen möchte, den Wert "lehrend" aufweist. Systeme, die diese Lizenz prüfen, müssen in der Lage sein, die Rolle des Nutzenden anhand der definierten Bedingung zu ermitteln und zu verifizieren.
 
 ### Dynamische Lizenz – Modellierung einer nutzungsbegrenzten Lizenz
 Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nutzungskontext begrenzt ist. Eine dynamische Lizenz gewährt ein Nutzungsrecht, das an eine bestimmte Bedingung, z. B. die Anzahl der erlaubten Nutzungen, geknüpft ist. Im dargestellten Beispiel wird das Medium nur einmalig zur Ausführung freigegeben.
@@ -492,7 +484,7 @@ Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nut
         }
     ],
     "@type": "Ticket",
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:schule:medium:123456789",
         "partOf": "https://www.schule-test.de/api/external/univention/media"
@@ -502,11 +494,11 @@ Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nut
             "action": [
                 "execute"
             ],
-            "refinement": [
+            "constraint": [
                 {
                     "leftOperand": "count",
                     "operator": "eq",
-                    "rightOperand": "1"
+                    "rightOperand": 1
                 }
             ]
         }
@@ -526,7 +518,7 @@ Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nut
 ```json
 {
     "type": "DynamicLicense",
-    "id": "https://api-dienste.moin.schule/v1/lizenz-info/123456789",
+    "id": "https://api.schule-cloud.de/v1/lizenz-info/123456789",
     "target": {
         "id": "urn:schule:medium:123456789",
         "catalog": "https://www.schule-test.de/api/external/univention/media"
@@ -534,19 +526,19 @@ Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nut
     "permissions": [
         {
             "action": "execute",
-            "conditions": [
+            "constraint": [
                 {
-                    "key": "count",
+                    "leftOperand": "count",
                     "operator": "eq",
-                    "value": 1
+                    "rightOperand": 1
                 }
             ]
         }
     ],
     "access_control": [
         {
-            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
         }
@@ -560,8 +552,8 @@ Die dynmaische Lizenz wird durch folgende Elemente definiert:
 * **Zielmedium (Target)**:
   * Das Medium wird durch eine eindeutige Kennung (`uid`) definiert, z. B. `urn:schule:medium:123456789`.
   * Über die Eigenschaft `partOf` wird angegeben, dass das Medium Teil eines Medienkatalogs ist.
-* **Bedingung der Nutzung (Refinement)**:
-  * Im `permission`-Abschnitt wird die Nutzung des Mediums erlaubt, jedoch mit einer Einschränkung (`refinement`).
+* **Bedingung der Nutzung (Constraint)**:
+  * Im `permission`-Abschnitt wird die Nutzung des Mediums erlaubt, jedoch mit einer Einschränkung (`constraint`).
   * Die Bedingung prüft, dass die Anzahl der Nutzungen gleich "1" sein muss. Dies bedeutet, dass die Nutzung einmalig erlaubt ist.
 * **Lizenzschlüssel und zusätzliche Metadaten**:
   * Der Lizenzschlüssel (`urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel`) identifiziert die Lizenz eindeutig und kann genutzt werden, um die Nutzung zu tracken oder zu validieren.
@@ -583,7 +575,7 @@ Das ODRL-Beispiel beschreibt die Lizenz für ein gestreamtes Medium. Es stellt s
         }
     ],
     "@type": "Ticket",
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:exampleprovider:media:offer:EPUB-220053802",
         "partOf": "urn:exampleprovider:media:catalog"
@@ -621,7 +613,7 @@ Das ODRL-Beispiel beschreibt die Lizenz für ein gestreamtes Medium. Es stellt s
 ```json
 {
     "type": "TemporaryLicense",
-    "id": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "id": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "id": "urn:exampleprovider:media:offer:EPUB-220053802",
         "catalog": "urn:exampleprovider:media:catalog"
@@ -629,20 +621,20 @@ Das ODRL-Beispiel beschreibt die Lizenz für ein gestreamtes Medium. Es stellt s
     "permissions": [
         {
             "action": "stream",
-            "conditions": [
+            "constraint": [
                 {
-                    "key": "geographicLocation",
+                    "leftOperand": "geographicLocation",
                     "operator": "equals",
-                    "value": "https://www.wikidata.org/wiki/Q5956",
-                    "description": "Landkreis Diepholz"
+                    "rightOperand": "https://www.wikidata.org/wiki/Q5956",
+                    "comment": "Landkreis Diepholz"
                 }
             ]
         }
     ],
     "access_control": [
         {
-            "type": "urn:scx:lizenz:zugriffsinfo:temporaryurl",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:temporaryurl",
                 "temporaryURL": "https://exampleprovider/tmp/123455677",
                 "gueltigkeit_von": "2024-12-05",
                 "gueltigkeit_bis": "2024-12-06"
@@ -683,7 +675,7 @@ Das gegebene ODRL-Beispiel beschreibt eine Lizenz für ein Arbeitsblatt, die ver
         }
     ],
     "@type": "Set",
-    "uid": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "uid": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:exampleprovider:media:offer:EPUB-220053802",
         "partOf": "urn:exampleprovider:media:catalog"
@@ -718,7 +710,7 @@ Das gegebene ODRL-Beispiel beschreibt eine Lizenz für ein Arbeitsblatt, die ver
 ```json
 {
     "type": "License",
-    "id": "https://api-dienste.moin.schule/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "id": "https://api.schule-cloud.de/v1/lizenz-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "id": "urn:exampleprovider:media:offer:EPUB-220053802",
         "catalog": "urn:exampleprovider:media:catalog"
