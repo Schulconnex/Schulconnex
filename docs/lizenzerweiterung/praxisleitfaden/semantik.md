@@ -21,17 +21,25 @@ Im Folgenden werden verschiedene Lizenzbeispiele im ODRL-Format dargestellt. Die
                 "execute"
             ]
         }
+    ],
+    "access_control": [
+        {
+            "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
+            }
+        }
     ]
 }
 ```
 
-Die generische Klasse „Set“ wurde durch die semantisch passendere Klasse „Agreement“ ersetzt, da es sich bei dem ODRL-Objekt um eine explizite Nutzungsvereinbarung zwischen einem Medienanbieter und einer Organisation handelt. Diese Vereinbarung beschreibt die Bedingungen, unter denen ein bestimmtes digitales Medium genutzt werden darf, z. B. ein Online-Schulbuch oder eine Lernanwendung.
+Die generische Klasse "Set" wurde durch die semantisch passendere Klasse "Agreement" ersetzt, da es sich bei dem ODRL-Objekt um eine explizite Nutzungsvereinbarung zwischen einem Medienanbieter und einer Organisation handelt. Diese Vereinbarung beschreibt die Bedingungen, unter denen ein bestimmtes digitales Medium genutzt werden darf, z. B. ein Online-Schulbuch oder eine Lernanwendung.
 
-Die Nutzungsvereinbarung erlaubt explizit die Remote-Ausführung des Zielobjekts (z. B. einer Software) und nutzt hierfür die ODRL-Aktion „execute“. Diese spezifische Aktion wurde gewählt, da sie technisch präzise die Ausführbarkeit beschreibt. Die Alternative „use“ wäre zu allgemein und könnte fälschlicherweise implizieren, dass die Vereinbarung umfassendere Nutzungsrechte gewährt. Laut den Empfehlungen der W3C-Best-Practices für ODRL repräsentiert „use“ den Elterntyp aller Rechte oder könnte andere Rechte implizieren. In diesem Fall wäre dies unangebracht, da nur die Ausführung gestattet wird.
+Die Nutzungsvereinbarung erlaubt explizit die Remote-Ausführung des Zielobjekts (z. B. einer Software) und nutzt hierfür die ODRL-Aktion "execute". Diese spezifische Aktion wurde gewählt, da sie technisch präzise die Ausführbarkeit beschreibt. Die Alternative "use" wäre zu allgemein und könnte fälschlicherweise implizieren, dass die Vereinbarung umfassendere Nutzungsrechte gewährt. Laut den Empfehlungen der W3C-Best-Practices für ODRL repräsentiert "use" den Elterntyp aller Rechte oder könnte andere Rechte implizieren. In diesem Fall wäre dies unangebracht, da nur die Ausführung gestattet wird.
 
-Das Attribut „uid“ verweist auf eine eindeutige IRI, die als Endpunkt in der Systemlandschaft, z. B. unter „https://api-dienste.moin.schule“, implementiert werden muss. Dieser Endpunkt liefert das aktuelle Objekt der Vereinbarung zurück und gewährleistet somit Nachvollziehbarkeit und Interoperabilität. Das Einbinden eines solchen spezifischen Endpunkts ermöglicht eine klare Identifikation und erleichtert die Integration in bestehende Systeme.
+Das Attribut "uid" verweist auf eine eindeutige IRI, die als Endpunkt in der Systemlandschaft, z. B. unter "https://api-dienste.moin.schule", implementiert werden muss. Dieser Endpunkt liefert das aktuelle Objekt der Vereinbarung zurück und gewährleistet somit Nachvollziehbarkeit und Interoperabilität. Das Einbinden eines solchen spezifischen Endpunkts ermöglicht eine klare Identifikation und erleichtert die Integration in bestehende Systeme.
 
-Zusammengefasst beschreibt die Klasse „Agreement“ eine eindeutige und verbindliche Nutzungsvereinbarung zwischen Medienanbieter und Organisation, die auf ein spezifisches Zielobjekt verweist. Durch die Verwendung von präzisen Begrifflichkeiten und eindeutigen Referenzen wird die technische und rechtliche Klarheit sichergestellt, ohne die Intention der Vereinbarung zu erweitern oder ungenau zu formulieren.
+Zusammengefasst beschreibt die Klasse "Agreement" eine eindeutige und verbindliche Nutzungsvereinbarung zwischen Medienanbieter und Organisation, die auf ein spezifisches Zielobjekt verweist. Durch die Verwendung von präzisen Begrifflichkeiten und eindeutigen Referenzen wird die technische und rechtliche Klarheit sichergestellt, ohne die Intention der Vereinbarung zu erweitern oder ungenau zu formulieren.
 
 #### JSON-Äquivalent der ODRL-Repräsentation
 Das ODRL-Beispiels könnte man auch in einem vereinfachten, nicht-ODRL-spezifischen JSON-Format bereitstellen, beispielsweise so:
@@ -109,13 +117,13 @@ Das gegebene Beispiel zeigt, wie erweiterte Nutzungseinschränkungen durch die V
         }
     ],
     "access_control": [
-            {
-                "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
-                "value": {
-                    "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
-                }
+        {
+            "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+                "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
-        ]
+        }
+    ]
 }
 ```
 
@@ -171,12 +179,12 @@ Die zeitliche Einschränkung wird durch zwei Constraints modelliert, die den Beg
 Diese Modellierung ermöglicht eine präzise Steuerung der Gültigkeit, indem klar definierte Zeiträume für die Nutzung festgelegt werden. Dadurch können Lizenzen explizit auf Schuljahre oder andere spezifische Zeiträume begrenzt werden.
 
 #### Lizenzstatus als Bedingung
-Der Lizenzstatus stellt eine zusätzliche Einschränkung dar, die festlegt, dass die Anwendung nur genutzt werden darf, wenn der Status der Lizenz nicht „deactivated“ ist. Diese Bedingung wird durch den Operator neq (ungleich) umgesetzt. Damit können Szenarien modelliert werden, in denen Lizenzen unterschiedliche Stati annehmen, beispielsweise:
-* **„provisioned“**: Bereitgestellt, aber noch nicht vollständig aktiviert.
-* *„activated“**: Vollständig aktiviert und nutzbar.
-* **„deactivated“**: Lizenz ist ungültig oder abgelaufen, Nutzung nicht gestattet.
+Der Lizenzstatus stellt eine zusätzliche Einschränkung dar, die festlegt, dass die Anwendung nur genutzt werden darf, wenn der Status der Lizenz nicht "deactivated" ist. Diese Bedingung wird durch den Operator neq (ungleich) umgesetzt. Damit können Szenarien modelliert werden, in denen Lizenzen unterschiedliche Stati annehmen, beispielsweise:
+* **"provisioned"**: Bereitgestellt, aber noch nicht vollständig aktiviert.
+* *"activated"*: Vollständig aktiviert und nutzbar.
+* **"deactivated"**: Lizenz ist ungültig oder abgelaufen, Nutzung nicht gestattet.
 
-Die Bedingung neq deactivated stellt sicher, dass die Anwendung nur im Status „provisioned“ oder „activated“ genutzt werden kann. Diese Modellierung bietet Flexibilität, um verschiedene Lizenzzustände zu berücksichtigen.
+Die Bedingung neq deactivated stellt sicher, dass die Anwendung nur im Status "provisioned" oder "activated" genutzt werden kann. Diese Modellierung bietet Flexibilität, um verschiedene Lizenzzustände zu berücksichtigen.
 
 #### Zusätzliche Metadaten
 In der Modellierung erweiterter Nutzungseinschränkungen spielen zusätzliche Metadaten eine wichtige Rolle, um den Kontext und die Bedingungen des Nutzungsrechts präzise zu beschreiben. Ein Nutzungsrecht definiert, welches Medium eine Nutzende Person in Anspruch nehmen darf, und umfasst neben der Identifikation des Mediums auch die erlaubten Nutzungsarten.
@@ -186,7 +194,7 @@ Im Kontext des Beispiels wird das Nutzungsrecht durch die target-Eigenschaft pr�
 * **Eindeutiger Identifikator**: Jedes Medium wird durch eine eindeutige Kennung (`uid`) identifiziert, beispielsweise `urn:schule:medium:123456789`
 * Medienhierarchie: Das Medium kann ein spezifisches Element aus einem Katalog sein, ein vollständiger Katalog oder ein bestimmter Ausschnitt aus einem Medium. Diese Beziehungen können über die Eigenschaft `partOf` beschrieben werden, um den Bezug des Mediums zu einem größeren Kontext (z. B. einem Medienkatalog) darzustellen.
 
-Das weitere Metadatenfeld `"urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel"` beschreibt ein Nutzungsrecht, bei dem:
+Das weitere Metadatenfeld "urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel" beschreibt ein Nutzungsrecht, bei dem:
 * Ein spezifisches Medium (urn:schule:medium:123456789) aus einem Medienkatalog (partOf) identifiziert wird.
 * Das Medium remote ausgeführt werden darf (action: execute).
 * Ein Lizenzschlüssel (scx:code) die eindeutige Verbindung zwischen der Nutzenden Person und dem Medium sicherstellt.
@@ -221,8 +229,8 @@ Das gegebene Beispiel zeigt, wie eine Gruppenlizenz in ODRL modelliert werden ka
     ],
     "access_control": [
         {
-            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
         }
@@ -320,10 +328,10 @@ Das vorliegende Beispiel zeigt die Modellierung einer Schullizenz mit ODRL. Die 
             }
         }
     ],
-    "urn:schulconnex:de:lizenzen:zugriffsinfo": [
+    "access_control": [
         {
-            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
         }
@@ -413,8 +421,8 @@ Das gezeigte JSON-Beispiel beschreibt eine Lehrerlizenz, die die Nutzung eines M
     ],
     "access_control": [
         {
-            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
         }
@@ -459,18 +467,18 @@ Das gezeigte JSON-Beispiel beschreibt eine Lehrerlizenz, die die Nutzung eines M
 }
 ```
 
-Eine Lehrerlizenz ist eine spezifische Lizenz, die die Nutzung eines Mediums an eine bestimmte Rolle bindet, in diesem Fall die Rolle „lehrend“. Diese Einschränkung stellt sicher, dass nur Personen mit dieser Rolle das Medium verwenden dürfen.
+Eine Lehrerlizenz ist eine spezifische Lizenz, die die Nutzung eines Mediums an eine bestimmte Rolle bindet, in diesem Fall die Rolle "lehrend". Diese Einschränkung stellt sicher, dass nur Personen mit dieser Rolle das Medium verwenden dürfen.
 Die Lehrerlizenz wird durch folgende Elemente definiert:
 * **Zielmedium (Target)**: 
   * Das Medium wird durch eine eindeutige Kennung (`uid`) identifiziert, z. B. `urn:schule:medium:123456789`.
   * Über die Eigenschaft partOf wird angegeben, dass das Medium Teil eines Medienkatalogs ist.
 * **Rollenbasierte Einschränkung (Assignee mit Refinement)**:
   * Das Attribut `assignee` spezifiziert, wer die Berechtigung erhält. Hier wird die Einschränkung auf Lehrkräfte durch die refinement-Bedingung realisiert.
-  * Die Bedingung prüft mithilfe des ODRL-Operators `eq`, ob der Wert der Eigenschaft `urn:schulconnex:de:personenkontext:rolle` auf **„lehrend“** gesetzt ist.
+  * Die Bedingung prüft mithilfe des ODRL-Operators `eq`, ob der Wert der Eigenschaft `urn:schulconnex:de:personenkontext:rolle` auf **"lehrend"** gesetzt ist.
 * **Zusätzliche Metadaten**:
   * Der Lizenzschlüssel (`urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel`) ermöglicht die eindeutige Nachverfolgung und Identifikation der Lizenz.
 
-Die Rolle, die Zugriff auf das Medium erhalten soll, wird durch den Wert „lehrend“ eindeutig definiert. Diese Rolle kann beispielsweise in einem Benutzerverwaltungssystem einer Organisation hinterlegt sein. Die Bedingung wird im Attribut assignee mit einem refinement beschrieben. Hier wird geprüft, ob die Rolle der Person, die das Medium nutzen möchte, den Wert „lehrend“ aufweist. Systeme, die diese Lizenz prüfen, müssen in der Lage sein, die Rolle des Nutzenden anhand der definierten Bedingung zu ermitteln und zu verifizieren.
+Die Rolle, die Zugriff auf das Medium erhalten soll, wird durch den Wert "lehrend" eindeutig definiert. Diese Rolle kann beispielsweise in einem Benutzerverwaltungssystem einer Organisation hinterlegt sein. Die Bedingung wird im Attribut assignee mit einem refinement beschrieben. Hier wird geprüft, ob die Rolle der Person, die das Medium nutzen möchte, den Wert "lehrend" aufweist. Systeme, die diese Lizenz prüfen, müssen in der Lage sein, die Rolle des Nutzenden anhand der definierten Bedingung zu ermitteln und zu verifizieren.
 
 ### Dynamische Lizenz – Modellierung einer nutzungsbegrenzten Lizenz
 Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nutzungskontext begrenzt ist. Eine dynamische Lizenz gewährt ein Nutzungsrecht, das an eine bestimmte Bedingung, z. B. die Anzahl der erlaubten Nutzungen, geknüpft ist. Im dargestellten Beispiel wird das Medium nur einmalig zur Ausführung freigegeben.
@@ -505,8 +513,8 @@ Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nut
     ],
     "access_control": [
         {
-            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "e5f68003-4ec3-4d16-8dbe-8dcd07afc587"
             }
         }
@@ -535,7 +543,7 @@ Das Beispiel beschreibt eine dynamische Lizenz, die durch einen spezifischen Nut
             ]
         }
     ],
-    "urn:schulconnex:de:lizenzen:zugriffsinfo": [
+    "access_control": [
         {
             "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
@@ -554,7 +562,7 @@ Die dynmaische Lizenz wird durch folgende Elemente definiert:
   * Über die Eigenschaft `partOf` wird angegeben, dass das Medium Teil eines Medienkatalogs ist.
 * **Bedingung der Nutzung (Refinement)**:
   * Im `permission`-Abschnitt wird die Nutzung des Mediums erlaubt, jedoch mit einer Einschränkung (`refinement`).
-  * Die Bedingung prüft, dass die Anzahl der Nutzungen gleich „1“ sein muss. Dies bedeutet, dass die Nutzung einmalig erlaubt ist.
+  * Die Bedingung prüft, dass die Anzahl der Nutzungen gleich "1" sein muss. Dies bedeutet, dass die Nutzung einmalig erlaubt ist.
 * **Lizenzschlüssel und zusätzliche Metadaten**:
   * Der Lizenzschlüssel (`urn:schulconnex:de:lizenzen:zugriffsinfo:lizenzschluessel`) identifiziert die Lizenz eindeutig und kann genutzt werden, um die Nutzung zu tracken oder zu validieren.
 * **Dynamische Lizenz (Ticket)**:
@@ -597,8 +605,8 @@ Das ODRL-Beispiel beschreibt die Lizenz für ein gestreamtes Medium. Es stellt s
     ],
     "access_control": [
         {
-            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:temporaryurl",
                 "temporaryURL": "https://exampleprovider/tmp/123455677",
                 "gueltigkeit_von": "2024-12-05",
                 "gueltigkeit_bis": "2024-12-06"
@@ -633,7 +641,7 @@ Das ODRL-Beispiel beschreibt die Lizenz für ein gestreamtes Medium. Es stellt s
     ],
     "access_control": [
         {
-            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "type": "urn:scx:lizenz:zugriffsinfo:temporaryurl",
             "value": {
                 "temporaryURL": "https://exampleprovider/tmp/123455677",
                 "gueltigkeit_von": "2024-12-05",
