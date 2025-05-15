@@ -243,6 +243,7 @@ Code | Bezeichnung
 --- | ---
 Schule | Schule
 Anbieter | Anbieter
+Medienzentrum | Medienzentrum
 Sonstige | sonstige Organisationen / Einrichtungen
 
 ## Personenstatus

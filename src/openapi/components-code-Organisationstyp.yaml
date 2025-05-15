@@ -2,9 +2,11 @@ type: string
 enum:
   - Schule
   - Anbieter
+  - Medienzentrum
   - Sonstige
 description: >
     Wie folgt:
       * Schule
       * Anbieter
+      * Medienzentrum
       * Sonstige sonstige Organisationen / Einrichtungen
