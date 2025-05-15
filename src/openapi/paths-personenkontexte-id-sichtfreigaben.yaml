@@ -5,7 +5,7 @@ post:
   operationId: createPersonenkontextIdSichtfreigabe
   security:
     - oAuthForServices: []
-  summary: Erstellen einer Sichtfreigabe.
+  summary: Erstellen einer Sichtfreigabe
   description: |
     Mittels dieser Schnittstelle wird eine neue Sichtfreigabe für einen Personenkontext erstellt.
 
@@ -88,7 +88,7 @@ get:
   operationId: readPersonenkontextIdSichtfreigaben
   security:
     - oAuthForServices: []
-  summary: Auflistung von Sichtfreigaben.
+  summary: Auflistung von Sichtfreigaben
   description: |
    Dieser Schnittstellenendpunkt gibt eine Liste der existierenden Sichtfreigaben eines
    Personenkontexts zurück.

@@ -4,7 +4,7 @@ get:
   operationId: readPersonenInfo
   security:
     - oAuthForServices: []
-  summary: Liste bekannter Personenkontexte.
+  summary: Liste bekannter Personenkontexte
   description: |
     Liefert die Personenkontext-IDs der dem Dienst bekannten und derzeit aktiven
     Personenkontexte sowie gegebenenfalls den Löschzeitpunkt.

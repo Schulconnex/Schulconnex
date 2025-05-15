@@ -4,7 +4,7 @@ get:
   operationId: readOrganisationId
   security:
     - oAuthForServices: []
-  summary: Organisation zur angeforderten ID.
+  summary: Organisation zur angeforderten ID
   description: |
     Die Schnittstelle `/organisationen/{organisation.id}` bezieht sich auf das Anfordern
     einer Organisation per ID.

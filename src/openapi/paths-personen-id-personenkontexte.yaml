@@ -5,7 +5,7 @@ get:
   operationId: readPersonIdPersonenkontexte
   security:
     - oAuthForServices: []
-  summary: Personenkontexte zur angeforderten ID.
+  summary: Personenkontexte zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt gibt die Personenkontexte zur angeforderten Person
     per ID `personendatensatz.person.id` zurück.
@@ -103,7 +103,7 @@ post:
   operationId: createPersonIdPersonenkontext
   security:
     - oAuthForServices: []
-  summary: Erstellen eines Personenkontexts zu einem bestimmten Personendatensatz.
+  summary: Erstellen eines Personenkontexts zu einem bestimmten Personendatensatz
   description: |
     Dieser Schnittstellenendpunkt erstellt einen Personenkontext zur angegebenen Person
     per ID `personendatensatz.person.id`.

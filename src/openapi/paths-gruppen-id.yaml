@@ -4,7 +4,7 @@ get:
   operationId: readGruppeId
   security:
     - oAuthForServices: []
-  summary: Gruppe zur angeforderten ID.
+  summary: Gruppe zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt gibt die Gruppe zur angegebenen `gruppe.id` zurück.
 
@@ -60,7 +60,7 @@ put:
   operationId: updateGruppeId
   security:
     - oAuthForServices: []
-  summary: Aktualisiert die Gruppe der angegebenen ID.
+  summary: Aktualisiert die Gruppe der angegebenen ID
   description: |
     Dieser Schnittstellenendpunkt aktualisiert die Gruppe zur angegebenen `gruppen.id`.
 
@@ -160,7 +160,7 @@ delete:
   operationId: deleteGruppeId
   security:
     - oAuthForServices: []
-  summary: Löscht die Gruppe zur angeforderten ID.
+  summary: Löscht die Gruppe zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt löscht die Gruppe zur angegebenen `gruppe.id`.
 
