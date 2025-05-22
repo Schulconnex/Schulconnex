@@ -1,6 +1,3 @@
 type: object
-properties:
-  property name*:
-    type: any
-    description: Beliebige Anzahl und Typ von weiteren Properties
+minProperties: 1
 additionalProperties: true

@@ -1,6 +1,7 @@
+title: license_key
 type: object
 properties:
   licenseKey:
     type: string
-    description: "Der Lizenz-Schlüssel."
-    example: "5f49ff7f-76a6-4d8b-ae40-e1aba0d57f21"
+    description: Der Lizenzschlüssel
+    example: 5f49ff7f-76a6-4d8b-ae40-e1aba0d57f21
