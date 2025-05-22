@@ -222,10 +222,6 @@ HJ | Schulhalbjahr
 
 Basierend auf [RFC 5646][1]. Beispiele finden sich in nachfolgender Tabelle.
 
-Hinweis: Die folgende Codeliste ist die aktuell vom „schulischen Anmeldeservice des Landes Niedersachsen (moin.schule)“
-unterstützte Codeliste und kann auf anderen Schulconnex-Servern abweichen. Der jeweils gültigen Lokalisierungen
-sind beim jeweiligen Betreiber des Schulconnex-Servers nachzufragen.
-
 [1]: https://datatracker.ietf.org/doc/html/rfc5646
 
 Code | Bezeichnung
@@ -233,6 +229,9 @@ Code | Bezeichnung
 de | deutsch
 de-XX | deutsch, Anrede du, einfache Sprache
 en-GB | englisch (Vereinigtes Königreich)
+
+Hinweis: Dies ist die aktuell vom schulischen Anmeldeservice des Landes Niedersachsen (moin.schule)
+unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
 
 ## Organisationsbeziehungen
 
