@@ -5,17 +5,14 @@ get:
   summary: Nutzungsrechte im Kontext
   description: |
     # Nutzungsrechte-Informationen (Policies)
-    Gibt eine Liste von Informationen zu Nutzungsrechten (als ODRL vom PolicyType "Set") für den autorisierten Benutzer zurück.
+    Dieser API-Endpunkt dient dem Abruf von Nutzungsrechte-Informationen (Policies) für Medienobjekte im aktuellen Autorisierungskontext.
+    Die zurückgegebene Antwort-Nutzlast ist eine Liste von ODRL-Zuweisungen (Policies).
 
-    Dieser API-Endpunkt ermöglicht das Anfordern von Informationen zu Nutzungsrechten für den autorisierten Benutzer.
-    Die Antwort-Nutzlast ist eine Liste von ODRL-Zuweisungen, welche als Plicy (Nutzungsrecht) verstanden wird.
-    Policies (Nutzungsrechte) sind nach ODRL definiert und entsprechen dem ODRL Policy-Type "Set".
+    Dieser API-Endpunkt ermöglicht optional auch die Anforderung von Zugangsdaten, die den jeweiligen Medienobjekten und Nutzungsrechten (Policies) zugeordnet sind.
+    Werden Zugangsdaten angefordert, so sind sie im Attribut `scx:access_control` der Antwortnutzlast enthalten.
 
-    Dieser API-Endpunkt ermöglicht _optional_ das Anfordern von Zugriffs-Informationen als Access-rights für die Nutzungsrechte als Policies.
-    Die Antwort-Nutzlast würde die Zugriffs-Informationen zu dem jeweiligen Nutzungsrecht im Attribut `scx:access_control` enthalten.
-
-    Der API-Endpunkt unterstützt Client-seitige `Content negotiation` über den Accept-Header.
-    Der Client kann das Datenmodell der Antwort-Nutzlast festlegen, sofern diese Unterstützt werden.
+    Der API-Endpunkt unterstützt die Client-seitige Content-Negotiation mittels des Accept-Headers.
+    Dies erlaubt es dem Client, das gewünschte Datenmodell der Antwort-Nutzlast zu spezifizieren, sofern dieses vom Server unterstützt wird.
   parameters:
     - name: Accept
       in: header
@@ -114,7 +111,8 @@ get:
                   services:
                     type: array
                     items:
-                      $ref: "./components-policies-ServicestatusLD.yaml"
+                      #Aktuell kein unterscheidbares Rückgabeobjekt für JSON-LD
+                      $ref: "./components-policies-Servicestatus.yaml"
     401:
       description: |
         Unauthorized
