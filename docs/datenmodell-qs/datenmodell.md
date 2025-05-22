@@ -1,3 +1,5 @@
+import Arrays from '../datenmodell-qs/datenmodell-arrays.md'
+
 # Datenmodell
 
 Der Begriff Datenmodell steht im Kontext dieser Spezifikationen nicht für das Datenmodell zur Persistierung von
@@ -149,6 +151,8 @@ Die Angabe `0 oder 2` für „Gruppe“ assoziiert mit der Klasse „Lernperiode
 keine Lernperioden oder genau zwei Lernperioden (`vonlernperiode` und `bislernperiode`) haben kann, siehe auch
 [Datenmodell Gruppe Attribut `laufzeit`](./gruppe.md).
 :::
+
+<Arrays />
 
 ## Verwendete Konventionen
 
