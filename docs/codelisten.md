@@ -75,7 +75,7 @@ Code | Bezeichnung | Bemerkung
 --- | --- | ---
 E-Mail | E-Mail | E-Mail-Adressen müssen [RFC 5322][2] (Internet Message Format) erfüllen, um akzeptiert zu werden, anderenfalls wird ein 400/06 Fehler geliefert.
 
-[2]: https://www.rfc-editor.org/rfc/rfc5322
+[2]: https://datatracker.ietf.org/doc/html/rfc5322
 
 ## Fächerkanon
 
@@ -242,13 +242,16 @@ HJ | Schulhalbjahr
 
 Basierend auf [RFC 5646][1]. Beispiele finden sich in nachfolgender Tabelle.
 
-[1]: https://www.rfc-editor.org/rfc/rfc5646
+[1]: https://datatracker.ietf.org/doc/html/rfc5646
 
 Code | Bezeichnung
 --- | ---
 de | deutsch
 de-XX | deutsch, Anrede du, einfache Sprache
 en-GB | englisch (Vereinigtes Königreich)
+
+Hinweis: Dies ist die aktuell vom schulischen Anmeldeservice des Landes Niedersachsen (moin.schule)
+unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
 
 ## Organisationsbeziehungen
 
