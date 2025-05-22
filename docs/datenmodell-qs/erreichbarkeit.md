@@ -2,8 +2,7 @@
 
 Erreichbarkeit für einen Personenkontext.
 
-Ein Personenkontext kann mehrere Erreichbarkeits-Datensätze in einem Array haben. Die Reihenfolge der Erreichbarkeits-Datensätze in diesem Array ist nicht spezifiziert und auch nicht notwendigerweise bei jedem Lesen der Erreichbarkeits-Daten gleich. Der erste Erreichbarkeits-Datensatz ist nicht
-unbedingt die bevorzugte Art der Erreichbarkeit.
+Ein Personenkontext kann mehrere Erreichbarkeits-Datensätze in einem Array enthalten. Die Reihenfolge dieser Datensätze ist nicht spezifiziert und kann sich bei jedem API-Aufruf unterscheiden. Es darf nicht angenommen werden, dass der erste Datensatz die bevorzugte Erreichbarkeitsart repräsentiert.
 
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---

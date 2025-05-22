@@ -1,3 +1,5 @@
+import Arrays from '../datenmodell-qs/datenmodell-arrays.md'
+
 # Datenmodell
 
 Der Begriff Datenmodell steht im Kontext dieser Spezifikationen nicht für das Datenmodell zur Persistierung von
@@ -8,10 +10,6 @@ bei XHR-Anfragen (HTTP-Anfragen gegen API-Endpunkte).
 Das Datenmodell der Schnittstelle basiert auf Datenmodellen der Spezifikationen [XBildung][1] und
 [XSchule][2] (bspw. „NatuerlichePerson“ ist die Vorlage für „Person“, auch „Organisation“ ist an XBildung orientiert),
 jeweils mit spezifischen Erweiterungen.
-
-import Text from './datenmodell-arrays.md';
-
-<Text />
 
 ```mermaid
 classDiagram
@@ -153,6 +151,8 @@ Die Angabe `0 oder 2` für „Gruppe“ assoziiert mit der Klasse „Lernperiode
 keine Lernperioden oder genau zwei Lernperioden (`vonlernperiode` und `bislernperiode`) haben kann, siehe auch
 [Datenmodell Gruppe Attribut `laufzeit`](./gruppe.md).
 :::
+
+<Arrays />
 
 ## Verwendete Konventionen
 

@@ -1,3 +1,5 @@
+import Arrays from '../datenmodell-qs/datenmodell-arrays.md'
+
 # Datenmodell
 
 Der Datenabruf durch einen Dienst erfolgt im Kontext eines Nutzers oder einer Nutzerin und stellt nur die Daten bereit,
@@ -13,9 +15,7 @@ Nicht alle Attribute stehen allen Diensten zur Verfügung. Welche Daten vom Schu
 geliefert werden, wird durch individuelle Absprachen zwischen Dienstanbieter und Betreiber
 des Schulconnex-Servers festgelegt.
 
-import Text from '../datenmodell-qs/datenmodell-arrays.md';
-
-<Text />
+<Arrays />
 
 ## Hinweis zur Notation `0/1`, `0/0..1` und `0/0..n` bei der Anzahl
 
