@@ -27,9 +27,11 @@ properties:
         enum:
           - licensekey
           - temporaryurl
+          - custom
         example: licensekey
       value:
         description: Das Zugangsdatenobjekt entsprechend dem vorgegebenen Schema des Typs
         anyOf:
           - $ref: './components-policies-Zugriffsinfo-licenseKey.yaml'
           - $ref: './components-policies-Zugriffsinfo-temporaryURL.yaml'
+          - $ref: './components-policies-Zugriffsinfo-custom.yaml'

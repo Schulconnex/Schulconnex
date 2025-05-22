@@ -1,0 +1,6 @@
+type: object
+properties:
+  property name*:
+    type: any
+    description: Beliebige Anzahl und Typ von weiteren Properties
+additionalProperties: true
