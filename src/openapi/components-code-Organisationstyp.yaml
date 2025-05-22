@@ -2,6 +2,7 @@ type: string
 enum:
   - Schule
   - Anbieter
+  - Medienzentrum
   - Behoerde
   - SchTrae
   - Sonstige
@@ -9,6 +10,7 @@ description: >
     Wie folgt:
       * Schule
       * Anbieter
+      * Medienzentrum
       * Behörde
       * Schulträger
       * Sonstige sonstige Organisationen / Einrichtungen

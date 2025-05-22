@@ -266,6 +266,7 @@ Code | Bezeichnung
 --- | ---
 Schule | Schule
 Anbieter | Anbieter
+Medienzentrum | Medienzentrum
 Behoerde | Behörde
 SchTrae | Schulträger
 Sonstige | sonstige Organisationen / Einrichtungen
