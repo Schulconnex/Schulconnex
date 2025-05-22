@@ -19,17 +19,17 @@ URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorte
 
 * __Eindeutige Identifikation__: Jede Ressource erhält eine eindeutige URI, die Verwechslungen und Missverständnisse verhindert.
 
-* __Interoperabilität__: URIs sind universell und können problemlos zwischen verschiedenen Systemen und Plattformen verwendet werden. Dies erleichtert die Integration und den Datenaustausch zwischen unterschiedlichen Schulverwaltungssystemen.
+* __Interoperabilität__: URIs sind universell und können problemlos zwischen unterschiedlichen Systemen und Plattformen ausgetauscht werden. Dies erleichtert die Integration und den Datenaustausch zwischen unterschiedlichen Systemen.
 
-* __Wiederverwendbarkeit__: Einmal definierte URIs können in verschiedenen Kontexten und Anwendungen wiederverwendet werden, was die Konsistenz und Effizienz erhöht.
+* __Wiederverwendbarkeit__: Einmal definierte URI-Codelistenwerte können in unterschiedlichen Kontexten und Anwendungen wiederverwendet werden, was die Konsistenz und Effizienz erhöht.
 
-* __Erweiterbarkeit__: URI-basierte Codelisten können leicht erweitert werden, indem neue URIs hinzugefügt werden, ohne bestehende Systeme zu beeinträchtigen.
+* __Erweiterbarkeit__: URI-basierte Codelisten können leicht erweitert werden, indem neue URI-Codelistenwerte hinzugefügt werden, ohne bestehende Systeme zu beeinträchtigen.
 
-* __Lesbarkeit und Verständlichkeit__: URIs sind oft menschenlesbar und können leicht interpretiert werden, was die Dokumentation und das Debugging erleichtert.
+* __Lesbarkeit und Verständlichkeit__: URI-Codelistenwerte sind oft menschenlesbar und können leicht maschinell interpretiert werden, was die Dokumentation und das Debugging erleichtert.
 
-* __Standardisierung__: Die Verwendung von URIs fördert die Einhaltung von Standards und Best Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
+* __Standardisierung__: Die Verwendung von URI-Codelistenwerte fördert die Einhaltung von Standards und Best-Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
 
-Als technisches Format ist geplant für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifische Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, damit die Bundesländer auch ihre spezifischen Anforderungen abbilden können.
+Als technisches Format ist geplant, für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifische Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, womit die Bundesländer ihre spezifischen Anforderungen abbilden können.
 
 ## Beziehungen
 
