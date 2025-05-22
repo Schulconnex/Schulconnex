@@ -4,7 +4,7 @@ get:
   operationId: readPersonenkontexte
   security:
     - oAuthForServices: []
-  summary: Auflistung von Personenkontexten.
+  summary: Auflistung von Personenkontexten
   description: |
     Die Schnittstelle `/personenkontexte` bezieht sich auf das Anfordern und die
     Auflistung von Personenkontexten in Bezug zu der eigenen Organisation.

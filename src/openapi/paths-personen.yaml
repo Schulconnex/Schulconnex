@@ -4,7 +4,7 @@ get:
   operationId: readPersonen
   security:
     - oAuthForServices: []
-  summary: Personendatensätze des Quellsystemanbieters.
+  summary: Personendatensätze des Quellsystemanbieters
   description: |
     Mittels dieses Endpunkts werden alle Personendatensätze zurückgegeben, auf die
     der Quellsystemanbieter zugreifen darf.
@@ -94,7 +94,7 @@ post:
   operationId: createPerson
   security:
     - oAuthForServices: []
-  summary: Erstellen eines Personendatensatzes.
+  summary: Erstellen eines Personendatensatzes
   description: |
     Mittels dieser Schnittstelle wird ein neuer Datensatz „Person“ erstellt.
 

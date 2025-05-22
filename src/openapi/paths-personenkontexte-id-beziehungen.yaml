@@ -5,7 +5,7 @@ post:
   operationId: createPersonenkontextIdBeziehung
   security:
     - oAuthForServices: []
-  summary: Erstellen einer Beziehung.
+  summary: Erstellen einer Beziehung
   description: |
     Die Schnittstelle `/personenkontexte/{personenkontext.id}/beziehungen` erlaubt
     das Erstellen von zu einem Personenkontext gehörenden Beziehungen.
@@ -105,7 +105,7 @@ get:
   operationId: readPersonenkontextIdBeziehungen
   security:
     - oAuthForServices: []
-  summary: Auflistung von Beziehungen.
+  summary: Auflistung von Beziehungen
   description: |
     Die Schnittstelle `/personenkontexte/{personenkontext.id}/beziehungen` erlaubt
     das Lesen von zu einem Personenkontext gehörenden Beziehungen.

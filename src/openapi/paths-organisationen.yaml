@@ -4,7 +4,7 @@ get:
   operationId: readOrganisationen
   security:
     - oAuthForServices: []
-  summary: Auflistung von Organisationen.
+  summary: Auflistung von Organisationen
   description: |
     Die Schnittstelle `/organisationen` bezieht sich auf die Auflistung von Organisationen.
 

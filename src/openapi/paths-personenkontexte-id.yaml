@@ -4,7 +4,7 @@ get:
   operationId: readPersonenkontextId
   security:
     - oAuthForServices: []
-  summary: Personenkontext zur angeforderten ID.
+  summary: Personenkontext zur angeforderten ID
   description: |
     Ein READ zum Abfragen eines Personenkontexts per ID muss mit HTTP-GET auf die API `/personenkontexte/{personendatensatz.personenkontext.id`
     erfolgen. Die Antwort-Nutzdaten
@@ -66,7 +66,7 @@ put:
   operationId: updatePersonenkontextId
   security:
     - oAuthForServices: []
-  summary: Aktualisiert den Personenkontext der angegebenen ID.
+  summary: Aktualisiert den Personenkontext der angegebenen ID
   description: |
     Dieser Schnittstellenendpunkt aktualisiert den Personenkontext zur angegebenen {personendatensatz.personenkontexte.id}.
 
@@ -172,7 +172,7 @@ delete:
   operationId: deletePersonenkontextId
   security:
     - oAuthForServices: []
-  summary: Löscht den Personenkontext zur angeforderten ID.
+  summary: Löscht den Personenkontext zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt löscht den Personenkontext zur angegebenen
     `personendatensatz.personenkontexte.id`.

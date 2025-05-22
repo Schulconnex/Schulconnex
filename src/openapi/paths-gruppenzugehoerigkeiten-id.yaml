@@ -4,7 +4,7 @@ get:
   operationId: readGruppenzugehoerigkeitId
   security:
     - oAuthForServices: []
-  summary: Gruppenzugehörigkeit zur angeforderten ID.
+  summary: Gruppenzugehörigkeit zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt gibt die Gruppenzugehörigkeit zur angegebenen
     `gruppenzugehoerigkeit.id` zurück.
@@ -64,7 +64,7 @@ put:
   operationId: updateGruppenzugehoerigkeitId
   security:
     - oAuthForServices: []
-  summary: Aktualisiert die Gruppenzugehörigkeit der angegebenen ID.
+  summary: Aktualisiert die Gruppenzugehörigkeit der angegebenen ID
   description: |
     Dieser Schnittstellenendpunkt aktualisiert die Gruppenzugehörigkeit zur angegebenen
     `gruppenzugehoerigkeit.id`.
@@ -159,7 +159,7 @@ delete:
   operationId: deleteGruppenzugehoerigkeitId
   security:
     - oAuthForServices: []
-  summary: Löscht die Gruppenzugehörigkeit zur angeforderten ID.
+  summary: Löscht die Gruppenzugehörigkeit zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt löscht die Gruppenzugehörigkeit zur angegebenen
     `gruppenzugehoerigkeit.id`.
