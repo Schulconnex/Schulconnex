@@ -1,11 +1,8 @@
 get:
-  # tags:
-  #   - Personen
   operationId: readPoliciesInfo
   security:
     - oAuthForUser: []
   summary: Nutzungsrechte im Kontext
-  # summary: Nutzungsrechte als Policies (ODRL PolicyType "Set") im Kontext eines Benutzers abrufen
   description: |
     # Nutzungsrechte-Informationen (Policies)
     Gibt eine Liste von Informationen zu Nutzungsrechten (als ODRL vom PolicyType "Set") für den autorisierten Benutzer zurück.
@@ -33,7 +30,7 @@ get:
       example: application/json
     - name: target.uid
       in: query
-      description: Die UID eines spezifischen Mediums als Filter-Parameter
+      description: Die UID eines spezifische Medienobjekts als Filter-Parameter
       required: false
       nullable: true
       schema:
@@ -70,33 +67,12 @@ get:
       schema:
         type: boolean
         default: false
-        # enum:
-        #   - "none"
-        #   - "urn:scx:lizenz:zugriffsinfo:licensekey"
-        #   - "urn:scx:lizenz:zugriffsinfo:temporaryurl"
-        #   - "all"
-      # example: "none"
-    # - name: discover_error
-    #   in: query
-    #   description: Ein optionaler Filter-Parameter zum Abfragen von Discover-Fehlerinformationen von Providern. Führt bei Auftreten einer Fehlerinformation zum führen des Custom-Header `Content-Partial-Error` mit dem Wert "true" in der Antwort.
-    #   required: false
-    #   allowEmptyValue: true
-    #   schema:
-    #     type: boolean
-    #   example: false
   responses:
     200:
       description: OK
-      # headers:
-      #   Content-Partial-Error:
-      #     schema:
-      #       type: boolean
-      #     example: false
-      #     description: Hinweis auf Fehler im Payload.
       content:
         application/json:
           schema:
-            # type: array
             type: object
             properties:
               pid:
@@ -113,22 +89,8 @@ get:
                     type: array
                     items:
                       $ref: "./components-policies-Servicestatus.yaml"
-              # anyOf:
-              #   - $ref: "./components-policies-Mediendatensatz.yaml"
-              #   - $ref: "./components-DiscoverActionJSONLD.yaml"
-          # examples:
-          #   "Nutzungsrecht ohne Zugriffs-Informationen":
-          #     value:
-          #       - $ref: "../../static/examples/policies/1_anwendung.execute.json"
-          #   "Nutzungsrecht mit Zugriffs-Informationen":
-          #     value:
-          #       - $ref: "../../static/examples/policies/1_anwendung.execute.access_control.json"
-          #   "Antwort mit Fehlerinformationen von Providern":
-          #     value:
-          #       $ref: "../../static/examples/response_payload/218_provider_error.json"
         application/ld+json:
           schema:
-            # type: array
             type: object
             properties:
               '@context':
@@ -153,29 +115,8 @@ get:
                     type: array
                     items:
                       $ref: "./components-policies-ServicestatusLD.yaml"
-            # items:
-            #   $ref: "./components-policies-Mediendatensatz.yaml"
-              # anyOf:
-              #   - $ref: "./components-policies-Mediendatensatz.yaml"
-              #   - $ref: "./components-DiscoverActionJSONLD.yaml"
-          # examples:
-          #   "Nutzungsrecht ohne Zugriffs-Informationen":
-          #     value:
-          #       - $ref: "../../static/examples/policies/1_anwendung.execute.ld.json"
-          #   "Nutzungsrecht mit Zugriffs-Informationen":
-          #     value:
-          #       - $ref: "../../static/examples/policies/1_anwendung.execute.access_control.ld.json"
-          #   "Antwort mit Fehlerinformationen von Providern":
-          #     value:
-          #       $ref: "../../static/examples/response_payload/218_provider_error.ld.json"
     401:
       description: |
         Unauthorized
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
-    # 404:
-    #   description: Not found
-    # 500:
-    #   description: Internal Server Error
-    # 503:
-    #   description: Service Unavailable
