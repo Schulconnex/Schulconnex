@@ -1,31 +1,22 @@
 get:
-  tags:
-    - Erweiterung SchulConneX
-  summary: Nutzungsrechte als Policies (ODRL PolicyType "Set") im Kontext eines Benutzers abrufen
+  operationId: readPoliciesInfo
+  security:
+    - oAuthForUser: []
+  summary: Nutzungsrechte im Kontext
   description: |
     # Nutzungsrechte-Informationen (Policies)
-    Gibt eine Liste von Informationen zu Nutzungsrechten (als ODRL vom PolicyType "Set") für den autorisierten Benutzer zurück.
+    Dieser API-Endpunkt dient dem Abruf von Nutzungsrechte-Informationen (Policies) für Medienobjekte im aktuellen Autorisierungskontext.
+    Die zurückgegebene Antwort-Nutzlast ist eine Liste von ODRL-Zuweisungen (Policies).
 
-    Dieser API-Endpunkt ermöglicht das Anfordern von Informationen zu Nutzungsrechten für den autorisierten Benutzer.
-    Die Antwort-Nutzlast ist eine Liste von ODRL-Zuweisungen, welche als Plicy (Nutzungsrecht) verstanden wird.
-    Policies (Nutzungsrechte) sind nach ODRL definiert und entsprechen dem ODRL Policy-Type "Set".
+    Dieser API-Endpunkt ermöglicht optional auch die Anforderung von Zugangsdaten, die den jeweiligen Medienobjekten und Nutzungsrechten (Policies) zugeordnet sind.
+    Werden Zugangsdaten angefordert, so sind sie im Attribut `scx:access_control` der Antwortnutzlast enthalten.
 
-    Dieser API-Endpunkt ermöglicht _optional_ das Anfordern von Zugriffs-Informationen als Access-rights für die Nutzungsrechte als Policies.
-    Die Antwort-Nutzlast würde die Zugriffs-Informationen zu dem jeweiligen Nutzungsrecht im Attribut `scx:access_control` enthalten.
-
-    Der API-Endpunkt unterstützt Client-seitige `Content negotiation` über den Accept-Header.
-    Der Client kann das Datenmodell der Antwort-Nutzlast festlegen, sofern diese Unterstützt werden.
+    Der API-Endpunkt unterstützt die Client-seitige Content-Negotiation mittels des Accept-Headers.
+    Dies erlaubt es dem Client, das gewünschte Datenmodell der Antwort-Nutzlast zu spezifizieren, sofern dieses vom Server unterstützt wird.
   parameters:
-    - name: Authorization
-      in: header
-      description: Der OIDC Access-Token des Benutzers.
-      required: true
-      schema:
-        type: string
-      example: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
     - name: Accept
       in: header
-      description: Parameter für die Festlegung des Datenmodells der Antwort-Nutzlast. ([Content negotiation on mdn](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation)).
+      description: Legt den Content-Type der Antwort fest (JSON oder JSON-LD).
       required: false
       schema:
         type: string
@@ -36,128 +27,94 @@ get:
       example: application/json
     - name: target.uid
       in: query
-      description: Die ID eines spezifischen Mediums als Query-Filter-Parameter.
+      description: Die UID eines spezifische Medienobjekts als Filter-Parameter
       required: false
+      nullable: true
       schema:
         type: string
-        example: "urn:example:medium:123456789"
+        example: "urn:issuer:media:123456789"
     - name: target.partOf
       in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen eines spezifischen Medienkatalogs.
+      description: Der Name eines spezifischen Medienkatalogs als Filter-Parameter
       required: false
-      allowEmptyValue: true
       schema:
         type: string
-      example: "urn:exampleprovider:media:catalog"
-    - name: permission.action
-      in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Art von Nutzungsrecht.
-      required: false
-      allowEmptyValue: true
-      schema:
-        type: string
-        enum:
-          - "distribute"
-          - "execute"
-          - "move"
-          - "play"
-          - "print"
-          - "view"
-      example: "execute"
-    - name: personenkontext.organisation.kennung
-      in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Schulzugehörigkeit.
-      required: false
-      allowEmptyValue: true
-      schema:
-        type: string
-      example: "NI_12345"
-    - name: personenkontext.gruppe
-      in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Gruppenzugehörigkeit.
-      required: false
-      allowEmptyValue: true
-      schema:
-        type: string
-      example: "ffceeb40-01e6-483f-a909-382ff576b429"
-    - name: personenkontext.rolle
-      in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Rolle.
-      required: false
-      allowEmptyValue: true
-      schema:
-        type: string
-      example: "lehr"
+        example: "urn:issuer:catalog"
+    # Nicht in Version 1.6
+    # - name: permission.action
+    #   in: query
+    #   description: Ein optionaler Filter-Parameter zum Abfragen einer spezifischen Art von Nutzungsrecht.
+    #   required: false
+    #   allowEmptyValue: true
+    #   schema:
+    #     type: string
+    #     enum:
+    #       - "distribute"
+    #       - "execute"
+    #       - "move"
+    #       - "play"
+    #       - "print"
+    #       - "view"
+    #   example: "execute"
     - name: access_control
       in: query
-      description: Ein optionaler Filter-Parameter zum zusätzlichen Abfragen der Zugriffs-Informationen als Attribute `scx:access_control`.
-      required: false
-      allowEmptyValue: true
-      schema:
-        type: string
-        enum:
-          - "none"
-          - "urn:scx:lizenz:zugriffsinfo:licensekey"
-          - "urn:scx:lizenz:zugriffsinfo:temporaryurl"
-          - "all"
-      example: "none"
-    - name: discover_error
-      in: query
-      description: Ein optionaler Filter-Parameter zum Abfragen von Discover-Fehlerinformationen von Providern. Führt bei Auftreten einer Fehlerinformation zum führen des Custom-Header `Content-Partial-Error` mit dem Wert "true" in der Antwort.
+      description: Mit dem Parameter wird die optionale Auslieferung des `access_control`-Objekts angefordert.
       required: false
       allowEmptyValue: true
       schema:
         type: boolean
-      example: false
+        default: false
   responses:
     200:
-      description: Returns an array of policies
-      headers:
-        Content-Partial-Error:
-          schema:
-            type: boolean
-          example: false
-          description: Hinweis auf Fehler im Payload.
+      description: OK
       content:
         application/json:
           schema:
-            type: array
-            items:
-              anyOf:
-                - $ref: "./components-NutzungsrechtInfoJSON.yaml"
-                - $ref: "./components-DiscoverActionJSON.yaml"
-          # examples:
-          #   "Nutzungsrecht ohne Zugriffs-Informationen":
-          #     value:
-          #       - $ref: "../../static/examples/policies/1_anwendung.execute.json"
-          #   "Nutzungsrecht mit Zugriffs-Informationen":
-          #     value:
-          #       - $ref: "../../static/examples/policies/1_anwendung.execute.access_control.json"
-          #   "Antwort mit Fehlerinformationen von Providern":
-          #     value:
-          #       $ref: "../../static/examples/response_payload/218_provider_error.json"
+            type: object
+            properties:
+              pid:
+                description: Pseudonymisierte ID. Referenziert ein bestehendes Objekt des Schulconnex-Servers.
+                type: string
+                example: df6588cf8dc649ef79fcc852e1064761442a32bf3496ecd9bde0f66a18685aaa
+              data:
+                type: array
+                items:
+                  $ref: "./components-policies-Mediendatensatz.yaml"
+              status:
+                properties:
+                  services:
+                    type: array
+                    items:
+                      $ref: "./components-policies-Servicestatus.yaml"
         application/ld+json:
           schema:
-            type: array
-            items:
-              anyOf:
-                - $ref: "./components-NutzungsrechtInfoJSONLD.yaml"
-                - $ref: "./components-DiscoverActionJSONLD.yaml"
-          # examples:
-          #   "Nutzungsrecht ohne Zugriffs-Informationen":
-          #     value:
-          #       - $ref: "../../static/examples/policies/1_anwendung.execute.ld.json"
-          #   "Nutzungsrecht mit Zugriffs-Informationen":
-          #     value:
-          #       - $ref: "../../static/examples/policies/1_anwendung.execute.access_control.ld.json"
-          #   "Antwort mit Fehlerinformationen von Providern":
-          #     value:
-          #       $ref: "../../static/examples/response_payload/218_provider_error.ld.json"
+            type: object
+            properties:
+              '@context':
+                description: Der Context gemäß JSON-LD-Spezfikation
+                example:
+                  - http://schulconnex.de/policies.jsonld
+                  -
+                    odrl: http://www.w3.org/ns/odrl.jsonld
+                  -
+                    type: '@type'
+              pid:
+                description: Pseudonymisierte ID. Referenziert ein bestehendes Objekt des Schulconnex-Servers.
+                type: string
+                example: df6588cf8dc649ef79fcc852e1064761442a32bf3496ecd9bde0f66a18685aaa
+              data:
+                type: array
+                items:
+                  $ref: "./components-policies-MediendatensatzLD.yaml"
+              status:
+                properties:
+                  services:
+                    type: array
+                    items:
+                      #Aktuell kein unterscheidbares Rückgabeobjekt für JSON-LD
+                      $ref: "./components-policies-Servicestatus.yaml"
     401:
-      description: Unauthorized
-    404:
-      description: Not found
-    500:
-      description: Internal Server Error
-    503:
-      description: Service Unavailable
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)

@@ -92,7 +92,7 @@ Beispielhafte Auflistung eines Nutzungsrecht inkl. Zugriffsinformationen:
     ],
     "scx:access_control": [
         {
-            "@type": "LicenseKey",
+            "type": "LicenseKey",
             "value": "5f49ff7f-76a6-4d8b-ae40-e1aba0d57f21"
         }
     ]
@@ -124,7 +124,7 @@ Beispielhafte Auflistung eines Nutzungsrecht und separater Zugriffsinformation:
 {
     "access_control": [
         {
-            "@type": "urn:scx:lizenz:zugriffsinfo:licensekey",
+            "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
                 "licenseKey": "5f49ff7f-76a6-4d8b-ae40-e1aba0d57f21"
             }

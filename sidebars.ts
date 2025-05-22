@@ -263,10 +263,10 @@ const sidebars: SidebarsConfig = {
     'versionshistorie',
   ],
 
-  spezLizenzenSidebar: [
+  spezPoliciesSidebar: [
     {
       type: 'html',
-      value: '<span style="font-weight: 600;">Lizenzen-API</span>',
+      value: '<span style="font-weight: 600;">Nutzungsrechte-API</span>',
       defaultStyle: true,
     },
     {
@@ -671,26 +671,20 @@ const sidebars: SidebarsConfig = {
     },
   ],
 
-  apiLizenzenSidebarOpenAPIDocs: [
+  apiPoliciesSidebarOpenAPIDocs: [
     {
       type: 'category',
-      label: 'API Lizenzen',
+      label: 'API Nutzungsrechte',
       link: {
         type: 'doc',
-        id: 'generated/openapi/lizenzen/schulconnex',
+        id: 'generated/openapi/policies/schulconnex',
       },
       items: [
         {
-          type: "category",
-          label: "Lizenzen",
-          items: [
-            {
-              type: "doc",
-              id: "generated/openapi/lizenzen/nutzungsrechte-als-policies-odrl-policy-type-set-im-kontext-eines-benutzers-abrufen",
-              label: "/policies-info",
-              className: "api-method get",
-            },
-          ],
+          type: "doc",
+          id: "generated/openapi/policies/read-policies-info",
+          label: "/policies-info",
+          className: "api-method get",
         },
       ],
     },

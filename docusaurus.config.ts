@@ -129,18 +129,18 @@ const config: Config = {
           },
           {
             type: 'dropdown',
-            label: 'Lizenzen',
+            label: 'Nutzungsrechte',
             position: 'left',
             items: [
               {
                 type: 'docSidebar',
-                sidebarId: 'spezLizenzenSidebar',
+                sidebarId: 'spezPoliciesSidebar',
                 label: 'Spezifikation',
               },
               {
                 type: 'docSidebar',
-                sidebarId: 'apiLizenzenSidebarOpenAPIDocs',
-                label: 'API Lizenzen',
+                sidebarId: 'apiPoliciesSidebarOpenAPIDocs',
+                label: 'API Nutzungsrechte',
               },
             ],
           },
@@ -235,9 +235,9 @@ const config: Config = {
             },
             template: 'src/generators/markdown/template.mustache',
           },
-          apiLizenzen: { // is considered the <id> that you will reference in the CLI
-            specPath: "src/openapi/api-lizenzen.yaml", // path or URL to the OpenAPI spec
-            outputDir: "docs/generated/openapi/lizenzen", // output directory for generated *.mdx and sidebar.js files
+          apiPolicies: { // is considered the <id> that you will reference in the CLI
+            specPath: "src/openapi/api-policies.yaml", // path or URL to the OpenAPI spec
+            outputDir: "docs/generated/openapi/policies", // output directory for generated *.mdx and sidebar.js files
             sidebarOptions: {
               groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
             },
