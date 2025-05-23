@@ -1,9 +1,0 @@
-title: Provider JSON Schema
-type: object
-required:
-  - identifier
-properties:
-  identifier:
-    type: string
-    format: uri
-    example: https://exampleprovider.tld
