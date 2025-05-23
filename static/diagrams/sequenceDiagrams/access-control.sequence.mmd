@@ -1,24 +1,27 @@
 sequenceDiagram
-    actor X as User
-    participant LMS as NBC
-    participant IDM as moin.schule
-    participant LV as Lizenzkomponente<br/>moin.schule
-    participant Target as Anwendung
-    X->>LMS: Login
-    LMS->>IDM: GET /person-info
-    IDM-->>LMS: 
-    LMS->>LV: GET /lizenz-info
-    LV-->>LMS: 
-    X->>LMS: Aufruf Medienregal
-    Note over LMS: Medienregal<br/>(LTI-)Links zu den<br/>verfügbaren Anwendungen
-    X->>LMS: Aufruf Anwendung
-    LMS->>+Target: (LTI-)Launch inkl uid
-    Target->>IDM: SSO-Auth, Access Token
-    Target->>IDM: GET /person-info
-    IDM-->>Target: 
-    Target->>LV: GET /lizenz-zugriffsinfo/{lizenzInfoUid}
-    LV-->>Target: 
-    Note over Target: Validierung Lizenzschlüssel
-    X->>Target: Logout
-    Target->>Target: Logout
-    Target->>-LMS: Zurück zum LMS
+    actor User
+    participant BP as Bildungsplattform
+    participant LS as IAM
+    participant LK as Lizenzkomponente
+    participant A as Anwendung
+
+    User->>BP: Login
+    BP->>LS: GET /person-info
+    LS-->>BP: 
+    BP->>LK: GET /policies-info
+    LK-->>BP: 
+    User->>BP: Aufruf Medienregal
+    Note over BP: Medienregal<br/>(LTI-)Links zu den<br/>verfügbaren Anwendungen
+    User->>BP: Aufruf Anwendung
+    BP->>A: (LTI-)Launch inkl uid
+    activate A
+    A->>LS: SSO-Auth, Access Token
+    A->>LS: GET /person-info
+    LS-->>A: 
+    A->>LK: GET /lizenz-zugriffsinfo/{lizenzInfoUid}
+    LK-->>A: 
+    Note over A: Validierung Lizenzschlüssel
+    User->>A: Logout
+    A->>A: Logout
+    A->>BP: Zurück zum LMS
+    deactivate A 
