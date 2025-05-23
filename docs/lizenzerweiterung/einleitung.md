@@ -1,8 +1,3 @@
----
-slug: /
-title: Einleitung
----
-
 # Einleitung
 
 Die vorliegende Dokumentation beschreibt die Erweiterung des Schnittstellenstandards SchulConneX um zusätzliche Funktionen zur Verwaltung von Nutzungsrechten und Zugriffsinformationen. Ziel dieser Erweiterung ist es, die Flexibilität und Funktionalität von SchulConneX zu erhöhen und die Anforderungen an den Zugang zu und die Nutzung von Daten im Bildungskontext noch besser abzudecken.
