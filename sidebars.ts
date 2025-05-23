@@ -270,28 +270,33 @@ const sidebars: SidebarsConfig = {
       defaultStyle: true,
     },
     {
-      type: 'category',
+      type: 'doc',
+      id: 'lizenzerweiterung/einleitung',
       label: 'Allgemeines',
-      link: {
-        type: 'doc',
-        id: 'lizenzerweiterung/einleitung',
-      },
-      items: [
-        'lizenzerweiterung/allgemeines/motivation',
-        'lizenzerweiterung/allgemeines/einfuehrung-zu-odrl',
-        'lizenzerweiterung/allgemeines/mapping-zu-spezifikationen',
-        'lizenzerweiterung/allgemeines/nutzung-von-identifikatoren',
-      ]
     },
-    {
-      type: 'category',
-      label: 'Datenmodell',
-      items: [
-        'lizenzerweiterung/datenmodell/nutzungsrecht',
-        'lizenzerweiterung/datenmodell/providerfehlermeldung',
-        'lizenzerweiterung/datenmodell/zugriffsinfo',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Allgemeines',
+    //   link: {
+    //     type: 'doc',
+    //     id: 'lizenzerweiterung/einleitung',
+    //   },
+    //   items: [
+    //     'lizenzerweiterung/allgemeines/motivation',
+    //     'lizenzerweiterung/allgemeines/einfuehrung-zu-odrl',
+    //     'lizenzerweiterung/allgemeines/mapping-zu-spezifikationen',
+    //     'lizenzerweiterung/allgemeines/nutzung-von-identifikatoren',
+    //   ]
+    // },
+    // {
+    //   type: 'category',
+    //   label: 'Datenmodell',
+    //   items: [
+    //     'lizenzerweiterung/datenmodell/nutzungsrecht',
+    //     'lizenzerweiterung/datenmodell/providerfehlermeldung',
+    //     'lizenzerweiterung/datenmodell/zugriffsinfo',
+    //   ],
+    // },
     {
       type: 'category',
       label: 'Nutzung der REST-API',
@@ -310,19 +315,19 @@ const sidebars: SidebarsConfig = {
           id: 'lizenzerweiterung/schnittstellendefinition/http-statuscodes',
           label: 'HTTP-Statuscodes'
         },
-        {
-          type: 'doc',
-          id: 'lizenzerweiterung/schnittstellendefinition/custom-header',
-          label: 'Teilweise Fehlerhafte Verarbeitung'
-        }
+        // {
+        //   type: 'doc',
+        //   id: 'lizenzerweiterung/schnittstellendefinition/custom-header',
+        //   label: 'Teilweise Fehlerhafte Verarbeitung'
+        // }
       ],
     },
     {
       type: 'category',
       label: 'Praxisleitfaden',
       items: [
-        'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
-        'lizenzerweiterung/praxisleitfaden/semantik',
+        // 'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
+        // 'lizenzerweiterung/praxisleitfaden/semantik',
         'lizenzerweiterung/praxisleitfaden/odrl-beispiele',
       ],
     },
