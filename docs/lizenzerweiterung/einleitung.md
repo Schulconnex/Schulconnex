@@ -1,8 +1,5 @@
----
-slug: /
-title: Einleitung
----
+# Schulconnex-Nutzungsrechte-API
 
-# Einleitung
+Die Nutzungsrechte-API von Schulconnex ist eine REST-Schnittstelle, die den Abruf von Informationen zu Nutzungsrechten an digitalen Medienobjekten ermöglicht.
 
-Die vorliegende Dokumentation beschreibt die Erweiterung des Schnittstellenstandards SchulConneX um zusätzliche Funktionen zur Verwaltung von Nutzungsrechten und Zugriffsinformationen. Ziel dieser Erweiterung ist es, die Flexibilität und Funktionalität von SchulConneX zu erhöhen und die Anforderungen an den Zugang zu und die Nutzung von Daten im Bildungskontext noch besser abzudecken.
+Ihr primärer Zweck ist die Bereitstellung von Lizenzbedingungen, beispielsweise für digitale Bildungsmedien und -anwendungen. Darüber hinaus kann diese API auch Zugangsdaten, wie Lizenzschlüssel, zur Verfügung stellen.
