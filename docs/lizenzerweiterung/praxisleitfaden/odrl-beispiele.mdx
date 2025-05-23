@@ -1,0 +1,288 @@
+---
+tags:
+- Informativ
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+
+import Einzellizenz from '!!raw-loader!/src/json/odrl-policies/anwendung.json';
+import EinzellizenzLD from '!!raw-loader!/src/json/odrl-policies/anwendung.ld.json';
+import Schullizenz from '!!raw-loader!/src/json/odrl-policies/schule.json';
+import SchullizenzLD from '!!raw-loader!/src/json/odrl-policies/schule.ld.json';
+import Lehrerlizenz from '!!raw-loader!/src/json/odrl-policies/lehrkraefte.json';
+import LehrerlizenzLD from '!!raw-loader!/src/json/odrl-policies/lehrkraefte.ld.json';
+import Gruppenlizenz from '!!raw-loader!/src/json/odrl-policies/gruppe.json';
+import GruppenlizenzLD from '!!raw-loader!/src/json/odrl-policies/gruppe.ld.json';
+import Schuljahreslizenz from '!!raw-loader!/src/json/odrl-policies/schuljahr.json';
+import SchuljahreslizenzLD from '!!raw-loader!/src/json/odrl-policies/schuljahr.ld.json';
+import Dynamisch from '!!raw-loader!/src/json/odrl-policies/dynamisch.json';
+import DynamischLD from '!!raw-loader!/src/json/odrl-policies/dynamisch.ld.json';
+import AVMedium from '!!raw-loader!/src/json/odrl-policies/stream.json';
+import AVMediumLD from '!!raw-loader!/src/json/odrl-policies/stream.ld.json';
+import Arbeitsblatt from '!!raw-loader!/src/json/odrl-policies/arbeitsblatt.json';
+import ArbeitsblattLD from '!!raw-loader!/src/json/odrl-policies/arbeitsblatt.ld.json';
+import Landkreis from '!!raw-loader!/src/json/odrl-policies/landkreis.json';
+import LandkreisLD from '!!raw-loader!/src/json/odrl-policies/landkreis.ld.json';
+import Kombiniert from '!!raw-loader!/src/json/odrl-policies/kombiniert.json';
+import KombiniertLD from '!!raw-loader!/src/json/odrl-policies/kombiniert.ld.json';
+
+# Typische Nutzungsrechte mit ODRL abbilden
+
+Die folgenden Beispiele veranschaulichen verschiedene Nutzungsrechte im ODRL-Format. Sie verdeutlichen, wie Nutzungsszenarien im schulischen Kontext mithilfe von ODRL modelliert werden können, um die Bedeutung und Beschränkungen der Nutzungsrechte präzise und maschinenlesbar darzustellen.
+
+## Grundstruktur einer Lizenzvereinbarung
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für ein ausführbares Programm" showLineNumbers>{Einzellizenz}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für ein ausführbares Programm" showLineNumbers>{EinzellizenzLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses Beispiel folgt dem ODRL 2.1-Standard und repräsentiert ein ODRL-Policy-Beispiel, das für die Verwendung im deutschen Bildungssystem gedacht ist. Die Ziel-Medienobjekte können dabei digitale internetbasierte Bildungsanwendungen, digitale Schulbücher oder andere Bildungsmaterialien umfassen. Im Folgenden wird jede Top-Level-Eigenschaft dieses ODRL-Objekts detailliert erläutert.
+
+Die Eigenschaft `uid` (Unique Identifier) dient als eindeutige Kennzeichnung für dieses spezifische ODRL-Objekt. Der Wert `https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7` ist ein Internationalized Resource Identifier (IRI). Es ist wichtig zu betonen, dass, wenn `uid`-Attribute als URLs definiert sind, diese auflösbare Endpunkte sein sollten, um die Nachverfolgbarkeit und Referenzierung des Nutzungsrechte-Objekts (Policy) zu gewährleisten.
+
+Das `target`-Attribut spezifiziert das Medienobjekt oder die Medienobjekt, auf die sich die in dem Nutzungsrechte-Objekt definierten Regeln beziehen. In diesem Beispiel enthält das `target`-Objekt zwei weitere Attribute: `uid` mit dem Wert `urn:issuer:medium:123456789` und `partOf` mit dem Wert `urn:issuer:catalogue`. Der `uid`-Wert identifiziert das spezifische Ziel-Medienobjekt mittels eines Uniform Resource Name (URN), während `partOf` angibt, dass dieses Medienobjekt Teil des durch `urn:issuer:catalogue` identifizierten Medienkatalogs ist.
+
+Das `permission`-Array enthält eine oder mehrere Berechtigungen, die dem oder den Zielobjekten gewährt werden. In diesem Beispiel gibt es ein einzelnes Berechtigungsobjekt mit dem Attribut `action`, dessen Wert ein Array mit dem Eintrag `execute` ist. Die ODRL-Aktion `execute` umfasst dabei nicht nur die Ausführung von Software im herkömmlichen Sinne, sondern auch die Ausführung von internetbasierten Anwendungen (Software as a Service). Diese Berechtigung erlaubt somit die Nutzung oder das Ausführen des durch das `target`-Attribut identifizierten Medienobjekts als Anwendung (Applikation).
+
+#### JSON-LD
+
+Die Eigenschaft `@context` definiert die JSON-LD-Kontexte, die für die Interpretation des ODRL-Objekts relevant sind. Hier wird der offizielle ODRL-Kontext von der W3C-Namespace-Adresse `http://www.w3.org/ns/odrl.jsonld` referenziert. Dieser Kontext stellt sicher, dass die Begriffe und Vokabeln im Objekt eindeutig der ODRL-Spezifikation zugeordnet werden können und ermöglicht so eine standardisierte maschinenlesbare Verarbeitung des Nutzungsrechte-Objekts.
+
+Die Eigenschaft `@type` gibt den Typ des ODRL-Objekts an. In diesem Fall ist der Wert `Agreement`, was bedeutet, dass es sich um eine Vereinbarung handelt, die Rechte und Pflichten zwischen verschiedenen Parteien festlegt. Andere mögliche Typen könnten `Policy` oder `Offer` sein, die jeweils unterschiedliche Arten von Regeln und Konditionen im Kontext des digitalen Nutzungsrechtemanagements repräsentieren.
+
+## Schul-, Lehrer- und Gruppenlizenzen
+
+### Schullizenz
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für eine Schullizenz" showLineNumbers>{Schullizenz}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für eine Schullizenz" showLineNumbers>{SchullizenzLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses Beispiel erweitert die vorherige ODRL 2.1-Agreement-Policy für den Einsatz im deutschen Bildungssystem. Es spezifiziert nun genauer, wem die Ausführungsberechtigung für das Ziel-Medienobjekt erteilt wird. Die Struktur bleibt erhalten, jedoch wird innerhalb der `permission` ein `assignee` hinzugefügt, um den Berechtigten zu definieren.
+
+Innerhalb des `permission`-Arrays befindet sich weiterhin ein Objekt, das die erlaubte `action` beschreibt, nämlich `execute`. Zusätzlich zu dieser Aktion enthält dieses Berechtigungsobjekt nun das Attribut `assignee`. Das `assignee`-Attribut dient dazu, die Partei oder die Parteien zu identifizieren, denen die in dieser `permission` gewährte Handlung erlaubt ist.
+
+Der Wert des `assignee`-Attributs ist hier ein Objekt, das das Attribut `partOf` enthält. Das `partOf`-Attribut in diesem Kontext deutet darauf hin, dass der Berechtigte Teil einer bestimmten Gruppe oder Organisation ist. Die genaue Definition dieser Gruppe oder Organisation wird durch das nachfolgende `refinement` präzisiert.
+
+Das `refinement`-Array innerhalb von `partOf` ermöglicht eine detailliertere Filterung oder Auswahl der Berechtigten. In diesem Fall enthält es ein einzelnes Refinement-Objekt. Dieses Objekt besteht aus drei Attributen: `leftOperand`, `operator` und `rightOperand`. `leftOperand` gibt die zu prüfende Eigenschaft an (`urn:schulconnex:de:personenkontext:organisation:kennung`), `operator` definiert die Art des Vergleichs (`eq` für „gleich“), und `rightOperand` enthält den Wert, mit dem verglichen wird. („NI_12345“ steht für die Kennung der Organisation, also die Schulnummer.).
+
+Die Struktur innerhalb des `permission`-Blocks bedeutet also, dass die Erlaubnis zur `execute`-Aktion nur denjenigen Organisationen (Schulen) gewährt wird, deren Kennung (`urn:schulconnex:de:personenkontext:organisation:kennung`) dem Wert `NI_12345` entspricht. Dies ermöglicht eine präzise Darstellung der Zuweisung von Nutzungsrechten an eine spezifische Bildungseinrichtung, hier an die Schule mit der genannten Kennung.
+
+{/* Das Refinement kann bei der Rückgabe ggf. noch weiter vereinfacht werden:
+
+```json
+{
+  "refinement": [
+    {
+      "urn:schulconnex:de:personenkontext:organisation:kennung": "NI_12345"
+    }
+  ]
+}
+``` */}
+
+### Lehrerlizenz
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für eine Lehrerlizenz" showLineNumbers>{Lehrerlizenz}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für eine Lehrerlizenz" showLineNumbers>{LehrerlizenzLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses ODRL 2.1 Agreement-Beispiel setzt weiterhin auf die Struktur der vorherigen Beispiele. Der Fokus liegt hier abermals auf der präzisen Definition des Berechtigten für die Ausführungsaktion, wobei nun eine andere Form der Verfeinerung innerhalb des `assignee`-Attributs verwendet wird.
+
+Innerhalb des `permission`-Arrays finden wir wiederum ein Objekt, das die erlaubte `action` als `execute` definiert. Analog zum vorherigen Beispiel enthält dieses Berechtigungsobjekt das `assignee`-Attribut, um den Kreis der berechtigten Personen oder Parteien einzugrenzen.
+
+Im Unterschied zum vorherigen Beispiel enthält das `assignee`-Attribut hier direkt ein `refinement`-Array. Dieses Array beinhaltet ein einzelnes Refinement-Objekt, das die Bedingungen für die Zuweisung der Berechtigung festlegt.
+
+Das Refinement-Objekt besteht aus den bekannten Attributen: `leftOperand`, `operator` und `rightOperand`. `leftOperand` spezifiziert die zu prüfende Eigenschaft, hier die Organisationsrolle des Personenkontextes (`urn:schulconnex:de:personenkontext:rolle`). Der `operator` ist auf `eq` (gleich) gesetzt, und der `rightOperand` hat den Codewert für Lehrend (`lehr`).
+
+Diese Konfiguration bedeutet also, dass die Erlaubnis zur Ausführung des durch das `target`-Attribut identifizierten Medienobjekts ausschließlich denjenigen Personen gewährt wird, deren Rolle dem Wert Lehrend entspricht. Dies ermöglicht die Beschränkung der Nutzungsrechte auf bestimmte Personengruppen innerhalb des Bildungssystems, in diesem Fall auf Lehrkräfte.
+
+{/* Auch hier kann das Refinement bei der Rückgabe ggf. noch weiter vereinfacht werden. */}
+
+### Gruppenlizenz
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für eine Gruppenlizenz" showLineNumbers>{Gruppenlizenz}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für eine Gruppenlizenz" showLineNumbers>{GruppenlizenzLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses ODRL 2.1-Agreement-Beispiel demonstriert erneut die detaillierte Zuweisung von Ausführungsrechten. Die grundlegende Struktur des ODRL-Dokuments bleibt konsistent mit den vorherigen Beispielen. Der Fokus liegt wiederum auf der Spezifizierung des Berechtigten innerhalb des `permission`-Blocks.
+
+Innerhalb des `permission`-Arrays ist die erlaubte `action` weiterhin als `execute` definiert. Das Attribut `assignee` dient dazu, die Person oder Partei zu bestimmen, der diese Ausführungsberechtigung zusteht. Der Wert des `assignee`-Attributs ist wiederum ein Objekt, das das Attribut `partOf` enthält.
+
+Das `partOf`-Attribut indiziert, dass der Berechtigte Teil einer bestimmten Gruppierung ist. Die genaue Definition dieser Gruppe erfolgt durch das nachfolgende `refinement`-Array. Dieses Array enthält ein einzelnes Refinement-Objekt, das die Kriterien für die Zugehörigkeit zu der relevanten Gruppe festlegt.
+
+Das Refinement-Objekt besteht aus den Attributen `leftOperand`, `operator` und `rightOperand`. Hier spezifiziert `leftOperand` die zu prüfende Eigenschaft als `urn:schulconnex:de:personenkontext:gruppe`, was auf die Gruppenzugehörigkeit einer Person im schulischen Kontext verweist. Der `operator` ist auf `eq` (gleich) gesetzt, und der `rightOperand` enthält die spezifische Kennung (ID) der Gruppe, hier `ffceeb40-01e6-483f-a909-382ff576b429`.
+
+Diese Konfiguration gewährt also die Erlaubnis zur Ausführung des Ziel-Medienobjekts ausschließlich Mitgliedern derjenigen Gruppe, deren eindeutige Kennung deren Kennung, spezifiziert durch `urn:schulconnex:de:personenkontext:gruppe`, dem Wert `ffceeb40-01e6-483f-a909-382ff576b429` entspricht.
+
+{/* Das Attribut "partOf" unterhalb von "assignee" referenziert eine "PartyCollection", zu der der "assignee" gehören muss. Die PartyCollection ist hier nur durch eine Bedingung (refinement) definiert. Die Bedingungen müssen so definiert sein, dass sie nach den Regeln gemäß https://w3c.github.io/odrl/formal-semantics/#sematics-of-permission so ausgewertet werden, dass sie den tatsächlichen Lizenzvereinbarungen entsprechen. 
+
+In dem Beispiel besteht das Recht, die Software auszuführen, nur dann, wenn die Person, der die Lizenz zugewiesen wurde (assignee) Teil einer Gruppe (PartyCollection) ist, für die die Bedingung (refinement) `urn:schulconnex:de:personenkontext:organisation:kennung eq NI_12345` zutrifft. Die Schulnummer muss also NI_12345 sein. 
+
+Auf die gleiche Art und Weise könnte das Nutzungsrecht an die Zugehörigkeit zu einer Gruppe gebunden werden, z. B. durch die Bedingung `urn:schulconnex:de:personenkontext:gruppe:id eq 4230df82-0c7b-4546-be8d-a8f4efb3a343`. Ob das eine "Gruppenlizenz" im Sinne des Anbieters wäre, müsste geklärt werden. 
+
+Für alle relevaten Schulconnex-Attribute müssten für diese Darstellung URN-Notationen definiert werden. 
+
+Alternativ: */}
+
+{/* ```json
+    "permission": [
+        {
+            "action": [
+                "execute"
+            ],
+            "assignee": {
+                "partOf": "IRI-der-Gruppe-oder-der-Schule"
+            }
+        }
+    ],
+``` */}
+
+## Medien
+
+### Videostream
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für ein gestreamtes Medium" showLineNumbers>{AVMedium}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für ein gestreamtes Medium" showLineNumbers>{AVMediumLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses ODRL 2.1-Agreement-Beispiel demonstriert eine einfache Erlaubnis für eine spezifische Aktion. Die grundlegende Struktur des ODRL-Dokuments bleibt mit den vorherigen Beispielen identisch. Der Fokus liegt hier auf der Definition der erlaubten Handlung innerhalb des `permission`-Blocks.
+
+Innerhalb des `permission`-Arrays befindet sich ein Objekt, das die erlaubte `action` beschreibt. In diesem Fall ist der Wert des `action`-Arrays `stream`. Die ODRL-Aktion `stream` bezieht sich auf die fortlaufende Übertragung von audiovisuellen oder anderen digitalen Inhalten, typischerweise in Echtzeit, zur direkten Wiedergabe, ohne dass eine vollständige dauerhafte Speicherung des Inhalts auf dem Endgerät des Nutzers erfolgt.
+
+Im Kontext digitaler Bildungsmedien könnte diese Berechtigung beispielsweise das Recht einräumen, ein Lehrvideo oder eine interaktive Simulation direkt anzusehen, ohne die Datei herunterladen zu müssen. Diese Art der Berechtigung ist relevant für den Schutz von Inhalten und die Kontrolle über deren Nutzung im Online-Bereich.
+
+Es ist wichtig zu beachten, dass dieses Beispiel keine Einschränkungen bezüglich des Berechtigten (kein `assignee` ist definiert) oder spezifische Bedingungen für die Streaming-Aktion enthält. Die Berechtigung gilt somit potenziell für jeden, der auf das durch das `target`-Attribut identifizierte Objekt zugreifen kann.
+
+### Arbeitsblatt
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für ein bearbeitbares Office-Dokument" showLineNumbers>{Arbeitsblatt}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für ein bearbeitbares Office-Dokument" showLineNumbers>{ArbeitsblattLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses ODRL 2.1-Agreement-Beispiel, das beispielsweise ein bearbeitbares Arbeitsblatt unter einer Creative Commons-Lizenz repräsentieren könnte, demonstriert die Kombination mehrerer erlaubter Handlungen und die Definition einer Pflicht im Zusammenhang mit einer weiteren Handlung. Die grundlegende Struktur des ODRL-Objekts bleibt dabei erhalten.
+
+Der `permission`-Array enthält hier zwei separate Berechtigungsobjekte. Das erste Berechtigungsobjekt definiert ein Array von erlaubten `action`-Werten: `move`, `view`, `print` und `distribute`. Dies bedeutet, dass der Berechtigte die Erlaubnis hat, das Zielobjekt zu verschieben (z.B. in ein anderes Verzeichnis), anzusehen, auszudrucken und zu verbreiten. Diese Berechtigungen sind typisch für die Nutzung und Weitergabe von Lehrmaterialien in Dateiform.
+
+Das zweite Berechtigungsobjekt spezifiziert die `action` `modify`, also die Erlaubnis zur Modifikation oder Bearbeitung des Ziel-Medienobjekts. Zusätzlich zu dieser Erlaubnis enthält dieses Objekt ein `duty`-Array. Ein `duty` beschreibt eine Verpflichtung, die erfüllt werden muss, wenn die zugehörige Handlung (hier `modify`) ausgeübt wird.
+
+Innerhalb des `duty`-Arrays befindet sich ein Objekt, das ein `action`-Array mit den Werten `Attribution` und `ShareAlike` enthält. `Attribution` bedeutet, dass derjenige, der das Arbeitsblatt verändert und weitergibt, die ursprünglichen Urheber angemessen nennen muss. `ShareAlike` bedeutet, dass alle Bearbeitungen und Weitergaben des Arbeitsblatts unter den gleichen oder ähnlichen Lizenzbedingungen erfolgen müssen.
+
+Dieses Beispiel erlaubt also die Nutzung, Vervielfältigung und Weitergabe eines Arbeitsblattes in Dateiform, wobei im Falle einer Bearbeitung und Weitergabe die Pflicht zur Namensnennung der ursprünglichen Urheber und zur Weitergabe unter gleichen Bedingungen besteht, was typische Elemente einer Creative Commons-Lizenz widerspiegelt.
+
+## Zeitliche und räumliche Einschränkung
+
+### Schuljahreslizenz
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für eine Schuljahreslizenz" showLineNumbers>{Schuljahreslizenz}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für eine Schuljahreslizenz" showLineNumbers>{SchuljahreslizenzLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses ODRL 2.1-Agreement-Beispiel, das hier die Nutzung einer digitalen Bildungsanwendung während des Schuljahres 2023/2024 regelt, erweitert die Ausführungsberechtigung um zeitliche Einschränkungen. Die grundlegende Struktur des ODRL-Dokuments bleibt dabei bestehen.
+
+Innerhalb des `permission`-Arrays wird die erlaubte `action` als `execute` definiert, was die Berechtigung zur Ausführung der digitalen Anwendung umfasst. Zusätzlich zu dieser Aktion enthält das Berechtigungsobjekt nun ein `constraint`-Array. Constraints definieren Bedingungen, die erfüllt sein müssen, damit die gewährte Berechtigung gültig ist.
+
+Das `constraint`-Array enthält in diesem Beispiel zwei Constraint-Objekte, die beide eine zeitliche Einschränkung definieren. Das erste Constraint-Objekt spezifiziert, dass der Wert des `leftOperand` `dateTime` (Datum und Uhrzeit) größer oder gleich (`gteq`) dem `rightOperand` `2023-08-01T00:00+0200` sein muss. Dies legt den Beginn des Gültigkeitszeitraums auf den 1. August 2023 um 00:00 Uhr mitteleuropäischer Sommerzeit (MESZ) fest (UTC+2).
+
+Das zweite Constraint-Objekt legt fest, dass derselbe `leftOperand` `dateTime` kleiner als (`lt`) der `rightOperand` `2024-08-01T00:00+0200` sein muss. Dies definiert das Ende des Gültigkeitszeitraums auf den 1. August 2024 um 00:00 Uhr MESZ, wobei dieser Zeitpunkt selbst nicht mehr in den Gültigkeitsbereich fällt.
+
+In der Zusammenschau bewirken diese beiden Constraints, dass die Erlaubnis zur Ausführung der digitalen Bildungsanwendung auf den Zeitraum vom 1. August 2023, 00:00 Uhr MESZ, bis zum 1. August 2024, 00:00 Uhr MESZ (exklusive), beschränkt ist. Dieser Zeitraum deckt das Schuljahr 2023/2024 ab.
+
+### Kreisweite Lizenz
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für eine kreisweit gültige Lizenz" showLineNumbers>{Landkreis}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für eine kreisweit gültige Lizenz" showLineNumbers>{LandkreisLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses ODRL 2.1-Agreement-Beispiel demonstriert eine räumliche Einschränkung für die Ausführungsberechtigung. Die grundlegende Struktur des ODRL-Dokuments bleibt dabei unverändert.
+
+Innerhalb des `permission`-Arrays wird die erlaubte `action` als `execute` definiert, was die Berechtigung zur Ausführung der digitalen Anwendung beinhaltet. Zusätzlich zu dieser Aktion enthält das Berechtigungsobjekt ein `constraint`-Array, das eine Bedingung für die Gültigkeit der Berechtigung festlegt.
+
+Das `constraint`-Array enthält ein einzelnes Constraint-Objekt. Dieses spezifiziert, dass der Wert des `leftOperand` `spatial` (räumlich) gleich (`eq`) dem `rightOperand` `https://www.wikidata.org/wiki/Q5956` sein muss. Der beigefügte `comment` erläutert, dass sich dieser Wikidata-Eintrag auf den Landkreis Diepholz in Deutschland bezieht.
+
+In der Gesamtbetrachtung bedeutet dieses Constraint, dass die Erlaubnis zur Ausführung der digitalen Bildungsanwendung auf Nutzer beschränkt ist, die sich innerhalb des räumlichen Gebiets des Landkreises Diepholz aufhalten. Diese Art der räumlichen Einschränkung kann beispielsweise relevant sein, um den Zugriff auf bestimmte Medienobjekt auf die Zugehörigkeit zum Medienzentrum eines Landkreises zu beschränken.
+
+### Dynamische Lizenz
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für eine dynamisch zugeteilte Lizenz" showLineNumbers>{Dynamisch}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für eine dynamisch zugeteilte Lizenz" showLineNumbers>{DynamischLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses ODRL 2.1-Agreement-Beispiel, das für den Einsatz im deutschen Bildungssystem relevant sein kann, demonstriert eine mengenmäßige Beschränkung der Ausführungsberechtigung. Die grundlegende Struktur des ODRL-Dokuments bleibt dabei erhalten, wird jedoch um einen zusätzlichen Kontext erweitert.
+
+Innerhalb des `permission`-Arrays ist die erlaubte `action` weiterhin als `execute` definiert. Zusätzlich enthält dieses Berechtigungsobjekt ein `constraint`-Objekt, das eine Bedingung für die Ausführung festlegt.
+
+Das `constraint`-Objekt spezifiziert, dass der Wert des `leftOperand` `concurrentUses` kleiner oder gleich (`lteq`) dem `rightOperand` `100` sein muss. Dieser Begriff repräsentiert die Anzahl der gleichzeitig erlaubten Nutzungen des Zielobjekts.
+
+#### JSON-LD
+
+Die `@context`-Liste enthält hier neben dem Standard-ODRL-Kontext einen weiteren Eintrag. Dieser definiert ein Präfix `ex` für den Namespace `http://example.com/odrl/`. Dies ermöglicht die Verwendung von Begriffen aus diesem benutzerdefinierten Namespace innerhalb der ODRL-Richtlinie.
+
+Das `constraint`-Objekt spezifiziert, dass der Wert des `leftOperand` `ex:concurrentUses` kleiner oder gleich (`lteq`) dem `rightOperand` `100` sein muss. Hierbei bezieht sich `ex:concurrentUses` auf einen Begriff aus dem zuvor definierten benutzerdefinierten Namespace `http://example.com/odrl/`. Dort wird definiert, dass dieser Begriff die Anzahl der gleichzeitigen Nutzungen des Zielobjekts repräsentiert.
+
+In der Gesamtbetrachtung bedeutet dieses Constraint, dass die Erlaubnis zur Ausführung der digitalen Anwendung auf maximal 100 gleichzeitige Nutzungen beschränkt ist. Diese Art der mengenmäßigen Beschränkung kann beispielsweise verwendet werden, um die Lizenzbedingungen hinsichtlich der Anzahl paralleler Zugriffe auf eine digitale Ressource durchzusetzen.
+
+## Kombination von Lizenzbedingungen
+
+<Tabs groupId="accept-type" queryString>
+  <TabItem value="json" label="JSON">
+    <CodeBlock language="js" title="Beispiel für eine Kombination von Lizenzbedingungen" showLineNumbers>{Kombiniert}</CodeBlock>
+  </TabItem>
+  <TabItem value="json-ld" label="JSON LD">
+    <CodeBlock language="js" title="Beispiel für eine Kombination von Lizenzbedingungen" showLineNumbers>{KombiniertLD}</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Dieses umfassende ODRL 2.1-Agreement-Beispiel kombiniert mehrere Aspekte der Rechteverwaltung, indem es sowohl zeitliche Einschränkungen als auch eine präzise Definition des Berechtigten für die Ausführungsaktion festlegt. Die grundlegende Struktur des ODRL-Dokuments bleibt dabei erhalten, wobei nun sowohl das `constraint`- als auch das `assignee`-Attribut detaillierte Bedingungen enthalten.
+
+Innerhalb des `permission`-Arrays wird die erlaubte `action` als `execute` definiert, was die Berechtigung zur Ausführung der digitalen Anwendung umfasst. Das Attribut `constraint` enthält ein Array mit zwei Constraint-Objekten, die, wie bereits im vorherigen Beispiel erläutert, den Gültigkeitszeitraum der Berechtigung auf das Schuljahr 2023/2024 (vom 1. August 2023, 00:00 Uhr MESZ, bis zum 1. August 2024, 00:00 Uhr MESZ exklusive) beschränken.
+
+Das Attribut `assignee` definiert, wer zur Ausführung der Anwendung berechtigt ist. Hier finden sich zwei Arten von Verfeinerungen. Zum einen gibt es ein `partOf`-Objekt mit einem `refinement`-Array, das besagt, dass der Berechtigte Teil einer Organisation sein muss, deren Kennung (`urn:schulconnex:de:personenkontext:organisation:kennung`) dem Wert `NI_12345` entspricht. Zum anderen gibt es ein direkt im `assignee`-Objekt enthaltenes `refinement`-Array, das festlegt, dass die Rolle der berechtigten Person (`urn:schulconnex:de:personenkontext:rolle`) den Wert `lehr` haben muss.
+
+In der Kombination bedeuten diese Bedingungen, dass die Erlaubnis zur Ausführung der digitalen Bildungsanwendung ausschließlich den Lehrkräften (Rolle `lehr`) der Organisation mit der Kennung `NI_12345` gewährt wird, und dies auch nur innerhalb des definierten Zeitraums des Schuljahres 2023/2024. Dieses Beispiel zeigt, wie ODRL genutzt werden kann, um sehr spezifische und kontextbezogene Zugriffsrechte auf digitale Ressourcen im Bildungsbereich zu definieren.

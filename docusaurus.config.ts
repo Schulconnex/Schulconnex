@@ -128,6 +128,23 @@ const config: Config = {
             ],
           },
           {
+            type: 'dropdown',
+            label: 'Nutzungsrechte',
+            position: 'left',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'spezPoliciesSidebar',
+                label: 'Spezifikation',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'apiPoliciesSidebarOpenAPIDocs',
+                label: 'API Nutzungsrechte',
+              },
+            ],
+          },
+          {
             type: 'docsVersionDropdown',
             position: 'right',
             dropdownActiveClassDisabled: true,
@@ -222,7 +239,15 @@ const config: Config = {
               groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
             },
             template: 'src/generators/markdown/template.mustache',
-          }
+          },
+          apiPolicies: { // is considered the <id> that you will reference in the CLI
+            specPath: "src/openapi/api-policies.yaml", // path or URL to the OpenAPI spec
+            outputDir: "docs/generated/openapi/policies", // output directory for generated *.mdx and sidebar.js files
+            sidebarOptions: {
+              groupPathsBy: "tag", // generate a sidebar.js slice that groups operations by tag
+            },
+            template: 'src/generators/markdown/template.mustache',
+          },
         }
       },
     ]
