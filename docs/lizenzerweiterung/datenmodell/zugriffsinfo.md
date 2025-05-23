@@ -26,6 +26,7 @@ Nachfolgend sind die Datenmodelle einer Zugriffsinfo je nach Typ dargestellt.
 
 Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung
 --- | --- | --- | --- | ---
+type | String (UTF-8) | 1 | nein | Attribut `type` wird als Diskriminator genutzt und gibt das Datenmodell für die weiteren Attribute vor.
 licenseKey | String (UTF-8) | 1 | nein | Der Lizenz-Schlüssel.
 
 #### Beispiel JSON des Datentyps ZugriffsinfoContainer mit Zugriffsinfo vom Typ "urn:scx:lizenz:zugriffsinfo:licensekey"
@@ -36,6 +37,7 @@ licenseKey | String (UTF-8) | 1 | nein | Der Lizenz-Schlüssel.
         {
             "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:licensekey",
                 "licenseKey": "5f49ff7f-76a6-4d8b-ae40-e1aba0d57f21"
             }
         }
@@ -47,6 +49,7 @@ licenseKey | String (UTF-8) | 1 | nein | Der Lizenz-Schlüssel.
 
 Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung
 --- | --- | --- | --- | ---
+type | String (UTF-8) | 1 | nein | Attribut `type` wird als Diskriminator genutzt und gibt das Datenmodell für die weiteren Attribute vor.
 temporaryURL | String (UTF-8) | 1 | nein | Die temporäre URL.
 gueltigkeit_von | String (datetime) | 1 | nein | Datum und Uhrzeit des Beginn der Gültigkeit. Das Format von Gültigkeiten ist YYYY-MM-DD'T'hh:mm'Z' als UTC-Zeitpunkt.
 gueltigkeit_bis | String (datetime) | 1 | nein | Datum und Uhrzeit des Ende der Gültigkeit. Das Format von Gültigkeiten ist YYYY-MM-DD'T'hh:mm'Z' als UTC-Zeitpunkt.
@@ -59,6 +62,7 @@ gueltigkeit_bis | String (datetime) | 1 | nein | Datum und Uhrzeit des Ende der 
         {
             "type": "urn:scx:lizenz:zugriffsinfo:temporaryurl",
             "value": {
+                "type": "urn:scx:lizenz:zugriffsinfo:temporaryurl",
                 "temporaryURL": "https://exampleprovider.tld/tmp/330dccf5-c8e0-4b3c-80e3-5d2b0c9ab6a5",
                 "gueltigkeit_von": "2024-04-01",
                 "gueltigkeit_bis": "2024-04-30"
