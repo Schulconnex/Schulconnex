@@ -30,3 +30,7 @@ properties:
         anyOf:
           - $ref: './components-policies-Zugriffsinfo-licenseKey.yaml'
           - $ref: './components-policies-Zugriffsinfo-object.yaml'
+    example:
+      type: license_key
+      value:
+        licenseKey: 5f49ff7f-76a6-4d8b-ae40-e1aba0d57f21
