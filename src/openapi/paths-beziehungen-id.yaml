@@ -4,7 +4,7 @@ get:
   operationId: readBeziehungId
   security:
     - oAuthForServices: []
-  summary: Beziehung zur angeforderten ID.
+  summary: Beziehung zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt gibt die Beziehung zur angegebenen `beziehung.id` zurück.
 
@@ -67,7 +67,7 @@ delete:
   operationId: deleteBeziehungId
   security:
     - oAuthForServices: []
-  summary: Löscht die Beziehung zur angeforderten ID.
+  summary: Löscht die Beziehung zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt löscht die Beziehung zur angegebenen `beziehung.id`.
 

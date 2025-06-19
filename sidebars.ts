@@ -260,6 +260,77 @@ const sidebars: SidebarsConfig = {
         'praxisleitfaden/ablauf-löschen',
       ],
     },
+    'versionshistorie',
+  ],
+
+  spezPoliciesSidebar: [
+    {
+      type: 'html',
+      value: '<span style="font-weight: 600;">Nutzungsrechte-API</span>',
+      defaultStyle: true,
+    },
+    {
+      type: 'doc',
+      id: 'lizenzerweiterung/einleitung',
+      label: 'Allgemeines',
+    },
+    // {
+    //   type: 'category',
+    //   label: 'Allgemeines',
+    //   link: {
+    //     type: 'doc',
+    //     id: 'lizenzerweiterung/einleitung',
+    //   },
+    //   items: [
+    //     'lizenzerweiterung/allgemeines/motivation',
+    //     'lizenzerweiterung/allgemeines/einfuehrung-zu-odrl',
+    //     'lizenzerweiterung/allgemeines/mapping-zu-spezifikationen',
+    //     'lizenzerweiterung/allgemeines/nutzung-von-identifikatoren',
+    //   ]
+    // },
+    // {
+    //   type: 'category',
+    //   label: 'Datenmodell',
+    //   items: [
+    //     'lizenzerweiterung/datenmodell/nutzungsrecht',
+    //     'lizenzerweiterung/datenmodell/providerfehlermeldung',
+    //     'lizenzerweiterung/datenmodell/zugriffsinfo',
+    //   ],
+    // },
+    {
+      type: 'category',
+      label: 'Nutzung der REST-API',
+      link: {
+        type: 'doc',
+        id: 'lizenzerweiterung/schnittstellen/schnittstellen',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'lizenzerweiterung/schnittstellendefinition/schnittstellendefinition',
+          label: 'Schnittstellendefinition'
+        },
+        {
+          type: 'doc',
+          id: 'lizenzerweiterung/schnittstellendefinition/http-statuscodes',
+          label: 'HTTP-Statuscodes'
+        },
+        // {
+        //   type: 'doc',
+        //   id: 'lizenzerweiterung/schnittstellendefinition/custom-header',
+        //   label: 'Teilweise Fehlerhafte Verarbeitung'
+        // }
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Praxisleitfaden',
+      items: [
+        // 'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
+        // 'lizenzerweiterung/praxisleitfaden/semantik',
+        'lizenzerweiterung/praxisleitfaden/odrl-beispiele',
+      ],
+    },
   ],
 
   apiDiensteSidebarOpenAPIDocs: [
@@ -605,6 +676,26 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+
+  apiPoliciesSidebarOpenAPIDocs: [
+    {
+      type: 'category',
+      label: 'API Nutzungsrechte',
+      link: {
+        type: 'doc',
+        id: 'generated/openapi/policies/schulconnex',
+      },
+      items: [
+        {
+          type: "doc",
+          id: "generated/openapi/policies/read-policies-info",
+          label: "/policies-info",
+          className: "api-method get",
+        },
+      ],
+    },
+  ],
 };
+
 
 export default sidebars;

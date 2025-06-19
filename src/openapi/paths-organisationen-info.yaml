@@ -4,7 +4,7 @@ get:
   operationId: readOrganisationenInfo
   security:
     - oAuthForUser: []
-  summary: Organisationen auflisten.
+  summary: Organisationen auflisten
   description: |
     Die Schnittstelle /organisationen-info ermöglicht die Auflistung von Organisationen durch Dienste.
     Der Zugriff erfordert die Client Credentials eines Dienstes.

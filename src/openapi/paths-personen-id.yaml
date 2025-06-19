@@ -4,7 +4,7 @@ get:
   operationId: readPersonId
   security:
     - oAuthForServices: []
-  summary: Personendatensatz zur angeforderten ID.
+  summary: Personendatensatz zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt liefert den Personendatensatz zur angeforderten ID.
 
@@ -64,7 +64,7 @@ put:
   operationId: updatePersonId
   security:
     - oAuthForServices: []
-  summary: Aktualisiert den Personendatensatz der angegebenen ID.
+  summary: Aktualisiert den Personendatensatz der angegebenen ID
   description: |
     Dieser Schnittstellenendpunkt aktualisiert den Personendatensatz der angegebenen ID.
 
@@ -155,7 +155,7 @@ delete:
   operationId: deletePersonId
   security:
     - oAuthForServices: []
-  summary: Löscht die Person zur angeforderten ID.
+  summary: Löscht die Person zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt löscht die Person zur angeforderten ID.
 

@@ -5,7 +5,7 @@ post:
   operationId: createGruppeIdGruppenzugehoerigkeit
   security:
     - oAuthForServices: []
-  summary: Erstellen einer Gruppenzugehörigkeit.
+  summary: Erstellen einer Gruppenzugehörigkeit
   description: |
     Dieser Schnittstellenendpunkt erstellt eine Gruppenzugehörigkeit zur angegebenen
     Gruppe per ID `gruppe.id`.
@@ -85,7 +85,7 @@ get:
   operationId: readGruppeIdGruppenzugehoerigkeiten
   security:
     - oAuthForServices: []
-  summary: Auflistung von Gruppenzugehörigkeiten zur Gruppe.
+  summary: Auflistung von Gruppenzugehörigkeiten zur Gruppe
   description: |
     Dieser Schnittstellenendpunkt gibt die Gruppenzugehörigkeiten zur angegebenen `gruppe.id` zurück.
 

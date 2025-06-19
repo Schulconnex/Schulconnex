@@ -4,7 +4,7 @@ get:
   operationId: readPersonInfo
   security:
     - oAuthForUser: []
-  summary: Informationen der angemeldeten Person.
+  summary: Informationen der angemeldeten Person
   description: |
     Dieser Endpunkt bezieht sich nur auf die im Sicherheitskontext angemeldete Person und
     dient somit dem Abruf der Informationen der jeweiligen Person.

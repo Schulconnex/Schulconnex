@@ -4,7 +4,7 @@ post:
   operationId: createGruppe
   security:
     - oAuthForServices: []
-  summary: Erstellen einer Gruppe.
+  summary: Erstellen einer Gruppe
   description: |
     Mittels dieser Schnittstelle wird ein neuer Datensatz „Gruppe” erstellt.
 
@@ -71,7 +71,7 @@ get:
   operationId: readGruppendatensaetze
   security:
     - oAuthForServices: []
-  summary: Gruppendatensätzen des Quellsystemanbieters.
+  summary: Gruppendatensätzen des Quellsystemanbieters
   description: |
     Dieser Schnittstellenendpunkt gibt ein Array von Gruppendatensätzen zurück, die vom
     Anfrager ausgelesen werden dürfen.

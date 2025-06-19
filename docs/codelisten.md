@@ -11,6 +11,26 @@ Alle Codes müssen als nicht abhängig von Groß-/Kleinschreibung interpretiert 
 (sind nicht Case-sensitiv). Die Organisationsarten `"SCHULE"`, `"schule"`, `"Schule"` oder
 auch `"ScHuLe"` müssen als identisch angenommen werden.
 
+### Zukünftige Nutzung URI-basierter Codelisten
+
+Schulconnex plant ab der Version 2.0 URI-basierte Codelisten zu nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Decription Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
+
+URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorteilen:
+
+* __Eindeutige Identifikation__: Jede Ressource erhält eine eindeutige URI, die Verwechslungen und Missverständnisse verhindert.
+
+* __Interoperabilität__: URIs sind universell und können problemlos zwischen unterschiedlichen Systemen und Plattformen ausgetauscht werden. Dies erleichtert die Integration und den Datenaustausch zwischen unterschiedlichen Systemen.
+
+* __Wiederverwendbarkeit__: Einmal definierte URI-Codelistenwerte können in unterschiedlichen Kontexten und Anwendungen wiederverwendet werden, was die Konsistenz und Effizienz erhöht.
+
+* __Erweiterbarkeit__: URI-basierte Codelisten können leicht erweitert werden, indem neue URI-Codelistenwerte hinzugefügt werden, ohne bestehende Systeme zu beeinträchtigen.
+
+* __Lesbarkeit und Verständlichkeit__: URI-Codelistenwerte sind oft menschenlesbar und können leicht maschinell interpretiert werden, was die Dokumentation und das Debugging erleichtert.
+
+* __Standardisierung__: Die Verwendung von URI-Codelistenwerte fördert die Einhaltung von Standards und Best-Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
+
+Als technisches Format ist geplant, für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifische Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, womit die Bundesländer ihre spezifischen Anforderungen abbilden können.
+
 ## Beziehungen
 
 Beziehungen ist eine Liste von Beziehungen, welche zwischen zwei Personen innerhalb von
@@ -55,7 +75,7 @@ Code | Bezeichnung | Bemerkung
 --- | --- | ---
 E-Mail | E-Mail | E-Mail-Adressen müssen [RFC 5322][2] (Internet Message Format) erfüllen, um akzeptiert zu werden, anderenfalls wird ein 400/06 Fehler geliefert.
 
-[2]: https://www.rfc-editor.org/rfc/rfc5322
+[2]: https://datatracker.ietf.org/doc/html/rfc5322
 
 ## Fächerkanon
 
@@ -222,13 +242,16 @@ HJ | Schulhalbjahr
 
 Basierend auf [RFC 5646][1]. Beispiele finden sich in nachfolgender Tabelle.
 
-[1]: https://www.rfc-editor.org/rfc/rfc5646
+[1]: https://datatracker.ietf.org/doc/html/rfc5646
 
 Code | Bezeichnung
 --- | ---
 de | deutsch
 de-XX | deutsch, Anrede du, einfache Sprache
 en-GB | englisch (Vereinigtes Königreich)
+
+Hinweis: Dies ist die aktuell vom schulischen Anmeldeservice des Landes Niedersachsen (moin.schule)
+unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
 
 ## Organisationsbeziehungen
 
@@ -243,6 +266,9 @@ Code | Bezeichnung
 --- | ---
 Schule | Schule
 Anbieter | Anbieter
+Medienzentrum | Medienzentrum
+Behoerde | Behörde
+SchTrae | Schulträger
 Sonstige | sonstige Organisationen / Einrichtungen
 
 ## Personenstatus

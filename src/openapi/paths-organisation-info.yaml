@@ -4,7 +4,7 @@ get:
   operationId: readOrganisationInfo
   security:
     - oAuthForUser: []
-  summary: Informationen zu der Organisation des Quellsystems.
+  summary: Informationen zu der Organisation des Quellsystems
   description: |
     Die Schnittstelle `/organisation-info` bezieht sich auf das Anfordern von Informationen
     zu der Organisation des Quellsystems. Die benötigten Daten werden bei der Anfrage mit
