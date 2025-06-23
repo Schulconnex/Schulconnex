@@ -26,6 +26,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'schnittstellen/vendor-extensions',
         'schnittstellen/vendor-extensions-best-practices',
+        'schnittstellen/vendor-endpoints',
       ]
     },
     'codelisten',
