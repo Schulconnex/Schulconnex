@@ -3,17 +3,28 @@
 ## § 1 Information über die Verarbeitung personenbezogener Daten
 
 Im Folgenden informieren wir über die Verarbeitung personenbezogener Daten bei Nutzung der Website https://schulconnex.de. Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z. B. Personalien, Name, Adresse, Geburtsdatum, E-Mail-Adressen, IP-Adresse, Dienstort, Zugehörigkeit zu einer Organisation, Gruppenzugehörigkeit, etc.
-Die technische Bereitstellung (Hosting) der Website erfolgt unter Einsatz von GitHub Pages, einem Service des Anbieters GitHub, Inc. Datenverarbeitungen, welche durch den Plattformbetreiber im Rahmen des Hostings durchgeführt werden, unterfallen nicht dem Verantwortungsbereich von n-21.
+Die technische Bereitstellung (Hosting) der Website erfolgt unter Einsatz von GitHub Pages, einem Service des Anbieters GitHub, Inc. Datenverarbeitungen, welche durch den Plattformbetreiber im Rahmen des Hostings durchgeführt werden, unterfallen nicht dem Verantwortungsbereich des FWU.
 
 Verantwortlicher gem. Art. 4 Abs. 7 Datenschutz-Grundverordnung (DSGVO) ist
 
-    Landesinitiative n-21: Schulen in Niedersachsen online e.V. \
-    Schiffgraben 27, 30159 Hannover \
-    Telefon: 0511/3536621-0 \
-    Telefax: 0511/3536621-99 \
-    E-Mail: info@n-21.de
+FWU – Institut für Film und Bild in Wissenschaft und Unterricht gemeinnützige GmbH
+Bavariafilmplatz 3
+82031 Grünwald, Deutschland
+Handelsregister/Nr.: B 2636 beim Amtsgericht München
+Geschäftsführer: Andreas Koschinsky, Rüdiger Nill
++49 (0) 89 6497 – 1
+info@fwu.de
 
-Unseren Datenschutzbeauftragten erreichen Sie unter der oben genannten Postanschrift mit dem Zusatz – Datenschutzbeauftragter – oder unter der E-Mail-Adresse: kontakt-dsb@althammer-kill.de
+Nachfolgend mit: „FWU“ abgekürzt
+
+
+Datenschutzbeauftragter der FWU Institut für Film und Bild gGmbH:
+
+Michael Plankemann
+c/o activeMind AG
+Potsdamer Straße 3, 80802 München
+Tel: 089 – 91 92 94 900
+E-Mail: fwu@activemind.de
 
 ### Verantwortlichkeit der Plattformbetreiber
 
@@ -31,7 +42,7 @@ The Neatherlands
 
 Der Datenschutzbeauftrage von GitHub, Inc. kann unter dpo@github.com kontaktiert werden.
 
-Auf die Verarbeitung personenbezogener Daten durch den Plattformbetreiber kann die Landesinitiative n-21 nur begrenzt einwirken. An den von uns beeinflussbaren Stellen der Datenverarbeitung des Plattformbetreibers wirken wir im Rahmen der uns zur Verfügung stehenden Möglichkeiten auf den datenschutzgerechten Umgang hin. Durch den begrenzten Zugang zur Datenverarbeitung durch die Plattformbetreiber können wir jedoch nicht vollständig aufzeigen, welche Daten dieser verarbeitet.
+Auf die Verarbeitung personenbezogener Daten durch den Plattformbetreiber kann die FWU nur begrenzt einwirken. An den von uns beeinflussbaren Stellen der Datenverarbeitung des Plattformbetreibers wirken wir im Rahmen der uns zur Verfügung stehenden Möglichkeiten auf den datenschutzgerechten Umgang hin. Durch den begrenzten Zugang zur Datenverarbeitung durch die Plattformbetreiber können wir jedoch nicht vollständig aufzeigen, welche Daten dieser verarbeitet.
 
 Der Plattformbetreiber betreibt die gesamte IT-Infrastruktur des Dienstes und hält eigene Datenschutzbestimmungen vor. Der Plattformbetreiber unterhält, sofern Sie ein registrierter User des Dienstes sind, ein eigenes Nutzerverhältnis zu Ihnen.
 
@@ -51,11 +62,15 @@ hinsichtlich der vom jeweiligen Verantwortlichen durchgeführten Verarbeitungen.
 
 2. Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren (Art. 77 DSGVO). Zuständige Aufsichtsbehörde ist:
 
-    Der Landesbeauftragte für den Datenschutz Niedersachsen \
-    Prinzenstraße 5, 30159 Hannover \
-    Telefon: 0511-120 4500 \
-    Fax: 0511-120 4599 \
-    E-Mail: poststelle@lfd.niedersachsen.de
+Bayerisches Landesamt für Datenschutzaufsicht
+
+Diese können Sie unter folgenden Kontaktdaten erreichen:
+
+Adresse: Promenade 18, 91522 Ansbach
+Postanschrift: Postfach 1349, 91504 Ansbach
+Telefon: 0981/180093-0
+E-Mail: poststelle@lda.bayern.de
+Internet: https://www.lda.bayern.de
 
 ## § 3 Erhebung personenbezogener Daten beim Aufruf von [schulconnex.de](https://schulconnex.de)
 
@@ -69,12 +84,12 @@ Gemäß den von vom Anbieter GitHub bereitgestellten Informationen handelt es si
 
 Weitere Informationen dazu können Sie der allgemeinen Datenschutzerklärung von GitHub entnehmen. Diese enthält auch weitere Informationen zu Rechtsgrundlagen, Verarbeitungszwecken und möglichen Datenübermittlungen an weitere Empfänger.
 
-### Verarbeitung personenbezogener Daten durch die Landesinitiative n-21
+### Verarbeitung personenbezogener Daten durch das FWU
 
-Bei der Website [schulconnex.de](https://schulconnex.de) handelt es sich um eine sogenannte statische Website. Die Landesinitiative n-21 erhebt oder speichert bei Ihrem Besuch keine personenbezogenen Daten. Auf die vom Plattformbetreiber erhobenen personenbezogenen Daten haben wir keinen Einfluss und erhalten keinen Zugriff.
+Bei der Website [schulconnex.de](https://schulconnex.de) handelt es sich um eine sogenannte statische Website. Die FWU erhebt oder speichert bei Ihrem Besuch keine personenbezogenen Daten. Auf die vom Plattformbetreiber erhobenen personenbezogenen Daten haben wir keinen Einfluss und erhalten keinen Zugriff.
 
 ### Empfänger
 
 Informationen zur Weitergabe der durch GitHub erhobenen personenbezogenen Daten und zu Datentransfers in Drittländer finden Sie [hier](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) bzw. [hier](https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement#lawful-bases-for-processing-personal-data-applicable-to-eea-and-uk-end-users).
 
-Die Landesinitiative n-21 übermittelt keine personenbezogenen Daten an Dritte, da wir im Rahmen des Websitebesuchs keine personenbezogenen Daten erheben (s.o.).
+Die FWU übermittelt keine personenbezogenen Daten an Dritte, da wir im Rahmen des Websitebesuchs keine personenbezogenen Daten erheben (s.o.).
