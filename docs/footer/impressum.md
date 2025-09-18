@@ -1,16 +1,16 @@
 # Impressum
 
-FWU Institut für Film und Bild
-in Wissenschaft und Unterricht gemeinnützige GmbH
-Bavariafilmplatz 3
+FWU Institut für Film und Bild \
+in Wissenschaft und Unterricht gemeinnützige GmbH \
+Bavariafilmplatz 3 \
 82031 Grünwald
 
-Telefon: 089/6497-1
-Telefax: 089/6497-300
-Internet: www.fwu.de
+Telefon: 089/6497-1 \
+Telefax: 089/6497-300 \
+Internet: www.fwu.de \
 E-Mail: info@fwu.de
 
-Handelsregister: Amtsgericht München B 2636
+Handelsregister: Amtsgericht München B 2636 \
 Umsatzsteuer-Identifikationsnummer: DE 129521719 
 
 ## Vertretungsberechtigte
@@ -21,13 +21,13 @@ Sitzland ist die Bundesrepublik Deutschland.
 
 ## Zuständige Aufsichtsbehörde
 
-Bayerische Landeszentrale für neue Medien (BLM)
-Rechtsfähige Anstalt des öffentlichen Rechts
-Heinrich-Lübke-Str. 27
+Bayerische Landeszentrale für neue Medien (BLM) \
+Rechtsfähige Anstalt des öffentlichen Rechts \
+Heinrich-Lübke-Str. 27 \
 81737 München
 
-Telefon: +49 (0)89/6 38 08 – 0
-Fax: +49 (0)89/6 38 08 – 140
+Telefon: +49 (0)89/6 38 08 – 0 \
+Fax: +49 (0)89/6 38 08 – 140 \
 E-Mail: info@blm.de
 
 ## Haftungsausschluss

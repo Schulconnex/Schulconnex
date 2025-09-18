@@ -7,12 +7,16 @@ Die technische Bereitstellung (Hosting) der Website erfolgt unter Einsatz von Gi
 
 Verantwortlicher gem. Art. 4 Abs. 7 Datenschutz-Grundverordnung (DSGVO) ist
 
-FWU – Institut für Film und Bild in Wissenschaft und Unterricht gemeinnützige GmbH
-Bavariafilmplatz 3
+FWU Institut für Film und Bild \
+in Wissenschaft und Unterricht gemeinnützige GmbH \
+Bavariafilmplatz 3 \
 82031 Grünwald, Deutschland
-Handelsregister/Nr.: B 2636 beim Amtsgericht München
-Geschäftsführer: Andreas Koschinsky, Rüdiger Nill
-+49 (0) 89 6497 – 1
+
+Handelsregister: Amtsgericht München B 2636 \
+Umsatzsteuer-Identifikationsnummer: DE 129521719 
+
+Geschäftsführer: Andreas Koschinsky, Rüdiger Nill \
++49 (0) 89 6497 – 1 \
 info@fwu.de
 
 Nachfolgend mit: „FWU“ abgekürzt
@@ -20,10 +24,11 @@ Nachfolgend mit: „FWU“ abgekürzt
 
 Datenschutzbeauftragter der FWU Institut für Film und Bild gGmbH:
 
-Michael Plankemann
-c/o activeMind AG
-Potsdamer Straße 3, 80802 München
-Tel: 089 – 91 92 94 900
+Michael Plankemann \
+c/o activeMind AG \
+Potsdamer Straße 3 \
+80802 München \
+Tel: 089 – 91 92 94 900 \
 E-Mail: fwu@activemind.de
 
 ### Verantwortlichkeit der Plattformbetreiber
@@ -66,10 +71,10 @@ Bayerisches Landesamt für Datenschutzaufsicht
 
 Diese können Sie unter folgenden Kontaktdaten erreichen:
 
-Adresse: Promenade 18, 91522 Ansbach
-Postanschrift: Postfach 1349, 91504 Ansbach
-Telefon: 0981/180093-0
-E-Mail: poststelle@lda.bayern.de
+Adresse: Promenade 18, 91522 Ansbach \
+Postanschrift: Postfach 1349, 91504 Ansbach \
+Telefon: 0981/180093-0 \
+E-Mail: poststelle@lda.bayern.de \
 Internet: https://www.lda.bayern.de
 
 ## § 3 Erhebung personenbezogener Daten beim Aufruf von [schulconnex.de](https://schulconnex.de)
