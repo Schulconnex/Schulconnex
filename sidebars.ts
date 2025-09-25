@@ -174,6 +174,18 @@ const sidebars: SidebarsConfig = {
         'schnittstellen/oidc-claims',
       ],
     },
+        {
+      type: 'category',
+      label: 'Praxisleitfaden für die Implementierung',
+      link: {
+        type: 'doc',
+        id: 'praxisleitfaden/praxisleitfaden-dienste',
+      },
+      items: [
+        'praxisleitfaden/ablauf-löschen-dienste',
+      ],
+    },
+
   ],
 
   spezQuellsystemeSidebar: [
