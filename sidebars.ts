@@ -19,7 +19,14 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
   specSidebar: [
     'einleitung',
-    'allgemeines',
+      {
+      type: 'category',
+      label: 'Allgemeines',
+      items: [
+        'allgemeines-kernanwendungsfälle',
+        'allgemeines-datenschutz',
+      ]
+    },
     {
       type: 'category',
       label: 'Erweiterungen',
