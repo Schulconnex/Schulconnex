@@ -10,8 +10,6 @@ von Schulconnex sind die Synchronisation von Identitäten und schulischen Kontex
 Schulverwaltungssystemen und schulischen Identitätsverwaltungssystemen (Schulconnex für Quellsysteme) und die Bereitstellung
 von schulischen Kontextdaten von Nutzerinnen und Nutzern für digitale Bildungsmedien (Schulconnex für Dienste).
 
-Weitere Informationen bei der [Landesinitiative n-21](https://www.n-21.de/portal/seiten/moin-schule-900000111-10056.html).
-
 ## Abhängigkeiten
 
 * Node.js / npm
