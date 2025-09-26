@@ -20,23 +20,23 @@
     "validate-openapi": "npx @redocly/cli lint src/openapi/api-dienste.yaml src/openapi/api-qs.yaml"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.4.0",
-    "@docusaurus/preset-classic": "^3.4.0",
-    "@docusaurus/theme-mermaid": "^3.4.0",
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
+    "@docusaurus/theme-mermaid": "^3.8.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
-    "docusaurus-plugin-openapi-docs": "^3.0.1",
-    "docusaurus-theme-openapi-docs": "^3.0.1",
+    "docusaurus-plugin-openapi-docs": "^4.5.1",
+    "docusaurus-theme-openapi-docs": "^4.5.1",
     "prism-react-renderer": "^2.3.0",
     "raw-loader": "^4.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.4.0",
-    "@docusaurus/tsconfig": "^3.4.0",
-    "@docusaurus/types": "^3.4.0",
-    "@redocly/cli": "^1.19.0",
+    "@docusaurus/module-type-aliases": "^3.8.1",
+    "@docusaurus/tsconfig": "^3.8.1",
+    "@docusaurus/types": "^3.8.1",
+    "@redocly/cli": "^2.1.0",
     "prettier": "^3.2.5",
     "typescript": "~5.2.2"
   },
