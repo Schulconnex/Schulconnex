@@ -3,7 +3,7 @@
 ## § 1 Information über die Verarbeitung personenbezogener Daten
 
 Im Folgenden informieren wir über die Verarbeitung personenbezogener Daten bei Nutzung der Website https://schulconnex.de. Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z. B. Personalien, Name, Adresse, Geburtsdatum, E-Mail-Adressen, IP-Adresse, Dienstort, Zugehörigkeit zu einer Organisation, Gruppenzugehörigkeit, etc.
-Die technische Bereitstellung (Hosting) der Website erfolgt unter Einsatz von GitHub Pages, einem Service des Anbieters GitHub, Inc. Datenverarbeitungen, welche durch den Plattformbetreiber im Rahmen des Hostings durchgeführt werden, unterfallen nicht dem Verantwortungsbereich des FWU.
+Die technische Bereitstellung (Hosting) der Website erfolgt unter Einsatz von GitHub Pages, einem Service des Anbieters GitHub, Inc. Datenverarbeitungen, welche durch den Plattformbetreiber im Rahmen des Hostings durchgeführt werden, unterfallen nicht dem Verantwortungsbereich der FWU Institut für Film und Bild in Wisschenaft und Unterricht gGmbH (nachfolgend mit: „FWU“ abgekürzt).
 
 Verantwortlicher gem. Art. 4 Abs. 7 Datenschutz-Grundverordnung (DSGVO) ist
 
@@ -19,7 +19,6 @@ Geschäftsführer: Andreas Koschinsky, Rüdiger Nill \
 +49 (0) 89 6497 – 1 \
 info@fwu.de
 
-Nachfolgend mit: „FWU“ abgekürzt
 
 
 Datenschutzbeauftragter der FWU Institut für Film und Bild gGmbH:

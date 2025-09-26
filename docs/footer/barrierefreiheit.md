@@ -2,7 +2,7 @@
 
 Das FWU Institut für Film und Bild legt großen Wert auf die barrierefreie Nutzbarkeit seiner Angebote. Als öffentliche Stelle im Sinne der Richtlinie (EU) 2016/2102 sind wir bemüht, unsere Websites und mobilen Anwendungen im Einklang mit den Bestimmungen des Behindertengleichstellungsgesetzes (BGG) sowie der Barrierefreien-Informationstechnik-Verordnung (BITV 2.0) zur Umsetzung der Richtlinie (EU) 2016/2102 barrierefrei zugänglich zu machen.
 
-Diese Erklärung zur Barrierefreiheit gilt für www.schulconnex.de.
+Diese Erklärung zur Barrierefreiheit gilt für https://schulconnex.de.
 
 ## Stand der Vereinbarkeit mit den Anforderungen
 
@@ -36,7 +36,7 @@ Mail: info@fwu.de
 
 ## Durchsetzungsverfahren 
 
-Im Rahmen eines Durchsetzungsverfahrens haben Sie die Möglichkeit, online einen [Antrag auf Prüfung der Einhaltung der Anforderungen an die Barrierefreiheit ](https://www.ldbv.bayern.de/digitalisierung/bitv.html) gem. §3 BayEGovV zu stellen.
+Im Rahmen eines Durchsetzungsverfahrens haben Sie die Möglichkeit, online einen [Antrag auf Prüfung der Einhaltung der Anforderungen an die Barrierefreiheit](https://www.ldbv.bayern.de/digitalisierung/bitv.html) gem. §3 BayEGovV zu stellen.
 
 Oder Sie wenden sich an nachfolgende Kontaktadresse der Durchsetzungsstelle:
 
