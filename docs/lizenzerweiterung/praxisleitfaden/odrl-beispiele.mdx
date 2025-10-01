@@ -36,10 +36,10 @@ Die folgenden Beispiele veranschaulichen verschiedene Nutzungsrechte im ODRL-For
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für ein ausführbares Programm" showLineNumbers>{Einzellizenz}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für ein ausführbares Programm">{Einzellizenz}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für ein ausführbares Programm" showLineNumbers>{EinzellizenzLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für ein ausführbares Programm">{EinzellizenzLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
@@ -63,10 +63,10 @@ Die Eigenschaft `@type` gibt den Typ des ODRL-Objekts an. In diesem Fall ist der
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für eine Schullizenz" showLineNumbers>{Schullizenz}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Schullizenz">{Schullizenz}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für eine Schullizenz" showLineNumbers>{SchullizenzLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Schullizenz">{SchullizenzLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
@@ -96,10 +96,10 @@ Die Struktur innerhalb des `permission`-Blocks bedeutet also, dass die Erlaubnis
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für eine Lehrerlizenz" showLineNumbers>{Lehrerlizenz}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Lehrerlizenz">{Lehrerlizenz}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für eine Lehrerlizenz" showLineNumbers>{LehrerlizenzLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Lehrerlizenz">{LehrerlizenzLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
@@ -119,10 +119,10 @@ Diese Konfiguration bedeutet also, dass die Erlaubnis zur Ausführung des durch 
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für eine Gruppenlizenz" showLineNumbers>{Gruppenlizenz}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Gruppenlizenz">{Gruppenlizenz}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für eine Gruppenlizenz" showLineNumbers>{GruppenlizenzLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Gruppenlizenz">{GruppenlizenzLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
@@ -136,13 +136,13 @@ Das Refinement-Objekt besteht aus den Attributen `leftOperand`, `operator` und `
 
 Diese Konfiguration gewährt also die Erlaubnis zur Ausführung des Ziel-Medienobjekts ausschließlich Mitgliedern derjenigen Gruppe, deren eindeutige Kennung deren Kennung, spezifiziert durch `urn:schulconnex:de:personenkontext:gruppe`, dem Wert `ffceeb40-01e6-483f-a909-382ff576b429` entspricht.
 
-{/* Das Attribut "partOf" unterhalb von "assignee" referenziert eine "PartyCollection", zu der der "assignee" gehören muss. Die PartyCollection ist hier nur durch eine Bedingung (refinement) definiert. Die Bedingungen müssen so definiert sein, dass sie nach den Regeln gemäß https://w3c.github.io/odrl/formal-semantics/#sematics-of-permission so ausgewertet werden, dass sie den tatsächlichen Lizenzvereinbarungen entsprechen. 
+{/* Das Attribut "partOf" unterhalb von "assignee" referenziert eine "PartyCollection", zu der der "assignee" gehören muss. Die PartyCollection ist hier nur durch eine Bedingung (refinement) definiert. Die Bedingungen müssen so definiert sein, dass sie nach den Regeln gemäß https://w3c.github.io/odrl/formal-semantics/#sematics-of-permission so ausgewertet werden, dass sie den tatsächlichen Lizenzvereinbarungen entsprechen.
 
-In dem Beispiel besteht das Recht, die Software auszuführen, nur dann, wenn die Person, der die Lizenz zugewiesen wurde (assignee) Teil einer Gruppe (PartyCollection) ist, für die die Bedingung (refinement) `urn:schulconnex:de:personenkontext:organisation:kennung eq NI_12345` zutrifft. Die Schulnummer muss also NI_12345 sein. 
+In dem Beispiel besteht das Recht, die Software auszuführen, nur dann, wenn die Person, der die Lizenz zugewiesen wurde (assignee) Teil einer Gruppe (PartyCollection) ist, für die die Bedingung (refinement) `urn:schulconnex:de:personenkontext:organisation:kennung eq NI_12345` zutrifft. Die Schulnummer muss also NI_12345 sein.
 
-Auf die gleiche Art und Weise könnte das Nutzungsrecht an die Zugehörigkeit zu einer Gruppe gebunden werden, z. B. durch die Bedingung `urn:schulconnex:de:personenkontext:gruppe:id eq 4230df82-0c7b-4546-be8d-a8f4efb3a343`. Ob das eine "Gruppenlizenz" im Sinne des Anbieters wäre, müsste geklärt werden. 
+Auf die gleiche Art und Weise könnte das Nutzungsrecht an die Zugehörigkeit zu einer Gruppe gebunden werden, z. B. durch die Bedingung `urn:schulconnex:de:personenkontext:gruppe:id eq 4230df82-0c7b-4546-be8d-a8f4efb3a343`. Ob das eine "Gruppenlizenz" im Sinne des Anbieters wäre, müsste geklärt werden.
 
-Für alle relevaten Schulconnex-Attribute müssten für diese Darstellung URN-Notationen definiert werden. 
+Für alle relevaten Schulconnex-Attribute müssten für diese Darstellung URN-Notationen definiert werden.
 
 Alternativ: */}
 
@@ -165,10 +165,10 @@ Alternativ: */}
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für ein gestreamtes Medium" showLineNumbers>{AVMedium}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für ein gestreamtes Medium">{AVMedium}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für ein gestreamtes Medium" showLineNumbers>{AVMediumLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für ein gestreamtes Medium">{AVMediumLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
@@ -184,10 +184,10 @@ Es ist wichtig zu beachten, dass dieses Beispiel keine Einschränkungen bezügli
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für ein bearbeitbares Office-Dokument" showLineNumbers>{Arbeitsblatt}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für ein bearbeitbares Office-Dokument">{Arbeitsblatt}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für ein bearbeitbares Office-Dokument" showLineNumbers>{ArbeitsblattLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für ein bearbeitbares Office-Dokument">{ArbeitsblattLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
@@ -207,10 +207,10 @@ Dieses Beispiel erlaubt also die Nutzung, Vervielfältigung und Weitergabe eines
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für eine Schuljahreslizenz" showLineNumbers>{Schuljahreslizenz}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Schuljahreslizenz">{Schuljahreslizenz}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für eine Schuljahreslizenz" showLineNumbers>{SchuljahreslizenzLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Schuljahreslizenz">{SchuljahreslizenzLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
@@ -228,10 +228,10 @@ In der Zusammenschau bewirken diese beiden Constraints, dass die Erlaubnis zur A
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für eine kreisweit gültige Lizenz" showLineNumbers>{Landkreis}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine kreisweit gültige Lizenz">{Landkreis}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für eine kreisweit gültige Lizenz" showLineNumbers>{LandkreisLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine kreisweit gültige Lizenz">{LandkreisLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
@@ -247,10 +247,10 @@ In der Gesamtbetrachtung bedeutet dieses Constraint, dass die Erlaubnis zur Ausf
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für eine dynamisch zugeteilte Lizenz" showLineNumbers>{Dynamisch}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine dynamisch zugeteilte Lizenz">{Dynamisch}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für eine dynamisch zugeteilte Lizenz" showLineNumbers>{DynamischLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine dynamisch zugeteilte Lizenz">{DynamischLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
@@ -272,10 +272,10 @@ In der Gesamtbetrachtung bedeutet dieses Constraint, dass die Erlaubnis zur Ausf
 
 <Tabs groupId="accept-type" queryString>
   <TabItem value="json" label="JSON">
-    <CodeBlock language="js" title="Beispiel für eine Kombination von Lizenzbedingungen" showLineNumbers>{Kombiniert}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Kombination von Lizenzbedingungen">{Kombiniert}</CodeBlock>
   </TabItem>
   <TabItem value="json-ld" label="JSON LD">
-    <CodeBlock language="js" title="Beispiel für eine Kombination von Lizenzbedingungen" showLineNumbers>{KombiniertLD}</CodeBlock>
+    <CodeBlock language="json" title="Beispiel für eine Kombination von Lizenzbedingungen">{KombiniertLD}</CodeBlock>
   </TabItem>
 </Tabs>
 
