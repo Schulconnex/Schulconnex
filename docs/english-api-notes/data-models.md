@@ -45,6 +45,7 @@ geschlecht | Sex of person. Refers to code list *Geschlecht*.
 lokalisierung | Localisation based on RFC5646. If none is provided `de` is assumed.
 vertrauensstufe | Describes the level of trust in the data provided. Refers to code list *Vertrauensstufe*.
 auskunftssperre | Blocked information. Is set to `Ja` (yes) if access to information of this person is blocked. Refers to code list *Boolean*.
+reduziertedatenverarbeitung | According to German law, data tbat has been contested by its owner can be stored until the validty of the data has been established, but can no longer be processed. This flag is set to `Ja` (yes) if the person has claimed that personal data is invalid or faulty. Refers to code list *Boolean*.
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system.
 
 ## Personenkontext

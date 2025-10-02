@@ -2,6 +2,7 @@ type: object
 required:
   - name
   - auskunftssperre
+  - reduziertedatenverarbeitung
 properties:
   referrer:
     description: Identifikations-ID einer Person. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein (z. B. eine einheitliche Personalnummer).
@@ -87,3 +88,6 @@ properties:
     $ref: './components-code-Vertrauensstufe.yaml'
   auskunftssperre:
     $ref: './components-code-Boolean.yaml'
+  reduziertedatenverarbeitung:
+    $ref: './components-code-Boolean.yaml'
+  
