@@ -39,6 +39,7 @@ Im folgenden Beispiel wird der Datensatz einer Person um die Personalnummer dies
         },
         "vertrauensstufe": "Voll",
         "auskunftssperre": "Nein",
+        "reduziertedatenverarbeitung": "Nein",
         "revision": "1"
     }
 }
