@@ -6,7 +6,7 @@ tags:
 
 # API-Autorisierung und Authentifikation bei Dienstanbietern
 
-Die Autorisierung entspricht dem Standard OAuth-Modell und ist im folgenden Sequenz-Diagramm
+Die Autorisierung entspricht dem Standard OAuth-Modell und ist im folgenden Sequenzdiagramm
 dargestellt. Danach werden die beiden Attribut-Listen „Access Token“ basierend auf der
 Spezifikation [OAuth 2.0 Authorization Framework][1] sowie „ID Token“ gemäß der Spezifikation
 [OpenID Connect 1.0][2] definiert, jeweils mit spezifischen Anpassungen.

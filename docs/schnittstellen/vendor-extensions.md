@@ -21,7 +21,7 @@ Betreiber von Schulconnex-Servern, die anbieterspezifische Attribute verwenden, 
 ## Beispiel der Erweiterung um eine Personalnummer
 
 Im folgenden Beispiel wird der Datensatz einer Person um die Personalnummer dieser Person bei der Stammorganisation erweitert.
-`schulsystemix` ist hierbei der Name eines fiktionalen Anbieters.
+`schulsystemix` ist hierbei der Name eines fikitven Anbieters.
 
 ```json
 {
@@ -30,7 +30,7 @@ Im folgenden Beispiel wird der Datensatz einer Person um die Personalnummer dies
         "mandant": "58f45270-8e54-40c6-a212-980307fc19be",
         "referrer": "125",
         "stammorganisation": "ad4a5d27-631d-49a3-bc0a-cc28614f8443",
-        "urn:schulsystemix:params:schulconnex:schemas:core:2.0:personerweiterung" {
+        "urn:schulsystemix:params:schulconnex:schemas:core:2.0:personerweiterung": {
             "personalnummer": "NM 1356"
         },
         "name": {

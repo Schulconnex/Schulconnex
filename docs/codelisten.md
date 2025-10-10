@@ -13,7 +13,7 @@ auch `"ScHuLe"` müssen als identisch angenommen werden.
 
 ### Zukünftige Nutzung URI-basierter Codelisten
 
-Schulconnex plant ab der Version 2.0 URI-basierte Codelisten zu nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Decription Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
+Schulconnex plant ab der Version 2.0 URI-basierte Codelisten zu nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Description Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
 
 URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorteilen:
 
@@ -306,7 +306,7 @@ Code | Bezeichnung
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
-Kein | keine | Der Schlüsselbesitzer ist nicht vertrauenswürdig. Diese Vertrauensstufe wird meist für Test- oder Beispiel-Nutzer vergeben.
+Kein | keine | Der Schlüsselbesitzer ist nicht vertrauenswürdig. Diese Vertrauensstufe wird meist für Test- oder Beispielnutzer vergeben.
 Unbe | unbekannt | Der Schlüsselbesitzer ist unbekannt. Diese Vertrauensstufe wird beispielsweise für selbstregistrierte Nutzer vergeben.
 Teil | vertraut | Dem Schlüsselbesitzer wird vertraut. Hierbei handelt es sich meist um Nutzer, die von Nutzern mit höherer Stufe angelegt wurden und diesen bekannt sind, sich jedoch nicht einer formalen Identifizierung unterzogen haben.
 Voll | verifiziert | Der Schlüsselbesitzer ist eindeutig und formal identifiziert (beispielsweise durch Vorlage des Personalausweises).
