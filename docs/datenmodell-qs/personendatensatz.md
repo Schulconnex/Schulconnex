@@ -21,7 +21,7 @@ personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten 
       "familienname": "von Musterfrau",
       "vorname": "Natalie Lisa",
       "initialenfamilienname": "M.",
-      "initialenvorname ": "N.",
+      "initialenvorname": "N.",
       "rufname": "Natalie",
       "titel": "Dr.",
       "anrede": [
