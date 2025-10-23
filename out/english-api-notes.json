@@ -1,0 +1,224 @@
+{
+  "findings": [
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Personenstatus",
+      "rationale": "Beschreibt den aktuellen Aktivitätsstatus eines Datensatzes für eine Person, z. B. aktiv oder inaktiv."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Geschlecht",
+      "rationale": "Bezeichnet die Optionen für das biologische oder soziale Geschlecht einer Person, wie männlich, weiblich, divers oder nicht angegeben."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Rolle",
+      "rationale": "Bezeichnet die Funktion oder Position einer Person innerhalb einer Organisation, z. B. Schüler, Lehrer oder Administrator."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Vertrauensstufe",
+      "rationale": "Gibt die Verifizierungsstufe eines digitalen Zugangsschlüssels an, von untrusted bis vollständig vertrauenswürdig."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Organisationstyp",
+      "rationale": "Bezeichnet die Art einer Organisation, z. B. Schule oder externer Anbieter von Bildungsinhalten."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Jahrgangsstufe",
+      "rationale": "Beschreibt die Klassenstufe oder das Niveau eines Schülers, für das ein Kurs geeignet ist."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Boolean",
+      "rationale": "Definiert die Begriffe für boolesche Werte, z. B. „ja” für wahr und „nein” für falsch."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Trägerschaft",
+      "rationale": "Bezeichnet die Eigentumsform einer Organisation, z. B. staatlich, kirchlich oder privat."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Lokalisierung",
+      "rationale": "Gibt Informationen zur Sprach- und Regionseinstellung an, z. B. „de-DE” für deutschsprachige Inhalte."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Gruppenbereich",
+      "rationale": "Kennzeichnet, ob die Teilnahme an einer Gruppe für Mitglieder optional („Wahl”), verpflichtend („Pflicht”) oder gemischt ist."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Gruppendifferenzierung",
+      "rationale": "Spezifiziert das Niveau eines Kurses, ähnlich wie die Unterscheidung zwischen „A-Level” und „O-Level” im britischen Bildungssystem."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Gruppentyp",
+      "rationale": "Klassifiziert eine Gruppe als „Klasse”, „Kurs” oder „Sonstiges”, wobei Klassen meist verpflichtend und Kurse oft optional sind."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Gruppenrolle",
+      "rationale": "Bezeichnet Rollen innerhalb einer Gruppe, die sich von Organisationsrollen unterscheiden, z. B. Gruppenleiter."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Lernperiode",
+      "rationale": "Bezeichnet eine Unterrichtsperiode, z. B. ein Jahr oder ein Semester."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Lernperiodentyp",
+      "rationale": "Gibt die Art oder Länge einer Unterrichtsperiode an, z. B. Jahr oder Halbjahr."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Fächerkanon",
+      "rationale": "Bezeichnet die Fächer, die in einer Klasse oder einem Kurs unterrichtet werden können, z. B. Biologie oder Französisch."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Bildungsziel",
+      "rationale": "Bezeichnet die Art der Schule basierend auf dem voraussichtlichen Abschlussniveau."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Erreichbarkeitstyp",
+      "rationale": "Bezeichnet die Art eines Kommunikationskanals, über den eine Person oder Organisation kontaktiert werden kann."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Beziehungen",
+      "rationale": "Bezeichnet die Beziehungen zwischen zwei Personen, z. B. gesetzlicher Vormund oder Betreuer."
+    },
+    {
+      "file": "docs/english-api-notes/code-lists.md",
+      "term": "Organisationsbeziehungen",
+      "rationale": "Bezeichnet die Beziehungen zwischen Organisationen, z. B. zwischen einer Schule und ihrer Aufsichtsbehörde."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Organisationstyp",
+      "rationale": "Bezeichnet die Art einer Organisation im Bildungsbereich, wie z. B. Schule oder andere relevante Einrichtungen. Siehe Code-Liste Organisationstyp."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Trägerschaft",
+      "rationale": "Bezeichnet die Eigentümerstruktur einer Organisation, z. B. staatlich oder privat. Siehe Code-Liste Trägerschaft."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Personenkontext",
+      "rationale": "Kontext einer Person innerhalb einer Organisation, der ihre Rolle und Beziehung zu dieser Organisation beschreibt."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Geschlecht",
+      "rationale": "Bezeichnet das biologische oder soziale Geschlecht einer Person. Siehe Code-Liste Geschlecht."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Vertrauensstufe",
+      "rationale": "Beschreibt das Vertrauen in die Richtigkeit der bereitgestellten Daten. Siehe Code-Liste Vertrauensstufe."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Auskunftssperre",
+      "rationale": "Kennzeichnet, ob der Zugriff auf Informationen einer Person blockiert ist. Siehe Code-Liste Boolean."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Jahrgangsstufe",
+      "rationale": "Bezeichnet die Schulklasse oder den Jahrgang, dem eine Person zugeordnet ist. Siehe Code-Liste Jahrgangsstufe."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Gruppentyp",
+      "rationale": "Bezeichnet die Art einer Gruppe, z. B. Klasse oder Kurs. Siehe Code-Liste Gruppentyp."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Gruppenbereich",
+      "rationale": "Zusätzliche Qualifizierung einer Gruppe, z. B. obligatorisch oder freiwillig. Siehe Code-Liste Gruppenbereich."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Gruppenoption",
+      "rationale": "Zusätzliche Optionen einer Gruppe, z. B. bilingual oder muttersprachlich. Siehe Code-Liste Gruppenoption."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Gruppendifferenzierung",
+      "rationale": "Spezifische Differenzierung einer Gruppe in bestimmten Bildungszweigen. Siehe Code-Liste Gruppendifferenzierung."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Bildungsziel",
+      "rationale": "Bezeichnet den Bildungszweig, dem eine Gruppe zugeordnet ist. Siehe Code-Liste Bildungsziel."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Fächerkanon",
+      "rationale": "Bezeichnet die Liste der Themen oder Fächer, die in einer Gruppe behandelt werden. Siehe Code-Liste Fächerkanon."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Lernperiode",
+      "rationale": "Bezeichnet einen Zeitraum, in dem Organisationen Gruppen anbieten können, z. B. Schuljahr oder Semester. Siehe Code-Liste Lernperiodentyp."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Gruppenrolle",
+      "rationale": "Bezeichnet die Rolle einer Person innerhalb einer Gruppe, z. B. Lehrkraft oder Schüler/-in. Siehe Code-Liste Gruppenrolle."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Beziehungen",
+      "rationale": "Bezeichnet die Art der Beziehung zwischen zwei Personen, z. B. gesetzliche Vertretung oder Schulbegleitung. Siehe Code-Liste Beziehungen."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Organisationsbeziehung",
+      "rationale": "Bezeichnet die Beziehung zwischen zwei Organisationen, z. B. Kooperation oder Unterordnung."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "Sichtfreigabe",
+      "rationale": "Erlaubt Organisationen, Informationen über einen Personenkontext für andere Organisationen lesend verfügbar zu machen."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "DSGVO Art. 4 Nr. 7",
+      "rationale": "Bezieht sich auf die Datenschutz-Grundverordnung und definiert die verantwortliche Stelle für die Verarbeitung personenbezogener Daten."
+    },
+    {
+      "file": "docs/english-api-notes/data-models.md",
+      "term": "RFC5646",
+      "rationale": "Standard zur Kodierung von Sprach- und Lokalisierungsinformationen."
+    },
+    {
+      "file": "docs/english-api-notes/english-api-notes.md",
+      "term": "API",
+      "rationale": "Steht für Application Programming Interface und bezeichnet eine Schnittstelle, die es ermöglicht, dass Softwarekomponenten miteinander kommunizieren. Im Kontext der Schulconnex-Dokumentation ist dies ein zentraler Begriff für die technische Interaktion."
+    },
+    {
+      "file": "docs/english-api-notes/english-api-notes.md",
+      "term": "Attribute",
+      "rationale": "Im Sinne der Schnittstelle sind Attribute spezifische Eigenschaften oder Merkmale eines Datenmodells, die dessen Struktur und Inhalte definieren."
+    },
+    {
+      "file": "docs/english-api-notes/english-api-notes.md",
+      "term": "Implementierung",
+      "rationale": "Bezeichnet die praktische Umsetzung oder Realisierung einer Schnittstelle oder eines Datenmodells in einer Software. Im Kontext der API-Dokumentation ist dies ein zentraler technischer Prozess."
+    },
+    {
+      "file": "docs/english-api-notes/english-api-notes.md",
+      "term": "Übersetzung",
+      "rationale": "Im Sinne der API-Dokumentation ist die Übersetzung die Übertragung von Attributnamen und Beschreibungen in eine andere Sprache, um die internationale Nutzbarkeit zu gewährleisten."
+    }
+  ]
+}

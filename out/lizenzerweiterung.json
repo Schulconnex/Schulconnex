@@ -1,0 +1,99 @@
+{
+  "findings": [
+    {
+      "file": "docs/lizenzerweiterung/einleitung.md",
+      "term": "Schulconnex-Nutzungsrechte-API",
+      "rationale": "Ist eine spezifische REST-Schnittstelle im Schulconnex-Kontext, die Informationen zu Nutzungsrechten an digitalen Medienobjekten bereitstellt."
+    },
+    {
+      "file": "docs/lizenzerweiterung/einleitung.md",
+      "term": "REST",
+      "rationale": "Steht für Representational State Transfer und beschreibt ein Architekturprinzip für zustandslose Datenübertragung zwischen Client und Server."
+    },
+    {
+      "file": "docs/lizenzerweiterung/einleitung.md",
+      "term": "Lizenzschlüssel",
+      "rationale": "Ist ein spezifischer Begriff für Zugangsdaten, die zur Aktivierung oder Nutzung von lizenzierten digitalen Medien oder Anwendungen erforderlich sind."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "ODRL",
+      "rationale": "ODRL steht für Open Digital Rights Language und ist ein Standard zur Modellierung und Verwaltung von Nutzungsrechten für digitale Inhalte. Im Kontext des Schulconnex-Dokuments wird ODRL verwendet, um Lizenzvereinbarungen maschinenlesbar darzustellen."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "JSON-LD",
+      "rationale": "JSON-LD ist eine Erweiterung von JSON, die semantische Informationen durch Kontexte hinzufügt. Im Sinne der Schnittstelle wird JSON-LD genutzt, um ODRL-Objekte mit maschinenlesbaren Metadaten zu versehen."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "IRI",
+      "rationale": "IRI steht für Internationalized Resource Identifier und ist eine Erweiterung des URI-Standards, die internationale Zeichen unterstützt. Im Kontext des Dokuments wird IRI verwendet, um eindeutige Kennungen für ODRL-Objekte zu definieren."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "URN",
+      "rationale": "URN steht für Uniform Resource Name und dient der eindeutigen Identifikation von Ressourcen ohne deren physische Adresse. Im Dokument wird URN verwendet, um Medienobjekte und Kataloge im ODRL-Format zu kennzeichnen."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "execute",
+      "rationale": "Die ODRL-Aktion 'execute' beschreibt die Berechtigung zur Ausführung von Software oder internetbasierten Anwendungen. Im Kontext des Dokuments wird sie verwendet, um Nutzungsrechte für digitale Bildungsanwendungen zu definieren."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "@context",
+      "rationale": "Die Eigenschaft '@context' ist ein zentraler Bestandteil von JSON-LD und definiert die semantischen Kontexte für die Interpretation von Daten. Im Dokument wird sie genutzt, um ODRL-Objekte eindeutig der ODRL-Spezifikation zuzuordnen."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "@type",
+      "rationale": "Die Eigenschaft '@type' ist ein JSON-LD-Element, das den Typ eines Objekts angibt. Im Dokument wird sie verwendet, um ODRL-Objekte als Vereinbarungen, Richtlinien oder Angebote zu klassifizieren."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "assignee",
+      "rationale": "Das Attribut 'assignee' in ODRL definiert die Partei oder Person, der eine Berechtigung gewährt wird. Im Dokument wird es verwendet, um die Zuweisung von Nutzungsrechten an spezifische Gruppen oder Organisationen zu modellieren."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "refinement",
+      "rationale": "Das Attribut 'refinement' in ODRL ermöglicht die präzise Definition von Bedingungen für Berechtigungen. Im Dokument wird es genutzt, um die Zugehörigkeit zu Organisationen oder Rollen zu spezifizieren."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "constraint",
+      "rationale": "Das Attribut 'constraint' in ODRL definiert Bedingungen, die erfüllt sein müssen, damit eine Berechtigung gültig ist. Im Dokument wird es verwendet, um zeitliche und räumliche Einschränkungen für Nutzungsrechte festzulegen."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "spatial",
+      "rationale": "Das Attribut 'spatial' in ODRL beschreibt räumliche Einschränkungen für Berechtigungen. Im Dokument wird es verwendet, um die Gültigkeit von Nutzungsrechten auf bestimmte geografische Gebiete zu beschränken."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "concurrentUses",
+      "rationale": "Das Attribut 'concurrentUses' in ODRL beschreibt die maximale Anzahl gleichzeitiger Nutzungen eines Zielobjekts. Im Dokument wird es verwendet, um mengenmäßige Beschränkungen für digitale Bildungsanwendungen zu definieren."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "ShareAlike",
+      "rationale": "Die ODRL-Aktion 'ShareAlike' beschreibt die Verpflichtung, bearbeitete Inhalte unter denselben Lizenzbedingungen weiterzugeben. Im Dokument wird sie verwendet, um Pflichten bei der Modifikation von Arbeitsblättern zu definieren."
+    },
+    {
+      "file": "docs/lizenzerweiterung/praxisleitfaden/odrl-beispiele.mdx",
+      "term": "Attribution",
+      "rationale": "Die ODRL-Aktion 'Attribution' beschreibt die Pflicht zur Namensnennung der Urheber bei der Nutzung oder Weitergabe von Inhalten. Im Dokument wird sie verwendet, um Pflichten bei der Modifikation von Arbeitsblättern zu definieren."
+    },
+    {
+      "file": "docs/lizenzerweiterung/schnittstellendefinition/http-statuscodes.md",
+      "term": "HTTP",
+      "rationale": "Das Hypertext Transfer Protocol ist ein Übertragungsprotokoll für Daten und wird häufig in der Webkommunikation verwendet."
+    },
+    {
+      "file": "docs/lizenzerweiterung/schnittstellendefinition/http-statuscodes.md",
+      "term": "HTTPS",
+      "rationale": "HTTPS steht für Hypertext Transfer Protocol Secure und bietet eine verschlüsselte Kommunikation zwischen Client und Server, wobei der Webserver durch ein Zertifikat authentifiziert wird."
+    }
+  ]
+}

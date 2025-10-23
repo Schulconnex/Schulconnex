@@ -1,0 +1,509 @@
+{
+  "findings": [
+    {
+      "file": "docs/allgemeines-dienste.md",
+      "term": "Schulconnex-Dienste-API",
+      "rationale": "Die Schulconnex-Dienste-API ist eine spezifische Schnittstelle, die von Diensten genutzt wird, um Nutzer- und Kontextdaten im Schulconnex-System abzurufen."
+    },
+    {
+      "file": "docs/allgemeines-dienste.md",
+      "term": "Sicherheitskontext",
+      "rationale": "Der Sicherheitskontext bezeichnet die spezifischen Zugriffsrechte und -ebenen, unter denen eine Person oder ein Dienst auf die Schulconnex-Dienste-API zugreifen kann."
+    },
+    {
+      "file": "docs/allgemeines-dienste.md",
+      "term": "Personenkontext",
+      "rationale": "Der Personenkontext beschreibt den spezifischen Kontext einer Person, einschließlich ihrer Rolle und Organisation, in dem ein Dienst genutzt wird."
+    },
+    {
+      "file": "docs/allgemeines-dienste.md",
+      "term": "Access-Token",
+      "rationale": "Ein Access-Token ist ein Sicherheitsmerkmal, das von einem Authentifizierungs- und Autorisierungsserver ausgestellt wird, um den Zugriff auf die Schulconnex-Dienste-API zu ermöglichen."
+    },
+    {
+      "file": "docs/allgemeines-dienste.md",
+      "term": "REST-API",
+      "rationale": "Die REST-API ist eine zustandslose Schnittstelle, die den Zugriff auf Daten im Schulconnex-System ermöglicht und auf den Prinzipien des Representational State Transfer basiert."
+    },
+    {
+      "file": "docs/allgemeines-dienste.md",
+      "term": "Authentifizierungsserver",
+      "rationale": "Ein Authentifizierungsserver ist eine Komponente, die die Identität einer nutzenden Person oder eines Dienstes überprüft und Access-Tokens ausstellt."
+    },
+    {
+      "file": "docs/allgemeines-dienste.md",
+      "term": "Autorisierungsserver",
+      "rationale": "Ein Autorisierungsserver ist eine Komponente, die die Berechtigungen einer nutzenden Person oder eines Dienstes überprüft und Access-Tokens ausstellt."
+    },
+    {
+      "file": "docs/allgemeines-dienste.md",
+      "term": "Schulconnex-Service",
+      "rationale": "Ein Schulconnex-Service ist ein Service, der den Vorgaben der Schulconnex-Spezifikation folgt und Daten für Dienste bereitstellt."
+    },
+    {
+      "file": "docs/allgemeines-qs.md",
+      "term": "Schulconnex-Service",
+      "rationale": "Ein Service, der den Vorgaben der Schulconnex-Spezifikation folgt und spezifisch für die Schulconnex-Domäne entwickelt wurde."
+    },
+    {
+      "file": "docs/allgemeines-qs.md",
+      "term": "HTTP-GET",
+      "rationale": "Eine spezifische HTTP-Methode, die in der Schulconnex-API zur Abfrage von Daten verwendet wird."
+    },
+    {
+      "file": "docs/allgemeines-qs.md",
+      "term": "HTTP-HEAD",
+      "rationale": "Eine HTTP-Methode, die in der Schulconnex-API zur Abfrage von Metadaten ohne den eigentlichen Inhalt verwendet wird."
+    },
+    {
+      "file": "docs/allgemeines-qs.md",
+      "term": "405/01",
+      "rationale": "Ein spezifischer Fehlercode, der in der Schulconnex-API bei der Nutzung nicht erlaubter HTTP-Methoden ausgegeben wird."
+    },
+    {
+      "file": "docs/allgemeines-qs.md",
+      "term": "Mandanten-ID",
+      "rationale": "Ein Attribut, das in der Schulconnex-API zur Identifikation eines Mandanten verwendet wird und nicht verändert werden darf."
+    },
+    {
+      "file": "docs/allgemeines-qs.md",
+      "term": "UPDATE-Operation",
+      "rationale": "Eine spezifische Operation in der Schulconnex-API, die zur Aktualisierung von Datensätzen dient."
+    },
+    {
+      "file": "docs/allgemeines.md",
+      "term": "Single Sign-on",
+      "rationale": "Single Sign-on ist ein Authentifizierungsverfahren, das es ermöglicht, sich einmalig anzumelden und Zugriff auf mehrere Dienste zu erhalten. Im Kontext der Schulconnex-API ist es ein zentraler Anwendungsfall."
+    },
+    {
+      "file": "docs/allgemeines.md",
+      "term": "Schulconnex-Service",
+      "rationale": "Ein Schulconnex-Service ist ein Dienst, der APIs gemäß der Schulconnex-Spezifikation bereitstellt. Er ist ein zentraler Bestandteil der Schulconnex-Architektur."
+    },
+    {
+      "file": "docs/allgemeines.md",
+      "term": "REST-API",
+      "rationale": "REST-API steht für Representational State Transfer und beschreibt eine standardisierte Schnittstelle für den Datenaustausch zwischen Client und Server. Im Schulconnex-Kontext wird sie für die Kommunikation zwischen Diensten genutzt."
+    },
+    {
+      "file": "docs/allgemeines.md",
+      "term": "Access-Token",
+      "rationale": "Ein Access-Token ist ein Authentifizierungs- und Autorisierungsmechanismus, der den Zugriff auf geschützte Endpunkte der Schulconnex-API ermöglicht. Es wird vom zentralen Authentifizierungsserver ausgestellt."
+    },
+    {
+      "file": "docs/allgemeines.md",
+      "term": "Client-ID",
+      "rationale": "Die Client-ID ist eine eindeutige Kennung, die Quellsysteme und Dienste bei der Registrierung für die Nutzung der Schulconnex-API erhalten. Sie dient der Identifikation des Clients."
+    },
+    {
+      "file": "docs/allgemeines.md",
+      "term": "Quellsystem",
+      "rationale": "Ein Quellsystem ist ein Schulverwaltungssystem, das Nutzer- und Kontextdaten bereitstellt und mit der Schulconnex-API synchronisiert wird."
+    },
+    {
+      "file": "docs/allgemeines.md",
+      "term": "Authentifizierungs- und Autorisierungsserver",
+      "rationale": "Ein zentraler Authentifizierungs- und Autorisierungsserver sichert den Zugriff auf die Endpunkte der Schulconnex-API und stellt Access-Tokens aus."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Codelisten",
+      "rationale": "Codelisten sind vordefinierte Listen von möglichen Werten für bestimmte Attribute, die in der Schulconnex-Spezifikation verwendet werden."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "URI-basierte Codelisten",
+      "rationale": "URI-basierte Codelisten verwenden eindeutige URIs zur Identifikation von Ressourcen und fördern Interoperabilität und Standardisierung in der Schulconnex-Spezifikation."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "World Wide Web Consortium (W3C)",
+      "rationale": "Das W3C ist eine internationale Organisation, die Standards für das Web entwickelt, einschließlich Empfehlungen zur Nutzung von URI-basierten Codelisten und RDF."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Resource Description Framework (RDF)",
+      "rationale": "RDF ist ein Standard des W3C zur Beschreibung und Vernetzung von Ressourcen im Web, der in der Schulconnex-Spezifikation für URI-basierte Codelisten empfohlen wird."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "OASIS Genericode",
+      "rationale": "OASIS Genericode ist ein technisches Format zur Definition und Nutzung von Codelisten, das in der Schulconnex-Spezifikation vorgesehen ist."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "XÖV-Codelisten",
+      "rationale": "XÖV-Codelisten sind standardisierte Codelisten, die in Deutschland für den Datenaustausch im öffentlichen Sektor verwendet werden und in der Schulconnex-Spezifikation integriert werden können."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "XSchule",
+      "rationale": "XSchule ist ein schulbezogenes Fachmodul der XBildung-Spezifikation, das schulspezifische Elemente ergänzt und in der Schulconnex-Spezifikation referenziert wird."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "RFC 5322",
+      "rationale": "RFC 5322 ist ein Internet-Standard, der das Format von E-Mail-Adressen definiert und in der Schulconnex-Spezifikation für die Validierung von Kommunikationskanälen verwendet wird."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "RFC 5646",
+      "rationale": "RFC 5646 ist ein Standard zur Definition von Sprachcodes, der in der Schulconnex-Spezifikation für die Lokalisierung verwendet wird."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Schulconnex",
+      "rationale": "Schulconnex ist eine Spezifikation für die digitale Vernetzung und den Datenaustausch im Bildungsbereich, die spezifische Codelisten und Standards definiert."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Gruppenbereich",
+      "rationale": "Gruppenbereich ist eine domänenspezifische Codeliste in der Schulconnex-Spezifikation, die Unterrichtsarten wie Pflicht-, Wahl- und Wahlpflichtunterricht beschreibt."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Fächerkanon",
+      "rationale": "Fächerkanon ist eine domänenspezifische Codeliste in der Schulconnex-Spezifikation, die die Fächer einer Schule definiert und länderspezifisch angepasst werden kann."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Jahrgangsstufe",
+      "rationale": "Jahrgangsstufe ist eine domänenspezifische Codeliste in der Schulconnex-Spezifikation, die die Klassenstufen einer Schule beschreibt."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Lernperiodentyp",
+      "rationale": "Lernperiodentyp ist eine domänenspezifische Codeliste in der Schulconnex-Spezifikation, die Zeiträume wie Schuljahre und Halbjahre beschreibt."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Organisationsbeziehungen",
+      "rationale": "Organisationsbeziehungen sind domänenspezifische Beziehungen zwischen Organisationen, wie Schulträger und Schulbehörde, die in der Schulconnex-Spezifikation definiert sind."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Organisationstyp",
+      "rationale": "Organisationstyp ist eine domänenspezifische Codeliste in der Schulconnex-Spezifikation, die verschiedene Typen von Organisationen wie Schulen und Behörden beschreibt."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Trägerschaft",
+      "rationale": "Trägerschaft ist eine domänenspezifische Codeliste in der Schulconnex-Spezifikation, die die rechtliche Verantwortung für eine Schule oder Organisation beschreibt."
+    },
+    {
+      "file": "docs/codelisten.md",
+      "term": "Vertrauensstufe",
+      "rationale": "Vertrauensstufe ist eine domänenspezifische Codeliste in der Schulconnex-Spezifikation, die die Vertrauenswürdigkeit eines Schlüsselbesitzers beschreibt."
+    },
+    {
+      "file": "docs/einleitung.md",
+      "term": "Schulconnex",
+      "rationale": "Schulconnex ist der spezifizierte Schnittstellenstandard für den Austausch und die Synchronisation von Identitäten und Kontextdaten im schulischen Bereich."
+    },
+    {
+      "file": "docs/einleitung.md",
+      "term": "Identitätsmanagementsysteme",
+      "rationale": "Identitätsmanagementsysteme sind Systeme zur Verwaltung von digitalen Identitäten, die im Kontext von Schulconnex für den Austausch und die Synchronisation von Identitätsdaten verwendet werden."
+    },
+    {
+      "file": "docs/einleitung.md",
+      "term": "Kultusministerkonferenz",
+      "rationale": "Die Kultusministerkonferenz ist eine zentrale Organisation, die die Strategie 'Bildung in der digitalen Welt' zur Einrichtung landesweiter ID-Management-Systeme im schulischen Bereich entwickelt hat."
+    },
+    {
+      "file": "docs/einleitung.md",
+      "term": "Datensparsamkeit",
+      "rationale": "Datensparsamkeit ist ein Prinzip, das im Kontext von Schulconnex die Bereitstellung nur der für einen Dienst notwendigen Daten sicherstellt."
+    },
+    {
+      "file": "docs/einleitung.md",
+      "term": "Schnittstellenspezifikation",
+      "rationale": "Die Schnittstellenspezifikation beschreibt die technischen und semantischen Vorgaben für die Schulconnex-Schnittstellen."
+    },
+    {
+      "file": "docs/einleitung.md",
+      "term": "Versionsnummer",
+      "rationale": "Die Versionsnummer kennzeichnet die Iterationen der Schulconnex-Schnittstellenspezifikation und dient der Kompatibilitätsprüfung zwischen verschiedenen Versionen."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "Benutzerkonto (Identität)",
+      "rationale": "Steht für die eindeutige digitale Identität einer natürlichen Person, die sich in einem Anwendungssystem authentifiziert."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "Dienstanbieter",
+      "rationale": "Im Sinne der Schnittstelle Anbieter von digitalen Diensten im Bildungsbereich, wie Lernplattformen oder Bildungsmedien."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "DIN 91379",
+      "rationale": "Diese Norm definiert Subsets von Unicodes für die elektronische Verarbeitung von Namen und den Datenaustausch in Europa."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "DIN 91379.A",
+      "rationale": "Umfasst Zeichen für Namen natürlicher Personen, einschließlich lateinischer Schriftzeichen, Umlaute und Akzentzeichen."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "DIN 91379.B",
+      "rationale": "Umfasst Zeichen für Orts- und Straßennamen, einschließlich der Zeichen von DIN 91379.A sowie zusätzlicher Zeichen wie Zahlen und mathematische Symbole."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "DIN 91379.C",
+      "rationale": "Erweitert DIN 91379.B um Zeichen für juristische Personen und nicht druckbare Zeichen wie Line Feed und Tab."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "HTTP",
+      "rationale": "Das Hypertext Transfer Protocol ist ein Standardprotokoll für die Übertragung von Daten im Internet."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "HTTPS",
+      "rationale": "Steht für Hypertext Transfer Protocol Secure und ermöglicht eine verschlüsselte Kommunikation zwischen Client und Server."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "JSON",
+      "rationale": "Abkürzung für JavaScript Object Notation, ein kompaktes Datenformat für strukturierte Daten."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "JSON Web Token",
+      "rationale": "Ein auf JSON basierender Access-Token, der Authentifizierungsinformationen enthält und Sessions ohne Server-Speicherung ermöglicht."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "JWT",
+      "rationale": "Siehe: JSON Web Token."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "Mandantschaft (Mandant)",
+      "rationale": "Bezeichnet die für bestimmte Daten verantwortliche Stelle im datenschutzrechtlichen Sinne, z. B. Art. 4 DSGVO."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "OAuth",
+      "rationale": "Ein offenes Sicherheitsprotokoll für die Token-basierte Autorisierung und Authentifizierung im Internet."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "Personenkontext",
+      "rationale": "Bezeichnet den Kontext einer Person, in dem ein Dienst genutzt wird, einschließlich Organisation und Rolle."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "REST",
+      "rationale": "Steht für Representational State Transfer und beschreibt das zustandslose Übertragen von Daten zwischen Client und Server."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "Schulconnex-Service",
+      "rationale": "Ein Service, der den Vorgaben der Schulconnex-Spezifikation folgt."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "Sichtfreigabe",
+      "rationale": "Bezeichnet die Freigabe von Datensätzen für andere Organisationen mit ausschließlich lesendem Zugriff."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "XBildung",
+      "rationale": "Ein Spezifikationsdokument zur Interoperabilität im Bildungswesen, veröffentlicht vom Bundesministerium für Bildung und Forschung."
+    },
+    {
+      "file": "docs/glossar.md",
+      "term": "XSchule",
+      "rationale": "Ein schulbezogenes Fachmodul der XBildung-Spezifikation, das schulspezifische Elemente ergänzt."
+    },
+    {
+      "file": "docs/intro.md",
+      "term": "Node.js",
+      "rationale": "Node.js ist eine plattformübergreifende JavaScript-Laufzeitumgebung, die häufig für serverseitige Anwendungen verwendet wird. Im Kontext der technischen Dokumentation ist es ein spezifischer Fachbegriff."
+    },
+    {
+      "file": "docs/intro.md",
+      "term": "npm",
+      "rationale": "npm steht für Node Package Manager und ist ein Paketmanager für JavaScript, der häufig in der Webentwicklung verwendet wird. Es ist ein spezialisierter Ausdruck im Kontext der Softwareentwicklung."
+    },
+    {
+      "file": "docs/intro.md",
+      "term": "localhost",
+      "rationale": "localhost bezeichnet die lokale Adresse eines Computers, die häufig für die Entwicklung und das Testen von Webanwendungen verwendet wird. Es ist ein domänenspezifischer Begriff in der Webentwicklung."
+    },
+    {
+      "file": "docs/intro.md",
+      "term": "development server",
+      "rationale": "Ein development server ist ein Server, der speziell für die lokale Entwicklung und das Testen von Anwendungen eingerichtet ist. Im Kontext der Dokumentation ist dies ein spezialisierter Ausdruck."
+    },
+    {
+      "file": "docs/intro.md",
+      "term": "classic template",
+      "rationale": "Das classic template ist eine spezifische Vorlage innerhalb des Docusaurus-Frameworks, die für die Erstellung von Websites verwendet wird. Es ist ein domänenspezifischer Begriff im Kontext von Docusaurus."
+    },
+    {
+      "file": "docs/schnelleinstieg-dienste.md",
+      "term": "Dienste-API",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet die Dienste-API die REST-API, die für den Zugriff auf Informationen und die Interaktion mit Diensten im Schulconnex-System genutzt wird."
+    },
+    {
+      "file": "docs/schnelleinstieg-dienste.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Der Schulconnex-Server ist die zentrale technische Plattform, die die Datenhaltung und Verarbeitung im Schulconnex-System ermöglicht."
+    },
+    {
+      "file": "docs/schnelleinstieg-dienste.md",
+      "term": "REST-API",
+      "rationale": "REST-API steht für Representational State Transfer Application Programming Interface und beschreibt eine zustandslose Schnittstelle für den Datenaustausch zwischen Client und Server."
+    },
+    {
+      "file": "docs/schnelleinstieg-dienste.md",
+      "term": "OIDC Claims",
+      "rationale": "OIDC Claims sind standardisierte Attribute, die im Rahmen von OpenID Connect zur Übermittlung von Anmeldeinformationen und Identitätsdaten verwendet werden."
+    },
+    {
+      "file": "docs/schnelleinstieg-qs.md",
+      "term": "Quellsystem-API",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet die Quellsystem-API die Programmierschnittstelle, über die Daten aus einem Quellsystem abgerufen und verarbeitet werden können."
+    },
+    {
+      "file": "docs/schnelleinstieg-qs.md",
+      "term": "REST-API",
+      "rationale": "REST-API steht für Representational State Transfer Application Programming Interface und beschreibt eine zustandslose Schnittstelle zur Kommunikation zwischen Client und Server."
+    },
+    {
+      "file": "docs/schnelleinstieg-qs.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Der Schulconnex-Server ist eine zentrale Instanz innerhalb des Schulconnex-Systems, die für die Verarbeitung und Speicherung von Daten sowie die Autorisierung von Anfragen zuständig ist."
+    },
+    {
+      "file": "docs/schnelleinstieg-qs.md",
+      "term": "Schulconnex-spezifische Fehlercodes",
+      "rationale": "Schulconnex-spezifische Fehlercodes sind eindeutige Codes, die im Schulconnex-System verwendet werden, um Fehler bei der Nutzung der Schnittstellen zu identifizieren und zu klassifizieren."
+    },
+    {
+      "file": "docs/schnelleinstieg-qs.md",
+      "term": "Personenkontext",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet der Personenkontext die spezifische Rolle und Organisation einer Person innerhalb des Schulconnex-Systems."
+    },
+    {
+      "file": "docs/schnelleinstieg-qs.md",
+      "term": "Person",
+      "rationale": "Im Sinne der Schnittstelle ist eine Person ein Mensch, der eine Beziehung zu einer oder mehreren Schulen oder Organisationen hat und dort Träger von Rechten und Pflichten ist."
+    },
+    {
+      "file": "docs/schnelleinstieg.md",
+      "term": "Schulconnex",
+      "rationale": "Schulconnex ist eine spezifizierte Schnittstelle für schulisches Identitätsmanagement und Kontextdaten, die APIs und Datenmodelle definiert."
+    },
+    {
+      "file": "docs/schnelleinstieg.md",
+      "term": "Quellsystem-API",
+      "rationale": "Die Quellsystem-API ist eine spezifizierte Schnittstelle zur Synchronisation von Identitäten und Kontextdaten zwischen schulischen Identitätsmanagementsystemen."
+    },
+    {
+      "file": "docs/schnelleinstieg.md",
+      "term": "Dienste-API",
+      "rationale": "Die Dienste-API ist eine spezifizierte Schnittstelle zur Bereitstellung von Kontextinformationen für die Anmeldung an externe Dienste."
+    },
+    {
+      "file": "docs/schnelleinstieg.md",
+      "term": "Codelisten",
+      "rationale": "Codelisten sind fest definierte Wertebereiche für Attribute, die in der Schulconnex-Spezifikation verwendet werden."
+    },
+    {
+      "file": "docs/schnelleinstieg.md",
+      "term": "OpenAPI",
+      "rationale": "OpenAPI ist ein Standardformat zur Spezifikation von REST-APIs, das in der Schulconnex-Dokumentation verwendet wird."
+    },
+    {
+      "file": "docs/schnelleinstieg.md",
+      "term": "OpenAPI-YAML",
+      "rationale": "OpenAPI-YAML ist ein Format zur Darstellung von OpenAPI-Spezifikationen, das in der Schulconnex-Dokumentation bereitgestellt wird."
+    },
+    {
+      "file": "docs/schnelleinstieg.md",
+      "term": "REST-API",
+      "rationale": "REST-API steht für Representational State Transfer und beschreibt eine zustandslose Schnittstelle für den Datenaustausch, die in Schulconnex spezifiziert ist."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "Schulconnex",
+      "rationale": "Schulconnex ist der Name des spezifischen Systems, das in der Dokumentation beschrieben wird und eine zentrale Rolle in der Domäne Bildungstechnologie spielt."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "API Sichtfreigabe",
+      "rationale": "Die API Sichtfreigabe ist eine spezifische Schnittstellenfunktion innerhalb des Schulconnex-Systems, die den Zugriff auf Daten regelt."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "API Organisationen",
+      "rationale": "Die API Organisationen ist eine spezifische Schnittstellenfunktion im Schulconnex-System, die Informationen über Organisationen für Dienstanbieter bereitstellt."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "HTTP POST",
+      "rationale": "HTTP POST ist ein spezifisches Protokollverfahren, das im Kontext der Schulconnex-Schnittstelle für die Datenübertragung verwendet wird."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "Codeliste Rollen",
+      "rationale": "Die Codeliste Rollen ist eine spezifische Liste innerhalb des Schulconnex-Systems, die Rollen wie Schulbegleiter/-in und Nichtlehrendes Personal definiert."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "Codeliste Gruppenrollen",
+      "rationale": "Die Codeliste Gruppenrollen ist eine spezifische Liste innerhalb des Schulconnex-Systems, die Rollen wie Vertretungslehrkraft definiert."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "Codeliste Gruppenoptionen",
+      "rationale": "Die Codeliste Gruppenoptionen ist eine spezifische Liste innerhalb des Schulconnex-Systems, die derzeit keine Werte enthält."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "mandant",
+      "rationale": "Das Filterattribut 'mandant' ist ein spezifischer Begriff im Schulconnex-Datenmodell, der Quellsysteme definiert."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "rufname",
+      "rationale": "Das Attribut 'rufname' ist ein spezifischer Begriff im Schulconnex-Datenmodell, das im Kontext der Personendaten für Dienstanbieter verwendet wird."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "gruppenzugehoerigkeit.von",
+      "rationale": "Das Attribut 'gruppenzugehoerigkeit.von' ist ein spezifischer Begriff im Schulconnex-Datenmodell, das den Beginn einer Gruppenzugehörigkeit angibt."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "gruppenzugehoerigkeit.bis",
+      "rationale": "Das Attribut 'gruppenzugehoerigkeit.bis' ist ein spezifischer Begriff im Schulconnex-Datenmodell, das das Ende einer Gruppenzugehörigkeit angibt."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "201",
+      "rationale": "Der HTTP-Statuscode '201' ist ein spezifischer Begriff, der im Schulconnex-System verwendet wird, um erfolgreiche POST-Anfragen zu quittieren."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "SchB",
+      "rationale": "SchB ist eine Abkürzung für Schulbegleiter/-in und wird als Rolle in der Codeliste Rollen des Schulconnex-Systems definiert."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "NLehr",
+      "rationale": "NLehr ist eine Abkürzung für Nichtlehrendes Personal und wird als Rolle in der Codeliste Rollen des Schulconnex-Systems definiert."
+    },
+    {
+      "file": "docs/versionshistorie.md",
+      "term": "VLehr",
+      "rationale": "VLehr ist eine Abkürzung für Vertretungslehrkraft und wird als Rolle in der Codeliste Gruppenrollen des Schulconnex-Systems definiert."
+    }
+  ]
+}

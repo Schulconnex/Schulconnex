@@ -1,0 +1,129 @@
+{
+  "findings": [
+    {
+      "file": "docs/footer/barrierefreiheit.md",
+      "term": "Richtlinie (EU) 2016/2102",
+      "rationale": "Die Richtlinie (EU) 2016/2102 ist eine europäische Vorschrift zur Barrierefreiheit von Websites und mobilen Anwendungen öffentlicher Stellen. Sie definiert verbindliche Anforderungen für die Umsetzung barrierefreier Informationstechnik."
+    },
+    {
+      "file": "docs/footer/barrierefreiheit.md",
+      "term": "Behindertengleichstellungsgesetz (BGG)",
+      "rationale": "Das Behindertengleichstellungsgesetz (BGG) ist ein deutsches Gesetz, das die Gleichstellung von Menschen mit Behinderungen regelt und die Barrierefreiheit in verschiedenen Bereichen des öffentlichen Lebens fördert."
+    },
+    {
+      "file": "docs/footer/barrierefreiheit.md",
+      "term": "Barrierefreie-Informationstechnik-Verordnung (BITV 2.0)",
+      "rationale": "Die Barrierefreie-Informationstechnik-Verordnung (BITV 2.0) ist eine deutsche Verordnung, die die Anforderungen der Richtlinie (EU) 2016/2102 in nationales Recht umsetzt und die barrierefreie Gestaltung von Informationstechnik regelt."
+    },
+    {
+      "file": "docs/footer/barrierefreiheit.md",
+      "term": "§3 BayEGovV",
+      "rationale": "§3 BayEGovV ist eine Vorschrift der Bayerischen E-Government-Verordnung, die Anforderungen an die Barrierefreiheit von digitalen Angeboten im Freistaat Bayern definiert."
+    },
+    {
+      "file": "docs/footer/barrierefreiheit.md",
+      "term": "Durchsetzungs- und Überwachungsstelle für barrierefreie Informationstechnik",
+      "rationale": "Die Durchsetzungs- und Überwachungsstelle für barrierefreie Informationstechnik ist eine Einrichtung des Landes Bayern, die die Einhaltung der Barrierefreiheitsanforderungen gemäß BITV und BayEGovV überwacht und Beschwerden bearbeitet."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "DSGVO",
+      "rationale": "Steht für Datenschutz-Grundverordnung und ist eine zentrale rechtliche Grundlage für den Datenschutz in der Europäischen Union."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "GitHub Pages",
+      "rationale": "Ein Hosting-Service von GitHub, der statische Websites bereitstellt und im Kontext der technischen Bereitstellung der Schulconnex-Website verwendet wird."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 4 Abs. 7 DSGVO",
+      "rationale": "Bezieht sich auf die Definition des Verantwortlichen im Sinne der Datenschutz-Grundverordnung und ist eine spezifische rechtliche Referenz."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 13, 14 DSGVO",
+      "rationale": "Bezieht sich auf die Informationspflichten gemäß der Datenschutz-Grundverordnung und ist eine spezifische rechtliche Referenz."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 15 DSGVO",
+      "rationale": "Regelt das Recht auf Auskunft über personenbezogene Daten gemäß der Datenschutz-Grundverordnung."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 16 DSGVO",
+      "rationale": "Regelt das Recht auf Berichtigung personenbezogener Daten gemäß der Datenschutz-Grundverordnung."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 17 DSGVO",
+      "rationale": "Regelt das Recht auf Löschung personenbezogener Daten gemäß der Datenschutz-Grundverordnung."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 18 DSGVO",
+      "rationale": "Regelt das Recht auf Einschränkung der Verarbeitung personenbezogener Daten gemäß der Datenschutz-Grundverordnung."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 20 DSGVO",
+      "rationale": "Regelt das Recht auf Datenübertragbarkeit gemäß der Datenschutz-Grundverordnung."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 21 DSGVO",
+      "rationale": "Regelt das Recht auf Widerspruch gegen die Verarbeitung personenbezogener Daten gemäß der Datenschutz-Grundverordnung."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 77 DSGVO",
+      "rationale": "Regelt das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren gemäß der Datenschutz-Grundverordnung."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Bayerisches Landesamt für Datenschutzaufsicht",
+      "rationale": "Eine spezifische Datenschutz-Aufsichtsbehörde in Bayern, die für Beschwerden und Überwachung der DSGVO-Umsetzung zuständig ist."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "IP-Adresse",
+      "rationale": "Eine eindeutige Adresse, die einem Gerät in einem Netzwerk zugewiesen wird und im Kontext der Verarbeitung personenbezogener Daten relevant ist."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "statische Website",
+      "rationale": "Bezeichnet eine Website, deren Inhalte nicht dynamisch generiert werden und im Kontext der Schulconnex-Website verwendet wird."
+    },
+    {
+      "file": "docs/footer/datenschutz.md",
+      "term": "Art. 6 Abs. 1 lit. f DSGVO",
+      "rationale": "Regelt die Verarbeitung personenbezogener Daten zur Wahrung berechtigter Interessen gemäß der Datenschutz-Grundverordnung."
+    },
+    {
+      "file": "docs/footer/impressum.md",
+      "term": "TMG",
+      "rationale": "Steht für das Telemediengesetz, welches die rechtlichen Rahmenbedingungen für Telemedien in Deutschland regelt. Im Kontext des Impressums relevant für die Haftung von Diensteanbietern."
+    },
+    {
+      "file": "docs/footer/impressum.md",
+      "term": "Umsatzsteuer-Identifikationsnummer",
+      "rationale": "Ist eine eindeutige Kennzeichnung für Unternehmen im europäischen Mehrwertsteuersystem. Im Impressum wird sie zur Identifikation des Unternehmens angegeben."
+    },
+    {
+      "file": "docs/footer/impressum.md",
+      "term": "Bayerische Landeszentrale für neue Medien (BLM)",
+      "rationale": "Eine rechtsfähige Anstalt des öffentlichen Rechts, die als Aufsichtsbehörde für Medien in Bayern fungiert. Im Impressum relevant als zuständige Behörde."
+    },
+    {
+      "file": "docs/footer/impressum.md",
+      "term": "Amtsgericht München B 2636",
+      "rationale": "Kennzeichnet die Handelsregistereintragung des Unternehmens. Im Impressum relevant für die rechtliche Identifikation der Firma."
+    },
+    {
+      "file": "docs/footer/impressum.md",
+      "term": "Urheberrecht",
+      "rationale": "Regelt die Rechte von Autoren und Erstellern an ihren Werken. Im Impressum relevant für die rechtliche Absicherung der Inhalte."
+    }
+  ]
+}

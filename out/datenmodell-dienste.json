@@ -1,0 +1,354 @@
+{
+  "findings": [
+    {
+      "file": "docs/datenmodell-dienste/beziehung.md",
+      "term": "Personenkontext",
+      "rationale": "Im Sinne der Schnittstelle beschreibt der Personenkontext den Kontext einer Person, in dem ein Dienst genutzt wird. Er umfasst eine Organisation und die Rolle der Person in Bezug auf diese Organisation."
+    },
+    {
+      "file": "docs/datenmodell-dienste/beziehung.md",
+      "term": "ktid",
+      "rationale": "Steht für die pseudonymisierte ID eines Personenkontexts. Sie wird verwendet, um Personen in einem datenschutzkonformen Kontext eindeutig zu identifizieren."
+    },
+    {
+      "file": "docs/datenmodell-dienste/beziehung.md",
+      "term": "SchB",
+      "rationale": "Abkürzung für Schulbegleiter oder Schulbegleiterin, eine spezifische Rolle im Kontext des Schulconnex-Datenmodells."
+    },
+    {
+      "file": "docs/datenmodell-dienste/beziehung.md",
+      "term": "Beziehung",
+      "rationale": "Im Sinne des Schulconnex-Datenmodells beschreibt eine Beziehung die Verbindung zwischen zwei Personenkontexten, die durch eine spezifische Art der Beziehung definiert wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "Schulconnex-Service",
+      "rationale": "Ein Service, der den Vorgaben der Schulconnex-Spezifikation folgt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "pseudonymisierte ID",
+      "rationale": "Eine ID, die zur Referenzierung von Daten einer spezifischen Person oder von Personenkontexten genutzt wird und aus Sicht der Dienste konstant und eindeutig ist."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "pid",
+      "rationale": "Abkürzung für pseudonymisierte ID, die im Kontext der Schulconnex-Dienste verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "GET",
+      "rationale": "HTTP-Methode für lesende Abrufe, die im Kontext der Schulconnex-Dienste verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "0/1",
+      "rationale": "Notation zur Angabe der Anzahl eines Attributs, die entweder nicht vorhanden oder einmal vorhanden sein kann."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "0/0..1",
+      "rationale": "Notation zur Angabe der Anzahl eines Attributs, die entweder nicht vorhanden oder maximal einmal vorhanden sein kann."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "0/0..n",
+      "rationale": "Notation zur Angabe der Anzahl eines Attributs, die entweder nicht vorhanden oder als Array von Werten vorliegen kann."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "Gruppe",
+      "rationale": "Im Datenmodell eine Klasse, die Organisationen und Lernperioden assoziiert und spezifische Attribute wie Bezeichnung und Typ enthält."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "Lernperiode",
+      "rationale": "Eine Klasse im Datenmodell, die Zeiträume mit spezifischen Attributen wie Beginn und Ende beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "Personenkontext",
+      "rationale": "Kontext der Person, in dem ein Dienst genutzt wird, umfasst Organisation und Rolle der Person."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "Organisation",
+      "rationale": "Eine Klasse im Datenmodell, die spezifische Attribute wie ID, Kennung und Anschrift enthält."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datenmodell.md",
+      "term": "Anschrift",
+      "rationale": "Eine Klasse im Datenmodell, die Adressinformationen wie Postleitzahl und Ort enthält."
+    },
+    {
+      "file": "docs/datenmodell-dienste/datumsformat.md",
+      "term": "Datumsformat",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet Datumsformat die spezifische Darstellung und Strukturierung von Datumsangaben, die für die Verarbeitung und den Austausch von Daten erforderlich ist."
+    },
+    {
+      "file": "docs/datenmodell-dienste/geburt.md",
+      "term": "DIN 91379.C",
+      "rationale": "DIN 91379.C umfasst alle Zeichen von DIN 91379.B und darüber hinaus zusätzliche Zeichen, die zur Schreibung juristischer Personen notwendig sind, sowie nicht druckbare Zeichen wie Line Feed und geschütztes Leerzeichen."
+    },
+    {
+      "file": "docs/datenmodell-dienste/geburt.md",
+      "term": "Boolean",
+      "rationale": "Boolean ist eine Codeliste, die im Kontext der Schnittstelle verwendet wird, um binäre Werte wie 'wahr' oder 'falsch' zu repräsentieren."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Gruppenzugehörigkeit",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet dies die Beziehung einer Person zu einer Gruppe, die durch das Datenmodell abgebildet wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Gruppendatensatz",
+      "rationale": "Ein spezifischer Datensatz, der Informationen zu einer Gruppe im Datenmodell enthält."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Gruppentyp",
+      "rationale": "Referenz auf eine Codeliste, die den Typ einer Gruppe (z. B. Klasse, Kurs) definiert."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Gruppenbereich",
+      "rationale": "Referenz auf eine Codeliste, die die Art einer Gruppe (z. B. Pflicht, Wahl, Grundkurs, Leistungskurs) beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Gruppenoption",
+      "rationale": "Referenz auf eine Codeliste, die zusätzliche Optionen einer Gruppe, wie sprachbezogene Merkmale, definiert."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Gruppendifferenzierung",
+      "rationale": "Referenz auf eine Codeliste, die Differenzierungen innerhalb einer Gruppe, z. B. für integrierten Unterricht oder gymnasiale Oberstufe, beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Bildungsziel",
+      "rationale": "Referenz auf eine Codeliste, die das Bildungsziel einer Gruppe (z. B. Realschule, Hauptschule, Gymnasium) definiert."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Jahrgangsstufe",
+      "rationale": "Referenz auf eine Codeliste, die die Jahrgangsstufe einer Gruppe (z. B. Jahrgangsstufe 1 bis 13) beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Fach",
+      "rationale": "Ein Element des Datenmodells, das die in einer Gruppe behandelten Fächer beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppe.md",
+      "term": "Laufzeit",
+      "rationale": "Ein Element des Datenmodells, das die zeitliche Dauer einer Gruppe beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppendatensatz.md",
+      "term": "Gruppendatensatz",
+      "rationale": "Ein spezifischer Begriff im Schulconnex-Datenmodell, der als Daten-Container für die Verwaltung von Gruppen und deren Zugehörigkeiten dient."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppendatensatz.md",
+      "term": "WrapperObject",
+      "rationale": "Ein technischer Fachbegriff, der im Kontext des Datenmodells verwendet wird, um die Funktion des Gruppendatensatzes als Container zu beschreiben."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppendatensatz.md",
+      "term": "Gruppe",
+      "rationale": "Ein zentraler Begriff im Schulconnex-Datenmodell, der eine einzelne Gruppe repräsentiert und spezifische Attribute gemäß dem Datenmodell enthält."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppendatensatz.md",
+      "term": "Gruppenzugehörigkeit",
+      "rationale": "Ein Fachbegriff im Schulconnex-Datenmodell, der die Beziehung zwischen einer Person und einer Gruppe beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppendatensatz.md",
+      "term": "sonstige_gruppenzugehoerige",
+      "rationale": "Ein spezifisches Attribut im Schulconnex-Datenmodell, das eine Liste von weiteren Zugehörigen zu einer Gruppe beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppendatensatz.md",
+      "term": "Array",
+      "rationale": "Ein technischer Begriff, der im Kontext des Datenmodells verwendet wird, um eine strukturierte Liste von Elementen zu beschreiben."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppenzugehörigkeit.md",
+      "term": "Gruppenzugehörigkeit",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet die Gruppenzugehörigkeit die Verbindung einer Person mit einer Gruppe, einschließlich spezifischer Rollen innerhalb dieser Gruppe."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppenzugehörigkeit.md",
+      "term": "Personenkontext",
+      "rationale": "Der Personenkontext umfasst die Organisation und die Rolle einer Person in Bezug auf diese Organisation, beispielsweise Schulleitung einer Schule."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppenzugehörigkeit.md",
+      "term": "Gruppenrolle",
+      "rationale": "Gruppenrolle bezeichnet die spezifische Funktion oder Aufgabe einer Person innerhalb einer Gruppe, die über die allgemeine Rolle in einer Organisation hinausgeht."
+    },
+    {
+      "file": "docs/datenmodell-dienste/gruppenzugehörigkeit.md",
+      "term": "ktid",
+      "rationale": "Steht für eine pseudonymisierte ID des Personenkontexts, die zur Identifikation einer Person in einem bestimmten Kontext verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/lernperiode.md",
+      "term": "lernperiode",
+      "rationale": "Im Sinne der Schulconnex-Spezifikation bezeichnet 'Lernperiode' einen definierten Zeitraum, in dem Lernaktivitäten stattfinden und dokumentiert werden können."
+    },
+    {
+      "file": "docs/datenmodell-dienste/name.md",
+      "term": "DIN 91379.A",
+      "rationale": "DIN 91379.A umfasst die Zeichen, welche für Namen natürlicher Personen benötigt werden, einschließlich lateinischer Schriftzeichen, Umlaute, Akzentzeichen und bestimmter Nicht-Buchstaben. Es ist eine spezifische Norm für die elektronische Verarbeitung von Personennamen."
+    },
+    {
+      "file": "docs/datenmodell-dienste/name.md",
+      "term": "Person",
+      "rationale": "Im Sinne der Schnittstelle ist eine Person ein Mensch, welcher eine Beziehung zu einer oder mehreren Schulen oder außerschulischen Organisationen hat und dort Träger von Rechten und Pflichten ist."
+    },
+    {
+      "file": "docs/datenmodell-dienste/organisation.md",
+      "term": "Stammorganisation",
+      "rationale": "Bezeichnet die primäre Organisation, der eine Person zugeordnet ist, unabhängig von temporären Tätigkeiten in anderen Organisationen. Im Schulconnex-Kontext ist dies ein spezifischer Begriff zur Organisationseinordnung."
+    },
+    {
+      "file": "docs/datenmodell-dienste/organisation.md",
+      "term": "Dienststelle",
+      "rationale": "Im Kontext der Schulconnex-Dokumentation bezeichnet dies eine spezifische Organisationseinheit, an die Personen zeitweise abgeordnet werden können."
+    },
+    {
+      "file": "docs/datenmodell-dienste/organisation.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Bezeichnet die zentrale technische Plattform, die für die Verwaltung und Verarbeitung von Daten im Schulconnex-System zuständig ist."
+    },
+    {
+      "file": "docs/datenmodell-dienste/organisation.md",
+      "term": "String (UTF-8)",
+      "rationale": "Spezifiziert den Datentyp für Attribute im Schulconnex-Datenmodell, wobei UTF-8 als Zeichencodierung verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/organisation.md",
+      "term": "DIN 91379.B",
+      "rationale": "Bezieht sich auf eine spezifische Norm für die elektronische Verarbeitung von Orts- und Straßennamen, die im Schulconnex-Datenmodell verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/organisation.md",
+      "term": "Organisationstyp",
+      "rationale": "Bezeichnet eine Codeliste, die verschiedene Typen von Organisationen im Schulconnex-Datenmodell definiert."
+    },
+    {
+      "file": "docs/datenmodell-dienste/organisation.md",
+      "term": "Freigabe erforderlich",
+      "rationale": "Bezieht sich auf die Konfigurierbarkeit von Attributen im Schulconnex-Datenmodell, die durch Absprache mit dem Server-Betreiber geregelt wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/person.md",
+      "term": "stammorganisation",
+      "rationale": "Bezeichnet die primäre Organisation, der eine Person zugeordnet ist, unabhängig von ihrem aktuellen Tätigkeitsort. Im Schulconnex-Kontext ist dies relevant für die Zuordnung von Personen zu Organisationen."
+    },
+    {
+      "file": "docs/datenmodell-dienste/person.md",
+      "term": "lokalisierung",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet dies die bevorzugte Spracheinstellung einer Person für Anwendungen, basierend auf RFC 5646."
+    },
+    {
+      "file": "docs/datenmodell-dienste/person.md",
+      "term": "vertrauensstufe",
+      "rationale": "Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden. Im Schulconnex-Kontext ist dies ein spezifischer Code aus der Codeliste *Vertrauensstufe*."
+    },
+    {
+      "file": "docs/datenmodell-dienste/person.md",
+      "term": "RFC 5646",
+      "rationale": "Ein Standard, der die Syntax für Sprachkennzeichnungen definiert. Im Schulconnex-Kontext wird er für die Lokalisierungseinstellungen verwendet."
+    },
+    {
+      "file": "docs/datenmodell-dienste/person.md",
+      "term": "Codeliste Geschlecht",
+      "rationale": "Bezeichnet eine spezifische Liste von Codes zur Angabe des Geschlechts einer Person. Im Schulconnex-Datenmodell ist dies eine standardisierte Referenz."
+    },
+    {
+      "file": "docs/datenmodell-dienste/person.md",
+      "term": "Codeliste Vertrauensstufe",
+      "rationale": "Bezeichnet eine spezifische Liste von Codes zur Angabe der Verifizierungsstufe von Personendaten. Im Schulconnex-Datenmodell ist dies eine standardisierte Referenz."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "Personenkontext",
+      "rationale": "Kontext der Person, in dem ein Dienst genutzt wird. Ein Personenkontext umfasst eine Organisation und eine Rolle der nutzenden Person in Bezug auf diese Organisation."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Server, der den Vorgaben der Schulconnex-Spezifikation folgt und für die Datenhaltung und Verarbeitung im Schulconnex-Kontext zuständig ist."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "Organisation",
+      "rationale": "Im Sinne des Datenmodells eine Einheit, die mit einer Person in einem Personenkontext verbunden ist, z. B. eine Schule oder außerschulische Einrichtung."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "Rolle",
+      "rationale": "Eine temporäre Funktion, die eine Person innerhalb eines fachlichen Kontexts ausübt, verbunden mit Aufgaben, Befugnissen und Verantwortungen."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "Personenstatus",
+      "rationale": "Status, den eine Person in einer Organisation in Bezug auf eine bestimmte Rolle hat, referenziert durch Codes aus der Codeliste *Personenstatus*."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "Gruppendatensatz",
+      "rationale": "Ein Datensatz, der Gruppen und Gruppenzugehörigkeiten einer Person im Personenkontext beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "Beziehung",
+      "rationale": "Im Datenmodell eine Verbindung zwischen Personenkontexten, die durch Attribute wie `hat_als` und `ist_von` beschrieben wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "Löschung",
+      "rationale": "Im Datenmodell ein Prozess, bei dem ein Personenkontext entfernt wird, mit Attributen wie dem Zeitpunkt der Löschung."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "String (UTF-8)",
+      "rationale": "Ein Datentyp, der Zeichenketten im UTF-8-Format beschreibt und im Datenmodell für Attribute wie ID verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "String (Code)",
+      "rationale": "Ein Datentyp, der Codes beschreibt, die in Codelisten wie *Rolle* oder *Personenstatus* referenziert werden."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "Array",
+      "rationale": "Ein Datentyp, der Listen von Elementen beschreibt, z. B. Erreichbarkeiten oder Gruppenzugehörigkeiten im Personenkontext."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "datetime",
+      "rationale": "Ein Datentyp, der Datum und Uhrzeit beschreibt, z. B. für den Zeitpunkt der Löschung eines Personenkontexts."
+    },
+    {
+      "file": "docs/datenmodell-dienste/personenkontext.md",
+      "term": "UTC",
+      "rationale": "Koordinierte Weltzeit, die als Zeitformat für Attribute wie den Löschzeitpunkt im Datenmodell verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-dienste/sichtfreigabe.md",
+      "term": "Sichtfreigabe",
+      "rationale": "Organisationen können individuelle Datensätze für andere Organisationen freigeben. Bei einer Sichtfreigabe ist für die andere Organisation nur der lesende Zugriff auf die Daten möglich. Der Schulconnex-Service unterstützt derzeit als Freigaben nur Sichtfreigaben."
+    },
+    {
+      "file": "docs/datenmodell-dienste/sichtfreigabe.md",
+      "term": "Schulconnex-Service",
+      "rationale": "Ein Service, der den Vorgaben der Schulconnex-Spezifikation folgt."
+    }
+  ]
+}

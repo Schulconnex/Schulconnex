@@ -1,0 +1,174 @@
+{
+  "findings": [
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes-dienste.md",
+      "term": "HTTP",
+      "rationale": "Das Hypertext Transfer Protocol ist ein Übertragungsprotokoll für Daten und wird im Kontext der Schnittstellendefinition verwendet."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes-dienste.md",
+      "term": "HTTPS",
+      "rationale": "HTTPS steht für Hypertext Transfer Protocol Secure und bietet eine verschlüsselte Kommunikation zwischen Client und Server, was im Kontext der Schnittstelle relevant ist."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes-qs.md",
+      "term": "HTTP",
+      "rationale": "Das Hypertext Transfer Protocol ist ein Protokoll zur Übertragung von Daten im Internet und wird häufig in technischen Schnittstellen verwendet."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes-qs.md",
+      "term": "HTTPS",
+      "rationale": "HTTPS steht für Hypertext Transfer Protocol Secure und ist eine verschlüsselte Version des HTTP-Protokolls, die in sicheren Schnittstellen eingesetzt wird."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "HTTP-Statuscodes",
+      "rationale": "HTTP-Statuscodes sind standardisierte numerische Codes, die von Webservern verwendet werden, um den Status einer HTTP-Anfrage zu kommunizieren."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "JSON",
+      "rationale": "JSON ist die Abkürzung für JavaScript Object Notation und wird als kompaktes Datenformat für strukturierte Daten eingesetzt."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "ETag",
+      "rationale": "ETag ist ein HTTP-Header, der eine Version eines Ressourceninhalts eindeutig identifiziert und zur Optimierung von Datenübertragungen verwendet wird."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "If-None-Match",
+      "rationale": "If-None-Match ist ein HTTP-Header, der verwendet wird, um zu prüfen, ob die angeforderte Ressource seit dem letzten Zugriff geändert wurde."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "Error Payload",
+      "rationale": "Ein Error Payload ist eine strukturierte Datenantwort, die zusätzliche Informationen über einen Fehler in einer HTTP-Response enthält."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "Access Token",
+      "rationale": "Ein Access Token ist ein Sicherheits-Token, das zur Authentifizierung und Autorisierung von API-Anfragen verwendet wird."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "Authorization: Bearer",
+      "rationale": "Authorization: Bearer ist eine spezifische Methode zur Übertragung eines Access Tokens im HTTP-Header für die Authentifizierung."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "Personenkontext",
+      "rationale": "Ein Personenkontext beschreibt die Beziehung einer Person zu einer Organisation und ihre Rolle innerhalb dieser Organisation, insbesondere im Schulconnex-Kontext."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "Zyklische Referenzgruppe",
+      "rationale": "Eine zyklische Referenzgruppe beschreibt eine Gruppe von Referenzen, die sich gegenseitig zirkulär verweisen, was in Datenmodellen problematisch ist."
+    },
+    {
+      "file": "docs/schnittstellendefinition/http-statuscodes.md",
+      "term": "Laufzeitangabe",
+      "rationale": "Eine Laufzeitangabe bezieht sich auf die zeitliche Definition von Start- und Endpunkten, insbesondere bei Lernperioden im Schulconnex-Kontext."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "HTTP",
+      "rationale": "Das Hypertext Transfer Protocol ist ein Übertragungsprotokoll für Daten und wird im Kontext der Schnittstelle zur Kommunikation zwischen Webserver und Webclient verwendet."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "GET",
+      "rationale": "GET ist eine HTTP-Methode, die im Kontext der Schnittstelle zum Abrufen von Ressourcen oder Entitäten verwendet wird."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "POST",
+      "rationale": "POST ist eine HTTP-Methode, die im Kontext der Schnittstelle zum Senden von Daten oder Erstellen von Entitäten verwendet wird."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "PUT",
+      "rationale": "PUT ist eine HTTP-Methode, die im Kontext der Schnittstelle zum Verändern oder Ablegen von Dateien auf dem Webserver verwendet wird."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "HTTP-Response",
+      "rationale": "Eine HTTP-Response ist die Antwort des Webservers auf eine HTTP-Anfrage und enthält unter anderem einen Status-Code."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "HTTP-Status-Code",
+      "rationale": "Ein HTTP-Status-Code gibt die Kategorie der Antwort des Webservers auf eine HTTP-Anfrage an und ist ein zentraler Bestandteil der Schnittstellenkommunikation."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "1xx",
+      "rationale": "1xx ist eine Kategorie von HTTP-Status-Codes, die informative Antworten des Webservers kennzeichnet."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "2xx",
+      "rationale": "2xx ist eine Kategorie von HTTP-Status-Codes, die erfolgreiche Antworten des Webservers kennzeichnet."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "3xx",
+      "rationale": "3xx ist eine Kategorie von HTTP-Status-Codes, die Weiterleitungen des Webservers kennzeichnet."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "4xx",
+      "rationale": "4xx ist eine Kategorie von HTTP-Status-Codes, die Client-Fehler kennzeichnet."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "5xx",
+      "rationale": "5xx ist eine Kategorie von HTTP-Status-Codes, die Server-Fehler kennzeichnet."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "URL-Parameter",
+      "rationale": "URL-Parameter sind zusätzliche Informationen, die an die URL einer HTTP-Anfrage angehängt werden und vom Webserver verarbeitet werden können."
+    },
+    {
+      "file": "docs/schnittstellendefinition/schnittstellendefinition.md",
+      "term": "HTTP-Body",
+      "rationale": "Der HTTP-Body ist der Teil einer HTTP-Anfrage, in dem Daten wie Parameter oder Inhalte übertragen werden, insbesondere bei der POST-Methode."
+    },
+    {
+      "file": "docs/schnittstellendefinition/validierung.md",
+      "term": "401 Unauthorized",
+      "rationale": "HTTP-Statuscode, der eine fehlende oder ungültige Authentifizierung signalisiert. Im Kontext der Schnittstelle wird er bei fehlender Zugriffsberechtigung zurückgegeben."
+    },
+    {
+      "file": "docs/schnittstellendefinition/validierung.md",
+      "term": "400 Bad Request",
+      "rationale": "HTTP-Statuscode, der auf fehlerhafte oder unzulässige Anfragen hinweist. Im Kontext der Schnittstelle wird er bei Validierungsfehlern verwendet."
+    },
+    {
+      "file": "docs/schnittstellendefinition/validierung.md",
+      "term": "Subcode 03 – „Validierungsfehler“",
+      "rationale": "Ein spezifischer Subcode innerhalb des HTTP-Statuscodes 400, der Validierungsfehler in der Anfrage kennzeichnet. Im Sinne der Schnittstelle dient er der präzisen Fehlerbeschreibung."
+    },
+    {
+      "file": "docs/schnittstellendefinition/validierung.md",
+      "term": "PUT",
+      "rationale": "HTTP-Methode, die für das Erstellen oder Aktualisieren von Ressourcen verwendet wird. Im Kontext der Schnittstelle werden PUT-Anfragen validiert."
+    },
+    {
+      "file": "docs/schnittstellendefinition/validierung.md",
+      "term": "POST",
+      "rationale": "HTTP-Methode, die für das Erstellen von Ressourcen oder das Auslösen von Prozessen verwendet wird. Im Kontext der Schnittstelle werden POST-Anfragen validiert."
+    },
+    {
+      "file": "docs/schnittstellendefinition/validierung.md",
+      "term": "Query-Parameter",
+      "rationale": "Parameter, die in der URL einer HTTP-Anfrage enthalten sind und zusätzliche Informationen zur Anfrage liefern. Im Kontext der Schnittstelle werden sie dekodiert und validiert."
+    },
+    {
+      "file": "docs/schnittstellendefinition/validierung.md",
+      "term": "URL-kodiert",
+      "rationale": "Ein Kodierungsverfahren für Zeichen in URLs, bei dem bestimmte Zeichen durch Prozentzeichen und ihre ASCII-Werte ersetzt werden. Im Kontext der Schnittstelle werden Query-Parameter nur in dieser Form akzeptiert."
+    }
+  ]
+}

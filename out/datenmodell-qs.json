@@ -1,0 +1,649 @@
+{
+  "findings": [
+    {
+      "file": "docs/datenmodell-qs/anschrift.md",
+      "term": "Postleitzahl",
+      "rationale": "Die Postleitzahl ist ein standardisiertes geografisches Identifikationsmerkmal, das zur Adressierung und Lokalisierung von Orten verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/anschrift.md",
+      "term": "Amtlicher Gemeindename",
+      "rationale": "Der amtliche Gemeindename ist ein standardisierter Begriff, der den offiziellen Namen einer Gemeinde bezeichnet und in administrativen und geografischen Kontexten verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/anschrift.md",
+      "term": "Ortsteil",
+      "rationale": "Ein Ortsteil ist eine spezifische Untergliederung eines Ortes und wird in geografischen und administrativen Kontexten verwendet, um eine genauere Lokalisierung zu ermöglichen."
+    },
+    {
+      "file": "docs/datenmodell-qs/beziehung.md",
+      "term": "Schulbegleiter",
+      "rationale": "Bezeichnet eine spezifische Rolle im schulischen Kontext, die eine unterstützende Funktion für eine andere Person übernimmt."
+    },
+    {
+      "file": "docs/datenmodell-qs/beziehung.md",
+      "term": "Schulbegleiterin",
+      "rationale": "Bezeichnet eine spezifische Rolle im schulischen Kontext, die eine unterstützende Funktion für eine andere Person übernimmt."
+    },
+    {
+      "file": "docs/datenmodell-qs/beziehung.md",
+      "term": "Personenkontext",
+      "rationale": "Im Sinne der Schnittstelle beschreibt der Personenkontext die spezifische Rolle und Organisation einer Person innerhalb eines bestimmten fachlichen Zusammenhangs."
+    },
+    {
+      "file": "docs/datenmodell-qs/beziehung.md",
+      "term": "ktid",
+      "rationale": "Abkürzung für die ID eines Personenkontexts, die eine eindeutige Zuordnung zu einer Person ermöglicht."
+    },
+    {
+      "file": "docs/datenmodell-qs/beziehung.md",
+      "term": "Mandant",
+      "rationale": "Bezeichnet eine klar abgegrenzte Datenhaltungs- und Verarbeitungseinheit im Schulconnex-Server, die einer Organisation zugeordnet ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/beziehung.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Bezeichnet die zentrale technische Plattform, die die Datenhaltung und Verarbeitung im Schulconnex-System ermöglicht."
+    },
+    {
+      "file": "docs/datenmodell-qs/beziehung.md",
+      "term": "Revision",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet die Revision eine Versionierung eines Datensatzes, die bei Erstellung und Aktualisierung generiert wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/beziehung.md",
+      "term": "Codeliste *Beziehungen*",
+      "rationale": "Bezeichnet eine vordefinierte Liste von Beziehungstypen, die im Schulconnex-Datenmodell verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell-arrays.md",
+      "term": "JSON",
+      "rationale": "JSON steht für JavaScript Object Notation und ist ein kompaktes Datenformat für strukturierte Daten. Es wird häufig in der Schnittstellenkommunikation verwendet, insbesondere im Schulconnex-Kontext."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell-arrays.md",
+      "term": "JSON-Array",
+      "rationale": "Ein JSON-Array ist eine indizierte Liste von Elementen gleichen oder verschiedenen Typs, dargestellt mit eckigen Klammern. Im Schulconnex-Datenmodell werden JSON-Arrays zur Strukturierung von Daten verwendet."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell-arrays.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Der Schulconnex-Server ist eine zentrale Komponente der Schulconnex-Spezifikation und dient der Bereitstellung und Verarbeitung von Daten im Bildungsbereich."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell-arrays.md",
+      "term": "API",
+      "rationale": "API steht für Application Programming Interface und bezeichnet eine Schnittstelle, über die Anwendungen miteinander kommunizieren können. Im Schulconnex-Kontext wird die API für den Datenaustausch genutzt."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "XHR",
+      "rationale": "Steht für 'XMLHttpRequest' und bezeichnet ein API-Objekt zur Durchführung von HTTP-Anfragen im Kontext von Webanwendungen. Im Schulconnex-Datenmodell wird es für die Kommunikation mit API-Endpunkten verwendet."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "API-Endpunkt",
+      "rationale": "Bezeichnet eine spezifische URL, über die ein Client mit einer API kommuniziert. Im Schulconnex-Datenmodell ist dies relevant für die Definition der Schnittstellenkommunikation."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "XBildung",
+      "rationale": "Ist eine Spezifikation zur Schaffung und Wahrung von Interoperabilität im Bildungswesen in Deutschland, die als Grundlage für das Schulconnex-Datenmodell dient."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "XSchule",
+      "rationale": "Stellt ein schulbezogenes Fachmodul der XBildung-Spezifikation dar und ergänzt diese um schulspezifische Elemente. Es dient als Basis für das Schulconnex-Datenmodell."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "Personenkontext",
+      "rationale": "Bezeichnet den Kontext einer Person, der eine Organisation und eine Rolle umfasst. Im Schulconnex-Datenmodell ist dies ein zentraler Begriff zur Modellierung von Beziehungen."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "Sichtfreigabe",
+      "rationale": "Bezeichnet die Freigabe von Datensätzen für andere Organisationen mit lesendem Zugriff. Im Schulconnex-Datenmodell ist dies eine spezifische Funktion zur Datenfreigabe."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "Lernperiode",
+      "rationale": "Bezeichnet einen Zeitraum, der mit einer Gruppe assoziiert ist. Im Schulconnex-Datenmodell wird dies zur Modellierung von Bildungsabschnitten verwendet."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "HTTP",
+      "rationale": "Das Hypertext Transfer Protocol ist ein Standardprotokoll für die Übertragung von Daten im Internet. Im Schulconnex-Datenmodell wird es für API-Kommunikation verwendet."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "String (256)",
+      "rationale": "Bezeichnet einen Datentyp mit einer maximalen Länge von 256 Zeichen. Im Schulconnex-Datenmodell wird dies zur Definition von Attributen verwendet."
+    },
+    {
+      "file": "docs/datenmodell-qs/datenmodell.md",
+      "term": "String (32)",
+      "rationale": "Bezeichnet einen Datentyp mit einer maximalen Länge von 32 Zeichen. Im Schulconnex-Datenmodell wird dies zur Definition von Attributen verwendet."
+    },
+    {
+      "file": "docs/datenmodell-qs/datumsformat.md",
+      "term": "ISO-8601",
+      "rationale": "ISO-8601 ist ein internationaler Standard zur Darstellung von Datums- und Zeitangaben. Im Kontext des Schulconnex-Datenmodells wird dieser Standard für die einheitliche Formatierung von Datumsangaben verwendet."
+    },
+    {
+      "file": "docs/datenmodell-qs/datumsformat.md",
+      "term": "UTC",
+      "rationale": "UTC steht für Coordinated Universal Time und ist eine international standardisierte Zeitangabe. Im Kontext des Schulconnex-Datenmodells wird UTC für die Darstellung des Löschzeitpunkts verwendet."
+    },
+    {
+      "file": "docs/datenmodell-qs/erreichbarkeit.md",
+      "term": "Personenkontext",
+      "rationale": "Kontext der Person, in dem ein Dienst genutzt wird. Ein Personenkontext umfasst eine Organisation und eine Rolle der nutzenden Person in Bezug auf diese Organisation."
+    },
+    {
+      "file": "docs/datenmodell-qs/erreichbarkeit.md",
+      "term": "Erreichbarkeitstyp",
+      "rationale": "Bezeichnet die Art der Erreichbarkeit einer Person oder Organisation. Im Sinne der Schnittstelle ist dies eine Referenz auf eine Codeliste."
+    },
+    {
+      "file": "docs/datenmodell-qs/erreichbarkeit.md",
+      "term": "Codeliste",
+      "rationale": "Eine strukturierte Liste von Codes, die zur Klassifikation oder Identifikation von Typen verwendet wird. Im Kontext der Schnittstelle dient sie der Standardisierung."
+    },
+    {
+      "file": "docs/datenmodell-qs/fach.md",
+      "term": "Fächerkanon",
+      "rationale": "Der Fächerkanon ist eine Codeliste, die die standardisierte Referenz für behandelte Fächer darstellt. Im Kontext des Schulconnex-Datenmodells dient er der eindeutigen Identifikation und Klassifikation von Fächern."
+    },
+    {
+      "file": "docs/datenmodell-qs/geburt.md",
+      "term": "DIN 91379.C",
+      "rationale": "DIN 91379.C ist eine Norm, die spezifische Zeichen für die Schreibung juristischer Personen sowie nicht druckbare Zeichen definiert. Sie wird im Kontext der elektronischen Verarbeitung von Geburtsorten verwendet."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Bezeichnet die zentrale Serverkomponente des Schulconnex-Systems, die für die Vergabe von IDs und die Datenhaltung verantwortlich ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Gruppenzugehörigkeit",
+      "rationale": "Im Sinne des Schulconnex-Datenmodells die Beziehung zwischen einer Person und einer Gruppe, die durch spezifische Datensätze abgebildet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Gruppendatensatz",
+      "rationale": "Bezeichnet die strukturierte Datenrepräsentation einer Gruppe im Schulconnex-Datenmodell."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Gruppentyp",
+      "rationale": "Ein Code aus der Codeliste, der den Typ einer Gruppe im Schulconnex-Datenmodell beschreibt, z. B. Klasse oder Kurs."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Gruppenbereich",
+      "rationale": "Ein Code aus der Codeliste, der die Art einer Gruppe im Schulconnex-Datenmodell beschreibt, z. B. Pflicht oder Wahl."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Gruppenoption",
+      "rationale": "Ein Code aus der Codeliste, der zusätzliche Eigenschaften einer Gruppe im Schulconnex-Datenmodell beschreibt, z. B. bilingual oder herkunftssprachlich."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Gruppendifferenzierung",
+      "rationale": "Ein Code aus der Codeliste, der die Differenzierung einer Gruppe im Schulconnex-Datenmodell beschreibt, z. B. Erweiterungsebene oder Grundebene."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Bildungsziel",
+      "rationale": "Ein Code aus der Codeliste, der das Bildungsziel einer Gruppe im Schulconnex-Datenmodell beschreibt, z. B. Realschule oder Gymnasium."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Jahrgangsstufe",
+      "rationale": "Ein Code aus der Codeliste, der die Jahrgangsstufe einer Gruppe im Schulconnex-Datenmodell beschreibt, z. B. Jahrgangsstufe 1 bis Jahrgangsstufe 13."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Referenzgruppe",
+      "rationale": "Bezeichnet eine Gruppe, die im Schulconnex-Datenmodell als Bezugspunkt für eine andere Gruppe dient."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Laufzeit",
+      "rationale": "Im Schulconnex-Datenmodell die zeitliche Dauer, für die eine Gruppe aktiv ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppe.md",
+      "term": "Revision",
+      "rationale": "Bezeichnet die Version eines Gruppendatensatzes im Schulconnex-Datenmodell, die bei Erstellung und Aktualisierung generiert wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Gruppendatensatz",
+      "rationale": "Der Begriff bezeichnet eine spezifische Datenstruktur im Schulconnex-Datenmodell, die als Container für Gruppen und Gruppenzugehörigkeiten dient."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "WrapperObject",
+      "rationale": "Spezialisierter Ausdruck aus der Softwareentwicklung, der im Kontext des Schulconnex-Datenmodells verwendet wird, um die Funktion des Gruppendatensatzes als Container zu beschreiben."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Gruppe",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet der Begriff eine spezifische Einheit, die durch das Attribut `gruppendatensatz.gruppe` repräsentiert wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Gruppenzugehörigkeit",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet der Begriff die Beziehung zwischen einer Person und einer Gruppe, die durch das Attribut `gruppendatensatz.gruppenzugehoerigkeit` dargestellt wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "JSON",
+      "rationale": "JSON ist ein standardisiertes Datenformat zur strukturierten Darstellung von Daten, das im Schulconnex-Datenmodell verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Array",
+      "rationale": "Ein Array ist eine Datenstruktur zur Speicherung von Listen, die im Schulconnex-Datenmodell für die Darstellung von Gruppenzugehörigkeiten verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Mandant",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet der Begriff eine klar abgegrenzte Datenhaltungs- und Verarbeitungseinheit, die für bestimmte Daten verantwortlich ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "OrgID",
+      "rationale": "Im Schulconnex-Datenmodell steht OrgID für die eindeutige Identifikation einer Organisation innerhalb eines Mandantenkontexts."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Referrer",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet der Begriff eine Referenz auf die Herkunft oder den Ursprung eines Datensatzes."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Kurs",
+      "rationale": "Im Schulconnex-Datenmodell ist Kurs ein spezifischer Typ einer Gruppe, der eine Unterrichtseinheit oder Klasse repräsentiert."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Pflicht",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet Pflicht einen Bereich, der auf verpflichtende Bildungsinhalte hinweist."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Differenzierung",
+      "rationale": "Im Schulconnex-Datenmodell beschreibt Differenzierung eine spezifische Ausprägung oder Unterteilung innerhalb einer Gruppe, z. B. nach Leistungsniveau."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Bildungsziele",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet Bildungsziele die angestrebten Lernziele einer Gruppe oder eines Kurses."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Jahrgangsstufen",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet Jahrgangsstufen die Klassenstufen, die einer Gruppe oder einem Kurs zugeordnet sind."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Fächer",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet Fächer die Unterrichtsgegenstände, die einer Gruppe oder einem Kurs zugeordnet sind."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Laufzeit",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet Laufzeit den Zeitraum, in dem eine Gruppe oder ein Kurs aktiv ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Revision",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet Revision die Versionierung eines Datensatzes, um Änderungen nachvollziehbar zu machen."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "KTID",
+      "rationale": "Im Schulconnex-Datenmodell steht KTID für eine eindeutige Kennung, die einer Gruppenzugehörigkeit zugeordnet ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppendatensatz.md",
+      "term": "Rollen",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet Rollen die spezifischen Funktionen oder Zuständigkeiten einer Person innerhalb einer Gruppenzugehörigkeit."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppenzugehörigkeit.md",
+      "term": "Gruppenzugehörigkeit",
+      "rationale": "Bezeichnet die Beziehung zwischen einem Personenkontext und einer Gruppe, einschließlich gruppenspezifischer Rollen. Im Schulconnex-Datenmodell ist dies ein zentraler Begriff zur Organisation von Personen innerhalb von Gruppen."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppenzugehörigkeit.md",
+      "term": "Personenkontext",
+      "rationale": "Im Schulconnex-Datenmodell beschreibt der Personenkontext die Beziehung einer Person zu einer Organisation, einschließlich ihrer Rolle innerhalb dieser Organisation."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppenzugehörigkeit.md",
+      "term": "Mandant",
+      "rationale": "Bezeichnet im Schulconnex-Datenmodell eine abgeschlossene und eindeutig identifizierbare Einheit, die für bestimmte Daten verantwortlich ist. Der Begriff ist spezifisch für die Datenhaltung und Verarbeitung im Schulconnex-Server."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppenzugehörigkeit.md",
+      "term": "Gruppenrolle",
+      "rationale": "Bezieht sich auf eine spezifische Rolle, die eine Person innerhalb einer Gruppe ausübt. Im Schulconnex-Datenmodell ist dies eine Referenz auf eine Codeliste, die die Rollen definiert."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppenzugehörigkeit.md",
+      "term": "Revision",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet die Revision eine Versionierung der Gruppenzugehörigkeit, die bei Erstellung und Aktualisierung des Datensatzes generiert wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppenzugehörigkeit.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Bezeichnet die technische Plattform, die die Datenhaltung und Verarbeitung im Schulconnex-Datenmodell ermöglicht. Der Begriff ist spezifisch für die Schulconnex-Domäne."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppenzugehörigkeit.md",
+      "term": "Quellsystem",
+      "rationale": "Bezeichnet im Schulconnex-Datenmodell das externe System, aus dem Daten wie die ID der Gruppenzugehörigkeit stammen. Es ist spezifisch für die Datenintegration."
+    },
+    {
+      "file": "docs/datenmodell-qs/gruppenzugehörigkeit.md",
+      "term": "Datumsformat",
+      "rationale": "Bezieht sich auf die spezifische Darstellung von Datumsangaben im Schulconnex-Datenmodell, die für die Laufzeitangaben der Gruppenzugehörigkeit verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/laufzeit.md",
+      "term": "Lernperiode",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet eine Lernperiode einen definierten Zeitabschnitt, der für die Organisation von Gruppen und deren Laufzeiten relevant ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/laufzeit.md",
+      "term": "Codeliste",
+      "rationale": "Eine Codeliste ist eine strukturierte Sammlung von Codes, die zur Referenzierung spezifischer Werte wie Lernperioden verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/laufzeit.md",
+      "term": "Datumsformat",
+      "rationale": "Das Datumsformat definiert die Struktur und Darstellung von Datumsangaben, die für die Festlegung von Laufzeiten erforderlich sind."
+    },
+    {
+      "file": "docs/datenmodell-qs/lernperiode.md",
+      "term": "Lernperiode",
+      "rationale": "Im Sinne der Schnittstelle beschreibt eine Lernperiode einen Zeitraum, in dem Gruppen von Organisationen angeboten werden können, meist gesetzlich vorgegebene Schuljahre oder Schulhalbjahre."
+    },
+    {
+      "file": "docs/datenmodell-qs/lernperiode.md",
+      "term": "Codeliste",
+      "rationale": "Eine Codeliste ist eine strukturierte Liste von Codes, die zur Standardisierung und Referenzierung von Daten verwendet wird. Im Kontext der Lernperiode enthält sie komplexe Datentypen."
+    },
+    {
+      "file": "docs/datenmodell-qs/lernperiode.md",
+      "term": "Lernperiodentyp",
+      "rationale": "Ein Lernperiodentyp ist ein spezifischer Code innerhalb der Codeliste, der den Typ einer Lernperiode beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-qs/lernperiode.md",
+      "term": "Datumsformat",
+      "rationale": "Das Datumsformat definiert die Struktur, in der Datumsangaben innerhalb der Schnittstelle angegeben werden müssen."
+    },
+    {
+      "file": "docs/datenmodell-qs/name.md",
+      "term": "DIN 91379",
+      "rationale": "Diese DIN-Norm definiert Subsets von Unicodes für die elektronische Verarbeitung von Namen und den Datenaustausch in Europa."
+    },
+    {
+      "file": "docs/datenmodell-qs/name.md",
+      "term": "DIN 91379.A",
+      "rationale": "DIN 91379.A umfasst die Zeichen, welche für Namen natürlicher Personen benötigt werden, einschließlich lateinischer Schriftzeichen, Umlaute und Akzentzeichen sowie Nicht-Buchstaben wie Komma, Bindestrich oder Punkt."
+    },
+    {
+      "file": "docs/datenmodell-qs/name.md",
+      "term": "DIN 91379.B",
+      "rationale": "DIN 91379.B umfasst die Zeichen, welche für Ortsnamen und Straßennamen notwendig sind, einschließlich der Zeichen von DIN 91379.A sowie zusätzlicher Zeichen wie Zahlen und mathematische Symbole."
+    },
+    {
+      "file": "docs/datenmodell-qs/organisation.md",
+      "term": "Schulconnex-Service",
+      "rationale": "Ein Service, der den Vorgaben der Schulconnex-Spezifikation folgt und spezifisch für den Schulconnex-Kontext definiert ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/organisation.md",
+      "term": "Organisationstyp",
+      "rationale": "Referenz auf eine Codeliste, die spezifische Typen von Organisationen im Schulconnex-Kontext beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-qs/organisation.md",
+      "term": "Trägerschaft",
+      "rationale": "Bezeichnet die Art der Trägerschaft bei Schul-Organisationen und ist eine Referenz auf eine Codeliste im Schulconnex-Kontext."
+    },
+    {
+      "file": "docs/datenmodell-qs/organisation.md",
+      "term": "DIN 91379.B",
+      "rationale": "Diese DIN-Norm definiert Zeichen für Orts- und Straßennamen, die im Kontext der Organisationen relevant sind."
+    },
+    {
+      "file": "docs/datenmodell-qs/organisation.md",
+      "term": "Personenkontext",
+      "rationale": "Bezeichnet den Kontext einer Person, der eine Organisation und eine Rolle umfasst, spezifisch für die Schulconnex-Schnittstelle."
+    },
+    {
+      "file": "docs/datenmodell-qs/organisationsbeziehung.md",
+      "term": "Organisationsbeziehung",
+      "rationale": "Beschreibt im Schulconnex-Datenmodell die spezifische Beziehung zwischen zwei Organisationen, wie z. B. die Zuordnung einer Schulbehörde."
+    },
+    {
+      "file": "docs/datenmodell-qs/organisationsbeziehung.md",
+      "term": "SchBeh",
+      "rationale": "Steht für die Beziehung 'Schulbehörde' innerhalb der Codeliste Organisationsbeziehungen im Schulconnex-Datenmodell."
+    },
+    {
+      "file": "docs/datenmodell-qs/organisationsbeziehung.md",
+      "term": "orgid",
+      "rationale": "Bezeichnet die eindeutige Identifikation einer Organisation, zu der eine 'hat_als'-Beziehung besteht, im Schulconnex-Datenmodell."
+    },
+    {
+      "file": "docs/datenmodell-qs/organisationsbeziehung.md",
+      "term": "Codeliste Organisationsbeziehungen",
+      "rationale": "Im Schulconnex-Datenmodell eine Liste vordefinierter Beziehungstypen zwischen Organisationen, wie z. B. 'Schulbehörde'."
+    },
+    {
+      "file": "docs/datenmodell-qs/person.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Bezeichnet die zentrale Serverinstanz des Schulconnex-Systems, die für die Vergabe von IDs und die Datenhaltung verantwortlich ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/person.md",
+      "term": "Mandant",
+      "rationale": "Im Sinne der Schnittstelle ist ein Mandant eine eindeutig identifizierbare Einheit, der Personen zugeordnet werden und die für die Datenverarbeitung verantwortlich ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/person.md",
+      "term": "Stammorganisation",
+      "rationale": "Bezeichnet die primäre Organisation, der eine Person zugeordnet ist, unabhängig von temporären Tätigkeiten in anderen Organisationen."
+    },
+    {
+      "file": "docs/datenmodell-qs/person.md",
+      "term": "RFC 5646",
+      "rationale": "Standard zur Definition von Sprach- und Lokalisierungseinstellungen, der im Kontext der bevorzugten Lokalisierung einer Person verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/person.md",
+      "term": "Codeliste",
+      "rationale": "Bezeichnet eine vorgegebene Liste von Codes, die zur Standardisierung von Attributwerten wie Geschlecht, Vertrauensstufe oder Boolean verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/person.md",
+      "term": "Boolean",
+      "rationale": "Bezieht sich auf eine Codeliste, die binäre Werte wie 'ja' oder 'nein' für Attribute wie Auskunftssperre definiert."
+    },
+    {
+      "file": "docs/datenmodell-qs/person.md",
+      "term": "Revision",
+      "rationale": "Bezeichnet eine Versionsnummer, die vom Schulconnex-Server generiert wird, um Änderungen an einem Personendatensatz zu verfolgen."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "Personendatensatz",
+      "rationale": "Ein spezifischer Begriff im Schulconnex-Datenmodell, der einen Daten-Container beschreibt, der Informationen über eine Person und deren Kontexte zusammenführt."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "WrapperObject",
+      "rationale": "Ein technischer Begriff, der im Kontext des Datenmodells verwendet wird, um die Funktion des Personendatensatzes als Container zu beschreiben."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "Person",
+      "rationale": "Im Sinne der Schnittstelle ein Mensch, der eine Beziehung zu einer oder mehreren Organisationen hat und dort Träger von Rechten und Pflichten ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "Personenkontext",
+      "rationale": "Ein spezifischer Kontext einer Person, der eine Organisation und die Rolle der Person in Bezug auf diese Organisation umfasst."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "JSON",
+      "rationale": "Ein kompaktes Datenformat für strukturierte Daten, das im Schulconnex-Datenmodell zur Darstellung von Datensätzen verwendet wird."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "Array",
+      "rationale": "Ein technischer Begriff, der im Datenmodell verwendet wird, um eine Liste von Personenkontexten zu beschreiben."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "Mandant",
+      "rationale": "Bezeichnet die für bestimmte Daten verantwortliche Stelle im datenschutzrechtlichen Sinne und stellt einen klar abgegrenzten Datenverarbeitungskontext dar."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "Organisation",
+      "rationale": "Im Schulconnex-Datenmodell eine Einheit, die mit einer Person und deren Kontext verknüpft ist, z. B. eine Schule."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "Rolle",
+      "rationale": "Eine temporäre Funktion, die eine Person innerhalb eines fachlichen Kontexts ausübt, verbunden mit Aufgaben und Befugnissen."
+    },
+    {
+      "file": "docs/datenmodell-qs/personendatensatz.md",
+      "term": "Revision",
+      "rationale": "Ein Begriff im Datenmodell, der die Versionierung eines Datensatzes beschreibt."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Personenkontext",
+      "rationale": "Im Sinne der Schnittstelle bezeichnet der Personenkontext den spezifischen Kontext einer Person, in dem ein Dienst genutzt wird. Er umfasst eine Organisation und eine Rolle der nutzenden Person in Bezug auf diese Organisation."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Organisation",
+      "rationale": "Im Kontext des Schulconnex-Datenmodells bezeichnet Organisation eine Einrichtung, an der eine Person eine Rolle ausübt, wie beispielsweise eine Schule oder eine außerschulische Institution."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Rolle",
+      "rationale": "Eine Rolle ist eine temporäre Funktion, die eine Person innerhalb eines fachlichen Kontexts ausübt. Sie ist verbunden mit Aufgaben, Befugnissen und Verantwortungen."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Sichtfreigabe",
+      "rationale": "Das Attribut Sichtfreigabe gibt an, ob ein Personenkontext aufgrund der Freigabe durch eine andere Organisation sichtbar ist. Es ist ein spezifischer Begriff im Schulconnex-Datenmodell."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Mandant",
+      "rationale": "Im Schulconnex-Datenmodell bezeichnet Mandant die für bestimmte Daten verantwortliche Stelle, die einen abgeschlossenen und gegenüber anderen Mandantschaften klar abgegrenzten Datenhaltungs- und Verarbeitungskontext darstellt."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Personenstatus",
+      "rationale": "Personenstatus bezeichnet den Status, den eine Person in einer Organisation in Bezug auf eine bestimmte Rolle hat. Es ist eine Referenz auf einen Code der Codeliste Personenstatus."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Jahrgangsstufe",
+      "rationale": "Jahrgangsstufe bezeichnet die Stufe, die eine Person in einer Organisation in einer bestimmten Rolle besucht. Es ist eine Referenz auf einen Code der Codeliste Jahrgangsstufe."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Erreichbarkeiten",
+      "rationale": "Erreichbarkeiten sind eine Liste von Kontaktmöglichkeiten, die einer Person im Rahmen eines Personenkontexts zugeordnet sind. Sie sind spezifisch für das Schulconnex-Datenmodell."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Revision",
+      "rationale": "Revision bezeichnet die Version eines Personenkontexts, die vom Schulconnex-Server bei Erstellung und Aktualisierung generiert wird. Sie ist unveränderbar durch Quellsysteme oder Dienste."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "API",
+      "rationale": "API steht für Application Programming Interface und bezeichnet die Schnittstelle, über die mehrere Personenkontexte einer Person abgefragt und zurückgegeben werden können."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "Boolean",
+      "rationale": "Boolean ist ein Datentyp, der im Schulconnex-Datenmodell verwendet wird, um Sichtfreigaben als Ja/Nein-Werte zu definieren."
+    },
+    {
+      "file": "docs/datenmodell-qs/personenkontext.md",
+      "term": "loeschung.zeitpunkt",
+      "rationale": "loeschung.zeitpunkt bezeichnet das Datum und die Uhrzeit der Löschung eines Personenkontexts im Format `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt."
+    },
+    {
+      "file": "docs/datenmodell-qs/referenzgruppe.md",
+      "term": "Referenzgruppe",
+      "rationale": "Im Sinne der Schulconnex-Spezifikation bezeichnet eine Referenzgruppe eine Gruppe, deren Mitglieder automatisch oder teilweise einer Hauptgruppe zugeordnet werden können, um die Verwaltung von Gruppen zu erleichtern."
+    },
+    {
+      "file": "docs/datenmodell-qs/referenzgruppe.md",
+      "term": "orgid",
+      "rationale": "Steht für die Organisations-ID, die eine eindeutige Zuordnung von Gruppen und Referenzgruppen innerhalb derselben Organisation sicherstellt."
+    },
+    {
+      "file": "docs/datenmodell-qs/referenzgruppe.md",
+      "term": "grupid",
+      "rationale": "Bezeichnet die eindeutige ID einer Referenzgruppe, die zur Identifikation und Zuordnung innerhalb des Datenmodells dient."
+    },
+    {
+      "file": "docs/datenmodell-qs/referenzgruppe.md",
+      "term": "rollen",
+      "rationale": "Bezieht sich auf die spezifischen Gruppenrollen, die aus der Gruppenzugehörigkeit von Personenkontexten in eine Referenzgruppe übernommen werden können."
+    },
+    {
+      "file": "docs/datenmodell-qs/referenzgruppe.md",
+      "term": "Personenkontext",
+      "rationale": "Im Sinne der Schnittstelle beschreibt der Personenkontext die Rolle einer Person innerhalb einer Organisation, die für die Übernahme in eine Referenzgruppe relevant ist."
+    },
+    {
+      "file": "docs/datenmodell-qs/sichtfreigabe.md",
+      "term": "Sichtfreigabe",
+      "rationale": "Organisationen können individuelle Datensätze für andere Organisationen freigeben. Bei einer Sichtfreigabe ist für die andere Organisation nur der lesende Zugriff auf die Daten möglich."
+    },
+    {
+      "file": "docs/datenmodell-qs/sichtfreigabe.md",
+      "term": "Schulconnex-Server",
+      "rationale": "Der Schulconnex-Server ist eine zentrale Instanz, die Datensätze verwaltet und spezifische Funktionen wie die Generierung von Revisionen unterstützt."
+    },
+    {
+      "file": "docs/datenmodell-qs/sichtfreigabe.md",
+      "term": "DELETE API",
+      "rationale": "Die DELETE API ist eine Schnittstellenfunktion, die genutzt wird, um eine Sichtfreigabe unverzüglich zu beenden."
+    },
+    {
+      "file": "docs/datenmodell-qs/sichtfreigabe.md",
+      "term": "Revision",
+      "rationale": "Die Revision ist eine vom Schulconnex-Server generierte Versionskennung, die Änderungen an einer Sichtfreigabe dokumentiert."
+    },
+    {
+      "file": "docs/datenmodell-qs/sichtfreigabe.md",
+      "term": "Datumsformat",
+      "rationale": "Das Datumsformat definiert die Struktur und Darstellung von Datumsangaben, die für die Attribute 'von' und 'bis' einer Sichtfreigabe verwendet werden."
+    }
+  ]
+}
