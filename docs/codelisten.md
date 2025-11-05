@@ -1,13 +1,13 @@
 # Codelisten
 
 Codelisten legen mögliche Werte für bestimmte Attribute fest, beispielsweise für „Geschlecht“
-oder „Organisationstyp“. Nachfolgend befinden sich alle Codelisten, welche in der Spezifikation
+oder „Organisationstyp“. Nachfolgend befinden sich alle Codelisten, die in der Spezifikation
 referenziert werden.
 
 Codes aus Codelisten werden generell als Strings zurückgegeben, d. h. die JSON-Form für das
 weibliche Geschlecht ist als `"geschlecht": "w"` und nicht `"geschlecht": w` zu erwarten.
 
-Alle Codes müssen als nicht abhängig von Groß-/Kleinschreibung interpretiert werden
+Alle Codes müssen als unabhängig von Groß-/Kleinschreibung interpretiert werden
 (sind nicht Case-sensitiv). Die Organisationsarten `"SCHULE"`, `"schule"`, `"Schule"` oder
 auch `"ScHuLe"` müssen als identisch angenommen werden.
 
@@ -61,10 +61,10 @@ GY-SEK-II | Gymnasium Sekundarstufe II
 Die Codeliste „Boolean“ regelt das Mapping der deutschen Wörter „ja“ und „nein“ auf die
 englischen Begriffe „true“ und „false“.
 
-Code | Bemerkung
+Code | Bezeichnung
 --- | ---
-Ja | Mapping auf `"true"`.
-Nein | Mapping auf `"false"`.
+Ja | True
+Nein | False
 
 ## Erreichbarkeitstyp
 
