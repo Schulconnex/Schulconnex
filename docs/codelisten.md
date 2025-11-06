@@ -27,9 +27,9 @@ URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorte
 
 * __Lesbarkeit und Verständlichkeit__: URI-Codelistenwerte sind oft menschenlesbar und können leicht maschinell interpretiert werden, was die Dokumentation und das Debugging erleichtert.
 
-* __Standardisierung__: Die Verwendung von URI-Codelistenwerte fördert die Einhaltung von Standards und Best-Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
+* __Standardisierung__: Die Verwendung von URI-Codelistenwerten fördert die Einhaltung von Standards und Best-Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
 
-Als technisches Format ist geplant, für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifische Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, womit die Bundesländer ihre spezifischen Anforderungen abbilden können.
+Als technisches Format ist geplant, für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifischen Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, womit die Bundesländer ihre spezifischen Anforderungen abbilden können.
 
 ## Beziehungen
 
@@ -257,8 +257,8 @@ unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
-SchTrae | Schulträger | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisations B, so hat A als Schulträger die Organisation B, damit ist B also Schulträger von A.
-SchBeh | Schulbehörde | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisations B, so hat A als Schulbehörde die Organisation B, damit ist B also Schulbehörde von A.
+SchTrae | Schulträger | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Schulträger die Organisation B, damit ist B also Schulträger von A.
+SchBeh | Schulbehörde | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Schulbehörde die Organisation B, damit ist B also Schulbehörde von A.
 
 ## Organisationstyp
 

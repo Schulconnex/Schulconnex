@@ -65,7 +65,7 @@ personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten 
       "erreichbarkeiten": [
         {
           "typ": "E-Mail",
-          "kennung": "Musterfrau@Heinrich-Heine-Gymnasium.de",
+          "kennung": "Musterfrau@Heinrich-Heine-Gymnasium.de"
         }
       ],
       "personenstatus": "Aktiv",

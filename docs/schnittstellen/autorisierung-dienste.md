@@ -68,7 +68,7 @@ als Attribut `sub` im `id_token` enthalten.
 [5]: https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.1
 
 In einigen Fällen ist es für Dienstanbieter wünschenswert, neben der PID bereits bei der
-Autorisierung weitere Informationen über die angemeldete Person zu erhalten. Dieses kann, nach
+Autorisierung weitere Informationen über die angemeldete Person zu erhalten. Dies kann, nach
 Absprache mit dem Betreiber des Schulconnex-Servers, durch die Nutzung von OIDC Claims geschehen.
 Die Nutzung von OIDC Claims zur Übermittlung von Schulconnex-Informationen ist in Kapitel
 „[Person-Info über OIDC Claims](./oidc-claims.md)“ beschrieben. Im Regelfall sollten
