@@ -1,6 +1,10 @@
 type: string
 enum:
   - Aktiv
+  - Beurlaubt
+  - Deaktiviert
 description: >
     Wie folgt:
       * Aktiv aktiv
+      * Beurlaubt beurlaubt
+      * Deaktiviert Zugang derzeit deaktiviert

@@ -276,6 +276,8 @@ Sonstige | sonstige Organisationen / Einrichtungen
 Code | Bezeichnung
 --- | ---
 Aktiv | aktiv
+Beurlaubt | beurlaubt
+Deaktiviert | Zugang derzeit deaktiviert
 
 ## Rolle
 
