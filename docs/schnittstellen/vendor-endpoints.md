@@ -34,7 +34,7 @@ Insbesondere sollten:
 * Attribute bei allen Endpunkten gleich behandelt werden
 * Die Attribute `id` und `revision` immer beibehalten werden
 
-# Entfernen von Attributen aus Datenmodellen
+# Hinzufügen von Attributen zu Datenmodellen
 Beim Erweitern von Datenmodellen sollten die „[Richtlinien für Anwenderspezifische Attribute](vendor-extensions)" befolgt werden.
 
 # Veröffentlichungen von Server-Informationen
