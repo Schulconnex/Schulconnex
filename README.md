@@ -99,8 +99,8 @@ Erzeugt statische Dateien im Verzeichnis `build`, die von einem Webserver gehost
 
 Falls die Seite nicht startet versuchen Sie:
 
-* `npx docusaurus clear`
-* `rm docs/generated/openapi`
+* `npm run clear`
+* `npm run clean-openapi-docs`
 
 Falls dies nicht weiterhilft, [eröffnen Sie gerne eine Issue](https://github.com/Schulconnex/Schulconnex/issues/new).
 
