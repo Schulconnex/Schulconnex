@@ -136,11 +136,6 @@ const sidebars: SidebarsConfig = {
           id: 'datenmodell-dienste/personenkontext',
           label: 'Personenkontext',
         },
-        {
-          type: 'doc',
-          id: 'datenmodell-dienste/sichtfreigabe',
-          label: 'Sichtfreigabe',
-        },
       ],
     },
     {
