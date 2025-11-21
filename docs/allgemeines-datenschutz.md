@@ -20,4 +20,4 @@ Für alle nicht technisch notwendigen Attribute eines Datenmodells ist eine expl
 
 * Hat eine Person das Recht auf Einschränkung der Verarbeitung ihrer Daten nach Artikel 18 der EU-Datenschutz-Grundverordnung (DSGVO) in Anspruch genommen, so können diese Daten entsprechend markiert werden, so dass eine weitere Verarbeitung vorerst nicht stattfindet.
 
-Weiterhin stellt die Schulconnex-Spezifikation einen informativen Praxisleitfaden für die Implementierungs der  Abläufe zum Löschen von Personen-Daten und Personenkontext-Daten bereit, sowie Mechanismen diese Löschanforderungen auch an Dienste zu liefern, welche die Daten bereits genutzt haben und eventuell lokale Kopien halten.
+Weiterhin stellt die Schulconnex-Spezifikation einen informativen Praxisleitfaden für die Implementierung der  Abläufe zum Löschen von Personen-Daten und Personenkontext-Daten bereit, sowie Mechanismen diese Löschanforderungen auch an Dienste zu liefern, welche die Daten bereits genutzt haben und eventuell lokale Kopien halten.
