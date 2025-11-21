@@ -257,8 +257,9 @@ unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
-SchTrae | Schulträger | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisations B, so hat A als Schulträger die Organisation B, damit ist B also Schulträger von A.
-SchBeh | Schulbehörde | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisations B, so hat A als Schulbehörde die Organisation B, damit ist B also Schulbehörde von A.
+SchTrae | Schulträger | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Schulträger die Organisation B, damit ist B also Schulträger von A.
+SchBeh | Schulbehörde | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Schulbehörde die Organisation B, damit ist B also Schulbehörde von A.
+Medienzentrum | Medienzentrum | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Medienzentrum die Organisation B, damit ist B also Medienzentrum für A.
 
 ## Organisationstyp
 
