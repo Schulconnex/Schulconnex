@@ -1,6 +1,8 @@
 type: string
 enum:
   - Aktiv
+  - Nichtaktiv
 description: >
     Wie folgt:
       * Aktiv aktiv
+      * Nichtaktiv Zugang derzeit nicht aktiv
