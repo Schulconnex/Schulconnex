@@ -123,14 +123,14 @@ put:
     content:
       application/json:
         schema:
-          $ref: './components-qs-PersonenKontext-PUT-request.yaml'
+          $ref: './components-qs-Personenkontext-PUT-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-PersonenKontext.yaml'
+            $ref: './components-qs-Personenkontext.yaml'
     '400':
       description: |
         Bad Request
