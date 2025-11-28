@@ -274,12 +274,11 @@ Sonstige | sonstige Organisationen / Einrichtungen
 
 ## Personenstatus
 
-Diese Codeliste gibt an, ob ein Personenkontext aktuell aktiv ist. Ein nicht aktiver Personenstatus kann unterschiedliche Gründe haben. So kann ein Zugang eingerichtet, aber noch nicht aktiviert worden sein. Oder ein Zugang kann noch existieren, aber wegen Überschreitung von Fristen, beispielsweise zur Passwortänderung, zwischenzeitlich deaktiviert sein. 
+Diese Codeliste gibt an, ob ein Personenkontext aktuell aktiv ist. 
 
 Code | Bezeichnung
 --- | ---
 Aktiv | aktiv
-Nichtaktiv | Zugang derzeit nicht aktiv
 
 ## Rolle
 
