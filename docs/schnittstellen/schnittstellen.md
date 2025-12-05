@@ -2,7 +2,7 @@
 
 Die von Schulconnex-Servern bereitgestellten Endpunkte sind als REST-API realisiert.
 
-Allgemein erfolgen Zugriffe auf Ressourcen über die Endpunkte mit Hilfen von CRUD-Operationen
+Allgemein erfolgen Zugriffe auf Ressourcen über die Endpunkte mit Hilfe von CRUD-Operationen
 (CREATE, READ, UPDATE und DELETE). Welche Zugriffe jeweils erlaubt sind und welche
 HTTP(S)-Methoden dabei genutzt werden dürfen, ist bei den Endpunktbeschreibungen im Detail
 aufgeführt. Dort werden auch die zu verwendenen JSON-Strukturen beschrieben.
