@@ -26,6 +26,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'schnittstellen/vendor-extensions',
         'schnittstellen/vendor-extensions-best-practices',
+        'schnittstellen/vendor-endpoints',
       ]
     },
     'codelisten',
@@ -135,11 +136,6 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'datenmodell-dienste/personenkontext',
           label: 'Personenkontext',
-        },
-        {
-          type: 'doc',
-          id: 'datenmodell-dienste/sichtfreigabe',
-          label: 'Sichtfreigabe',
         },
       ],
     },
