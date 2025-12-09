@@ -1,0 +1,260 @@
+---
+id: read-person-info
+title: "Informationen der angemeldeten Person"
+description: "Dieser Endpunkt bezieht sich nur auf die im Sicherheitskontext angemeldete Person und"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: docs/generated/openapi/dienste/schulconnex
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Informationen der angemeldeten Person"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/person-info"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Dieser Endpunkt bezieht sich nur auf die im Sicherheitskontext angemeldete Person und
+dient somit dem Abruf der Informationen der jeweiligen Person.
+
+Die Anfrage muss als HTTP-GET gestellt werden. Die Antwort erfolgt mit einer pseudonymisierten ID,
+dem JSON-Objekt der betreffenden Person sowie einer Liste aller für die Sichtbarkeit
+freigegebenen Personenkontexte.
+
+Bei der Auslieferung von Person-Info wird im HTTP-Header ein ETag mitgeliefert. Bei nachfolgenden
+Abrufen der Personen-Information vom Schulconnex-Service kann der Dienst ein „If-None-Match“
+Tag mit diesem ETag in den Request-Header mit aufnehmen.
+
+Hat sich der Datensatz seit Auslieferung des ETag-Headers nicht geändert, so antwortet
+der Server mit einem Status 304 (Not Modified) und sendet den Datensatz nicht erneut.
+
+```json
+{
+  "pid": <String>, // pseudonymisierte ID
+  "person": <Objekt>, // Objekt vom Typ Person, siehe Datenmodell
+  "personenkontexte": [ // Array mit Objekten
+    {
+      <Objekt>, // Objekt vom Typ Personenkontext, siehe Datenmodell
+      "gruppen": [
+        // Array von Gruppen und Gruppenzugehoerigkeiten eines Personenkontexts
+        "gruppe": ": <Objekt>, // Objekt vom Typ Gruppe
+      ],
+      "beziehungen": {
+        "hat_als_beziehungen": [ // Array von Beziehungen, welche vom Personenkontext ausgehen
+          {
+            "ktid": <Personenkontext-ID welche der Bezug in der angegebenen Rolle ist>
+            "beziehung": <Art der Beziehung>
+          },
+          ...
+        ],
+        "ist_von beziehungen": [
+          {
+            "ktid": <Personenkontext-ID der den Bezug hat >,
+            "beziehung": <Art der Beziehung>
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+Die pseudonymisierte ID `pid` in der Rückgabe repräsentiert die `id` im aktuell ausgewählten
+Sicherheitskontext und folgt der gleichen Definition wie die `id`.
+
+Im Sicherheitskontext einer angemeldeten nutzenden Person mit ausschließlichem Zugriff
+auf den Personenkontext, mit dem sie angemeldet ist, steht nur der ausgewählte und dadurch
+aktive Personenkontext in der Liste `personenkontexte`. Die `pid` entspricht in diesem Fall
+der `id` des einen angegebenen Personenkontexts.
+
+Es ist möglich, dass zu einer angemeldeten Person mehrere Personenkontexte bereitgestellt
+werden. Im Sicherheitskontext einer angemeldeten nutzenden Person mit Zugriff auf mehrere
+Personenkontexte, die für den Dienst freigegeben sind, umfasst die Liste der Personenkontexte
+`personenkontexte` alle freigegebenen Personenkontexte. In diesem Fall entspricht die `pid` der
+Identität der Person und jeder Personenkontext hat die eigene `id`, welche bei Anmeldung
+im Sicherheitskontext mit ausschließlichem Zugriff auf diesen Personenkontext als `pid`
+ausgeliefert würde. Siehe auch die einzelnen Datenmodelle zu [`Person`](../../../datenmodell-dienste/person)
+und [`Personenkontext`](../../../datenmodell-dienste/personenkontext).
+
+Es ist weiterhin möglich, dass eine angemeldete Person mehreren Gruppen zugeordnet ist.
+In diesem Fall können, geregelt durch eine vertragliche Absprache zwischen Dienstanbieter
+und Betreiber des Schulconnex-Servers, neben der Gruppenzugehörigkeit im aktuellen
+Anmeldekontext auch andere Gruppenzugehörigkeiten durch `/person-info` geliefert werden.
+
+Abhängig von einer vertraglichen Absprache zwischen Dienstanbieter und Betreiber des
+Schulconnex-Servers ist es möglich, bei der Gruppenzugehörigkeit gegebenenfalls auch
+die Personenkontext-IDs und Rollen anderer Mitglieder derselben Gruppe mit auszugeben.
+Die Personenkontext-IDs und Rollen werden dann in einem Array namens `sonstige_gruppenzugehoerige`,
+jeweils mit dem Namen „ID“ und „Rolle“ als Teil der Gruppenzugehörigkeit geliefert.
+
+Typischerweise ist dieses eine Liste von Schüler und Schülerinnen in einer Gruppe, wenn
+sich eine Lehrkraft mit der Gruppenrolle `Lehr` anmeldet.
+
+Bei der Ausgabe von Beziehungen zwischen Personenkontexten ist es abhängig vom
+Schulconnex-Server ob alle existierenden und als einsehbar freigegebenen Beziehungen
+unter `beziehungen` mit aufgeführt werden oder nur solche Beziehungen, zu denen der
+Personenkontext, mit dem eine Beziehung besteht, vorher schon von dem Dienst abgerufen
+wurde und damit dem Dienst bekannt ist.
+
+```json
+{
+  "pid": "df6588cf8dc649ef79fcc852e1064761442a32bf3496ecd9bde0f66a18685aaa",
+  "person": {
+    "stammorganisation": {
+      "id": "fe963bff-e837-4799-91e2-5680222188a5",
+      "kennung": "NI_54321",
+      "name": "Otto Hahn Schule",
+      "anschrift": {
+        "postleitzahl": "29614",
+        "ort": "Soltau",
+        "ortsteil": "Ahlften"
+      },
+      "typ": "Schule"
+    },
+    "name": {
+      "familienname": "Muster",
+      "vorname": "Max"
+    },
+    "geburt": {
+      "datum": "2010-01-01",
+      "volljaehrig": "Ja"
+    },
+    "geschlecht": "m",
+    "lokalisierung": "de",
+    "vertrauensstufe": "Voll"
+  },
+  "personenkontexte": [
+    {
+      "id": "dd29cbf394a218a4637004f5789a210e9ec55b084a648e02a55fa3eb56475e3f",
+      "organisation": {
+        "id": "15685758-d18e-49c1-a644-f9996eb0bf08",
+        "kennung": "NI_12345",
+        "name": "Muster-Schule",
+        "typ": "Schule"
+      },
+      "rolle": "Lern",
+      "erreichbarkeiten": [
+        {
+          "typ": "E-Mail",
+          "kennung": "Max.Muster@Muster-Schule.de"
+        }
+      ],
+      "personenstatus": "Aktiv",
+      "gruppen": [
+        {
+          "gruppe": {
+            "id": "b3201d00-f21f-4986-a39d-02a09c8da26c",
+            "orgid": "9b3f36ad-9d15-49f9-9660-6cf9746ba446",
+            "bezeichnung": "Englisch 6b",
+            "typ": "Kurs",
+            "bereich": "Pflicht",
+            "optionen": [
+              ""
+            ],
+            "differenzierung": "E",
+            "bildungsziele": [
+              "RS"
+            ],
+            "jahrgangsstufen": [
+              "03"
+            ],
+            "faecher": [
+              {
+                "kennung": "EN"
+              },{
+                "bezeichnung": "Erste Hilfe"
+              }
+            ],
+            "laufzeit": {
+              "von": "2026-01-01",
+              "bis": "2028-12-31"
+            }
+          },
+          "gruppenzugehoerigkeit": [
+            {
+              "rollen": [
+                "Lern"
+              ],
+              "von": "2026-01-01",
+              "bis": "2027-12-31"
+            }
+          ],
+          "sonstige_gruppenzugehoerige": [
+            {
+              "ktid": "7168185a615d8a05a7330e7e5b84288c96783da6f734529760de13335f38016a",
+              "rollen": [
+                "Lern",
+                "GMit"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "beziehungen": {
+    "hat_als_beziehungen": [
+      {
+        "ktid": "1706e0e9cbc89ec256db8552955b981cf9590dffb71c2b586f9f9edae52f980b",
+        "beziehung": "SchB"
+      },
+      {
+        "ktid": "032b0499c3ff360791eb778adad23fa56039b26ad39b3f675e6f6ec6e17f280c",
+        "beziehung": "SchB"
+      }
+    ],
+    "ist_von_beziehungen": [
+      {
+        "ktid": "a91cb0d4fc25a551e909147cfc0e38ebe13462a898c0eda5219762bd96f6782e",
+        "beziehung": "SorgBer"
+      }
+    ]
+  }
+}
+```
+
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","required":["pid"],"properties":{"pid":{"description":"Pseudonymisierte ID. Referenziert ein bestehendes Objekt des Schulconnex-Servers.","type":"string","example":"df6588cf8dc649ef79fcc852e1064761442a32bf3496ecd9bde0f66a18685aaa"},"person":{"type":"object","required":["name"],"properties":{"stammorganisation":{"allOf":[{"description":"Organisation.","type":"object","required":["id"],"properties":{"id":{"description":"ID der Organisation.","type":"string","readOnly":true,"example":"b0d7b0dd-3477-4122-a38d-095ec242e786"}},"title":"components-Organisation-basis"},{"description":"Organisation.","type":"object","properties":{"kennung":{"description":"Die optionale Kennung (Identifikations-ID) einer Organisation.","type":"string","example":"NI_12345"},"name":{"description":"Offizieller Name einer Organisation.","type":"string","example":"Heinrich-Heine-Gymnasium"},"anschrift":{"type":"object","properties":{"postleitzahl":{"description":"Postleitzahl.","type":"string","example":"30519"},"ort":{"description":"Amtlicher Gemeindename.","type":"string","example":"Hannover"},"ortsteil":{"description":"Teil eines Orts, falls genauere Untergliederung gewünscht.","type":"string","example":"Döhren"}},"title":"components-Anschrift"},"typ":{"type":"string","enum":["Schule","Anbieter","Medienzentrum","Behoerde","SchTrae","Sonstige"],"description":"Wie folgt:\n  * Schule\n  * Anbieter\n  * Medienzentrum\n  * Behörde\n  * Schulträger\n  * Sonstige sonstige Organisationen / Einrichtungen\n","title":"components-code-Organisationstyp"}},"title":"components-Organisation"}]},"name":{"type":"object","required":["familienname","vorname","vertrauensstufe"],"properties":{"familienname":{"description":"Familienname(n) der Person. Mehrere Familiennamen werden durch Leerzeichen separiert.","type":"string","example":"von Musterfrau"},"vorname":{"description":"Mehrere Vornamen werden durch Leerzeichen separiert.","type":"string","example":"Natalie"},"initialenfamilienname":{"description":"Initial oder Initialen des Familiennamens, maximal acht Zeichen.","type":"string","maxLength":8,"example":"M"},"initialenvorname":{"description":"Initial oder Initialen des Vornamens, maximal acht Zeichen.","type":"string","maxLength":8,"example":"N"},"rufname":{"description":"Bei mehreren Vornamen wird der täglich im Gebrauch genutzte Vorname geführt, maximal 32 Zeichen.","type":"string","maxLength":32},"titel":{"description":"Titel der Person (bspw. ein akademischer Grad, Dienst- und Amtsbezeichnungen oder militärische Ränge), maximal 128 Zeichen.","type":"string","maxLength":128},"anrede":{"description":"Liste (Array) von Namenszusätzen bei der Anrede. Jeder einzelne Namenszusatz hat eine Maximallänge von 64 Zeichen, die Maximallänge für alle Namenszusätze liegt bei 512 Zeichen.","type":"array","items":{"type":"string","maxLength":64}},"namenssuffix":{"description":"Liste (Array) von Namenssuffixen. Jeder einzelne Namenssuffix hat eine Maximallänge von 64 Zeichen, die Maximallänge für alle Namenssuffixe liegt bei 1024 Zeichen.","type":"array","items":{"type":"string","maxLength":64}},"sortierindex":{"description":"Index des Buchstabens des Nachnamens, nach dem sortiert werden soll. Der Index ist Null-basiert, d. h. ein Wert von „4“ zeigt an, dass die ersten vier Buchstaben ignoriert und ab dem fünften Buchstaben des Nachnamens sortiert werden soll. Ist kein Sortierindex angegeben, so ist der Nachname entsprechend dem ersten Buchstaben in Listen einzusortieren, äquivalent zum Sortierindex „0“.","type":"string","pattern":"^[0-9]+$","example":"4"}}},"geburt":{"type":"object","properties":{"datum":{"description":"Geburtsdatum einer Person.","type":"string","format":"date","example":"2005-05-01"},"volljaehrig":{"description":"Gibt an, ob eine Person volljährig ist.","type":"string","enum":["Ja","Nein"],"title":"components-code-Boolean"},"geburtsort":{"description":"Geburtsort einer Person, bestehend aus Ortsname und Land, beispielsweise „Eindhoven, Niederlande“. Wird kein Land angegeben, so wird als Land „Deutschland“ angenommen, d.h. der Geburtsort „Erfurt“ ist wie „Erfurt, Deutschland“ zu behandeln.","type":"string","example":"Berlin, Deutschland"}}},"geschlecht":{"type":"string","enum":["m","w","d","x"],"description":"Geschlecht:\n  * m männlich\n  * w weiblich\n  * d divers\n  * x keine Angabe\n","title":"components-code-Geschlecht"},"lokalisierung":{"description":"Basierend auf RFC 5646. Mögliche Beispiele:\n  * de deutsch\n  * de-XX deutsch, Anrede du, einfache Sprache\n  * en-GB englisch (Vereinigtes Königreich)\n","type":"string","example":"de"},"vertrauensstufe":{"type":"string","enum":["Kein","Unbe","Teil","Voll"],"description":"Wie folgt:\n  * Kein - kein - Der Schlüsselbesitzer ist nicht vertrauenswürdig.\n  * Unbe - unbekannt - Der Schlüsselbesitzer ist unbekannt.\n  * Teil - vertraut - Dem Schlüsselbesitzer wird vertraut.\n  * Voll - verifiziert - Der Schlüsselbesitzer ist eindeutig und formal identifiziert.\n","title":"components-code-Vertrauensstufe"}},"title":"components-dienste-Person"},"personenkontexte":{"type":"array","items":{"type":"object","required":["id","organisation","rolle"],"properties":{"id":{"description":"ID des Personenkontexts. Referenziert ein bestehendes Objekt des Schulconnex-Servers.","type":"string","example":"4d0f579c0b9a4d3ab48487b3bee8a2ad4d0f579c0b9a4d3ab48487b3bee8a2ad"},"organisation":{"allOf":[{"description":"Organisation.","type":"object","required":["id"],"properties":{"id":{"description":"ID der Organisation.","type":"string","readOnly":true,"example":"b0d7b0dd-3477-4122-a38d-095ec242e786"}},"title":"components-Organisation-basis"},{"description":"Organisation.","type":"object","properties":{"kennung":{"description":"Die optionale Kennung (Identifikations-ID) einer Organisation.","type":"string","example":"NI_12345"},"name":{"description":"Offizieller Name einer Organisation.","type":"string","example":"Heinrich-Heine-Gymnasium"},"anschrift":{"type":"object","properties":{"postleitzahl":{"description":"Postleitzahl.","type":"string","example":"30519"},"ort":{"description":"Amtlicher Gemeindename.","type":"string","example":"Hannover"},"ortsteil":{"description":"Teil eines Orts, falls genauere Untergliederung gewünscht.","type":"string","example":"Döhren"}},"title":"components-Anschrift"},"typ":{"type":"string","enum":["Schule","Anbieter","Medienzentrum","Behoerde","SchTrae","Sonstige"],"description":"Wie folgt:\n  * Schule\n  * Anbieter\n  * Medienzentrum\n  * Behörde\n  * Schulträger\n  * Sonstige sonstige Organisationen / Einrichtungen\n","title":"components-code-Organisationstyp"}},"title":"components-Organisation"}]},"gruppen":{"description":"","type":"array","items":{"type":"object","required":["gruppe"],"properties":{"gruppe":{"type":"object","required":["id","bezeichnung","typ"],"properties":{"id":{"description":"ID der Gruppe.","type":"string","example":"b3201d00-f21f-4986-a39d-02a09c8da26c"},"orgid":{"description":"ID der Organisation.","type":"string","example":"9b3f36ad-9d15-49f9-9660-6cf9746ba446"},"bezeichnung":{"description":"Bezeichnung der Gruppe.","type":"string","example":"Englisch 6b"},"thema":{"description":"Thema der Gruppe in Kurzform.","type":"string"},"beschreibung":{"description":"Zusätzliche optionale Beschreibung der Gruppe.","type":"string","maxLength":1024},"typ":{"type":"string","enum":["Klasse","Kurs","Sonstig"],"description":"Wie folgt:\n  * Klasse Schulklasse\n  * Kurs Kurs/Unterricht\n  * Sonstig Sonstige Gruppe\n","title":"components-code-Gruppentyp"},"bereich":{"type":"string","enum":["Pflicht","Wahl","Wahlpflicht"],"description":"Diese Codeliste ist spezifisch für das Bundesland Niedersachsen:\n  * Pflicht Pflichtunterricht\n  * Wahl Wahlunterricht\n  * Wahlpflicht Wahlpflichtunterricht\n","title":"components-code-Gruppenbereich"},"optionen":{"type":"array","items":{"type":"string","enum":[""],"description":"Hinweis: In der aktuellen Version sind noch keine Werte vorhanden. Hinweis: Diese Codeliste ist nicht länderübergreifend und potentiell von Bundesland zu Bundesland abweichend.\n","title":"components-code-Gruppenoption"}},"differenzierung":{"type":"string","enum":["G","E","Z","gA","eA"],"description":"Diese Codeliste ist spezifisch für das Bundesland Niedersachsen:\n  * G G-Kurs\n  * E E-Kurs\n  * Z Z-Kurs\n  * gA grundlegendes Anforderungsniveau\n  * eA erhöhtes Anforderungsniveau\n","title":"components-code-Gruppendifferenzierung"},"bildungsziele":{"type":"array","items":{"type":"string","enum":["GS","HS","RS","GY-SEK-I","GY-SEK-II"],"description":"Diese Codeliste ist spezifisch für das Bundesland Niedersachsen:\n  * GS Grundschule\n  * HS Hauptschule\n  * RS Realschule\n  * GY-SEK-I Gymnasium Sekundarstufe I\n  * GY-SEK-II Gymnasium Sekundarstufe II\n","title":"components-code-Bildungsziel"}},"jahrgangsstufen":{"type":"array","items":{"type":"string","enum":["01","02","03","04","05","06","07","08","09","10","11","12","13"],"description":"Wie folgt:\n  * 01 Jahrgangsstufe 1\n  * 02 Jahrgangsstufe 2\n  * 03 Jahrgangsstufe 3\n  * 04 Jahrgangsstufe 4\n  * 05 Jahrgangsstufe 5\n  * 06 Jahrgangsstufe 6\n  * 07 Jahrgangsstufe 7\n  * 08 Jahrgangsstufe 8\n  * 09 Jahrgangsstufe 9\n  * 10 Jahrgangsstufe 10\n  * 11 Jahrgangsstufe 11\n  * 12 Jahrgangsstufe 12\n  * 13 Jahrgangsstufe 13\n","title":"components-code-Jahrgangsstufe"}},"faecher":{"type":"array","example":[{"kennung":"DE"},{"bezeichnung":"Erste Hilfe"}],"items":{"oneOf":[{"type":"object","properties":{"kennung":{"example":"EN","type":"string","enum":["BI","CH","CI","DE","DS","EK","EN","FR","GR","NL","IT","SN","KU","LA","RS","GE","PO","PW","RE","RI","RK","SP","SU","TE","TG","WE","WN","WS","DA","MA","HW","MU","PA","PH","IF","AW","GL","PWI","PTE","PGUS","NAT"],"description":"Diese Codeliste ist spezifisch für das Bundesland Niedersachsen:\n  * BI Biologie\n  * CH Chemie\n  * CI Chinesisch\n  * DE Deutsch\n  * DS Darstellendes Spiel\n  * EK Erdkunde\n  * EN Englisch\n  * FR Französisch\n  * GR Griechisch\n  * NL Niederländisch\n  * IT Italienisch\n  * SN Spanisch\n  * KU Kunst\n  * LA Latein\n  * RS Russisch\n  * GE Geschichte\n  * PO Politik\n  * PW Politik/Wirtschaft\n  * RE Evangelische Religion\n  * RI Islamische Religion\n  * RK Katholische Religion\n  * SP Sport\n  * SU Sachunterricht\n  * TE Technik\n  * TG Textiles Gestalten\n  * WE Gestaltendes Werken\n  * WN Werte und Normen\n  * WS Wirtschaft\n  * DA Deutsch als Zweitsprache\n  * MA Mathematik\n  * HW Hauswirtschaft\n  * MU Musik\n  * PA Pädagogik\n  * PH Physik\n  * IF Informatik\n  * AW Arbeit-Wirtschaft-Technik\n  * GL Gesellschaftslehre\n  * PWI Profil Wirtschaft\n  * PTE Profil Technik\n  * PGUS Profil Gesundheit und Soziales\n  * NAT Naturwissenschaften\n","title":"components-code-Fächerkanon"}},"title":"components-Gruppe-faecher-kennung"},{"type":"object","properties":{"bezeichnung":{"example":"Erste Hilfe","type":"string","description":"Bezeichnung eines Fachs, wenn nicht im Fächerkanon vorhanden","title":"components-Gruppe-faecherbezeichnung"}},"title":"components-Gruppe-faecher-bezeichnung"},{"type":"object","properties":{"kennung":{"example":"EN","type":"string","enum":["BI","CH","CI","DE","DS","EK","EN","FR","GR","NL","IT","SN","KU","LA","RS","GE","PO","PW","RE","RI","RK","SP","SU","TE","TG","WE","WN","WS","DA","MA","HW","MU","PA","PH","IF","AW","GL","PWI","PTE","PGUS","NAT"],"description":"Diese Codeliste ist spezifisch für das Bundesland Niedersachsen:\n  * BI Biologie\n  * CH Chemie\n  * CI Chinesisch\n  * DE Deutsch\n  * DS Darstellendes Spiel\n  * EK Erdkunde\n  * EN Englisch\n  * FR Französisch\n  * GR Griechisch\n  * NL Niederländisch\n  * IT Italienisch\n  * SN Spanisch\n  * KU Kunst\n  * LA Latein\n  * RS Russisch\n  * GE Geschichte\n  * PO Politik\n  * PW Politik/Wirtschaft\n  * RE Evangelische Religion\n  * RI Islamische Religion\n  * RK Katholische Religion\n  * SP Sport\n  * SU Sachunterricht\n  * TE Technik\n  * TG Textiles Gestalten\n  * WE Gestaltendes Werken\n  * WN Werte und Normen\n  * WS Wirtschaft\n  * DA Deutsch als Zweitsprache\n  * MA Mathematik\n  * HW Hauswirtschaft\n  * MU Musik\n  * PA Pädagogik\n  * PH Physik\n  * IF Informatik\n  * AW Arbeit-Wirtschaft-Technik\n  * GL Gesellschaftslehre\n  * PWI Profil Wirtschaft\n  * PTE Profil Technik\n  * PGUS Profil Gesundheit und Soziales\n  * NAT Naturwissenschaften\n","title":"components-code-Fächerkanon"},"bezeichnung":{"example":"Englisch","type":"string","description":"Bezeichnung eines Fachs, wenn nicht im Fächerkanon vorhanden","title":"components-Gruppe-faecherbezeichnung"}},"title":"components-Gruppe-faecher-kennung-bezeichnung"}]}},"laufzeit":{"oneOf":[{"type":"object","properties":{"von":{"type":"string","description":"Anfang des Gültigkeitszeitraums der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.","format":"date","example":"2022-08-12","title":"components-Datum-von"},"bis":{"type":"string","description":"Ende des Gültigkeitszeitraums der Gruppe.","format":"date","example":"2023-01-30","title":"components-Datum-bis"}},"title":"components-Laufzeit-von-bis"},{"type":"object","properties":{"vonlernperiode":{"type":"string","enum":["2022","2022-1","2022-2","2023","2023-1","2023-2","2024","2024-1","2024-2","2025","2025-1","2025-2","2026","2026-1","2026-2","2027","2027-1","2027-2"],"description":"Aus Codeliste [Lernperiode](../../../codelisten#lernperiode)\n","title":"components-code-Lernperiode"},"bislernperiode":{"type":"string","enum":["2022","2022-1","2022-2","2023","2023-1","2023-2","2024","2024-1","2024-2","2025","2025-1","2025-2","2026","2026-1","2026-2","2027","2027-1","2027-2"],"description":"Aus Codeliste [Lernperiode](../../../codelisten#lernperiode)\n","title":"components-code-Lernperiode"}},"title":"components-Laufzeit-vonlernperiode-bislernperiode"},{"type":"object","properties":{"von":{"type":"string","description":"Anfang des Gültigkeitszeitraums der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.","format":"date","example":"2022-08-12","title":"components-Datum-von"},"bislernperiode":{"type":"string","enum":["2022","2022-1","2022-2","2023","2023-1","2023-2","2024","2024-1","2024-2","2025","2025-1","2025-2","2026","2026-1","2026-2","2027","2027-1","2027-2"],"description":"Aus Codeliste [Lernperiode](../../../codelisten#lernperiode)\n","title":"components-code-Lernperiode"}},"title":"components-Laufzeit-von-bislernperiode"},{"type":"object","properties":{"vonlernperiode":{"type":"string","enum":["2022","2022-1","2022-2","2023","2023-1","2023-2","2024","2024-1","2024-2","2025","2025-1","2025-2","2026","2026-1","2026-2","2027","2027-1","2027-2"],"description":"Aus Codeliste [Lernperiode](../../../codelisten#lernperiode)\n","title":"components-code-Lernperiode"},"bis":{"type":"string","description":"Ende des Gültigkeitszeitraums der Gruppe.","format":"date","example":"2023-01-30","title":"components-Datum-bis"}},"title":"components-Laufzeit-vonlernperiode-bis"},{"type":"object","properties":{"von":{"type":"string","description":"Anfang des Gültigkeitszeitraums der Gruppe. Dieser Zeitpunkt kann auch in der Zukunft liegen.","format":"date","example":"2022-08-12","title":"components-Datum-von"}},"title":"components-Laufzeit-von"},{"type":"object","properties":{"vonlernperiode":{"type":"string","enum":["2022","2022-1","2022-2","2023","2023-1","2023-2","2024","2024-1","2024-2","2025","2025-1","2025-2","2026","2026-1","2026-2","2027","2027-1","2027-2"],"description":"Aus Codeliste [Lernperiode](../../../codelisten#lernperiode)\n","title":"components-code-Lernperiode"}},"title":"components-Laufzeit-vonlernperiode"},{"type":"object","properties":{"bis":{"type":"string","description":"Ende des Gültigkeitszeitraums der Gruppe.","format":"date","example":"2023-01-30","title":"components-Datum-bis"}},"title":"components-Laufzeit-bis"},{"type":"object","properties":{"bislernperiode":{"type":"string","enum":["2022","2022-1","2022-2","2023","2023-1","2023-2","2024","2024-1","2024-2","2025","2025-1","2025-2","2026","2026-1","2026-2","2027","2027-1","2027-2"],"description":"Aus Codeliste [Lernperiode](../../../codelisten#lernperiode)\n","title":"components-code-Lernperiode"}},"title":"components-Laufzeit-bislernperiode"}]}},"title":"components-dienste-Gruppe"},"gruppenzugehoerigkeit":{"type":"object","required":["rollen"],"properties":{"rollen":{"description":"","type":"array","minItems":1,"items":{"type":"string","enum":["Lern","Lehr","KlLeit","Foerd","VLehr","SchB","GMit","GLeit"],"description":"Wie folgt:\n  * Lern Lernende/-r\n  * Lehr Lehrende/-r\n  * KlLeit Klassenleitung\n  * Vertretungslehrkraft\n  * Foerd Förderlehrkraft\n  * SchB Schulbegleitung\n  * GMit Gruppenmitglied\n  * GLeit Gruppenleitung\n","title":"components-code-Gruppenrolle"}}}},"sonstige_gruppenzugehoerige":{"type":"array","items":{"type":"object","required":["ktid","rollen"],"properties":{"ktid":{"description":"ID des Personenkontexts, welcher der Gruppe zugeordnet ist. Referenziert ein bestehendes Objekt des Schulconnex-Servers.","type":"string","example":"2931ecbf5ff4349efcb2cd90858da604f5f9be2a4cd675993d2680e98af5b6ec"},"rollen":{"description":"","type":"array","items":{"type":"string","enum":["Lern","Lehr","KlLeit","Foerd","VLehr","SchB","GMit","GLeit"],"description":"Wie folgt:\n  * Lern Lernende/-r\n  * Lehr Lehrende/-r\n  * KlLeit Klassenleitung\n  * Vertretungslehrkraft\n  * Foerd Förderlehrkraft\n  * SchB Schulbegleitung\n  * GMit Gruppenmitglied\n  * GLeit Gruppenleitung\n","title":"components-code-Gruppenrolle"}},"von":{"description":"Beginn der Gruppenzugehörigkeit. Dieser Zeitpunkt kann auch in der Zukunft liegen.","type":"string","format":"date","example":"2022-08-01"},"bis":{"description":"Ende der Gruppenzugehörigkeit.","type":"string","format":"date","example":"2023-07-31"}},"title":"components-dienste-Gruppenzugehörigkeit"}}},"title":"components-dienste-Gruppendatensatz"}},"beziehungen":{"description":"","type":"object","properties":{"hat_als_beziehungen":{"type":"array","items":{"type":"object","required":["ktid","beziehung"],"properties":{"ktid":{"description":"ID des Personenkontexts, zu dem eine Beziehung besteht. Referenziert ein bestehendes Objekt des Schulconnex-Servers.","type":"string","example":"2931ecbf5ff4349efcb2cd90858da604f5f9be2a4cd675993d2680e98af5b6ec"},"beziehung":{"type":"string","enum":["SchB","SorgBer"],"description":"Beziehungen ist eine Liste von Beziehungen, welche zwischen zwei Personen innerhalb von Personenkontexten bestehen können:\n  * SorgBer Sorgeberechtigter oder Sorgeberechtigte\n  * SchB Schulbegleiter oder Schulbegleiterin\n","title":"components-code-Beziehungen"}},"title":"components-dienste-Beziehung"}},"ist_von_beziehungen":{"type":"array","items":{"type":"object","required":["ktid","beziehung"],"properties":{"ktid":{"description":"ID des Personenkontexts, zu dem eine Beziehung besteht. Referenziert ein bestehendes Objekt des Schulconnex-Servers.","type":"string","example":"2931ecbf5ff4349efcb2cd90858da604f5f9be2a4cd675993d2680e98af5b6ec"},"beziehung":{"type":"string","enum":["SchB","SorgBer"],"description":"Beziehungen ist eine Liste von Beziehungen, welche zwischen zwei Personen innerhalb von Personenkontexten bestehen können:\n  * SorgBer Sorgeberechtigter oder Sorgeberechtigte\n  * SchB Schulbegleiter oder Schulbegleiterin\n","title":"components-code-Beziehungen"}},"title":"components-dienste-Beziehung"}}}},"erreichbarkeiten":{"description":"","type":"array","items":{"type":"object","required":["typ","kennung"],"properties":{"typ":{"type":"string","enum":["E-Mail"],"description":"Wie folgt:\n  * E-Mail E-Mail-Adressen müssen RFC 5322 (Internet Message Format) erfüllen\n","title":"components-code-Erreichbarkeitstyp"},"kennung":{"description":"Konkrete Angabe der zum Erreichen der Person oder Organisation notwendigen Information.","type":"string","format":"email","example":"Max.Muster@Muster-Schule.de"}},"title":"components-Erreichbarkeit"}},"personenstatus":{"type":"string","enum":["Aktiv"],"description":"Wie folgt:\n  * Aktiv aktiv\n","title":"components-code-Personenstatus"},"jahrgangsstufe":{"type":"string","enum":["01","02","03","04","05","06","07","08","09","10","11","12","13"],"description":"Wie folgt:\n  * 01 Jahrgangsstufe 1\n  * 02 Jahrgangsstufe 2\n  * 03 Jahrgangsstufe 3\n  * 04 Jahrgangsstufe 4\n  * 05 Jahrgangsstufe 5\n  * 06 Jahrgangsstufe 6\n  * 07 Jahrgangsstufe 7\n  * 08 Jahrgangsstufe 8\n  * 09 Jahrgangsstufe 9\n  * 10 Jahrgangsstufe 10\n  * 11 Jahrgangsstufe 11\n  * 12 Jahrgangsstufe 12\n  * 13 Jahrgangsstufe 13\n","title":"components-code-Jahrgangsstufe"},"rolle":{"type":"string","enum":["Lern","Lehr","SorgBer","Extern","OrgAdmin","Leit","SysAdmin","SchB","NLehr"],"description":"Wie folgt:\n  * Lern Lernende/-r\n  * Lehr Lehrende/-r\n  * SorgBer Sorgeberechtigte/-r\n  * Extern externe Person\n  * OrgAdmin Organisationsadministrator\n  * Leit Organisationsleitung\n  * SysAdmin Systemadministrator\n  * Schulbegleiter/-in\n  * Nicht-lehrendes Personal\n","title":"components-code-Rolle"},"loeschung":{"description":"","type":"object","properties":{"zeitpunkt":{"description":"Datum und Uhrzeit der Löschung des Personenkontexts.","type":"string","format":"date-time"}}}},"title":"components-dienste-PersonenKontext"}}},"title":"components-dienste-Personendatensatz"}}}},"304":{"description":"Not Modified"},"400":{"description":"Bad Request\n\nSiehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)\n"},"401":{"description":"Unauthorized\n\nSiehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)\n"},"403":{"description":"Forbidden\n\nSiehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)\n"},"404":{"description":"Not found\n\nSiehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)\n"},"405":{"description":"Method not allowed\n\nSiehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)\n"}}}
+>
+  
+</StatusCodes>
+
+
+      
