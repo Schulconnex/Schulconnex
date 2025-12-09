@@ -57,6 +57,7 @@ classDiagram
     lokalisierung
     vertrauensstufe
     auskunftssperre
+    reduziertedatenverarbeitung
     revision
   }
   class Personenkontext {

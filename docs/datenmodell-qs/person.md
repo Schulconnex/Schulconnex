@@ -14,6 +14,7 @@ geschlecht | String (Code) | 0..1 | Referenz auf einen Code der Codeliste *Gesch
 lokalisierung | String | 0..1 | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Wert basiert auf Definition in RFC 5646. Wenn nicht angegeben, wird „de“ angenommen.
 vertrauensstufe | String (Code) | 1 | Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden, Referenz auf einen Code der Codeliste *Vertrauensstufe*.
 auskunftssperre | String (Code) | 1 | Auskunftssperre über eine Person. Dienste erhalten nur einen uneingeschränkten Datensatz, wenn der Wert „nein” ist. Sofern nicht explizit „ja” eingeben wurde, ist der Default „nein”. Referenz auf einen Code der Codeliste *Boolean*.
+reduziertedatenverarbeitung | String (Code) | 1 |  „Einschränkung der Verarbeitung“ nach Art 4 Nr. 3 DSGVO. Fordert eine betroffene Person die Einschränkung der Verarbeitung ihrer Daten nach Art 18, so wird dieses Attribut auf "ja" gesetzt. Sofern nicht explizit „ja” eingeben wurde, ist der Default „nein”. Referenz auf einen Code der Codeliste *Boolean*.
 revision | String (UTF-8) | 1 | Revision der Person. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
 
 ## Beispiel JSON des Datentyps Person
@@ -46,6 +47,7 @@ revision | String (UTF-8) | 1 | Revision der Person. Wird vom Schulconnex-Server
   "lokalisierung": "de",
   "vertrauensstufe": "Voll",
   "auskunftssperre": "Nein",
+  "reduziertedatenverarbeitung": "Nein",
   "revision": "1"
 }
 ```

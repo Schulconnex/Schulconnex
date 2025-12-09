@@ -39,7 +39,8 @@ personenkontexte | Personenkontext | 0..n | Liste (Array) von Personenkontexten 
     "geschlecht": "w",
     "lokalisierung": "de",
     "vertrauensstufe": "Voll",
-    "auskunftssperre": "Nein",
+    "auskunftssperre": "Nein",  
+    "reduziertedatenverarbeitung": "Nein",
     "revision": "1"
   },
   "personenkontexte": [

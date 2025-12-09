@@ -148,7 +148,10 @@ post:
       "lokalisierung": <String>, // Zm Beispiel "de", String basierend auf RFC 5646.
       "vertrauensstufe": <Code>,
       // Vertrauensstufe. Siehe Code-Liste „Vertrauensstufe“.
-      "auskunftssperre": <Code>
+      "auskunftssperre": <Code>.
+      // Auskunftssperre. Siehe Code-Liste „Boolean“.
+      // Dieses Feld ist ein Pflichtfeld.
+      "reduziertedatenverarbeitung": <Code>
       // Auskunftssperre. Siehe Code-Liste „Boolean“.
       // Dieses Feld ist ein Pflichtfeld.
      }
