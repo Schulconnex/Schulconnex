@@ -3,7 +3,7 @@ tags:
 - Informativ
 ---
 
-# Abruf eines Mediums über ein Medienregal
+# Typischer Aufruf eines lizensierten Mediums
 
 ## Abruf von Zugriffsinfos im Kontext eines Nutzungsrechts
 
@@ -35,30 +35,31 @@ Das Diagramm zeigt den Ablauf der Authentifizierungs- und Autorisierungsprozesse
 ```mermaid
 sequenceDiagram
     actor User
-    participant BP as Bildungsplattform
-    participant LS as IAM
-    participant LK as Lizenzkomponente
-    participant A as Anwendung
+    participant P as "Bildungsportal"
+    participant IdP as "IdP"
+    participant LV as "Lizenzverwaltung"
+    participant A as "Lizensierte Anwendung"
 
-    User->>BP: Login
-    BP->>LS: GET /person-info
-    LS-->>BP: 
-    BP->>LK: GET /lizenz-info
-    LK-->>BP: 
-    User->>BP: Aufruf Medienregal
-    Note over BP: Medienregal<br/>(LTI-)Links zu den<br/>verfügbaren Anwendungen
-    User->>BP: Aufruf Anwendung
-    BP->>A: (LTI-)Launch inkl uid
+    User->>P: "Login"
+    P->>IdP: "SSO-Auth"
+    P->>IdP: "GET /person-info"
+    IdP-->>P: 
+    P->>LV: "GET /policies-info"
+    LV-->>P: 
+    User->>P: "Aufruf Medien-Board"
+    Note over P: "Medien-Board mit<br/>Links zu den<br/>verfügbaren Anwendungen"
+    User->>P: "Link-Klick zur Anwendung"
+    P->>A: "Weiterleitung zur Anwendung"
     activate A
-    A->>LS: SSO-Auth, Access Token
-    A->>LS: GET /person-info
+    A->>IdP: "SSO-Auth"
+    A->>IdP: "GET /person-info"
     LS-->>A: 
-    A->>LK: GET /lizenz-zugriffsinfo/{lizenzInfoUid}
-    LK-->>A: 
-    Note over A: Validierung Lizenzschlüssel
+    A->>LV: "GET /policies-info?uid=abc&partOf=def&access_control=true"
+    LV-->>A: 
+    Note over A: "Validierung Lizenzschlüssel"
     User->>A: Logout
     A->>A: Logout
-    A->>BP: Zurück zum LMS
+    A->>P: Zurück zum Portal
     deactivate A 
 ```
 
@@ -86,6 +87,8 @@ Der Endpunkt unterstützt **Content Negotiation** über den `Accept`-Header (JSO
 - `Accept` (string): `application/json` oder `application/ld+json`  
   Default: `application/json`
 
+  `GET /policies-info?uid=abc&partOf=def&access_control=true`
+
 ## Responses
 
 ### 200 OK
@@ -109,14 +112,12 @@ Beispielstruktur:
           }
         ]
       },
-      "access_control": {}
-    }
-  ],
-  "services": [
-    {
-      "service": "Beispiel-Mediendienst",
-      "status": 500,
-      "error": "..."
+      "access_control": {
+        "type": "license_key",
+        "value": {
+          "licenseKey": "5f49ff7f-76a6-4d8b-ae40-e1aba0d57f21"
+        }
+      }
     }
   ]
 }
