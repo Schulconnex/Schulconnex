@@ -51,11 +51,11 @@ Der Dateiname für Datenmodelle ist wie folgt aufgebaut:
 
 Beispiel
 
-Die Datei `components-dienste-PersonenKontext.yaml` beschreibt das Datenmodell PersonenKontext
+Die Datei `components-dienste-Personenkontext.yaml` beschreibt das Datenmodell Personenkontext
 für die Dienste-API.
 
-Die Datei `components-qs-PersonenKontext-PUT-request.yaml` beschreibt das Datenmodell
-PersonenKontext für die Quellsysteme-API als PUT Request-Body.
+Die Datei `components-qs-Personenkontext-PUT-request.yaml` beschreibt das Datenmodell
+Personenkontext für die Quellsysteme-API als PUT Request-Body.
 
 ### Codelisten
 

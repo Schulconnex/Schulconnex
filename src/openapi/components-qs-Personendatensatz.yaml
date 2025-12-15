@@ -7,4 +7,4 @@ properties:
   personenkontexte:
     type: array
     items:
-      $ref: './components-qs-PersonenKontext.yaml'
+      $ref: './components-qs-Personenkontext.yaml'

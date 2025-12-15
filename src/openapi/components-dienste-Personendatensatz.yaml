@@ -11,4 +11,4 @@ properties:
   personenkontexte:
     type: array
     items:
-      $ref: './components-dienste-PersonenKontext.yaml'
+      $ref: './components-dienste-Personenkontext.yaml'
