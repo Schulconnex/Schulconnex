@@ -63,7 +63,7 @@ Der Aufruf der lizensierten Anwendung wird in der Regel im Browser durch eine/-n
 
 ### Abruf der verfügbaren Anwendungen
 
-Beim Abruf der verfügbaren Anwendungen gibt die Nutzungsrechte-API sämtliche Anwendungen zurück, die im Kontext des angemeldeten Personenkontexts oder der angemeldeten Person zur Verfügung stehen. Mit diesen Information werden wird die graphische Oberfläche der Medienbibliothek passgenau ausschließlich mit Links zu denjenigen Anwendungen befüllt, die auch tatsächlich nutzbar sind. 
+Beim Abruf der verfügbaren Anwendungen gibt die Nutzungsrechte-API sämtliche Anwendungen zurück, die im Kontext des angemeldeten Personenkontexts oder der angemeldeten Person zur Verfügung stehen. Mit diesen Information wird die graphische Oberfläche der Medienbibliothek passgenau ausschließlich mit Links zu denjenigen Anwendungen befüllt, die auch tatsächlich nutzbar sind. 
 
 #### Request
 
