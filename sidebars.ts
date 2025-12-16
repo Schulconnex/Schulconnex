@@ -19,13 +19,21 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
   specSidebar: [
     'einleitung',
-    'allgemeines',
+      {
+      type: 'category',
+      label: 'Allgemeines',
+      items: [
+        'allgemeines-kernanwendungsfälle',
+        'allgemeines-datenschutz',
+      ]
+    },
     {
       type: 'category',
       label: 'Erweiterungen',
       items: [
         'schnittstellen/vendor-extensions',
         'schnittstellen/vendor-extensions-best-practices',
+        'schnittstellen/vendor-endpoints',
       ]
     },
     'codelisten',
@@ -135,11 +143,6 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'datenmodell-dienste/personenkontext',
           label: 'Personenkontext',
-        },
-        {
-          type: 'doc',
-          id: 'datenmodell-dienste/sichtfreigabe',
-          label: 'Sichtfreigabe',
         },
       ],
     },

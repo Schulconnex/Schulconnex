@@ -1,6 +1,6 @@
 ---
 title: Löschen von Personen
-tags: 
+tags:
 - Informativ
 ---
 
@@ -38,9 +38,9 @@ Um einen Personendatensatz und die dazugehörenden Personenkontexte zu löschen,
 Allgemein werden Personenkontexte durch das Setzen eines Löschzeitpunkts gelöscht.
 
 Wurden Personenkontexte noch nicht von angebundenen Diensten genutzt, so können diese
-auch direkt mit dem HTTP DELETE Aufruf der API `/personenkontexte/{id}` gelöscht werden.
+auch direkt mit dem HTTP-DELETE Aufruf der API `/personenkontexte/{id}` gelöscht werden.
 
-Wurden die Daten jedoch bereits anderen Dienste bereitgestellt, dann ist die direkte Löschung
+Wurden die Daten jedoch bereits anderen Diensten bereitgestellt, dann ist die direkte Löschung
 nicht mehr möglich (es wird der Fehlercode 400/13 geliefert) und die Löschung muss
 durch Setzen des Löschzeitpunkts ausgelöst werden.
 
@@ -51,7 +51,7 @@ Dabei ist der Vorgang wie folgt:
 - Zum Löschzeitpunkt wird der Personenkontext vom Schulconnex-Service gelöscht.
   Die Daten des Personenkontexts sind nicht mehr direkt zugreifbar.
 - Im Fall, dass es sich um den einzigen Personenkontext der Person handelt, kann nach der Löschung
-  dieses Personenkontexts auch die Person mit einem DELETE an `/personen/{id}` gelöscht werden.
+  dieses Personenkontexts auch die Person durch einen DELETE-Aufruf an `/personen/{id}` gelöscht werden.
 
 import Text from './ablauf-löschen-dienste-information.md';
 

@@ -22,7 +22,6 @@ gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Grup
     "typ": "Kurs",
     "bereich": "Pflicht",
     "optionen": [
-      ""
     ],
     "differenzierung": "E",
     "bildungsziele": [
@@ -53,7 +52,7 @@ gruppenzugehoerigkeiten | Gruppenzugehörigkeit | 0..n  | Liste (Array) von Grup
       "revision": "1"
     },
     {
-      "id": " ed4a1432-6a58-4e99-b89e-e1d82b0052de",
+      "id": "ed4a1432-6a58-4e99-b89e-e1d82b0052de",
       "mandant": "9b3f36ad-9d15-49f9-9660-6cf9746bb4559",
       "referrer": "adf17dbe-7a72-45de-8c91-5b036fd080c8",
       "ktid": "dc8bfbb0-a6ab-434a-a52c-bde200385d97",

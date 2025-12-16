@@ -10,11 +10,31 @@ von Schulconnex sind die Synchronisation von Identitäten und schulischen Kontex
 Schulverwaltungssystemen und schulischen Identitätsverwaltungssystemen (Schulconnex für Quellsysteme) und die Bereitstellung
 von schulischen Kontextdaten von Nutzerinnen und Nutzern für digitale Bildungsmedien (Schulconnex für Dienste).
 
-Weitere Informationen bei der [Landesinitiative n-21](https://www.n-21.de/portal/seiten/moin-schule-900000111-10056.html).
+Weitere Informationen beim [FWU](mailto:schulconnex@fwu.de?subject=Frage%20zu%20Schulconnex).
 
-## Abhängigkeiten
+## Installation Node.js
 
-* Node.js / npm
+Wir unterstützen Node.js 22.
+
+### Windows
+
+Download und Installation der Node.js Version 22 von der [offiziellen Node.js website](https://nodejs.org/en/).
+
+### Unix
+
+[Installiere die neueste nvm Version](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+Nun setzen wir die Standard Node.js Version.
+Nachdem `nvm` installiert wurde, besitzt es noch keine Standard Node.js Version.
+Daher wird nun die gewünschte Version installiert und als Standard Version gesetzt:
+
+```bash
+nvm install 22
+nvm use 22
+nvm alias default 22
+```
+
+## Installation Abhängigkeiten
 
 Installieren der notwendigen NPM-Module:
 
@@ -72,6 +92,17 @@ npm run build
 ```
 
 Erzeugt statische Dateien im Verzeichnis `build`, die von einem Webserver gehostet werden können.
+
+## Troubleshooting
+
+###  Seite startet nicht lokal
+
+Falls die Seite nicht startet versuchen Sie:
+
+* `npm run clear`
+* `npm run clean-openapi-docs`
+
+Falls dies nicht weiterhilft, [eröffnen Sie gerne eine Issue](https://github.com/Schulconnex/Schulconnex/issues/new).
 
 ## Lizenz
 
