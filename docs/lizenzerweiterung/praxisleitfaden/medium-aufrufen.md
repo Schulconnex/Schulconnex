@@ -125,7 +125,7 @@ GET /v1/policies-info
 
 ### Abruf des Lizenzschlüssels für die lizensierte Anwendung
 
-Beim Abruf des Lizenzschlüssels für die aufgerufene lizensierte Anwendung ruft der Anbieter ausschließlich das Nutzungsrecht für die aufgerufene Anwendung samt Lizenzschlüssel ab. Er erwartet bei der Rückgabe von `/policies-info` einen Array mit nur einem Objekt. 
+Beim Abruf des Lizenzschlüssels für die aufgerufene lizensierte Anwendung wird dem Anbieter ausschließlich das Nutzungsrecht für die aufgerufene Anwendung samt Lizenzschlüssel bereitgestellt. Er erwartet bei der Rückgabe von `/policies-info` einen Array mit nur einem Objekt. 
 
 #### Request
 
