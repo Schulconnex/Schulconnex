@@ -10,4 +10,4 @@ properties:
   organisationsbeziehung:
     description: Beziehung aus Codeliste [Organisationsbeziehungen](../../../codelisten#organisationsbeziehungen).
     type: string
-    example: Medienzentrum
+    example: SchTrae
