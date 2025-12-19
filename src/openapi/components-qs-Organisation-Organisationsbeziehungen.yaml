@@ -1,7 +1,7 @@
 description: Organisation.
 type: object
 properties:
-  beziehungen:
+  organisationsbeziehungen:
     description: ''
     type: object
     properties:
