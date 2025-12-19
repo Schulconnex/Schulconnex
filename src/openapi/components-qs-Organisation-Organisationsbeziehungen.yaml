@@ -5,7 +5,7 @@ properties:
     description: ''
     type: object
     properties:
-      hat_als_beziehungen:
+      hat_als_organisationsbeziehungen:
         type: array
         items:
           $ref: './components-qs-Organisationsbeziehung.yaml'    
