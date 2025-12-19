@@ -12,7 +12,7 @@ Dieser Praxisleitfaden beschreibt den typischen Ablauf beim Aufruf einer lizensi
 Folgende Systemkomponenten spielen bei dem Aufruf zusammen: 
 
 - Ein **zentrales Schulportal**, aus dem heraus der Aufruf ausgelöst wird. Dabei könnte es sich um ein klassisches Server-Portal oder auch um eine Lernplattform handeln. Das zentrale Schulportal stellt eine **Medienbibliothek** als graphische Komponente bereit, in welcher alle verfügbaren Medien (in der Regel mit Titel, Logo und Beschreibung) dargestellt sind und per Browserklick aufgerufen werden können. 
-- Ein **Identitätsdienst (IdP)** mit **Single-Sign-on (SSO)**, in welchem die Benutzerdaten zentral verwaltet werden.
+- Ein **Identitätsdienst (IdP)** oder Identitätsvermittlungsdienst mit **Single-Sign-on (SSO)**, in welchem die Benutzerdaten zentral verwaltet werden.
 - Ein **Lizenz-Management**, mit welchem die verantwortlichen Personen einer Schule (Administratoren, Medienbeauftragte) erworbene Lizenzen den Schüler/-innen, Lehrkräften und Lerngruppen zuweisen können.  
 - Eine **lizensierte Anwendung**, beispielsweise ein digitales Schulbuch (E-Book). 
 
