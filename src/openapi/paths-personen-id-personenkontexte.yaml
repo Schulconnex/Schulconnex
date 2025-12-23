@@ -75,7 +75,7 @@ get:
           schema:
             type: array
             items:
-              $ref: './components-qs-PersonenKontext-GET-request.yaml'
+              $ref: './components-qs-Personenkontext-GET-request.yaml'
     '400':
       description: |
         Bad Request
@@ -158,14 +158,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: './components-qs-PersonenKontext-POST-request.yaml'
+          $ref: './components-qs-Personenkontext-POST-request.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-PersonenKontext.yaml'
+            $ref: './components-qs-Personenkontext.yaml'
     '400':
       description: |
         Bad Request
