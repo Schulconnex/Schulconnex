@@ -22,7 +22,7 @@ get:
     `rolle` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `personenkontext.rolle` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt eine Codeliste [Rolle](../../../codelisten#rolle) zugrunde.
     `personenstatus` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „personenkontext.personenstatus” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt die Codeliste [Personenstatus](../../../codelisten#personenstatus) zugrunde.
     `sichtfreigabe` | String | Erlaubt es Personen, abhängig davon aufzulisten, ob diese von einer anderen Organisation zum Lesen freigegeben wurden. Die möglichen Optionen sind `sichtfreigabe=ja`, um nur die durch externe Organisationen freigegebenen Personen beziehungsweise Personenkontexte aufzulisten, und `sichtfreigabe=nein`, um nur eigene Personen beziehungsweise Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren Personen, beziehungsweise Personenkontexte geliefert.
-    `beziehungen` | String | Erlaubt es, wenn als Wert `ja` angegeben wird, in Personenkontexten auch `hat_als` Beziehungen mit auszugeben. Diese Ausgabe ist nur eine Vereinfachung beim Auslesen. Das Attribut `beziehungen` ist nicht Teil des Datenmodels [`Personenkontext`](../../../datenmodell-qs/personenkontext) und kann auch nicht mittels einer UPDATE Funktion auf [`Personenkontext`](../../../datenmodell-qs/personenkontext) gesetzt werden.
+    `hat_als_beziehungen` | String | Erlaubt es, wenn als Wert `ja` angegeben wird, in Personenkontexten auch `hat_als` Beziehungen mit auszugeben. Diese Ausgabe ist nur eine Vereinfachung beim Auslesen. Das Attribut `beziehungen` ist nicht Teil des Datenmodels [`Personenkontext`](../../../datenmodell-qs/personenkontext) und kann auch nicht mittels einer UPDATE Funktion auf [`Personenkontext`](../../../datenmodell-qs/personenkontext) gesetzt werden.
 
     Dieser Schnittstellenendpunkt gibt alle Personenkontexte zurück, auf die der
     Quellsystemanbieter zugreifen kann.
@@ -64,7 +64,7 @@ get:
       schema:
         type: string
     - in: query
-      name: beziehungen
+      name: hat_als_beziehungen
       schema:
         type: string
   responses:
