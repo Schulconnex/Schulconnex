@@ -344,6 +344,7 @@ const sidebars: SidebarsConfig = {
         // 'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
         // 'lizenzerweiterung/praxisleitfaden/semantik',
         'lizenzerweiterung/praxisleitfaden/odrl-beispiele',
+        'lizenzerweiterung/praxisleitfaden/medium-aufrufen',
       ],
     },
   ],
