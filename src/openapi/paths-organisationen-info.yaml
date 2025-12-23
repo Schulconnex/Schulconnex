@@ -23,26 +23,50 @@ get:
     eine leere Liste geliefert. Die mehrfache Nutzung des gleichen Filters in einer Anfrage darf
     nicht erfolgen.
 
-    Folgende Tabelle listet die zur Verfügung stehenden Filter auf:
-     Filter | Typ | Beschreibung
-    --- | --- | ---
-    `id` | String | Möglichkeit, die Ergebnisliste der Anfrage nach der „id” einer Organisation zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
-    `kennung` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach „kennung” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
-    `name` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „organisation.name” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
-    `typ` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „organisation.typ” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt die Codeliste [Organisationstyp](../../../codelisten#organisationstyp) zugrunde.
+    Filter | Typ | Parameter | Beschreibung
+    --- | --- | --- | ---
+    `vollstaendig` | String | `beziehungen` | Möglichkeit, die Beziehungen, welche eine Organisation hat, aufzulisten. Es werden nur die `hat_als` Beziehungen ausgegeben. Der Default ist keine Ausgabe von Beziehungen. 
+    `id` | String || Möglichkeit, die Ergebnisliste der Anfrage nach der „id” einer Organisation zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `kennung` | String (Code) || Möglichkeit, die Ergebnisliste der Anfrage nach „kennung” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `name` | String || Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „organisation.name” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `typ` | String (Code) || Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „organisation.typ” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt die Codeliste [Organisationstyp](../../../codelisten#organisationstyp) zugrunde.
 
-    Über weitere Filter ist es möglich, sich zusätzliche Informationen zu Beziehungen von Organisationen untereinande ausgeben zu lassen.
-     Filter | Typ | Beschreibung
-    --- | --- | ---
-    `hat_als_organisationsbeziehungen` | String (Boolean) | Listet alle Organisationsbeziehungen auf, welche die, durch die Organsations-ID gegebene, Organisation hat. Die Organisationsbeziehungen werden unter 'hat_als_organisationsbeziehungen' aufgelistet. Der Defaultwert ist „ja“, es werden also ohne Filterangabe alle Organisationsbeziehungen angegeben, welche eine Organisation hat.
-    `ist_von_organisationsbeziehungen` | String (Boolean) | Listet alle Organisationsbeziehungen auf, welche von anderen Organisationen zu dem, durch die Organisations-ID gegebenen, Organisation bestehen. Die Organisationsbeziehungen werden unter 'ist_von_organisationsbeziehungen' aufgelistet. Der Defaultwert ist „nein“, es werden also ohne Filterangabe keine Organisationsbeziehungen angegeben, welche aus der gegebenen Organisation heraus bestehen.
+    Die Möglichkeit, die Organisationsbeziehungen über die Filter `hat_als_organisationsbeziehungen` oder `ist_von_organisationsbeziehungen` ausgeben zu lassen, ist deprechiated und wird nicht weiter unterstützt.    
+  parameters:
+    - in: query
+      name: vollstaendig
+      style: form
+      explode: false
+      allowReserved: true
+      schema:
+        type: array
+        items:
+          type: string
+          enum:
+            - beziehungen
+    - in: query
+      name: id
+      schema:
+        type: string
+    - in: query
+      name: kennung
+      schema:
+        type: string
+    - in: query
+      name: name
+      schema:
+        type: string
+    - in: query
+      name: typ
+      schema:
+        type: string
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-Organisationen-Info.yaml'
+            $ref: './components-dienste-Organisationen-Info.yaml'
     '400':
       description: |
         Bad Request

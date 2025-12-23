@@ -1,6 +1,6 @@
 ---
 title: Löschen von Personen
-tags: 
+tags:
 - Informativ
 ---
 
@@ -38,9 +38,9 @@ Um einen Personendatensatz und die dazugehörenden Personenkontexte zu löschen,
 Allgemein werden Personenkontexte durch das Setzen eines Löschzeitpunkts gelöscht.
 
 Wurden Personenkontexte noch nicht von angebundenen Diensten genutzt, so können diese
-auch direkt mit dem HTTP DELETE Aufruf der API `/personenkontexte/{id}` gelöscht werden.
+auch direkt mit dem HTTP-DELETE Aufruf der API `/personenkontexte/{id}` gelöscht werden.
 
-Wurden die Daten jedoch bereits anderen Dienste bereitgestellt, dann ist die direkte Löschung
+Wurden die Daten jedoch bereits anderen Diensten bereitgestellt, dann ist die direkte Löschung
 nicht mehr möglich (es wird der Fehlercode 400/13 geliefert) und die Löschung muss
 durch Setzen des Löschzeitpunkts ausgelöst werden.
 
@@ -51,29 +51,8 @@ Dabei ist der Vorgang wie folgt:
 - Zum Löschzeitpunkt wird der Personenkontext vom Schulconnex-Service gelöscht.
   Die Daten des Personenkontexts sind nicht mehr direkt zugreifbar.
 - Im Fall, dass es sich um den einzigen Personenkontext der Person handelt, kann nach der Löschung
-  dieses Personenkontexts auch die Person mit einem DELETE an `/personen/{id}` gelöscht werden.
+  dieses Personenkontexts auch die Person durch einen DELETE-Aufruf an `/personen/{id}` gelöscht werden.
 
-## Information von Diensten über die Löschung von Personenkontexten
+import Text from './ablauf-löschen-dienste-information.md';
 
-Die [DSGVO schreibt in Artikel 17][2] vor, dass Dienste, welchen personenbezogene Daten bereitgestellt
-wurden, über die Löschung der Daten zu informieren sind, um diesen zu ermöglichen, alle Links
-zu diesen personenbezogenen Daten oder Kopien oder Replikationen dieser personenbezogenen Daten
-unverzüglich zu löschen.
-
-[2]: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679#d1e2621-1-1
-
-Um dies zu ermöglichen, wird für Dienste, welche persistent Daten speichern, der API-Endpunkt `/personen-info`
-bereitgestellt.
-
-Diese Schnittstelle liefert zu allen aktiven Personenkontexten, welche an das System ausgeliefert
-wurden und die nicht gelöscht sind, die (pseudonymisierte) Kontext-ID sowie, soweit gesetzt,
-den geplanten Löschzeitpunkt. Letzterer ist nur als Absichtserklärung zu verstehen und kann dazu dienen,
-die Nutzerin oder den Nutzer darauf hinzuweisen, dass der Zugang demnächst endet, und eventuell aufzufordern,
-relevante Daten vor dem Termin zu sichern. Die Kenntnis des Löschzeitpunkts allein ist aber nicht ausreichend,
-um die Löschung vorzunehmen, da der Löschzeitpunkt gelöscht oder geändert werden kann.
-
-Es ist Aufgabe des Dienstes, den API-Endpunkt `/personen-info` mit ausreichender Regelmäßigkeit abzurufen,
-damit eine angemessen schnelle Löschung erfolgen kann.
-
-Hat ein Dienst zu einer Person alle lokal persistent gehaltenen Personenkontext-Daten gelöscht,
-so muss er auch die persistent gehaltenen Daten zur Person löschen.
+<Text />

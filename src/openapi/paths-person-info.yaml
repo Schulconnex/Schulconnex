@@ -141,7 +141,6 @@ get:
                 "typ": "Kurs",
                 "bereich": "Pflicht",
                 "optionen": [
-                  ""
                 ],
                 "differenzierung": "E",
                 "bildungsziele": [

@@ -27,7 +27,7 @@ revision | String (UTF-8) | 1 | Revision der Person. Wird vom Schulconnex-Server
     "familienname": "von Musterfrau",
     "vorname": "Natalie Lisa",
     "initialenfamilienname": "M.",
-    "initialenvorname ": "N.",
+    "initialenvorname": "N.",
     "rufname": "Natalie",
     "titel": "Dr.",
     "anrede": [

@@ -19,13 +19,21 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
   specSidebar: [
     'einleitung',
-    'allgemeines',
+      {
+      type: 'category',
+      label: 'Allgemeines',
+      items: [
+        'allgemeines-kernanwendungsfälle',
+        'allgemeines-datenschutz',
+      ]
+    },
     {
       type: 'category',
       label: 'Erweiterungen',
       items: [
         'schnittstellen/vendor-extensions',
         'schnittstellen/vendor-extensions-best-practices',
+        'schnittstellen/vendor-endpoints',
       ]
     },
     'codelisten',
@@ -136,11 +144,6 @@ const sidebars: SidebarsConfig = {
           id: 'datenmodell-dienste/personenkontext',
           label: 'Personenkontext',
         },
-        {
-          type: 'doc',
-          id: 'datenmodell-dienste/sichtfreigabe',
-          label: 'Sichtfreigabe',
-        },
       ],
     },
     {
@@ -174,6 +177,18 @@ const sidebars: SidebarsConfig = {
         'schnittstellen/oidc-claims',
       ],
     },
+        {
+      type: 'category',
+      label: 'Praxisleitfaden für die Implementierung',
+      link: {
+        type: 'doc',
+        id: 'praxisleitfaden/praxisleitfaden-dienste',
+      },
+      items: [
+        'praxisleitfaden/ablauf-löschen-dienste',
+      ],
+    },
+
   ],
 
   spezQuellsystemeSidebar: [
@@ -329,6 +344,7 @@ const sidebars: SidebarsConfig = {
         // 'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
         // 'lizenzerweiterung/praxisleitfaden/semantik',
         'lizenzerweiterung/praxisleitfaden/odrl-beispiele',
+        'lizenzerweiterung/praxisleitfaden/medium-aufrufen',
       ],
     },
   ],

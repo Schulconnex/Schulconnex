@@ -1,10 +1,13 @@
 type: object
+required:
+  - orgid
+  - organisationsbeziehung
 properties:
   orgid:
     description: ID der Organisation.
     type: string
-    example: 9b3f36ad-9d15-49f9-9660-6cf9746ba446
+    example: 1307983e-eed5-4087-9e74-dd26685b00c7
   organisationsbeziehung:
     description: Beziehung aus Codeliste [Organisationsbeziehungen](../../../codelisten#organisationsbeziehungen).
     type: string
-    example: Medienzentrum
+    example: SchTrae

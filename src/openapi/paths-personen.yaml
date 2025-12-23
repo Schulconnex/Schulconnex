@@ -133,7 +133,7 @@ post:
         // Vorname der Person. Dieses Feld ist ein Pflichtfeld.
         "initialenfamilienname": <String>,
         //Initial oder Initialen des Familiennames der Person. D
-        "initialenvorname ": <String>,
+        "initialenvorname": <String>,
         // Initial oder Initialen des Vornamens der Person.
         "rufname": <String>, // Rufname der Person.
         "titel": <String>, // Titel der Person.

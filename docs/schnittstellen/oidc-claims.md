@@ -58,7 +58,7 @@ Nachname, Rolle und Organisationskennung mitgeliefert werden.
   "family_name": "Muster",
   "given_name": "Maximilian Klaus Dieter",
   "urn:schulconnex:de:person:name:rufname": "Maximilian",
-  "email": "Max.Muster@schule_1234.de",
+  "email": "Max.Muster@schule-1234.de",
   "urn:schulconnex:de:personenkontext:rolle": "Lern",
   "urn:schulconnex:de:personenkontext:organisation:kennung": "NI_12345"
 }

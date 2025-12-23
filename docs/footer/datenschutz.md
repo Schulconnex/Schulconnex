@@ -3,7 +3,7 @@
 ## § 1 Information über die Verarbeitung personenbezogener Daten
 
 Im Folgenden informieren wir über die Verarbeitung personenbezogener Daten bei Nutzung der Website https://schulconnex.de. Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z. B. Personalien, Name, Adresse, Geburtsdatum, E-Mail-Adressen, IP-Adresse, Dienstort, Zugehörigkeit zu einer Organisation, Gruppenzugehörigkeit, etc.
-Die technische Bereitstellung (Hosting) der Website erfolgt unter Einsatz von GitHub Pages, einem Service des Anbieters GitHub, Inc. Datenverarbeitungen, welche durch den Plattformbetreiber im Rahmen des Hostings durchgeführt werden, unterfallen nicht dem Verantwortungsbereich der FWU Institut für Film und Bild in Wisschenaft und Unterricht gGmbH (nachfolgend mit: „FWU“ abgekürzt).
+Die technische Bereitstellung (Hosting) der Website erfolgt unter Einsatz von GitHub Pages, einem Service des Anbieters GitHub, Inc. Datenverarbeitungen, welche durch den Plattformbetreiber im Rahmen des Hostings durchgeführt werden, unterfallen nicht dem Verantwortungsbereich der FWU Institut für Film und Bild in Wissenschaft und Unterricht gGmbH (nachfolgend mit: „FWU“ abgekürzt).
 
 Verantwortlicher gem. Art. 4 Abs. 7 Datenschutz-Grundverordnung (DSGVO) ist
 
@@ -13,7 +13,7 @@ Bavariafilmplatz 3 \
 82031 Grünwald, Deutschland
 
 Handelsregister: Amtsgericht München B 2636 \
-Umsatzsteuer-Identifikationsnummer: DE 129521719 
+Umsatzsteuer-Identifikationsnummer: DE 129521719
 
 Geschäftsführer: Andreas Koschinsky, Rüdiger Nill \
 +49 (0) 89 6497 – 1 \
@@ -42,9 +42,9 @@ Der Vertreter in der europäischen Union i.S.d. Art. 27 DSGVO ist
 
 GitHub B.V. \
 Prins Bernhardplein 200, Amsterdam 1098JB \
-The Neatherlands
+The Netherlands
 
-Der Datenschutzbeauftrage von GitHub, Inc. kann unter dpo@github.com kontaktiert werden.
+Der Datenschutzbeauftragte von GitHub, Inc. kann unter dpo@github.com kontaktiert werden.
 
 Auf die Verarbeitung personenbezogener Daten durch den Plattformbetreiber kann die FWU nur begrenzt einwirken. An den von uns beeinflussbaren Stellen der Datenverarbeitung des Plattformbetreibers wirken wir im Rahmen der uns zur Verfügung stehenden Möglichkeiten auf den datenschutzgerechten Umgang hin. Durch den begrenzten Zugang zur Datenverarbeitung durch die Plattformbetreiber können wir jedoch nicht vollständig aufzeigen, welche Daten dieser verarbeitet.
 
@@ -84,7 +84,7 @@ Im Folgenden informieren wir über die Verarbeitung personenbezogener Daten bei 
 
 Wenn Sie die Website [schulconnex.de](https://schulconnex.de) aufrufen, erhebt der Betreiber personenbezogene Daten, die Ihr Browser an den Server übermittelt. Dabei handelt es sich um Daten, welche technisch erforderlich sind, um Ihnen webbasierte Inhalte anzuzeigen, sowie um die Stabilität und Sicherheit zu gewährleisten (Art. 6 Abs. 1 lit. f DSGVO).
 
-Gemäß den von vom Anbieter GitHub bereitgestellten Informationen handelt es sich hierbei um Ihre IP-Adresse, welche gemeinsam mit anderen Daten zur Websiteinteraktion (Geräteinformation, Sitzungsdetails, Datum und Uhrzeit des Besuchs, verweisende und aufgerufene Links) automatisch protokolliert werden. Wenn Sie während des Website-Besuchs mit einem GitHub Konto angemeldet sind, werden möglicherweise weitere personenbezogene Daten erhoben und verarbeitet.
+Gemäß den vom Anbieter GitHub bereitgestellten Informationen handelt es sich hierbei um Ihre IP-Adresse, welche gemeinsam mit anderen Daten zur Websiteinteraktion (Geräteinformation, Sitzungsdetails, Datum und Uhrzeit des Besuchs, verweisende und aufgerufene Links) automatisch protokolliert werden. Wenn Sie während des Website-Besuchs mit einem GitHub Konto angemeldet sind, werden möglicherweise weitere personenbezogene Daten erhoben und verarbeitet.
 
 Weitere Informationen dazu können Sie der allgemeinen Datenschutzerklärung von GitHub entnehmen. Diese enthält auch weitere Informationen zu Rechtsgrundlagen, Verarbeitungszwecken und möglichen Datenübermittlungen an weitere Empfänger.
 

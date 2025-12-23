@@ -4,7 +4,7 @@ import Arrays from '../datenmodell-qs/datenmodell-arrays.md'
 
 Der Begriff Datenmodell steht im Kontext dieser Spezifikationen nicht für das Datenmodell zur Persistierung von
 Entitäten in einer Datenhaltung. Im Kontext dieser Spezifikation repräsentiert der Begriff die Datenstruktur
-der Nutzlast von Anfragen (Request Payload) und Nutzlast der Antworten (Response Payload)
+der Nutzlast von Anfragen (Request Payload) und der Nutzlast der Antworten (Response Payload)
 bei XHR-Anfragen (HTTP-Anfragen gegen API-Endpunkte).
 
 Das Datenmodell der Schnittstelle basiert auf Datenmodellen der Spezifikationen [XBildung][1] und
