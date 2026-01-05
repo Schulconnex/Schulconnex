@@ -46,12 +46,12 @@ const config: Config = {
       'classic',
       {
         docs: {
-          lastVersion: 'current',
-          versions: {
-            current: {
-              label: 'Version 1.6',
-              // path: '1.5',
-            },
+          lastVersion: '1.6',
+          includeCurrentVersion: false,
+          versions: {  
+            //current: {label: 'Version 1.7 Develop', banner: 'unreleased'},
+            '1.6': {label: 'Version 1.6'},
+            '1.7': {label: 'Version 1.7 Preview', banner: 'unreleased'},
           },
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.

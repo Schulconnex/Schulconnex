@@ -1,0 +1,146 @@
+---
+id: schulconnex
+title: "Schulconnex"
+description: "Beschreibung der Schnittstellen von Schulconnex für Dienste"
+sidebar_label: Introduction
+sidebar_position: 0
+hide_title: true
+custom_edit_url: null
+---
+
+import ApiLogo from "@theme/ApiLogo";
+import Heading from "@theme/Heading";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+import Export from "@theme/ApiExplorer/Export";
+
+<span
+  className={"theme-doc-version-badge badge badge--secondary"}
+  children={"Version: 1.6"}
+>
+</span>
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Schulconnex"}
+>
+</Heading>
+
+
+
+Beschreibung der Schnittstellen von Schulconnex für Dienste
+
+
+<div
+  style={{"marginBottom":"2rem"}}
+>
+  <Heading
+    id={"authentication"}
+    as={"h2"}
+    className={"openapi-tabs__heading"}
+    children={"Authentication"}
+  >
+  </Heading><SchemaTabs
+    className={"openapi-tabs__security-schemes"}
+  >
+    <TabItem
+      label={"OAuth 2.0: oAuthForServices"}
+      value={"oAuthForServices"}
+    >
+      
+      
+      Die API nutzt den OAuth 2.0 Client Credentials Flow.
+      
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                Security Scheme Type:
+              </th><td>
+                oauth2
+              </td>
+            </tr><tr>
+              <th>
+                OAuth Flow (clientCredentials):
+              </th><td>
+                <div>
+                  Token URL: https://login.schulconnex.test/token
+                </div><span>
+                  Scopes:
+                </span><ul>
+                  <li>
+                    none: not available
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </TabItem><TabItem
+      label={"OAuth 2.0: oAuthForUser"}
+      value={"oAuthForUser"}
+    >
+      
+      
+      
+      
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                Security Scheme Type:
+              </th><td>
+                oauth2
+              </td>
+            </tr><tr>
+              <th>
+                OAuth Flow (authorizationCode):
+              </th><td>
+                <div>
+                  Token URL: https://login.schulconnex.test/token
+                </div><div>
+                  Authorization URL: https://login.schulconnex.test/auth
+                </div><span>
+                  Scopes:
+                </span><ul>
+                  <li>
+                    person-info: Enthält Vorname, Nachname, Rolle und Organisationskennung
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </TabItem>
+  </SchemaTabs>
+</div><div
+  style={{"display":"flex","flexDirection":"column","marginBottom":"var(--ifm-paragraph-margin-bottom)"}}
+>
+  <h3
+    style={{"marginBottom":"0.25rem"}}
+  >
+    Contact
+  </h3><span>
+    Landesinitiative n-21: Schulen in Niedersachsen online e. V.: 
+  </span><span>
+    URL: [https://www.n-21.de/](https://www.n-21.de/)
+  </span>
+</div><div
+  style={{"marginBottom":"var(--ifm-paragraph-margin-bottom)"}}
+>
+  <h3
+    style={{"marginBottom":"0.25rem"}}
+  >
+    License
+  </h3><a
+    href={"https://creativecommons.org/licenses/by-nd/4.0/legalcode"}
+  >
+    Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+  </a>
+</div>
+      
