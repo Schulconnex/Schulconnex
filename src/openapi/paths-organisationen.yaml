@@ -18,6 +18,7 @@ get:
     `kennung` | String | Möglichkeit, die Ergebnisliste der Anfrage nach `kennung` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `name` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `organisation.name` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `typ` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `organisation.typ` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt eine Codeliste (Organisationstyp) zugrunde.
+    `hat_als_organisationsbeziehungen` | String | Erlaubt es, wenn als Wert `ja` angegeben wird, zu Organisation auch die `hat_als`-Organisationsbeziehungen mit auszugeben. Diese Ausgabe ist nur eine Vereinfachung beim Auslesen. Das Attribut `organisationsbeziehungen` ist nicht Teil des Datenmodels [`Organisation`](../../../datenmodell-qs/organisation) und kann auch nicht mittels einer UPDATE Funktion auf [`Organisation`](../../../datenmodell-qs/organisation) gesetzt werden.
 
     Dieser Schnittstellenendpunkt gibt die Organisationen zurück, die vom Anfrager ausgelesen
     werden dürfen.
@@ -40,13 +41,17 @@ get:
       name: typ
       schema:
         type: string
+    - in: query
+      name: hat_als_organisationsbeziehungen
+      schema:
+        type: string             
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-Organisationen.yaml'
+            $ref: './components-qs-Organisationen-GET-request.yaml'
     '400':
       description: |
         Bad Request
