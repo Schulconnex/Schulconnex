@@ -25,6 +25,8 @@ get:
     `familienname` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `person.name.familienname` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filter-parameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `vorname` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `person.name.vorname` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filter-parameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `sichtfreigabe` | String | Erlaubt es Personen, abhängig davon aufzulisten, ob diese von einer anderen Organisation zum Lesen freigegeben wurden. Die möglichen Optionen sind `sichtfreigabe=ja`, um nur die durch externe Organisationen freigegebenen Personen beziehungsweise Personenkontexte aufzulisten und `sichtfreigabe=nein`, um nur eigene Personen beziehungsweise Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren Personen, beziehungsweise Personenkontexte geliefert.
+    `hat_als_beziehungen` | String | Erlaubt es, wenn als Wert `ja` angegeben wird, in Personenkontexten auch `hat_als` Beziehungen mit auszugeben. Diese Ausgabe ist nur eine Vereinfachung beim Auslesen. Das Attribut `beziehungen` ist nicht Teil des Datenmodels [`Personenkontext`](../../../datenmodell-qs/personenkontext) und kann auch nicht mittels einer UPDATE Funktion auf [`Personenkontext`](../../../datenmodell-qs/personenkontext) gesetzt werden.
+
 
     Die Antwort-Nutzdaten (Response Payload) beinhalten ein Array von JSON-Objekten
     vom Datentyp „Personendatensatz“, sofern Einträge (ggf. passend zu den optionalen Filtern)
@@ -56,13 +58,17 @@ get:
       name: sichtfreigabe
       schema:
         type: string
+    - in: query
+      name: hat_als_beziehungen
+      schema:
+        type: string
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-Personen.yaml'
+            $ref: './components-Personen-GET-request.yaml'
     '400':
       description: |
         Bad Request
