@@ -111,7 +111,7 @@ scope | String (byte) | 0..1 | Eine Liste von durch Leerzeichen getrennten Zeich
 
 [10]: https://datatracker.ietf.org/doc/html/rfc6749#section-5.1
 [11]: https://datatracker.ietf.org/doc/html/rfc6750
-[12]: https://datatracker.ietf.org/doc/html/rfc6749#ref-OAuth-HTTP-MAC
+[12]: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-http-mac
 [13]: https://openid.net/specs/openid-connect-core-1_0.html#CodeIDToken
 [14]: https://datatracker.ietf.org/doc/html/rfc6749#section-3.3
 
