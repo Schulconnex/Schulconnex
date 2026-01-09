@@ -2,7 +2,7 @@
 title: Personenkontext
 ---
 
-# Datenmodell Personenkontext für Diensteanbieter
+# Datenmodell Personenkontext für Dienste
 
 Hat eine Person mehrere Personenkontexte, so wird typischerweise bereits bei der Anmeldung im
 Sicherheitskontext einer angemeldeten Person einer dieser Kontexte selektiert. In diesem Fall
