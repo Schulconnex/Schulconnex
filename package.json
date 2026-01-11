@@ -17,7 +17,9 @@
     "write-dereferenced-openapi-for-qs": "redocly bundle --dereferenced --remove-unused-components src/openapi/api-qs.yaml | node util/resolve-relative-urls.js > static/dist/openapi/api-qs.yaml",
     "write-dereferenced-openapi-for-dienste": "redocly bundle --dereferenced --remove-unused-components src/openapi/api-dienste.yaml | node util/resolve-relative-urls.js > static/dist/openapi/api-dienste.yaml",
     "write-dereferenced-openapi": "npm run write-dereferenced-openapi-for-dienste && npm run write-dereferenced-openapi-for-qs",
-    "validate-openapi": "npx @redocly/cli lint src/openapi/api-dienste.yaml src/openapi/api-qs.yaml"
+    "validate-openapi": "npx @redocly/cli lint src/openapi/api-dienste.yaml src/openapi/api-qs.yaml",
+    "print": "mkdir -p static/dist & pandoc src/print/print.md -o static/dist/Schulconnex.pdf -d src/print/pandoc.yaml",
+    "print-latex": "mkdir -p static/dist & pandoc src/print/print.md -o static/dist/Schulconnex.latex -d src/print/pandoc.yaml"
   },
   "dependencies": {
     "@docusaurus/core": "^3.8.1",
