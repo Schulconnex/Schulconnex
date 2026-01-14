@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Lernperiode
 
 Eine Lernperiode beschreibt einen Zeitraum, in dem Gruppen von Organisationen angeboten werden können.

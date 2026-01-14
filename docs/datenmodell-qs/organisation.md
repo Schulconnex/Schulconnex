@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Organisation
 
 Eine Organisation stellt eine Schule oder sonstige relevante Organisation im Kontext eines

@@ -1,3 +1,7 @@
+---
+tags:
+- Informativ
+---
 # Versionshistorie
 
 Die Versionshistorie beschreibt die wichtigsten inhaltlichen Änderungen zwischen den veröffentlichten Versionen von Schulconnex.
