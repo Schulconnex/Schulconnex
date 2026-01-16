@@ -11,8 +11,8 @@ Detailierte Informationen zu den Änderungen finden sich in der Historie der Git
     * /personen
     * /personen/:id/personenkontexte
     * /personenkontexte   
-* API `personen-info` gibt keine `ist_von` Beziehungen aus
-* API `organisationen` kann auch Organisationsbeziehungen mit ausgeben
+* Die API `personen-info` gibt keine `ist_von` Beziehungen aus
+* Die API `organisationen` kann auch Organisationsbeziehungen mit ausgeben
 * Bei API `organisationen-info` wurde die Struktur der Query-Filter an `personen-info` angepasst
 
 ### Geänderte Codelisten
