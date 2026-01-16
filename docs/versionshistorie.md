@@ -6,7 +6,7 @@ Detailierte Informationen zu den Änderungen finden sich in der Historie der Git
 
 ## Änderungen von Version 1.5.1 zu Version 1.6
 
-### Nutzungsrechte API
+### Nutzungsrechte-API
 * Neue Rubrik Nutzungsrechte hinzugefügt:
      *  Allgemeines
      *  Nutzung der REST-API
