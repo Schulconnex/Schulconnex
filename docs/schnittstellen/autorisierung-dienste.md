@@ -29,13 +29,14 @@ anderem die Autorisierung eines Dienstes (den OAuth `access_token`).
 
 ```mermaid
 sequenceDiagram
-  actor N as Nutzer
+  autonumber
+  actor N as User
   participant D as Dienst
-  participant Auth as Anmeldeserver Authentication
-  participant API as Anmeldeserver REST API
+  participant Auth as IdP
+  participant API as Schulconnex REST API
   N->>D: Login auswählen
   D->>Auth: Autorisierung anfordern
-  Auth->>N: Umleitung auf Login-Seite des Anmeldeservers
+  Auth->>N: Umleitung auf Login-Seite des Identitätsproviders
   N->>Auth: Einloggen und zustimmen
   Auth->>D: Autorisierungscode
   D->>Auth: Autorisierungscode + Client ID + Client_Secret
