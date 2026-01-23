@@ -117,4 +117,4 @@ get:
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

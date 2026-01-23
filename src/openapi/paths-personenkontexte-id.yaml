@@ -39,27 +39,27 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 put:
   tags:
     - Personenkontexte
@@ -140,32 +140,32 @@ put:
         Erreichbarkeit. In diesem Fall liefert der Server den Fehlercode 400/19, wenn
         versucht wird ein Erreichbarkeiten-Array mit mehr als einem Eintrag zu erstellen.
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 delete:
   tags:
     - Personenkontexte
@@ -224,29 +224,29 @@ delete:
         informiert werden und eventuell existierende Information bei den Diensten gelöscht
         werden können.
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

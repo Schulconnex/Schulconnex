@@ -37,27 +37,27 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 put:
   tags:
     - Personen
@@ -123,32 +123,32 @@ put:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 delete:
   tags:
     - Personen
@@ -204,29 +204,29 @@ delete:
         Subcode 12: „Person enthält noch Personenkontexte.“ Dieser tritt dann auf, wenn
         versucht wird, den Datensatz einer Person zu löschen, für die noch Personenkontexte bestehen.
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
