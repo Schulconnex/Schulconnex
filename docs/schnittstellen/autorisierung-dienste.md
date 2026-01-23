@@ -105,29 +105,28 @@ Attribut Ebene 0 | Typ | Anzahl | Bemerkung
 access_token | String (byte) | 1 | Ein Token (`access_token`), welches vom Service auf die OAuth 2.0-Token-Exchange-Anfrage im Erfolgsfall ausgestellt wurde. Dieses ausgestellte `access_token` des zugrunde liegenden Authorization Frameworks ist spezifiziert in [IETF RFC6749][10] Abschnitt 5.1 .
 expires_in | Integer | 0..1 | Die Gültigkeit des Tokens (`access_token`) in Sekunden ab Ausstellung. Das `access_token` beinhaltet ebenfalls die Dauer der Gültigkeit des Tokens. Dieser Wert ist *optional*, sofern ein `access_token` ausgestellt wurde. Beispielhaft steht der Wert 1800 für eine Gültigkeitsdauer von 30 Minuten.
 refresh_token | String (byte) | 0..1 | Ein Token (`refresh_token`), welches vom Schulconnex-Server auf die OAuth 2.0-Token-Exchange-Anfrage im Erfolgsfall *optional* ausgestellt wurde. Mit dem `refresh_token` kann beim Schulconnex-Server ein neues `access_token` angefordert werden.
-token_type | String (Enumerated) | 0..1 | Der `token_type` stellt die Information zur Verfügung, wie das `access_token` angewendet werden kann. Auswahl an `token_type`: <ul><li>[bearer][11]</li><li>[mac][12]</li></ul> Im Kontext der Spezifikation OpenID Connect *muss* das Attribut `token_type` den Wert `"Bearer"` führen.
-id_token | String (byte) | 0..1 | Basierend auf der Spezifikation OpenID Connect beinhaltet die Token-Antwort einer OAuth 2.0-Token-Exchange-Anfrage zusätzlich ein Token ([`id_token`][13]), welches Informationen über die Authentifizierung einer nutzenden Person beinhaltet. Siehe „[ID Token](./autorisierung-dienste.md#id-token)“.
-scope | String (byte) | 0..1 | Eine Liste von durch Leerzeichen getrennten Zeichenketten, die den [Geltungsbereich des Tokens][14] spezifiziert.
+token_type | String (Enumerated) | 0..1 | Der `token_type` stellt die Information zur Verfügung, wie das `access_token` angewendet werden kann. Im Kontext der Spezifikation OpenID Connect *muss* das Attribut `token_type` den Wert [`"Bearer"`][11] führen.
+id_token | String (byte) | 0..1 | Basierend auf der Spezifikation OpenID Connect beinhaltet die Token-Antwort einer OAuth 2.0-Token-Exchange-Anfrage zusätzlich ein Token ([`id_token`][12]), welches Informationen über die Authentifizierung einer nutzenden Person beinhaltet. Siehe „[ID Token](./autorisierung-dienste.md#id-token)“.
+scope | String (byte) | 0..1 | Eine Liste von durch Leerzeichen getrennten Zeichenketten, die den [Geltungsbereich des Tokens][13] spezifiziert.
 
 [10]: https://datatracker.ietf.org/doc/html/rfc6749#section-5.1
 [11]: https://datatracker.ietf.org/doc/html/rfc6750
-[12]: https://datatracker.ietf.org/doc/html/rfc6749#ref-OAuth-HTTP-MAC
-[13]: https://openid.net/specs/openid-connect-core-1_0.html#CodeIDToken
-[14]: https://datatracker.ietf.org/doc/html/rfc6749#section-3.3
+[12]: https://openid.net/specs/openid-connect-core-1_0.html#CodeIDToken
+[13]: https://datatracker.ietf.org/doc/html/rfc6749#section-3.3
 
 ## ID Token
 
 Die folgende Tabelle beschreibt die Attribute für eine authentifizierte nutzende Person in Form
 eines sogenannten OpenID Connect ID-Tokens. Bei dem `id_token` handelt es sich um ein
-[JSON Web Token (JWT)][15]. Von Interesse für Dienstanbieter ist das Attribut `sub` (subject identifier).
+[JSON Web Token (JWT)][14]. Von Interesse für Dienstanbieter ist das Attribut `sub` (subject identifier).
 Bei dieser Zeichenkette handelt es sich um einen Identifier, welcher der authentifizierten
 nutzenden Person in dessen Sicherheitskontext und anfragenden Dienst nach der OpenID-Connect-Spezifikation
-als Subject-Identifier-Typ „pairwise“ zugeordnet ist (siehe Spezifikation [OpenID Connect 1.0][16]
+als Subject-Identifier-Typ „pairwise“ zugeordnet ist (siehe Spezifikation [OpenID Connect 1.0][15]
 Kapitel 8.0 „Subject Identifier Type” und Kapitel 8.1 „Pairwise Identifier Algorithm” der
 Spezifikation OpenID Connect 1.0).
 
-[15]: https://datatracker.ietf.org/doc/html/rfc7519
-[16]: https://openid.net/specs/openid-connect-core-1_0.html
+[14]: https://datatracker.ietf.org/doc/html/rfc7519
+[15]: https://openid.net/specs/openid-connect-core-1_0.html
 
 Attribut Ebene 0 | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
@@ -138,9 +137,9 @@ exp | Integer | 1 | Das Attribut `exp` (expires) führt das Datum, bis wann das 
 iat | Integer | 1 | Das Attribut `iat` (issued at) führt das Datum, zu welchem Zeitpunkt das JWT ausgestellt wurde. Das Datum wird als Unix-Epoch-Time geführt und ist ein Integer, welcher die Sekunden seit dem 01. Januar 1970 angibt.
 auth_time | Integer | 0..1 | Das optionale Attribut `auth_time` führt das Datum, zu welchem Zeitpunkt die nutzende Person authentifiziert wurde. Das Datum wird als Unix-Epoch-Time geführt und ist ein Integer, welcher die Sekunden seit dem 01. Januar 1970 angibt.
 nonce | String (byte) | 0..1 | ID-Token können mit dem Attribut `nonce` ausgestellt werden, um Attacken zu verhindern. Das optionale Attribut wird geführt, sofern dieses bei der Ausstellung angefordert wurde und der Schulconnex-Service diesen entsprechend zum Abgleich vorhält.
-acr | String (byte) | 0..1 | Das optionale Attribut `acr` (Authentication Context Class Reference) referenziert die URI der [Benutzerauthentifizierungsmethode][17], welche erfüllt wurde.
-amr | String (byte) | 0..1 | Das optionale Attribut `amr` (Authentication Method Reference) referenziert die Methode der [Benutzerauthentifizierung][18], welche verwendet wurde.
+acr | String (byte) | 0..1 | Das optionale Attribut `acr` (Authentication Context Class Reference) referenziert die URI der [Benutzerauthentifizierungsmethode][16], welche erfüllt wurde.
+amr | String (byte) | 0..1 | Das optionale Attribut `amr` (Authentication Method Reference) referenziert die Methode der [Benutzerauthentifizierung][17], welche verwendet wurde.
 azp | String (byte) | 0..1 | Das optionale Attribut `azp` (Authorized Party) führt die Client-ID der autorisierten Anwendung; es handelt sich um die Client-ID des Clients, welche den ID-Token angefordert hat.
 
-[17]: https://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html
-[18]: https://datatracker.ietf.org/doc/html/rfc8176
+[16]: https://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html
+[17]: https://datatracker.ietf.org/doc/html/rfc8176
