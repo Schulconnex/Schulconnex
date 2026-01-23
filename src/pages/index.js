@@ -45,7 +45,7 @@ export default function Home() {
                   className="button button--secondary button--lg"
                   to={`/docs/einleitung`}
                 >
-                  zur Spezifikation (V1.6)
+                  zur Spezifikation (Version 1.6)
                 </Link>
               </div>
             </div>{' '}
