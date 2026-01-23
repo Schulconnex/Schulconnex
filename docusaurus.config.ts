@@ -165,7 +165,7 @@ const config: Config = {
         style: 'dark',
         links: [
           {
-            title: 'Schulconnex (v1.6)',
+            title: 'Schulconnex (Version 1.6)',
             items: [
               {
                 label: 'Einleitung',
