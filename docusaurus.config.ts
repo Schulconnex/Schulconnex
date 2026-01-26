@@ -165,19 +165,6 @@ const config: Config = {
         style: 'dark',
         links: [
           {
-            title: 'Schulconnex',
-            items: [
-              {
-                label: 'Einleitung',
-                to: `docs/einleitung`,
-              },
-              {
-                label: 'Allgemeines',
-                to: `docs/allgemeines`,
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
