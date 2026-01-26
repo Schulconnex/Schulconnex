@@ -70,7 +70,6 @@ const config: Config = {
   themeConfig:
     {
       navbar: {
-        title: 'Schulconnex',
         logo: {
           alt: 'Schulconnex',
           src: 'img/logo.svg',
