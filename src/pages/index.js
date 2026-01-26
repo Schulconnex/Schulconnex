@@ -38,42 +38,6 @@ export default function Home() {
               </article>
             </div>
           </div>
-          <div className="row padding-top--lg padding-bottom--xl">
-            <div className="col">
-              <div className={styles.buttons}>
-                <Link
-                  className="button button--secondary button--lg"
-                  to={`/docs/einleitung`}
-                >
-                  zur Spezifikation
-                </Link>
-              </div>
-            </div>{' '}
-            <div className="col">
-              <div className={styles.buttons}>
-                <Link
-                  className="button button--secondary button--lg"
-                  href="/dist/openapi/api-dienste.yaml"
-                  target="_blank"
-                  download
-                >
-                  Download OpenAPI Dienste
-                </Link>
-              </div>
-            </div>
-            <div className="col">
-              <div className={styles.buttons}>
-                <Link
-                  className="button button--secondary button--lg"
-                  href="/dist/openapi/api-qs.yaml"
-                  target="_blank"
-                  download
-                >
-                  Download OpenAPI Quellsysteme
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
     </Layout>
