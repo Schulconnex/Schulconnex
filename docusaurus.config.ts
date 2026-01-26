@@ -204,7 +204,7 @@ const config: Config = {
             ],
           }
         ],
-        copyright: '<a href=https://creativecommons.org/licenses/by-nd/4.0/legalcode target=_blank>CC BY-ND 4.0</a>',
+        copyright: '<a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode"; style="color:#bfadf7;" target=_blank>CC BY-ND 4.0</a>',
       },
       prism: {
         theme: prismThemes.github,
