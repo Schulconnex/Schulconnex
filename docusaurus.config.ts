@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Schulconnex',
-  tagline: 'Schnittstellen für Dienste und Quellsysteme',
+  tagline: 'Schnittstellen für Dienste, Quellsysteme und Nutzungsrechte',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
