@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Fach
 
 Ein behandeltes Fach.

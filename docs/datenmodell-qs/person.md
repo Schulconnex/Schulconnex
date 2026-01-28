@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Person
 
 Nachfolgend ist das Datenmodell einer Person dargestellt.
