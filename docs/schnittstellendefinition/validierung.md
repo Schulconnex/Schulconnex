@@ -17,7 +17,7 @@ Die Priorisierung der Validierung sieht wie folgt aus:
   wird beim ersten Fehler im Datenmodell sofort mit einem passenden Fehler geantwortet
   und die Verarbeitung der Anfrage abgebrochen. Fehlermeldungen sind unter
   [Fehlerbehandlung - 400 Bad Request](http-statuscodes#400---bad-request) gelistet. 
-  Subcode 04 und darauf folgende Codes beschrieben spezifische Validierungsfehler, 
+  Subcode 04 und darauf folgende Codes beschreiben spezifische Validierungsfehler, 
   Subcode 03 wird geliefert, wenn ein Validierungsfehler auftritt, aber keine der
   spezifischen Fehlermeldungen passt.
 
