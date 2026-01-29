@@ -12,7 +12,7 @@ unter Wahrung des Grundsatzes der Datensparsamkeit ermöglicht, sodass nur die f
 Dienst notwendigen Daten bereitgestellt werden. 
 
 Darüber hinaus spezifiziert Schulconnex eine Schnittstelle für
-Nutzungsrechte bereit, die den Abruf von Informationen zu Nutzungsrechten an digitalen Medienobjekten ermöglicht.
+Nutzungsrechte, welche den Abruf von Informationen zu Nutzungsrechten an digitalen Medienobjekten ermöglicht.
 
 
 Dabei ist herauszuheben, dass hiermit weder
