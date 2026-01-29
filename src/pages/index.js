@@ -41,12 +41,6 @@ export default function Home() {
           <div className="row padding-top--lg padding-bottom--xl">
             <div className="col">
               <div className={styles.buttons}>
-                <Link
-                  className="button button--secondary button--lg"
-                  to={`/docs/einleitung`}
-                >
-                  zur Spezifikation
-                </Link>
               </div>
             </div>{' '}
             <div className="col">
@@ -73,6 +67,18 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+            <div className="col">
+              <div className={styles.buttons}>
+                <Link
+                  className="button button--secondary button--lg"
+                  href="/dist/openapi/api-nutzungsrechte.yaml"
+                  target="_blank"
+                  download
+                >
+                  Download OpenAPI Nutzungsrechte
+                </Link>
+              </div>
+            </div>            
           </div>
         </div>
       </main>
