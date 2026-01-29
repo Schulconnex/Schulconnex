@@ -25,4 +25,4 @@ nutzbar bleiben.
 
 ## Stand der Bearbeitung
 
-Dieses Dokument befindet sich aktuell im Bearbeitungsstand Version 1.6.
+Dieses Dokument befindet sich aktuell im Bearbeitungsstand Version 1.7 Releasekandidat 1.
