@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Beziehung
 
 Das Datenmodell Beziehung beschreibt die Beziehung zweier Personen. Die Beziehungen werden zwischen

@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Gruppenzugehörigkeit
 
 Die Gruppenzugehörigkeit repräsentiert eine Verknüpfung zwischen einem Personenkontext und einer Gruppe.
