@@ -30,12 +30,12 @@
       <path class="cls-4" d="m556.72,98.26c-9.9,0-19.55,3.14-25.99,9.56l-43.8,44.01c-2.97,2.96-7.21,4.54-11.67,4.54-9.74,0-17.63-8.22-17.63-18.36s7.9-18.36,17.63-18.36c5.35,0,10.15,2.48,13.38,6.4l15.38-15.85c-6.61-7.37-16.41-11.95-28.98-11.95-21.43,0-38.81,17.8-38.81,39.75s17.38,39.75,38.81,39.75c11.48,0,20.35-4.42,28.9-12.98,0,0,38.45-37.92,38.46-37.93,3.96-3.89,8.44-7.21,14.32-7.21,10.14,0,18.36,8.22,18.36,18.36s-8.22,18.36-18.36,18.36c-7.63,0-14.17-4.65-16.95-11.28l-15.48,15.94c7.21,10.13,19.05,16.74,32.42,16.74,21.95,0,39.75-17.8,39.75-39.75s-17.8-39.75-39.75-39.75Z"/>
     </clipPath>
     <linearGradient id="Unbenannter_Verlauf_3" data-name="Unbenannter Verlauf 3" x1="558.6" y1="195.85" x2="559.77" y2="117.15" gradientUnits="userSpaceOnUse">
-      <stop offset=".28" stop-color="#6034fd"/>
-      <stop offset="1" stop-color="#000049"/>
+      <stop offset=".28" stop-color="#f3ecfd"/>
+      <stop offset="1" stop-color="#f3ecfd"/>
     </linearGradient>
     <linearGradient id="Unbenannter_Verlauf_2" data-name="Unbenannter Verlauf 2" x1="2422" y1="1598.55" x2="2423.17" y2="1519.85" gradientTransform="translate(2895.23 1678.95) rotate(-180)" gradientUnits="userSpaceOnUse">
-      <stop offset=".3" stop-color="#6034fd"/>
-      <stop offset="1" stop-color="#000049"/>
+      <stop offset=".3" stop-color="#f3ecfd"/>
+      <stop offset="1" stop-color="#f3ecfd"/>
     </linearGradient>
   </defs>
   <g>
