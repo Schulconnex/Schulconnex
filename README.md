@@ -85,6 +85,17 @@ Für die Quellsysteme-API:
 npm run write-dereferenced-openapi-for-qs
 ```
 
+Für die Nutzungsrechte-API:
+
+```bash
+npm run write-dereferenced-openapi-for-policies
+```
+
+Für alle drei APIs gleichzeitig:
+```bash
+npm run write-dereferenced-openapi
+```
+
 ## Deployment
 
 ```bash

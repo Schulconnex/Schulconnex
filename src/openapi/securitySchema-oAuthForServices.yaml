@@ -2,6 +2,6 @@ type: oauth2
 description: Die API nutzt den OAuth 2.0 Client Credentials Flow.
 flows:
   clientCredentials:
-    tokenUrl: https://login.schulconnex.test/token
+    tokenUrl: https&zwj;://login.schulconnex.test/token
     scopes:
       none: not available

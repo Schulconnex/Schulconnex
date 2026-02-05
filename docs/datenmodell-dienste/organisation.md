@@ -2,7 +2,7 @@
 title: Organisation
 ---
 
-# Datenmodell Organisation für Diensteanbieter
+# Datenmodell Organisation für Dienste
 
 Personen können einer Organisation angehören, jedoch zeitweise an einer anderen Organisation tätig sein. Die erste
 Organisation ist die Stammorganisation. Der häufigste Anwendungsfall ist die Abordnung einer Lehrerin oder eines Lehrers an eine
