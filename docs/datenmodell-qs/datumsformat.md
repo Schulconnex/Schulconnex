@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Datumsformat
 
 Alle Datumsangaben werden entsprechend der ISO-8601-Formatierung `YYYY-MM-DD` dargestellt. Sie beinhalten

@@ -1,7 +1,7 @@
 openapi: '3.0.2'
 info:
   title: Schulconnex
-  version: '1.6'
+  version: '1.7'
   description: |
     Beschreibung der Schnittstellen von Schulconnex für Dienste
   contact:

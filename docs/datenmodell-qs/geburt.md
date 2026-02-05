@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Geburt
 
 Datenmodell der Geburt einer [Person](person).

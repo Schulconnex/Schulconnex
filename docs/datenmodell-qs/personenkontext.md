@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Personenkontext
 
 Der Personenkontext gibt an, in welcher Rolle der Dienst von nutzenden Personen in Anspruch genommen wird.
@@ -34,37 +38,3 @@ sichtfreigabe | String (Code) | 0..1 | Attribut gibt an, ob dieser Personenkonte
 loeschung | *Struktur* | 0..1 | Aktuell gibt es zu Löschungen nur ein Attribut (Zeitpunkt), eventuell werden in späteren Versionen weitere Attribute hinzugefügt.
 loeschung.zeitpunkt | String (datetime) | 1 | Datum und Uhrzeit der Löschung des Personenkontexts. Das Format des Löschzeitpunkts ist `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt. Solange ein Personenkontext nicht gelöscht wurde, kann das Attribut `loeschung.zeitpunkt` geändert oder gelöscht werden. Ist das Attribut `loeschung` vorhanden, so muss der Zeitpunkt gesetzt sein.
 revision | String (UTF-8) | 1 | Revision des Personenkontext. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
-
-## Beispiel JSON des Datentyps Personenkontext
-
-```json
-{
-  "id": "4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad",
-  "referrer": "NI_12345_12554648",
-  "mandant": "58f45270-8e54-40c6-a212-980307fc19be",
-  "organisation": {
-    "id": "b0d7b0dd-3477-4122-a38d-095ec242e786",
-    "kennung": "NI_12345",
-    "name": "Heinrich-Heine-Gymnasium",
-    "namensergaenzung": "vorher Heinrich-Heine-Gesamtschule",
-    "kuerzel": "Heine-Gym",
-    "anschrift": {
-      "postleitzahl": "30519",
-      "ort": "Hannover",
-      "ortsteil": "Döhren"
-    },
-    "typ": "Schule",
-    "traegerschaft": "02"
-  },
-  "rolle": "Lern",
-  "erreichbarkeiten": [
-    {
-      "typ": "E-Mail",
-      "kennung": "Petra.Muster@heine-gym-doehren.de"
-    }
-  ],
-  "personenstatus": "Aktiv",
-  "jahrgangsstufe": "05",
-  "revision": "1"
-}
-```

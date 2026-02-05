@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Anschrift
 
 Die Anschrift erlaubt es, einen Ort zu beschreiben, an dem, beispielsweise, eine Organisation ansässig ist.
