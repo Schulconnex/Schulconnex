@@ -6,7 +6,7 @@ tags:
 
 # Ablauf Löschen von Personenkontexten und Personen
 
-Aus Sicht des [Datenschutzes][1] ist der Schulconnex-Server ein Datenübermittler zwischen
+Aus Sicht des Datenschutzes ist der Schulconnex-Server ein [Datenübermittler][1] zwischen
 Schulverwaltung (Quellsystemen) und angebundenen Anwendungen (Dienste). Aus dieser Voraussetzung
 leiten sich bestimmte gesetzliche Anforderungen an das Löschen von Personen und Personenkontexten ab.
 Diese Anforderungen werden durch festgelegte Statusfolgen bei der Löschung konzeptuell umgesetzt.

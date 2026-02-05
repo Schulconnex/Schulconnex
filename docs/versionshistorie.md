@@ -4,6 +4,45 @@ Die Versionshistorie beschreibt die wichtigsten inhaltlichen Änderungen zwische
 
 Detailierte Informationen zu den Änderungen finden sich in der Historie der Github Issues und der entsprechenden Pull Requests.
 
+## Änderungen von Version 1.6 zu Version 1.7
+
+### Geänderte APIs
+* Neuer Filter zur Ausgabe von `hat_als` Beziehungen bei:
+    * /personen
+    * /personen/:id/personenkontexte
+    * /personenkontexte   
+* Die API `personen-info` gibt keine `ist_von` Beziehungen aus
+* Die API `organisationen` kann auch Organisationsbeziehungen mit ausgeben
+* Bei API `organisationen-info` wurde die Struktur der Query-Filter an `personen-info` angepasst
+
+### Geänderte Codelisten
+* Neuer Wert in Codeliste `Organisationsbeziehung`: 
+    * `Medienzentrum`
+    
+### Sonstiges
+* Praxisleitfaden: Aufruf eines Mediums über ein Medienregal
+* Informationen zur Gewährleistung von Datenschutzzielen durch Schulconnex
+* 
+## Änderungen von Version 1.5.1 zu Version 1.6
+
+### Nutzungsrechte-API
+* Neue Rubrik Nutzungsrechte hinzugefügt:
+     *  Allgemeines
+     *  Nutzung der REST API
+     *  Praxisleitfaden - Nutzungsrechte mit ODRL
+     *  API Nutzungsrechte: 
+         * /policies-info
+
+### Geänderte Datenmodelle
+* Attribut `bezeichnung` dem Datenmodell `Fach` hinzugefügt
+
+### Geänderte Codelisten
+* `Lokalisierung` referenziert direkt RFC 5646 und nutzt keine eigene Codeliste mehr
+* Codeliste `Organisationstyp` hat drei neue Werte: 
+    * `Medienzentrum`
+    * `Behoerde`
+    * `SchTrae (Schulträger)`
+
 ## Änderungen von Version 1.5 zu Version 1.5.1
 
 ### Allgemeines
