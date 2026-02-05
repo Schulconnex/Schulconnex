@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Gruppendatensatz
 
 Datenmodell eines Gruppendatensatzes: Der Gruppendatensatz ist als Daten-Container (WrapperObject) zu verstehen.

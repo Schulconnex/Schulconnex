@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Laufzeit
 
 Die Laufzeiten von Gruppen können entweder direkt durch Datumsangaben festgelegt werden (`von`/`bis`) oder

@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Sichtfreigabe
 
 Datenmodell einer Sichtfreigabe.

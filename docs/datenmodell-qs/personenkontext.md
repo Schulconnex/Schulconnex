@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Personenkontext
 
 Der Personenkontext gibt an, in welcher Rolle der Dienst von nutzenden Personen in Anspruch genommen wird.

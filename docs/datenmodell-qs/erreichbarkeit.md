@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Erreichbarkeit
 
 Erreichbarkeit für einen Personenkontext.

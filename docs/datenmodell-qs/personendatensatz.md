@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Personendatensatz
 
 Datenmodell eines Personendatensatzes: Personendatensatz ist als Daten-Container (WrapperObject) zu verstehen.
