@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Schulconnex',
-  tagline: 'Schnittstellen für Dienste und Quellsysteme',
+  tagline: 'Schnittstellen für Dienste, Quellsysteme und Nutzungsrechte',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -70,7 +70,6 @@ const config: Config = {
   themeConfig:
     {
       navbar: {
-        title: 'Schulconnex',
         logo: {
           alt: 'Schulconnex',
           src: 'img/logo.svg',
@@ -165,19 +164,6 @@ const config: Config = {
         style: 'dark',
         links: [
           {
-            title: 'Schulconnex',
-            items: [
-              {
-                label: 'Einleitung',
-                to: `docs/einleitung`,
-              },
-              {
-                label: 'Allgemeines',
-                to: `docs/allgemeines`,
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
@@ -204,7 +190,7 @@ const config: Config = {
             ],
           }
         ],
-        copyright: '<a href=https://creativecommons.org/licenses/by-nd/4.0/legalcode target=_blank>CC BY-ND 4.0</a>',
+        copyright: '<a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode"; style="color:#bfadf7;" target=_blank>CC BY-ND 4.0</a>',
       },
       prism: {
         theme: prismThemes.github,

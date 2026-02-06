@@ -1,3 +1,7 @@
+---
+tags:
+- Informativ
+---
 # Versionshistorie
 
 Die Versionshistorie beschreibt die wichtigsten inhaltlichen Änderungen zwischen den veröffentlichten Versionen von Schulconnex.
@@ -22,6 +26,26 @@ Detailierte Informationen zu den Änderungen finden sich in der Historie der Git
 ### Sonstiges
 * Praxisleitfaden: Aufruf eines Mediums über ein Medienregal
 * Informationen zur Gewährleistung von Datenschutzzielen durch Schulconnex
+* 
+## Änderungen von Version 1.5.1 zu Version 1.6
+
+### Nutzungsrechte-API
+* Neue Rubrik Nutzungsrechte hinzugefügt:
+     *  Allgemeines
+     *  Nutzung der REST API
+     *  Praxisleitfaden - Nutzungsrechte mit ODRL
+     *  API Nutzungsrechte: 
+         * /policies-info
+
+### Geänderte Datenmodelle
+* Attribut `bezeichnung` dem Datenmodell `Fach` hinzugefügt
+
+### Geänderte Codelisten
+* `Lokalisierung` referenziert direkt RFC 5646 und nutzt keine eigene Codeliste mehr
+* Codeliste `Organisationstyp` hat drei neue Werte: 
+    * `Medienzentrum`
+    * `Behoerde`
+    * `SchTrae (Schulträger)`
 
 ## Änderungen von Version 1.5 zu Version 1.5.1
 

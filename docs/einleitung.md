@@ -9,7 +9,13 @@ Strategie zur Einrichtung landesweiter ID-Management-Systeme im schulischen Bere
 verstanden. Ziel ist, ein standardisiertes Anmeldeverfahren für den Zugang zu digitalen
 Bildungsplattformen und -medien zu schaffen, welches eine Anmeldung bei digitalen Diensten
 unter Wahrung des Grundsatzes der Datensparsamkeit ermöglicht, sodass nur die für diesen
-Dienst notwendigen Daten bereitgestellt werden. Dabei ist herauszuheben, dass hiermit weder
+Dienst notwendigen Daten bereitgestellt werden. 
+
+Darüber hinaus spezifiziert Schulconnex eine Schnittstelle für
+Nutzungsrechte, welche den Abruf von Informationen zu Nutzungsrechten an digitalen Medienobjekten ermöglicht.
+
+
+Dabei ist herauszuheben, dass hiermit weder
 eine Vereinheitlichung der bei den Schulverwaltungen eingesetzten Systeme noch eine zentrale
 Datenhaltung beabsichtigt ist.
 
@@ -25,4 +31,4 @@ nutzbar bleiben.
 
 ## Stand der Bearbeitung
 
-Dieses Dokument befindet sich aktuell im Bearbeitungsstand Version 1.6.
+Dieses Dokument befindet sich aktuell im Bearbeitungsstand Version 1.7 Releasekandidat 1.
