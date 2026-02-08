@@ -531,18 +531,6 @@ const sidebars: SidebarsConfig = {
               label: '/personenkontexte/\u200B:id/\u200Bbeziehungen',
               className: 'api-method get',
             },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/create-personenkontext-id-sichtfreigabe',
-              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
-              className: 'api-method post',
-            },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/read-personenkontext-id-sichtfreigaben',
-              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
-              className: 'api-method get',
-            },
           ],
         },
         {
@@ -609,6 +597,12 @@ const sidebars: SidebarsConfig = {
               label: '/gruppen/\u200B:id',
               className: 'api-method delete',
             },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Gruppenzugehörigkeiten',
+          items: [
             {
               type: 'doc',
               id: 'generated/openapi/quellsysteme/create-gruppe-id-gruppenzugehoerigkeit',
@@ -621,12 +615,6 @@ const sidebars: SidebarsConfig = {
               label: '/gruppen/\u200B:id/\u200Bgruppenzugehoerigkeiten',
               className: 'api-method get',
             },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Gruppenzugehörigkeiten',
-          items: [
             {
               type: 'doc',
               id: 'generated/openapi/quellsysteme/read-gruppenzugehoerigkeiten',
@@ -657,6 +645,18 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Sichtfreigaben',
           items: [
+                     {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-personenkontext-id-sichtfreigabe',
+              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-personenkontext-id-sichtfreigaben',
+              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
+              className: 'api-method get',
+            },
             {
               type: 'doc',
               id: 'generated/openapi/quellsysteme/delete-sichtfreigabe-id',
