@@ -645,7 +645,7 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Sichtfreigaben',
           items: [
-                     {
+            {
               type: 'doc',
               id: 'generated/openapi/quellsysteme/create-personenkontext-id-sichtfreigabe',
               label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
