@@ -1,0 +1,46 @@
+type: object
+required:
+  - id
+  - organisation
+  - rolle
+properties:
+  id:
+    description: ID des Personenkontexts. Referenziert ein bestehendes Objekt des Schulconnex-Servers.
+    type: string
+    example: 4d0f579c0b9a4d3ab48487b3bee8a2ad4d0f579c0b9a4d3ab48487b3bee8a2ad
+  organisation:
+    allOf:
+      - $ref: './components-Organisation-basis.yaml'
+      - $ref: './components-Organisation.yaml'
+  gruppen:
+    description: ''
+    type: array
+    items:
+      $ref: './components-dienste-Gruppendatensatz.yaml'
+  beziehungen:
+    description: ''
+    type: object
+    properties:
+      hat_als_beziehungen:
+        type: array
+        items:
+          $ref: './components-dienste-Beziehung.yaml'
+  erreichbarkeiten:
+    description: ''
+    type: array
+    items:
+      $ref: './components-Erreichbarkeit.yaml'
+  personenstatus:
+    $ref: './components-code-Personenstatus.yaml'
+  jahrgangsstufe:
+    $ref: './components-code-Jahrgangsstufe.yaml'
+  rolle:
+    $ref: './components-code-Rolle.yaml'
+  loeschung:
+    description: ''
+    type: object
+    properties:
+      zeitpunkt:
+        description: Datum und Uhrzeit der Löschung des Personenkontexts.
+        type: string
+        format: date-time

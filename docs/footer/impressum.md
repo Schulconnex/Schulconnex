@@ -1,19 +1,34 @@
 # Impressum
 
-Angaben gem. § 5 TMG (Telemediengesetz)
+FWU Institut für Film und Bild \
+in Wissenschaft und Unterricht gemeinnützige GmbH \
+Bavariafilmplatz 3 \
+82031 Grünwald
 
-Landesinitiative n-21: Schulen in Niedersachsen online e.V. \
-Schiffgraben 27, 30159 Hannover \
-Telefon: 0511/3536621-0 \
-Telefax: 0511/3536621-99 \
-E-Mail: info@n-21.de
+Telefon: 089/6497-1 \
+Telefax: 089/6497-300 \
+Internet: www.fwu.de \
+E-Mail: info@fwu.de
 
-Vertreten durch: Michael Sternberg, Geschäftsführer
+Handelsregister: Amtsgericht München B 2636 \
+Umsatzsteuer-Identifikationsnummer: DE 129521719 
 
-Registereintrag: Eintragung im Vereinsregister \
-Registergericht: Amtsgericht Hannover \
-Registernummer: VR 7905 \
-Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE226221908
+## Vertretungsberechtigte
+
+Geschäftsführer: Andreas Koschinsky (Direktor), Rüdiger Nill
+
+Sitzland ist die Bundesrepublik Deutschland.
+
+## Zuständige Aufsichtsbehörde
+
+Bayerische Landeszentrale für neue Medien (BLM) \
+Rechtsfähige Anstalt des öffentlichen Rechts \
+Heinrich-Lübke-Str. 27 \
+81737 München
+
+Telefon: +49 (0)89/6 38 08 – 0 \
+Fax: +49 (0)89/6 38 08 – 140 \
+E-Mail: info@blm.de
 
 ## Haftungsausschluss
 

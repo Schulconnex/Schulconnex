@@ -7,7 +7,7 @@ All codes in code lists are considered case-insensitive, so „SCHULE”, „sch
 „ScHuLe” are considered equivalent and valid.
 
 As most of the codes map to meanings that are reflected in the GUI of software used in schools,
-translating the meaning of the individual codes will likely not to be of much use. For providing
+translating the meaning of the individual codes will likely not be of much use. For providing
 the GUI of a tool used in schools, it will be necessary to work with someone who has a good
 understanding of the German language.
 

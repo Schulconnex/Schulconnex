@@ -1,17 +1,17 @@
 openapi: '3.0.2'
 info:
   title: Schulconnex
-  version: '1.6'
+  version: '1.7'
   description: |
     Beschreibung der Schnittstellen von Schulconnex für Dienste
   contact:
-    name: 'Landesinitiative n-21: Schulen in Niedersachsen online e. V.'
-    url: https://www.n-21.de/
+    name: 'FWU Institut für Film und Bild in Wissenschaft und Unterricht gemeinnützige GmbH'
+    url: https://www.fwu.de/
   license:
     name: Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
     url: https://creativecommons.org/licenses/by-nd/4.0/legalcode
 servers:
-  - url: https://schulconnex.test/v1
+  - url: https&zwj;://schulconnex.test/v1
     description: Lokaler Testserver
 security:
   - oAuthForServices: []

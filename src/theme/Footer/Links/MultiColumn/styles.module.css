@@ -1,5 +1,5 @@
 .footerLogoLink {
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity var(--ifm-transition-fast)
     var(--ifm-transition-timing-default);
 }
@@ -10,5 +10,13 @@
 
 .kontaktLogo {
   margin-top: 1rem;
+  max-width: min(26rem, 80vw);
+}
+
+.kontaktLogo {
+  width: 120px;   /* or any size you prefer */
+  height: auto;
+  margin-top: 1rem;
+  margin-left: 10rem; /* Adjust this value as needed */
   max-width: min(26rem, 80vw);
 }
