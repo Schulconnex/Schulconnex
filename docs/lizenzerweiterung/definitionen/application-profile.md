@@ -12,7 +12,23 @@ Das Ziel dieses Application Profiles ist es, die Nutzungsrechte für Bildungsmed
 
 ### 3.1. Vokabular
 
-Für die Definition des Vokabular und der Taxonomie siehe [Vokabular und Dokumentation](vocabular-und-taxonomie.md).
+Für die Definition des Vokabulars und der Taxonomie siehe [Vokabular und Dokumentation](vokabular-und-taxonomie.md).
+
+### 3.2. URNs für Attribute und Left-hand-Operanden
+- **Attribute**:
+  - `uid`: `urn:schulconnex:de:uid`
+  - `target`: `urn:schulconnex:de:target`
+  - `permission`: `urn:schulconnex:de:permission`
+  - `assignee`: `urn:schulconnex:de:assignee`
+  - `constraint`: `urn:schulconnex:de:constraint`
+  - `duty`: `urn:schulconnex:de:duty`
+
+- **Left-hand-Operanden**:
+  - `dateTime`: `urn:schulconnex:de:nutzungsrecht:zeit`
+  - `spatial`: `urn:schulconnex:de:nutzungsrecht:raum`
+  - `concurrentUses`: `urn:schulconnex:de:nutzungsrecht:gleichzeitigeNutzungen`
+  - `urn:schulconnex:de:personenkontext:organisation:kennung`
+  - `urn:schulconnex:de:personenkontext:rolle`
 
 ## 4. ODRL-Profile
 
@@ -53,34 +69,11 @@ Hier ist ein Beispiel für ein spezifisches ODRL-Statement mit IDs und zeitliche
     },
     "from": "2023-10-01T00:00:00Z",
     "until": "2024-09-30T23:59:59Z"
-  },
-  "prohibition": {
-    "id": "urn:schulconnex:prohibition:123",
-    "action": {
-      "@id": "urn:schulconnex:nutzungsrechte:Distribute"
-    },
-    "target": {
-      "@id": "http://example.com/resource123"
-    },
-    "from": "2023-10-01T00:00:00Z",
-    "until": "2024-09-30T23:59:59Z"
-  },
-  "duty": {
-    "id": "urn:schulconnex:duty:123",
-    "action": {
-      "@id": "urn:schulconnex:nutzungsrechte:Modify"
-    },
-    "target": {
-      "@id": "http://example.com/resource123"
-    },
-    "from": "2023-10-01T00:00:00Z",
-    "until": "2024-09-30T23:59:59Z"
   }
 }
 ```
 
 ### 4.2. Übergeordnetes ODRL
-
 Hier ein Beispiel für das übergeordnete ODRL-Statement:
 
 ```json
@@ -108,13 +101,7 @@ Hier ein Beispiel für das übergeordnete ODRL-Statement:
 ```
 
 ## 5. Dokumentation
-
 Alle Stakeholder sollten Zugang zu dieser Dokumentation haben. Die Begriffe im Vokabular sind klar definiert, um Missverständnisse zu vermeiden.
 
 ## 6. Validierung und Feedback
-
 Das Vokabular und die ODRL-Profile sollten regelmäßig überprüft und bei Bedarf angepasst werden. Feedback von Stakeholdern ist entscheidend für die kontinuierliche Verbesserung.
-
----
-
-Wenn du weitere Anpassungen oder spezifische Informationen benötigst, lass es mich wissen!
