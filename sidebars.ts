@@ -530,18 +530,6 @@ const sidebars: SidebarsConfig = {
               label: '/personenkontexte/\u200B:id/\u200Bbeziehungen',
               className: 'api-method get',
             },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/create-personenkontext-id-sichtfreigabe',
-              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
-              className: 'api-method post',
-            },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/read-personenkontext-id-sichtfreigaben',
-              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
-              className: 'api-method get',
-            },
           ],
         },
         {
@@ -607,18 +595,6 @@ const sidebars: SidebarsConfig = {
               id: 'generated/openapi/quellsysteme/delete-gruppe-id',
               label: '/gruppen/\u200B:id',
               className: 'api-method delete',
-            },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/create-gruppe-id-gruppenzugehoerigkeit',
-              label: '/gruppen/\u200B:id/\u200Bgruppenzugehoerigkeiten',
-              className: 'api-method post',
-            },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/read-gruppe-id-gruppenzugehoerigkeiten',
-              label: '/gruppen/\u200B:id/\u200Bgruppenzugehoerigkeiten',
-              className: 'api-method get',
             },
           ],
         },
