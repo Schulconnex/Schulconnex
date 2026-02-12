@@ -102,6 +102,11 @@ const config: Config = {
                 sidebarId: 'apiDiensteSidebarOpenAPIDocs',
                 label: 'API Dienste',
               },
+             {
+                type: 'doc',
+                docId: 'download/apiDiensteOpenAPIDownload',
+                label: 'Download API Dienste',
+              },              
             ],
           },
           {
@@ -123,7 +128,12 @@ const config: Config = {
                 type: 'docSidebar',
                 sidebarId: 'apiQuellsystemeSidebarOpenAPIDocs',
                 label: 'API Quellsysteme',
-              }
+              },
+             {
+                type: 'doc',
+                docId: 'download/apiQuellsystemeOpenAPIDownload',
+                label: 'Download API Quellsysteme',
+              },
             ],
           },
           {
@@ -140,6 +150,11 @@ const config: Config = {
                 type: 'docSidebar',
                 sidebarId: 'apiPoliciesSidebarOpenAPIDocs',
                 label: 'API Nutzungsrechte',
+              },
+              {
+                type: 'doc',
+                docId: 'download/apiNutzungsrechteOpenAPIDownload',
+                label: 'Download API Nutzungsrechte',
               },
             ],
           },
