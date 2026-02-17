@@ -171,24 +171,24 @@ Code | Bezeichnung
 
 ## Gruppenrolle
 
-Code | Bezeichnung
---- | ---
-Lern | Lernende/-r
-Lehr | Lehrende/-r
-KlLeit | Klassenleitung
-Foerd | Förderlehrkraft
-VLehr | Vertretungslehrkraft
-SchB | Schulbegleitung
-GMit | Gruppenmitglied
-GLeit | Gruppenleitung
+Code | Bezeichnung | Bemerkung 
+--- | --- | ---
+Lern | Lernende/-r | Schülerinnen und Schüler nehmen in Lerngruppen an schulischen Lernprozessen teil, die von Lehrkräften gesteuert werden. Diese Rolle kann auch von volljährigen Personen ausgeübt werden, beispielsweise an Berufsschulen oder in Studienseminaren.
+Lehr | Lehrende/-r | Lehrkräfte steuern in Schulen die Lernprozesse von Lerngruppen von Schülerinnen und Schülern. Sie sind maßgeblich für die didaktische und pädagogische Gestaltung des Unterrichts verantwortlich.
+KlLeit | Klassenleitung | Eine Person, die an einer Schule bzw. Einrichtung eine Klasse leitet. 
+Foerd | Förderlehrkraft | Eine pädagogische Fachkraft, die Lernende mit speziellem Förderbedarf unterstützt.
+VLehr | Vertretungslehrkraft | Eine befristet angestellte Lehrkraft, die reguläre Lehrkräfte bei Abwesenheit ersetzt.
+SchB | Schulbegleitung | : Schulbegleitungen unterstützen Schülerinnen und Schüler mit besonderen Bedarfen. Sie sind häufig integraler Bestandteil der schulischen Lerngruppen, üben jedoch keine eigene Lehrtätigkeit aus.
+GMit | Gruppenmitglied | Eine Person, die an einer Schule bzw. Einrichtung einer Gruppe angehört, in dieser Gruppe jedoch weder die Zugehörigkeit zu Lehrkraft noch zu Schülerin/Schüler besitzt.
+GLeit | Gruppenleitung | Eine Person, die eine Gruppe in einer Schule bzw. Einrichtung leitet.
 
 ## Gruppentyp
 
-Code | Bezeichnung
---- | ---
-Klasse | Schulklasse
-Kurs | Kurs/Unterricht
-Sonstig | Sonstige Gruppe
+Code | Bezeichnung  | Bemerkung 
+--- | --- | --- 
+Klasse | Schulklasse | Eine Schulklasse bezeichnet eine festgelegte Gruppe von Lernenden, die gemeinsam in mehreren Fächern den Unterricht in einer Schule besuchen.
+Kurs | Kurs/Unterricht | Ein Kurs bezeichnet eine Gruppe von Lernenden, welche regelmäßig gemeinsam an einem Fach teilnehmen, aber darüber hinaus nicht weiter strukturiert ist.
+Sonstig | Sonstige Gruppe| Hiermit werden alle Gruppen, die nicht den Definitionen von Klasse oder Kurs entsprechen, gekennzeichnet.
 
 ## Jahrgangsstufe
 
@@ -276,23 +276,23 @@ Sonstige | sonstige Organisationen / Einrichtungen
 
 Diese Codeliste gibt an, ob ein Personenkontext aktuell aktiv ist. 
 
-Code | Bezeichnung
---- | ---
-Aktiv | aktiv
+Code | Bezeichnung | Bemerkung
+--- | ---  | ---
+Aktiv | aktiv | Derzeit unterstützt Schulconnex ausschliesslich den Personenstatus `Aktiv`. Alle von einem Schulconnex-Server gelieferten Personenkontexte sind aktiv. Andere Werte, wie beispielsweise `Inaktiv`, `Angefragt`, `Gelöscht` oder `Gesperrt`, werden nicht unterstützt.
 
 ## Rolle
 
-Code | Bezeichnung
---- | ---
-Lern | Lernende/-r
-Lehr | Lehrende/-r
-SorgBer | Sorgeberechtigte/-r
-Extern | externe Person
-OrgAdmin | Organisationsadministrator/-in
-Leit | Organisationsleitung
-SysAdmin | Systemadministrator/-in
-SchB | Schulbegleiter/-in
-NLehr | Nicht-lehrendes Personal
+Code | Bezeichnung | Bemerkung
+--- | ---  | ---
+Lern | Lernende/-r  | Schülerinnen und Schüler nehmen in Lerngruppen an schulischen Lernprozessen teil, die von Lehrkräften gesteuert werden. Diese Rolle kann auch von volljährigen Personen ausgeübt werden, beispielsweise an Berufsschulen oder in Studienseminaren.
+Lehr | Lehrende/-r | Lehrkräfte steuern in Schulen die Lernprozesse von Lerngruppen von Schülerinnen und Schülern. Sie sind maßgeblich für die didaktische und pädagogische Gestaltung des Unterrichts verantwortlich.
+SorgBer | Sorgeberechtigte/-r | Sorgeberechtigte besitzen das gesetzliche Sorgerecht für minderjährige Schülerinnen und Schüler.
+Extern | externe Person |  Diese Kategorie umfasst Personen, die zeitweise oder dauerhaft an pädagogischen und anderen schulischen Prozessen beteiligt sind, aber nicht fest der Schule angehören, wie beispielsweise Ausbilder in Betrieben im Rahmen dualer Ausbildungsgänge oder Projektpartner der Schulen.
+OrgAdmin | Organisationsadministrator/-in | Hierbei handelt es sich um von der Schulleitung benannte IT-Administratoren/-innen, die mit der Verwaltung der Daten ihres jeweiligen Mandanten (Schule) innerhalb von moin.schule betraut sind.
+Leit | Organisationsleitung | Eine Person, die eine Schule bzw. Einrichtung leitet. 
+SysAdmin | Systemadministrator/-in |  Dies sind vom Betreiber von moin.schule (Land Niedersachsen) benannte IT-Administratoren/-innen, die für den technischen Support und die Wartung des Dienstes für die Schulen zuständig sind.
+SchB | Schulbegleiter/-in | : Schulbegleitungen unterstützen Schülerinnen und Schüler mit besonderen Bedarfen. Sie sind häufig integraler Bestandteil der schulischen Lerngruppen, üben jedoch keine eigene Lehrtätigkeit aus.
+NLehr | Nicht-lehrendes Personal | Hierunter fällt das Personal der Schule, das an pädagogischen und anderen schulischen Prozessen beteiligt ist, jedoch keine eigene Lehrtätigkeit verantwortet. Beispiele hierfür sind Schulsozialpädagogen/-innen oder Verwaltungsangestellte.
 
 ## Trägerschaft
 
