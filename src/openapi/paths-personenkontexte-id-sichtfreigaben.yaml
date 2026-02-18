@@ -13,6 +13,9 @@ post:
     Einsicht freigegeben werden. Dabei kann die andere Organisation auf diese freigegebenen Daten
     nur lesend zugreifen. Das Erstellen oder Ändern der Daten durch die andere Organisation ist nicht zulässig oder möglich.
 
+    Eine Sichtfreigabe für einen Personenkontext kann nur durch die Organisation erfolgen, der ein Personenkontext zugeordnet ist
+    (Attribut `personenkontext.organisation`). 
+
     Sichtfreigaben können nur für Personenkontexte erteilt werden. Dabei ist über die API immer nur die Sichtfreigabe
     einzelner Personenkontexte möglich. Es besteht nicht die Möglichkeit, über die API alle Personenkontexte einer
     Organisation pauschal einer anderen Organisation bereit zu stellen.
@@ -92,6 +95,8 @@ get:
   description: |
    Dieser Schnittstellenendpunkt gibt eine Liste der existierenden Sichtfreigaben eines
    Personenkontexts zurück.
+   
+   Es werden nur Sichtfreigaben für einen Personenkontexte zurückgegeben, welche der abfragenden Organisation zugeordnet sind (Attribut `personenkontext.organisation`). 
 
    Ein READ zum Abfragen der Sichtfreigaben per `personenkontext.id` muss mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` erfolgen.
 

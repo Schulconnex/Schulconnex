@@ -6,6 +6,8 @@ tags:
 
 Datenmodell einer Sichtfreigabe.
 
+Sichtfreigaben für einen Personenkontext können nur durch die Organisation erstellt, aufgelistet oder gelöscht werden, denen der Personenkontext zugeordnet ist (Attribut `personenkontext.organisation`). 
+
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
 id | String (UTF-8) | 1 | ID der Sichtfreigabe.
