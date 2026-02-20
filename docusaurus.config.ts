@@ -52,10 +52,6 @@ const config: Config = {
               label: 'Version 1.7',
               // path: '1.5',
             },
-            '1.7-rc1': { 
-              label: 'Version 1.7 Veröffentlichungskandidat 1', 
-              banner: 'unreleased' 
-            }
           },
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
