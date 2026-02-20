@@ -182,6 +182,11 @@ const config: Config = {
             title: 'Community',
             items: [
               {
+                label: 'Beteiligung',
+                to: `docs/footer/beteiligung`,
+              },
+
+              {
                 label: 'GitHub',
                 href: 'https://github.com/Schulconnex/Schulconnex',
               },
