@@ -1,19 +1,19 @@
 # Codelisten
 
 Codelisten legen mögliche Werte für bestimmte Attribute fest, beispielsweise für „Geschlecht“
-oder „Organisationstyp“. Nachfolgend befinden sich alle Codelisten, welche in der Spezifikation
+oder „Organisationstyp“. Nachfolgend befinden sich alle Codelisten, die in der Spezifikation
 referenziert werden.
 
 Codes aus Codelisten werden generell als Strings zurückgegeben, d. h. die JSON-Form für das
 weibliche Geschlecht ist als `"geschlecht": "w"` und nicht `"geschlecht": w` zu erwarten.
 
-Alle Codes müssen als nicht abhängig von Groß-/Kleinschreibung interpretiert werden
+Alle Codes müssen als unabhängig von Groß-/Kleinschreibung interpretiert werden
 (sind nicht Case-sensitiv). Die Organisationsarten `"SCHULE"`, `"schule"`, `"Schule"` oder
 auch `"ScHuLe"` müssen als identisch angenommen werden.
 
 ### Zukünftige Nutzung URI-basierter Codelisten
 
-Schulconnex plant ab der Version 2.0 URI-basierte Codelisten zu nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Decription Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
+Schulconnex plant ab der Version 2.0 URI-basierte Codelisten zu nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Description Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
 
 URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorteilen:
 
@@ -27,9 +27,9 @@ URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorte
 
 * __Lesbarkeit und Verständlichkeit__: URI-Codelistenwerte sind oft menschenlesbar und können leicht maschinell interpretiert werden, was die Dokumentation und das Debugging erleichtert.
 
-* __Standardisierung__: Die Verwendung von URI-Codelistenwerte fördert die Einhaltung von Standards und Best-Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
+* __Standardisierung__: Die Verwendung von URI-Codelistenwerten fördert die Einhaltung von Standards und Best-Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
 
-Als technisches Format ist geplant, für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifische Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, womit die Bundesländer ihre spezifischen Anforderungen abbilden können.
+Als technisches Format ist geplant, für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifischen Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, womit die Bundesländer ihre spezifischen Anforderungen abbilden können.
 
 ## Beziehungen
 
@@ -61,10 +61,10 @@ GY-SEK-II | Gymnasium Sekundarstufe II
 Die Codeliste „Boolean“ regelt das Mapping der deutschen Wörter „ja“ und „nein“ auf die
 englischen Begriffe „true“ und „false“.
 
-Code | Bemerkung
+Code | Bezeichnung
 --- | ---
-Ja | Mapping auf `"true"`.
-Nein | Mapping auf `"false"`.
+Ja | True
+Nein | False
 
 ## Erreichbarkeitstyp
 
@@ -257,8 +257,9 @@ unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
-SchTrae | Schulträger | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisations B, so hat A als Schulträger die Organisation B, damit ist B also Schulträger von A.
-SchBeh | Schulbehörde | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisations B, so hat A als Schulbehörde die Organisation B, damit ist B also Schulbehörde von A.
+SchTrae | Schulträger | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Schulträger die Organisation B, damit ist B also Schulträger von A.
+SchBeh | Schulbehörde | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Schulbehörde die Organisation B, damit ist B also Schulbehörde von A.
+Medienzentrum | Medienzentrum | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Medienzentrum die Organisation B, damit ist B also Medienzentrum für A.
 
 ## Organisationstyp
 
@@ -272,6 +273,8 @@ SchTrae | Schulträger
 Sonstige | sonstige Organisationen / Einrichtungen
 
 ## Personenstatus
+
+Diese Codeliste gibt an, ob ein Personenkontext aktuell aktiv ist. 
 
 Code | Bezeichnung
 --- | ---
@@ -306,7 +309,7 @@ Code | Bezeichnung
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
-Kein | keine | Der Schlüsselbesitzer ist nicht vertrauenswürdig. Diese Vertrauensstufe wird meist für Test- oder Beispiel-Nutzer vergeben.
+Kein | keine | Der Schlüsselbesitzer ist nicht vertrauenswürdig. Diese Vertrauensstufe wird meist für Test- oder Beispielnutzer vergeben.
 Unbe | unbekannt | Der Schlüsselbesitzer ist unbekannt. Diese Vertrauensstufe wird beispielsweise für selbstregistrierte Nutzer vergeben.
 Teil | vertraut | Dem Schlüsselbesitzer wird vertraut. Hierbei handelt es sich meist um Nutzer, die von Nutzern mit höherer Stufe angelegt wurden und diesen bekannt sind, sich jedoch nicht einer formalen Identifizierung unterzogen haben.
 Voll | verifiziert | Der Schlüsselbesitzer ist eindeutig und formal identifiziert (beispielsweise durch Vorlage des Personalausweises).

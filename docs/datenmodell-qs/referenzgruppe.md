@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Referenzgruppe
 
 Bei Referenzgruppen handelt es sich um Gruppen, deren Gruppenzugehörige vollständig oder teilweise der

@@ -1,6 +1,6 @@
 ---
 title: Synchronisation Quellsystem
-tags: 
+tags:
 - Informativ
 ---
 
@@ -19,7 +19,7 @@ erhält durch die Authentifizierung einen Access Token, mit dem die Endpunkte de
 aufgerufen werden können.
 
 Das Quellsystem muss die Zugangsdaten (Kennung, Passwort, ggf. noch URLs) sicher speichern können.
-Eine lokale Speicherung oder Zwischenspeicherung (Datei) ist nicht zulässig. Es muss sichergestellt
+Eine lokale Speicherung oder Zwischenspeicherung (z.B. in einer Datei) ist nicht zulässig. Es muss sichergestellt
 sein, dass nur berechtigte Nutzende Zugriff auf das Client Secret haben bzw. Funktionen aufrufen können,
 die das Client Secret verwenden. Falls die Funktion von einem lokalen Rechner ausgelöst wird, ist
 sicherzustellen, dass das Client Secret nicht von Unberechtigten ausgelesen werden kann.

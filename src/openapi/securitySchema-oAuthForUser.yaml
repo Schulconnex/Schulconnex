@@ -1,7 +1,7 @@
 type: oauth2
 flows:
   authorizationCode:
-    authorizationUrl: https://login.schulconnex.test/auth
-    tokenUrl: https://login.schulconnex.test/token
+    authorizationUrl: https&zwj;://login.schulconnex.test/auth
+    tokenUrl: https&zwj;://login.schulconnex.test/token
     scopes:
       person-info: Enthält Vorname, Nachname, Rolle und Organisationskennung

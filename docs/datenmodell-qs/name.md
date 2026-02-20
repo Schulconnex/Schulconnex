@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Name
 
 Datenmodell des Namens einer [Person](person).

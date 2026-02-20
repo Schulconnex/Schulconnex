@@ -1,0 +1,10 @@
+type: object
+properties:
+  person:
+    allOf:
+      - $ref: './components-qs-Person.yaml'
+      - $ref: './components-qs-Person-basis.yaml'
+  personenkontexte:
+    type: array
+    items:
+      $ref: './components-qs-Personenkontext-GET-request.yaml'
