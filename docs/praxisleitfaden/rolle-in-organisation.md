@@ -9,7 +9,7 @@ tags:
 Eine direkte Änderung der Rolle innerhalb eines Personenkontexts über die API-Schnittstelle
 `/personenkontexte/{id}` ist nicht möglich.
 
-Ist eine Änderung der Rolle notwendig, so muss dieses über die Erstellung eines neuen Personenkontexts geschehen.
+Ist eine Änderung der Rolle notwendig, so muss diese über die Erstellung eines neuen Personenkontexts geschehen.
 
 Der empfohlene Ablauf ist wie folgt:
 

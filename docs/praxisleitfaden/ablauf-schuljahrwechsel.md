@@ -1,6 +1,6 @@
 ---
 title: Ablauf Schuljahrwechsel
-tags: 
+tags:
 - Informativ
 ---
 
@@ -25,7 +25,7 @@ das Vorhalten von „historischen“ Daten aus vergangenen Lernperioden und Plan
 zukünftige Lernperioden ist nicht notwendig.
 
 Für Quellsysteme sind keine besonderen Funktionen oder API-Endpunkte für den Wechsel der Lernperioden
-vorgesehen. Findet eine Datensynchronisation allerdings im Zusammenhang oder direkt nach einem Wechsel
+vorgesehen. Findet eine Datensynchronisation allerdings im Zusammenhang mit oder direkt nach einem Wechsel
 der Lernperiode statt, müssen einige Besonderheiten berücksichtigt werden. Grundsätzlich sollte der Ablauf
 der Datensynchronisation der gleiche wie bei einer unterjährigen Synchronisation sein. So ist unter anderem
 auch sichergestellt, dass nachträgliche Änderungen beispielsweise am Stundenplan und bei Lerngruppen
@@ -38,7 +38,7 @@ nicht gelöscht werden. Sie müssen im Schulconnex-Service mit der gleichen UUID
 Das Löschen eines Personenkontexts kann sonst in allen verbundenen Diensten zum Löschen
 des Benutzerkontos und damit zum Datenverlust führen.
 
-Für Personen, die das Schulsystem des Landes verlassen oder die Organisation wechseln, sind die Anforderung
+Für Personen, die das Schulsystem des Landes verlassen oder die Organisation wechseln, sind die Anforderungen
 zur Löschung von Personen und Personenkontexten sowie die zum Schulwechsel zu beachten. Für Personen,
 die zum neuen Schuljahr an die aktuelle Schule wechseln, sind ebenfalls die Anforderungen
 zum Schulwechsel zu beachten.

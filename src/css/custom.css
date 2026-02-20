@@ -110,3 +110,15 @@
   border-color: var(--ifm-color-secondary-dark);
 }
 /* Ende Übernahme aus Vorlage */
+
+/* Custom colors for Github logo */
+[data-theme='dark'] {
+  --github-logo-color-primary: #ffffff;
+}
+[data-theme='light'] {
+  --github-logo-color-primary: #000000;
+}
+
+code[class*='codeBlockLinesWithNumbering'] > .theme-code-block-highlighted-line {
+  display: table-row;
+}

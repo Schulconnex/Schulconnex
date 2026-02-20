@@ -19,13 +19,21 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
   specSidebar: [
     'einleitung',
-    'allgemeines',
+      {
+      type: 'category',
+      label: 'Allgemeines',
+      items: [
+        'allgemeines-kernanwendungsfälle',
+        'allgemeines-datenschutz',
+      ]
+    },
     {
       type: 'category',
       label: 'Erweiterungen',
       items: [
         'schnittstellen/vendor-extensions',
         'schnittstellen/vendor-extensions-best-practices',
+        'schnittstellen/vendor-endpoints',
       ]
     },
     'codelisten',
@@ -136,11 +144,6 @@ const sidebars: SidebarsConfig = {
           id: 'datenmodell-dienste/personenkontext',
           label: 'Personenkontext',
         },
-        {
-          type: 'doc',
-          id: 'datenmodell-dienste/sichtfreigabe',
-          label: 'Sichtfreigabe',
-        },
       ],
     },
     {
@@ -174,6 +177,18 @@ const sidebars: SidebarsConfig = {
         'schnittstellen/oidc-claims',
       ],
     },
+        {
+      type: 'category',
+      label: 'Praxisleitfaden für die Implementierung',
+      link: {
+        type: 'doc',
+        id: 'praxisleitfaden/praxisleitfaden-dienste',
+      },
+      items: [
+        'praxisleitfaden/ablauf-löschen-dienste',
+      ],
+    },
+
   ],
 
   spezQuellsystemeSidebar: [
@@ -260,7 +275,6 @@ const sidebars: SidebarsConfig = {
         'praxisleitfaden/ablauf-löschen',
       ],
     },
-    'versionshistorie',
   ],
 
   spezPoliciesSidebar: [
@@ -329,6 +343,7 @@ const sidebars: SidebarsConfig = {
         // 'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
         // 'lizenzerweiterung/praxisleitfaden/semantik',
         'lizenzerweiterung/praxisleitfaden/odrl-beispiele',
+        'lizenzerweiterung/praxisleitfaden/medium-aufrufen',
       ],
     },
   ],
@@ -515,18 +530,6 @@ const sidebars: SidebarsConfig = {
               label: '/personenkontexte/\u200B:id/\u200Bbeziehungen',
               className: 'api-method get',
             },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/create-personenkontext-id-sichtfreigabe',
-              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
-              className: 'api-method post',
-            },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/read-personenkontext-id-sichtfreigaben',
-              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
-              className: 'api-method get',
-            },
           ],
         },
         {
@@ -592,18 +595,6 @@ const sidebars: SidebarsConfig = {
               id: 'generated/openapi/quellsysteme/delete-gruppe-id',
               label: '/gruppen/\u200B:id',
               className: 'api-method delete',
-            },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/create-gruppe-id-gruppenzugehoerigkeit',
-              label: '/gruppen/\u200B:id/\u200Bgruppenzugehoerigkeiten',
-              className: 'api-method post',
-            },
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/read-gruppe-id-gruppenzugehoerigkeiten',
-              label: '/gruppen/\u200B:id/\u200Bgruppenzugehoerigkeiten',
-              className: 'api-method get',
             },
           ],
         },

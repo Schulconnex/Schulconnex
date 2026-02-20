@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Organisationsbeziehung
 
 Das Datenmodell Organisationsbeziehung beschreibt die Beziehung zweier Organisationen.

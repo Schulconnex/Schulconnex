@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Gruppe
 
 Eine Gruppe erlaubt es, mehrere Personen in einer Gruppe zusammenzufassen. Typischerweise handelt es sich
