@@ -1,0 +1,20 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/odrl.jsonld"
+    ],
+    "@type": "Agreement",
+    "uid": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "target": {
+        "uid": "urn:issuer:medium:123456789",
+        "partOf": "urn:issuer:catalogue"
+    },
+    "permission": [
+        {
+            "action": [
+                // highlight-start
+                "stream"
+                // highlight-end
+            ]
+        }
+    ]
+}

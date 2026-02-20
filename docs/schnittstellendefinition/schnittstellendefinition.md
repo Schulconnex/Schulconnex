@@ -1,3 +1,7 @@
+---
+tags:
+- Verbindlich
+---
 # Schnittstellendefinition
 
 ## Allgemeine Festlegungen
@@ -17,8 +21,8 @@ verarbeiten soll. Diese URL-Parameter werden an die URL angehängt.
 
 Per `POST` können große Datenmengen zum Webserver gesendet werden. Dabei werden
 die Parameter nicht in die URL, sondern in den HTTP-Body geschrieben.
-`POST` wird oft bei Formularen benutzt, um mehrere Daten gleichzeitig zu senden
-beziehungsweise Entitäten zu erstellen.
+`POST` wird oft benutzt, um mehrere Daten gleichzeitig zu senden oder um
+Entitäten zu erstellen.
 
 #### PUT
 
@@ -36,24 +40,3 @@ Die erste Ziffer des Status-Codes gibt die Kategorie der HTTP-Response an:
 - `3xx`: Weiterleitung
 - `4xx`: Client-Fehler
 - `5xx`: Server-Fehler
-
-##	Erfolgreiche Ausführung
-
-### `200` (Erfolgreiche Ausführung)
-
-Die angeforderten Daten werden mit der HTTP-Response übermittelt, beispielsweise werden
-die Daten einer Person im JSON-Datenformat übergeben.
-
-### `201` (Erstellt)
-
-Eine neue Ressource wurde erstellt.
-
-## Daten unverändert
-
-### `304` (Not Modified)
-
-Die angeforderten Daten wurden seit dem letzten Zugriff nicht verändert und nicht erneut
-ausgeliefert. Dieser Rückgabewert erfolgt nur dann, wenn beim vorhergehenden Zugriff auf
-den Datensatz ein ETag geliefert wurde und beim erneuten Zugriff If-None-Match mit dem ETag
-im HTTP-Anfrage-Header benutzt wurde sowie der aktuelle ETag des Servers und der ETag
-im HTTP-Anfrage-Header übereinstimmen.

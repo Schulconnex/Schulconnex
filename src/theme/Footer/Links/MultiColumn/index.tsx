@@ -42,18 +42,18 @@ function Column({column}: {column: ColumnType}) {
 function KontaktColumn() {
   const {withBaseUrl} = useBaseUrlUtils();
   const sources = {
-    light: withBaseUrl('img/n21_transparent_blue.png'),
-    dark: withBaseUrl('img/n21_transparent_blue.png')
+    light: withBaseUrl('img/FWU-Logo-RGB-orange.png'),
+    dark: withBaseUrl('img/FWU-Logo-RGB-orange.png')
   };
   return (
     <div className="col footer__col">
       <Link
-        href="https:\\n-21.de"
+        href="https://fwu.de/"
         className={styles.footerLogoLink}
         target="_blank">
       <ThemedImage
         className={styles.kontaktLogo}
-        alt="Logo der Landesinitiative n-21"
+        alt="Logo der FWU"
         sources={sources}
       />
     </Link>

@@ -1,5 +1,7 @@
 ---
 title: Synchronisation Quellsystem
+tags:
+- Informativ
 ---
 
 # Ablaufbeschreibung: Synchronisation mit dem primären Quellsystem
@@ -17,7 +19,7 @@ erhält durch die Authentifizierung einen Access Token, mit dem die Endpunkte de
 aufgerufen werden können.
 
 Das Quellsystem muss die Zugangsdaten (Kennung, Passwort, ggf. noch URLs) sicher speichern können.
-Eine lokale Speicherung oder Zwischenspeicherung (Datei) ist nicht zulässig. Es muss sichergestellt
+Eine lokale Speicherung oder Zwischenspeicherung (z.B. in einer Datei) ist nicht zulässig. Es muss sichergestellt
 sein, dass nur berechtigte Nutzende Zugriff auf das Client Secret haben bzw. Funktionen aufrufen können,
 die das Client Secret verwenden. Falls die Funktion von einem lokalen Rechner ausgelöst wird, ist
 sicherzustellen, dass das Client Secret nicht von Unberechtigten ausgelesen werden kann.
@@ -66,7 +68,7 @@ oder eine Menü-Funktion.
 ### Schritt 2: Auswahl der zu synchronisierenden Gruppen
 
 Meistens ist es nicht sinnvoll, sämtliche Personeneinträge der Datenbank des Quellsystems
-ohne Vorauswahl zu synchronisieren. Daher sollte im 2. Schritt die Möglichkeit bestehen,
+ohne Vorauswahl zu synchronisieren. Daher sollte im zweiten Schritt die Möglichkeit bestehen,
 die zu synchronisierenden Gruppen auszuwählen. Es bietet sich ein modaler Dialog an, mit
 der Möglichkeit Schulklassen oder andere einschlägige Personengruppen, wie Lehrkräfte,
 auszuwählen.

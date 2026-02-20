@@ -9,6 +9,6 @@ properties:
     type: string
     example: Hannover
   ortsteil:
-    description: Teil eines Ortes, falls genauere Untergliederung gewünscht.
+    description: Teil eines Orts, falls genauere Untergliederung gewünscht.
     type: string
     example: Döhren

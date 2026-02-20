@@ -5,4 +5,5 @@ properties:
   ist_von_ktid:
     description: ID des Personenkontexts, aus dem heraus die Beziehung besteht.
     type: string
+    example: 553f984f-5fea-48c8-ae26-089420465803
     readOnly: true

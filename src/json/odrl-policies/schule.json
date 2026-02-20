@@ -1,0 +1,27 @@
+{
+    "uid": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "target": {
+        "uid": "urn:issuer:medium:123456789",
+        "partOf": "urn:issuer:catalogue"
+    },
+    "permission": [
+        {
+            "action": [
+                "execute"
+            ],
+            // highlight-start
+            "assignee": {
+                "partOf": {
+                    "refinement": [
+                        {
+                            "leftOperand": "urn:schulconnex:de:personenkontext:organisation:kennung",
+                            "operator": "eq",
+                            "rightOperand": "NI_12345"
+                        }
+                    ]
+                }
+            }
+            // highlight-end
+        }
+    ]
+}

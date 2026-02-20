@@ -1,18 +1,19 @@
 get:
   tags:
     - Personenkontexte
+  operationId: readPersonenkontextId
   security:
     - oAuthForServices: []
-  summary: Personenkontext zur angeforderten ID.
+  summary: Personenkontext zur angeforderten ID
   description: |
-    Ein READ ist nur mit HTTP-GET auf die API `/personenkontexte/{personendatensatz.personenkontext.id`
-    zum Abfragen eines Personenkontexts per ID zugelassen. Die Antwort-Nutzdaten
+    Ein READ zum Abfragen eines Personenkontexts per ID muss mit HTTP-GET auf die API `/personenkontexte/{personendatensatz.personenkontext.id`
+    erfolgen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein JSON-Objekt vom Datentyp Personendatensatz
     mit dem jeweiligen Personenkontext und der zugeordneten Person.
 
-    Siehe auch Datenmodell [`Personendatensatz`](../../../datenmodell/personendatensatz),
-    Datenmodell [`Person`](../../../datenmodell/person) und
-    Datenmodell [`Personenkontext`](../../../datenmodell/personenkontext).
+    Siehe auch Datenmodell [`Personendatensatz`](../../../datenmodell-qs/personendatensatz),
+    Datenmodell [`Person`](../../../datenmodell-qs/person) und
+    Datenmodell [`Personenkontext`](../../../datenmodell-qs/personenkontext).
 
     Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut
     `personendatensatz.personenkontext.organisation` mit dem Datentyp Organisation
@@ -22,7 +23,7 @@ get:
       name: id
       schema:
         type: string
-        format: uuid
+        example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   responses:
@@ -38,43 +39,44 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 put:
   tags:
     - Personenkontexte
+  operationId: updatePersonenkontextId
   security:
     - oAuthForServices: []
-  summary: Aktualisiert den Personenkontext der angegebenen ID.
+  summary: Aktualisiert den Personenkontext der angegebenen ID
   description: |
     Dieser Schnittstellenendpunkt aktualisiert den Personenkontext zur angegebenen {personendatensatz.personenkontexte.id}.
 
-    Ein UPDATE ist nur mit HTTP-PUT auf die API /v1/personenkontexte/{personendatensatz.personenkontext.id} zum Aktualisieren eines Personenkontexts per ID zugelassen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps Personenkontext. Das Datenmodell „Personenkontext“ ist in 5.5 beschrieben.
+    Ein UPDATE zum Aktualisieren eines Personenkontexts per ID muss mit HTTP-PUT auf die API /v1/personenkontexte/{personendatensatz.personenkontext.id} erfolgen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps Personenkontext. Das Datenmodell „Personenkontext“ ist in 5.5 beschrieben.
 
-    Es ist erforderlich, dass zur Aktualisierungsanfrage im bearbeiteten Personenkontext das Attribut „personenkontext.revision” des zugrunde liegenden Personenkontexts mitgeschickt wird. Der Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs „personenkontext.revision”, ob der Datensatz des Personenkontexts in der Zwischenzeit keine Änderung erfahren hat. Der Wert des Attributs kann von einem Quellsystem oder Dienst nicht verändert werden; dieser wird mit der Erstellung (Create) des Datensatzes Personenkontext und jeder erfolgreichen Änderung (Update) vom Schulconnex-Server neu generiert.
+    Es ist erforderlich, dass zur Aktualisierungsanfrage im bearbeiteten Personenkontext das Attribut „personenkontext.revision” des zugrunde liegenden Personenkontexts mitgeschickt wird. Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs „personenkontext.revision”, ob der Datensatz des Personenkontexts in der Zwischenzeit keine Änderung erfahren hat. Der Wert des Attributs kann von einem Quellsystem oder Dienst nicht verändert werden; dieser wird mit der Erstellung (Create) des Datensatzes Personenkontext und jeder erfolgreichen Änderung (Update) vom Schulconnex-Server neu generiert.
 
     Die folgende Tabelle listet die Attribute eines Personenkontexts auf, welche von einem Quellsystem oder Dienst nicht verändert werden können.
 
-    Attribut | In den Anfrage Nutzdaten erforderlich? | Bemerkung
+    Attribut | In den Anfrage-Nutzdaten erforderlich? | Bemerkung
     --- | --- | ---
     `id` | nein | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `mandant` | nein | ID des Mandanten, dem die Person zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieser Wert ist eine Referenz auf einen Mandanten.
@@ -96,7 +98,7 @@ put:
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren eines Personenkontexts wird diese
     Anforderung mit einer Repräsentation des Personenkontexts in den Antwort-Nutzdaten und
-    dem HTTP-Status-Code 200 quittiert.
+    dem HTTP-Statuscode 200 quittiert.
 
     Die Antwort-Nutzdaten umfassen standardmäßig für das Attribut
     `personendatensatz.personenkontext.organisation` mit dem Datentyp Organisation
@@ -113,7 +115,7 @@ put:
       name: id
       schema:
         type: string
-        format: uuid
+        example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   requestBody:
@@ -121,14 +123,14 @@ put:
     content:
       application/json:
         schema:
-          $ref: './components-qs-PersonenKontext-PUT-request.yaml'
+          $ref: './components-qs-Personenkontext-PUT-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-PersonenKontext.yaml'
+            $ref: './components-qs-Personenkontext.yaml'
     '400':
       description: |
         Bad Request
@@ -138,58 +140,59 @@ put:
         Erreichbarkeit. In diesem Fall liefert der Server den Fehlercode 400/19, wenn
         versucht wird ein Erreichbarkeiten-Array mit mehr als einem Eintrag zu erstellen.
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 delete:
   tags:
     - Personenkontexte
+  operationId: deletePersonenkontextId
   security:
     - oAuthForServices: []
-  summary: Löscht den Personenkontext zur angeforderten ID.
+  summary: Löscht den Personenkontext zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt löscht den Personenkontext zur angegebenen
     `personendatensatz.personenkontexte.id`.
 
-    Ein DELETE ist nur mit HTTP-DELETE auf die API `/personenkontexte/{personendatensatz.personenkontext.id}`
-    zum Löschen eines Personenkontexts per `personendatensatz.personenkontext.id` zugelassen.
+    Ein DELETE zum Löschen eines Personenkontexts per `personendatensatz.personenkontext.id`  muss mit HTTP-DELETE auf die API `/personenkontexte/{personendatensatz.personenkontext.id}`
+    erfolgen.
     Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps Personenkontext.
 
-    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell/personenkontext).
+    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell-qs/personenkontext).
 
     Es ist erforderlich, dass für eine Löschanfrage eines Personenkontexts das Attribut
     `personenkontext.revision` des zugrunde liegenden Personenkontexts mitgeschickt wird.
-    Der Anmeldeservice überprüft anhand des mitgeschickten Wertes des Attributs `personenkontext.revision`,
+    Der Anmeldeservice überprüft anhand des mitgeschickten Werts des Attributs `personenkontext.revision`,
     ob der Datensatz des Personenkontexts in der Zwischenzeit keine Änderung erfahren hat.
   parameters:
     - in: path
       name: id
       schema:
         type: string
-        format: uuid
+        example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
   requestBody:
@@ -221,29 +224,29 @@ delete:
         informiert werden und eventuell existierende Information bei den Diensten gelöscht
         werden können.
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

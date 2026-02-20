@@ -1,0 +1,24 @@
+{
+    "uid": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "target": {
+        "uid": "urn:issuer:medium:123456789",
+        "partOf": "urn:issuer:catalogue"
+    },
+    "permission": [
+        {
+            "action": [
+                "execute"
+            ],
+            "constraint": [
+                {
+                    // highlight-start
+                    "leftOperand": "spatial",
+                    "operator": "eq",
+                    "rightOperand": "https://www.wikidata.org/wiki/Q5956",
+                    "comment": "Landkreis Diepholz"
+                    // highlight-end
+                }
+            ]
+        }
+    ]
+}

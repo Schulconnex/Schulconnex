@@ -6,6 +6,7 @@ properties:
   referrer:
     description: ID der Gruppe im Quellsystem.
     type: string
+    example: grup_678
   bezeichnung:
     description: Bezeichnung der Gruppe.
     type: string
@@ -37,11 +38,12 @@ properties:
       $ref: './components-code-Jahrgangsstufe.yaml'
   faecher:
     type: array
+    example: [{kennung: "DE"},{bezeichnung: "Erste Hilfe"}]
     items:
-      type: object
-      properties:
-        kennung:
-          $ref: './components-code-Fächerkanon.yaml'
+     oneOf:
+        - $ref: './components-Gruppe-faecher-kennung.yaml'
+        - $ref: './components-Gruppe-faecher-bezeichnung.yaml'
+        - $ref: './components-Gruppe-faecher-kennung-bezeichnung.yaml'
   referenzgruppen:
     type: array
     items:
@@ -50,7 +52,7 @@ properties:
         - grupid
       properties:
         grupid:
-          description: ''
+          description: ID der Referenzgruppe.
           type: string
           example: e70663cb-65c4-4ad5-a9f1-7edbc3c36c4b
         rollen:

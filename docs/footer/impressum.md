@@ -1,19 +1,34 @@
 # Impressum
 
-Angaben gem. § 5 TMG (Telemediengesetz)
+FWU Institut für Film und Bild \
+in Wissenschaft und Unterricht gemeinnützige GmbH \
+Bavariafilmplatz 3 \
+82031 Grünwald
 
-Landesinitiative n-21: Schulen in Niedersachsen online e.V. \
-Schiffgraben 27, 30159 Hannover \
-Telefon: 0511/3536621-0 \
-Telefax: 0511/3536621-99 \
-E-Mail: info@n-21.de
+Telefon: 089/6497-1 \
+Telefax: 089/6497-300 \
+Internet: www.fwu.de \
+E-Mail: info@fwu.de
 
-Vertreten durch: Michael Sternberg, Geschäftsführer
+Handelsregister: Amtsgericht München B 2636 \
+Umsatzsteuer-Identifikationsnummer: DE 129521719 
 
-Registereintrag: Eintragung im Vereinsregister \
-Registergericht: Amtsgericht Hannover \
-Registernummer: VR 7905 \
-Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE226221908
+## Vertretungsberechtigte
+
+Geschäftsführer: Andreas Koschinsky (Direktor), Rüdiger Nill
+
+Sitzland ist die Bundesrepublik Deutschland.
+
+## Zuständige Aufsichtsbehörde
+
+Bayerische Landeszentrale für neue Medien (BLM) \
+Rechtsfähige Anstalt des öffentlichen Rechts \
+Heinrich-Lübke-Str. 27 \
+81737 München
+
+Telefon: +49 (0)89/6 38 08 – 0 \
+Fax: +49 (0)89/6 38 08 – 140 \
+E-Mail: info@blm.de
 
 ## Haftungsausschluss
 
@@ -23,7 +38,7 @@ Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Rich
 
 ### Haftung für Links
 
-Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
 
 ### Urheberrecht
 

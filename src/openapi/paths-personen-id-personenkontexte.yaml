@@ -2,25 +2,26 @@ get:
   tags:
     - Personen
     - Personenkontexte
+  operationId: readPersonIdPersonenkontexte
   security:
     - oAuthForServices: []
-  summary: Personenkontexte zur angeforderten ID.
+  summary: Personenkontexte zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt gibt die Personenkontexte zur angeforderten Person
     per ID `personendatensatz.person.id` zurück.
 
-    Ein READ kann nur mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
+    Ein READ muss mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Personenkontext,
     sofern Einträge (ggf. passend zu den optionalen Filtern) existieren.
 
-    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell/personenkontext).
+    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell-qs/personenkontext).
 
     Die Anfrage erfordert keine Nutzdaten (Request Payload).
 
     Die Schnittstelle ermöglicht das Verwenden von Filterparametern
     zur Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter
-    angegeben, so sind sie als mit „und“ verknüpft anzusehen. Die mehrfache
-    Nutzung des gleichen Filters in einer Anfrage ist nicht zulässig.
+    angegeben, so müssen sie als mit „und“ verknüpft angesehen werden. Die mehrfache
+    Nutzung des gleichen Filters in einer Anfrage darf nicht erfolgen.
     Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat
     eine leere Liste geliefert.
 
@@ -31,7 +32,8 @@ get:
     `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `rolle` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `personenkontext.rolle` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt die Codeliste [Rolle](../../../codelisten#rolle) zugrunde.
     `personenstatus` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „personenkontext.personenstatus” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filter-parameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt eine Codeliste [Personenstatus](../../../codelisten#personenstatus) zugrunde.
-    `sichtfreigabe` | String | erlaubt es Personen, abhängig davon aufzulisten, ob diese von einer anderen Organisation zum Lesen freigegeben wurden. Die möglichen Optionen sind `sichtfreigabe=ja`, um nur die durch externe Organisationen freigegebenen Personen beziehungsweise Personenkontexte aufzulisten, und `sichtfreigabe=nein`, um nur eigene Personen beziehungsweise Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren Personen, beziehungsweise Personenkontexte geliefert.
+    `sichtfreigabe` | String | Erlaubt es Personen, abhängig davon aufzulisten, ob diese von einer anderen Organisation zum Lesen freigegeben wurden. Die möglichen Optionen sind `sichtfreigabe=ja`, um nur die durch externe Organisationen freigegebenen Personen beziehungsweise Personenkontexte aufzulisten, und `sichtfreigabe=nein`, um nur eigene Personen beziehungsweise Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren Personen, beziehungsweise Personenkontexte geliefert.
+    `hat_als_beziehungen` | String | Erlaubt es, wenn als Wert `ja` angegeben wird, in Personenkontexten auch `hat_als` Beziehungen mit auszugeben. Diese Ausgabe ist nur eine Vereinfachung beim Auslesen. Das Attribut `beziehungen` ist nicht Teil des Datenmodels [`Personenkontext`](../../../datenmodell-qs/personenkontext) und kann auch nicht mittels einer UPDATE Funktion auf [`Personenkontext`](../../../datenmodell-qs/personenkontext) gesetzt werden.
 
     Die Organisation wurde beim Erstellen eines Personenkontexts vom Schulconnex-Server
     aus dem `access_token` übernommen und per `personenkontext.organisation.id` referenziert.
@@ -42,7 +44,7 @@ get:
       name: id
       schema:
         type: string
-        format: uuid
+        example: a6e1a860-8d44-4b2b-aef7-aa2c8bf5beb5
       required: true
       description: Der Pfad-Parameter bezieht sich auf die vom Quellsystem vergebene ID der Person.
     - in: query
@@ -61,6 +63,10 @@ get:
       name: sichtfreigabe
       schema:
         type: string
+    - in: query
+      name: hat_als_beziehungen
+      schema:
+        type: string        
   responses:
     '200':
       description: OK
@@ -69,48 +75,49 @@ get:
           schema:
             type: array
             items:
-              $ref: './components-qs-PersonenKontext.yaml'
+              $ref: './components-qs-Personenkontext-GET-request.yaml'
     '400':
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 post:
   tags:
     - Personen
     - Personenkontexte
+  operationId: createPersonIdPersonenkontext
   security:
     - oAuthForServices: []
-  summary: Erstellen eines Personenkontexts zu einem bestimmten Personendatensatz.
+  summary: Erstellen eines Personenkontexts zu einem bestimmten Personendatensatz
   description: |
     Dieser Schnittstellenendpunkt erstellt einen Personenkontext zur angegebenen Person
     per ID `personendatensatz.person.id`.
 
-    Ein CREATE ist nur mit HTTP-POST auf die API `/personen/{personendatensatz.person.id}/personenkontexte`
-    zum Erstellen von Personenkontexten zu einem Personendatensatz zugelassen. Die
+    Ein CREATE zum Erstellen von Personenkontexten zu einem Personendatensatz muss mit HTTP-POST auf die API `/personen/{personendatensatz.person.id}/personenkontexte`
+    erfolgen. Die
     Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps Personenkontext.
 
-    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell/personenkontext).
+    Siehe auch Datenmodell [`Personenkontext`](../../../datenmodell-qs/personenkontext).
 
     Beim Erstellen eines Personenkontexts ist der Default-Status des Attributes `personenstatus` der Wert `Aktiv`.
 
@@ -121,7 +128,7 @@ post:
     Die folgende Tabelle listet die Attribute eines Personenkontext (`personendatensatz.personenkontexte`),
     welche von einem Quellsystem oder Dienst nicht verändert werden können.
 
-    Attribut | In den Anfrage Nutzdaten erforderlich? | Bemerkung
+    Attribut | In den Anfrage-Nutzdaten erforderlich? | Bemerkung
     --- | --- | ---
     `id` | nein | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `referrer` | nein | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und ist eindeutig.
@@ -132,7 +139,7 @@ post:
 
     Bei einer erfolgreichen Anforderung zum Erstellen eines Personenkontexts zu einem Personendatensatz
     wird diese Anforderung mit einer Repräsentation des Personenkontexts in den Antwort-Nutzdaten
-    und dem HTTP-Status-Code 201 quittiert.
+    und dem HTTP-Statuscode 201 quittiert.
 
     Die Organisation wurde beim Erstellen eines Personenkontexts vom Schulconnex-Server
     aus dem `access_token` übernommen und per `personenkontext.organisation.id` referenziert.
@@ -143,7 +150,7 @@ post:
       name: id
       schema:
         type: string
-        format: uuid
+        example: a6e1a860-8d44-4b2b-aef7-aa2c8bf5beb5
       required: true
       description: Der Pfad-Parameter bezieht sich auf die vom Quellsystem vergebene ID der Person.
   requestBody:
@@ -151,14 +158,14 @@ post:
     content:
       application/json:
         schema:
-          $ref: './components-qs-PersonenKontext-POST-request.yaml'
+          $ref: './components-qs-Personenkontext-POST-request.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-PersonenKontext.yaml'
+            $ref: './components-qs-Personenkontext.yaml'
     '400':
       description: |
         Bad Request
@@ -168,29 +175,29 @@ post:
         Erreichbarkeit. In diesem Fall liefert der Server den Fehlercode 400/19, wenn
         versucht wird ein Erreichbarkeiten-Array mit mehr als einem Eintrag zu erstellen.
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

@@ -1,4 +1,4 @@
 type: string
-description: Ende des Gültigkeitszeitraumes der Gruppe.
+description: Ende des Gültigkeitszeitraums der Gruppe.
 format: date
 example: "2023-01-30"

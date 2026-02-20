@@ -1,0 +1,30 @@
+openapi: '3.0.2'
+info:
+  title: Schulconnex
+  version: '1.7'
+  description: |
+    Beschreibung der Schnittstellen von Schulconnex für Nuztungsrechte
+  contact:
+    name: 'FWU Institut für Film und Bild in Wissenschaft und Unterricht gemeinnützige GmbH'
+    url: https://www.fwu.de/
+  license:
+    name: Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+    url: https://creativecommons.org/licenses/by-nd/4.0/legalcode
+servers:
+  - url: https://schulconnex.test/v1
+    description: Lokaler Testserver
+security:
+  - oAuthForServices: []
+  - oAuthForUser: []
+# tags:
+#   - name: Organisationen
+#     description: Schulen oder sonstige relevante Organisationen
+paths:
+  /policies-info:
+    $ref: './paths-policies-info.yaml'
+components:
+  securitySchemes:
+    oAuthForServices:
+      $ref: './securitySchema-oAuthForServices.yaml'
+    oAuthForUser:
+      $ref: './securitySchema-oAuthForUser.yaml'

@@ -1,0 +1,48 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/odrl.jsonld"
+    ],
+    "@type": "Agreement",
+    "uid": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+    "target": {
+        "uid": "urn:issuer:medium:123456789",
+        "partOf": "urn:issuer:catalogue"
+    },
+    "permission": [
+        {
+            "action": [
+                "execute"
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "dateTime",
+                    "operator": "gteq",
+                    "rightOperand": "2023-08-01T00:00+0200"
+                },
+                {
+                    "leftOperand": "dateTime",
+                    "operator": "lt",
+                    "rightOperand": "2024-08-01T00:00+0200"
+                }
+            ],
+            "assignee": {
+                "partOf": {
+                    "refinement": [
+                        {
+                            "leftOperand": "urn:schulconnex:de:personenkontext:organisation:kennung",
+                            "operator": "eq",
+                            "rightOperand": "NI_12345"
+                        }
+                    ]
+                },
+                "refinement": [
+                    {
+                        "leftOperand": "urn:schulconnex:de:personenkontext:rolle",
+                        "operator": "eq",
+                        "rightOperand": "lehr"
+                    }
+                ]
+            }
+        }
+    ]
+}

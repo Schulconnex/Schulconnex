@@ -6,11 +6,10 @@ properties:
   referrer:
     description: ID der Gruppenzugehörigkeit im Quellsystem.
     type: string
-    example: c85af1ac-ddaa-4a77-ba74-1836682bacac
+    example: grupz_2343_eng
   ktid:
     description: ID des Personenkontexts, welcher der Gruppe zugeordnet ist.
     type: string
-    format: uuid
     example: 23643c9e-956a-4baa-af4e-813e0a7efa4b
   rollen:
     description: ''

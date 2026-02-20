@@ -1,9 +1,10 @@
 get:
   tags:
     - Organisationen
+  operationId: readOrganisationIdOrganisationsbeziehungen
   security:
     - oAuthForServices: []
-  summary: Auflistung von Organisationenbeziehungen.
+  summary: Auflistung von Organisationsbeziehungen
   description: |
     Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` erlaubt das
     Lesen von zu einer Organisation gehörenden Organisationsbeziehungen.
@@ -20,12 +21,12 @@ get:
     Dieser Schnittstellenendpunkt gibt die Organisationsbeziehungen zur angegebenen
     Organisations-ID zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/organisationen/{id}/organisationsbeziehungen`
-    zum Abfragen der Organisationsbeziehungen per Organisations-ID zugelassen. Die
+    Ein READ zum Abfragen der Organisationsbeziehungen per Organisations-ID muss mit HTTP-GET auf die API `/organisationen/{id}/organisationsbeziehungen`
+    erfolgen. Die
     Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array
     des Datentyps Organisationsbeziehungen.
 
-    Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell/organisationsbeziehung).
+    Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell-qs/organisationsbeziehung).
 
     Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` ermöglicht das
     Verwenden von Filterparametern zur Präzisierung der Anfrage bei HTTP-GET.
@@ -43,7 +44,7 @@ get:
       required: true
       schema:
         type: string
-        format: uuid
+        example: 9b3f36ad-9d15-49f9-9660-6cf9746ba446
       description: Der Pfad-Parameter bezieht sich auf die ID der Organisation.
     - in: query
       name: hat_als_organisationsbeziehungen
@@ -70,24 +71,24 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

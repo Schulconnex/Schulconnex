@@ -1,5 +1,6 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
-import {default as itemsQuellsysteme} from './docs/generated/openapi/quellsysteme/sidebar'
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import { default as itemsDienste } from './docs/generated/openapi/dienste/sidebar'
+import { default as itemsQuellsysteme } from './docs/generated/openapi/quellsysteme/sidebar'
 
 /**
  * Creating a sidebar enables you to:
@@ -17,71 +18,23 @@ const sidebars: SidebarsConfig = {
 
   // But you can create a sidebar manually
   specSidebar: [
-    'stand-der-bearbeitung',
-    'vorbemerkung',
     'einleitung',
-    'allgemeines',
-    {
+      {
       type: 'category',
-      label: 'Datenmodell',
-      link: {
-        type: 'doc',
-        id: 'datenmodell/datenmodell',
-      },
+      label: 'Allgemeines',
       items: [
-        'datenmodell/datumsformat',
-        'datenmodell/organisation',
-        'datenmodell/person',
-        'datenmodell/personenkontext',
-        'datenmodell/personendatensatz',
-        'datenmodell/gruppe',
-        'datenmodell/gruppenzugehörigkeit',
-        'datenmodell/sichtfreigabe',
-        'datenmodell/gruppendatensatz',
-        'datenmodell/lernperiode',
-        'datenmodell/beziehung',
-        'datenmodell/anschrift',
-        'datenmodell/organisationsbeziehung',
-      ],
+        'allgemeines-kernanwendungsfälle',
+        'allgemeines-datenschutz',
+      ]
     },
     {
       type: 'category',
-      label: 'Angepasstes Datenmodell',
-      link: {
-        type: 'doc',
-        id: 'angepasstes-datenmodell/angepasstes-datenmodell',
-      },
+      label: 'Erweiterungen',
       items: [
-        'angepasstes-datenmodell/person',
-        'angepasstes-datenmodell/personenkontext',
-        'angepasstes-datenmodell/organisation',
-        'angepasstes-datenmodell/gruppe',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Schnittstellendefinition',
-      link: {
-        type: 'doc',
-        id: 'schnittstellendefinition/schnittstellendefinition',
-      },
-      items: [
-        'schnittstellendefinition/fehlerbehandlung',
-        'schnittstellendefinition/validierung',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Schnittstellen für Dienste und Quellsysteme',
-      link: {
-        type: 'doc',
-        id: 'schnittstellen/schnittstellen',
-      },
-      items: [
-        'schnittstellen/autorisierung-dienste',
-        'schnittstellen/autorisierung-qs',
-        'schnittstellen/oidc-claims',
-      ],
+        'schnittstellen/vendor-extensions',
+        'schnittstellen/vendor-extensions-best-practices',
+        'schnittstellen/vendor-endpoints',
+      ]
     },
     'codelisten',
     'glossar',
@@ -92,10 +45,221 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'english-api-notes/english-api-notes',
       },
+      items: ['english-api-notes/data-models', 'english-api-notes/code-lists'],
+    },
+    'versionshistorie',
+  ],
+
+  spezDiensteSidebar: [
+    {
+      type: 'html',
+      value: '<span style="font-weight: 600;">Dienste-API</span>',
+      defaultStyle: true,
+    },
+    {
+      type: 'doc',
+      id: 'allgemeines-dienste',
+      label: 'Allgemeines',
+    },
+    {
+      type: 'category',
+      label: 'Datenmodell',
+      link: {
+        type: 'doc',
+        id: 'datenmodell-dienste/datenmodell',
+      },
       items: [
-        'english-api-notes/data-models',
-        'english-api-notes/code-lists',
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/anschrift',
+          label: 'Anschrift',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/beziehung',
+          label: 'Beziehung',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/datumsformat',
+          label: 'Datumsformat',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/geburt',
+          label: 'Geburt',
+        },
+        {
+            type: 'doc',
+            id: 'datenmodell-dienste/gruppe',
+            label: 'Gruppe'
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/gruppendatensatz',
+          label: 'Gruppendatensatz',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/gruppenzugehörigkeit',
+          label: 'Gruppenzugehörigkeit',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/laufzeit',
+          label: 'Laufzeit',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/lernperiode',
+          label: 'Lernperiode',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/name',
+          label: 'Name',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/organisation',
+          label: 'Organisation',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/organisationsbeziehung',
+          label: 'Organisationsbeziehung',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/person',
+          label: 'Person'
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/personendatensatz',
+          label: 'Personendatensatz',
+        },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/personenkontext',
+          label: 'Personenkontext',
+        },
       ],
+    },
+    {
+      type: 'category',
+      label: 'Nutzung der REST-API',
+      link: {
+        type: 'doc',
+        id: 'schnittstellen/schnittstellen-dienste',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/schnittstellendefinition-dienste',
+          label: 'Schnittstellendefinition'
+        },
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/http-statuscodes-dienste',
+          label: 'HTTP-Statuscodes'
+        }
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Autorisierung und Authentifizierung',
+      link: {
+        type: 'doc',
+        id: 'schnittstellen/autorisierung-dienste',
+      },
+      items: [
+        'schnittstellen/oidc-claims',
+      ],
+    },
+        {
+      type: 'category',
+      label: 'Praxisleitfaden für die Implementierung',
+      link: {
+        type: 'doc',
+        id: 'praxisleitfaden/praxisleitfaden-dienste',
+      },
+      items: [
+        'praxisleitfaden/ablauf-löschen-dienste',
+      ],
+    },
+
+  ],
+
+  spezQuellsystemeSidebar: [
+    {
+      type: 'html',
+      value: '<span style="font-weight: 600;">Quellsysteme-API</span>',
+      defaultStyle: true,
+    },
+    {
+      type: 'doc',
+      id: 'allgemeines-qs',
+      label: 'Allgemeines',
+    },
+    {
+      type: 'category',
+      label: 'Datenmodell',
+      link: {
+        type: 'doc',
+        id: 'datenmodell-qs/datenmodell',
+      },
+      items: [
+        'datenmodell-qs/anschrift',
+        'datenmodell-qs/beziehung',
+        'datenmodell-qs/datumsformat',
+        'datenmodell-qs/erreichbarkeit',
+        'datenmodell-qs/fach',
+        'datenmodell-qs/geburt',
+        'datenmodell-qs/gruppe',
+        'datenmodell-qs/gruppendatensatz',
+        'datenmodell-qs/gruppenzugehörigkeit',
+        'datenmodell-qs/laufzeit',
+        'datenmodell-qs/lernperiode',
+        'datenmodell-qs/name',
+        'datenmodell-qs/organisation',
+        'datenmodell-qs/organisationsbeziehung',
+        'datenmodell-qs/person',
+        'datenmodell-qs/personendatensatz',
+        'datenmodell-qs/personenkontext',
+        'datenmodell-qs/referenzgruppe',
+        'datenmodell-qs/sichtfreigabe',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Nutzung der REST-API',
+      link: {
+        type: 'doc',
+        id: 'schnittstellen/schnittstellen-qs',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/schnittstellendefinition-qs',
+          label: 'Schnittstellendefinition'
+        },
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/http-statuscodes-qs',
+          label: 'HTTP-Statuscodes'
+        },
+        {
+          type: 'doc',
+          id: 'schnittstellendefinition/validierung-qs',
+          label: 'Validierung'
+        }
+      ],
+    },
+    {
+      type: 'doc',
+      label: 'Autorisierung und Authentifizierung',
+      id: 'schnittstellen/autorisierung-qs',
     },
     {
       type: 'category',
@@ -113,6 +277,77 @@ const sidebars: SidebarsConfig = {
     },
   ],
 
+  spezPoliciesSidebar: [
+    {
+      type: 'html',
+      value: '<span style="font-weight: 600;">Nutzungsrechte-API</span>',
+      defaultStyle: true,
+    },
+    {
+      type: 'doc',
+      id: 'lizenzerweiterung/einleitung',
+      label: 'Allgemeines',
+    },
+    // {
+    //   type: 'category',
+    //   label: 'Allgemeines',
+    //   link: {
+    //     type: 'doc',
+    //     id: 'lizenzerweiterung/einleitung',
+    //   },
+    //   items: [
+    //     'lizenzerweiterung/allgemeines/motivation',
+    //     'lizenzerweiterung/allgemeines/einfuehrung-zu-odrl',
+    //     'lizenzerweiterung/allgemeines/mapping-zu-spezifikationen',
+    //     'lizenzerweiterung/allgemeines/nutzung-von-identifikatoren',
+    //   ]
+    // },
+    // {
+    //   type: 'category',
+    //   label: 'Datenmodell',
+    //   items: [
+    //     'lizenzerweiterung/datenmodell/nutzungsrecht',
+    //     'lizenzerweiterung/datenmodell/providerfehlermeldung',
+    //     'lizenzerweiterung/datenmodell/zugriffsinfo',
+    //   ],
+    // },
+    {
+      type: 'category',
+      label: 'Nutzung der REST-API',
+      link: {
+        type: 'doc',
+        id: 'lizenzerweiterung/schnittstellen/schnittstellen',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'lizenzerweiterung/schnittstellendefinition/schnittstellendefinition',
+          label: 'Schnittstellendefinition'
+        },
+        {
+          type: 'doc',
+          id: 'lizenzerweiterung/schnittstellendefinition/http-statuscodes',
+          label: 'HTTP-Statuscodes'
+        },
+        // {
+        //   type: 'doc',
+        //   id: 'lizenzerweiterung/schnittstellendefinition/custom-header',
+        //   label: 'Teilweise Fehlerhafte Verarbeitung'
+        // }
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Praxisleitfaden',
+      items: [
+        // 'lizenzerweiterung/praxisleitfaden/ablauf-abruf-eines-digitalen-inhalts',
+        // 'lizenzerweiterung/praxisleitfaden/semantik',
+        'lizenzerweiterung/praxisleitfaden/odrl-beispiele',
+        'lizenzerweiterung/praxisleitfaden/medium-aufrufen',
+      ],
+    },
+  ],
+
   apiDiensteSidebarOpenAPIDocs: [
     {
       type: 'category',
@@ -122,8 +357,36 @@ const sidebars: SidebarsConfig = {
         id: 'generated/openapi/dienste/schulconnex',
       },
       items: [
-        'generated/openapi/dienste/informationen-der-angemeldeten-person',
-        'generated/openapi/dienste/liste-bekannter-personenkontexte',
+        {
+          type: 'category',
+          label: 'Organisationen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/dienste/read-organisationen-info',
+              label: '/organisationen-info',
+              className: 'api-method get',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Personen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/dienste/read-person-info',
+              label: '/person-info',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/dienste/read-personen-info',
+              label: '/personen-info',
+              className: 'api-method get',
+            },
+          ],
+        },
       ],
     },
   ],
@@ -136,9 +399,294 @@ const sidebars: SidebarsConfig = {
         type: 'doc',
         id: 'generated/openapi/quellsysteme/schulconnex',
       },
-      items: itemsQuellsysteme.splice(1),
+      items: [
+        {
+          type: 'category',
+          label: 'Organisationen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-organisationen',
+              label: '/organisationen',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-organisation-id',
+              label: '/organisationen/\u200B:id',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-organisation-id-organisationsbeziehungen',
+              label: '/organisationen/\u200B:id/\u200Borganisationsbeziehungen',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-organisation-info',
+              label: '/organisation-info',
+              className: 'api-method get',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Personen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-personen',
+              label: '/personen',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-person',
+              label: '/personen',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-person-id',
+              label: '/personen/\u200B:id',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/update-person-id',
+              label: '/personen/\u200B:id',
+              className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/delete-person-id',
+              label: '/personen/\u200B:id',
+              className: 'api-method delete',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-person-id-personenkontexte',
+              label: '/personen/\u200B:id/\u200Bpersonenkontexte',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-person-id-personenkontext',
+              label: '/personen/\u200B:id/\u200Bpersonenkontexte',
+              className: 'api-method post',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Personenkontexte',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-person-id-personenkontexte',
+              label: '/personen/\u200B:id/\u200Bpersonenkontexte',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-person-id-personenkontext',
+              label: '/personen/\u200B:id/\u200Bpersonenkontexte',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-personenkontexte',
+              label: '/personenkontexte',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-personenkontext-id',
+              label: '/personenkontexte/\u200B:id',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/update-personenkontext-id',
+              label: '/personenkontexte/\u200B:id',
+              className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/delete-personenkontext-id',
+              label: '/personenkontexte/\u200B:id',
+              className: 'api-method delete',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-personenkontext-id-beziehung',
+              label: '/personenkontexte/\u200B:id/\u200Bbeziehungen',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-personenkontext-id-beziehungen',
+              label: '/personenkontexte/\u200B:id/\u200Bbeziehungen',
+              className: 'api-method get',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Beziehungen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-personenkontext-id-beziehung',
+              label: '/personenkontexte/\u200B:id/\u200Bbeziehungen',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-personenkontext-id-beziehungen',
+              label: '/personenkontexte/\u200B:id/\u200Bbeziehungen',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-beziehung-id',
+              label: '/beziehungen/\u200B:id',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/delete-beziehung-id',
+              label: '/beziehungen/\u200B:id',
+              className: 'api-method delete',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Gruppen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-gruppe',
+              label: '/gruppen',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-gruppendatensaetze',
+              label: '/gruppen',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-gruppe-id',
+              label: '/gruppen/\u200B:id',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/update-gruppe-id',
+              label: '/gruppen/\u200B:id',
+              className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/delete-gruppe-id',
+              label: '/gruppen/\u200B:id',
+              className: 'api-method delete',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Gruppenzugehörigkeiten',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-gruppe-id-gruppenzugehoerigkeit',
+              label: '/gruppen/\u200B:id/\u200Bgruppenzugehoerigkeiten',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-gruppe-id-gruppenzugehoerigkeiten',
+              label: '/gruppen/\u200B:id/\u200Bgruppenzugehoerigkeiten',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-gruppenzugehoerigkeiten',
+              label: '/gruppenzugehoerigkeiten',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-gruppenzugehoerigkeit-id',
+              label: '/gruppenzugehoerigkeiten/\u200B:id',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/update-gruppenzugehoerigkeit-id',
+              label: '/gruppenzugehoerigkeiten/\u200B:id',
+              className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/delete-gruppenzugehoerigkeit-id',
+              label: '/gruppenzugehoerigkeiten/\u200B:id',
+              className: 'api-method delete',
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Sichtfreigaben',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-personenkontext-id-sichtfreigabe',
+              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-personenkontext-id-sichtfreigaben',
+              label: '/personenkontexte/\u200B:id/\u200Bsichtfreigaben',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/delete-sichtfreigabe-id',
+              label: '/sichtfreigaben/\u200B:id',
+              className: 'api-method delete',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+
+  apiPoliciesSidebarOpenAPIDocs: [
+    {
+      type: 'category',
+      label: 'API Nutzungsrechte',
+      link: {
+        type: 'doc',
+        id: 'generated/openapi/policies/schulconnex',
+      },
+      items: [
+        {
+          type: "doc",
+          id: "generated/openapi/policies/read-policies-info",
+          label: "/policies-info",
+          className: "api-method get",
+        },
+      ],
     },
   ],
 };
+
 
 export default sidebars;

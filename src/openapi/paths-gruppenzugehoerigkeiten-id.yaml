@@ -1,18 +1,19 @@
 get:
   tags:
     - Gruppenzugehörigkeiten
+  operationId: readGruppenzugehoerigkeitId
   security:
     - oAuthForServices: []
-  summary: Gruppenzugehörigkeit zur angeforderten ID.
+  summary: Gruppenzugehörigkeit zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt gibt die Gruppenzugehörigkeit zur angegebenen
     `gruppenzugehoerigkeit.id` zurück.
 
-    Ein READ ist nur mit HTTP-GET auf die API `/gruppenzugehoerigkeiten/{gruppenzugehoerigkeit.id}`
-    zum Abfragen einer Gruppenzugehörigkeit per ID zugelassen. Die Antwort-Nutzdaten
+    Ein READ zum Abfragen einer Gruppenzugehörigkeit per ID muss mit HTTP-GET auf die API `/gruppenzugehoerigkeiten/{gruppenzugehoerigkeit.id}`
+    erfolgen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein JSON-Objekt des Datentyps Gruppendatensatz.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell/gruppendatensatz).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell-qs/gruppendatensatz).
 
     Aus Konsistenzgründen mit dem Datenmodell Gruppendatensatz wird das Attribut
     `gruppenzugehoerigkeiten` als Array geliefert, auch wenn aufgrund des Zugriffs über
@@ -22,7 +23,7 @@ get:
       name: id
       schema:
         type: string
-        format: uuid
+        example: grupz_2343_eng
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
   responses:
@@ -36,46 +37,47 @@ get:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 put:
   tags:
     - Gruppenzugehörigkeiten
+  operationId: updateGruppenzugehoerigkeitId
   security:
     - oAuthForServices: []
-  summary: Aktualisiert die Gruppenzugehörigkeit der angegebenen ID.
+  summary: Aktualisiert die Gruppenzugehörigkeit der angegebenen ID
   description: |
     Dieser Schnittstellenendpunkt aktualisiert die Gruppenzugehörigkeit zur angegebenen
     `gruppenzugehoerigkeit.id`.
 
-    Ein UPDATE ist nur mit HTTP-PUT auf die API `/gruppenzugehoerigkeiten/{gruppenzugehoerigkeit.id}`
-    zum Aktualisieren einer Gruppenzugehörigkeit per ID zugelassen. Die Anfrage-Nutzdaten
+    Ein UPDATE zum Aktualisieren einer Gruppenzugehörigkeit per ID muss mit HTTP-PUT auf die API `/gruppenzugehoerigkeiten/{gruppenzugehoerigkeit.id}`
+    erfolgen. Die Anfrage-Nutzdaten
     (Request Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeit.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell/gruppenzugehörigkeit).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
 
     Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Gruppenzugehörigkeit
     das Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
-    Der Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs `revision`,
+    Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs `revision`,
     ob der Datensatz der Gruppenzugehörigkeit in der Zwischenzeit keine Änderung erfahren
     hat. Der Wert des Attributs kann von einem Quellsystem oder Dienst nicht verändert
     werden; dieser wird mit der Erstellung (Create) des Datensatzes Gruppenzugehörigkeit
@@ -99,13 +101,13 @@ put:
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren einer Gruppenzugehörigkeit
     wird diese Anforderung mit einer Repräsentation der Gruppenzugehörigkeit in den
-    Antwort-Nutzdaten und dem HTTP-Status-Code 200 quittiert.
+    Antwort-Nutzdaten und dem HTTP-Statuscode 200 quittiert.
   parameters:
     - in: path
       name: id
       schema:
         type: string
-        format: uuid
+        example: grupz_2343_eng
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
   requestBody:
@@ -125,63 +127,64 @@ put:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 delete:
   tags:
     - Gruppenzugehörigkeiten
+  operationId: deleteGruppenzugehoerigkeitId
   security:
     - oAuthForServices: []
-  summary: Löscht die Gruppenzugehörigkeit zur angeforderten ID.
+  summary: Löscht die Gruppenzugehörigkeit zur angeforderten ID
   description: |
     Dieser Schnittstellenendpunkt löscht die Gruppenzugehörigkeit zur angegebenen
     `gruppenzugehoerigkeit.id`.
 
-    Ein DELETE ist nur mit HTTP-DELETE auf die API `/gruppenzugehoerigkeit/{gruppenzugehoerigkeit.id}`
-    zum Löschen einer Gruppe per `gruppe.id` zugelassen. Die Anfrage-Nutzdaten (Request
+    Ein DELETE zum Löschen einer Gruppe per `gruppe.id` muss mit HTTP-DELETE auf die API `/gruppenzugehoerigkeit/{gruppenzugehoerigkeit.id}`
+    erfolgen. Die Anfrage-Nutzdaten (Request
     Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeit.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell/gruppenzugehörigkeit).
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
 
     Es ist erforderlich, dass für eine Löschanfrage einer Gruppenzugehörigkeit das
     Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
-    Der Schulconnex-Server überprüft anhand des mitgeschickten Wertes des Attributs
+    Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs
     `revision`, ob der Datensatz des Personenkontext in der Zwischenzeit keine Änderung
     erfahren hat.
 
     Bei einer erfolgreichen Ausführung der Löschanfrage wird es keine Antwort-Nutzdaten
     (Response Payload) geben. Eine erfolgreiche Löschanforderung einer Gruppenzugehörigkeit
-    per ID wird mit dem HTTP-Status-Code 204 quittiert.
+    per ID wird mit dem HTTP-Statuscode 204 quittiert.
   parameters:
     - in: path
       name: id
       schema:
         type: string
-        format: uuid
+        example: grupz_2343_eng
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
   requestBody:
@@ -206,29 +209,29 @@ delete:
       description: |
         Bad Request
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '401':
       description: |
         Unauthorized
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '403':
       description: |
         Forbidden
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '404':
       description: |
         Not found
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '405':
       description: |
         Method not allowed
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
     '409':
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/fehlerbehandlung)
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

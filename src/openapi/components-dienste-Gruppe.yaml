@@ -7,12 +7,10 @@ properties:
   id:
     description: ID der Gruppe.
     type: string
-    format: uuid
     example: b3201d00-f21f-4986-a39d-02a09c8da26c
   orgid:
     description: ID der Organisation.
     type: string
-    format: uuid
     example: 9b3f36ad-9d15-49f9-9660-6cf9746ba446
   bezeichnung:
     description: Bezeichnung der Gruppe.
@@ -45,11 +43,12 @@ properties:
       $ref: './components-code-Jahrgangsstufe.yaml'
   faecher:
     type: array
+    example: [{kennung: "DE"},{bezeichnung: "Erste Hilfe"}]
     items:
-      type: object
-      properties:
-        kennung:
-          $ref: './components-code-Fächerkanon.yaml'
+     oneOf:
+      - $ref: './components-Gruppe-faecher-kennung.yaml'
+      - $ref: './components-Gruppe-faecher-bezeichnung.yaml'
+      - $ref: './components-Gruppe-faecher-kennung-bezeichnung.yaml'
   laufzeit:
     oneOf:
       - $ref: './components-Laufzeit-von-bis.yaml'
@@ -60,5 +59,4 @@ properties:
       - $ref: './components-Laufzeit-vonlernperiode.yaml'
       - $ref: './components-Laufzeit-bis.yaml'
       - $ref: './components-Laufzeit-bislernperiode.yaml'
-  sichtfreigabe:
-    $ref: './components-code-Boolean.yaml'
+

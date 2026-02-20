@@ -1,5 +1,7 @@
 ---
 title: Autorisierung Quellsysteme
+tags: 
+- Informativ
 ---
 
 # API-Autorisierung für Quellsysteme

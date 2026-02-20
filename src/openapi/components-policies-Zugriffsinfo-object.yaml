@@ -1,0 +1,7 @@
+type: object
+properties:
+  property name*:
+    type: any
+    description: Beliebige Anzahl und Typ von weiteren Properties mit beliebigem Namen
+minProperties: 1
+additionalProperties: true

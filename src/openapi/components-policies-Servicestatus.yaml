@@ -1,0 +1,20 @@
+title: Service-Status
+type: object
+required:
+  - service
+  - status
+properties:
+  service:
+    description: Der Names des Backend-Services
+    type: string
+    example: Beispiel-Mediendienst
+  status:
+    description: Der Http-Statuscode des Backend-Services für den aktuellen Aufruf
+    type: int
+    example: 500
+  error:
+    description:
+    properties:
+      message:
+        type: string
+        example: Time-out
