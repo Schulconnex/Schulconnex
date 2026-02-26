@@ -30,6 +30,12 @@ Die Taxonomie stellt fachliche Begriffe in einer hierarchischen Struktur bereit,
 
 ## 3. Constraints: Left-hand- und Right-hand-Operanden
 
+Für den Use-Case Nutzungsrecht sind insbesondere folgende Operanden relevant:
+
+- Personenkontext: `urn:schulconnex:de:personenkontext:id`, `urn:schulconnex:de:personenkontext:rolle`, `urn:schulconnex:de:personenkontext:organisation:kennung`
+- Zeitliche Gültigkeit: `dateTime`
+- Optional für Hierarchiebezug: organisations- oder gruppenbezogene Operanden aus der Registry
+
 ### 3.1 Left-hand-Operanden
 
 | Bezeichnung | Beschreibung |
@@ -48,8 +54,45 @@ Die Taxonomie stellt fachliche Begriffe in einer hierarchischen Struktur bereit,
 | `https://www.wikidata.org/wiki/Q5956` | Beispielwert für räumliche Einschränkung |
 | `school-001` | Beispielhafter Organisations-Identifier |
 | `teacher` | Beispielhafter Rollenwert |
+| `active` | Beispielhafter Lizenzstatus |
+| `mfa` | Beispielhafter Access-Control-Level |
 
-## 4. Registry qualifizierter Namen (QNames)
+## 4. Profileigene Erweiterungen (`ex:` / `scx:`)
+
+Die folgenden Erweiterungen werden im Application Profile verwendet und müssen namespaced modelliert werden.
+
+### 4.1 `ex:`-Operanden und Properties
+
+| QName | Typischer Einsatz |
+| --- | --- |
+| `ex:extendsPolicy` | Referenz von Access-Control-Policy auf Basis-Nutzungsrecht |
+| `ex:licenseKeyState` | Constraint auf Lizenzschlüsselstatus |
+| `ex:accessControlLevel` | Constraint auf Access-Control-Anforderung |
+| `ex:effectiveFromAgreement` | Markierung der Ableitung aus einem Agreement |
+
+### 4.2 `scx:`-Actions
+
+| QName | Semantik |
+| --- | --- |
+| `scx:Stream` | Nutzung als Streaming im Rahmen eines Nutzungsrechts |
+
+## 5. Kontrollierte Wertebereiche (profilrelevant)
+
+Diese Werte sind als profilnahe Beispiele zu verstehen und bei Bedarf durch verbindliche Codelisten zu konkretisieren.
+
+### 5.1 Rollenwerte
+
+- `teacher`
+- `student`
+- `schoolAdmin`
+- `providerOperator`
+
+### 5.2 Lizenz-/Access-Werte
+
+- `ex:licenseKeyState`: `active`, `inactive`, `revoked`
+- `ex:accessControlLevel`: `basic`, `mfa`, `high`
+
+## 6. Registry qualifizierter Namen (QNames)
 
 Die folgende Liste ist als Registry qualifizierter Namen zu verstehen. Die Einträge liegen derzeit als vollqualifizierte URNs vor und können in Implementierungen über Namespace-Prefixe als QNames abgekürzt werden.
 
