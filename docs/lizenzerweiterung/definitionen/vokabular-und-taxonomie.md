@@ -1,160 +1,61 @@
-# Vokabular und Taxonomie
+# Schulconnex ODRL: Vokabular und Taxonomie
 
 ## Einleitung
 
-Vokabular und Taxonomie sind zentrale Bestandteile der Informationsorganisation und -verwaltung. Sie ermöglichen eine strukturierte Klassifizierung und Beschreibung von Informationen, was besonders im Bildungsbereich von großer Bedeutung ist. Im Kontext des Open Digital Rights Language (ODRL) wird diese Struktur verwendet, um Nutzungsrechte präzise und maschinenlesbar darzustellen.
+Dieses Dokument ist die Referenz für Begriffe, Taxonomie und qualifizierte Namen (QNames) der Schulconnex-Spezifikation im ODRL-Kontext.
 
-## Vokabular
+Normative Profilregeln, Konformitätskriterien und vollständige Beispiel-Policies sind im Dokument [application-profile.md](application-profile.md) definiert.
 
-Das Vokabular umfasst alle Begriffe und Ausdrücke, die in einem bestimmten Kontext verwendet werden. Im Bildungsbereich sind dies:
+## 1. Kontrolliertes Vokabular
+
+Das Vokabular umfasst zentrale fachliche Begriffe für Nutzungsrechte im Bildungsbereich.
 
 - **Schularten**: Grundschule, Hauptschule, Realschule, Gymnasium
 - **Fächer**: Mathematik, Deutsch, Biologie, Chemie
-- **Rollen**: Lehrer, Schüler, Eltern, Schulträger
+- **Rollen**: teacher, student, parent, schoolAuthority
 
-Diese Begriffe bilden die Grundlage für die Definition von Attributen und Bedingungen in ODRL, die die Nutzung von Bildungsressourcen regeln.
+Diese Begriffe dienen als kontrollierte Wertebereiche für Operanden in ODRL-Constraints.
 
-### Beispiel in ODRL
+## 2. Taxonomie
 
-```json
-{
-    "uid": "https://example.com/v1/policies-info/12345",
-    "target": {
-        "uid": "urn:issuer:medium:123456789",
-        "partOf": "urn:issuer:catalogue"
-    },
-    "permission": [
-        {
-            "action": ["execute"],
-            "assignee": {
-                "refinement": [
-                    {
-                        "leftOperand": "urn:schulconnex:de:personenkontext:rolle",
-                        "operator": "eq",
-                        "rightOperand": "lehr"
-                    }
-                ]
-            }
-        }
-    ]
-}
-```
+Die Taxonomie stellt fachliche Begriffe in einer hierarchischen Struktur bereit, die für konsistente ODRL-Policies genutzt wird.
 
-## Taxonomie
+### Typische Struktur
+- **Bildung**
+  - **Schulwesen**
+  - **Schularten**
+- **Fächer**
+  - **Naturwissenschaften**
+  - **Biologie, Chemie**
 
-Die Taxonomie ist ein System zur Klassifizierung von Informationen, das eine hierarchische Struktur bereitstellt. In der ODRL-Spezifikation unterstützt die Taxonomie die Definition von Attributen wie `target`, `permission` und `assignee`, die miteinander verknüpft sind.
+## 3. Constraints: Left-hand- und Right-hand-Operanden
 
-### Typische Strukturen einer Taxonomie im ODRL:
-- **Oberkategorie**: Bildung
-  - **Unterkategorie**: Schulwesen
-    - **Unterunterkategorie**: Schularten
-- **Oberkategorie**: Fächer
-  - **Unterkategorie**: Naturwissenschaften
-    - **Unterunterkategorie**: Biologie, Chemie
+### 3.1 Left-hand-Operanden
 
-Diese Struktur hilft, die verschiedenen Rollen, Fächer und Schularten in ODRL zu definieren und zu organisieren.
+| Bezeichnung | Beschreibung |
+| --- | --- |
+| `dateTime` | Datum und Uhrzeit für zeitliche Einschränkungen |
+| `spatial` | Räumliche Einschränkungen für geografische Bedingungen |
+| `concurrentUses` | Anzahl gleichzeitig erlaubter Nutzungen |
+| `urn:schulconnex:de:personenkontext:organisation:kennung` | Kennung einer Organisation |
+| `urn:schulconnex:de:personenkontext:rolle` | Rolle einer Person im Kontext |
 
-### Beispiel für eine strukturierte ODRL-Policy
+### 3.2 Right-hand-Operanden (Beispielwerte)
 
-```json
-{
-    "uid": "https://example.com/v1/policies-info/67890",
-    "target": {
-        "uid": "urn:issuer:medium:987654321",
-        "partOf": "urn:issuer:catalogue"
-    },
-    "permission": [
-        {
-            "action": ["view", "print"],
-            "assignee": {
-                "partOf": {
-                    "refinement": [
-                        {
-                            "leftOperand": "urn:schulconnex:de:personenkontext:organisation:kennung",
-                            "operator": "eq",
-                            "rightOperand": "NI_12345"
-                        }
-                    ]
-                }
-            }
-        }
-    ]
-}
-```
+| Bezeichnung | Beschreibung |
+| --- | --- |
+| `2023-08-01T00:00+0200` | Beispielwert für zeitliche Einschränkung |
+| `https://www.wikidata.org/wiki/Q5956` | Beispielwert für räumliche Einschränkung |
+| `school-001` | Beispielhafter Organisations-Identifier |
+| `teacher` | Beispielhafter Rollenwert |
 
-## Attribute in ODRL
+## 4. Registry qualifizierter Namen (QNames)
 
-In der ODRL-Spezifikation sind Attribute grundlegende Elemente, die spezifische Eigenschaften von Nutzungsrechten definieren. Diese Attribute sind eng mit dem Vokabular und der Taxonomie verbunden.
+Die folgende Liste ist als Registry qualifizierter Namen zu verstehen. Die Einträge liegen derzeit als vollqualifizierte URNs vor und können in Implementierungen über Namespace-Prefixe als QNames abgekürzt werden.
 
-### Wichtige Attribute:
+Beispiel: `urn:schulconnex:de:personenkontext:rolle` → `schx:personenkontext:rolle`
 
-| **Attribut** | **Beschreibung**                                              |
-|--------------|--------------------------------------------------------------|
-| `uid`        | Eindeutige Kennung des ODRL-Objekts.                        |
-| `target`     | Das Ziel-Medienobjekt, auf das sich die Regeln beziehen.    |
-| `permission` | Berechtigungen, die den Zielobjekten gewährt werden.        |
-| `assignee`   | Die Partei oder Parteien, die die Berechtigung erhalten.     |
-| `constraint` | Bedingungen, die erfüllt sein müssen, damit die Berechtigung gültig ist. |
-| `duty`       | Verpflichtungen, die erfüllt werden müssen, wenn die Berechtigung ausgeübt wird. |
-
-### Beispiel für die Verwendung von Attributen in ODRL
-
-```json
-{
-    "uid": "https://example.com/v1/policies-info/112233",
-    "target": {
-        "uid": "urn:issuer:medium:654321",
-        "partOf": "urn:issuer:catalogue"
-    },
-    "permission": [
-        {
-            "action": ["stream"],
-            "constraint": [
-                {
-                    "leftOperand": "dateTime",
-                    "operator": "gteq",
-                    "rightOperand": "2023-08-01T00:00+0200"
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Left-hand- und Right-hand-Operanden
-
-In ODRL sind Left-hand- und Right-hand-Operanden Teil der Bedingungen, die in `constraint`-Attributen verwendet werden, um spezifische Regeln zu definieren. Sie sind entscheidend für die Implementierung von Nutzungsrechten auf Basis der definierten Taxonomie und des Vokabulars.
-
-### Left-hand-Operanden
-
-Left-hand-Operanden sind die Eigenschaften oder Attribute, die in einer Bedingung überprüft werden:
-
-| **Bezeichnung**                                              | **Beschreibung**                                                                                          |
-|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| `dateTime`                                                  | Datum und Uhrzeit für zeitliche Einschränkungen.                                                       |
-| `spatial`                                                   | Räumliche Einschränkungen für geografische Bedingungen.                                                 |
-| `concurrentUses`                                           | Anzahl der gleichzeitig erlaubten Nutzungen des Zielobjekts.                                           |
-| `urn:schulconnex:de:personenkontext:organisation:kennung` | Kennung einer Organisation (z.B. Schule).                                                               |
-| `urn:schulconnex:de:personenkontext:rolle`                | Rolle einer Person im Kontext (z.B. lehr für Lehrer).                                                  |
-
-### Right-hand-Operanden
-
-Right-hand-Operanden sind die Werte, mit denen die Left-hand-Operanden verglichen werden:
-
-| **Bezeichnung**                                              | **Beschreibung**                                                                                          |
-|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| `2023-08-01T00:00+0200`                                    | Ein spezifisches Datum und Uhrzeit für zeitliche Einschränkungen.                                       |
-| `https://www.wikidata.org/wiki/Q5956`                     | Ein spezifischer räumlicher Identifier (z.B. Landkreis Diepholz).                                       |
-| `NI_12345`                                                 | Ein spezifischer Wert zur Identifizierung einer Organisation (z.B. Schulnummer).                        |
-| `lehr`                                                     | Ein spezifischer Wert, der eine Rolle angibt (z.B. Lehrer).                                            |
-
-## Fazit
-
-Vokabular, Taxonomie und ODRL-Attribute sind unverzichtbare Werkzeuge zur Organisation und Verwaltung von Informationen im Bildungsbereich und darüber hinaus. Sie fördern ein besseres Verständnis, erleichtern die Kommunikation und helfen, Wissen effektiv zu strukturieren, insbesondere durch die klare Definition von Nutzungsrechten und -bedingungen.
-
-## Vokabular für das ODRL Application-Profile für Nutzungsrechte in Schulconnex
-
-Im Rahmen des ODRL Application-Profiles für Nutzungsrechte in Schulconnex sind folgende Vokabeln und Codes von Bedeutung:
+Im Rahmen der Schulconnex-Spezifikation sind folgende QNames/URNs relevant:
 
 - **Attribute**:
   - `uid`
@@ -263,5 +164,5 @@ Im Rahmen des ODRL Application-Profiles für Nutzungsrechte in Schulconnex sind 
   - ID der Referenzgruppe: `urn:schulconnex:de:referenzgruppe:grupid`
   - Gruppenrollen: `urn:schulconnex:de:referenzgruppe:rollen`
 
-- **Right-hand-Operanden als Left-hand-Operanden**: 
-  - Werte gemäß der Codeliste der Spezifikation Schulconnex.
+- **Right-hand-Operanden (Wertebereiche)**:
+  - Werte gemäß den Codelisten der Spezifikation Schulconnex.
