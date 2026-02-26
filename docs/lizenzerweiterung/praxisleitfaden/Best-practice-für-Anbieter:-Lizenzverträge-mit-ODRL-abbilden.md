@@ -12,27 +12,27 @@ Open Digital Rights Language (ODRL) ist ein Standard zur Beschreibung von Rechte
 Bei der Strategie des **LLM Prompting** wird ein präziser Prompt an ein Language Model (LLM) gesendet, um ein ODRL-Dokument zu generieren. 
 
 ### Beispiel-Prompt
-Hier ist ein Beispiel-Prompt, das genutzt werden kann, um ein ODRL-Dokument für die Lern-App ANTON zu erzeugen:
+Hier ist ein Beispiel-Prompt, das genutzt werden kann, um ein ODRL-Dokument auf Basis einer beispielhaften, öffentlich zugänglichen AGB zu erzeugen:
 
 ```markdown
 **Prompt für ODRL-Generierung:**
 
-Bitte generiere ein ODRL-Dokument für die Lern-App ANTON. Berücksichtige dabei folgende Punkte:
+Bitte generiere ein ODRL-Dokument für digitale Bildungsmedien auf Basis einer beispielhaften, öffentlich zugänglichen AGB (z.B. https://example.org/terms). Berücksichtige dabei folgende Punkte:
 
 1. **Nutzungsrechte:**
-   - Welche Aktionen dürfen Nutzer (Schüler, Lehrer, Schulen) durchführen (z.B. Nutzung der App, Erstellen von Inhalten)?
-   - Gibt es Einschränkungen oder Verbote (z.B. Kopieren, Modifizieren)?
+    - Welche Aktionen dürfen Nutzer (Lehrkräfte, Schulen/Bildungseinrichtungen, Medienzentren) durchführen (z.B. Streaming, Download im zulässigen Rahmen, Verleih im Lizenzrahmen)?
+    - Welche Einschränkungen oder Verbote gelten (z.B. Vervielfältigung, Bearbeitung, Transkodierung ohne schriftliche Zustimmung)?
 
 2. **Zahlungsmodalitäten:**
    - Welche kostenpflichtigen Dienste gibt es und wie werden sie abgerechnet?
    - Welche Zahlungsmethoden sind zulässig?
 
 3. **Lizenzierung:**
-   - Wie erhalten Schulen und Privatpersonen die Lizenz zur Nutzung?
-     - Direkte Lizenzierung durch die Schule
-     - Einzelne Lizenzierung für Privatpersonen
-     - Gruppenlizenzen für Schulen
-     - Lehrerlizenz für Lehrkräfte
+     - Wie erhalten Schulen/Bildungseinrichtungen und Medienzentren die Lizenz zur Nutzung?
+         - Lehreronlinelizenz (personenbezogen)
+         - Schullizenz / Schulonlinelizenz
+         - Medienzentrenlizenz (mit Verleihrecht)
+         - Plattform-Lizenz mit definierter Laufzeit
    - Wie wird die Lizenz aktiviert?
      - Durch einen Lizenzschlüssel
      - Über eine Plattformbasierte Aktivierung
@@ -40,29 +40,34 @@ Bitte generiere ein ODRL-Dokument für die Lern-App ANTON. Berücksichtige dabei
      - Integration mit Schulplattformen (z.B. LMS)
 
 4. **Account-Anforderungen:**
-   - Muss ein Nutzerkonto erstellt werden? Wenn ja, welche Informationen sind erforderlich?
-   - Welche Verpflichtungen haben Nutzer bei der Anmeldung (z.B. Wahrheitsgemäße Angaben)?
+    - Welche Zugänge sind erforderlich (persönlicher Lehrkraft-Zugang, ggf. Streaming-Zugang für Lernende)?
+    - Welche Verpflichtungen bestehen bei Vergabe und Verwaltung von Zugangsdaten?
 
 5. **Strafen und Konsequenzen:**
-   - Welche Strafen gibt es bei Verstößen gegen die AGB (z.B. Sperrung des Kontos, rechtliche Schritte)?
-   - Gibt es spezifische Bedingungen für die Beendigung des Zugangs zur App?
+    - Welche Maßnahmen gibt es bei Verstößen gegen die AGB (z.B. Entzug von Nutzungsrechten, Sperrung von Zugängen, rechtliche Schritte)?
+    - Welche Bedingungen gelten bei Ablauf der Lizenz (z.B. Löschung von Dateien und Sperrung des Zugangs)?
 
 6. **Plattformen:**
-   - Auf welchen Plattformen (Web, Android, iOS) darf die App verwendet werden?
+    - Über welche technischen Wege dürfen Inhalte genutzt werden (browserbasierte Plattform, zulässige Distribution per Link)?
 
 Bitte berücksichtige alle oben genannten Aspekte und strukturiere das ODRL-Dokument entsprechend.
 ```
 
 ### Beispielhaftes Ergebnis
-Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rechte und Pflichten der Nutzer detailliert beschreibt. Weitere Informationen sind auf der Seite https://anton.app/terms zu finden.
+Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rechte und Pflichten der Nutzer detailliert beschreibt. Als Referenz dient eine beispielhafte, öffentlich zugängliche AGB-Seite (z.B. https://example.org/terms).
 
 ```json
 {
-    "@context": "http://www.w3.org/ns/odrl.jsonld",
-    "id": "https://www.anton.app/terms",
+    "@context": [
+        "http://www.w3.org/ns/odrl.jsonld",
+        {
+            "ex": "https://example.org/odrl/profile#"
+        }
+    ],
+    "id": "https://example.org/terms",
     "permission": [
         {
-            "target": "https://www.anton.app",
+            "target": "https://example.org/digital-media-platform",
             "action": "use",
             "assignee": "Nutzer",
             "constraint": [
@@ -70,60 +75,81 @@ Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rech
                     "leftOperand": "role",
                     "operator": "isIn",
                     "rightOperand": [
-                        "Schüler",
-                        "Lehrer",
-                        "Schule"
+                        "Lehrkraft",
+                        "Schule/Bildungseinrichtung",
+                        "Medienzentrum"
                     ]
                 }
             ]
         },
         {
-            "target": "https://www.anton.app",
-            "action": "createContent",
+            "target": "https://example.org/digital-media-platform",
+            "action": "ex:stream",
             "assignee": "Nutzer"
+        },
+        {
+            "target": "https://example.org/digital-media-platform",
+            "action": "ex:download",
+            "assignee": "Lehrkraft",
+            "constraint": [
+                {
+                    "leftOperand": "purpose",
+                    "operator": "eq",
+                    "rightOperand": "Unterricht"
+                }
+            ]
         }
     ],
     "prohibition": [
         {
-            "target": "https://www.anton.app",
-            "action": "copy",
+            "target": "https://example.org/digital-media-platform",
+            "action": "reproduce",
             "assignee": "Nutzer"
         },
         {
-            "target": "https://www.anton.app",
+            "target": "https://example.org/digital-media-platform",
             "action": "modify",
             "assignee": "Nutzer"
+        },
+        {
+            "target": "https://example.org/digital-media-platform",
+            "action": "ex:transcode",
+            "assignee": "Nutzer",
+            "constraint": [
+                {
+                    "leftOperand": "consent",
+                    "operator": "neq",
+                    "rightOperand": "writtenApprovalByProvider"
+                }
+            ]
         }
     ],
     "requirement": [
         {
-            "target": "https://www.anton.app",
-            "action": "payment",
+            "target": "https://example.org/digital-media-platform",
+            "action": "ex:payment",
             "assignee": "Nutzer",
             "constraint": [
                 {
-                    "leftOperand": "paymentMethod",
-                    "operator": "isIn",
-                    "rightOperand": [
-                        "creditCard",
-                        "PayPal"
-                    ]
+                    "leftOperand": "invoicePeriod",
+                    "operator": "eq",
+                    "rightOperand": "30DaysNet"
                 }
             ]
         },
         {
-            "target": "https://www.anton.app",
-            "action": "obtainLicense",
+            "target": "https://example.org/digital-media-platform",
+            "action": "ex:obtainLicense",
             "assignee": "Nutzer",
             "constraint": [
                 {
                     "leftOperand": "licenseType",
                     "operator": "isIn",
                     "rightOperand": [
-                        "Schulträger",
-                        "Privat",
-                        "Gruppenlizenz",
-                        "Lehrerlizenz"
+                        "Lehreronlinelizenz",
+                        "Schullizenz",
+                        "Schulonlinelizenz",
+                        "Medienzentrenlizenz"
                     ]
                 }
             ]
@@ -131,53 +157,61 @@ Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rech
     ],
     "obligation": [
         {
-            "target": "https://www.anton.app",
-            "action": "createAccount",
-            "assignee": "Nutzer",
+            "target": "https://example.org/digital-media-platform",
+            "action": "ex:assignAccessByRole",
+            "assignee": "Schule/Bildungseinrichtung",
             "constraint": [
                 {
-                    "leftOperand": "requiredInformation",
-                    "operator": "isProvided",
-                    "rightOperand": [
-                        "E-Mail",
-                        "Persönliche Daten"
-                    ]
+                    "leftOperand": "studentAccess",
+                    "operator": "eq",
+                    "rightOperand": "streamOnly"
+                },
+                {
+                    "leftOperand": "integrationType",
+                    "operator": "eq",
+                    "rightOperand": "linkOnly"
                 }
             ]
         },
         {
-            "target": "https://www.anton.app",
-            "action": "provideAccurateInformation",
-            "assignee": "Nutzer"
+            "target": "https://example.org/digital-media-platform",
+            "action": "delete",
+            "assignee": "Nutzer",
+            "constraint": [
+                {
+                    "leftOperand": "event",
+                    "operator": "eq",
+                    "rightOperand": "licenseExpiry"
+                },
+                {
+                    "leftOperand": "scope",
+                    "operator": "isIn",
+                    "rightOperand": [
+                        "localDevices",
+                        "servers",
+                        "directories"
+                    ]
+                }
+            ]
         }
     ],
     "sanction": [
         {
-            "target": "https://www.anton.app",
-            "action": "suspendAccount",
+            "target": "https://example.org/digital-media-platform",
+            "action": "ex:suspendAccount",
             "assignee": "Anbieter",
             "condition": "ifViolation"
         },
         {
-            "target": "https://www.anton.app",
-            "action": "terminateAccess",
+            "target": "https://example.org/digital-media-platform",
+            "action": "ex:withdrawUsageRights",
             "assignee": "Anbieter",
-            "condition": "ifSevereViolation"
+            "condition": "ifViolationOrLegalNecessity"
         }
     ],
     "platform": [
         {
-            "target": "Web",
-            "action": "use",
-            "assignee": "Nutzer"
-        },
-        {
-            "target": "Android",
-            "action": "use",
-            "assignee": "Nutzer"
-        },
-        {
-            "target": "iOS",
+            "target": "Browserbasierte Medienplattform",
             "action": "use",
             "assignee": "Nutzer"
         }
@@ -215,10 +249,16 @@ Ein Beispiel aus der W3C ODRL Best Practices-Seite (https://w3c.github.io/odrl/b
 }
 ```
 
-Ein Beispiel aus der Schulconnex-Spezifikation zu Nutzungsrechten (Typische Nutzungsrechte mit ODRL abbilden) könnte wie folgt aussehen:
+Ein weiteres Beispiel auf Basis AGB-abgeleiteter Nutzungsrechte könnte wie folgt aussehen:
 
 ```json
 {
+    "@context": [
+        "http://www.w3.org/ns/odrl.jsonld",
+        {
+            "ex": "https://example.org/odrl/profile#"
+        }
+    ],
     "uid": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
     "target": {
         "uid": "urn:issuer:medium:123456789",
@@ -227,7 +267,8 @@ Ein Beispiel aus der Schulconnex-Spezifikation zu Nutzungsrechten (Typische Nutz
     "permission": [
         {
             "action": [
-                "execute"
+                "use",
+                "ex:stream"
             ],
             "constraint": [
                 {
@@ -239,26 +280,18 @@ Ein Beispiel aus der Schulconnex-Spezifikation zu Nutzungsrechten (Typische Nutz
                     "leftOperand": "dateTime",
                     "operator": "lt",
                     "rightOperand": "2024-08-01T00:00+0200"
+                },
+                {
+                    "leftOperand": "ex:role",
+                    "operator": "isIn",
+                    "rightOperand": [
+                        "teacher",
+                        "school",
+                        "mediaCenter"
+                    ]
                 }
             ],
-            "assignee": {
-                "partOf": {
-                    "refinement": [
-                        {
-                            "leftOperand": "urn:schulconnex:de:personenkontext:organisation:kennung",
-                            "operator": "eq",
-                            "rightOperand": "NI_12345"
-                        }
-                    ]
-                },
-                "refinement": [
-                    {
-                        "leftOperand": "urn:schulconnex:de:personenkontext:rolle",
-                        "operator": "eq",
-                        "rightOperand": "lehr"
-                    }
-                ]
-            }
+            "assignee": "Nutzer"
         }
     ]
 }
@@ -267,56 +300,102 @@ Ein Beispiel aus der Schulconnex-Spezifikation zu Nutzungsrechten (Typische Nutz
 Durch die Bereitstellung solcher Beispiele können die generierten ODRL-Dokumente präziser und relevanter gestaltet werden.
 
 ### Beispielhaftes Ergebnis
-Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rechte und Pflichten der Nutzer detailliert beschreibt. Weitere Informationen sind auf der Seite https://anton.app/terms zu finden.
+Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rechte und Pflichten der Nutzer detailliert beschreibt. Als Referenz dient eine beispielhafte, öffentlich zugängliche AGB-Seite (z.B. https://example.org/terms).
 
 ```json
 {
-    "uid": "https://anton.app/v1/policies-info/anton-policy-2023",
+    "@context": [
+        "http://www.w3.org/ns/odrl.jsonld",
+        {
+            "ex": "https://example.org/odrl/profile#"
+        }
+    ],
+    "uid": "https://example.org/v1/policies-info/sample-policy-2024",
     "target": {
-        "uid": "urn:anton:medium:learning-app:12345",
-        "partOf": "urn:anton:catalogue"
+        "uid": "urn:provider:medium:online:12345",
+        "partOf": "urn:provider:platform"
     },
     "permission": [
         {
             "action": [
                 "use",
-                "createContent"
+                "ex:stream"
             ],
             "assignee": {
                 "partOf": {
                     "refinement": [
                         {
-                            "leftOperand": "urn:anton:context:role",
+                            "leftOperand": "urn:provider:context:role",
                             "operator": "in",
-                            "rightOperand": ["student", "teacher", "school"]
+                            "rightOperand": ["teacher", "school", "mediaCenter"]
                         }
                     ]
                 }
             },
             "constraint": [
                 {
-                    "leftOperand": "not",
+                    "leftOperand": "purpose",
                     "operator": "eq",
-                    "rightOperand": "copy"
+                    "rightOperand": "education"
                 },
                 {
-                    "leftOperand": "not",
+                    "leftOperand": "licenseStatus",
                     "operator": "eq",
-                    "rightOperand": "modify"
+                    "rightOperand": "active"
+                }
+            ]
+        },
+        {
+            "action": [
+                "ex:download"
+            ],
+            "assignee": {
+                "refinement": [
+                    {
+                        "leftOperand": "urn:provider:context:role",
+                        "operator": "eq",
+                        "rightOperand": "teacher"
+                    }
+                ]
+            }
+        }
+    ],
+    "prohibition": [
+        {
+            "action": [
+                "modify",
+                "reproduce",
+                "ex:transcode"
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "consent",
+                    "operator": "neq",
+                    "rightOperand": "writtenApprovalByProvider"
+                }
+            ]
+        },
+        {
+            "action": [
+                "ex:embedDirectlyInLMS"
+            ],
+            "constraint": [
+                {
+                    "leftOperand": "integrationType",
+                    "operator": "neq",
+                    "rightOperand": "linkToMediaPlatform"
                 }
             ]
         }
     ],
     "payment": [
         {
-            "service": "ANTON-Plus",
+            "service": "DigitalMediaPlatform",
             "billing": {
                 "model": "subscription",
-                "frequency": "monthly",
+                "frequency": "yearly",
                 "paymentMethods": [
-                    "creditCard",
-                    "paypal",
-                    "directDebit"
+                    "invoice"
                 ]
             }
         }
@@ -326,21 +405,22 @@ Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rech
             "type": "schoolLicense",
             "activation": [
                 {
-                    "method": "licenseKey"
+                    "method": "accountProvisioning"
                 },
                 {
-                    "method": "platformActivation"
+                    "method": "portalAccess"
                 }
-            ]
+            ],
+            "duration": "12Months"
         },
         {
-            "type": "individualLicense",
+            "type": "mediaCenterLicense",
             "activation": [
                 {
-                    "method": "licenseKey"
+                    "method": "distributionSystemAccess"
                 },
                 {
-                    "method": "QRCode"
+                    "method": "portalAccess"
                 }
             ]
         }
@@ -348,12 +428,11 @@ Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rech
     "accountRequirements": {
         "mustCreateAccount": true,
         "requiredInfo": [
-            "name",
-            "email",
             "role"
         ],
         "obligations": [
-            "provide truthful information"
+            "assign student accounts as streaming-only",
+            "delete all stored files after license expiry"
         ]
     },
     "penalties": [
@@ -362,14 +441,12 @@ Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rech
             "condition": "violation of terms"
         },
         {
-            "type": "legalAction",
-            "condition": "severe violations"
+            "type": "usageRightWithdrawal",
+            "condition": "contract breach or legal/content-related necessity"
         }
     ],
     "platforms": [
-        "Web",
-        "Android",
-        "iOS"
+        "browser-based media platform"
     ]
 }
 ```
@@ -377,22 +454,213 @@ Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rech
 In vielen Fällen ergibt sich aus der Sichtung / Prüfung des Ergebnisses ein hoher manueller Aufwand zur Anpassung.
 
 ## 3. LLM Guided-Generation
-Die Strategie der LLM Guided-Generation nutzt ein ODRL Application-Profile, um spezifische Regeln für die Generierung von ODRL-Dokumenten festzulegen. Obwohl ein solches ODRL Application-Profile derzeit noch nicht existiert, könnte es beispielsweise die Struktur und die Anforderungen für die Definition von Rechten und Pflichten vorgeben.
+Die Strategie der LLM Guided-Generation nutzt ein ODRL Application-Profile, um spezifische Regeln für die Generierung von ODRL-Dokumenten festzulegen. Dabei wird das Vokabular zunächst aus einer beispielhaften, öffentlich zugänglichen AGB abgeleitet und anschließend gemäß `vokabular-und-taxonomie.md` sowie `application-profile.md` in ein konsistentes ODRL-Profil überführt.
+
+### Mapping: AGB-Klausel zu ODRL
+
+| AGB-Klausel (beispielhaft) | ODRL-Abbildung |
+| --- | --- |
+| Nutzung ist nur für bestimmte Rollen erlaubt (z.B. Lehrkraft, Schule, Medienzentrum). | `permission.constraint`: `leftOperand = ex:role`, `operator = isIn`, passende `rightOperand`-Liste |
+| Zugriff ist nur bei aktiver Laufzeit/Lizenz gültig. | `permission.constraint`: zwei `dateTime`-Constraints (`gteq` und `lt`) |
+| Bestimmte Lizenzarten sind erforderlich. | `permission.constraint`: `leftOperand = ex:licenseType`, `operator = isIn` |
+| Inhalte dürfen nur per Link in LMS eingebunden werden. | `permission.constraint`: `leftOperand = ex:integrationType`, `operator = eq`, `rightOperand = linkOnly` |
+| Download ist nur für Lehrkräfte erlaubt. | eigene `permission` für `ex:download` mit Constraint `ex:role = teacher` |
+| Bearbeitung/Vervielfältigung/Transkodierung ist untersagt. | `prohibition.action`: `modify`, `reproduce`, `ex:transcode` |
+| Nach Lizenzablauf müssen Inhalte gelöscht werden. | `permission.duty`: `action = delete` mit Event-Constraint `ex:event = licenseExpiry` |
+
+**Nicht aus AGB ableiten (Guardrails)**
+
+- Keine organisationsspezifischen Kennungen oder Stammdaten (z.B. Schulnummern, interne IDs) direkt aus allgemeinen AGB übernehmen.
+- Keine internen Rollen-Codes oder proprietären Feldnamen ohne explizites Vokabular/Namespace verwenden.
+- Keine technischen Implementierungsdetails (z.B. konkrete System- oder Benutzer-IDs) in ODRL aufnehmen, sofern sie nicht ausdrücklich Vertragsbestandteil sind.
 
 ### Beispiel ODRL Application-Profile
 Ein Beispiel für ein ODRL-Dokument könnte wie folgt aussehen:
 
-```markdown
-TODO
+```json
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl.jsonld",
+        "ex": "https://example.org/odrl/profile#"
+    },
+    "id": "https://example.org/odrl/profile/agb-guided/v1",
+    "profile": "https://example.org/odrl/profile/agb-guided/v1",
+    "sourceAgb": "https://example.org/terms",
+    "guidance": {
+        "requiredAttributes": [
+            "uid",
+            "target",
+            "permission",
+            "assignee",
+            "constraint"
+        ],
+        "agbVocabulary": {
+            "roles": [
+                "teacher",
+                "school",
+                "mediaCenter"
+            ],
+            "licenseTypes": [
+                "teacherOnlineLicense",
+                "schoolLicense",
+                "schoolOnlineLicense",
+                "mediaCenterLicense"
+            ],
+            "usageModes": [
+                "stream",
+                "download"
+            ],
+            "restrictions": [
+                "noModification",
+                "noTranscodingWithoutWrittenConsent",
+                "linkOnlyIntegration"
+            ]
+        },
+        "allowedRoleOperand": "ex:role",
+        "allowedLicenseTypeOperand": "ex:licenseType",
+        "allowedIntegrationOperand": "ex:integrationType",
+        "allowedTimeOperand": "dateTime",
+        "allowedActions": [
+            "use",
+            "display",
+            "print",
+            "ex:stream",
+            "ex:download",
+            "ex:shareByLink"
+        ]
+    }
+}
 ````
 
 Die Definition eines ODRL Application-Profiles würde es Anbietern ermöglichen, die Erstellung von ODRL-Dokumenten zu standardisieren und sicherzustellen, dass alle relevanten Aspekte abgedeckt sind.
 
 ### Beispielhaftes Ergebnis
-Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rechte und Pflichten der Nutzer detailliert beschreibt. Weitere Informationen sind auf der Seite https://anton.app/terms zu finden.
+Ein typisches Ergebnis könnte ein ODRL-Dokument sein, das die spezifischen Rechte und Pflichten der Nutzer detailliert beschreibt. Dabei werden AGB-Begriffe (Rollen, Lizenztypen, Nutzungsarten, Restriktionen) über das Application-Profile in ODRL-Attribute und Constraints übersetzt.
 
-```markdown
-TODO
+```json
+{
+    "@context": {
+        "odrl": "http://www.w3.org/ns/odrl.jsonld",
+        "ex": "https://example.org/odrl/profile#"
+    },
+    "uid": "https://example.com/v1/policies-info/guided-odrl-2026-001",
+    "@type": "Set",
+    "profile": "https://example.org/odrl/profile/agb-guided/v1",
+    "target": {
+        "uid": "urn:issuer:medium:MATHE-2026-001",
+        "partOf": "urn:issuer:catalogue"
+    },
+    "permission": [
+        {
+            "action": [
+                "use",
+                "display",
+                "print",
+                "ex:stream"
+            ],
+            "assignee": "Nutzer",
+            "constraint": [
+                {
+                    "leftOperand": "dateTime",
+                    "operator": "gteq",
+                    "rightOperand": "2026-08-01T00:00+0200"
+                },
+                {
+                    "leftOperand": "dateTime",
+                    "operator": "lt",
+                    "rightOperand": "2027-08-01T00:00+0200"
+                },
+                {
+                    "leftOperand": "ex:role",
+                    "operator": "isIn",
+                    "rightOperand": [
+                        "teacher",
+                        "school",
+                        "mediaCenter"
+                    ]
+                },
+                {
+                    "leftOperand": "ex:licenseType",
+                    "operator": "isIn",
+                    "rightOperand": [
+                        "teacherOnlineLicense",
+                        "schoolOnlineLicense"
+                    ]
+                },
+                {
+                    "leftOperand": "ex:integrationType",
+                    "operator": "eq",
+                    "rightOperand": "linkOnly"
+                }
+            ],
+            "duty": [
+                {
+                    "action": "delete",
+                    "constraint": [
+                        {
+                            "leftOperand": "ex:event",
+                            "operator": "eq",
+                            "rightOperand": "licenseExpiry"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "action": [
+                "ex:download"
+            ],
+            "assignee": "Nutzer",
+            "constraint": [
+                {
+                    "leftOperand": "ex:role",
+                    "operator": "eq",
+                    "rightOperand": "teacher"
+                }
+            ]
+        }
+    ],
+    "prohibition": [
+        {
+            "action": [
+                "reproduce",
+                "modify",
+                "ex:transcode"
+            ],
+            "assignee": "AllUsers"
+        }
+    ]
+}
 ```
 
 Durch die Bereitstellung eines ODRL Application-Profiles können die generierten ODRL-Dokumente präziser und relevanter gestaltet werden. Ein manueller Aufwand für Anpassungen ist weiterhin im Rahmen des möglichen.
+
+## 4. Erweiterte Best-Practices
+
+Neben Prompting, One-Shot und Guided-Generation sind insbesondere die folgenden zwei Strategien in der Praxis hilfreich.
+
+### 4.1 Retrieval-Augmented Generation (RAG)
+Bei der RAG-Strategie werden vor der eigentlichen ODRL-Generierung gezielt relevante Passagen aus den AGB extrahiert und dem LLM als verbindlicher Kontext übergeben. Dadurch sinkt das Risiko, dass Regeln erfunden oder falsch übertragen werden.
+
+**Empfohlener Ablauf:**
+
+1. AGB in sinnvolle Abschnitte segmentieren (z.B. Nutzungsrechte, Verbote, Laufzeit, Sanktionen).
+2. Für jede gewünschte ODRL-Regel nur die fachlich passenden AGB-Abschnitte abrufen.
+3. ODRL ausschließlich aus diesen Abschnitten erzeugen.
+4. Für jede Policy-Regel eine Referenz auf die zugrunde liegende AGB-Passage dokumentieren.
+
+**Vorteil:**
+- Hohe Nachvollziehbarkeit und bessere fachliche Qualität der generierten ODRL-Policies.
+
+### 4.2 Human-in-the-loop
+Bei Human-in-the-loop wird die automatische ODRL-Generierung durch eine strukturierte fachliche und ggf. juristische Prüfung ergänzt. Das LLM erstellt einen Entwurf, der erst nach Review freigegeben wird.
+
+**Empfohlener Ablauf:**
+
+1. LLM erzeugt einen ODRL-Entwurf inklusive Mapping-Tabelle (AGB-Klausel → ODRL-Regel).
+2. Fachreview prüft, ob die Regeln die AGB inhaltlich korrekt abbilden.
+3. Juristischer oder Compliance-Review bewertet kritische Klauseln (z.B. Verbote, Sanktionen, Laufzeit).
+4. Freigegebene Version wird versioniert abgelegt und als Referenzstandard genutzt.
+
+**Vorteil:**
+- Höhere Rechtssicherheit und kontrollierte Qualität vor produktivem Einsatz.
