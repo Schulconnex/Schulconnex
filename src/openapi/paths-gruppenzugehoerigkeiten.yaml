@@ -7,7 +7,7 @@ get:
   summary: Auflistung aller Gruppenzugehörigkeiten
   description: |
     Dieser Schnittstellenendpunkt gibt alle Gruppenzugehörigkeiten zurück, auf die
-    der Quellsystemanbieter zugreifen kann.
+    das Quellsystem zugreifen kann.
 
     Ein READ muss mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
     (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Gruppendatensatz

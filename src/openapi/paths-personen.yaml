@@ -7,7 +7,7 @@ get:
   summary: Personendatensätze des Quellsystemanbieters
   description: |
     Mittels dieses Endpunkts werden alle Personendatensätze zurückgegeben, auf die
-    der Quellsystemanbieter zugreifen darf.
+    das Quellsystem zugreifen darf.
 
     Ein READ muss mit einer HTTP-GET Anfrage erfolgen.
     Die Schnittstelle `/personen` ermöglicht das Verwenden von Filterparametern zur
