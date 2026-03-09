@@ -592,6 +592,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-gruppe-id',
+              label: '/gruppen/\u200B:id',
+              className: 'api-method patch',
+            },
+            {
+              type: 'doc',
               id: 'generated/openapi/quellsysteme/delete-gruppe-id',
               label: '/gruppen/\u200B:id',
               className: 'api-method delete',

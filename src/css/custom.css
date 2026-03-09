@@ -84,9 +84,9 @@
 
 .patch > .menu__link::before {
   content: "patch";
-  background-color: var(--ifm-color-warning-contrast-background);
-  color: var(--ifm-color-warning-contrast-foreground);
-  border-color: var(--ifm-color-warning-dark);
+  background-color: var(--ifm-color-info-contrast-background);
+  color: var(--ifm-color-secondary-info-foreground);
+  border-color: var(--ifm-color-info-dark);
 }
 
 .head > .menu__link::before {
