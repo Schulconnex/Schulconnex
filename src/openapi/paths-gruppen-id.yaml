@@ -169,7 +169,7 @@ patch:
 
     Siehe auch die einzelnen Datenmodelle zu [`Gruppe`](../../../datenmodell-qs/gruppe).
 
-    Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Gruppe das
+    Es ist erforderlich, dass  das
     Attribut `gruppe.revision` der zugrunde liegenden Gruppe mitgeschickt wird. Der
     Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs `gruppe.revision`,
     ob der Datensatz der Gruppe in der Zwischenzeit keine Änderung erfahren hat. Der Wert des
@@ -191,7 +191,7 @@ patch:
     und führen gegebenenfalls zu einer Fehlermeldung.
 
     Dieser Endpunkt stellt eine HTTP-PATCH Operation bereit,
-    bei der ausschließlich die zu modifizierenden Attribute in der Anfrage-Nutzlast mitgeschickt werden.
+    bei der ausschließlich die zu modifizierenden Attribute in der Anfrage-Nutzlast mitgeschickt werden müssen.
     Werte von Attributen, welche nicht in der Anfrage-Nutzlast mitgeschickt werden, bleiben unverändert.
 
     Um einen Wert zu löschen, muss der Wert des Attributs auf `null` gesetzt werden,

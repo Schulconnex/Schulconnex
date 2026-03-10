@@ -460,6 +460,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-person-id',
+              label: '/personen/\u200B:id',
+              className: 'api-method patch',
+            },
+            {
+              type: 'doc',
               id: 'generated/openapi/quellsysteme/delete-person-id',
               label: '/personen/\u200B:id',
               className: 'api-method delete',
@@ -511,6 +517,12 @@ const sidebars: SidebarsConfig = {
               id: 'generated/openapi/quellsysteme/update-personenkontext-id',
               label: '/personenkontexte/\u200B:id',
               className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-personenkontext-id',
+              label: '/personenkontexte/\u200B:id',
+              className: 'api-method patch',
             },
             {
               type: 'doc',
@@ -637,6 +649,12 @@ const sidebars: SidebarsConfig = {
               id: 'generated/openapi/quellsysteme/update-gruppenzugehoerigkeit-id',
               label: '/gruppenzugehoerigkeiten/\u200B:id',
               className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-gruppenzugehoerigkeit-id',
+              label: '/gruppenzugehoerigkeiten/\u200B:id',
+              className: 'api-method patch',
             },
             {
               type: 'doc',

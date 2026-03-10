@@ -153,6 +153,102 @@ put:
         Conflict
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+patch:
+  tags:
+    - Gruppenzugehörigkeiten
+  operationId: patchGruppenzugehoerigkeitId
+  security:
+    - oAuthForServices: []
+  summary: Modifiziert die Gruppenzugehörigkeit der angegebenen ID
+  description: |
+    Dieser Schnittstellenendpunkt modifiziert die Gruppenzugehörigkeit zur angegebenen
+    `gruppenzugehoerigkeit.id`.
+
+    Die Modifikation einer Gruppenzugehörigkeit per ID muss mit HTTP-PATCH auf die API `/gruppenzugehoerigkeiten/{gruppenzugehoerigkeit.id}`
+    erfolgen. Die Anfrage-Nutzdaten
+    (Request Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeit.
+
+    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
+
+    Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Gruppenzugehörigkeit
+    das Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
+    Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs `revision`,
+    ob der Datensatz der Gruppenzugehörigkeit in der Zwischenzeit keine Änderung erfahren
+    hat. Der Wert des Attributs kann von einem Quellsystem oder Dienst nicht verändert
+    werden; dieser wird mit der Erstellung (Create) des Datensatzes Gruppenzugehörigkeit
+    und jeder erfolgreichen Änderung (Update) vom Schulconnex-Server neu generiert.
+
+    Die folgende Tabelle listet die Attribute einer Gruppenzugehörigkeit auf, welche von einem Quellsystem oder Dienst nicht verändert werden können.
+
+    Attribut | Bemerkung
+    --- | ---
+    `id` | ID der Gruppenzugehörigkeit. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+    `revision` | Revision der Gruppenzugehörigkeit. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+
+    Die ID kann im Request ausgelassen werden. Ist das Attribut im Request dennoch
+    vorhanden, wird es validiert und führt gegebenenfalls zu einer Fehlermeldung.
+
+    Dieser Endpunkt stellt eine HTTP-PATCH Operation bereit,
+    bei der ausschließlich die zu modifizierenden Attribute in der Anfrage-Nutzlast mitgeschickt werden müssen.
+    Werte von Attributen, welche nicht in der Anfrage-Nutzlast mitgeschickt werden, bleiben unverändert.
+
+    Um einen Wert zu löschen, muss der Wert des Attributs auf `null` gesetzt werden,
+    beispielsweise `{"rollen": null}`.
+
+    Bei einer erfolgreichen Anforderung zum Aktualisieren einer Gruppenzugehörigkeit
+    wird diese Anforderung mit einer Repräsentation der Gruppenzugehörigkeit in den
+    Antwort-Nutzdaten und dem HTTP-Statuscode 200 quittiert.
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        example: grupz_2343_eng
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: './components-qs-Gruppenzugehörigkeit-PUT-request.yaml'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Gruppenzugehörigkeit.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 delete:
   tags:
     - Gruppenzugehörigkeiten
