@@ -14,7 +14,7 @@ get:
     Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array 
     von Wertepaaren, wobei `name` den menschenlesbaren Namen liefert, während `queryname` 
     den Namen der Liste in einem Format liefert, welches als Listenname beim Aufruf der \
-    API `/codelsten/{listenname}` zulässig ist.
+    API `/codelisten/{listenname}` zulässig ist.
 
   responses:
     '200':
@@ -25,6 +25,8 @@ get:
               schema:
                 type: array
                 items:
+                  type: object
+                  properties:
                     name:
                       description: Name der Codeliste              
                       type: string

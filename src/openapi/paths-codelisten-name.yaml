@@ -6,7 +6,7 @@ get:
     - oAuthForServices: []
   summary: Listen aller erlaubten Werte einer Codeliste
   description: |
-    Die Schnittstelle `/codelsten/{listenname}` erlaubt es, die möglichen
+    Die Schnittstelle `/codelisten/{name}` erlaubt es, die möglichen
     Werte einer spezifischen Codeliste auszulesen.
 
     Ein READ zum Abfragen der Codelisten-Werte muss mit HTTP-GET auf die API /codelisten/{listenname} erfolgen.
@@ -15,7 +15,7 @@ get:
     jeweils dem Code, der menschenlesbaren Bezeichnung, sowie gegebenenfalls einer Bemerkung.
   parameters:
     - in: path
-      name: listenname
+      name: name
       schema:
         type: string
         example: gruppentyp
@@ -30,6 +30,8 @@ get:
               schema:
                 type: array
                 items:
+                  type: object
+                  properties:
                     code:
                       description: Codelistenwert
                       type: string
