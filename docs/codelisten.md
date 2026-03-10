@@ -11,6 +11,25 @@ Alle Codes müssen als unabhängig von Groß-/Kleinschreibung interpretiert werd
 (sind nicht Case-sensitiv). Die Organisationsarten `"SCHULE"`, `"schule"`, `"Schule"` oder
 auch `"ScHuLe"` müssen als identisch angenommen werden.
 
+### Schulconnex-Listen und externe Listen
+
+Schulconnex kennt zwei Arten von Codelisten.
+- Schulconnex-eigene Codelisten
+- Externe Codelisten
+
+Schulconnex-eigene Codelisten sind Codelisten, deren Werte intern von Schulconnex genutzt werden und für das korrekte Funktionieren der Abläufe innerhalb eines Schulconnex-Servers notwendig sind.
+
+Diese Listen sind in der Schulconnex-Spezifikation festgelegt und dürfen von Schulconnex-Servern nicht verändert werden. Diese Listen sind für alle Schulconnex-Server verbindlich.
+
+Externe Codelisten dienen zur Festlegung von Werten in den über ein Schulconnex-System ausgetauschten Daten.
+Diese Listen können bei verschiedenen Schulconnex-Servern unterschiedlich sein, da sie beispielsweise
+spezifisch für einzelne Bundesländer sind.
+
+Für externe Listen stellen die hier angegebenen Werte nur ein Beispiel dar. Die spezifischen Listenwerte,
+die von einem Schulconnex-Server angeboten werden, sind beim Betreiber des Servers zu erfragen oder
+über eine API abzurufen. 
+
+
 ### Zukünftige Nutzung URI-basierter Codelisten
 
 Schulconnex plant ab der Version 2.0 URI-basierte Codelisten zu nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Description Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
@@ -32,7 +51,8 @@ URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorte
 Als technisches Format ist geplant, für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifischen Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, womit die Bundesländer ihre spezifischen Anforderungen abbilden können.
 
 ## Beziehungen
-
+:::info[Externe Liste]
+:::
 Beziehungen ist eine Liste von Beziehungen, welche zwischen zwei Personen innerhalb von
 Personenkontexten bestehen können. Häufig wird hierüber eine Beziehung zwischen Erziehungsberechtigten
 und Lernenden hergestellt, aber auch Beziehungen wie Tutoren oder Tutorinnen zu Lernenden innerhalb
@@ -44,6 +64,8 @@ SorgBer | Sorgeberechtigte/-r | Hat eine Person A im Personenkontext diese `hat_
 SchB | Schulbegleiter/-in | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Schulbegleiter oder Schulbegleiterin die Person B.
 
 ## Bildungsziel
+:::info[Externe Liste]
+:::
 
 Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
 dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung finden.
@@ -57,7 +79,8 @@ GY-SEK-I | Gymnasium Sekundarstufe I
 GY-SEK-II | Gymnasium Sekundarstufe II
 
 ## Boolean
-
+:::info[Schulconnex Liste]
+:::
 Die Codeliste „Boolean“ regelt das Mapping der deutschen Wörter „ja“ und „nein“ auf die
 englischen Begriffe „true“ und „false“.
 
@@ -67,7 +90,8 @@ Ja | True
 Nein | False
 
 ## Erreichbarkeitstyp
-
+:::info[Externe Liste]
+:::
 Erreichbarkeitstyp ist eine Liste von Kommunikationskanälen, über die eine Person oder
 Organisation erreicht werden kann.
 
@@ -78,11 +102,14 @@ E-Mail | E-Mail | E-Mail-Adressen müssen [RFC 5322][2] (Internet Message Format
 [2]: https://datatracker.ietf.org/doc/html/rfc5322
 
 ## Fächerkanon
-
+:::info[Externe Liste]
+:::
 Hinweis: Die folgende Codeliste ist spezifisch für das Bundesland Niedersachsen und dient für andere
 Bundesländer nur als Beispiel, da der Fächerkanon abweichen kann. Der lokal gültige Fächerkanon
 ist beim jeweiligen Betreiber des Schulconnex-Servers nachzufragen.
 
+<details>
+  <summary>Liste auf-/zuklappen</summary>
 Code | Bezeichnung
 --- | ---
 BI | Biologie
@@ -126,9 +153,11 @@ PWI | Profil Wirtschaft
 PTE | Profil Technik
 PGUS | Profil Gesundheit und Soziales
 NAT | Naturwissenschaften
+</details>
 
 ## Geschlecht
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung
 --- | ---
 m | männlich
@@ -137,7 +166,8 @@ d | divers
 x | keine Angabe
 
 ## Gruppenbereich
-
+:::info[Externe Liste]
+:::
 Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
 dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung
 finden.
@@ -149,7 +179,8 @@ Wahl | Wahlunterricht
 Wahlpflicht | Wahlpflichtunterricht
 
 ## Gruppendifferenzierung
-
+:::info[Externe Liste]
+:::
 Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
 dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung finden.
 
@@ -162,7 +193,8 @@ gA | grundlegendes Anforderungsniveau
 eA | erhöhtes Anforderungsniveau
 
 ## Gruppenoption
-
+:::info[Externe Liste]
+:::
  Hinweis: In der aktuellen Version sind noch keine Werte vorhanden.
  Hinweis: Diese Codeliste ist nicht länderübergreifend und potentiell von Bundesland zu Bundesland abweichend.
 
@@ -170,7 +202,8 @@ Code | Bezeichnung
 --- | ---
 
 ## Gruppenrolle
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung
 --- | ---
 Lern | Lernende/-r
@@ -183,7 +216,8 @@ GMit | Gruppenmitglied
 GLeit | Gruppenleitung
 
 ## Gruppentyp
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung
 --- | ---
 Klasse | Schulklasse
@@ -191,7 +225,8 @@ Kurs | Kurs/Unterricht
 Sonstig | Sonstige Gruppe
 
 ## Jahrgangsstufe
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung
 --- | ---
 01 | Jahrgangsstufe 1
@@ -209,7 +244,8 @@ Code | Bezeichnung
 13 | Jahrgangsstufe 13
 
 ## Lernperiode
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung | Beginn | Ende | Typ
 --- | --- | --- | --- | ---
 2022 | Schuljahr 2022/23 | 2022-08-01 | 2023-07-31 | SJ
@@ -232,14 +268,16 @@ Code | Bezeichnung | Beginn | Ende | Typ
 2027-2 | 2. Halbj. 27/28 | 2028-02-01 | 2028-07-31 | HJ
 
 ## Lernperiodentyp
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung
 --- | ---
 SJ | Schuljahr
 HJ | Schulhalbjahr
 
 ## Lokalisierung
-
+:::info[Externe Liste]
+:::
 Basierend auf [RFC 5646][1]. Beispiele finden sich in nachfolgender Tabelle.
 
 [1]: https://datatracker.ietf.org/doc/html/rfc5646
@@ -254,7 +292,8 @@ Hinweis: Dies ist die aktuell vom schulischen Anmeldeservice des Landes Niedersa
 unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
 
 ## Organisationsbeziehungen
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
 SchTrae | Schulträger | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Schulträger die Organisation B, damit ist B also Schulträger von A.
@@ -262,7 +301,8 @@ SchBeh | Schulbehörde | Hat eine Organisation A diese `hat_als` Beziehung zu ei
 Medienzentrum | Medienzentrum | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Medienzentrum die Organisation B, damit ist B also Medienzentrum für A.
 
 ## Organisationstyp
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung
 --- | ---
 Schule | Schule
@@ -273,7 +313,8 @@ SchTrae | Schulträger
 Sonstige | sonstige Organisationen / Einrichtungen
 
 ## Personenstatus
-
+:::info[Schulconnex Liste]
+:::
 Diese Codeliste gibt an, ob ein Personenkontext aktuell aktiv ist. 
 
 Code | Bezeichnung
@@ -281,7 +322,8 @@ Code | Bezeichnung
 Aktiv | aktiv
 
 ## Rolle
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung
 --- | ---
 Lern | Lernende/-r
@@ -295,7 +337,8 @@ SchB | Schulbegleiter/-in
 NLehr | Nicht-lehrendes Personal
 
 ## Trägerschaft
-
+:::info[Externe Liste]
+:::
 Code | Bezeichnung
 --- | ---
 01 | Bund
@@ -306,7 +349,8 @@ Code | Bezeichnung
 06 | Sonstige
 
 ## Vertrauensstufe
-
+:::info[Schulconnex Liste]
+:::
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
 Kein | keine | Der Schlüsselbesitzer ist nicht vertrauenswürdig. Diese Vertrauensstufe wird meist für Test- oder Beispielnutzer vergeben.
