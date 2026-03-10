@@ -30,6 +30,8 @@ tags:
     description: Verknüpfung von Personenkontext und Gruppe
   - name: Sichtfreigaben
     description: Regelt zeitliche Sichtfreigabe für Organisationen
+  - name: Codelisten
+    description: Ermöglicht das Auslesen von Codelisten und Werten
 paths:
   /personen:
     $ref: './paths-personen.yaml'
@@ -67,6 +69,10 @@ paths:
     $ref: './paths-gruppenzugehoerigkeiten-id.yaml'
   /sichtfreigaben/{id}:
     $ref: './paths-sichtfreigaben-id.yaml'
+  /codelisten:
+    $ref: './paths-codelisten.yaml'
+  /codelisten/{name}:
+    $ref: './paths-codelisten-name.yaml'        
 components:
   securitySchemes:
     oAuthForServices:

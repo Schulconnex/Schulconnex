@@ -1,0 +1,68 @@
+get:
+  tags:
+    - Codelisten
+  operationId: ReadCodelistenName
+  security:
+    - oAuthForServices: []
+  summary: Listen aller erlaubten Werte einer Codeliste
+  description: |
+    Die Schnittstelle `/codelsten/{listenname}` erlaubt es, die möglichen
+    Werte einer spezifischen Codeliste auszulesen.
+
+    Ein READ zum Abfragen der Codelisten-Werte muss mit HTTP-GET auf die API /codelisten/{listenname} erfolgen.
+
+    Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array aus
+    jeweils dem Code, der menschenlesbaren Bezeichnung, sowie gegebenenfalls einer Bemerkung.
+  parameters:
+    - in: path
+      name: listenname
+      schema:
+        type: string
+        example: gruppentyp
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf den Namen der Liste nach dem Wert `queryname` aus der API `/codelisten`
+  responses:
+    '200':
+      description: |
+        OK      
+      content:
+          application/json:
+              schema:
+                type: array
+                items:
+                    code:
+                      description: Codelistenwert
+                      type: string
+                      example: klasse
+                    bezeichnung:
+                      description: Bezeichnung des Codelistenwertes
+                      type: string
+                      example: Schulklasse
+                    bemerkung:
+                      description: Zusätzliche Informationen zum Codelistenwert
+                      type: string
+                      example: Die reguläre Schulklasse.
+                example: 
+                 [{"code": "klasse", "bezeichnung": "Schulklasse", "bemerkung": "Die reguläre Schulklasse."},  
+                  {"code": "kurs", "bezeichnung": "Kurs/Unterricht", "bemerkung": "Unterrichtseinheiten, die klassenübergreifend organisiert sind."},  
+                  {"code": "sonstig", "bezeichnung": "Sonstige Gruppe", "bemerkung": "Nicht explizit als Klasse oder Kurs definierte Gruppen."}]  
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

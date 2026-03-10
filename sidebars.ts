@@ -664,6 +664,25 @@ const sidebars: SidebarsConfig = {
             },
           ],
         },
+        {
+          type: 'category',
+          label: 'Codelisten',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-codelisten',
+              label: '/codelisten',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-codelisten-name',
+              label: '/codelisten/:name',
+              className: 'api-method get',
+            },
+          ],
+        },
+
       ],
     },
   ],

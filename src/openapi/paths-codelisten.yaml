@@ -1,0 +1,56 @@
+get:
+  tags:
+    - Codelisten
+  operationId: readCodelisten
+  security:
+    - oAuthForServices: []
+  summary: Liste aller Codelisten lesen
+  description: |
+    Die Schnittstelle `/codelisten` erlaubt es, eine Liste aller dem Schulconnex-Server
+    bekannten Codelisten auszulesen.
+
+    Ein READ zum Abfragen der Codelisten-Namen muss mit HTTP-GET auf die API /codelisten erfolgen.
+
+    Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array 
+    von Wertepaaren, wobei `name` den menschenlesbaren Namen liefert, während `queryname` 
+    den Namen der Liste in einem Format liefert, welches als Listenname beim Aufruf der \
+    API `/codelsten/{listenname}` zulässig ist.
+
+  responses:
+    '200':
+      description: |
+        OK      
+      content:
+          application/json:
+              schema:
+                type: array
+                items:
+                    name:
+                      description: Name der Codeliste              
+                      type: string
+                      example: Trägerschaft
+                    queryname:
+                      description: Name der Codeliste  für eine Query mit /codelisten/:name            
+                      type: string
+                      example: traegerschaft
+                example: [{"name": "Trägerschaft", "queryname": "traegerschaft"},{"name": "Rolle", "queryname": "rolle"}]
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
