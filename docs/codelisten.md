@@ -278,7 +278,7 @@ Diese Codeliste gibt an, ob ein Personenkontext aktuell aktiv ist.
 
 Code | Bezeichnung | Bemerkung
 --- | ---  | ---
-Aktiv | aktiv | Derzeit unterstützt Schulconnex ausschliesslich den Personenstatus `Aktiv`. Alle von einem Schulconnex-Server gelieferten Personenkontexte sind aktiv. Andere Werte, wie beispielsweise `Inaktiv`, `Angefragt`, `Gelöscht` oder `Gesperrt`, werden nicht unterstützt.
+Aktiv | aktiv | Derzeit unterstützt Schulconnex ausschließlich den Personenstatus `Aktiv`. Alle von einem Schulconnex-Server gelieferten Personenkontexte sind aktiv. Andere Werte, wie beispielsweise `Inaktiv`, `Angefragt`, `Gelöscht` oder `Gesperrt`, werden nicht unterstützt.
 
 ## Rolle
 
