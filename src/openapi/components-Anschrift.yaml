@@ -12,3 +12,5 @@ properties:
     description: Teil eines Orts, falls genauere Untergliederung gewünscht.
     type: string
     example: Döhren
+  bundesland:
+    $ref: './components-code-Bundesland.yaml'

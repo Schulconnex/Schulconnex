@@ -93,6 +93,7 @@ classDiagram
     postleitzahl
     ort
     ortsteil
+    bundesland
   }
   class Gruppe {
     id

@@ -190,6 +190,7 @@ Attribute | Description
 postleitzahl | ZIP Code.
 ort | Town name.
 ortsteil | Urban district, if a more specific location than town name is required.
+bundesland | The German state in which the town is located.
 
 ## Organisationsbeziehung
 
