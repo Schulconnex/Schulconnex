@@ -25,7 +25,199 @@ Der Body der Anfrage besteht aus dem JSON-Objekt `requests`, das eine Liste von 
 
 Jeder Aufruf in der Liste enthält eine ID, um den Aufruf zu identifizieren, die URL der aufgerufenen API ohne Server- und Versionsnamen (also beispielsweise `/personenkontext/123454/beziehungen` zum Zugriff auf Beziehungen zu Personenkontext 123454), die zu verwendende HTTP-Methode (in dem Beispiel `POST`, um eine Beziehung anzulegen, oder `GET`, um existierende Beziehungen auszulesen), gefolgt von einem JSON-Objekt mit dem Body des Requests bei `POST-` oder `DELETE-`Aufrufen.
 
+<details> 
+<summary>Beispiel JSON BATCH Request (einklappen/ausklappen)</summary>
+```jsx
+{
+  "requests": [
+    {
+      "id": "1",
+      "url": "/v1/personen",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "referrer": "125",
+        "name": {
+          "familienname": "von Musterfrau",
+          "vorname": "Natalie",
+          "initialenfamilienname": "M",
+          "initialenvorname": "N",
+          "rufname": "Nat",
+          "sortierindex": "4"
+        },
+        "geburt": {
+          "datum": "2018-05-01",
+          "geburtsort": "Berlin, Deutschland"
+        },
+        "geschlecht": "w",
+        "lokalisierung": "de",
+        "vertrauensstufe": "Teil",
+        "auskunftssperre": "Nein"
+      }
+    },
+    {
+      "id": "2",
+      "url": "/v1/personen",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "referrer": "126",
+        "name": {
+          "familienname": "Naur",
+          "vorname": "Sebastian ",
+          "initialenfamilienname": "N",
+          "initialenvorname": "S",
+          "rufname": "Bastian",
+          "sortierindex": "0"
+        },
+        "geburt": {
+          "datum": "2018-02-04",
+          "geburtsort": "Hamburh, Deutschland"
+        },
+        "geschlecht": "m",
+        "lokalisierung": "de",
+        "vertrauensstufe": "Teil",
+        "auskunftssperre": "Nein"
+      }
+    },
+    {
+      "id": "3",
+      "url": "/v1/personen",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "referrer": "127",
+        "name": {
+          "familienname": "Boschke",
+          "vorname": "Susanne",
+          "initialenfamilienname": "B",
+          "initialenvorname": "S",
+          "rufname": "Susi",
+          "sortierindex": "0"
+        },
+        "geburt": {
+          "datum": "2018-07-11",
+          "geburtsort": "Berlin, Deutschland"
+        },
+        "geschlecht": "w",
+        "lokalisierung": "de",
+        "vertrauensstufe": "Teil",
+        "auskunftssperre": "Nein"
+      }
+    }
+  ]
+}
+```
+</details>
+
 Die Resultate der API-Aufrufe werden dann vom Server in einem Batch-Response-Objekt zurückgeliefert.
+
+
+<details> 
+<summary>Beispiel JSON BATCH Response (einklappen/ausklappen)</summary>
+```jsx
+{
+  "responses": [
+    {
+      "id": "1",
+      "status": 201,
+      "headers": {
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json;charset=utf-8"
+      },
+      "body": {
+        "id": "b56a5848-4bcc-4936-b43c-56cf55fd7965",
+        "mandant": "58f45270-8e54-40c6-a212-980307fc19be",
+        "revision": "1",
+        "referrer": "125",
+        "name": {
+          "familienname": "von Musterfrau",
+          "vorname": "Natalie",
+          "initialenfamilienname": "M",
+          "initialenvorname": "N",
+          "rufname": "Nat",
+          "sortierindex": "4"
+        },
+        "geburt": {
+          "datum": "2018-05-01",
+          "geburtsort": "Berlin, Deutschland"
+        },
+        "geschlecht": "w",
+        "lokalisierung": "de",
+        "vertrauensstufe": "Teil",
+        "auskunftssperre": "Nein"
+      }
+    },
+    {
+      "id": "2",
+      "status": 201,
+      "headers": {
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json;charset=utf-8"
+      },
+      "body": {
+        "id": "c59a96ce-2613-47b8-b365-08ff3eb3d0ee",
+        "mandant": "58f45270-8e54-40c6-a212-980307fc19be",
+        "revision": "1",
+        "referrer": "126",
+        "name": {
+          "familienname": "Naur",
+          "vorname": "Sebastian ",
+          "initialenfamilienname": "N",
+          "initialenvorname": "S",
+          "rufname": "Bastian",
+          "sortierindex": "0"
+        },
+        "geburt": {
+          "datum": "2018-02-04",
+          "geburtsort": "Hamburh, Deutschland"
+        },
+        "geschlecht": "m",
+        "lokalisierung": "de",
+        "vertrauensstufe": "Teil",
+        "auskunftssperre": "Nein"
+      }
+    },
+    {
+      "id": "3",
+      "status": 201,
+      "headers": {
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json;charset=utf-8"
+      },
+      "body": {
+        "id": "4f799ba2-eb43-4230-ad64-083d72488caa",
+        "mandant": "58f45270-8e54-40c6-a212-980307fc19be",
+        "revision": "1",
+        "referrer": "127",
+        "name": {
+          "familienname": "Boschke",
+          "vorname": "Susanne",
+          "initialenfamilienname": "B",
+          "initialenvorname": "S",
+          "rufname": "Susi",
+          "sortierindex": "0"
+        },
+        "geburt": {
+          "datum": "2018-07-11",
+          "geburtsort": "Berlin, Deutschland"
+        },
+        "geschlecht": "w",
+        "lokalisierung": "de",
+        "vertrauensstufe": "Teil",
+        "auskunftssperre": "Nein"
+      }
+    }
+  ]
+}
+```
+</details>
 
 Es ist dem Betreiber eines Schulconnex-Servers freigestellt, ob ein API-Endpunkt `$batch` bereitgestellt wird. 
 
