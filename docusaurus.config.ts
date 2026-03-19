@@ -1,6 +1,9 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 
 const config: Config = {
   title: 'Schulconnex',
@@ -19,7 +22,6 @@ const config: Config = {
   projectName: 'schulconnex', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -31,6 +33,9 @@ const config: Config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
     remarkRehypeOptions: {
       footnoteLabel: 'Fußnoten',
     },
@@ -258,6 +263,21 @@ const config: Config = {
         }
       },
     ]
+    ,
+    function webpackNodePolyfills() {
+      return {
+        name: 'webpack-node-polyfills',
+        configureWebpack() {
+          return {
+            resolve: {
+              fallback: {
+                path: require.resolve('path-browserify'),
+              },
+            },
+          };
+        },
+      };
+    }
   ],
 };
 
