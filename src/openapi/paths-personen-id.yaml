@@ -190,6 +190,7 @@ patch:
 
     Um einen Wert zu löschen, muss der Wert des Attributs auf `null` gesetzt werden,
     beispielsweise `{"geburtsort": null}`.
+    Dabei dürfen allerdings keine notwendigen Attribute wie `vertrauensstufe` gelöscht werden.
 
   parameters:
     - in: path

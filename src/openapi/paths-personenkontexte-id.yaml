@@ -201,7 +201,8 @@ patch:
     Werte von Attributen, welche nicht in der Anfrage-Nutzlast mitgeschickt werden, bleiben unverändert.
 
     Um einen Wert zu löschen, muss der Wert des Attributs auf `null` gesetzt werden,
-    beispielsweise `{"kennung": null}`.
+    beispielsweise `{"personenstatus": null}`.
+    Dabei dürfen allerdings keine notwendigen Attribute wie `rolle` gelöscht werden.
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren eines Personenkontexts wird diese
     Anforderung mit einer Repräsentation des Personenkontexts in den Antwort-Nutzdaten und

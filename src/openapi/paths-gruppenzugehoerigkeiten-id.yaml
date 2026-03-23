@@ -193,7 +193,8 @@ patch:
     Werte von Attributen, welche nicht in der Anfrage-Nutzlast mitgeschickt werden, bleiben unverändert.
 
     Um einen Wert zu löschen, muss der Wert des Attributs auf `null` gesetzt werden,
-    beispielsweise `{"rollen": null}`.
+    beispielsweise `{"von": null}`.
+    Dabei dürfen allerdings keine notwendigen Attribute wie `rollen` gelöscht werden.
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren einer Gruppenzugehörigkeit
     wird diese Anforderung mit einer Repräsentation der Gruppenzugehörigkeit in den

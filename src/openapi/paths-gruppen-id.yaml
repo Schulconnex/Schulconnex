@@ -195,7 +195,8 @@ patch:
     Werte von Attributen, welche nicht in der Anfrage-Nutzlast mitgeschickt werden, bleiben unverändert.
 
     Um einen Wert zu löschen, muss der Wert des Attributs auf `null` gesetzt werden,
-    beispielsweise `{"beschreibung": null}`.
+    beispielsweise `{"beschreibung": null}`. 
+    Dabei dürfen allerdings keine notwendigen Attribute wie `bezeichnung` gelöscht werden.
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren einer Gruppe wird diese
     Anforderung mit einer Repräsentation der Gruppe in den Antwort-Nutzdaten und
