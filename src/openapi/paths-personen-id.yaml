@@ -207,7 +207,7 @@ patch:
         schema:
           allOf:
             - $ref: './components-qs-Person-PUT-request.yaml'
-            - $ref: './components-qs-Person-basis.yaml'
+            - $ref: './components-qs-Person-basis-PATCH-request.yaml'
   responses:
     '200':
       description: OK

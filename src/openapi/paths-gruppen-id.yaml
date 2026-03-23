@@ -216,7 +216,7 @@ patch:
         schema:
           allOf:
             - $ref: './components-qs-Gruppe-PUT-request.yaml'
-            - $ref: './components-qs-Gruppe-basis.yaml'
+            - $ref: './components-qs-Gruppe-basis-PATCH-request.yaml'
   responses:
     '200':
       description: OK

@@ -212,7 +212,7 @@ patch:
     content:
       application/json:
         schema:
-          $ref: './components-qs-Gruppenzugehörigkeit-PUT-request.yaml'
+          $ref: './components-qs-Gruppenzugehörigkeit-PATCH-request.yaml'
   responses:
     '200':
       description: OK
