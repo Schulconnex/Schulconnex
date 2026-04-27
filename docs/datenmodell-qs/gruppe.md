@@ -12,10 +12,10 @@ zusammen mit der Gruppen-Information im Gruppendatensatz abgebildet.
 Attribut | Typ | Anzahl | Bemerkung | Qualifizierter Name
 --- | --- | --- | --- | ---
 id | String (UTF-8) | 1 | ID der Gruppe. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable). | `urn:schulconnex:de:gruppe:id`
-mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Gruppe zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable). | `urn:schulconnex:de:gruppe:mandant`
-orgid | String (UTF-8) | 0..1 | ID der Organisation, welcher die Gruppe zugeordnet ist. Oft identisch mit Mandanten, kann aber in Einzelfällen davon abweichen. | `urn:schulconnex:de:gruppe:orgid`
-referrer | String (UTF-8) | 0..1 | ID der Gruppe im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein. | `urn:schulconnex:de:gruppe:referrer`
-bezeichnung | String (UTF-8) | 1 | Bezeichnung der Gruppe, beispielsweise „Englisch, 2. Klasse“. | `urn:schulconnex:de:gruppe:bezeichnung`
+mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Gruppe zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+organisation | String (UTF-8) | 0..1 | ID der Organisation, welcher die Gruppe zugeordnet ist. Oft identisch mit Mandanten, kann aber in Einzelfällen davon abweichen. | `urn:schulconnex:de:gruppe:organisation`
+referrer | String (UTF-8) | 0..1 | ID der Gruppe im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein.
+bezeichnung | String (UTF-8) | 1 | Bezeichnung der Gruppe, beispielsweise „Englisch, 2. Klasse". | `urn:schulconnex:de:gruppe:bezeichnung`
 thema | String (UTF-8) | 0..1 | Thema der Gruppe in Kurzform, idealerweise weniger als 35 Zeichen. | `urn:schulconnex:de:gruppe:thema`
 beschreibung | String (1024) (UTF-8) | 0..1 | Zusätzliche optionale Beschreibung der Gruppe. | `urn:schulconnex:de:gruppe:beschreibung`
 typ | String (Code) | 1 | Typ der Gruppe (Klasse, Kurs). Referenz auf Code der Codeliste *Gruppentyp*. | `urn:schulconnex:de:gruppe:typ`
@@ -27,4 +27,4 @@ jahrgangsstufen | String (Code) | 0..n | Jahrgangsstufe (Jahrgangsstufe 1 bis Ja
 faecher | *Array[[Fach](fach)]* | 0..n | Liste (Array) der in der Gruppe behandelten Fächer. | `urn:schulconnex:de:gruppe:faecher`
 referenzgruppen | *Array[[Referenzgruppe](referenzgruppe)]* | 0..n | Liste (Array) von Referenzgruppen zu dieser Gruppe. | `urn:schulconnex:de:gruppe:referenzgruppen`
 laufzeit | *[Laufzeit](laufzeit)* | 0..1 | Die Laufzeit einer Gruppe. | `urn:schulconnex:de:gruppe:laufzeit`
-revision | String (UTF-8) | 1 | Revision der Gruppe. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden. | `urn:schulconnex:de:gruppe:revision`
+revision | String (UTF-8) | 1 | Revision der Gruppe. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.

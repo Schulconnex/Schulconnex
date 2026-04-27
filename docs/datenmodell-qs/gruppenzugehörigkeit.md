@@ -13,10 +13,10 @@ noch Funktionen wie Klassensprecher oder Klassensprecherin ausüben.
 Attribut | Typ | Anzahl | Bemerkung | Qualifizierter Name
 --- | --- | --- | --- | ---
 id | String (UTF-8) | 1 | ID der Gruppenzugehörigkeit. | `urn:schulconnex:de:gruppenzugehoerigkeit:id`
-mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Gruppenzugehörigkeit zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable). | `urn:schulconnex:de:gruppenzugehoerigkeit:mandant`
-referrer | String (UTF-8) | 0..1 | ID der Gruppenzugehörigkeit im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein. | `urn:schulconnex:de:gruppenzugehoerigkeit:referrer`
-ktid | String (UTF-8) | 1 | ID des Personenkontexts, welcher der Gruppe zugeordnet ist. | `urn:schulconnex:de:gruppenzugehoerigkeit:ktid`
+mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Gruppenzugehörigkeit zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+referrer | String (UTF-8) | 0..1 | ID der Gruppenzugehörigkeit im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein.
+personenkontext | String (UTF-8) | 1 | ID des Personenkontexts, welcher der Gruppe zugeordnet ist. | `urn:schulconnex:de:gruppenzugehoerigkeit:personenkontext`
 rollen | String (Code) | 1..n | Liste der Rollen der Person innerhalb der Gruppe. Rolle ist jeweils eine Referenz auf einen Code der Codeliste *Gruppenrolle*. | `urn:schulconnex:de:gruppenzugehoerigkeit:rollen`
 von | Datum (siehe Abschnitt Datumsformat) | 0..1 | Beginn der Gruppenzugehörigkeit. Dieses Datum kann auch in der Zukunft liegen. Ist `von` nicht angegeben, besteht die  Gruppenzugehörigkeit für jeden Zeitpunkt vor dem Enddatum. | `urn:schulconnex:de:gruppenzugehoerigkeit:von`
 bis | Datum (siehe Abschnitt Datumsformat) | 0..1 | Ende der Gruppenzugehörigkeit. Laufzeiten schließen den ersten und letzten Tag immer mit ein. Ist als `bis` der 31.Oktober 2025 angegeben, so endet die Gruppenzugehörigkeit am 01.11.2025 um 00:00. Ist `bis` nicht angegeben, so besteht die Gruppenzugehörigkeit für jedes Datum nach dem Startdatum. | `urn:schulconnex:de:gruppenzugehoerigkeit:bis`
-revision | String (UTF-8) | 1 | Revision der Gruppenzugehörigkeit. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden. | `urn:schulconnex:de:gruppenzugehoerigkeit:revision`
+revision | String (UTF-8) | 1 | Revision der Gruppenzugehörigkeit. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
