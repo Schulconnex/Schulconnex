@@ -270,7 +270,9 @@ Anbieter | Anbieter
 Medienzentrum | Medienzentrum
 Behoerde | Behörde
 SchTrae | Schulträger
+Studienseminar | Studienseminar
 Sonstige | sonstige Organisationen / Einrichtungen
+
 
 ## Personenstatus
 
