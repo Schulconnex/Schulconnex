@@ -140,3 +140,8 @@ get:
         Method not allowed
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '501':
+      description: |
+        Not Implemented
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
