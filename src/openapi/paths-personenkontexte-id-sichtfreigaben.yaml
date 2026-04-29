@@ -96,7 +96,9 @@ get:
    Dieser Schnittstellenendpunkt gibt eine Liste der existierenden Sichtfreigaben eines
    Personenkontexts zurück.
    
-   Es werden nur Sichtfreigaben für einen Personenkontexte zurückgegeben, welche der abfragenden Organisation zugeordnet sind (Attribut `personenkontext.organisation`). 
+   Es werden sowohl die Sichtfreigaben für einen Personenkontext zurückgegeben, welcher der abfragenden Organisation
+   zugeordnet sind (Attribut `personenkontext.organisation`), als auch für einen Personenkontext, für den
+   einer Organisation eine Sichtfreigabe erteilt wurde. 
 
    Ein READ zum Abfragen der Sichtfreigaben per `personenkontext.id` muss mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` erfolgen.
 

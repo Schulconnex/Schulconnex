@@ -4,9 +4,13 @@ tags:
 ---
 # Sichtfreigabe
 
-Datenmodell einer Sichtfreigabe.
+Sichtfreigaben für einen Personenkontext können nur durch die Organisation erstellt, aufgelistet oder gelöscht werden, welcher der Personenkontext zugeordnet ist (Attribut `personenkontext.organisation`). 
 
-Sichtfreigaben für einen Personenkontext können nur durch die Organisation erstellt, aufgelistet oder gelöscht werden, denen der Personenkontext zugeordnet ist (Attribut `personenkontext.organisation`). 
+Diese Organisation kann einer anderen Organisation (spezifiziert durch das Attribut `orgid`) eine Sichtfreigabe erteilen, welche der zweiten Organisation ermöglicht lesend auf diesen Personenkontext und den dazugehörigen Datensatz `person` zuzugreifen.
+
+Ein solcher Zugriff kann über die Attribute `von` und `bis` zeitlich begrenzt werden. 
+
+Unabhängig von dieser zeitlichen Begrenzung kann eine Sichtfreigabe jederzeit durch die DELETE API für Sichtfreigabe gelöscht werden. Dabei sind sowohl die Organisation, welche die Sichtfreigabe erteilt hat, als auch die zweite Organisation, für welche die Sichtfreigabe erteilt wurde, berechtigt diese Sichtfreigabe zu löschen.
 
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
