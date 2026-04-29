@@ -3,6 +3,7 @@ properties:
   referrer:
     description: ID der Gruppe im Quellsystem.
     type: string
+    nullable: true
     example: grup_678
   bezeichnung:
     description: Bezeichnung der Gruppe.
@@ -11,30 +12,38 @@ properties:
   thema:
     description: Thema der Gruppe in Kurzform.
     type: string
+    nullable: true
   beschreibung:
     description: Zusätzliche optionale Beschreibung der Gruppe.
     type: string
+    nullable: true
     maxLength: 1024
   typ:
     $ref: './components-code-Gruppentyp.yaml'
   bereich:
+    nullable: true
     $ref: './components-code-Gruppenbereich.yaml'
   optionen:
     type: array
+    nullable: true
     items:
       $ref: './components-code-Gruppenoption.yaml'
   differenzierung:
+    nullable: true
     $ref: './components-code-Gruppendifferenzierung.yaml'
   bildungsziele:
     type: array
+    nullable: true
     items:
       $ref: './components-code-Bildungsziel.yaml'
   jahrgangsstufen:
     type: array
+    nullable: true
     items:
       $ref: './components-code-Jahrgangsstufe.yaml'
   faecher:
     type: array
+    nullable: true
     example: [{kennung: "DE"},{bezeichnung: "Erste Hilfe"}]
     items:
      oneOf:
@@ -43,6 +52,7 @@ properties:
         - $ref: './components-Gruppe-faecher-kennung-bezeichnung.yaml'
   referenzgruppen:
     type: array
+    nullable: true
     items:
       type: object
       required:
@@ -54,9 +64,11 @@ properties:
           example: e70663cb-65c4-4ad5-a9f1-7edbc3c36c4b
         rollen:
           type: array
+          nullable: true
           items:
             $ref: './components-code-Gruppenrolle.yaml'
   laufzeit:
+    nullable: true
     oneOf:
       - $ref: './components-Laufzeit-von-bis.yaml'
       - $ref: './components-Laufzeit-vonlernperiode-bislernperiode.yaml'

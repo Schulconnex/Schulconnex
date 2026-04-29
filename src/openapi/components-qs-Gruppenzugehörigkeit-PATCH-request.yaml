@@ -12,6 +12,7 @@ properties:
   referrer:
     description: ID der Gruppenzugehörigkeit im Quellsystem.
     type: string
+    nullable: true
     example: grupz_2343_eng
   ktid:
     description: ID des Personenkontexts, welcher der Gruppe zugeordnet ist.
@@ -25,11 +26,13 @@ properties:
   von:
     description: Beginn der Gruppenzugehörigkeit. Dieser Zeitpunkt kann auch in der Zukunft liegen.
     type: string
+    nullable: true
     format: date
     example: "2022-08-01"
   bis:
     description: Ende der Gruppenzugehörigkeit.
     type: string
+    nullable: true
     format: date
     example: "2023-07-31"
   revision:
