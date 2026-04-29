@@ -43,7 +43,6 @@ properties:
       $ref: './components-code-Jahrgangsstufe.yaml'
   faecher:
     type: array
-    nullable: true
     example: [{kennung: "DE"},{bezeichnung: "Erste Hilfe"}]
     items:
      oneOf:
@@ -68,7 +67,6 @@ properties:
           items:
             $ref: './components-code-Gruppenrolle.yaml'
   laufzeit:
-    nullable: true
     oneOf:
       - $ref: './components-Laufzeit-von-bis.yaml'
       - $ref: './components-Laufzeit-vonlernperiode-bislernperiode.yaml'
