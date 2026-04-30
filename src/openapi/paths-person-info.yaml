@@ -100,7 +100,9 @@ get:
             "postleitzahl": "29614",
             "ort": "Soltau",
             "ortsteil": "Ahlften"
-            "bundesland": "03"
+            "verwaltungspolitischeKodierung: {
+              "bundesland": "03"
+            }
           },
           "typ": "Schule"
         },
