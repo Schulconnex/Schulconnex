@@ -29,7 +29,7 @@ get:
     `id` | String || Möglichkeit, die Ergebnisliste der Anfrage nach der „id” einer Organisation zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `kennung` | String (Code) || Möglichkeit, die Ergebnisliste der Anfrage nach „kennung” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `name` | String || Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „organisation.name” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
-    `typ` | String (Code) || Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „organisation.typ” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt die Codeliste [Organisationstyp](../../../codelisten#organisationstyp) zugrunde.
+    `typ` | String (Code) || Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut „organisation.typ” zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters mit dem Wert des Filter-Attributs übereinstimmt (equals). Dem Filterparameter liegt die Codeliste [Organisationstyp](../../../codelisten#organisationstyp-schulconnex) zugrunde.
 
     Die Möglichkeit, die Organisationsbeziehungen über die Filter `hat_als_organisationsbeziehungen` oder `ist_von_organisationsbeziehungen` ausgeben zu lassen, ist deprechiated und wird nicht weiter unterstützt.    
   parameters:

@@ -11,7 +11,42 @@ Alle Codes müssen als unabhängig von Groß-/Kleinschreibung interpretiert werd
 (sind nicht Case-sensitiv). Die Organisationsarten `"SCHULE"`, `"schule"`, `"Schule"` oder
 auch `"ScHuLe"` müssen als identisch angenommen werden.
 
-### Zukünftige Nutzung URI-basierter Codelisten
+## Codelisten Klassifizierung
+
+Die Schulconnex-Spezifikation unterscheidet vier Arten von Codelisten.
+
+### Schulconnex-eigene Codelisten
+
+Diese Listen enthalten Werte, welche von Schulconnex-Servern auch intern genutzt werden. Daher werden diese Codelisten in der Schulconnex-Spezifikation verbindlich definiert und sind auf allen Schulconnex-Servern identisch.
+
+Schulconnex-eigene Codelisten sind [Boolean](#boolean-schulconnex), [Gruppenrolle](#gruppenrolle-schulconnex), [Gruppentyp](#gruppentyp-schulconnex), [Organisationstyp](#organisationstyp-schulconnex), [Personenstatus](#personenstatus-schulconnex), [Rolle](#rolle-schulconnex) und  [Vertrauensstufe](#vertrauensstufe-schulconnex).
+
+### Globale Codelisten
+
+Globale Codelisten sind auf allen Schulconnex-Servern identisch. Die Wert innerhalb der Codelisten werden jedoch nicht durch die Schulconnex-Spezifikation festgelegt, sondern von einer externen Organisation. 
+
+Globale Codelisten sind [Erreichbarkeitstyp](#erreichbarkeitstyp-global), [Geschlecht](#geschlecht-global), [Organisationsbeziehungen](#organisationsbeziehungen-global) und ][Trägerschaft](#trägerschaft-global).
+
+### Länderspezifische Codelisten
+
+Länderspezifische Codelisten können von Bundesland zu Bundesland voneinander abweichen. Welche konkreten Codewerte in einer länderspezifische Codeliste auf einem spezifischen Schulconnex-Server unterstützt werden ist mit dem Betreiber des Servers abzuklären.
+
+Werden innerhalb dieser Schulconnex-Spezifikation konkrete Codewerte genannt, so sind diese als Beispiele zu verstehen und sind nicht verbindlich.
+
+Länderspezifische Codelisten sind [Beziehungen](#beziehungen-land), [Bildungsziel](#bildungsziel-land), [Fächerkanon](#fächerkanon-land), [Gruppenbereich](#gruppenbereich-land), [Gruppendifferenzierung](#gruppendifferenzierung-land), [Gruppenoption](#gruppenoption-land), 
+[Jahrgangsstufe](#jahrgangsstufe-land), [Lernperiode](#lernperiode-land) und [Lernperiodentyp](#lernperiodentyp-land).
+
+### Systemspezifische Codelisten
+
+Bei systemspezifischen Codelisten handelt es sich um Codelisten mit denen ein Schulconnex-Server den unterstützten Funktionsumfang signalisieren kann. Die Werte können sich daher zwischen individuellen Servern unterscheiden.
+
+Welche konkreten Codewerte in einer systemspezifischen Codeliste auf einem spezifischen Schulconnex-Server unterstützt werden ist mit dem Betreiber des Servers abzuklären.
+
+Werden innerhalb dieser Schulconnex-Spezifikation konkrete Codewerte genannt, so sind diese als Beispiele zu verstehen und sind nicht verbindlich.
+
+Die derzeit einzige systemspezifische Codeliste ist [Lokalisierung](#lokalisierung-system).
+
+## Zukünftige Nutzung URI-basierter Codelisten
 
 Schulconnex plant ab der Version 2.0 URI-basierte Codelisten zu nutzen. Wir folgen damit der Empfehlung des World Wide Web Consortium (W3C), ein Resource Description Framework (RDF) zu verwenden. Dies ermöglicht langfristig die Bereitstellung und maschinenlesbare Vernetzung zusätzlicher Informationen.
 
@@ -31,7 +66,9 @@ URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorte
 
 Als technisches Format ist geplant, für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifischen Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, womit die Bundesländer ihre spezifischen Anforderungen abbilden können.
 
-## Beziehungen
+## Unterstützte Codelisten
+
+### Beziehungen <span class="tag tag-cl-land">Land</span>
 
 Beziehungen ist eine Liste von Beziehungen, welche zwischen zwei Personen innerhalb von
 Personenkontexten bestehen können. Häufig wird hierüber eine Beziehung zwischen Erziehungsberechtigten
@@ -43,7 +80,7 @@ Code | Bezeichnung | Bemerkung
 SorgBer | Sorgeberechtigte/-r | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Sorgeberechtigten oder Sorgeberechtigte die Person B.
 SchB | Schulbegleiter/-in | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Schulbegleiter oder Schulbegleiterin die Person B.
 
-## Bildungsziel
+### Bildungsziel <span class="tag tag-cl-land">Land</span>
 
 Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
 dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung finden.
@@ -56,7 +93,7 @@ RS | Realschule
 GY-SEK-I | Gymnasium Sekundarstufe I
 GY-SEK-II | Gymnasium Sekundarstufe II
 
-## Boolean
+### Boolean <span class="tag tag-cl-eigen">Schulconnex</span>
 
 Die Codeliste „Boolean“ regelt das Mapping der deutschen Wörter „ja“ und „nein“ auf die
 englischen Begriffe „true“ und „false“.
@@ -66,7 +103,7 @@ Code | Bezeichnung
 Ja | True
 Nein | False
 
-## Erreichbarkeitstyp
+### Erreichbarkeitstyp <span class="tag tag-cl-global">Global</span>
 
 Erreichbarkeitstyp ist eine Liste von Kommunikationskanälen, über die eine Person oder
 Organisation erreicht werden kann.
@@ -77,7 +114,7 @@ E-Mail | E-Mail | E-Mail-Adressen müssen [RFC 5322][2] (Internet Message Format
 
 [2]: https://datatracker.ietf.org/doc/html/rfc5322
 
-## Fächerkanon
+### Fächerkanon <span class="tag tag-cl-land">Land</span>
 
 Hinweis: Die folgende Codeliste ist spezifisch für das Bundesland Niedersachsen und dient für andere
 Bundesländer nur als Beispiel, da der Fächerkanon abweichen kann. Der lokal gültige Fächerkanon
@@ -127,7 +164,7 @@ PTE | Profil Technik
 PGUS | Profil Gesundheit und Soziales
 NAT | Naturwissenschaften
 
-## Geschlecht
+### Geschlecht <span class="tag tag-cl-global">Global</span>
 
 Code | Bezeichnung
 --- | ---
@@ -136,7 +173,7 @@ w | weiblich
 d | divers
 x | keine Angabe
 
-## Gruppenbereich
+### Gruppenbereich <span class="tag tag-cl-land">Land</span>
 
 Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
 dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung
@@ -148,7 +185,7 @@ Pflicht | Pflichtunterricht
 Wahl | Wahlunterricht
 Wahlpflicht | Wahlpflichtunterricht
 
-## Gruppendifferenzierung
+### Gruppendifferenzierung <span class="tag tag-cl-land">Land</span>
 
 Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
 dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung finden.
@@ -161,7 +198,7 @@ Z | Z-Kurs
 gA | grundlegendes Anforderungsniveau
 eA | erhöhtes Anforderungsniveau
 
-## Gruppenoption
+### Gruppenoption <span class="tag tag-cl-land">Land</span>
 
  Hinweis: In der aktuellen Version sind noch keine Werte vorhanden.
  Hinweis: Diese Codeliste ist nicht länderübergreifend und potentiell von Bundesland zu Bundesland abweichend.
@@ -169,7 +206,7 @@ eA | erhöhtes Anforderungsniveau
 Code | Bezeichnung
 --- | ---
 
-## Gruppenrolle
+### Gruppenrolle <span class="tag tag-cl-eigen">Schulconnex</span>
 
 Code | Bezeichnung
 --- | ---
@@ -182,7 +219,7 @@ SchB | Schulbegleitung
 GMit | Gruppenmitglied
 GLeit | Gruppenleitung
 
-## Gruppentyp
+### Gruppentyp <span class="tag tag-cl-eigen">Schulconnex</span>
 
 Code | Bezeichnung
 --- | ---
@@ -190,7 +227,7 @@ Klasse | Schulklasse
 Kurs | Kurs/Unterricht
 Sonstig | Sonstige Gruppe
 
-## Jahrgangsstufe
+### Jahrgangsstufe <span class="tag tag-cl-land">Land</span>
 
 Code | Bezeichnung
 --- | ---
@@ -208,7 +245,7 @@ Code | Bezeichnung
 12 | Jahrgangsstufe 12
 13 | Jahrgangsstufe 13
 
-## Lernperiode
+### Lernperiode <span class="tag tag-cl-land">Land</span>
 
 Code | Bezeichnung | Beginn | Ende | Typ
 --- | --- | --- | --- | ---
@@ -231,14 +268,14 @@ Code | Bezeichnung | Beginn | Ende | Typ
 2027-1 | 1. Halbj. 27/28 | 2027-08-01 | 2028-01-31 | HJ
 2027-2 | 2. Halbj. 27/28 | 2028-02-01 | 2028-07-31 | HJ
 
-## Lernperiodentyp
+### Lernperiodentyp <span class="tag tag-cl-land">Land</span>
 
 Code | Bezeichnung
 --- | ---
 SJ | Schuljahr
 HJ | Schulhalbjahr
 
-## Lokalisierung
+### Lokalisierung <span class="tag tag-cl-system">System</span>
 
 Basierend auf [RFC 5646][1]. Beispiele finden sich in nachfolgender Tabelle.
 
@@ -253,7 +290,7 @@ en-GB | englisch (Vereinigtes Königreich)
 Hinweis: Dies ist die aktuell vom schulischen Anmeldeservice des Landes Niedersachsen (moin.schule)
 unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
 
-## Organisationsbeziehungen
+### Organisationsbeziehungen <span class="tag tag-cl-global">Global</span>
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
@@ -261,7 +298,7 @@ SchTrae | Schulträger | Hat eine Organisation A diese `hat_als` Beziehung zu ei
 SchBeh | Schulbehörde | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Schulbehörde die Organisation B, damit ist B also Schulbehörde von A.
 Medienzentrum | Medienzentrum | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Medienzentrum die Organisation B, damit ist B also Medienzentrum für A.
 
-## Organisationstyp
+### Organisationstyp <span class="tag tag-cl-eigen">Schulconnex</span>
 
 Code | Bezeichnung
 --- | ---
@@ -272,7 +309,7 @@ Behoerde | Behörde
 SchTrae | Schulträger
 Sonstige | sonstige Organisationen / Einrichtungen
 
-## Personenstatus
+### Personenstatus <span class="tag tag-cl-eigen">Schulconnex</span>
 
 Diese Codeliste gibt an, ob ein Personenkontext aktuell aktiv ist. 
 
@@ -280,7 +317,7 @@ Code | Bezeichnung
 --- | ---
 Aktiv | aktiv
 
-## Rolle
+### Rolle <span class="tag tag-cl-eigen">Schulconnex</span>
 
 Code | Bezeichnung
 --- | ---
@@ -294,7 +331,7 @@ SysAdmin | Systemadministrator/-in
 SchB | Schulbegleiter/-in
 NLehr | Nicht-lehrendes Personal
 
-## Trägerschaft
+### Trägerschaft <span class="tag tag-cl-global">Global</span>
 
 Code | Bezeichnung
 --- | ---
@@ -305,7 +342,7 @@ Code | Bezeichnung
 05 | Kirchlich
 06 | Sonstige
 
-## Vertrauensstufe
+### Vertrauensstufe <span class="tag tag-cl-eigen">Schulconnex</span>
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
