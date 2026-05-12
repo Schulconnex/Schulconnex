@@ -82,6 +82,8 @@ SchB | Schulbegleiter/-in | Hat eine Person A im Personenkontext diese `hat_als`
 
 ### Bildungsziel <span class="tag tag-cl-land">Land</span>
 
+Das Bildungsziel gibt Informationen über die Art der einer Schule.
+
 Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
 dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung finden.
 
@@ -115,6 +117,8 @@ E-Mail | E-Mail | E-Mail-Adressen müssen [RFC 5322][2] (Internet Message Format
 [2]: https://datatracker.ietf.org/doc/html/rfc5322
 
 ### Fächerkanon <span class="tag tag-cl-land">Land</span>
+
+Diese Codeliste bildet die an Schulen verfügbaren Fächern ab.
 
 Hinweis: Die folgende Codeliste ist spezifisch für das Bundesland Niedersachsen und dient für andere
 Bundesländer nur als Beispiel, da der Fächerkanon abweichen kann. Der lokal gültige Fächerkanon
@@ -166,6 +170,8 @@ NAT | Naturwissenschaften
 
 ### Geschlecht <span class="tag tag-cl-global">Global</span>
 
+Diese Codeliste bildet das Geschlecht einer Person ab.
+
 Code | Bezeichnung
 --- | ---
 m | männlich
@@ -174,6 +180,8 @@ d | divers
 x | keine Angabe
 
 ### Gruppenbereich <span class="tag tag-cl-land">Land</span>
+
+Diese Codeliste bildet die Art einer Gruppe ab, insbesondere ob sie verpflichtend oder wählbar ist.
 
 Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
 dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung
@@ -186,6 +194,8 @@ Wahl | Wahlunterricht
 Wahlpflicht | Wahlpflichtunterricht
 
 ### Gruppendifferenzierung <span class="tag tag-cl-land">Land</span>
+
+Differenzierung bei integriertem Unterricht oder in der gymnasialen Oberstufe (Erweiterungsebene, Grundebene).
 
 Hinweis: Diese Codeliste ist spezifisch für das Bundesland Niedersachsen. Bei Verwendung
 dieser API in anderen Bundesländern kann gegebenenfalls eine andere Codeliste Verwendung finden.
@@ -200,13 +210,17 @@ eA | erhöhtes Anforderungsniveau
 
 ### Gruppenoption <span class="tag tag-cl-land">Land</span>
 
- Hinweis: In der aktuellen Version sind noch keine Werte vorhanden.
- Hinweis: Diese Codeliste ist nicht länderübergreifend und potentiell von Bundesland zu Bundesland abweichend.
+Zusätzliche Optionen zur Gruppe, meistens sprachbezogen (bilingual, herkunftssprachlich).
+
+Hinweis: In der aktuellen Version sind noch keine Werte vorhanden.
+Hinweis: Diese Codeliste ist nicht länderübergreifend und potentiell von Bundesland zu Bundesland abweichend.
 
 Code | Bezeichnung
 --- | ---
 
 ### Gruppenrolle <span class="tag tag-cl-eigen">Schulconnex</span>
+
+Rollen einer Person innerhalb einer Gruppe.
 
 Code | Bezeichnung
 --- | ---
@@ -221,6 +235,8 @@ GLeit | Gruppenleitung
 
 ### Gruppentyp <span class="tag tag-cl-eigen">Schulconnex</span>
 
+Typ der Gruppe (Klasse, Kurs). 
+
 Code | Bezeichnung
 --- | ---
 Klasse | Schulklasse
@@ -228,6 +244,8 @@ Kurs | Kurs/Unterricht
 Sonstig | Sonstige Gruppe
 
 ### Jahrgangsstufe <span class="tag tag-cl-land">Land</span>
+
+Jahrgangsstufe (Jahrgangsstufe 1 bis Jahrgangsstufe 13)
 
 Code | Bezeichnung
 --- | ---
@@ -246,6 +264,9 @@ Code | Bezeichnung
 13 | Jahrgangsstufe 13
 
 ### Lernperiode <span class="tag tag-cl-land">Land</span>
+
+Lernperioden dienen zur Festlegung des Beginns oder des Endes einer Kurslaufzeit.
+Der Code einer Lernperiode legt sowohl Anfangsdatim, Enddatum, auch den Typ (Schuljahr oder Schulhalbjahr) fest.
 
 Code | Bezeichnung | Beginn | Ende | Typ
 --- | --- | --- | --- | ---
@@ -270,12 +291,16 @@ Code | Bezeichnung | Beginn | Ende | Typ
 
 ### Lernperiodentyp <span class="tag tag-cl-land">Land</span>
 
+Dauer einer Lernperiode (Schuljahr oder Schulhalbjahr)
+
 Code | Bezeichnung
 --- | ---
 SJ | Schuljahr
 HJ | Schulhalbjahr
 
 ### Lokalisierung <span class="tag tag-cl-system">System</span>
+
+Erlaubt die Beschreibung der Bevorzugten Lokalisierungseinstellung einer Person für Anwendungen. 
 
 Basierend auf [RFC 5646][1]. Beispiele finden sich in nachfolgender Tabelle.
 
@@ -292,6 +317,8 @@ unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
 
 ### Organisationsbeziehungen <span class="tag tag-cl-global">Global</span>
 
+Organisationsbeziehungen ist eine Liste von Beziehungen, welche zwischen zwei Organisationen bestehen können. Häufig wird hierüber eine Beziehung einer Schule und dem Schulträger hergestellt, aber auch Organisationsbeziehungen wie Schulbehörden oder Medienzentren können darüber abgebildet werden.
+
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
 SchTrae | Schulträger | Hat eine Organisation A diese `hat_als` Beziehung zu einer Organisation B, so hat A als Schulträger die Organisation B, damit ist B also Schulträger von A.
@@ -300,6 +327,7 @@ Medienzentrum | Medienzentrum | Hat eine Organisation A diese `hat_als` Beziehun
 
 ### Organisationstyp <span class="tag tag-cl-eigen">Schulconnex</span>
 
+Diese Codeliste gibt die möglichen Typ einer Organisation an, wie Schule oder Medienzentrum.
 Code | Bezeichnung
 --- | ---
 Schule | Schule
@@ -319,6 +347,8 @@ Aktiv | aktiv
 
 ### Rolle <span class="tag tag-cl-eigen">Schulconnex</span>
 
+Mit Codes dieser Liste wird die Rolle einer Person innerhalb eines Personenkontexts beschrieben.
+
 Code | Bezeichnung
 --- | ---
 Lern | Lernende/-r
@@ -333,6 +363,8 @@ NLehr | Nicht-lehrendes Personal
 
 ### Trägerschaft <span class="tag tag-cl-global">Global</span>
 
+Art der Trägerschaft bei Schul-Organisationen.
+
 Code | Bezeichnung
 --- | ---
 01 | Bund
@@ -343,6 +375,8 @@ Code | Bezeichnung
 06 | Sonstige
 
 ### Vertrauensstufe <span class="tag tag-cl-eigen">Schulconnex</span>
+
+Die Vertrauensstufe gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden.
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
