@@ -327,7 +327,7 @@ Medienzentrum | Medienzentrum | Hat eine Organisation A diese `hat_als` Beziehun
 
 ### Organisationstyp <span class="tag tag-cl-eigen">Schulconnex</span>
 
-Diese Codeliste gibt die möglichen Typ einer Organisation an, wie Schule oder Medienzentrum.
+Diese Codeliste gibt den Typ einer Organisation an, wie Schule oder Medienzentrum.
 Code | Bezeichnung
 --- | ---
 Schule | Schule
