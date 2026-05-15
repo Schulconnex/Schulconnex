@@ -26,7 +26,7 @@ Der Body der Anfrage besteht aus dem JSON-Objekt `requests`, das eine Liste von 
 Jeder Aufruf in der Liste enthält eine ID, um den Aufruf zu identifizieren, die URL der aufgerufenen API ohne Server- und Versionsnamen (also beispielsweise `/personenkontext/123454/beziehungen` zum Zugriff auf Beziehungen zu Personenkontext 123454), die zu verwendende HTTP-Methode (in dem Beispiel `POST`, um eine Beziehung anzulegen, oder `GET`, um existierende Beziehungen auszulesen), gefolgt von einem JSON-Objekt mit dem Body des Requests bei `POST-` oder `DELETE-`Aufrufen.
 
 <details> 
-<summary>Beispiel JSON BATCH Request (einklappen/ausklappen)</summary>
+<summary>Beispiel JSON-BATCH-Request (einklappen/ausklappen)</summary>
 ```jsx
 {
   "requests": [
