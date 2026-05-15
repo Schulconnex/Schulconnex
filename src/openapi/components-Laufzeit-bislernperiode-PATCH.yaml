@@ -1,0 +1,5 @@
+type: object
+properties:
+  bislernperiode:
+    nullable: true
+    $ref: './components-code-Lernperiode.yaml'
