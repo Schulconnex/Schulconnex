@@ -18,7 +18,7 @@ enum:
   - "16"
 description: >
     Wie folgt:
-      *  01 Schleswig-Holstein
+      *  01 | Schleswig-Holstein
       *  02 | Hamburg
       *  03 | Niedersachsen
       *  04 | Bremen
