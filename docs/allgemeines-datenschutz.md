@@ -16,7 +16,7 @@ Für alle nicht technisch notwendigen Attribute eines Datenmodells ist eine expl
 
 * Die Bereitstellung von Daten einer Organisation an eine andere Organisation muss explizit über eine Sichtfreigabe erfolgen, die jederzeit widerrufen werden kann. Sichtfreigaben erlauben anderen Organisationen nur lesenden Zugriff.
 
-* Das vorliegen einer Auskunftssperre kann durch ein Attribut markiert werden. Darauf basierend können Schulconnex-Server und Quellsysteme die Weitergabe von schutzbedürftigen Daten einschränken.
+* Das Vorliegen einer Auskunftssperre oder eines Sperrvermerks nach §§ 51, 52 Bundesmeldegesetz kann durch ein Attribut markiert werden. Darauf basierend können Schulconnex-Server und Quellsysteme die Weitergabe von schutzbedürftigen Daten einschränken.
 
 * Hat eine Person das Recht auf Einschränkung der Verarbeitung ihrer Daten nach Artikel 18 der EU-Datenschutz-Grundverordnung (DSGVO) in Anspruch genommen, so können diese Daten entsprechend markiert werden, so dass eine weitere Verarbeitung vorerst nicht stattfindet.
 
