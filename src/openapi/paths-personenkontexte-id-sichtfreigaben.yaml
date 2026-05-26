@@ -13,7 +13,7 @@ post:
     Einsicht freigegeben werden. Dabei kann die andere Organisation auf diese freigegebenen Daten
     nur lesend zugreifen. Das Erstellen oder Ändern der Daten durch die andere Organisation ist nicht zulässig oder möglich.
 
-    Eine Sichtfreigabe für einen Personenkontext kann nur durch die Organisation erfolgen, der ein Personenkontext zugeordnet ist
+    Eine Sichtfreigabe für einen Personenkontext kann nur durch die Organisation erstellt werden, welcher der Personenkontext zugeordnet ist
     (Attribut `personenkontext.organisation`). 
 
     Sichtfreigaben können nur für Personenkontexte erteilt werden. Dabei ist über die API immer nur die Sichtfreigabe
