@@ -21,30 +21,21 @@ Diese Listen enthalten Werte, welche von Schulconnex-Servern auch intern genutzt
 
 Schulconnex-eigene Codelisten sind [Boolean](#boolean-schulconnex), [Gruppenrolle](#gruppenrolle-schulconnex), [Gruppentyp](#gruppentyp-schulconnex), [Organisationstyp](#organisationstyp-schulconnex), [Personenstatus](#personenstatus-schulconnex), [Rolle](#rolle-schulconnex) und  [Vertrauensstufe](#vertrauensstufe-schulconnex).
 
-### Globale Codelisten
+### Generische Codelisten
 
-Globale Codelisten sind auf allen Schulconnex-Servern identisch. Die Wert innerhalb der Codelisten werden jedoch nicht durch die Schulconnex-Spezifikation festgelegt, sondern von einer externen Organisation. 
+Generische Codelisten sind auf allen Schulconnex-Servern identisch. Die Wert innerhalb der Codelisten werden jedoch nicht durch die Schulconnex-Spezifikation festgelegt, sondern von einer externen Organisation. 
 
-Globale Codelisten sind [Erreichbarkeitstyp](#erreichbarkeitstyp-global), [Geschlecht](#geschlecht-global), [Organisationsbeziehungen](#organisationsbeziehungen-global) und ][Trägerschaft](#trägerschaft-global).
+Generische Codelisten sind [Erreichbarkeitstyp](#erreichbarkeitstyp-generisch), [Geschlecht](#geschlecht-generisch), [Organisationsbeziehungen](#organisationsbeziehungen-generisch) und [Trägerschaft](#trägerschaft-generisch).
 
-### Länderspezifische Codelisten
+### Lokale Codelisten
 
-Länderspezifische Codelisten können von Bundesland zu Bundesland voneinander abweichen. Welche konkreten Codewerte in einer länderspezifische Codeliste auf einem spezifischen Schulconnex-Server unterstützt werden ist mit dem Betreiber des Servers abzuklären.
-
-Werden innerhalb dieser Schulconnex-Spezifikation konkrete Codewerte genannt, so sind diese als Beispiele zu verstehen und sind nicht verbindlich.
-
-Länderspezifische Codelisten sind [Beziehungen](#beziehungen-land), [Bildungsziel](#bildungsziel-land), [Fächerkanon](#fächerkanon-land), [Gruppenbereich](#gruppenbereich-land), [Gruppendifferenzierung](#gruppendifferenzierung-land), [Gruppenoption](#gruppenoption-land), 
-[Jahrgangsstufe](#jahrgangsstufe-land), [Lernperiode](#lernperiode-land) und [Lernperiodentyp](#lernperiodentyp-land).
-
-### Systemspezifische Codelisten
-
-Bei systemspezifischen Codelisten handelt es sich um Codelisten mit denen ein Schulconnex-Server den unterstützten Funktionsumfang signalisieren kann. Die Werte können sich daher zwischen individuellen Servern unterscheiden.
-
-Welche konkreten Codewerte in einer systemspezifischen Codeliste auf einem spezifischen Schulconnex-Server unterstützt werden ist mit dem Betreiber des Servers abzuklären.
+Lokale Codelisten können von Bundesland zu Bundesland oder in unterschiedlichen Domänen voneinander abweichen. Welche konkreten Codewerte in einer lokalen Codeliste auf einem spezifischen Schulconnex-Server unterstützt werden ist mit dem Betreiber des Servers abzuklären.
 
 Werden innerhalb dieser Schulconnex-Spezifikation konkrete Codewerte genannt, so sind diese als Beispiele zu verstehen und sind nicht verbindlich.
 
-Die derzeit einzige systemspezifische Codeliste ist [Lokalisierung](#lokalisierung-system).
+Länderspezifische Codelisten sind [Beziehungen](#beziehungen-lokal), [Bildungsziel](#bildungsziel-lokal), [Fächerkanon](#fächerkanon-lokal), [Gruppenbereich](#gruppenbereich-lokal), [Gruppendifferenzierung](#gruppendifferenzierung-lokal), [Gruppenoption](#gruppenoption-lokal), 
+[Jahrgangsstufe](#jahrgangsstufe-lokal), [Lernperiode](#lernperiode-lokal) und [Lernperiodentyp](#lernperiodentyp-lokal).
+
 
 ## Zukünftige Nutzung URI-basierter Codelisten
 
@@ -64,11 +55,9 @@ URI-basierte Codelistenwerte bieten in diesem Kontext eine ganze Reihe von Vorte
 
 * __Standardisierung__: Die Verwendung von URI-Codelistenwerten fördert die Einhaltung von Standards und Best-Practices, was die Qualität und Zuverlässigkeit der APIs verbessert.
 
-Als technisches Format ist geplant, für alle Codelisten OASIS Genericode zu verwenden. Auf diese Weise können wir externe Listen wie etwa die XÖV-Codelisten zu „Erreichbarkeit“ (KoSIT) oder „Jahrgangsstufe“ (XSchule) nachnutzen. Darüber hinaus unterscheiden wir zwischen Schulconnex-eigenen Codelisten und länderspezifischen Listen wie z.B. „Gruppenbereich“, „Bildungsziel“ oder "Fächerkanon“, womit die Bundesländer ihre spezifischen Anforderungen abbilden können.
-
 ## Unterstützte Codelisten
 
-### Beziehungen <span class="tag tag-cl-land">Land</span>
+### Beziehungen <span class="tag tag-cl-lokal">Lokal</span>
 
 Beziehungen ist eine Liste von Beziehungen, welche zwischen zwei Personen innerhalb von
 Personenkontexten bestehen können. Häufig wird hierüber eine Beziehung zwischen Erziehungsberechtigten
@@ -80,7 +69,7 @@ Code | Bezeichnung | Bemerkung
 SorgBer | Sorgeberechtigte/-r | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Sorgeberechtigten oder Sorgeberechtigte die Person B.
 SchB | Schulbegleiter/-in | Hat eine Person A im Personenkontext diese `hat_als` Beziehung zu einem Personenkontext der Person B, so hat A als Schulbegleiter oder Schulbegleiterin die Person B.
 
-### Bildungsziel <span class="tag tag-cl-land">Land</span>
+### Bildungsziel <span class="tag tag-cl-lokal">Lokal</span>
 
 Das Bildungsziel gibt Informationen über die Art der einer Schule.
 
@@ -105,7 +94,7 @@ Code | Bezeichnung
 Ja | True
 Nein | False
 
-### Erreichbarkeitstyp <span class="tag tag-cl-global">Global</span>
+### Erreichbarkeitstyp <span class="tag tag-cl-generisch">Generisch</span>
 
 Erreichbarkeitstyp ist eine Liste von Kommunikationskanälen, über die eine Person oder
 Organisation erreicht werden kann.
@@ -116,7 +105,7 @@ E-Mail | E-Mail | E-Mail-Adressen müssen [RFC 5322][2] (Internet Message Format
 
 [2]: https://datatracker.ietf.org/doc/html/rfc5322
 
-### Fächerkanon <span class="tag tag-cl-land">Land</span>
+### Fächerkanon <span class="tag tag-cl-lokal">Lokal</span>
 
 Diese Codeliste bildet die an Schulen verfügbaren Fächern ab.
 
@@ -168,7 +157,7 @@ PTE | Profil Technik
 PGUS | Profil Gesundheit und Soziales
 NAT | Naturwissenschaften
 
-### Geschlecht <span class="tag tag-cl-global">Global</span>
+### Geschlecht <span class="tag tag-cl-generisch">Generisch</span>
 
 Diese Codeliste bildet das Geschlecht einer Person ab.
 
@@ -179,7 +168,7 @@ w | weiblich
 d | divers
 x | keine Angabe
 
-### Gruppenbereich <span class="tag tag-cl-land">Land</span>
+### Gruppenbereich <span class="tag tag-cl-lokal">Lokal</span>
 
 Diese Codeliste bildet die Art einer Gruppe ab, insbesondere ob sie verpflichtend oder wählbar ist.
 
@@ -193,7 +182,7 @@ Pflicht | Pflichtunterricht
 Wahl | Wahlunterricht
 Wahlpflicht | Wahlpflichtunterricht
 
-### Gruppendifferenzierung <span class="tag tag-cl-land">Land</span>
+### Gruppendifferenzierung <span class="tag tag-cl-lokal">Lokal</span>
 
 Differenzierung bei integriertem Unterricht oder in der gymnasialen Oberstufe (Erweiterungsebene, Grundebene).
 
@@ -208,7 +197,7 @@ Z | Z-Kurs
 gA | grundlegendes Anforderungsniveau
 eA | erhöhtes Anforderungsniveau
 
-### Gruppenoption <span class="tag tag-cl-land">Land</span>
+### Gruppenoption <span class="tag tag-cl-lokal">Lokal</span>
 
 Zusätzliche Optionen zur Gruppe, meistens sprachbezogen (bilingual, herkunftssprachlich).
 
@@ -243,7 +232,7 @@ Klasse | Schulklasse
 Kurs | Kurs/Unterricht
 Sonstig | Sonstige Gruppe
 
-### Jahrgangsstufe <span class="tag tag-cl-land">Land</span>
+### Jahrgangsstufe <span class="tag tag-cl-lokal">Lokal</span>
 
 Jahrgangsstufe (Jahrgangsstufe 1 bis Jahrgangsstufe 13)
 
@@ -263,7 +252,7 @@ Code | Bezeichnung
 12 | Jahrgangsstufe 12
 13 | Jahrgangsstufe 13
 
-### Lernperiode <span class="tag tag-cl-land">Land</span>
+### Lernperiode <span class="tag tag-cl-lokal">Lokal</span>
 
 Lernperioden dienen zur Festlegung des Beginns oder des Endes einer Kurslaufzeit.
 Der Code einer Lernperiode legt sowohl Anfangsdatim, Enddatum, auch den Typ (Schuljahr oder Schulhalbjahr) fest.
@@ -288,8 +277,24 @@ Code | Bezeichnung | Beginn | Ende | Typ
 2027 | Schuljahr 2027/28 | 2027-08-01 | 2028-07-31 | SJ
 2027-1 | 1. Halbj. 27/28 | 2027-08-01 | 2028-01-31 | HJ
 2027-2 | 2. Halbj. 27/28 | 2028-02-01 | 2028-07-31 | HJ
+2028 | Schuljahr 2028/29 | 2028-08-01 | 2029-07-31 | SJ
+2028-1 | 1. Halbj. 28/29 | 2028-08-01 | 2029-01-31 | HJ
+2028-2 | 2. Halbj. 28/29 | 2029-02-01 | 2029-07-31 | HJ
+2029 | Schuljahr 2029/30 | 2029-08-01 | 2030-07-31 | SJ
+2029-1 | 1. Halbj. 29/30 | 2029-08-01 | 2030-01-31 | HJ
+2029-2 | 2. Halbj. 29/30 | 2030-02-01 | 2030-07-31 | HJ
+2030 | Schuljahr 2030/31 | 2030-08-01 | 2031-07-31 | SJ
+2030-1 | 1. Halbj. 30/31 | 2030-08-01 | 2031-01-31 | HJ
+2030-2 | 2. Halbj. 30/31 | 2031-02-01 | 2031-07-31 | HJ
+2031 | Schuljahr 2031/32 | 2031-08-01 | 2032-07-31 | SJ
+2031-1 | 1. Halbj. 31/32 | 2031-08-01 | 2032-01-31 | HJ
+2031-2 | 2. Halbj. 31/32 | 2032-02-01 | 2032-07-31 | HJ
+2032 | Schuljahr 2032/33 | 2032-08-01 | 2033-07-31 | SJ
+2032-1 | 1. Halbj. 32/33 | 2032-08-01 | 2033-01-31 | HJ
+2032-2 | 2. Halbj. 32/33 | 2033-02-01 | 2033-07-31 | HJ
 
-### Lernperiodentyp <span class="tag tag-cl-land">Land</span>
+
+### Lernperiodentyp <span class="tag tag-cl-lokal">Lokal</span>
 
 Dauer einer Lernperiode (Schuljahr oder Schulhalbjahr)
 
@@ -298,24 +303,7 @@ Code | Bezeichnung
 SJ | Schuljahr
 HJ | Schulhalbjahr
 
-### Lokalisierung <span class="tag tag-cl-system">System</span>
-
-Erlaubt die Beschreibung der Bevorzugten Lokalisierungseinstellung einer Person für Anwendungen. 
-
-Basierend auf [RFC 5646][1]. Beispiele finden sich in nachfolgender Tabelle.
-
-[1]: https://datatracker.ietf.org/doc/html/rfc5646
-
-Code | Bezeichnung
---- | ---
-de | deutsch
-de-XX | deutsch, Anrede du, einfache Sprache
-en-GB | englisch (Vereinigtes Königreich)
-
-Hinweis: Dies ist die aktuell vom schulischen Anmeldeservice des Landes Niedersachsen (moin.schule)
-unterstützte Codeliste. Sie kann auf anderen Schulconnex-Servern abweichen.
-
-### Organisationsbeziehungen <span class="tag tag-cl-global">Global</span>
+### Organisationsbeziehungen <span class="tag tag-cl-generisch">Generisch</span>
 
 Organisationsbeziehungen ist eine Liste von Beziehungen, welche zwischen zwei Organisationen bestehen können. Häufig wird hierüber eine Beziehung einer Schule und dem Schulträger hergestellt, aber auch Organisationsbeziehungen wie Schulbehörden oder Medienzentren können darüber abgebildet werden.
 
@@ -328,6 +316,7 @@ Medienzentrum | Medienzentrum | Hat eine Organisation A diese `hat_als` Beziehun
 ### Organisationstyp <span class="tag tag-cl-eigen">Schulconnex</span>
 
 Diese Codeliste gibt den Typ einer Organisation an, wie Schule oder Medienzentrum.
+
 Code | Bezeichnung
 --- | ---
 Schule | Schule
@@ -361,7 +350,7 @@ SysAdmin | Systemadministrator/-in
 SchB | Schulbegleiter/-in
 NLehr | Nicht-lehrendes Personal
 
-### Trägerschaft <span class="tag tag-cl-global">Global</span>
+### Trägerschaft <span class="tag tag-cl-generisch">Generisch</span>
 
 Art der Trägerschaft bei Schul-Organisationen.
 
