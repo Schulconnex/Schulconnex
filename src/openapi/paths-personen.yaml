@@ -22,7 +22,8 @@ get:
     --- | --- | ---
     `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `mandant` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `mandant` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters unabhängig von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
-    `organisation.id` | String | Mit diesem Filter können die Datensätze aller Personen ausgegeben werden, welche einer Organisation zugeordnet sind. 
+    `stammorganisation` | String | Mit diesem Filter können die Datensätze aller Personen ausgegeben werden, welche einer Stammorganisation zugeordnet sind. 
+    `organisation.id` | String | Mit diesem Filter können Datensätze der Personen ausgegeben werden, welche mindestens einen Personenkontext besitzen, welche der Organisation zugeordnet ist. Nur die Daten zur Person und die Personenkontexte mit der angegeben Organisations-ID werden geliefert. 
     `familienname` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `person.name.familienname` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filter-parameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `vorname` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `person.name.vorname` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filter-parameters ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
     `sichtfreigabe` | String | Erlaubt es Personen, abhängig davon aufzulisten, ob diese von einer anderen Organisation zum Lesen freigegeben wurden. Die möglichen Optionen sind `sichtfreigabe=ja`, um nur die durch externe Organisationen freigegebenen Personen beziehungsweise Personenkontexte aufzulisten und `sichtfreigabe=nein`, um nur eigene Personen beziehungsweise Personenkontexte aufzulisten. Wird nicht nach Sichtfreigabe gefiltert, so werden alle lesbaren Personen, beziehungsweise Personenkontexte geliefert.
@@ -45,6 +46,10 @@ get:
         type: string
     - in: query
       name: mandant
+      schema:
+        type: string
+    - in: query
+      name: stammorganisation
       schema:
         type: string
     - in: query
