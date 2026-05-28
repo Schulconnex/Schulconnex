@@ -10,7 +10,7 @@ Diese Organisation kann einer anderen Organisation (spezifiziert durch das Attri
 
 Ein solcher Zugriff kann über die Attribute `von` und `bis` zeitlich begrenzt werden. 
 
-Unabhängig von dieser zeitlichen Begrenzung kann eine Sichtfreigabe jederzeit durch die DELETE API für Sichtfreigabe gelöscht werden. Dabei sind sowohl die Organisation, welche die Sichtfreigabe erteilt hat, als auch die zweite Organisation, für welche die Sichtfreigabe erteilt wurde, berechtigt diese Sichtfreigabe zu löschen.
+Unabhängig von dieser zeitlichen Begrenzung kann eine Sichtfreigabe jederzeit mit einer DELETE-Anfrage gelöscht werden. Dabei ist sowohl die Organisation, welche die Sichtfreigabe erteilt hat, als auch die zweite Organisation, welcher die Sichtfreigabe erteilt wurde, berechtigt, diese Sichtfreigabe zu löschen.
 
 Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
