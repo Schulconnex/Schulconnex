@@ -13,7 +13,7 @@ auch `"ScHuLe"` müssen als identisch angenommen werden.
 
 ## Codelisten Klassifizierung
 
-Die Schulconnex-Spezifikation unterscheidet vier Arten von Codelisten.
+Die Schulconnex-Spezifikation unterscheidet drei Arten von Codelisten.
 
 ### Schulconnex-eigene Codelisten
 
@@ -29,7 +29,7 @@ Generische Codelisten sind [Erreichbarkeitstyp](#erreichbarkeitstyp-generisch), 
 
 ### Lokale Codelisten
 
-Lokale Codelisten können von Bundesland zu Bundesland oder in unterschiedlichen Domänen voneinander abweichen. Welche konkreten Codewerte in einer lokalen Codeliste auf einem spezifischen Schulconnex-Server unterstützt werden ist mit dem Betreiber des Servers abzuklären.
+Lokale Codelisten können in unterschiedlichen Domänen voneinander abweichen, z. B. von Bundesland zu Bundesland. Welche konkreten Codewerte in einer lokalen Codeliste auf einem spezifischen Schulconnex-Server unterstützt werden, ist mit dem Betreiber des Servers abzuklären.
 
 Werden innerhalb dieser Schulconnex-Spezifikation konkrete Codewerte genannt, so sind diese als Beispiele zu verstehen und sind nicht verbindlich.
 
