@@ -4,7 +4,7 @@ tags:
 ---
 # Sichtfreigabe
 
-Sichtfreigaben für einen Personenkontext können nur durch die Organisation erstellt, aufgelistet oder gelöscht werden, welcher der Personenkontext zugeordnet ist (Attribut `personenkontext.organisation`). 
+Sichtfreigaben für einen Personenkontext können durch die Organisation erstellt, aufgelistet oder gelöscht werden, welcher der Personenkontext zugeordnet ist (Attribut `personenkontext.organisation`). 
 
 Diese Organisation kann einer anderen Organisation (spezifiziert durch das Attribut `orgid`) eine Sichtfreigabe erteilen, welche der zweiten Organisation ermöglicht lesend auf diesen Personenkontext und den dazugehörigen Datensatz `person` zuzugreifen.
 
