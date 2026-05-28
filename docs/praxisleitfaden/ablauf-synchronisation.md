@@ -142,7 +142,7 @@ Anlegen | <ul><li>POST `/personen/`</li><li>POST `/personen/{id}/personenkontext
 Beim Aktualisieren über PUT muss der gesamte Datensatz
 mitgegeben werden. Es ist darauf zu achten, dass das Quellsystem dabei nicht unbeabsichtigt Daten löscht.
 
-Beim Modifizieren über PATCH ist es ausreichend nur die geänderten Attribute zu übermitteln.
+Beim Modifizieren über PATCH ist es ausreichend, nur die geänderten Attribute zu übermitteln.
 
 ### Schritt 6: Importieren bestätigter Datensätze in das Quellsystem
 
@@ -195,7 +195,7 @@ mitgegeben werden. Es ist darauf zu achten, dass das Quellsystem dabei nicht unb
 löscht, insbesondere dürfen nicht Daten gelöscht werden, die von anderen Quellsystemen der Organisation
 benötigt oder verwaltet werden.
 
-Beim Modifizieren über PATCH ist es ausreichend nur die geänderten Attribute zu übermitteln.
+Beim Modifizieren über PATCH ist es ausreichend, nur die geänderten Attribute zu übermitteln.
 
 Falls die Synchronisation im Zusammenhang oder direkt nach einem Schuljahres- oder
 Schulhalbjahreswechsel stattfindet, müssen Anforderungen berücksichtigt werden, die in
