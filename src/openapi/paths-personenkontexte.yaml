@@ -7,7 +7,7 @@ get:
   summary: Auflistung von Personenkontexten
   description: |
     Die Schnittstelle `/personenkontexte` bezieht sich auf das Anfordern und die
-    Auflistung von Personenkontexten auf die das Quellsystem zugreifen darf.
+    Auflistung von Personenkontexten, auf die das Quellsystem zugreifen darf.
 
     Die Schnittstelle `/personenkontexte` ermöglicht das Verwenden von Filterparametern
     zur Präzisierung der Anfrage bei HTTP-GET. Werden mehrere Filter angegeben, so sind
