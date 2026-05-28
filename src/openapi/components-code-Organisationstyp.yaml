@@ -5,6 +5,7 @@ enum:
   - Medienzentrum
   - Behoerde
   - SchTrae
+  - Studienseminar
   - Sonstige
 description: >
     Wie folgt:
@@ -13,4 +14,5 @@ description: >
       * Medienzentrum
       * Behörde
       * Schulträger
+      * Studienseminar
       * Sonstige sonstige Organisationen / Einrichtungen

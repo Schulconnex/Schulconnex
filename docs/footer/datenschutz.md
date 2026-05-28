@@ -90,10 +90,10 @@ Weitere Informationen dazu können Sie der allgemeinen Datenschutzerklärung von
 
 ### Verarbeitung personenbezogener Daten durch das FWU
 
-Bei der Website [schulconnex.de](https://schulconnex.de) handelt es sich um eine sogenannte statische Website. Die FWU erhebt oder speichert bei Ihrem Besuch keine personenbezogenen Daten. Auf die vom Plattformbetreiber erhobenen personenbezogenen Daten haben wir keinen Einfluss und erhalten keinen Zugriff.
+Bei der Website [schulconnex.de](https://schulconnex.de) handelt es sich um eine sogenannte statische Website. Das FWU erhebt oder speichert bei Ihrem Besuch keine personenbezogenen Daten. Auf die vom Plattformbetreiber erhobenen personenbezogenen Daten haben wir keinen Einfluss und erhalten keinen Zugriff.
 
 ### Empfänger
 
 Informationen zur Weitergabe der durch GitHub erhobenen personenbezogenen Daten und zu Datentransfers in Drittländer finden Sie [hier](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) bzw. [hier](https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement#lawful-bases-for-processing-personal-data-applicable-to-eea-and-uk-end-users).
 
-Die FWU übermittelt keine personenbezogenen Daten an Dritte, da wir im Rahmen des Websitebesuchs keine personenbezogenen Daten erheben (s.o.).
+Das FWU übermittelt keine personenbezogenen Daten an Dritte, da wir im Rahmen des Websitebesuchs keine personenbezogenen Daten erheben (s.o.).

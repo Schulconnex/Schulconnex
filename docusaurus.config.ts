@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://schulconnex.github.io',
+  url: 'https://schulconnex.de',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -49,7 +49,7 @@ const config: Config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'Version 1.6',
+              label: 'Version 1.7',
               // path: '1.5',
             },
           },
@@ -181,6 +181,11 @@ const config: Config = {
           {
             title: 'Community',
             items: [
+              {
+                label: 'Beteiligung',
+                to: `docs/footer/beteiligung`,
+              },
+
               {
                 label: 'GitHub',
                 href: 'https://github.com/Schulconnex/Schulconnex',

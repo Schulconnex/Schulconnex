@@ -118,3 +118,7 @@
 [data-theme='light'] {
   --github-logo-color-primary: #000000;
 }
+
+code[class*='codeBlockLinesWithNumbering'] > .theme-code-block-highlighted-line {
+  display: table-row;
+}
