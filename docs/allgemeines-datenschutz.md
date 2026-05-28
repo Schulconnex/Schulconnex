@@ -19,6 +19,6 @@ Technische Identifier für Datenobjekte werden für jeden Dienst einzeln pseudon
 Die Bereitstellung von Daten einer Organisation an eine andere Organisation muss explizit über eine Sichtfreigabe erfolgen, die jederzeit widerrufen werden kann. Sichtfreigaben erlauben anderen Organisationen nur lesenden Zugriff.
 
 ## Möglichkeit der Auskunftssperre
-Für Personen mit besonderem Schutzbedarf besteht die Möglichkeit eine Auskunftssperre zu setzen, um die Übertragung von Informationen an andere Quellsysteme oder Dienste zu blockieren.
+Für Personen mit besonderem Schutzbedarf besteht die Möglichkeit, eine Auskunftssperre zu setzen, um die Übertragung von Informationen an andere Quellsysteme oder Dienste zu blockieren.
 
 Weiterhin stellt die Schulconnex-Spezifikation einen informativen Praxisleitfaden für die Implementierung der  Abläufe zum Löschen von Personen-Daten und Personenkontext-Daten bereit, sowie Mechanismen diese Löschanforderungen auch an Dienste zu liefern, welche die Daten bereits genutzt haben und eventuell lokale Kopien halten.
