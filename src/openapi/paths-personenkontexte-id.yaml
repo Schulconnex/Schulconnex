@@ -231,7 +231,7 @@ patch:
     content:
       application/json:
         schema:
-          $ref: './components-qs-Personenkontext-PUT-request.yaml'
+          $ref: './components-qs-Personenkontext-PATCH-request.yaml'
   responses:
     '200':
       description: OK
