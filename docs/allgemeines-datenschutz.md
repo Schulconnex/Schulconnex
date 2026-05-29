@@ -7,14 +7,16 @@ tags:
 
 Neben den gebräuchlichen technischen-organisatorischen Maßnahmen beim Betrieb von Schulconnex-Servern, unterstützt die Schulconnex-Spezifikation den Datenschutz bereits durch eine Reihe von Designentscheidungen.
 
-Insbesondere beinhalten diese als verbindliche Vorgaben:
-* Datensparsamkeit als Grundprinzip (Privacy by Design und Privacy by Default)
+## Datensparsamkeit als Grundprinzip (Privacy by Design und Privacy by Default)
 Prinzipiell werden an Dienste nur Daten ausgeliefert, welche von dem Dienst auch benötigt werden. Für jedes Datenmodell wird zwischen dem Server-Betreiber und dem Dienstanbieter individuell vertraglich festgelegt, welche Daten dem Dienst bereitgestellt werden.
+
 Für alle nicht technisch notwendigen Attribute eines Datenmodells ist eine explizite Freigabe des Attributes notwendig. Die Standardeinstellung ist somit die Nicht-Bereitstellung von Daten.
 
-* Technische Identifier für Datenobjekte werden für jeden Dienst einzeln pseudonymisiert und gelten ausschließlich für diesen Dienst.
+## Individuell pseudonymisierte Identifier für Dienste
+Technische Identifier für Datenobjekte werden für jeden Dienst einzeln pseudonymisiert und gelten ausschließlich für diesen Dienst.
 
-* Die Bereitstellung von Daten einer Organisation an eine andere Organisation muss explizit über eine Sichtfreigabe erfolgen, die jederzeit widerrufen werden kann. Sichtfreigaben erlauben anderen Organisationen nur lesenden Zugriff.
+## Explizite Sichtfreigabe für andere Organisationen
+Die Bereitstellung von Daten einer Organisation an eine andere Organisation muss explizit über eine Sichtfreigabe erfolgen, die jederzeit widerrufen werden kann. Sichtfreigaben erlauben anderen Organisationen nur lesenden Zugriff.
 
 * Das Vorliegen einer Auskunftssperre oder eines Sperrvermerks nach §§ 51, 52 Bundesmeldegesetz kann durch ein Attribut markiert werden. Darauf basierend können Schulconnex-Server und Quellsysteme die Weitergabe von schutzbedürftigen Daten einschränken.
 
