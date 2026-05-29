@@ -40,9 +40,9 @@ properties:
   loeschung:
     description: ''
     type: object
-    nullable: true
     properties:
       zeitpunkt:
+        nullable: true
         description: Datum und Uhrzeit der Löschung des Personenkontexts.
         type: string
         format: date-time
