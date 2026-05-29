@@ -253,6 +253,11 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'schnittstellendefinition/validierung-qs',
           label: 'Validierung'
+        },
+        {
+          id: 'schnittstellendefinition/bundling-qs',
+          type: 'doc',
+          label: 'Bündelung mehrerer API-Anfragen'
         }
       ],
     },
