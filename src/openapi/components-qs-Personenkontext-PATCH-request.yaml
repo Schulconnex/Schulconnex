@@ -37,9 +37,6 @@ properties:
     $ref: './components-code-Jahrgangsstufe.yaml'
   rolle:
     $ref: './components-code-Rolle.yaml'
-  sichtfreigabe:
-    nullable: true
-    $ref: './components-code-Boolean.yaml'
   loeschung:
     description: ''
     type: object
