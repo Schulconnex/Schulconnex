@@ -20,6 +20,7 @@ classDiagram
   Personenkontext --> Organisation : 1
   Personenkontext --> Sichtfreigabe : 0..1
   Organisation --> Anschrift : 0..1
+  Anschrift --> VerwaltungspolitischeKodierung : 0..1
   Gruppe --> Organisation : 1
   Gruppendatensatz --> Gruppe : 1
   Gruppendatensatz --> Gruppenzugehörigkeit : 0..n
@@ -93,6 +94,10 @@ classDiagram
     postleitzahl
     ort
     ortsteil
+    verwaltungspolitischeKodierung
+  }
+  class VerwaltungspolitischeKodierung {
+    bundesland
   }
   class Gruppe {
     id
