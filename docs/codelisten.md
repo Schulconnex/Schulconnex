@@ -305,7 +305,7 @@ HJ | Schulhalbjahr
 
 ### Organisationsbeziehungen <span class="tag tag-cl-generisch">Generisch</span>
 
-Organisationsbeziehungen ist eine Liste von Beziehungen, welche zwischen zwei Organisationen bestehen können. Häufig wird hierüber eine Beziehung einer Schule und dem Schulträger hergestellt, aber auch Organisationsbeziehungen wie Schulbehörden oder Medienzentren können darüber abgebildet werden.
+Organisationsbeziehungen ist eine Liste von Beziehungen, welche zwischen zwei Organisationen bestehen können. Häufig wird hierüber eine Beziehung einer Schule mit dem zugeordneten Schulträger hergestellt, aber auch Organisationsbeziehungen zu Schulbehörden oder Medienzentren können darüber abgebildet werden.
 
 Code | Bezeichnung | Bemerkung
 --- | --- | ---
