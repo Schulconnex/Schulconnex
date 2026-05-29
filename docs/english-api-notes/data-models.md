@@ -201,7 +201,7 @@ Attribute | Description
 orgid | ID of the organisation the current organisation has a „has as“ relation.
 organisationsbeziehung | Type of relation between the organisations.
 
-## Verwaltungspolitischekodierung
+## VerwaltungspolitischeKodierung
 
 This is the administrative area in which the address is located. Currently only attribute is the 'bundesland' (one of the sixteen German states).
 

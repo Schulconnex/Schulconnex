@@ -2,6 +2,6 @@
 title: ''
 ---
 
-import Text from '../datenmodell-qs/verwaltungspolitischekodierung.md';
+import Text from '../datenmodell-qs/verwaltungspolitischeKodierung.md';
 
 <Text />

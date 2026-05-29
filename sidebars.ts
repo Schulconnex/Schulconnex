@@ -146,7 +146,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'datenmodell-dienste/verwaltungspolitischekodierung',
+          id: 'datenmodell-dienste/verwaltungspolitischeKodierung',
           label: 'Verwaltungspolitische Kodierung',
         },
       ],
@@ -234,7 +234,7 @@ const sidebars: SidebarsConfig = {
         'datenmodell-qs/personenkontext',
         'datenmodell-qs/referenzgruppe',
         'datenmodell-qs/sichtfreigabe',
-        'datenmodell-qs/verwaltungspolitischekodierung',
+        'datenmodell-qs/verwaltungspolitischeKodierung',
       ],
     },
     {
