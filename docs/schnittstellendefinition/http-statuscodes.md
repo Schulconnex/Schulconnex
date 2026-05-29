@@ -131,3 +131,4 @@ Code | Sub-Code | Titel | Beschreibung
 --- | --- | --- | ---
 501 | 00 | `"Der Endpunkt ist nicht implementiert."` | `"Der aufgerufene Endpunkt ist spezifiziert, wird jedoch auf diesem Server nicht bereitgestellt."`
 501 | 01 | `"Der Endpunkt ist noch nicht implementiert."` | `"Der aufgerufene Endpunkt ist spezifiziert, wird jedoch auf diesem Server noch nicht bereitgestellt."`
+501 | 02 | `"Paginierung ist nicht implementiert."` | `"Der Server stellt für diesen Endpunkt keine Paginierung bereit."`

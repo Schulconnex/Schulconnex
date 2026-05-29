@@ -65,6 +65,8 @@ get:
     `gruppe.id` | String || Mit diesem Filter können die Datensätze aller Personen ausgegeben werden, welche einer Gruppe zugeordnet sind. Die Informationen zur entsprechenden Person werden, unter Berücksichtigung des Filters `vollstaendig`, entsprechend der Client-Berechtigungen ausgeliefert. Es ist abhängig vom Schulconnex-Server, ob alle existierenden Personen der Gruppe mit aufgeführt werden oder nur solche, welche schon von dem Dienst abgerufen wurden und damit dem Dienst bekannt sind.
     `stammorganisation.id` | String || Mit diesem Filter können die Datensätze aller Personen ausgegeben werden, welche einer Stammorganisation zugeordnet sind. 
     `organisation.id` | String || Mit diesem Filter können die Datensätze aller Personen ausgegeben werden, welche mindestens einen Personenkontext besitzen, welche der Organisation zugeordnet ist. Die Informationen zur entsprechenden Person werden, unter Berücksichtigung des Filters `vollstaendig`, entsprechend der Client-Berechtigungen ausgeliefert. Es ist abhängig vom Schulconnex-Server, ob alle existierenden Personen einer Organisation mit aufgeführt werden oder nur solche, welche schon von dem Dienst abgerufen wurden und damit dem Dienst bekannt sind.
+    `offset` | String || Offset hat als Parameter eine `pid`. Wenn der Server Paginierung unterstützt, so werden nur Datensätze von Personen zurückgegeben, deren `pid` der angegebenen `pid` folgen. Die Implementierung setzt eine deterministische Sortierung der `pid`-Werte voraus. Der Datensatz der als Parameter angegebenen `pid` wird nicht mit zurückgegeben. Im Allgemeinen sollte der `pid`-Wert des letzten gelieferten Datensatzes als Parameter für die nächste Offset-Anfrage genutzt werden. Wird kein Offset-Filter oder ein nicht vorhandener `pid`-Wert angegeben, so erfolgt die Rückgabe beginnend mit dem ersten Datensatz.
+    `limit` | Integer || Limit hat als Parameter die maximale Anzahl auszugebener Datensätze zu einer Anfrage. Wenn der Server Paginierung unterstützt, dann werden maximal so viele Datensätze zurückgegeben, wie durch `limit` spezifiziert. Im Allgemeinen wird `limit` zusammen mit `offset` genutzt.
   parameters:
     - in: query
       name: vollstaendig
@@ -100,6 +102,14 @@ get:
       name: organisation.id
       schema:
         type: string
+    - in: query
+      name: offset
+      schema:
+        type: string
+    - in: query
+      name: limit
+      schema:
+        type: integer
   responses:
     '200':
       description: OK
@@ -132,5 +142,10 @@ get:
     '405':
       description: |
         Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '501':
+      description: |
+        Not Implemented
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
