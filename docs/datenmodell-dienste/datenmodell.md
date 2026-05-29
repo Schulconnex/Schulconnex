@@ -35,6 +35,7 @@ classDiagram
   Person --> Organisation : 0..1
   Personenkontext --> Organisation : 1
   Organisation --> Anschrift : 0..1
+  Anschrift --> VerwaltungspolitischeKodierung : 0..1
   Gruppe --> Organisation : 1
   Gruppe --> Lernperiode : 0 oder 2
   class Person {
@@ -93,6 +94,10 @@ classDiagram
     postleitzahl
     ort
     ortsteil
+    verwaltungspolitischeKodierung
+  }
+  class VerwaltungspolitischeKodierung {
+    bundesland
   }
   class Gruppe {
     id

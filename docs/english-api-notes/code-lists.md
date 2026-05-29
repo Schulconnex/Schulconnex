@@ -24,6 +24,7 @@ Vertrauensstufe | Verification level of the owner of a (digital access) key, fro
 Organisationstyp | Type of an organisation. Usually a school, but can be an external provider of educational content.
 Jahrgangsstufe | Describes which form or level a student is in and for which a course is suitable for.
 Boolean | Defines what terms are used for boolean values („ja” for true and „nein” for false).
+Bundesland | Lists all German states.
 Trägerschaft | The „ownership” of an organisation. Describes whether it is owned by the state, the county, the church or privately owned.
 Gruppendifferenzierung | An attribute to specify a specific level of a course. Conceptually similar to denoting courses in the UK education system as „A-Level” or „O-Level“ courses.
 Gruppenoption | Currently there are no options implemented.
