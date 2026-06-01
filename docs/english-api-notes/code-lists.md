@@ -26,8 +26,6 @@ Jahrgangsstufe | Describes which form or level a student is in and for which a c
 Boolean | Defines what terms are used for boolean values („ja” for true and „nein” for false).
 Bundesland | Lists all German states.
 Trägerschaft | The „ownership” of an organisation. Describes whether it is owned by the state, the county, the church or privately owned.
-Lokalisierung | Provides localisation information. Usually „de-DE“ to denote German language content.
-Gruppenbereich | Denotes whether participation in a group is optional („Wahl”), mandatory („Pflicht”) or a combination of both for its members.
 Gruppendifferenzierung | An attribute to specify a specific level of a course. Conceptually similar to denoting courses in the UK education system as „A-Level” or „O-Level“ courses.
 Gruppenoption | Currently there are no options implemented.
 Gruppentyp | Classification of a group as „class”, „course“ or „other”. Classes are generally mandatory, while courses are often optional.

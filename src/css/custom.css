@@ -122,3 +122,17 @@
 code[class*='codeBlockLinesWithNumbering'] > .theme-code-block-highlighted-line {
   display: table-row;
 }
+
+.tag {
+  font-size: 0.5em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  vertical-align: middle;
+  font-weight: normal;
+  border-radius: 12px; 
+}
+
+.tag-cl-eigen    { background: var(--ifm-color-primary-contrast-background); color: var(--ifm-color-primary-contrast-foreground);  }
+.tag-cl-generisch { background: var(--ifm-color-danger-contrast-background); color: var(--ifm-color-danger-contrast-foreground); }
+.tag-cl-lokal { background: var(--ifm-color-success-contrast-background); color: var(--ifm-color-success-contrast-foreground); }
+.tag-cl-system  { background: var(--ifm-color-warning-contrast-background); color: var(--ifm-color-warning-contrast-foreground);  }
