@@ -23,7 +23,7 @@ Schulconnex-eigene Codelisten sind [Boolean](#boolean-schulconnex), [Gruppenroll
 
 ### Generische Codelisten
 
-Generische Codelisten sind auf allen Schulconnex-Servern identisch. Die Wert innerhalb der Codelisten werden jedoch nicht durch die Schulconnex-Spezifikation festgelegt, sondern von einer externen Organisation. 
+Generische Codelisten sind auf allen Schulconnex-Servern identisch. Die Werte innerhalb der Codelisten werden jedoch nicht durch die Schulconnex-Spezifikation festgelegt, sondern von einer externen Organisation. 
 
 Generische Codelisten sind [Bundesland](#bundesland-generisch), [Erreichbarkeitstyp](#erreichbarkeitstyp-generisch), [Geschlecht](#geschlecht-generisch), [Organisationsbeziehungen](#organisationsbeziehungen-generisch) und [Trägerschaft](#trägerschaft-generisch).
 
@@ -128,7 +128,7 @@ E-Mail | E-Mail | E-Mail-Adressen müssen [RFC 5322][2] (Internet Message Format
 
 ### Fächerkanon <span class="tag tag-cl-lokal">Lokal</span>
 
-Diese Codeliste bildet die an Schulen verfügbaren Fächern ab.
+Diese Codeliste bildet die an Schulen verfügbaren Fächer ab.
 
 Hinweis: Die folgende Codeliste ist spezifisch für das Bundesland Niedersachsen und dient für andere
 Bundesländer nur als Beispiel, da der Fächerkanon abweichen kann. Der lokal gültige Fächerkanon
@@ -276,7 +276,7 @@ Code | Bezeichnung
 ### Lernperiode <span class="tag tag-cl-lokal">Lokal</span>
 
 Lernperioden dienen zur Festlegung des Beginns oder des Endes einer Kurslaufzeit.
-Der Code einer Lernperiode legt sowohl Anfangsdatim, Enddatum, auch den Typ (Schuljahr oder Schulhalbjahr) fest.
+Der Code einer Lernperiode legt sowohl Anfangsdatum, Enddatum, auch den Typ (Schuljahr oder Schulhalbjahr) fest.
 
 Code | Bezeichnung | Beginn | Ende | Typ
 --- | --- | --- | --- | ---
