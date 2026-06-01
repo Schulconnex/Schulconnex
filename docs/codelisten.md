@@ -25,7 +25,7 @@ Schulconnex-eigene Codelisten sind [Boolean](#boolean-schulconnex), [Gruppenroll
 
 Generische Codelisten sind auf allen Schulconnex-Servern identisch. Die Wert innerhalb der Codelisten werden jedoch nicht durch die Schulconnex-Spezifikation festgelegt, sondern von einer externen Organisation. 
 
-Generische Codelisten sind [Erreichbarkeitstyp](#erreichbarkeitstyp-generisch), [Geschlecht](#geschlecht-generisch), [Organisationsbeziehungen](#organisationsbeziehungen-generisch) und [Trägerschaft](#trägerschaft-generisch).
+Generische Codelisten sind [Bundesland](#bundesland-generisch), [Erreichbarkeitstyp](#erreichbarkeitstyp-generisch), [Geschlecht](#geschlecht-generisch), [Organisationsbeziehungen](#organisationsbeziehungen-generisch) und [Trägerschaft](#trägerschaft-generisch).
 
 ### Lokale Codelisten
 
@@ -94,7 +94,7 @@ Code | Bezeichnung
 Ja | True
 Nein | False
 
-## Bundesland
+## Bundesland <span class="tag tag-cl-generisch">Generisch</span>
 
 Code | Bezeichnung
 --- | ---
@@ -115,7 +115,7 @@ Code | Bezeichnung
 | 15 | Sachsen-Anhalt
 | 16 | Thüringen
 
-## Erreichbarkeitstyp
+## Erreichbarkeitstyp <span class="tag tag-cl-generisch">Generisch</span>
 
 Erreichbarkeitstyp ist eine Liste von Kommunikationskanälen, über die eine Person oder
 Organisation erreicht werden kann.
