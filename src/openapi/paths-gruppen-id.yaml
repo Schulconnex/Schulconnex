@@ -84,7 +84,7 @@ put:
     `id` | ID der Gruppe. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `mandant` | Mandanten-ID der Gruppe. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `orgid` | Organisations-ID der Gruppe. Wird automatisch vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-    `revision` | Revision der Gruppe. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+    `revision` | Revision der Gruppe. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie bei der Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
 
     Die Attribute `id`, `mandant` und `orgid` können im Request ausgelassen werden. Sind ein
     oder mehrere Attribute im Request dennoch vorhanden, wird es oder werden sie validiert
@@ -162,7 +162,7 @@ patch:
     - oAuthForServices: []
   summary: Modifiziert die Gruppe der angegebenen ID
   description: |
-    Dieser Schnittstellenendpunkt modiziert die Gruppe zur angegebenen `gruppen.id` durch eine PATCH-Operation.
+    Dieser Schnittstellenendpunkt modifiziert die Gruppe zur angegebenen `gruppen.id` durch eine PATCH-Operation.
 
     Die Modifikation einer Gruppe per ID muss mit HTTP-PATCH auf die API `/gruppen/{gruppen.id}` erfolgen. 
     Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps Gruppe.
