@@ -75,18 +75,18 @@
   border-color: var(--ifm-color-danger-dark);
 }
 
-.put > .menu__link::before {
-  content: "put";
-  background-color: var(--ifm-color-warning-contrast-background);
-  color: var(--ifm-color-warning-contrast-foreground);
-  border-color: var(--ifm-color-warning-dark);
-}
-
 .patch > .menu__link::before {
   content: "patch";
   background-color: var(--ifm-color-warning-contrast-background);
   color: var(--ifm-color-warning-contrast-foreground);
   border-color: var(--ifm-color-warning-dark);
+}
+
+.put > .menu__link::before {
+  content: "put";
+  background-color: var(--ifm-color-info-contrast-background);
+  color: var(--ifm-color-secondary-info-foreground);
+  border-color: var(--ifm-color-info-dark);
 }
 
 .head > .menu__link::before {

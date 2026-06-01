@@ -1,0 +1,5 @@
+type: object
+properties:
+  bis:
+    nullable: true
+    $ref: './components-Datum-bis.yaml'

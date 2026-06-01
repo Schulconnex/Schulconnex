@@ -139,8 +139,10 @@ Aktion | Endpunkte | Hinweis
 Aktualisieren | <ul><li>PUT `/personen/{id}`</li><li>PUT `/personenkontexte/{id}`</li></ul> | Die Revision muss als Attribut mitgegeben werden.
 Anlegen | <ul><li>POST `/personen/`</li><li>POST `/personen/{id}/personenkontexte/`</li></ul> |
 
-Eine PATCH-Operation ist nicht vorgesehen. Beim Aktualisieren über PUT muss der gesamte Datensatz
+Beim Aktualisieren über PUT muss der gesamte Datensatz
 mitgegeben werden. Es ist darauf zu achten, dass das Quellsystem dabei nicht unbeabsichtigt Daten löscht.
+
+Beim Modifizieren über PATCH ist es ausreichend, nur die geänderten Attribute zu übermitteln.
 
 ### Schritt 6: Importieren bestätigter Datensätze in das Quellsystem
 
@@ -188,10 +190,12 @@ Aktualisieren | <ul><li>PUT `/gruppen/{uuid}`</li><li>PUT `/gruppenzugehoerigkei
 Anlegen | <ul><li>POST `/gruppen/`</li><li>POST `/gruppen/{uuid}/gruppenzugehoerigkeiten/`</li></ul> | Jede Gruppenzugehörigkeit muss einzeln angelegt werden.
 Löschen | <ul><li>DELETE `/gruppen/`</li><li>DELETE `/gruppenzugehoerigkeiten/{uuid}`</li></ul> | Jede Gruppenzugehörigkeit muss einzeln gelöscht werden.
 
-Eine PATCH-Operation ist nicht vorgesehen. Beim Aktualisieren über PUT muss der gesamte Datensatz
+Beim Aktualisieren über PUT muss der gesamte Datensatz
 mitgegeben werden. Es ist darauf zu achten, dass das Quellsystem dabei nicht unbeabsichtigt Daten
 löscht, insbesondere dürfen nicht Daten gelöscht werden, die von anderen Quellsystemen der Organisation
 benötigt oder verwaltet werden.
+
+Beim Modifizieren über PATCH ist es ausreichend, nur die geänderten Attribute zu übermitteln.
 
 Falls die Synchronisation im Zusammenhang oder direkt nach einem Schuljahres- oder
 Schulhalbjahreswechsel stattfindet, müssen Anforderungen berücksichtigt werden, die in
