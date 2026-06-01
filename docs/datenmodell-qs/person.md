@@ -15,7 +15,9 @@ stammorganisation | String (UTF-8) | 0..1 | ID der Stammorganisation. Personen k
 name | *[Name](name)* | 1 | Der Name der Person.
 geburt | *[Geburt](geburt)* | 0..1 | Information zu Geburtsdatum und Geburtsort der Person.
 geschlecht | String (Code) | 0..1 | Referenz auf einen Code der Codeliste *Geschlecht*.
-lokalisierung | String | 0..1 | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Wert basiert auf Definition in RFC 5646. Wenn nicht angegeben, wird „de“ angenommen.
+lokalisierung | String | 0..1 | Bevorzugte Lokalisierungseinstellung einer Person für Anwendungen. Wert basiert auf Definition in [RFC 5646][1]. Wenn nicht angegeben, wird „de“ angenommen.
 vertrauensstufe | String (Code) | 1 | Gibt an, wie stark die Personendaten vom erfassenden Mandanten verifiziert wurden, Referenz auf einen Code der Codeliste *Vertrauensstufe*.
 auskunftssperre | String (Code) | 1 | Auskunftssperre über eine Person. Dienste erhalten nur einen uneingeschränkten Datensatz, wenn der Wert „nein” ist. Sofern nicht explizit „ja” eingeben wurde, ist der Default „nein”. Referenz auf einen Code der Codeliste *Boolean*.
 revision | String (UTF-8) | 1 | Revision der Person. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+
+[1]: https://datatracker.ietf.org/doc/html/rfc5646
