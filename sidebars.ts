@@ -423,6 +423,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-organisation',
+              label: '/organisationen',
+              className: 'api-method post'
+            },
+            {
+              type: 'doc',
               id: 'generated/openapi/quellsysteme/read-organisation-id',
               label: '/organisationen/\u200B:id',
               className: 'api-method get',
