@@ -12,6 +12,7 @@ properties:
     example: 58f45270-8e54-40c6-a212-980307fc19be
   organisation:
     type: object
+    nullable: true
     properties:
       id:
         description: ID der Organisation.
@@ -20,15 +21,19 @@ properties:
   referrer:
     description: ID des Personenkontexts im Quellsystem.
     type: string
+    nullable: true
     example: PeKt_54321
   erreichbarkeiten:
     description: ''
     type: array
+    nullable: true
     items:
       $ref: './components-Erreichbarkeit.yaml'
   personenstatus:
+    nullable: true
     $ref: './components-code-Personenstatus.yaml'
   jahrgangsstufe:
+    nullable: true
     $ref: './components-code-Jahrgangsstufe.yaml'
   rolle:
     $ref: './components-code-Rolle.yaml'
@@ -37,6 +42,7 @@ properties:
     type: object
     properties:
       zeitpunkt:
+        nullable: true
         description: Datum und Uhrzeit der Löschung des Personenkontexts.
         type: string
         format: date-time

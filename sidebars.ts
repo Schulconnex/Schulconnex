@@ -144,6 +144,11 @@ const sidebars: SidebarsConfig = {
           id: 'datenmodell-dienste/personenkontext',
           label: 'Personenkontext',
         },
+        {
+          type: 'doc',
+          id: 'datenmodell-dienste/verwaltungspolitischeKodierung',
+          label: 'Verwaltungspolitische Kodierung',
+        },
       ],
     },
     {
@@ -229,6 +234,7 @@ const sidebars: SidebarsConfig = {
         'datenmodell-qs/personenkontext',
         'datenmodell-qs/referenzgruppe',
         'datenmodell-qs/sichtfreigabe',
+        'datenmodell-qs/verwaltungspolitischeKodierung',
       ],
     },
     {
@@ -253,6 +259,11 @@ const sidebars: SidebarsConfig = {
           type: 'doc',
           id: 'schnittstellendefinition/validierung-qs',
           label: 'Validierung'
+        },
+        {
+          id: 'schnittstellendefinition/bundling-qs',
+          type: 'doc',
+          label: 'Bündelung mehrerer API-Anfragen'
         }
       ],
     },
@@ -460,6 +471,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-person-id',
+              label: '/personen/\u200B:id',
+              className: 'api-method patch',
+            },
+            {
+              type: 'doc',
               id: 'generated/openapi/quellsysteme/delete-person-id',
               label: '/personen/\u200B:id',
               className: 'api-method delete',
@@ -511,6 +528,12 @@ const sidebars: SidebarsConfig = {
               id: 'generated/openapi/quellsysteme/update-personenkontext-id',
               label: '/personenkontexte/\u200B:id',
               className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-personenkontext-id',
+              label: '/personenkontexte/\u200B:id',
+              className: 'api-method patch',
             },
             {
               type: 'doc',
@@ -592,6 +615,12 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-gruppe-id',
+              label: '/gruppen/\u200B:id',
+              className: 'api-method patch',
+            },
+            {
+              type: 'doc',
               id: 'generated/openapi/quellsysteme/delete-gruppe-id',
               label: '/gruppen/\u200B:id',
               className: 'api-method delete',
@@ -631,6 +660,12 @@ const sidebars: SidebarsConfig = {
               id: 'generated/openapi/quellsysteme/update-gruppenzugehoerigkeit-id',
               label: '/gruppenzugehoerigkeiten/\u200B:id',
               className: 'api-method put',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-gruppenzugehoerigkeit-id',
+              label: '/gruppenzugehoerigkeiten/\u200B:id',
+              className: 'api-method patch',
             },
             {
               type: 'doc',
