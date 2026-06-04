@@ -12,5 +12,5 @@ Schulbegleiterin und Person A ist schulbegleitet **von** Person B.
 
 Attribut | Typ | Anzahl | Freigabe erforderlich | Bemerkung | Qualifizierter Name
 --- | --- | --- | --- | --- | ---
-personenkontext | String (UTF-8) | 0/1 | ja | Pseudonymisierte ID des Personenkontexts. | `urn:schulconnex:de:beziehung:personenkontext`
-art | String (Code) | 0/1 | ja | Art der Beziehung aus Codeliste *Beziehungen*. | `urn:schulconnex:de:beziehung:art`
+personenkontext | String (UTF-8) | 0/1 | ja | Pseudonymisierte ID des Personenkontexts. |
+art | String (Code) | 0/1 | ja | Art der Beziehung aus Codeliste *Beziehungen*. | `urn:schulconnex:de:kern:beziehung:art`

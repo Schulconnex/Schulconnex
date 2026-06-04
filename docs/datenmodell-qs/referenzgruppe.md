@@ -16,5 +16,5 @@ Zyklische Verweise sind jedoch untersagt und führen zu einer Fehlermeldung.
 
 Attribut | Typ | Anzahl | Bemerkung | Qualifizierter Name
 --- | --- | --- | --- | ---
-gruppe | String (UTF-8) | 1 | ID der Referenzgruppe. | `urn:schulconnex:de:gruppe:referenzgruppe:gruppe`
-rollen | String (Code) | 0..n | Gruppenrollen aus der Gruppenzugehörigkeit von Personenkontexten, welche in die Referenzgruppe übernommen werden. Hinweis:  Werden hier keine Gruppenrollen aufgeführt, so werden alle Personenkontexte der Referenzgruppe übernommen. | `urn:schulconnex:de:gruppe:referenzgruppe:rollen`
+gruppe | String (UTF-8) | 1 | ID der Referenzgruppe. | `urn:schulconnex:de:kern:gruppe:referenzgruppe:gruppe`
+rollen | String (Code) | 0..n | Gruppenrollen aus der Gruppenzugehörigkeit von Personenkontexten, welche in die Referenzgruppe übernommen werden. Hinweis:  Werden hier keine Gruppenrollen aufgeführt, so werden alle Personenkontexte der Referenzgruppe übernommen. | `urn:schulconnex:de:kern:gruppe:referenzgruppe:rollen`

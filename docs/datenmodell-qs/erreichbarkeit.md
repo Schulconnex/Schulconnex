@@ -10,5 +10,5 @@ Ein Personenkontext kann mehrere Erreichbarkeits-Datensätze in einem Array enth
 
 Attribut | Typ | Anzahl | Bemerkung | Qualifizierter Name
 --- | --- | --- | --- | ---
-typ | String (Code) | 1 | Typ der Erreichbarkeit. Referenz auf Liste von Codes der Codeliste *Erreichbarkeitstyp*. | `urn:schulconnex:de:personenkontext:erreichbarkeit:typ`
-kennung | String (UTF-8) | 1 | Konkrete Angabe der zum Erreichen der Person oder Organisation notwendigen Information. Derzeit ist nur die Erreichbarkeit über  eine E-Mail- Adresse vorgesehen. | `urn:schulconnex:de:personenkontext:erreichbarkeit:kennung`
+typ | String (Code) | 1 | Typ der Erreichbarkeit. Referenz auf Liste von Codes der Codeliste *Erreichbarkeitstyp*. | `urn:schulconnex:de:kern:personenkontext:erreichbarkeit:typ`
+kennung | String (UTF-8) | 1 | Konkrete Angabe der zum Erreichen der Person oder Organisation notwendigen Information. Derzeit ist nur die Erreichbarkeit über  eine E-Mail- Adresse vorgesehen. | `urn:schulconnex:de:kern:personenkontext:erreichbarkeit:kennung`

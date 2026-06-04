@@ -11,11 +11,11 @@ Löschung und Modifikation nur durch einen organisatorischen Prozess außerhalb 
 
 Attribut | Typ | Anzahl | Bemerkung | Qualifizierter Name
 --- | --- | --- | --- | ---
-id | String (UTF-8) | 1 | ID der Organisation. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable). | `urn:schulconnex:de:organisation:id`
-kennung | String (UTF-8) | 0..1 | Die optionale Kennung (Identifikations-ID) einer Organisation muss innerhalb eines Organisationstyps eindeutig sein. Dies kann beispielsweise die offizielle Schulnummer sein. | `urn:schulconnex:de:organisation:kennung`
+id | String (UTF-8) | 1 | ID der Organisation. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable). |
+kennung | String (UTF-8) | 0..1 | Die optionale Kennung (Identifikations-ID) einer Organisation muss innerhalb eines Organisationstyps eindeutig sein. Dies kann beispielsweise die offizielle Schulnummer sein. | `urn:schulconnex:de:kern:organisation:kennung`
 name | String (DIN 91379.B) | 0..1 | Offizieller Name einer Organisation.
 namensergaenzung | String (DIN 91379.B) | 0..1 | Ergänzender Name einer Organisation.
 kuerzel | String (64) (DIN 91379.B) | 0..1 | Kurzname einer Organisation, maximal 64 Zeichen.
 anschrift | *[Anschrift](anschrift)* | 0..1 | Anschrift der Organisation.
-typ | String (Code) | 0..1 | Typ der Organisation, Referenz auf einen Code der Codeliste *Organisationstyp*. | `urn:schulconnex:de:organisation:typ`
-traegerschaft | String (Code) | 0..1 | Art der Trägerschaft der bei Schul-Organisationen,  Referenz auf einen Code der Codeliste *Trägerschaft*. | `urn:schulconnex:de:organisation:traegerschaft`
+typ | String (Code) | 0..1 | Typ der Organisation, Referenz auf einen Code der Codeliste *Organisationstyp*. | `urn:schulconnex:de:kern:organisation:typ`
+traegerschaft | String (Code) | 0..1 | Art der Trägerschaft der bei Schul-Organisationen,  Referenz auf einen Code der Codeliste *Trägerschaft*. | `urn:schulconnex:de:kern:organisation:traegerschaft`
