@@ -144,6 +144,11 @@ delete:
         Conflict
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '501':
+      description: |
+        Not Implemented
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 put:
   tags:
     - Organisationen
@@ -206,15 +211,17 @@ put:
         schema:
           allOf:
             - $ref: './components-Organisation-PUT-request.yaml'
-            - $ref: './components-qs-Organisation.yaml'
-            - $ref: './components-qs-Organisation-Organisationsbeziehungen.yaml'
+            - $ref: './components-qs-Organisation.yaml'            
   responses:
     '201':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-Organisationen-GET-request.yaml'
+            allOf:
+              - $ref: './components-Organisation-basis.yaml'
+              - $ref: './components-Organisation.yaml'
+              - $ref: './components-qs-Organisation.yaml'
     '304':
       description: Not Modified
     '400':
@@ -245,5 +252,10 @@ put:
     '409':
       description: |
         Conflict
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '501':
+      description: |
+        Not Implemented
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
