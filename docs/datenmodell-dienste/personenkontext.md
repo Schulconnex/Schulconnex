@@ -25,4 +25,4 @@ beziehungen | *Struktur* | 0/0..1 | ja | Objekt mit zwei Attributen, den `hat_al
 beziehungen.hat_als | *Array[[Beziehung](beziehung)]* | 0/0..n | ja | Array der `hat_als` Beziehungen eines Personenkontextes. Jeder Eintrag enthält eine Personenkontext-ID und eine Beziehung.
 beziehungen.ist_von | *Array[[Beziehung](beziehung)]* | 0/0..n | ja | Array der `ist_von` Beziehungen eines Personenkontextes. Jeder Eintrag enthält eine Personenkontext-ID und eine Beziehung.
 loeschung | *Struktur* | 0/0..1 | nein| Aktuell gibt es zu Löschungen nur ein Attribut (Zeitpunkt), eventuell werden in späteren Versionen weitere Attribute hinzugefügt.
-loeschung.zeitpunkt | String (datetime) | 1 | nein | Datum und Uhrzeit der Löschung des Personenkontexts. Das Format des Löschzeitpunkts ist `YYYY-MM-DDThh:mmZ` als UTC-Zeitpunkt (nach ISO 8601 Format, Stunden von 00-23).
+loeschung.zeitpunkt | String (datetime) | 1 | nein | Datum und Uhrzeit der Löschung des Personenkontexts. Das Format des Löschzeitpunkts ist `YYYY-MM-DDThh:mmZ` als UTC-Zeitpunkt nach ISO 8601 (ohne Sekunden, Stunden von 00 bis 23, z.B. 2026-09-30T22:00Z).
