@@ -251,6 +251,7 @@ Code | Bezeichnung  | Bemerkung
 --- | --- | --- 
 Klasse | Schulklasse | Eine Schulklasse bezeichnet eine festgelegte Gruppe von Lernenden, die gemeinsam in mehreren Fächern den Unterricht in einer Schule besuchen.
 Kurs | Kurs/Unterricht | Ein Kurs bezeichnet eine Gruppe von Lernenden, welche regelmäßig gemeinsam an einem Fach teilnehmen, aber darüber hinaus nicht weiter strukturiert ist.
+Nutzer | Nutzergruppe | Hiermit ist es möglich Berechtigungen über Gruppen (Nutzergruppen) abzubilden. Details finden sich im Abschnitt [Nutzergruppen für Dienste](praxisleitfaden/nutzer-in-gruppentyp).
 Sonstig | Sonstige Gruppe | Hiermit werden alle Gruppen, die nicht den Definitionen von Klasse oder Kurs entsprechen, gekennzeichnet.
 
 ### Jahrgangsstufe <span class="tag tag-cl-lokal">Lokal</span>
