@@ -9,6 +9,6 @@ properties:
     type: string
     example: SchBeh
   revision:
-    scription: Revision der organisationsbeziehung.
+    description: Revision der organisationsbeziehung.
     type: string
     example: "1"
