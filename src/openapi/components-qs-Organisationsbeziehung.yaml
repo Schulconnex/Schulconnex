@@ -8,3 +8,7 @@ properties:
     description: Beziehung aus Codeliste [Organisationsbeziehungen](../../../codelisten#organisationsbeziehungen).
     type: string
     example: SchBeh
+  revision:
+    scription: Revision der organisationsbeziehung.
+    type: string
+    example: "1"

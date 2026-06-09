@@ -1,0 +1,128 @@
+get:
+  tags:
+    - Organisationsbeziehungen
+  operationId: readOrganisationsbeziehungId
+  security:
+    - oAuthForServices: []
+  summary: Organisationsbeziehung zur angeforderten ID
+  description: |
+    Dieser Schnittstellenendpunkt gibt die Organisationsbeziehung zur angegebenen `organisationsbeziehung.id` zurück.
+
+    Ein READ zum Abfragen einer Organisationsbeziehung per ID muss mit HTTP-GET auf die API `/organisatinsbeziehungen/{organisationsbeziehung.id}` erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten
+    ein JSON-Objekt des Datentyps Organisationsbeziehung.
+
+    Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell-qs/organisationsbeziehung).
+
+  parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+      description: Der Pfad-Parameter bezieht sich auf die ID der Organisationsbeziehung.
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Organisationsbeziehung.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+delete:
+  tags:
+    - Organisationsbeziehungen
+  operationId: deleteOrganisationsbeziehungId
+  security:
+    - oAuthForServices: []
+  summary: Löscht die Organisationsbeziehung zur angeforderten ID
+  description: |
+    Dieser Schnittstellenendpunkt löscht die Organisationsbeziehung zur angegebenen `organisationsbeziehung.id`.
+
+    Ein DELETE zum Löschen einer Organisationsbeziehung per `organisationsbeziehung.id` muss mit HTTP-DELETE auf die API `/organisationsbeziehungen/{organisationsbeziehung.id}` erfolgen.
+
+    Diese API ist häufig nur als interne API für den Betreiber einens Schulconnex-Servers 
+    zur Durchführung administrativer Funktionen verfügbar.
+
+    Es ist erforderlich, dass für eine Löschanfrage einer Organisationsbeziehung das Attribut `revision`
+    der zugrunde liegenden Organisationsbeziehung mitgeschickt wird. Der Schulconnex-Server überprüft
+    anhand des mitgeschickten Werts des Attributs `revision`, ob der Datensatz in
+    der Zwischenzeit keine Änderung erfahren hat.
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID der Organisationsbeziehung.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - revision
+          properties:
+            revision:
+              type: string
+              description: Revision der zugrunde liegenden Organisationsbeziehung. Dieses Feld ist ein Pflichtfeld.
+  responses:
+    '204':
+      description: |
+        No Content
+
+        Bei einer erfolgreichen Ausführung der Löschanfrage wird es keine Antwort-Nutzdaten (Response Payload) geben.
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)

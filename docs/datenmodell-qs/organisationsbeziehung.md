@@ -14,3 +14,4 @@ Attribut | Typ | Anzahl | Bemerkung
 --- | --- | --- | ---
 orgid | String (UTF-8) | 1 | Id der Organisation, zu der die „hat_als“-Beziehung besteht.
 organisationsbeziehung | String (UTF-8) | 1..n | Beziehung aus Codeliste *Organisationsbeziehungen*.
+revision | String (UTF-8) |	1 | Revision der Organisationsbeziehung. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.

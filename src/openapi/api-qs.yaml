@@ -53,6 +53,8 @@ paths:
     $ref: './paths-organisationen-id.yaml'
   /organisationen/{id}/organisationsbeziehungen:
     $ref: './paths-organisationen-id-organisationsbeziehungen.yaml'
+  /organisationsbeziehungen/{id}:
+    $ref: './paths-organisationsbeziehungen-id.yaml'
   /organisation-info:
     $ref: './paths-organisation-info.yaml'
   /gruppen:
