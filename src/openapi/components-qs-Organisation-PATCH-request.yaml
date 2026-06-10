@@ -1,0 +1,63 @@
+type: object
+required:
+  - revision
+properties:
+  id:
+    description: ID der Organisation.
+    type: string
+    example: b0d7b0dd-3477-4122-a38d-095ec242e786
+  kennung:
+    description: Die optionale Kennung (Identifikations-ID) einer Organisation.
+    type: string
+    nullable: true
+    example: NI_12345
+  name:
+    description: Offizieller Name einer Organisation.
+    type: string   
+    nullable: true
+    example: Heinrich-Heine-Gymnasium
+  namensergaenzung:
+    description: Ergänzender Name einer Organisation.
+    type: string
+    nullable: true
+    example: vorher Heinrich-Heine-Gesamtschule
+  kuerzel:
+    description: Kurzname einer Organisation.
+    type: string
+    maxLength: 64
+    nullable: true
+    example: Heine-Gym
+  anschrift:
+    type: object
+    properties:
+      postleitzahl:
+        description: Postleitzahl.
+        type: string
+        nullable: true
+        example: "30519"
+      ort:
+        description: Amtlicher Gemeindename.
+        type: string
+        nullable: true
+        example: Hannover
+      ortsteil:
+        description: Teil eines Orts, falls genauere Untergliederung gewünscht.
+        type: string
+        nullable: true
+        example: Döhren
+      verwaltungspolitischekodierung:
+        properties:
+          bundesland:
+           nullable: true
+           $ref: './components-code-Bundesland.yaml'
+  typ:
+    nullable: true
+    $ref: './components-code-Organisationstyp.yaml'
+  traegerschaft:
+    nullable: true
+    $ref: './components-code-Trägerschaft.yaml'
+  revision:
+    description: Revision des Organisationsdatensatzes.
+    type: string
+
+
