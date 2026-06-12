@@ -21,6 +21,8 @@ tags:
     description: Schulen oder sonstige relevante Organisationen
   - name: Personen
     description: Alles zu Personen und Personendatensätzen
+  - name: Gruppen
+    description: Zusammenfassung von mehreren Personen    
 paths:
   /person-info:
     $ref: './paths-person-info.yaml'
@@ -28,6 +30,8 @@ paths:
     $ref: './paths-personen-info.yaml'
   /organisationen-info:
     $ref: './paths-organisationen-info.yaml'
+  /gruppen-info/{orgid}:
+    $ref: './paths-gruppen-info-orgid.yaml'
 components:
   securitySchemes:
     oAuthForServices:
