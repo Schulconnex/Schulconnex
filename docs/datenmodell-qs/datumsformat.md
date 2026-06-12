@@ -13,4 +13,4 @@ Somit ist `2022-08-19` eine zulässige Datumsangabe. Nicht zulässige Datumsdars
 
 Einen Sonderfall stellt hier das Format zur Darstellung eines Löschzeitpunkts dar. Anders als bei sonstigen
 Datumsangaben, welche nur tagesgenau benötigt werden, ist für den Löschzeitpunkt auch die Uhrzeit relevant.
-Das Format für einen Löschzeitpunkt ist `YYYY-MM-DD'T'hh:mm'Z'` als UTC-Zeitpunkt.
+Das Format des Löschzeitpunkts ist `YYYY-MM-DDThh:mmZ` als UTC-Zeitpunkt nach ISO 8601 (ohne Sekunden, Stunden von 00 bis 23, z. B. 2026-09-30T22:00Z). Gegebenenfalls ist bei der Implementierung zu beachten, dass bei einigen Programmiersprachen die Formatierung auf 24-Stunden Uhrzeit über den Formatierungsstring `HH` statt über `hh` geschieht.

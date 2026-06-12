@@ -1,6 +1,7 @@
 type: object
 required:
   - name
+  - vertrauensstufe
 properties:
   stammorganisation:
     allOf:
@@ -11,7 +12,6 @@ properties:
     required:
       - familienname
       - vorname
-      - vertrauensstufe
     properties:
       familienname:
         description: Familienname(n) der Person. Mehrere Familiennamen werden durch Leerzeichen separiert.
