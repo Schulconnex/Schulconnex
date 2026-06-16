@@ -18,4 +18,4 @@ namensergaenzung | String (DIN 91379.B) | 0..1 | Ergänzender Name einer Organis
 kuerzel | String (64) (DIN 91379.B) | 0..1 | Kurzname einer Organisation, maximal 64 Zeichen.
 anschrift | *[Anschrift](anschrift)* | 0..1 | Anschrift der Organisation.
 typ | String (Code) | 0..1 | Typ der Organisation, Referenz auf einen Code der Codeliste *Organisationstyp*. | `urn:schulconnex:de:kern:organisation:typ`
-traegerschaft | String (Code) | 0..1 | Art der Trägerschaft der bei Schul-Organisationen,  Referenz auf einen Code der Codeliste *Trägerschaft*. | `urn:schulconnex:de:kern:organisation:traegerschaft`
+traegerschaft | String (Code) | 0..1 | Art der Trägerschaft bei Schul-Organisationen, Referenz auf einen Code der Codeliste *Trägerschaft*. | `urn:schulconnex:de:kern:organisation:traegerschaft`
