@@ -397,6 +397,18 @@ const sidebars: SidebarsConfig = {
               className: 'api-method get',
             },
           ],
+        },        
+        {
+          type: 'category',
+          label: 'Gruppen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/dienste/read-gruppen-info',
+              label: '/gruppen-info',
+              className: 'api-method get',
+            },
+          ],
         },
       ],
     },

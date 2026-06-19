@@ -59,4 +59,3 @@ properties:
       - $ref: './components-Laufzeit-vonlernperiode.yaml'
       - $ref: './components-Laufzeit-bis.yaml'
       - $ref: './components-Laufzeit-bislernperiode.yaml'
-
