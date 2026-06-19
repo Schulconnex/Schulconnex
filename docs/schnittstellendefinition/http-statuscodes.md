@@ -121,6 +121,17 @@ Code | Sub-Code | Titel | Beschreibung
 --- | --- | --- | ---
 409 | 00 | `"Konflikt mit dem aktuellen Zustand der Ressource."` | `"Die Entität wurde eventuell durch Dritte verändert. Die Revisionsnummer stimmt nicht überein."`
 
+##  Interner Serverfehler
+
+### `500` -  Internal Server Error
+
+Es ist ein unerwarteter Serverfehler aufgetreten.
+
+Code | Sub-Code | Titel | Beschreibung
+--- | --- | --- | ---
+500 | 00 | `"Allgemeiner interner Serverfehler."` |  `"Ein interner Serverfehler ist aufgetreten"` + spezifische Fehlermeldung.
+
+
 ## Nicht implementiert
 
 ### `501` - Not Implemented
