@@ -13,4 +13,4 @@ angegeben, so **hat** Organisation A die Organisation B als Schulbehörde.
 Attribut | Typ | Anzahl | Bemerkung | Qualifizierter Name
 --- | --- | --- | --- | ---
 orgid | String (UTF-8) | 1 | Id der Organisation, zu der die „hat_als"-Beziehung besteht. |
-art | String (UTF-8) | 1..n | Beziehung aus Codeliste *Organisationsbeziehungen*. |
+organisationsbeziehung | String (UTF-8) | 1..n | Beziehung aus Codeliste *Organisationsbeziehungen*. |
