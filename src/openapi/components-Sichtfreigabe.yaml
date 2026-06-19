@@ -14,6 +14,6 @@ properties:
     type: string
     example: c1966d20-50b6-4bb1-afc7-96663523891e
   revision:
-    description: Revision der Beziehung.
+    description: Revision der Sichtfreigabe.
     type: string
     example: "1"

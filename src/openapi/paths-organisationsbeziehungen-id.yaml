@@ -67,10 +67,6 @@ delete:
     Diese API ist häufig nur als interne API für den Betreiber einens Schulconnex-Servers 
     zur Durchführung administrativer Funktionen verfügbar.
 
-    Es ist erforderlich, dass für eine Löschanfrage einer Organisationsbeziehung das Attribut `revision`
-    der zugrunde liegenden Organisationsbeziehung mitgeschickt wird. Der Schulconnex-Server überprüft
-    anhand des mitgeschickten Werts des Attributs `revision`, ob der Datensatz in
-    der Zwischenzeit keine Änderung erfahren hat.
   parameters:
     - in: path
       name: id
@@ -78,18 +74,6 @@ delete:
         type: string
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Organisationsbeziehung.
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          type: object
-          required:
-            - revision
-          properties:
-            revision:
-              type: string
-              description: Revision der zugrunde liegenden Organisationsbeziehung. Dieses Feld ist ein Pflichtfeld.
   responses:
     '204':
       description: |
