@@ -30,8 +30,8 @@ paths:
     $ref: './paths-personen-info.yaml'
   /organisationen-info:
     $ref: './paths-organisationen-info.yaml'
-  /gruppen-info/{orgid}:
-    $ref: './paths-gruppen-info-orgid.yaml'
+  /gruppen-info:
+    $ref: './paths-gruppen-info.yaml'
 components:
   securitySchemes:
     oAuthForServices:

@@ -404,8 +404,8 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               type: 'doc',
-              id: 'generated/openapi/dienste/read-gruppen-info-org-id',
-              label: '/gruppen-info/:orgid',
+              id: 'generated/openapi/dienste/read-gruppen-info',
+              label: '/gruppen-info',
               className: 'api-method get',
             },
           ],
