@@ -1,41 +1,32 @@
 get:
   tags:
-    - Beziehungen
-  operationId: readBeziehungId
+    - Organisationsbeziehungen
+  operationId: readOrganisationsbeziehungId
   security:
     - oAuthForServices: []
-  summary: Beziehung zur angeforderten ID
+  summary: Organisationsbeziehung zur angeforderten ID
   description: |
-    Dieser Schnittstellenendpunkt gibt die Beziehung zur angegebenen `beziehung.id` zurück.
+    Dieser Schnittstellenendpunkt gibt die Organisationsbeziehung zur angegebenen `organisationsbeziehung.id` zurück.
 
-    Ein READ zum Abfragen einer Beziehung per ID muss mit HTTP-GET auf die API `/beziehungen/{beziehung.id}` erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten
-    ein JSON-Objekt des Datentyps Beziehung.
+    Ein READ zum Abfragen einer Organisationsbeziehung per ID muss mit HTTP-GET auf die API `/organisatinsbeziehungen/{organisationsbeziehung.id}` erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten
+    ein JSON-Objekt des Datentyps Organisationsbeziehung.
 
-    Siehe auch Datenmodell [`Beziehung`](../../../datenmodell-qs/beziehung).
+    Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell-qs/organisationsbeziehung).
 
-    Zusätzlich zu den Informationen aus dem Datenmodell wird ein Attribut `ist_von_ktid`
-    mitgeliefert, welches angibt, welchen Personenkontext die Beziehung referenziert.
-
-    Beziehungen können nicht direkt geändert werden. Sollte sich die Beziehung ändern,
-    wenn beispielsweise eine andere Person das Sorgerecht bekommt oder sich die Rolle
-    in einer Beziehung ändert, so ist die alte Beziehung zu löschen und eine neue
-    Beziehung zu erstellen.
   parameters:
     - in: path
       name: id
       required: true
       schema:
         type: string
-      description: Der Pfad-Parameter bezieht sich auf die ID der Beziehung.
+      description: Der Pfad-Parameter bezieht sich auf die ID der Organisationsbeziehung.
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            allOf:
-              - $ref: './components-qs-Beziehung-basis.yaml'
-              - $ref: './components-qs-Beziehung.yaml'
+            $ref: './components-qs-Organisationsbeziehung.yaml'
     '400':
       description: |
         Bad Request
@@ -63,15 +54,18 @@ get:
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
 delete:
   tags:
-    - Beziehungen
-  operationId: deleteBeziehungId
+    - Organisationsbeziehungen
+  operationId: deleteOrganisationsbeziehungId
   security:
     - oAuthForServices: []
-  summary: Löscht die Beziehung zur angeforderten ID
+  summary: Löscht die Organisationsbeziehung zur angeforderten ID
   description: |
-    Dieser Schnittstellenendpunkt löscht die Beziehung zur angegebenen `beziehung.id`.
+    Dieser Schnittstellenendpunkt löscht die Organisationsbeziehung zur angegebenen `organisationsbeziehung.id`.
 
-    Ein DELETE zum Löschen einer Beziehung per `beziehung.id` muss mit HTTP-DELETE auf die API `/beziehungen/{beziehung.id}` erfolgen.
+    Ein DELETE zum Löschen einer Organisationsbeziehung per `organisationsbeziehung.id` muss mit HTTP-DELETE auf die API `/organisationsbeziehungen/{organisationsbeziehung.id}` erfolgen.
+
+    Diese API ist häufig nur als interne API für den Betreiber einens Schulconnex-Servers 
+    zur Durchführung administrativer Funktionen verfügbar.
 
   parameters:
     - in: path
@@ -79,7 +73,7 @@ delete:
       schema:
         type: string
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID der Beziehung.
+      description: Der Pfad-Parameter bezieht sich auf die ID der Organisationsbeziehung.
   responses:
     '204':
       description: |

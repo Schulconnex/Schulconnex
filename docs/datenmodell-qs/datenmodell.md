@@ -34,7 +34,6 @@ classDiagram
     mandant
     ktid
     beziehung
-    revision
   }
   class Person {
     id
