@@ -27,8 +27,8 @@ einer Jahrgangsstufe mit einer anderen Rolle als `Lern` in der Regel nicht sinnv
 Attribut | Typ | Anzahl | Bemerkung | Qualifizierter Name
 --- | --- | --- | --- | ---
 id | String (UTF-8) | 1 | ID des Personenkontexts. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable). |
-referrer | String (UTF-8) | 0..1 | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein.
-mandant | String (UTF-8) | 1 |  ID des Mandanten, dem der Personenkontext zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig.
+referrer | String (UTF-8) | 0..1 | ID des Personenkontexts im Quellsystem. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein. |
+mandant | String (UTF-8) | 1 |  ID des Mandanten, dem der Personenkontext zugeordnet ist. Wird vom Schulconnex-Server vergeben und ist eindeutig. |
 organisation | [Organisation](organisation) | 1 | Organisation. |
 rolle | String (Code) | 1 | Rolle der Person innerhalb der Organisation. Referenz auf einen Code der Codeliste *Rolle*. | `urn:schulconnex:de:kern:personenkontext:rolle`
 erreichbarkeiten | *Array[[Erreichbarkeit](erreichbarkeit)]* | 0..n | Liste (Array) Erreichbarkeiten. | `urn:schulconnex:de:kern:personenkontext:erreichbarkeiten`
