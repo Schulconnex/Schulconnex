@@ -19,7 +19,7 @@ Detailierte Informationen zu den Änderungen finden sich in der Historie der Git
 * Über die Filter `offset` und `limit` können Antworten auf Leseanfragen auf `personen-info` paginiert werden.
 * Das Datenmodell Anschrift ist um die Klasse `verwaltungspolitischeKodierung` mit dem Attribut `Bundesland` erweitert worden.
 * Bei den APIs `personen` und `personenkontexte` kann nach Organisations-IDs gefiltert werden.
-* Das Format des Löschzeitpunktes wird jetzt korrekt nach ISO 8601 auf `YYYY-MM-DDThh:mmZ` angegeben und auf die Norm Bezug genommen. Insbesondere wird klargestellt das Löschzeitpunkte im 24-Stunden Format anzugeben sind.
+* Das Format des Löschzeitpunktes wird jetzt korrekt nach ISO 8601 auf `YYYY-MM-DDThh:mmZ` angegeben und auf die Norm Bezug genommen. Insbesondere wird klargestellt dass Löschzeitpunkte im 24-Stunden Format anzugeben sind.
 
 ### Geänderte Codelisten
 * Lokalisierung ist nicht mehr über eine Codeliste repräsentiert. Der erlaubten Werte werden vom Betreiber eines Schulconnex-Servers vorgegeben.
