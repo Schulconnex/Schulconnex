@@ -699,7 +699,31 @@ const sidebars: SidebarsConfig = {
             },
           ],
         },
-      ],
+        {
+          type: 'category',
+          label: 'Lernperioden',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-lernperioden',
+              label: '/lernperioden',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-lernperiode',
+              label: '/lernperioden',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/delete-lernperioden-code',
+              label: '/lernperioden/\u200B:code',
+              className: 'api-method delete',
+            },
+          ]
+          }
+          ],
     },
   ],
 

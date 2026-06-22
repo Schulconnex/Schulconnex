@@ -30,7 +30,6 @@ Gruppendifferenzierung | An attribute to specify a specific level of a course. C
 Gruppenoption | Currently there are no options implemented.
 Gruppentyp | Classification of a group as „class”, „course“ or „other”. Classes are generally mandatory, while courses are often optional.
 Gruppenrolle | Similar to „Rolle”, but as this refers to roles in a group and not in an organisation, the options differ slightly. For example, groups cannot have system administrator, while organisations don't have group leaders.
-Lernperiode | A teaching period, usually a year or a semester (trimesters are rare in Germany). A more specific description of the structure of codes from this list is given in 13.1.9 Lernperiode.
 Lernperiodentyp | Type (essentially the length) of a teaching period Year or half-year
 Fächerkanon | Subjects that can be taught in a class or course. Such as biology, French or natural sciences.
 Bildungsziel | Type of school, based on likely qualification level upon leaving.
