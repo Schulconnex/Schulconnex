@@ -15,25 +15,25 @@ Detailierte Informationen zu den Änderungen finden sich in der Historie der Git
 
 * Bei der Auflistung von Organisationen über die Dienste-API `organisationen-info` wird jetzt das Attribut `id` mitgeliefert.
 * Eine Sichtfreigabe kann nicht mehr direkt über POST/PUT auf `personen/:id/personenkontexte` innerhalb eines Personenkontextes gesetzt oder verändert werden.
-* Bei `organisationen-info` erfolgt die Autorisierungsmethode über `oAuthForServices` statt mit `oAuthForUser`. (Fehlerkorrektur)
+* Bei `organisationen-info` erfolgt die Autorisierungsmethode über `oAuthForServices` statt mit `oAuthForUser` (Fehlerkorrektur).
 * Über die Filter `offset` und `limit` können Antworten auf Leseanfragen auf `personen-info` paginiert werden.
 * Das Datenmodell Anschrift ist um die Klasse `verwaltungspolitischeKodierung` mit dem Attribut `Bundesland` erweitert worden.
 * Bei den APIs `personen` und `personenkontexte` kann nach Organisations-IDs gefiltert werden.
-* Das Format des Löschzeitpunktes wird jetzt korrekt nach ISO 8601 auf `YYYY-MM-DDThh:mmZ` angegeben und auf die Norm Bezug genommen. Insbesondere wird klargestellt dass Löschzeitpunkte im 24-Stunden Format anzugeben sind.
+* Das Format des Löschzeitpunkts wird jetzt korrekt nach ISO 8601 auf `YYYY-MM-DDThh:mmZ` angegeben und auf die Norm Bezug genommen. Insbesondere wird klargestellt, dass Löschzeitpunkte im 24-Stunden Format anzugeben sind.
 
 ### Geänderte Codelisten
-* Lokalisierung ist nicht mehr über eine Codeliste repräsentiert. Der erlaubten Werte werden vom Betreiber eines Schulconnex-Servers vorgegeben.
+* Lokalisierung ist nicht mehr über eine Codeliste repräsentiert. Die erlaubten Werte werden vom Betreiber eines Schulconnex-Servers vorgegeben.
 * Es wurde eine zusätzliche Codeliste `Bundesland` eingeführt.
 * Der Wert `Studienseminar` wurde der Codeliste `Organisationstyp` hinzugefügt.
   
 ### Sonstiges
-* Qualifizierter Namen: Es wurden qualifizierter Namen im URN Format für Schulconnex-eigene Attribute eingeführt. (Beispiel: `urn:schulconnex:de:kern:gruppe:optionen`)
-* Codelisten sind jetzt einer von drei Kategorien zugeordnet: Schulconnex-eigene, generische und lokale Codelisten
+* Qualifizierte Namen: Es wurden qualifizierte Namen im URN-Format für Schulconnex-eigene Attribute eingeführt (Beispiel: `urn:schulconnex:de:kern:gruppe:typ`).
+* Codelisten sind jetzt jeweils einer von drei Kategorien zugeordnet: Schulconnex-eigene, generische und lokale Codelisten
 * Beschreibung zu Auskunftssperren neu formuliert.
 * Allen Codelisten wurde eine Beschreibung hinzugefügt.
 * Einzelnen Codelistenwerten wurden zusätzliche Beschreibungen beigefügt.
 * Klarstellungen zu Sichtfreigaben (Löschberechtigung)
-* Beschreibung wie mehrere API-Calls über JSON-Batching zusammengefasst werden können.
+* Beschreibung, wie mehrere API-Calls über JSON-Batching zusammengefasst werden können.
 
 ## Änderungen von Version 1.6 zu Version 1.7
 
