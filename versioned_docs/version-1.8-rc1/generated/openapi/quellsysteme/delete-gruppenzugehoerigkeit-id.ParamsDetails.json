@@ -1,0 +1,1 @@
+{"parameters":[{"in":"path","name":"id","schema":{"type":"string","example":"grupz_2343_eng"},"required":true,"description":"Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit."}]}

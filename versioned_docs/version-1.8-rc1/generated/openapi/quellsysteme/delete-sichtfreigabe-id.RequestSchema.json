@@ -1,0 +1,1 @@
+{"title":"Body","body":{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["revision"],"properties":{"revision":{"type":"string","description":"Revision der zugrunde liegenden Sichtfreigabe. Dieses Feld ist ein Pflichtfeld."}}}}}}}
