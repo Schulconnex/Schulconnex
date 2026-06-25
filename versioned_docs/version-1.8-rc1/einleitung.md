@@ -31,4 +31,4 @@ nutzbar bleiben.
 
 ## Stand der Bearbeitung
 
-Dieses Dokument befindet sich aktuell im Bearbeitungsstand Version 1.7.
+Dieses Dokument befindet sich aktuell im Bearbeitungsstand Version 1.8-rc1.
