@@ -1,0 +1,260 @@
+---
+id: read-person-info
+title: "Informationen der angemeldeten Person"
+description: "Dieser Endpunkt bezieht sich nur auf die im Sicherheitskontext angemeldete Person und"
+hide_title: true
+hide_table_of_contents: true
+api: eJztPelyGz1yr4JiUik74Ui8Dye1Fco6Px1WSfKnXVuOheFgyLGGQ35zWLYcV+2DpDZ//Az+5X96k32SdDeAIeYgKV9b+2XpskgOjkaj0ehuNHqAD5WYj6LKk5eVUxFG00AElVfVynQmQh570+DAqTyphII7MvcgcKeVaiUSwyT04vdQ7UNlOkji8e40fB6JEBJefYT6joiGoTdDCFB/2xOQx3YCZ5YENzGzxZ0nxjGLvOGYBUnIeOIyxxPMm7BzSBPhWHhxdDMNYvEuZjwYiYnwHRELJtFgSeBcBVAjACDTiRczR0zYwA4RDrSEaIYT6oAIKOWNuBWe743gUYLYuAquAkCMDQI35CPBJkkUMe5HbP/i4tTa27lgIxHFwvdjditCRwQbTBaPb6dhzEToTv1RzLBx4QXQxCwSiTMN3k+8yBNhDC0dbFcBS8Dsl/NnJ9Yz+424iQkbW8ShcF0BmRof6MctgJegjjxoGZDx4bd7/yUk4iBlYpuHN0CbK0BaQG9GwhZBCkMEimSCerclPGptkES+J1wRJsGIvZ3q0hZSid16oYN0p17vw0BDBUCC7VzwEXZuJGTdeIMhvIAPx9hxQv0qIJIrEmscLIP60BwM6XCc+MNpEIh31rkI33pDwW54IGsBTYOISMj++ue/HLjWCcCwjnk8HP/1z/9zFSg0kAIRUJLQ8rBqwM7EbwkMkcYaSwEjBWI8EXJ497niMWqIw5BEPL5jERAwSxRgV4KsQEUsQFoDA9x/gn6GcRVGB9iQRl7EOKYhw56oVnHQoJsxj5OINWst9uhkGrPjqeO5nnAeI7dCo1ArJrznmMhmRBiIJCaMr6+v3wARr4IPVwFjV5WZ51xVnrD/OI9DLxj9oco2Nwt8BmymCtMAUHnJa7K84jsciYv3MzVM0COYgkLiMpk6wOcmkDknIbiXCGYQhvw9dVcCxOFn8O+D/GIPaDSFuqB1/HdVGYXJbCaoHy91KptjgAy8J4sQYdXvu2QkxlMReiOcH5CHgxLlG47mAHVD2M4qmsk2dN1X1TmyUpQBD0mEP5jwxzx+DQLlda7My2xftua5VZA0Pog/ajeHObB2BD3UVJf/PpgP2ORNrBgmV9s62NawkXehzURNo5DEq5YjZ1OQOQykzx/ykNNOEPhBGGtAMjVT/mPVfNrY2Jg/vqqaFIKGXiMN8hT65j4iTjjFZAdhANgfqt/VEwNz/VOl0RckfqRZq7VJyeRk1zCLrzW1z+6/DG9G3BYsFLPw/hPIhRhLkoi/poITxm/iBOaEHPPb+09jn6ZbiW7EGSAVEQIf+QKLgIgRrhd4JIFRq2jYJGMOSpWsVDyGqg1AM8d3GRUlJWwUDccgOu//10coE/YiGYWe614FpMWLyqjKtIIGkhgtIJuBIIjREkAjgHjR6DD1zeFOEg7HAByG/a0ozApFVakwr/PC61rqbDkAQOhoFpLExVpSn+xyFD0IgmiPigApEWRmRV6IEBl3IuwAm9x/HiEhqoAqGBB3SRklNf3EOBRhoRMC+B+0eaztjatAGxzfN1RqYMi6Uk1fBfm2q8Qc0shAxpHq2LAuYNQCp8qSiQv9k2wqqW3q/FRbBMUxIDuGrbBXwGQzh8QcLCcdQWgR2NfBGRPff4oNDIhX3ogSlEgIOGRZgXSR0yCVszZYNIMAqYjiICg3P5dyvTZdo2KnyJgkxHFqRKkhxW6B2A50+Zx0IE/QQJGm353wA20gSLUokKNeXkvQ168ebWxsyv/OvIzl0KCJTUn6x1cBUkNXSvF5WO20+GOTy29Rp4ZjmDc5fkdeLDPQFb/NVTXq52noBHLeA+zcgN/cfwYDEVTgCKoBrWDQcOLLBsDQisFIJ9KDmQ+cwfHX3a0XSXFHXeCB7QEKoez/FtrYnk0KISrYoIBllQXE38g0phFx/1kZEYYkJluXGEXM9TFgx1F0iPLqCJq6cK1Ia3lgGF8zgxHkNL8iQ3oMtubIkwa6nOFmr4PV3WaFXoPGKHabxhMoMh9IW60TyomQTloXhimibtPSK8/uoH4jQoFsiECRJmTHINigw1Izh5Hw7ZQr9NTCFm0ixPZquJJowH2wgPACZXtLcyrgYPnDnIPqUQzT/fUobxuKazAH5FowStXSCVaj1cc2LDmoLXig5vAZp/EFVFhKI71IwrEEi5EGKIRmIrKmJKer2SKlJw4zjM79F1+NnH7wcBronukGUWIFAJpWMxIKTLCbkLux6kaKWkgm3DXmg+iVPBvn14NkgOSszzlf5aVzoHmGG1w6KeMuNrWluBfvoIqHEsBRdjqSETCPxBjWsDl1YGCBkxeZ+dqwCa/12m4kQFGN05nDptgdtB2iKcnzjC0NgtMRav1f0Htzo4SomVaEyUAWSRV6CGoAIA/HtIwNqLBSj9wGKYULX1DVCWCiTBUNUpWyBa5ytbxbuLi7qjhup93rDd2eM+y0+sLt9t3hsNduiHqt0+p26q1Wgzcbttts9Tti6PRtR9TcTofXe51em3N+VanmV4DKar6qgHyYTKbhiAdeREvyzDIFTHCFgyv6nabtupboNbtWq9vvW/26aFjtTq/WaDTqvR5vq3aUGQ4MqYzoq8rJwet2q9moZ0rgdJTZz+J4yvb5OJByWGSK8QBoDLo0LiygZtMoBos2vuNjXwJq9IEaRm0sBWtymXk+9WOeFHNhQD1VfzD2XTSlK2YR4Ntb7sfQmWg29cFqxllwCKt3cg48ya5AYP0Agy0iH+SbhFlrmuDSFcNHo4vx+5lCUXVfLSGqepQ0qYyBcYGdQKoEcyoeJxFqN5N2wKRGPn9XhAxTLAnjHGxQ/8lEUbRWr1m1OvzPAfb9NxxkiKdG+BdeBhuNIgFGmiwzSUFcVfzpDfdpEZQyiSOMfKncEpgoUQwzSZb4FVqVzXzMcHTOHZFzPMyZ2HEa/SHMk36LA8fyVqfZrdVabrvb60NCTfTFsN22a70W77R6otbg7bbLm8JuwzRri6abIcHCSWO2WIf50e62e5ZT7wmr1R/WLYDdstx+H+aqXbPdWi/HkfmJU280W+1cmfygW4V5s4StsrxH+kAWOxJhkOmiCENcMCqnYmHxnWP8tLkd65jjjKpm8zMdA2bckLj/Z6YLG44onS6mU0UPekQeNTVzcf2XQb7cT5TDee7jKfgR9BDaTZgDTq1muY26C0PY61i82XcsYI9af9hzeKMzzPVVsYeG0LebbrPDHavv1NsAwQXZ2enUrM7Q7XdbHZu3Wp0SCKDhkPpzmu0EYCnBlGIdu6R4Sv7DJIxKwdFgyjKnLtp2cRneM+kWLzhass4ZWdiBJQ4q8TtzHu+UNe7RGiqCgr4oAY1lzs7NkS9v8A0f47QbSalQhiQriNxySC4XaIOVQviQTyiw785JvgWcVaX1isMYooG37/muKAGyCm8f7Jw7dPEXeVYK5kAL7kanILgNrLwoLdez6g2rWc8jk0HlY7Vs4uTcqiXELEGRJE750LFUCuVz8oT41r52H9DXV7m+LlkvPKzH2iV5VenWO706GGWdetvp8Vqbd5vNmuiKtt1rNcDG63e6vabDO24XhH6j3+3UHFFvNpttt9mr1Tu8tH8PImihHmbtHeOgFWi9jDZlstn0eCrFXO74Xuz01rAyWnROt3q31hGgoIf2sAdautHuOHavDRQCfd3v1UGQtvs1x3Xtbn3YsNu9jgtSVjhctBtuv1ezc5ox4+Ml/bhVph0XIFMDY7vW6veHTRfkeq0LhrDd7fa4w51G0+XtTq3Ztxsg8Jso+TtgOnRcMMw7ot51G73a8KuQkT9epYaR8ol/LQF5vz60a07LBdqBWVMX/Vq/3uoO3WFNNHuwzqo3W50G7/V7kODwdqMOzNewnT6g3u018qZFHmfQdlsoTPNok602d4JXqpVQgBUNy7yo8uQDTMgafmW3g58dQrEhGnRBjLl8NgNlRXbWJi6QMA1N8AnHX6D2BFSa2m/EMCb4vyVeKBzcsoYVFO5Wz0Lcr4blJrWJiYU2T4t++Q12JlLlJncg5eIP16wRS7drS51HG4CJwiyivTl4Fu/4ZOZj0vcu6Cofq8oIWkUBNBQhKWdNF4lSWAYS4X3/mUt7+LkBMsoZHS1FoGwEygZAbc4sAJ3SEEMNngX++8qTOEyESVNg7i78OVaz1YUFar3RADOtB2Zavw3yotUQ3V6n8hEIF3sxVRhOJzM0dOLIMlu1bB55EVD4a3ud7aOyFoodRReWtLG4L9ihLMYeSbe1690Q/Mg62H6sPDyrSDIngV4sIHvQwBenlut6aIKhUwndWl/dxD5UQLe7hT+Etfd+EgC5kgk2mS7Uy5gyNweNlXvJZDRyl6PTrLXrfWwblvFFOINJTM7RkO2JCeALJIY+r+ggD4IpTBcFlHwDRcjk75M7yM+gUJVJ5yfIYphkoWDP0Uel3Jo4vLhp9QXJEy9vffv+8xgkDjZe6nW40V6H1SSeuyGMsvMmAxgzmJ61OjzUGvjRxI8WfrTxo4MfXfzo4UcfPuo1/MAadaxRxxp1rFHHGvVOpRDZc4l7R7j9+AQVwb8yVquz/0Z56Yvo1htZ+1MfKRzo3Abk7vOJnYQjndSEpBMiZMSH40ikZVuQsRXCwKYpbSw6DR3cnwmsSxDWMCzz7A4CF5EBogspZ1gYyWSdQuk7ndVD6Bw4xrq8/xLGsZjA+ilFqk+579Gwkin1GvaL85D8PioN+wpa0U/7V28Qzuj6Dow+1rGPx2J448tk69dpOJtOJgb4FoE3+19vz5OsQTDmuDEoc7CjF2NA25Me00qp0BtOHWFtzblkgWykYstdYIuqDlKB8JGYfhkjytU/JAzUdgX8PBa493QHsEIoVK1skdXtYCkofhFy+hUntEMlJl7Asda5stZXc6Nyi9DvQbo5hE+ZlmXSFjn0HWFUjcP7TyNdJYuHSlOoML2CyEhaEbBNtiPlaZysHCqzaoTUfIAyq3x8ZeiCZXradCeiwSAdh0XdnSlXkIu7Ru6j4LGxA7sBNJW722aZ+XYN7YQdCRHeqRCFSMx4iJbXcomJnnfpQHLBwCHBqVAvIKcR+FUW+P62T3jMoSfYKEVToLBZTp8DWUxuTBzoOmREZsgCGmXC33kTKMpxj/uFRKwMHSh3JIJRPK486ZnIHWfQWkiUJRhpOv0AZE4QmTBxy3HAjad0Q3g+Ohh5iFjFMMtQj+N+656wQ9pZhdmSxHdxOppM7/3MkW02HohqsyFnkijT9JhsRhI8sqPZ7QYtB/gNKIiJ3MtjeyF3qmprx6INHzA/IsP5o/ejcJihSyHVY2e4YSYez7GuN3oPRBtKktUFM7iEqHIb8RHtfD6mDSrax4zukuj+E0aDpPu6A4KwwX4RKriTwgzmxTESEaMkaCfsWKLpE9oEttPS+MpYkWwJihyhLb9s8wx4fRQTDu162UBxRBwegf6TqExzGJTotD4qMQcLnARs3HcPp4csj9E0pf2X2T+u/6o5o/v1WqP1Q/ofTVFKh2jnlvT/AJNpXm/B/IH1no174fh8ArNaT3SM35WxWBJYupUaTX1/g22TkEBAuON7kvg+LZcoBNbZYGM5Ly6xHpLmr3/+Swu3yGEOjDBOWwWFUDQLOkED9tbD2LoUIeaNgilJXrknbBMuQMMAt+XMglnEF6B7AEjeIEbnBmnmoVsUtkvb77QcksBUaBE6h3HTFneAJaomloHcpadNeOBoCR0B3n8ClfoWRWjM7pJJtmEgRw3IUTatZxxMzBDH6b9e1qz+q3/754ymaYGyhxGWm3WrbX/avyuywB5VjyhXrfyUci7BSMZoo7OCxyKDTKNWa1v4vy7VbboTWNKiZ8txn9py+ighSpXuP2El2v4uU7PKMPyFw8MJVEZbZKEZO536gtO6SdIoKl0Q7qV5me5X544dDDehJR2xAvLgEcfwNpio0QwWzpGM2YCRBMPNGcNKEWrL5Qka0RgQssEuUXMR32HlHL+RWsNgB8oDQNsiiXGfFB4pnAQ1BRr/OFs2YEZR7MYccWw6dOEJC1PslSfmiaCBsuDuEsB9jKj5K5b2cqWSAaC5Tm/jLjPg0UC/hT8H/t4Vbe+9FIgyvidsAhIyQMUuE24xisyeP8Pk89CVJp/eEUHx/QqMTVlqKM+bQn7IbDSX2B4kvuTIu+xs9ylrd1odsFZV+BPGfsihFwpxB0MbiUT62frjH3VSVWlTMCqryGMuRWSdy8gsWR6Wa3tb8Kn28h79ivtyAQhIkGiH95/hF+3TPZZ9XOxDFMpLkHHsLRmgQ5xD1crzwMbpjB4M+MId9dULJazKLMnSFikBXMLff4koXCvyQJ+HxIvyhYU5UhTK6I02JBhsmqFtpCNflsJKi6na5HOxNHBZeVJWmWaYLqYqYz9lZY88YOGKxslblMCSTUVQh2iaecpHR/U3lvLgr7lxWbBWU7GVlpRDc7fuPKDBGNFFFsEiv2s1E6KA+bhP9BXu2OLrET/RJ95yam672x/W7D5vOU1ut3qtXtdu2kL0eIM7q/Klw27twF47sNcO7LUDe+3AXjuw1w7s/y8ObBV3UxRjq90lpTpdwivqdZX+ENPKcOxJJL7KSpCx+MtF6UPiDpXR8x32yLy9h0QpYntmz0tcuWnmgztqhDXSPNORHTmNhckGTHTCHCbhHdrmRfiEJ05eWFKWIvpC+iHlEm9uzmwZlVZ0wPTE1hqt1RLi0OcguyEBAzTn8/wByy+qKKfsDf1W6QCHPjZJXdM0zMzb+fzVbygvWzbLSUYTs6qjRZf1R8WQQsolWkHya6YSyw95YE/xnTLyxOIqK5qJOzAZcezlG4YcvZNaoGe1pqKFalR/J7mOIwr0UZahcDN/m8VW00YTBWedCpN9wPqsQLgicfa9AB1LT+g1R3x5U79WxmAhGeFruviWJQumQCnpB7mkKCV8CYWU8QZLQZQRWq7LfXlcwf0XtASgJ3jABK1vZ9OYXjOGNTK99DMfgrvEfOL2rfRTO8tXv4pckkYk5nOBwsuoswe/d+DvBfyNBpgx+GnctMf2LAqXpqcdtmM8vWAvjKfRgIF2CBxfjORad4CnWEjrOAq8t4Inyr0zYCIETTuOFxRaTbc8sXA6mvHT38Jze+fwsI8fZ/ix9yfrfOfQOjB+Hvw8Kp+j/AmcyDBX9s/BTk5msZl2ds7OBPfNJI0cSxdq7FzcACwekmOFHWTLLSl4sNyONAhMHJuLNP8Wmn/n2mSlXoC1yC8ZLFldZTTyGQ2V0cxnNFVGK5/RUhntfEZbZXTyGR2V0c1ndFVGL5/RUxn9fEZfZsCiJN/Bmsopdl31vV7oe111vl7ofL25lCeypYkr1FsDJdyQ2jMvDd9JZXsnZys+McP/K3gWUspG0LTyVj3YM2MYUSdL9lC2cJ4/3ccP/EVIbaMY2MFQW6q6e4aiAD9OjuDj4AINFMw4fA4fR4NUcGDd02f4cYlp+HiGQM8Q1PkpfmCNC8y4QFl+ib8uEdQlAthGUMf4sY8AjrHwKT6eIn4Hu7iCwoy9I2oDQZ8SsNO951j/ZHDx0wTV1gHb8qb+dOQp8fN0nz0FuzN9PIBHdJp4qfd/e0dvmKjnc7aNIoe0NzlCce9A6ZdDthM6KJQUvJ0Tpo1fmbB7xnZhdX13/9loYu8MxKcHfDdPOjnSm06o0ufpBxfsgGJSgnna+QngwI2Ew+dgNIJdKJ+OBuyIz10YKIOTyGx9h9GGCloQCu3TZ+yUFtE36vlSP29eeiHSgrsK+hno1Le4peWrcAf4McIX5mTuATuA0ZiU5h2yQx6Pp6UVz0+hT/hip3x6Tn6EvMl3scMugGqBRvNiD57fxZ4PowJdAjrF2hlxuTNPwUED6+omzTtRxhZaSiew2kgzzlm+u9sDzQ20xfcCz0WIzM2f4wE75rTCSam3f4maMLrNgTp+jnFNKYkH7PT+k8NHwJs6aZ+djt+nJQ5258eaqaTBJRuENqBgzfG0MiTZO8J+A6/KzMjHKBw9qAfsNJy6nl/oJcxHnZWBhjNUZwBYoBcelCHfXp/eYWCRMqZgDrMTHifhrYfeLAl7hfdg9/4TSt4bHiiTsqSgtJ8sJaQtLSjRFb7C15hd0xpi1RDWRfm6eO0rXau7KF3ku/nKBPcmzOzI3IAv73m2QyaWD6NApsZKKqwVy1qxrBXLWrH8IyuWgn+z6Kf8PSoCJdqzCuEV1tXvE3/NCuRt5sWzBVQYBC5XZ2fu3X/xY/mKcIRthTyZRKZ7lakjYF9ApjwDlg4ApUhfdYTbiwTkmxtT4KQMlFwWodZoWDV8rbmcmtsYAWe9VePtlS7is53ZCSjs5wFdWYVYE19UbtaWIYYYLRjWIzVaiLwst1KrQ0lfhAGkeFNnaYQQkg0eiXp1/UOlNNWXzmjqjJb60hktndFWXzqjrTM66ktndHRGV33pjC5kFDTyIIkMffzyaN414/yyoS4Q/JPR98dL5YABSbHFmmxfS7bVTGvAtXIkfhAr/7+SO2sG+/EM9k1ctR6IbxKQv0+9mRNB/1hyZzV51jPm70A3PsRn9bucfw+bcGvd+OMZLK8XX62ISZd8UZmHX2XPeloVJSUPJSpGRan0B4RyTbzgQO6N1R+w2YqkgEc81xS+Dv0jxLFa2cWAO/j+VWXg6TrwhQcf4ReVWrnRirDpA504m1aoU8chfWRSZcsqZifAKGA6Oxqz6KUAQUGIvj6eVbnnEEu2S/F5YS4PMZaxP7YYZeBhJ/SxrhN1jK52v4h5VlpnCSOZh8PiWz/0OuHCU6++9aUEPI6oUl3IGpT90FcR9CHdoRkTljtF+ue9rdDoN+tiaLtt12018Qifod0YOv1ar91zeAfPlHT7tmjw1tDpdNv9ftNpdHo10e9xt213BAXuPXwmrJn/b8n8VW3v5b16Iy9Ychz4txl1X/PapTTy5GuXSvuXavtFCH5tc6Dyu1azvurlpdLG5KuDq2s5+rIbasU41GzZvFhgNZScLfedkiqF9N3Cik6bXnSa9N+5oJpTYXn8O8oWdRJcUayYJ4mrN+zMs87LrrlJDxy/uxVeSlOGJ6CHY+7bxmVV5mHkmnT6zgAdLC8xo2+BkZzDcYxvXYbyWIZ88gL5kxbPpHkrXlIwGHLFtEiLUsGSw/7WHL3m6N8tR2PR/KHSP+ytDoxcr6ZBDAX2XhGdLw+tXm0OyXLqyxo4Ib2QxSb0EnEg3yBvNhrs0QHuGqMlegwl8AbBXdK1j/FqQFiM+yu2JXcyZIpUWP7CtzIPp8FNiBesyBfkyQrAAygUmMwdfHK8zTdDWDCNbzHwGHnZuJ9vqckgJpzeITfOHFp8qPciLsl2k0plj/deNmZ06PfqIaNijG6IwoSlZD/NNl4IBF7H+/7jxPvqN+YfvPDSqqJa2XkXyxyYZQNn4slCtOw6fx/pFKVhTqj6D12ILVINaQGJIBP0pc9lkVka5YyEiDgmgXILeTxNm8bbHs1CmRWa7ij+APldAiCrcjYtHSt0giESlq86pY0P7i8dvTO5fMMTPzCsqFRKrlxC3Om1W8l773RsDsacPB/jSXHy2KCj+8+ysfLzElYtuazYm2iHy8rzIVK4KxdXury5usIqTZBJhY6Zl5Ei/VplhzJvcUdfqHpFVw3i3WQvd8XYx3AUDF3xgQiGOzPC+J04TgPW9IWDm+M4nllSvOK4RdZvETo5qeF6seHnAU/i8TT07nB9/9NabpYcZjgNbc+he2x/WrMLhsOd0g3GP63ZdtnpiEBlfMUML6bzp7c/jdqAwITagkZHgqYgx5coK+Y1aBW8RJoWAxSOlIQ+FECI0ZPNzWi+ZNiIgSE339YLGx9HeOwPzM8LyJeQ6GULfTP1OZ4fLqe8vp9aXT2cMTOR9RoF2HTP8+kB3aoor+x9hjBYY6PGnvp06/RTPAQowMMUI7YL1KTtFfgm6EMqYxShJqdg2z2f9/Nf7m7f/Dt0FoNGg41Cl6k4UmkI4osABDDhoTIN4FuwzLidunKzV3AXu5dipqcaSfOnauslk/hwDLEair/v7ZfJFejiisf3n/xYn/tYTQ9uq6rbaVFCZ5RSGgYuiSEBfUjFp7EArdCpFZEc5fpGtzDyhdeDzzPcr29t0/BkfLA8E1K+fIvH2vMhaRd5wEll9/I5WNwRYJPEsvyu50s9g++koefw0ghmlAooDUhlIzoYJLj/Et/Re74TG6Ods/Pl9vZ2w71NwArfJP0IXB5EwsABWJHT9alPp5MJUIwNYtBWdkLHyZxMt2E5+JYKRKwFPC5XNly+M80ePX3Ktv5knWxj3uNC40MFeyhBb4BBsqkwiDbt91bgbEK9TV+MuD/U+1h4vMqEBwaKxSvbS25QzY/Xh/k1AutL5teXzK8vmV9fMr++ZH59yfz6kvn1JfPrS+bXl8yvL5lfXzK/vmR+fcn8+pL59SXz60vm15fMry+ZX18yv75kPi2zvmR+fcl8vni8vmRel1pfMr++ZH5BX9eXzJtZ60vm15fM/40vmVcBDmitbc587lHYC+1Lf1DRJi8zcQWvqpUx2PmY/OGDzSPxPPQ/fsTk3xIRvod0+PmWhx4FVcATgBvTNp067/M9vuU5HIoZxrO85X5C0cv5i+sxAiWNfdnbwaPQKEqiJCRD/TDO4uHBewN2NlZGIkAxE+bbtdkqXxN+IQFy6FEUXegIju+CrMJBFGB4WAoxE3PymuICdN1RyIP4NdXCd1g//h/ZTG6T
+sidebar_class_name: "get api-method"
+info_path: docs/generated/openapi/dienste/schulconnex
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+import Translate from "@docusaurus/Translate";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Informationen der angemeldeten Person"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/person-info"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Dieser Endpunkt bezieht sich nur auf die im Sicherheitskontext angemeldete Person und
+dient somit dem Abruf der Informationen der jeweiligen Person.
+
+Die Anfrage muss als HTTP-GET gestellt werden. Die Antwort erfolgt mit einer pseudonymisierten ID,
+dem JSON-Objekt der betreffenden Person sowie einer Liste aller für die Sichtbarkeit
+freigegebenen Personenkontexte.
+
+Bei der Auslieferung von Person-Info wird im HTTP-Header ein ETag mitgeliefert. Bei nachfolgenden
+Abrufen der Personen-Information vom Schulconnex-Service kann der Dienst ein „If-None-Match“
+Tag mit diesem ETag in den Request-Header mit aufnehmen.
+
+Hat sich der Datensatz seit Auslieferung des ETag-Headers nicht geändert, so antwortet
+der Server mit einem Status 304 (Not Modified) und sendet den Datensatz nicht erneut.
+
+```json
+{
+  "pid": <String>, // pseudonymisierte ID
+  "person": <Objekt>, // Objekt vom Typ Person, siehe Datenmodell
+  "personenkontexte": [ // Array mit Objekten
+    {
+      <Objekt>, // Objekt vom Typ Personenkontext, siehe Datenmodell
+      "gruppen": [
+        // Array von Gruppen und Gruppenzugehoerigkeiten eines Personenkontexts
+        "gruppe": ": <Objekt>, // Objekt vom Typ Gruppe
+      ],
+      "beziehungen": {
+        "hat_als_beziehungen": [ // Array von Beziehungen, welche vom Personenkontext ausgehen
+          {
+            "ktid": <Personenkontext-ID welche der Bezug in der angegebenen Rolle ist>
+            "beziehung": <Art der Beziehung>
+          },
+          ...
+        ],
+        "ist_von beziehungen": [
+          {
+            "ktid": <Personenkontext-ID der den Bezug hat >,
+            "beziehung": <Art der Beziehung>
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+Die pseudonymisierte ID `pid` in der Rückgabe repräsentiert die `id` im aktuell ausgewählten
+Sicherheitskontext und folgt der gleichen Definition wie die `id`.
+
+Im Sicherheitskontext einer angemeldeten nutzenden Person mit ausschließlichem Zugriff
+auf den Personenkontext, mit dem sie angemeldet ist, steht nur der ausgewählte und dadurch
+aktive Personenkontext in der Liste `personenkontexte`. Die `pid` entspricht in diesem Fall
+der `id` des einen angegebenen Personenkontexts.
+
+Es ist möglich, dass zu einer angemeldeten Person mehrere Personenkontexte bereitgestellt
+werden. Im Sicherheitskontext einer angemeldeten nutzenden Person mit Zugriff auf mehrere
+Personenkontexte, die für den Dienst freigegeben sind, umfasst die Liste der Personenkontexte
+`personenkontexte` alle freigegebenen Personenkontexte. In diesem Fall entspricht die `pid` der
+Identität der Person und jeder Personenkontext hat die eigene `id`, welche bei Anmeldung
+im Sicherheitskontext mit ausschließlichem Zugriff auf diesen Personenkontext als `pid`
+ausgeliefert würde. Siehe auch die einzelnen Datenmodelle zu [`Person`](../../../datenmodell-dienste/person)
+und [`Personenkontext`](../../../datenmodell-dienste/personenkontext).
+
+Es ist weiterhin möglich, dass eine angemeldete Person mehreren Gruppen zugeordnet ist.
+In diesem Fall können, geregelt durch eine vertragliche Absprache zwischen Dienstanbieter
+und Betreiber des Schulconnex-Servers, neben der Gruppenzugehörigkeit im aktuellen
+Anmeldekontext auch andere Gruppenzugehörigkeiten durch `/person-info` geliefert werden.
+
+Abhängig von einer vertraglichen Absprache zwischen Dienstanbieter und Betreiber des
+Schulconnex-Servers ist es möglich, bei der Gruppenzugehörigkeit gegebenenfalls auch
+die Personenkontext-IDs und Rollen anderer Mitglieder derselben Gruppe mit auszugeben.
+Die Personenkontext-IDs und Rollen werden dann in einem Array namens `sonstige_gruppenzugehoerige`,
+jeweils mit dem Namen „ID“ und „Rolle“ als Teil der Gruppenzugehörigkeit geliefert.
+
+Typischerweise ist dieses eine Liste von Schüler und Schülerinnen in einer Gruppe, wenn
+sich eine Lehrkraft mit der Gruppenrolle `Lehr` anmeldet.
+
+Bei der Ausgabe von Beziehungen zwischen Personenkontexten ist es abhängig vom
+Schulconnex-Server ob alle existierenden und als einsehbar freigegebenen Beziehungen
+unter `beziehungen` mit aufgeführt werden oder nur solche Beziehungen, zu denen der
+Personenkontext, mit dem eine Beziehung besteht, vorher schon von dem Dienst abgerufen
+wurde und damit dem Dienst bekannt ist.
+
+```json
+{
+  "pid": "df6588cf8dc649ef79fcc852e1064761442a32bf3496ecd9bde0f66a18685aaa",
+  "person": {
+    "stammorganisation": {
+      "id": "fe963bff-e837-4799-91e2-5680222188a5",
+      "kennung": "NI_54321",
+      "name": "Otto Hahn Schule",
+      "anschrift": {
+        "postleitzahl": "29614",
+        "ort": "Soltau",
+        "ortsteil": "Ahlften"
+        "verwaltungspolitischeKodierung: {
+          "bundesland": "03"
+        }
+      },
+      "typ": "Schule"
+    },
+    "name": {
+      "familienname": "Muster",
+      "vorname": "Max"
+    },
+    "geburt": {
+      "datum": "2010-01-01",
+      "volljaehrig": "Ja"
+    },
+    "geschlecht": "m",
+    "lokalisierung": "de",
+    "vertrauensstufe": "Voll"
+  },
+  "personenkontexte": [
+    {
+      "id": "dd29cbf394a218a4637004f5789a210e9ec55b084a648e02a55fa3eb56475e3f",
+      "organisation": {
+        "id": "15685758-d18e-49c1-a644-f9996eb0bf08",
+        "kennung": "NI_12345",
+        "name": "Muster-Schule",
+        "typ": "Schule"
+      },
+      "rolle": "Lern",
+      "erreichbarkeiten": [
+        {
+          "typ": "E-Mail",
+          "kennung": "Max.Muster@Muster-Schule.de"
+        }
+      ],
+      "personenstatus": "Aktiv",
+      "gruppen": [
+        {
+          "gruppe": {
+            "id": "b3201d00-f21f-4986-a39d-02a09c8da26c",
+            "orgid": "9b3f36ad-9d15-49f9-9660-6cf9746ba446",
+            "bezeichnung": "Englisch 6b",
+            "typ": "Kurs",
+            "bereich": "Pflicht",
+            "optionen": [
+            ],
+            "differenzierung": "E",
+            "bildungsziele": [
+              "RS"
+            ],
+            "jahrgangsstufen": [
+              "03"
+            ],
+            "faecher": [
+              {
+                "kennung": "EN"
+              },{
+                "bezeichnung": "Erste Hilfe"
+              }
+            ],
+            "laufzeit": {
+              "von": "2026-01-01",
+              "bis": "2028-12-31"
+            }
+          },
+          "gruppenzugehoerigkeit": [
+            {
+              "rollen": [
+                "Lern"
+              ],
+              "von": "2026-01-01",
+              "bis": "2027-12-31"
+            }
+          ],
+          "sonstige_gruppenzugehoerige": [
+            {
+              "ktid": "7168185a615d8a05a7330e7e5b84288c96783da6f734529760de13335f38016a",
+              "rollen": [
+                "Lern",
+                "GMit"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "beziehungen": {
+    "hat_als_beziehungen": [
+      {
+        "ktid": "1706e0e9cbc89ec256db8552955b981cf9590dffb71c2b586f9f9edae52f980b",
+        "beziehung": "SchB"
+      },
+      {
+        "ktid": "032b0499c3ff360791eb778adad23fa56039b26ad39b3f675e6f6ec6e17f280c",
+        "beziehung": "SchB"
+      }
+    ],
+    "ist_von_beziehungen": [
+      {
+        "ktid": "a91cb0d4fc25a551e909147cfc0e38ebe13462a898c0eda5219762bd96f6782e",
+        "beziehung": "SorgBer"
+      }
+    ]
+  }
+}
+```
+
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  {...require("./read-person-info.RequestSchema.json")}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  {...require("./read-person-info.StatusCodes.json")}
+>
+  
+</StatusCodes>
+
+
+      

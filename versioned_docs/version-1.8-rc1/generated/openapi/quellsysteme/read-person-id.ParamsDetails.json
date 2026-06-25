@@ -1,0 +1,1 @@
+{"parameters":[{"in":"path","name":"id","schema":{"type":"string","example":"a6e1a860-8d44-4b2b-aef7-aa2c8bf5beb5"},"required":true,"description":"Der Pfad-Parameter bezieht sich auf die vom Quellsystem vergebene ID der Person."}]}

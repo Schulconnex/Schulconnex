@@ -1,0 +1,1 @@
+{"parameters":[{"in":"query","name":"kennung","schema":{"type":"string"}},{"in":"query","name":"name","schema":{"type":"string"}},{"in":"query","name":"typ","schema":{"type":"string"}},{"in":"query","name":"hat_als_organisationsbeziehungen","schema":{"type":"string"}}]}

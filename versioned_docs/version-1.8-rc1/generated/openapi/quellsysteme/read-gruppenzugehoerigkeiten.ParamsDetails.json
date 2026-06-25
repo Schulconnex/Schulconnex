@@ -1,0 +1,1 @@
+{"parameters":[{"in":"query","name":"referrer","schema":{"type":"string"}},{"in":"query","name":"mandant","schema":{"type":"string"}},{"in":"query","name":"rollen","schema":{"type":"string"}}]}
