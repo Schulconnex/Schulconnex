@@ -18,13 +18,15 @@
     "write-dereferenced-openapi-for-dienste": "redocly bundle --dereferenced --remove-unused-components src/openapi/api-dienste.yaml | node util/resolve-relative-urls.js > static/dist/openapi/api-dienste.yaml",
     "write-dereferenced-openapi-for-policies": "redocly bundle --dereferenced --remove-unused-components src/openapi/api-policies.yaml | node util/resolve-relative-urls.js > static/dist/openapi/api-nutzungsrechte.yaml",
     "write-dereferenced-openapi": "npm run write-dereferenced-openapi-for-dienste && npm run write-dereferenced-openapi-for-qs && npm run write-dereferenced-openapi-for-policies",
-    "validate-openapi": "npx @redocly/cli lint src/openapi/api-dienste.yaml src/openapi/api-qs.yaml"
+    "validate-openapi": "npx @redocly/cli lint src/openapi/api-dienste.yaml src/openapi/api-qs.yaml",
+    "audit:qualified-names": "node util/audit-qualified-names.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "^3.8.1",
     "@docusaurus/preset-classic": "^3.8.1",
     "@docusaurus/theme-mermaid": "^3.8.1",
     "@mdx-js/react": "^3.0.0",
+    "ajv": "^8.17.1",
     "clsx": "^2.0.0",
     "docusaurus-plugin-openapi-docs": "^4.5.1",
     "docusaurus-theme-openapi-docs": "^4.5.1",
