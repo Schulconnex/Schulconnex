@@ -1,0 +1,24 @@
+type: object
+required:
+  - id
+  - ktid
+  - wert
+  - datum
+properties:
+  id:
+    description: ID der Bewertung.
+    type: string
+    example: 43b5a32b-f1a0-46f0-9e49-f3ee931cedca
+  ktid:
+    description: ID des Personemkontexts.
+    type: string
+    example: 6139d1c2-28cb-461e-a2d4-d7f014dadb43
+  wert:
+    description: Die Bewertung.
+    type: string
+    example: "2+"
+  datum:
+    description: Tag an dem die Bewertung erteilt wurde. 
+    type: string
+    format: date
+    example: "2026-06-30"

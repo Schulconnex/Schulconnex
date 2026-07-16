@@ -201,6 +201,31 @@ Attribute | Description
 orgid | ID of the organisation the current organisation has a „has as“ relation.
 organisationsbeziehung | Type of relation between the organisations.
 
+
+## Bewertungsliste
+
+This allows the association of a list of assessment (usually school report grades notes, but also certificates and other markers of learning progress) to be linked to a group or list of groups. .
+
+Attribute | Description
+--- | ---
+id | ID of this list. 
+grids | Array of group IDs.
+name | Name of the list.
+typ | Type of the list (e.g. â€žschool report gradesâ€œ).
+bwids | Array of individual Bewertungs-IDs.
+revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system.
+
+## Bewertung
+
+An individual assessment (usually a school report grade, but it can also be a certificate or some other indicator of learning progress).
+
+Attribute | Description
+--- | ---
+id | ID of this Bewertung.
+ktid | Reference to the person context for which the assessment was provided.
+wert | Value of the assessment
+datum |  Date on which the assesment was given. Can't be in the future.
+
 ## VerwaltungspolitischeKodierung
 
 This is the administrative area in which the address is located. Currently only attribute is the 'bundesland' (one of the sixteen German states).

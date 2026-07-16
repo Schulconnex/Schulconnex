@@ -1,0 +1,159 @@
+post:
+  tags:
+    - Bewertungslisten
+  operationId: createBewertungsliste
+  security:
+    - oAuthForServices: []
+  summary: Erstellen einer Bewertungsliste
+  description: |
+    Mittels dieser Schnittstelle wird ein neuer Datensatz „Bewertungsliste” erstellt.
+
+    Ein CREATE zum Erstellen von Bewertungsliste muss mit HTTP-POST auf die API `/bewertungslisten`
+    erfolgen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des
+    Datentyps Bewertungslistre.
+
+    Siehe auch das Datenmodell zu [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste).
+
+    Die Bewertungslisten-ID und die Revisionsnummer werden vom
+    Schulconnex-Service vergeben und hinzugefügt.
+
+    Bei einer erfolgreichen Anforderung zum Erstellen einer Bewertungsliste wird diese Anforderung
+    mit einer Repräsentation der Bewertungsliste in den Antwort-Nutzdaten (Response Payload) und
+    dem HTTP-Statuscode 201 quittiert.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: './components-qs-Bewertungsliste-basis.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+                - $ref: './components-qs-Bewertungsliste.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+get:
+  tags:
+    - Bewertungslisten
+  operationId: readBewertungslisten
+  security:
+    - oAuthForServices: []
+  summary: Bewertungslisten des Quellsystemanbieters
+  description: |
+    Dieser Schnittstellenendpunkt gibt ein Array von Bewertungslisten zurück, auf die das Quellsystem zugreifen darf.
+
+    Ein READ muss mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten (Response
+    Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Bewertungsliste, sofern
+    Einträge existieren.
+
+    Siehe auch das Datenmodell zu [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste).
+
+    Die Schnittstelle `/bewertungslisten` ermöglicht das Verwenden von Filterparametern zur
+    Präzisierung der Anfrage bei HTTP-GET.
+
+    Durch das Setzen von Filterparametern (query-parameter) wird mit der HTTP-GET-Anfrage
+    eine Filteroperation mitgeschickt, welche die Ergebnismenge der Antwort-Nutzdaten
+    (Response Payload) beeinflusst, beispielsweise mit den Filterparametern `?grids=f1e110a6-2185-4810-9ee9-9084c42b1e61`.
+
+    Bei Filtern vom Typ „String” überprüft der Schulconnex-Server, ob der Wert des Filterparameters
+    ohne Beachtung von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    Beispielsweise liefert der Filter `?name=chemie` alle Bewertungslisten, deren Name „Chemie“ enthält, wie z. B. „Quartalsnoten Chemie 11a“ oder „Chemie 12b“.
+
+    Werden mehrere Filter angegeben, so sind sie als mit „und“ verknüpft anzusehen.
+
+    Eine mehrfache Nutzung des gleichen Filters in einer Anfrage darf nicht erfolgen. Entsprechen keine Werte
+    den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
+
+    Bei Attributen, welche eine Liste von Werten enthalten können (deren „Anzahl“ im
+    Datenmodell die Form „0..n“), kann als Filterwert eine durch Kommas
+    getrennte Liste von Werten angegeben werden. Es werden dann nur die Bewertungslisten zurück
+    geliefert, in denen alle diese Werte in der Liste vorkommen. 
+
+    Folgende Tabelle listet die zur Verfügung stehenden Filter:
+
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `grids` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `grids` zu filtern, um alle Beweerungslisten anzuzeigen, welche zu einer spezifischen Gruppe oder Kombination von Gruppen gehören.
+    `name` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `name` zu filtern, um alle Bewertungslisten mit Bewertungen eines bestimmten Namen zu erhalten.
+    `typ` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `typ` zu filtern, um alle Bewertungslisten mit einem bestimmten Typ zu erhalten.
+    `bwids` | String |  Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `bwids` zu filtern, um alle Bewertungslisten anzuzeigen, welche zu einer spezifischen Bewertung oder oder Kombination von Bewertungen gehören.
+  parameters:
+    - in: query
+      name: grids
+      schema:
+        type: string
+    - in: query
+      name: name
+      schema:
+        type: string
+    - in: query
+      name: typ
+      schema:
+        type: string
+    - in: query
+      name: bwids
+      schema:
+        type: string    
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Bewertungslisten.yaml' 
+    '400':
+      description: |
+        Bad Request
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

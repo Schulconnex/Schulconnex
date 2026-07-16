@@ -30,6 +30,10 @@ tags:
     description: Verknüpfung von Personenkontext und Gruppe
   - name: Sichtfreigaben
     description: Regelt zeitliche Sichtfreigabe für Organisationen
+  - name: Bewertungslisten
+    description: Listet Bewertungen auf
+  - name: Bewertungen
+    description: Stellt eine Bewertung dar
 paths:
   /personen:
     $ref: './paths-personen.yaml'
@@ -67,6 +71,12 @@ paths:
     $ref: './paths-gruppenzugehoerigkeiten-id.yaml'
   /sichtfreigaben/{id}:
     $ref: './paths-sichtfreigaben-id.yaml'
+  /bewertungslisten:
+    $ref: './paths-bewertungslisten.yaml'
+  /bewertungen:
+    $ref: './paths-bewertungen.yaml'
+  /bewertungen/{id}:
+    $ref: './paths-bewertungen-id.yaml'    
 components:
   securitySchemes:
     oAuthForServices:
