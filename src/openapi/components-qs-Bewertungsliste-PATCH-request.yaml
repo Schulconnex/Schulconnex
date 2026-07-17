@@ -1,0 +1,34 @@
+type: object
+required:
+  - revision
+properties:
+  id:
+    description: ID der Bewertungsliste.
+    type: string
+    example: 732e8ea9-2d35-4399-9f82-089456a2a836
+  grids:
+    description: Liste von Gruppen-IDs auf welche sich die Bewertungsliste bezieht.
+    type: array
+    items:
+      type: string
+      description: Gruppen ID
+      example: f1e110a6-2185-4810-9ee9-9084c42b1e61
+  name:
+    description: Name der Bewertungsliste
+    type: string
+    example: "Quartalsnoten Chemie 11a"
+  typ:
+    description: Typ der Bewertungsliste
+    type: string
+    example: "Zeugniszensuren"
+  bwids:
+    description: Liste von Bewertungs-IDs
+    type: array
+    items:
+      type: string
+      description: Bewertungs ID
+      example: 98faff26-8b43-4374-8707-70df14cdc76b
+  revision:
+    description: Revision der Bewertungsliste.
+    type: string
+    example: "3"

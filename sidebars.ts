@@ -719,6 +719,35 @@ const sidebars: SidebarsConfig = {
               key: 'read-bewertungslisten',
               className: 'api-method get',
             },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-bewertungsliste-id',
+              label: '/bewertungslisten/{id}', 
+              key: 'read-bewertungsliste-id',
+              className: 'api-method get',
+            },              
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/update-bewertungsliste-id',
+              label: '/bewertungslisten/{id}', 
+              key: 'update-bewertungsliste-id',
+              className: 'api-method put',
+            },            
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-bewertungsliste-id',
+              label: '/bewertungslisten/{id}', 
+              key: 'patch-bewertungsliste-id',
+              className: 'api-method patch',
+            },            
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/delete-bewertungsliste-id',
+              label: '/bewertungslisten/{id}', 
+              key: 'delete-bewertungsliste-id',
+              className: 'api-method delete',
+            },            
+          
           ],
         },
         {
