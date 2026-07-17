@@ -21,9 +21,9 @@
     "validate-openapi": "npx @redocly/cli lint src/openapi/api-dienste.yaml src/openapi/api-qs.yaml"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.10.1",
-    "@docusaurus/preset-classic": "^3.10.1",
-    "@docusaurus/theme-mermaid": "^3.10.1",
+    "@docusaurus/core": "^3.10.2",
+    "@docusaurus/preset-classic": "^3.10.2",
+    "@docusaurus/theme-mermaid": "^3.10.2",
     "@jsonjoy.com/buffers": "^18.28.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
@@ -59,9 +59,9 @@
   },
   "allowScripts": {
     "@parcel/watcher@2.5.6": true,
-    "core-js@3.48.0": true,
     "@paloaltonetworks/postman-code-generators@1.1.15-patch.2": true,
     "core-js-pure@3.49.0": true,
-    "postman-code-generators@1.14.2": true
+    "postman-code-generators@2.1.1": true,
+    "core-js@3.49.0": true
   }
 }
