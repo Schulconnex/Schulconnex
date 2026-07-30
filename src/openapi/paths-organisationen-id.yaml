@@ -98,7 +98,7 @@ patch:
     beispielsweise {"kuerzel": null}. 
     
     Bei einer erfolgreichen Anforderung zum Modifizieren eines Organisationsdatensatzes wird
-    diese Anforderung mit einer ReprÃ¤sentation des Organisationsdatensatzes in den
+    diese Anforderung mit einer Repräsentation des Organisationsdatensatzes in den
     Antwort-Nutzdaten und dem HTTP Status Code 201 quittiert.
   parameters:
     - in: path
