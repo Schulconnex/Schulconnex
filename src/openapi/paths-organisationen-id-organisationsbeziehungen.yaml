@@ -43,7 +43,7 @@ post:
         type: string
         example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID der Organisation welche die Organisationsbeziehung hat
+      description: Der Pfad-Parameter bezieht sich auf die ID der Organisation, welche die Organisationsbeziehung hat.
   requestBody:
     required: true
     content:
