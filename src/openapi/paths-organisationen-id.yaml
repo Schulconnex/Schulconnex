@@ -88,7 +88,7 @@ patch:
     im Request dennoch vorhanden, wird es validiert und führt
     gegebenenfalls zu einer Fehlermeldung.
     
-    Dieser Endpunkt stellt eine HTTP-PATCH Operation bereit, 
+    Dieser Endpunkt stellt eine HTTP-PATCH-Operation bereit, 
     bei der ausschließlich die zu modifizierenden Attribute in der 
     Anfrage-Nutzlast mitgeschickt werden müssen. 
     Werte von Attributen, welche nicht in der Anfrage-Nutzlast mitgeschickt werden, 
