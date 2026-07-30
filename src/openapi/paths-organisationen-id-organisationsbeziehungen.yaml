@@ -8,7 +8,7 @@ post:
   summary: Erstellen einer Organisationsbeziehung
   description: |
     Die Schnittstelle `/organisationen/{id}/organisationsbeziehungen` erlaubt
-    das Erstellen einer Organisationsbeziehung für eine Organisatiom
+    das Erstellen einer Organisationsbeziehung für eine Organisation.
 
     Organisationsbeziehungen sind immer von der Form „hat_als“. Besteht zum Beispiel
     von Organisation A eine Organisationsbeziehung vom Typ `Medienzentrum` zu einer Organisation B,
