@@ -24,7 +24,7 @@ delete:
 
     Ein DELETE muss mit einer HTTP-DELETE Anfrage erfolgen. 
 
-    Diese API ist häufig nur als interne API für den Betreiber einens Schulconnex-Servers 
+    Diese API ist häufig nur als interne API für den Betreiber eines Schulconnex-Servers 
     zur Durchführung administrativer Funktionen verfügbar.
 
     Siehe auch das Datenmodell zu [`Lernperiode`](../../../datenmodell-qs/lernperiode).
