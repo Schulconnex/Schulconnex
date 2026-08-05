@@ -108,7 +108,8 @@ get:
     `grids` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `grids` zu filtern, um alle Beweerungslisten anzuzeigen, welche zu einer spezifischen Gruppe oder Kombination von Gruppen gehören.
     `name` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `name` zu filtern, um alle Bewertungslisten mit Bewertungen eines bestimmten Namen zu erhalten.
     `typ` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `typ` zu filtern, um alle Bewertungslisten mit einem bestimmten Typ zu erhalten.
-    `bwids` | String |  Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `bwids` zu filtern, um alle Bewertungslisten anzuzeigen, welche zu einer spezifischen Bewertung oder oder Kombination von Bewertungen gehören.
+    `bewertung` | String |  Möglichkeit, die Ergebnisliste nach der ID einer spezIfischen Bewertung zu filtern.
+    `bewertungen` | String |  Dieser Filterparameter erlaubt festzulegen, ob und in welchem Umfang die Bewertungen in der Antwort-Nutzlast (Response Payload) enthalten sein sollen. Mögliche Werte sind: `keine` (keine Bewertungen), `ids` (nur die IDs der Bewertungen) und `vollstaendig` (die vollständigen Bewertungsobjekte). Standardmäßig werden keine Bewertungen zurückgegeben, wenn dieser Filterparameter nicht angegeben ist.
   parameters:
     - in: query
       name: grids
@@ -123,7 +124,11 @@ get:
       schema:
         type: string
     - in: query
-      name: bwids
+      name: bewertung
+      schema:
+        type: string    
+    - in: query
+      name: bewertungen
       schema:
         type: string    
   responses:

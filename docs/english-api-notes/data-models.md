@@ -212,7 +212,7 @@ id | ID of this list.
 grids | Array of group IDs.
 name | Name of the list.
 typ | Type of the list (e.g. â€žschool report gradesâ€œ).
-bwids | Array of individual Bewertungs-IDs.
+bewertungen | Array of individual assessments
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system.
 
 ## Bewertung

@@ -18,10 +18,3 @@ properties:
     description: Typ der Bewertungsliste
     type: string
     example: "Zeugniszensuren"
-  bwids:
-    description: Liste von Bewertungs-IDs
-    type: array
-    items:
-      type: string
-      description: Bewertungs ID
-      example: 98faff26-8b43-4374-8707-70df14cdc76b

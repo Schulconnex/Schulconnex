@@ -10,8 +10,14 @@ get:
     `bewertungsliste.id` zurück.
 
     Ein READ zum Abfragen einer Bewertungsliste per ID muss mit HTTP-GET auf die API `/bewertungslisten/{bewertungsliste.id}`
-    erfolgen. Die Antwort-Nutzdaten     (Response Payload) beinhalten ein JSON-Objekt des Datentyps Bewertungsliste.
+    erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt des Datentyps Bewertungsliste.
+ 
+    Es steht eine Filterfunktion zur Verfügung:
 
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `bewertungen` | String |  Dieser Filterparameter erlaubt festzulegen, ob und in welchem Umfang die Bewertungen in der Antwort-Nutzlast (Response Payload) enthalten sein sollen. Mögliche Werte sind: `keine` (keine Bewertungen), `ids` (nur die IDs der Bewertungen) und `vollstaendig` (die vollständigen Bewertungsobjekte). Standardmäßig werden keine Bewertungen zurückgegeben, wenn dieser Filterparameter nicht angegeben ist.
+  
     Siehe auch das Datenmodell zu [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste).
 
   parameters:
@@ -28,7 +34,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-qs-Bewertungsliste.yaml'
+            $ref: './components-qs-Bewertungsliste-GET-request.yaml'
     '400':
       description: |
         Bad Request
@@ -187,16 +193,12 @@ patch:
     bei der ausschließlich die zu modifizierenden Attribute in der Anfrage-Nutzlast mitgeschickt werden müssen.
     Werte von Attributen, welche nicht in der Anfrage-Nutzlast mitgeschickt werden, bleiben unverändert.
 
-    Wichtig ist hierbei, dass die beiden Attribute vom Typ `array` (`grids` und `bwids`) in der Anfrage-Nutzlast 
+    Wichtig ist hierbei, dass das Array `grids` in der Anfrage-Nutzlast 
     vollständig mit den gewünschten Werten der Modifikation mitgeschickt werden müssen. 
     Wird ein Array mit nur einem Wert übermittelt, wird das Array auf dem Schulconnex-Server auf diesen einen Wert gesetzt. 
     Der Wert wird nicht den vorhandenen Werten hinzugefügt. Entsprechen ist das Verhalten
     auch bei einem Array mit mehreren Einträgen. Werden diese Attribute mit einem leeren Array übermittelt, 
     werden die Werte auf dem Schulconnex-Server gelöscht.
-    
-    Es besteht mit einem PATCH nicht die Möglichkeit, neue Bewertunges-IDs einfach dem Array
-    hinzuzufügen. Es müssen immer alle bisherigen Werte des Arrays mitgeschickt werden, 
-    da sonst die nicht mitgeschickten Werte gelöscht werden.
 
     Bei einer erfolgreichen Anforderung zum Aktualisieren einer Bewertungsliste
     wird diese Anforderung mit einer Repräsentation der Bewertungsliste  in den
@@ -273,6 +275,8 @@ delete:
     Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs
     `revision`, ob der Datensatz der Bewertungsliste in der Zwischenzeit keine Änderung
     erfahren hat.
+
+    Wird eine Bewertungsliste gelöscht, werden auch alle Bewertungen, die zu dieser Bewertungsliste gehören, gelöscht.
 
     Bei einer erfolgreichen Ausführung der Löschanfrage wird es keine Antwort-Nutzdaten
     (Response Payload) geben. Eine erfolgreiche Löschanforderung einer Bewertungsliste

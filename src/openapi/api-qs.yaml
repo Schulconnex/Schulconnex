@@ -75,8 +75,8 @@ paths:
     $ref: './paths-bewertungslisten.yaml'
   /bewertungslisten/{id}:
     $ref: './paths-bewertungslisten-id.yaml'
-  /bewertungen:
-    $ref: './paths-bewertungen.yaml'
+  /bewertungslisten/{id}/bewertungen:
+    $ref: './paths-bewertungslisten-id-bewertungen.yaml'
   /bewertungen/{id}:
     $ref: './paths-bewertungen-id.yaml'    
 components:

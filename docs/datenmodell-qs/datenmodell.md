@@ -158,7 +158,6 @@ classDiagram
     grids
     name
     typ
-    bwids
     revision
   }
    class Bewertung {

@@ -1,14 +1,8 @@
 type: object
 required:
-  - id
   - name
   - typ
-  - revision
 properties:
-  id:
-    description: ID der Bewertungsliste.
-    type: string
-    example: 732e8ea9-2d35-4399-9f82-089456a2a836
   grids:
     description: Liste von Gruppen-IDs auf welche sich die Bewertungsliste bezieht.
     type: array
@@ -24,7 +18,8 @@ properties:
     description: Typ der Bewertungsliste
     type: string
     example: "Zeugniszensuren"
-  revision:
-    description: Revision der Bewertungsliste.
-    type: string
-    example: "3"
+  bewertungen:
+    description: Liste der Bewertungen in der Bewertungsliste
+    type: array
+    items:
+      $ref: './components-qs-Bewertung.yaml'

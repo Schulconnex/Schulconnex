@@ -747,20 +747,19 @@ const sidebars: SidebarsConfig = {
               key: 'delete-bewertungsliste-id',
               className: 'api-method delete',
             },            
-          
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-bewertung',
+              label: '/bewertungslisten/{id}/bewertungen',
+              key: 'create-bewertung',
+              className: 'api-method post',
+            },          
           ],
         },
         {
           type: 'category',
           label: 'Bewertungen',
           items: [
-            {
-              type: 'doc',
-              id: 'generated/openapi/quellsysteme/create-bewertung',
-              label: '/bewertungen',
-              key: 'create-bewertung',
-              className: 'api-method post',
-            },
             {
               type: 'doc',
               id: 'generated/openapi/quellsysteme/read-bewertungen-id',
