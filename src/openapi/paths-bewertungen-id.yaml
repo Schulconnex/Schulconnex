@@ -1,0 +1,120 @@
+get:
+  tags:
+    - Bewertungen
+  operationId: readBewertungenId
+  security:
+    - oAuthForServices: []
+  summary: Auslesen  einer Bewertung
+  description: |
+    Dieser Schnittstellenendpunkt liefert die Bewertung zu einer Bewertungs-ID.
+    
+    Ein READ muss mit einer HTTP-GET Anfrage erfolgen. Die Antwort(Response Payload) beinhaltet ein JSON-Objekt vom Datentyp Bewertung.
+
+    Siehe auch Datenmodell [`Bewertung`](../../../datenmodell-qs/bewertung).
+
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        example: 43b5a32b-f1a0-46f0-9e49-f3ee931cedca
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID der Bewertung.
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: './components-qs-Bewertung.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+
+
+
+delete:
+  tags:
+    - Bewertung
+  operationId: deleteBewertungenId
+  security:
+    - oAuthForServices: []
+  summary: Bewertung löschen
+  description: |
+    Die Schnittstelle `/bewertungen/{bewertung.id}` erlaubt es, Bewertungen zu löschen.
+    Der Pfad-Parameter `bewertung.id` bezieht sich auf die ID der Bewertung.
+
+    Wird eine Bewertung gelöscht deren ID bereits in einer oder mehreren Bewertungslisten referenziert ist, so wird
+    die Bewertung automatisch auch aus diesen Bewertungslisten entfernt. Andere Einträge in der Bewertungsliste bleiben dadurch unverändet,
+    die Revision der Bewertungsliste ändert sich dadurch aber.
+
+    Ein DELETE muss mit einer HTTP-DELETE Anfrage erfolgen.
+
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        example: 1fd95f6f-bc28-408b-8e03-41972b414a07
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID der Bewertung.
+  responses:
+    '204':
+      description: |
+        No Content
+
+        Bei einer erfolgreichen Ausführung der Löschanfrage wird es keine Antwort-Nutzdaten (Response Payload) geben.
+    '304':
+      description: Not Modified
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

@@ -1,38 +1,43 @@
 get:
   tags:
-    - Gruppenzugehörigkeiten
-  operationId: readGruppenzugehoerigkeitId
+    - Bewertungslisten
+  operationId: readBewertungslisteId
   security:
     - oAuthForServices: []
-  summary: Gruppenzugehörigkeit zur angeforderten ID
+  summary: Bewertungsliste zur angeforderten ID
   description: |
-    Dieser Schnittstellenendpunkt gibt die Gruppenzugehörigkeit zur angegebenen
-    `gruppenzugehoerigkeit.id` zurück.
+    Dieser Schnittstellenendpunkt gibt den Bewertungslistendatensatz zur angegebenen
+    `bewertungsliste.id` zurück.
 
-    Ein READ zum Abfragen einer Gruppenzugehörigkeit per ID muss mit HTTP-GET auf die API `/gruppenzugehoerigkeiten/{gruppenzugehoerigkeit.id}`
-    erfolgen. Die Antwort-Nutzdaten
-    (Response Payload) beinhalten ein JSON-Objekt des Datentyps Gruppendatensatz.
+    Siehe auch die Datenmodelle zu [`Bewertungslistendatensatz`](../../../datenmodell-qs/bewertungslistendatensatz),
+    [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste) und [`Bewertung`](../../../datenmodell-qs/bewertung).
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppendatensatz`](../../../datenmodell-qs/gruppendatensatz).
+    Ein READ zum Abfragen eines Bewertungslistendatensatzes per ID muss mit HTTP-GET auf die API `/bewertungslisten/{bewertungsliste.id}`
+    erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt des Datentyps Bewertungsliste.
+ 
+    Es steht eine Filterfunktion zur Verfügung:
 
-    Aus Konsistenzgründen mit dem Datenmodell Gruppendatensatz wird das Attribut
-    `gruppenzugehoerigkeiten` als Array geliefert, auch wenn aufgrund des Zugriffs über
-    die eindeutige ID `gruppenzugehoerigkeit.id` immer nur genau ein Element geliefert wird.
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `bewertungen` | String |  Dieser Filterparameter erlaubt festzulegen, ob und in welchem Umfang die Bewertungen in der Antwort-Nutzlast (Response Payload) enthalten sein sollen. Mögliche Werte sind: `keine` (keine Bewertungen), `ids` (nur die IDs der Bewertungen) und `vollstaendig` (die vollständigen Bewertungsobjekte). Standardmäßig werden keine Bewertungen zurückgegeben, wenn dieser Filterparameter nicht angegeben ist.
+  
+    Siehe auch das Datenmodell zu [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste).
+
   parameters:
     - in: path
       name: id
       schema:
         type: string
-        example: grupz_2343_eng
+        example: 49fb2c4a-43be-41e8-8f18-3c70fc6aa870
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
+      description: Der Pfad-Parameter bezieht sich auf die ID der Bewertungsliste.
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-Gruppendatensatz.yaml'
+            $ref: './components-qs-Bewertungslistendatensatz.yaml'
     '400':
       description: |
         Bad Request
@@ -60,35 +65,34 @@ get:
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 put:
   tags:
-    - Gruppenzugehörigkeiten
-  operationId: updateGruppenzugehoerigkeitId
+    - Bewertungslisten
+  operationId: updateBewertungslisteId
   security:
     - oAuthForServices: []
-  summary: Aktualisiert die Gruppenzugehörigkeit der angegebenen ID
+  summary: Aktualisiert die Bewertungsliste der angegebenen ID
   description: |
-    Dieser Schnittstellenendpunkt aktualisiert die Gruppenzugehörigkeit zur angegebenen
-    `gruppenzugehoerigkeit.id`.
+    Dieser Schnittstellenendpunkt aktualisiert die Bewertungsliste zur angegebenen
+    `bewertungsliste.id`.
 
-    Ein UPDATE zum Aktualisieren einer Gruppenzugehörigkeit per ID muss mit HTTP-PUT auf die API `/gruppenzugehoerigkeiten/{gruppenzugehoerigkeit.id}`
-    erfolgen. Die Anfrage-Nutzdaten
-    (Request Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeit.
+    Ein UPDATE zum Aktualisieren einer Bewertungsliste per ID muss mit HTTP-PUT auf die API `/bewertungslisten/{bewertungsliste.id}`
+    erfolgen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des Datentyps Bewertungsliste.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
+    Siehe auch das Datenmodell zu [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste).
 
-    Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Gruppenzugehörigkeit
-    das Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
+    Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Bewertungsliste
+    das Attribut `revision` der zugrunde liegenden Bewertungsliste mitgeschickt wird.
     Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs `revision`,
-    ob der Datensatz der Gruppenzugehörigkeit in der Zwischenzeit keine Änderung erfahren
+    ob der Datensatz der Bewertungsliste in der Zwischenzeit keine Änderung erfahren
     hat. Der Wert des Attributs kann von einem Quellsystem oder Dienst nicht verändert
-    werden; dieser wird mit der Erstellung (Create) des Datensatzes Gruppenzugehörigkeit
+    werden; dieser wird mit der Erstellung (Create) des Datensatzes Bewertungsliste
     und jeder erfolgreichen Änderung (Update) vom Schulconnex-Server neu generiert.
 
-    Die folgende Tabelle listet die Attribute einer Gruppenzugehörigkeit auf, welche von einem Quellsystem oder Dienst nicht verändert werden können.
+    Die folgende Tabelle listet die Attribute einer Bewertungsliste auf, welche von einem Quellsystem oder Dienst nicht verändert werden können.
 
     Attribut | Bemerkung
     --- | ---
-    `id` | ID der Gruppenzugehörigkeit. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-    `revision` | Revision der Gruppenzugehörigkeit. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+    `id` | ID der Bewertungsliste. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+    `revision` | Revision der Bewertungsliste. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
 
     Die ID kann im Request ausgelassen werden. Ist das Attribut im Request dennoch
     vorhanden, wird es validiert und führt gegebenenfalls zu einer Fehlermeldung.
@@ -99,15 +103,15 @@ put:
     werden gelöscht); es ist keine HTTP-PATCH-Operation, bei der lediglich die zu aktualisierenden
     Attribute in der Anfrage-Nutzlast mitgeschickt werden.
 
-    Bei einer erfolgreichen Anforderung zum Aktualisieren einer Gruppenzugehörigkeit
-    wird diese Anforderung mit einer Repräsentation der Gruppenzugehörigkeit in den
+    Bei einer erfolgreichen Anforderung zum Aktualisieren einer Bewertungsliste
+    wird diese Anforderung mit einer Repräsentation der Bewertungsliste in den
     Antwort-Nutzdaten und dem HTTP-Statuscode 200 quittiert.
   parameters:
     - in: path
       name: id
       schema:
         type: string
-        example: grupz_2343_eng
+        example: 49fb2c4a-43be-41e8-8f18-3c70fc6aa870
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
   requestBody:
@@ -115,14 +119,14 @@ put:
     content:
       application/json:
         schema:
-          $ref: './components-qs-Gruppenzugehörigkeit-PUT-request.yaml'
+          $ref: './components-qs-Bewertungsliste-PUT-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-Gruppenzugehörigkeit.yaml'
+            $ref: './components-qs-Bewertungsliste.yaml'
     '400':
       description: |
         Bad Request
@@ -155,35 +159,35 @@ put:
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 patch:
   tags:
-    - Gruppenzugehörigkeiten
-  operationId: patchGruppenzugehoerigkeitId
+    - Bewertungslisten
+  operationId: patchBewertungslisteId
   security:
     - oAuthForServices: []
-  summary: Modifiziert die Gruppenzugehörigkeit der angegebenen ID
+  summary: Modifiziert die Bewertungsliste der angegebenen ID
   description: |
-    Dieser Schnittstellenendpunkt modifiziert die Gruppenzugehörigkeit zur angegebenen
-    `gruppenzugehoerigkeit.id`.
+    Dieser Schnittstellenendpunkt modifiziert die Bewertungsliste zur angegebenen
+    `bewertungsliste.id`.
 
-    Die Modifikation einer Gruppenzugehörigkeit per ID muss mit HTTP-PATCH auf die API `/gruppenzugehoerigkeiten/{gruppenzugehoerigkeit.id}`
+    Die Modifikation einer Bewertungsliste per ID muss mit HTTP-PATCH auf die API `/bewertungslisten/{bewertungsliste.id}`
     erfolgen. Die Anfrage-Nutzdaten
-    (Request Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeit.
+    (Request Payload) beinhalten ein JSON-Objekt des Datentyps Bewertungsliste.
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
+    Siehe auch das Datenmodell zu [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste).
 
-    Es ist erforderlich, dass zur Aktualisierungsanfrage in der bearbeiteten Gruppenzugehörigkeit
-    das Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
+    Es ist erforderlich, dass zur Modifikationsanfrage in der bearbeiteten Bewertungsliste
+    das Attribut `revision` der zugrunde liegenden Bewertungsliste mitgeschickt wird.
     Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs `revision`,
-    ob der Datensatz der Gruppenzugehörigkeit in der Zwischenzeit keine Änderung erfahren
+    ob der Datensatz der Bewertungsliste in der Zwischenzeit keine Änderung erfahren
     hat. Der Wert des Attributs kann von einem Quellsystem oder Dienst nicht verändert
-    werden; dieser wird mit der Erstellung (Create) des Datensatzes Gruppenzugehörigkeit
+    werden; dieser wird mit der Erstellung (Create) des Datensatzes Bewertungsliste
     und jeder erfolgreichen Änderung (Update) vom Schulconnex-Server neu generiert.
 
-    Die folgende Tabelle listet die Attribute einer Gruppenzugehörigkeit auf, welche von einem Quellsystem oder Dienst nicht verändert werden können.
+    Die folgende Tabelle listet die Attribute einer Bewertungsliste auf, welche von einem Quellsystem oder Dienst nicht verändert werden können.
 
     Attribut | Bemerkung
     --- | ---
-    `id` | ID der Gruppenzugehörigkeit. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-    `revision` | Revision der Gruppenzugehörigkeit. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+    `id` | ID der Bewertungsliste. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+    `revision` | Revision der Bewertungsliste. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
 
     Die ID kann im Request ausgelassen werden. Ist das Attribut im Request dennoch
     vorhanden, wird es validiert und führt gegebenenfalls zu einer Fehlermeldung.
@@ -192,34 +196,37 @@ patch:
     bei der ausschließlich die zu modifizierenden Attribute in der Anfrage-Nutzlast mitgeschickt werden müssen.
     Werte von Attributen, welche nicht in der Anfrage-Nutzlast mitgeschickt werden, bleiben unverändert.
 
-    Um einen Wert zu löschen, muss der Wert des Attributs auf `null` gesetzt werden,
-    beispielsweise `{"von": null}`.
-    Dabei dürfen allerdings keine notwendigen Attribute wie `rollen` gelöscht werden.
+    Wichtig ist hierbei, dass das Array `grids` in der Anfrage-Nutzlast 
+    vollständig mit den gewünschten Werten der Modifikation mitgeschickt werden müssen. 
+    Wird ein Array mit nur einem Wert übermittelt, wird das Array auf dem Schulconnex-Server auf diesen einen Wert gesetzt. 
+    Der Wert wird nicht den vorhandenen Werten hinzugefügt. Entsprechen ist das Verhalten
+    auch bei einem Array mit mehreren Einträgen. Werden diese Attribute mit einem leeren Array übermittelt, 
+    werden die Werte auf dem Schulconnex-Server gelöscht.
 
-    Bei einer erfolgreichen Anforderung zum Aktualisieren einer Gruppenzugehörigkeit
-    wird diese Anforderung mit einer Repräsentation der Gruppenzugehörigkeit in den
+    Bei einer erfolgreichen Anforderung zum Aktualisieren einer Bewertungsliste
+    wird diese Anforderung mit einer Repräsentation der Bewertungsliste  in den
     Antwort-Nutzdaten und dem HTTP-Statuscode 200 quittiert.
   parameters:
     - in: path
       name: id
       schema:
         type: string
-        example: grupz_2343_eng
+        example: 49fb2c4a-43be-41e8-8f18-3c70fc6aa870
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
+      description: Der Pfad-Parameter bezieht sich auf die ID der Bewertungsliste.
   requestBody:
     required: true
     content:
       application/json:
         schema:
-          $ref: './components-qs-Gruppenzugehörigkeit-PATCH-request.yaml'
+          $ref: './components-qs-Bewertungsliste-PATCH-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-qs-Gruppenzugehörigkeit.yaml'
+            $ref: './components-qs-Bewertungsliste.yaml'
     '400':
       description: |
         Bad Request
@@ -252,38 +259,39 @@ patch:
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
 delete:
   tags:
-    - Gruppenzugehörigkeiten
-  operationId: deleteGruppenzugehoerigkeitId
+    - Bewertungslisten
+  operationId: deleteBewertungslisteId
   security:
     - oAuthForServices: []
-  summary: Löscht die Gruppenzugehörigkeit zur angeforderten ID
+  summary: Löscht die Bewertungsliste zur angeforderten ID
   description: |
-    Dieser Schnittstellenendpunkt löscht die Gruppenzugehörigkeit zur angegebenen
-    `gruppenzugehoerigkeit.id`.
+    Dieser Schnittstellenendpunkt löscht die Bewertungsliste zur angegebenen
+    `bewertungsliste.id`.
 
-    Ein DELETE zum Löschen einer Gruppe per `gruppe.id` muss mit HTTP-DELETE auf die API `/gruppenzugehoerigkeit/{gruppenzugehoerigkeit.id}`
-    erfolgen. Die Anfrage-Nutzdaten (Request
-    Payload) beinhalten ein JSON-Objekt des Datentyps Gruppenzugehörigkeit.
+    Ein DELETE zum Löschen einer Bewertungsliste per `bewertungsliste.id` muss mit HTTP-DELETE auf die API `/bewertungslisten/{bewertungsliste.id}`
+    erfolgen. 
 
-    Siehe auch die einzelnen Datenmodelle zu [`Gruppenzugehörigkeit`](../../../datenmodell-dienste/gruppenzugehörigkeit).
+    Siehe auch das  Datenmodell zu [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste).
 
-    Es ist erforderlich, dass für eine Löschanfrage einer Gruppenzugehörigkeit das
-    Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
+    Es ist erforderlich, dass für eine Löschanfrage einer Bewertungsliste das
+    Attribut `revision` der zugrunde liegenden Bewertungsliste mitgeschickt wird.
     Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs
-    `revision`, ob der Datensatz des Personenkontexts in der Zwischenzeit keine Änderung
+    `revision`, ob der Datensatz der Bewertungsliste in der Zwischenzeit keine Änderung
     erfahren hat.
 
+    Wird eine Bewertungsliste gelöscht, werden auch alle Bewertungen, die zu dieser Bewertungsliste gehören, gelöscht.
+
     Bei einer erfolgreichen Ausführung der Löschanfrage wird es keine Antwort-Nutzdaten
-    (Response Payload) geben. Eine erfolgreiche Löschanforderung einer Gruppenzugehörigkeit
+    (Response Payload) geben. Eine erfolgreiche Löschanforderung einer Bewertungsliste
     per ID wird mit dem HTTP-Statuscode 204 quittiert.
   parameters:
     - in: path
       name: id
       schema:
         type: string
-        example: grupz_2343_eng
+        example: 49fb2c4a-43be-41e8-8f18-3c70fc6aa870
       required: true
-      description: Der Pfad-Parameter bezieht sich auf die ID der Gruppenzugehörigkeit.
+      description: Der Pfad-Parameter bezieht sich auf die ID der Bewertungsliste.
   requestBody:
     required: true
     content:
@@ -295,7 +303,7 @@ delete:
           properties:
             revision:
               type: string
-              description: Revision der zugrunde liegenden Gruppenzugehörigkeit. Dieses Feld ist ein Pflichtfeld.
+              description: Revision der Bewertungsliste.
   responses:
     '204':
       description: |

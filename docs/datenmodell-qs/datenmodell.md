@@ -25,6 +25,11 @@ classDiagram
   Gruppendatensatz --> Gruppe : 1
   Gruppendatensatz --> Gruppenzugehörigkeit : 0..n
   Gruppe --> Lernperiode : 0 oder 2
+  Bewertungslistendatensatz --> Bewertungsliste : 1
+  Bewertungslistendatensatz --> Bewertung : 0..n
+  Bewertungsliste --> Gruppe : 0..n
+  Bewertung --> Personenkontext : 1
+
   class Personendatensatz {
     person
     personenkontexte
@@ -148,6 +153,23 @@ classDiagram
     von
     bis
     revision
+  }
+    class Bewertungslistendatensatz {
+    Bewertungslists
+    Bewertungen
+  }
+    class Bewertungsliste {
+    id
+    grids
+    name
+    typ
+    revision
+  }
+   class Bewertung {
+    id
+    pkid
+    wert
+    datum
   }
 ```
 
