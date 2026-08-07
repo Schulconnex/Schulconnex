@@ -96,10 +96,18 @@ get:
    Dieser Schnittstellenendpunkt gibt eine Liste der existierenden Sichtfreigaben eines
    Personenkontexts zurück.
    
-   Es werden sowohl die Sichtfreigaben für einen Personenkontext zurückgegeben, welcher der abfragenden Organisation
+   Ohne weiteres Filtern werden sowohl die Sichtfreigaben für einen Personenkontext zurückgegeben, welcher der abfragenden Organisation
    zugeordnet sind (Attribut `personenkontext.organisation`), als auch für einen Personenkontext, für den
    einer Organisation eine Sichtfreigabe erteilt wurde. 
 
+   Es können über einen Filter jedoch auch nur die von der eigenen Organisation freigegebenen Sichtfreigaben 
+   oder nur die Sichtfreigaben, welche von anderen Organisationen für den eigenen Personenkontext erteilt wurden, zurückgegeben werden.
+   
+   Filter | Typ | Beschreibung
+    --- | --- | ---
+    `erteilt`   | String (Boolean) | listet alle Sichtfreigaben auf, welche von der Organisation, zu welcher der Personenkontext gehört, für andere Organisationen erteilt wurden. Der Defaultwert ist `ja`.
+    `erhalten` | String (Boolean) | listet alle Sichtfreigaben auf, welche die eigene Organisation von einer anderen Organisation erhalten hat. Der Defaultwert ist `ja`.
+    
    Ein READ zum Abfragen der Sichtfreigaben per `personenkontext.id` muss mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` erfolgen.
 
    Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt mit einem Array des Datentyps Beziehung.
@@ -111,6 +119,20 @@ get:
         example: 4d0f579c-0b9a-4d3a-b484-87b3bee8a2ad
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
+    - in: query
+      name: erteilt
+      schema:
+        type: string
+        enum:
+          - Ja
+          - Nein
+    - in: query
+      name: erhalten
+      schema:
+        type: string
+        enum:
+          - Ja
+          - Nein
   responses:
     '200':
       description: OK
