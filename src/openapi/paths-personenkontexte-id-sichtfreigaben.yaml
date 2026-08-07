@@ -105,8 +105,8 @@ get:
    
    Filter | Typ | Beschreibung
     --- | --- | ---
-    `ausgehend`   | String (Boolean) | listet alle Sichtfreigaben auf, welche von der Organisation, zu welcher der Personenkontext gehört, für andere Organisationen erteilt wurden. Der Defaultwert ist `ja`.
-    `eingehend` | String (Boolean) | listet alle Sichtfreigaben auf, welche von einer anderen Organisation für die eigene Organisation erteilt wurden. Der Defaultwert ist `ja`.
+    `erteilt`   | String (Boolean) | listet alle Sichtfreigaben auf, welche von der Organisation, zu welcher der Personenkontext gehört, für andere Organisationen erteilt wurden. Der Defaultwert ist `ja`.
+    `erhalten` | String (Boolean) | listet alle Sichtfreigaben auf, welche die eigene Organisation von einer anderen Organisation erhalten hat. Der Defaultwert ist `ja`.
     
    Ein READ zum Abfragen der Sichtfreigaben per `personenkontext.id` muss mit HTTP-GET auf die API `/personenkontexte/{personenkontext.id}/sichtfreigaben` erfolgen.
 
@@ -120,14 +120,14 @@ get:
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID des Personenkontexts.
     - in: query
-      name: ausgehend
+      name: erteilt
       schema:
         type: string
         enum:
           - Ja
           - Nein
     - in: query
-      name: eingehend
+      name: erhalten
       schema:
         type: string
         enum:

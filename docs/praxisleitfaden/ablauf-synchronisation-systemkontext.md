@@ -33,7 +33,7 @@ Beim Arbeiten im Systemkontext sind beim Auslesen der Daten aus einem Schulconne
 *	Personen und Personenkontexte, welche über Sichtfreigaben für mehrere Organisationen sichtbar sind, können eventuell, je nach Auslesevorgang, bei mehreren Organisationen gelistet werden.
     *	Es sollten daher nur die Personen, Personenkontexte und Sichtfreigaben der bereitstellenden Organisation abgefragt werden, nicht die der Organisation, für die eine Sichtfreigabe erfolgt ist.
     *	Zum Abfragen der Personen und Personenkontexte ohne fremde Sichtfreigaben ist die Filteroption `sichtfreigabe=nein` vorgesehen.
-    *	Bei der Abfrage der Sichtfreigaben sind die Filteroptionen `ausgehend=ja` und `eingehend=nein` zu nutzen. 
+    *	Bei der Abfrage der Sichtfreigaben sind die Filteroptionen `erteilt=ja` und `erhalten=nein` zu nutzen. 
 
 
 ## Übertragung auf einen zweiten Server
