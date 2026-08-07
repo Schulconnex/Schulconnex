@@ -6,10 +6,13 @@ get:
     - oAuthForServices: []
   summary: Bewertungsliste zur angeforderten ID
   description: |
-    Dieser Schnittstellenendpunkt gibt die Bewertungsliste zur angegebenen
+    Dieser Schnittstellenendpunkt gibt den Bewertungslistendatensatz zur angegebenen
     `bewertungsliste.id` zurück.
 
-    Ein READ zum Abfragen einer Bewertungsliste per ID muss mit HTTP-GET auf die API `/bewertungslisten/{bewertungsliste.id}`
+    Siehe auch die Datenmodelle zu [`Bewertungslistendatensatz`](../../../datenmodell-qs/bewertungslistendatensatz),
+    [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste) und [`Bewertung`](../../../datenmodell-qs/bewertung).
+
+    Ein READ zum Abfragen eines Bewertungslistendatensatzes per ID muss mit HTTP-GET auf die API `/bewertungslisten/{bewertungsliste.id}`
     erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein JSON-Objekt des Datentyps Bewertungsliste.
  
     Es steht eine Filterfunktion zur Verfügung:
@@ -34,7 +37,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-qs-Bewertungsliste-GET-request.yaml'
+            $ref: './components-qs-Bewertungslistendatensatz.yaml'
     '400':
       description: |
         Bad Request

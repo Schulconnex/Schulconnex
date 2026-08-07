@@ -226,6 +226,15 @@ ktid | Reference to the person context for which the assessment was provided.
 wert | Value of the assessment
 datum |  Date on which the assesment was given. Can't be in the future.
 
+## Bewertungslistendatensatz
+
+The „assessment data set” is a wrapper object to link a set of assessments to an assessment list
+
+Attribute | Description
+--- | ---
+bewertungsliste | Assessment list.
+bewertungen| Array of assessments.
+
 ## VerwaltungspolitischeKodierung
 
 This is the administrative area in which the address is located. Currently only attribute is the 'bundesland' (one of the sixteen German states).

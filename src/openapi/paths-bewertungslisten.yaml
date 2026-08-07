@@ -72,13 +72,14 @@ get:
     - oAuthForServices: []
   summary: Bewertungslisten des Quellsystemanbieters
   description: |
-    Dieser Schnittstellenendpunkt gibt ein Array von Bewertungslisten zurück, auf die das Quellsystem zugreifen darf.
+    Dieser Schnittstellenendpunkt gibt ein Array von Bewertungslistendatensätzen zurück, auf die das Quellsystem zugreifen darf.
 
     Ein READ muss mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten (Response
     Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Bewertungsliste, sofern
     Einträge existieren.
 
-    Siehe auch das Datenmodell zu [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste).
+    Siehe auch die Datenmodelle zu [`Bewertungslistendatensatz`](../../../datenmodell-qs/bewertungslistendatensatz),
+    [`Bewertungsliste`](../../../datenmodell-qs/bewertungsliste) und [`Bewertung`](../../../datenmodell-qs/bewertung).
 
     Die Schnittstelle `/bewertungslisten` ermöglicht das Verwenden von Filterparametern zur
     Präzisierung der Anfrage bei HTTP-GET.
@@ -108,7 +109,7 @@ get:
     `grids` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `grids` zu filtern, um alle Beweerungslisten anzuzeigen, welche zu einer spezifischen Gruppe oder Kombination von Gruppen gehören.
     `name` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `name` zu filtern, um alle Bewertungslisten mit Bewertungen eines bestimmten Namen zu erhalten.
     `typ` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `typ` zu filtern, um alle Bewertungslisten mit einem bestimmten Typ zu erhalten.
-    `bewertung` | String |  Möglichkeit, die Ergebnisliste nach der ID einer spezIfischen Bewertung zu filtern.
+    `bewertung` | String |  Möglichkeit, die Ergebnisliste nach der ID einer spezifischen Bewertung zu filtern.
     `bewertungen` | String |  Dieser Filterparameter erlaubt festzulegen, ob und in welchem Umfang die Bewertungen in der Antwort-Nutzlast (Response Payload) enthalten sein sollen. Mögliche Werte sind: `keine` (keine Bewertungen), `ids` (nur die IDs der Bewertungen) und `vollstaendig` (die vollständigen Bewertungsobjekte). Standardmäßig werden keine Bewertungen zurückgegeben, wenn dieser Filterparameter nicht angegeben ist.
   parameters:
     - in: query
@@ -137,7 +138,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: './components-qs-Bewertungslisten.yaml' 
+            $ref: './components-qs-Bewertungslistendatensätze.yaml' 
     '400':
       description: |
         Bad Request

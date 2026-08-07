@@ -219,6 +219,7 @@ const sidebars: SidebarsConfig = {
         'datenmodell-qs/beziehung',
         'datenmodell-qs/datumsformat',
         'datenmodell-qs/bewertungsliste',
+        'datenmodell-qs/bewertungslistendatensatz',
         'datenmodell-qs/bewertung',
         'datenmodell-qs/erreichbarkeit',
         'datenmodell-qs/fach',
