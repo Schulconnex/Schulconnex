@@ -1,5 +1,3 @@
-# Nutzung der REST-API
-
 Die von Schulconnex-Servern bereitgestellten Endpunkte sind als REST-API realisiert.
 
 Allgemein erfolgen Zugriffe auf Ressourcen über die Endpunkte mit Hilfe von CRUD-Operationen
