@@ -70,6 +70,7 @@ Code | Sub-Code | Titel | Beschreibung
 400 | 17 | `"Doppelter Filter"` | `"Jeder Filter darf in der URL nur einmal benutzt werden. Filter wie ?pid=123&pid=124 sind nicht zulässig."`
 400 | 18 | `"Beziehung kann nicht erstellt werden."` | `"Die Beziehung zwischen zwei Personenkontexten darf so nicht erzeugt werden."` + spezifische Fehlermeldung der Schnittstelle.
 400 | 19 | `"Erreichbarkeit kann nicht hinzugefügt werden."` | `"Diese Erreichbarkeit ist so nicht zulässig."` + spezifische Fehlermeldung der Schnittstelle.
+400 | 20 | `"Attribut darf nicht gesetzt oder verändert werden."` | `"Das Attribut darf nicht durch eine Anwendung gesetzt werden."` + spezifische Fehlermeldung der Schnittstelle.
 
 ### `401` - Unauthorized
 
