@@ -52,6 +52,9 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Organisationen-GET-request.yaml'
+        application/xml:
+          schema:
+            $ref: './components-qs-Organisationen-GET-request.yaml'
     '400':
       description: |
         Bad Request

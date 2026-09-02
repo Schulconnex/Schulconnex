@@ -20,37 +20,6 @@ get:
     Hat sich der Datensatz seit Auslieferung des ETag-Headers nicht geändert, so antwortet
     der Server mit einem Status 304 (Not Modified) und sendet den Datensatz nicht erneut.
 
-    ```json
-    {
-      "pid": <String>, // pseudonymisierte ID
-      "person": <Objekt>, // Objekt vom Typ Person, siehe Datenmodell
-      "personenkontexte": [ // Array mit Objekten
-        {
-          <Objekt>, // Objekt vom Typ Personenkontext, siehe Datenmodell
-          "gruppen": [
-            // Array von Gruppen und Gruppenzugehoerigkeiten eines Personenkontexts
-            "gruppe": ": <Objekt>, // Objekt vom Typ Gruppe
-          ],
-          "beziehungen": {
-            "hat_als_beziehungen": [ // Array von Beziehungen, welche vom Personenkontext ausgehen
-              {
-                "ktid": <Personenkontext-ID welche der Bezug in der angegebenen Rolle ist>
-                "beziehung": <Art der Beziehung>
-              },
-              ...
-            ],
-            "ist_von beziehungen": [
-              {
-                "ktid": <Personenkontext-ID der den Bezug hat >,
-                "beziehung": <Art der Beziehung>
-              }
-            ]
-          }
-        }
-      ]
-    }
-    ```
-
     Die pseudonymisierte ID `pid` in der Rückgabe repräsentiert die `id` im aktuell ausgewählten
     Sicherheitskontext und folgt der gleichen Definition wie die `id`.
 
@@ -88,131 +57,16 @@ get:
     Personenkontext, mit dem eine Beziehung besteht, vorher schon von dem Dienst abgerufen
     wurde und damit dem Dienst bekannt ist.
 
-    ```json
-    {
-      "pid": "df6588cf8dc649ef79fcc852e1064761442a32bf3496ecd9bde0f66a18685aaa",
-      "person": {
-        "stammorganisation": {
-          "id": "fe963bff-e837-4799-91e2-5680222188a5",
-          "kennung": "NI_54321",
-          "name": "Otto Hahn Schule",
-          "anschrift": {
-            "postleitzahl": "29614",
-            "ort": "Soltau",
-            "ortsteil": "Ahlften"
-            "verwaltungspolitischeKodierung: {
-              "bundesland": "03"
-            }
-          },
-          "typ": "Schule"
-        },
-        "name": {
-          "familienname": "Muster",
-          "vorname": "Max"
-        },
-        "geburt": {
-          "datum": "2010-01-01",
-          "volljaehrig": "Ja"
-        },
-        "geschlecht": "m",
-        "lokalisierung": "de",
-        "vertrauensstufe": "Voll"
-      },
-      "personenkontexte": [
-        {
-          "id": "dd29cbf394a218a4637004f5789a210e9ec55b084a648e02a55fa3eb56475e3f",
-          "organisation": {
-            "id": "15685758-d18e-49c1-a644-f9996eb0bf08",
-            "kennung": "NI_12345",
-            "name": "Muster-Schule",
-            "typ": "Schule"
-          },
-          "rolle": "Lern",
-          "erreichbarkeiten": [
-            {
-              "typ": "E-Mail",
-              "kennung": "Max.Muster@Muster-Schule.de"
-            }
-          ],
-          "personenstatus": "Aktiv",
-          "gruppen": [
-            {
-              "gruppe": {
-                "id": "b3201d00-f21f-4986-a39d-02a09c8da26c",
-                "orgid": "9b3f36ad-9d15-49f9-9660-6cf9746ba446",
-                "bezeichnung": "Englisch 6b",
-                "typ": "Kurs",
-                "bereich": "Pflicht",
-                "optionen": [
-                ],
-                "differenzierung": "E",
-                "bildungsziele": [
-                  "RS"
-                ],
-                "jahrgangsstufen": [
-                  "03"
-                ],
-                "faecher": [
-                  {
-                    "kennung": "EN"
-                  },{
-                    "bezeichnung": "Erste Hilfe"
-                  }
-                ],
-                "laufzeit": {
-                  "von": "2026-01-01",
-                  "bis": "2028-12-31"
-                }
-              },
-              "gruppenzugehoerigkeit": [
-                {
-                  "rollen": [
-                    "Lern"
-                  ],
-                  "von": "2026-01-01",
-                  "bis": "2027-12-31"
-                }
-              ],
-              "sonstige_gruppenzugehoerige": [
-                {
-                  "ktid": "7168185a615d8a05a7330e7e5b84288c96783da6f734529760de13335f38016a",
-                  "rollen": [
-                    "Lern",
-                    "GMit"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "beziehungen": {
-        "hat_als_beziehungen": [
-          {
-            "ktid": "1706e0e9cbc89ec256db8552955b981cf9590dffb71c2b586f9f9edae52f980b",
-            "beziehung": "SchB"
-          },
-          {
-            "ktid": "032b0499c3ff360791eb778adad23fa56039b26ad39b3f675e6f6ec6e17f280c",
-            "beziehung": "SchB"
-          }
-        ],
-        "ist_von_beziehungen": [
-          {
-            "ktid": "a91cb0d4fc25a551e909147cfc0e38ebe13462a898c0eda5219762bd96f6782e",
-            "beziehung": "SorgBer"
-          }
-        ]
-      }
-    }
-    ```
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: './components-dienste-Personendatensatz.yaml'
+            $ref: './components-qs-Organisationen-GET-request.yaml'
+        application/xml:
+          schema:
+            $ref: './components-qs-Organisationen-GET-request.yaml'
     '304':
       description: Not Modified
     '400':

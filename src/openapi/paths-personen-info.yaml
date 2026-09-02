@@ -117,6 +117,9 @@ get:
         application/json:
           schema:
             $ref: './components-dienste-Personendatensätze.yaml'
+        application/xml:
+          schema:
+            $ref: './components-dienste-Personendatensätze.yaml'
     '304':
       description: Not Modified
     '400':

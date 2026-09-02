@@ -26,11 +26,19 @@ post:
       application/json:
         schema:
           $ref: './components-qs-Gruppe-basis.yaml'
+      application/xml:
+        schema:
+          $ref: './components-qs-Gruppe-basis.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
+          schema:
+            allOf:
+              - $ref: './components-qs-Gruppe.yaml'
+              - $ref: './components-qs-Gruppe-basis.yaml'
+        application/xml:
           schema:
             allOf:
               - $ref: './components-qs-Gruppe.yaml'
@@ -162,6 +170,9 @@ get:
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Gruppendatensätze.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Gruppendatensätze.yaml'
     '400':

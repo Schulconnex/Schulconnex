@@ -223,6 +223,10 @@ Es ist dem Betreiber eines Schulconnex-Servers freigestellt, ob ein API-Endpunkt
 
 Ein solcher API-Endpunkt erfordert, anders als HTTP/2 oder HTTP/3 Multiplexing, mehr Aufwand in der Bereitstellung. Er ermöglicht dem Schulconnex-Server jedoch weitere Optimierungen, zusätzlich zur Einsparung beim Verbindungsaufbau, beispielsweise durch die interne Zusammenfassung mehrerer Personenkontexte in einem einzelnen Datenbankaufruf.
 
+## XML-Batching
+
+Analog zum JSON-Batching können Server, welche als Datenrepräsentation XML anbieten, einen entsprechenden API-Endpunkt auch für XML anbieten.
+
 ## Strukturierung mehrerer Anfragen
 
 Weder HTTP Multiplexing noch JSON-Batching erlaubt die direkte Nutzung von Rückgabewerten vorheriger Aufrufe. Daher kann beispielsweise nicht in einem Aufruf ein Personendatensatz und ein dazu gehörender Personenkontext erstellt werden, da die ID des Personendatensatz benötigt wird, um den Personenkontext zu erstellen.

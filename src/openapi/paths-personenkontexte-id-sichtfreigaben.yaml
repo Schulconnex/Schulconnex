@@ -45,11 +45,19 @@ post:
       application/json:
         schema:
           $ref: './components-Sichtfreigabe-basis.yaml'
+      application/xml:
+        schema:
+          $ref: './components-Sichtfreigabe-basis.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
+          schema:
+            allOf:
+              - $ref: './components-Sichtfreigabe.yaml'
+              - $ref: './components-Sichtfreigabe-basis.yaml'
+        application/xml:
           schema:
             allOf:
               - $ref: './components-Sichtfreigabe.yaml'
@@ -116,6 +124,9 @@ get:
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Sichtfreigaben.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Sichtfreigaben.yaml'
     '400':

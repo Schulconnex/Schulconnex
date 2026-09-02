@@ -31,6 +31,9 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Personendatensatz.yaml'
+        application/xml:
+          schema:
+            $ref: './components-qs-Personendatensatz.yaml'
     '304':
       description: Not Modified
     '400':
@@ -108,11 +111,21 @@ put:
           allOf:
             - $ref: './components-qs-Person-PUT-request.yaml'
             - $ref: './components-qs-Person-basis.yaml'
+      application/xml:
+        schema:
+          allOf:
+            - $ref: './components-qs-Person-PUT-request.yaml'
+            - $ref: './components-qs-Person-basis.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
+          schema:
+            allOf:
+              - $ref: './components-qs-Person.yaml'
+              - $ref: './components-qs-Person-basis.yaml'
+        application/xml:
           schema:
             allOf:
               - $ref: './components-qs-Person.yaml'
@@ -208,11 +221,21 @@ patch:
           allOf:
             - $ref: './components-qs-Person-PUT-request.yaml'
             - $ref: './components-qs-Person-basis-PATCH-request.yaml'
+      application/xml:
+        schema:
+          allOf:
+            - $ref: './components-qs-Person-PUT-request.yaml'
+            - $ref: './components-qs-Person-basis-PATCH-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
+          schema:
+            allOf:
+              - $ref: './components-qs-Person.yaml'
+              - $ref: './components-qs-Person-basis.yaml'
+        application/xml:
           schema:
             allOf:
               - $ref: './components-qs-Person.yaml'
@@ -283,6 +306,15 @@ delete:
     required: true
     content:
       application/json:
+        schema:
+          type: object
+          required:
+            - revision
+          properties:
+            revision:
+              type: string
+              description: Revision der Person des zugrunde liegenden Personendatensatzes. Dieses Feld ist ein Pflichtfeld.
+      application/xml:
         schema:
           type: object
           required:

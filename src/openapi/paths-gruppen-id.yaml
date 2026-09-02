@@ -29,6 +29,9 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Gruppendatensatz.yaml'
+        application/xml:
+          schema:
+            $ref: './components-qs-Gruppendatensatz.yaml'
     '400':
       description: |
         Bad Request
@@ -115,11 +118,21 @@ put:
           allOf:
             - $ref: './components-qs-Gruppe-PUT-request.yaml'
             - $ref: './components-qs-Gruppe-basis.yaml'
+      application/xml:
+        schema:
+          allOf:
+            - $ref: './components-qs-Gruppe-PUT-request.yaml'
+            - $ref: './components-qs-Gruppe-basis.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
+          schema:
+            allOf:
+              - $ref: './components-qs-Gruppe.yaml'
+              - $ref: './components-qs-Gruppe-basis.yaml'
+        application/xml:
           schema:
             allOf:
               - $ref: './components-qs-Gruppe.yaml'
@@ -217,11 +230,21 @@ patch:
           allOf:
             - $ref: './components-qs-Gruppe-PUT-request.yaml'
             - $ref: './components-qs-Gruppe-basis-PATCH-request.yaml'
+      application/xml:
+        schema:
+          allOf:
+            - $ref: './components-qs-Gruppe-PUT-request.yaml'
+            - $ref: './components-qs-Gruppe-basis-PATCH-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
+          schema:
+            allOf:
+              - $ref: './components-qs-Gruppe.yaml'
+              - $ref: './components-qs-Gruppe-basis.yaml'
+        application/xml:
           schema:
             allOf:
               - $ref: './components-qs-Gruppe.yaml'
@@ -290,6 +313,15 @@ delete:
     required: true
     content:
       application/json:
+        schema:
+          type: object
+          required:
+            - revision
+          properties:
+            revision:
+              type: string
+              description: Revision der zugrunde liegenden Gruppe. Dieses Feld ist ein Pflichtfeld.
+      application/xml:
         schema:
           type: object
           required:

@@ -67,6 +67,9 @@ get:
         application/json:
           schema:
             $ref: './components-dienste-Organisationen-Info.yaml'
+        application/xml:
+          schema:
+            $ref: './components-dienste-Organisationen-Info.yaml'
     '400':
       description: |
         Bad Request

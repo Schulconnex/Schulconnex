@@ -33,6 +33,9 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Gruppendatensatz.yaml'
+        application/xml:
+          schema:
+            $ref: './components-qs-Gruppendatensatz.yaml'
     '400':
       description: |
         Bad Request
@@ -116,11 +119,17 @@ put:
       application/json:
         schema:
           $ref: './components-qs-Gruppenzugehörigkeit-PUT-request.yaml'
+      application/xml:
+        schema:
+          $ref: './components-qs-Gruppenzugehörigkeit-PUT-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Gruppenzugehörigkeit.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Gruppenzugehörigkeit.yaml'
     '400':
@@ -213,11 +222,17 @@ patch:
       application/json:
         schema:
           $ref: './components-qs-Gruppenzugehörigkeit-PATCH-request.yaml'
+      application/xml:
+        schema:
+          $ref: './components-qs-Gruppenzugehörigkeit-PATCH-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Gruppenzugehörigkeit.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Gruppenzugehörigkeit.yaml'
     '400':
@@ -288,6 +303,15 @@ delete:
     required: true
     content:
       application/json:
+        schema:
+          type: object
+          required:
+            - revision
+          properties:
+            revision:
+              type: string
+              description: Revision der zugrunde liegenden Gruppenzugehörigkeit. Dieses Feld ist ein Pflichtfeld.
+      application/xml:
         schema:
           type: object
           required:

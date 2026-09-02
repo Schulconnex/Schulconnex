@@ -57,11 +57,17 @@ post:
       application/json:
         schema:
           $ref: './components-qs-Beziehung-POST-request.yaml'
+      application/xml:
+        schema:
+          $ref: './components-qs-Beziehung-POST-request.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Beziehung-basis.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Beziehung-basis.yaml'
     '400':
@@ -165,6 +171,9 @@ get:
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Beziehungen.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Beziehungen.yaml'
     '400':

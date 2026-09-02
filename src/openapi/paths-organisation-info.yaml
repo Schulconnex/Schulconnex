@@ -26,6 +26,12 @@ get:
               - $ref: './components-Organisation-basis.yaml'
               - $ref: './components-Organisation.yaml'
               - $ref: './components-qs-Organisation.yaml'
+        application/xml:
+          schema:
+            allOf:
+              - $ref: './components-Organisation-basis.yaml'
+              - $ref: './components-Organisation.yaml'
+              - $ref: './components-qs-Organisation.yaml'
     '400':
       description: |
         Bad Request

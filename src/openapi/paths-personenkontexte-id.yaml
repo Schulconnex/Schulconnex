@@ -33,6 +33,9 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Personendatensatz.yaml'
+        application/xml:
+          schema:
+            $ref: './components-qs-Personendatensatz.yaml'
     '304':
       description: Not Modified
     '400':
@@ -124,11 +127,17 @@ put:
       application/json:
         schema:
           $ref: './components-qs-Personenkontext-PUT-request.yaml'
+      application/xml:
+        schema:
+          $ref: './components-qs-Personenkontext-PUT-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Personenkontext.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Personenkontext.yaml'
     '400':
@@ -232,11 +241,17 @@ patch:
       application/json:
         schema:
           $ref: './components-qs-Personenkontext-PATCH-request.yaml'
+      application/xml:
+        schema:
+          $ref: './components-qs-Personenkontext-PATCH-request.yaml'
   responses:
     '200':
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Personenkontext.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Personenkontext.yaml'
     '400':
@@ -307,6 +322,15 @@ delete:
     required: true
     content:
       application/json:
+        schema:
+          type: object
+          required:
+            - revision
+          properties:
+            revision:
+              type: string
+              description: Revision der Person des zugrunde liegenden Personenkontext. Dieses Feld ist ein Pflichtfeld.
+      application/xml:
         schema:
           type: object
           required:

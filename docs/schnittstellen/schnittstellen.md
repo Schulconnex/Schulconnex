@@ -57,4 +57,8 @@ Wird kein Content-Type gesetzt, wird automatisch `application/json` angenommen.
 
 > `Accept: application/json`
 
+Die Schulconnex-Schnittstelle trifft keine zwingende Festlegung, welcher Content-Type genutzt wird. Ea bleibt Schulconnex-Servern freigestellt alternativ oder zusätzlich auch Daten im XML-Format anzunehmen oder zu liefern. Is dieses der Fall, so   wird empfohlen, den zu erwartenden Content-Type explizit als `application/xml` anzugeben.
+
+Wird kein Content-Type gesetzt, wird automatisch `application/json` angenommen.
+
 [1]: https://openid.net/specs/openid-connect-core-1_0.html

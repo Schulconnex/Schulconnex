@@ -46,6 +46,15 @@ delete:
             revision:
               type: string
               description: Revision der zugrunde liegenden Sichtfreigabe. Dieses Feld ist ein Pflichtfeld.
+      application/xml:
+        schema:
+          type: object
+          required:
+            - revision
+          properties:
+            revision:
+              type: string
+              description: Revision der zugrunde liegenden Sichtfreigabe. Dieses Feld ist ein Pflichtfeld.
   responses:
     '204':
       description: |

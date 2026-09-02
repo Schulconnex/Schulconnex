@@ -41,11 +41,17 @@ post:
       application/json:
         schema:
           $ref: './components-qs-Gruppenzugehörigkeit-POST-request.yaml'
+      application/xml:
+        schema:
+          $ref: './components-qs-Gruppenzugehörigkeit-POST-request.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Gruppenzugehörigkeit.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Gruppenzugehörigkeit.yaml'
     '400':
@@ -139,6 +145,9 @@ get:
       description: OK
       content:
         application/json:
+          schema:
+            $ref: './components-qs-Gruppenzugehörigkeiten.yaml'
+        application/xml:
           schema:
             $ref: './components-qs-Gruppenzugehörigkeiten.yaml'
     '400':

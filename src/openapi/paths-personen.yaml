@@ -79,6 +79,9 @@ get:
         application/json:
           schema:
             $ref: './components-Personen-GET-request.yaml'
+        application/xml:
+          schema:
+            $ref: './components-Personen-GET-request.yaml'
     '400':
       description: |
         Bad Request
@@ -179,11 +182,19 @@ post:
       application/json:
         schema:
           $ref: './components-qs-Person-basis.yaml'
+      application/xml:
+        schema:
+          $ref: './components-qs-Person-basis.yaml'
   responses:
     '201':
       description: OK
       content:
         application/json:
+          schema:
+            allOf:
+              - $ref: './components-qs-Person.yaml'
+              - $ref: './components-qs-Person-basis.yaml'
+        application/xml:
           schema:
             allOf:
               - $ref: './components-qs-Person.yaml'

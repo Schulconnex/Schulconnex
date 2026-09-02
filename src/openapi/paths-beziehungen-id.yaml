@@ -36,6 +36,11 @@ get:
             allOf:
               - $ref: './components-qs-Beziehung-basis.yaml'
               - $ref: './components-qs-Beziehung.yaml'
+        application/xml:
+          schema:
+            allOf:
+              - $ref: './components-qs-Beziehung-basis.yaml'
+              - $ref: './components-qs-Beziehung.yaml'
     '400':
       description: |
         Bad Request
@@ -88,6 +93,15 @@ delete:
     required: true
     content:
       application/json:
+        schema:
+          type: object
+          required:
+            - revision
+          properties:
+            revision:
+              type: string
+              description: Revision der zugrunde liegenden Beziehung. Dieses Feld ist ein Pflichtfeld.
+      application/xml:
         schema:
           type: object
           required:

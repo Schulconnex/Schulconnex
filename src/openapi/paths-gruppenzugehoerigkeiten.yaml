@@ -57,6 +57,9 @@ get:
         application/json:
           schema:
             $ref: './components-qs-Gruppendatensätze.yaml'
+        application/xml:
+          schema:
+            $ref: './components-qs-Gruppendatensätze.yaml'
     '400':
       description: |
         Bad Request

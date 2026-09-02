@@ -101,6 +101,26 @@ get:
                   type: array
                   items:
                     $ref: './components-qs-Personenkontext-GET-request.yaml'
+        application/xml:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                person:
+                  type: object
+                  required:
+                    - id
+                  properties:
+                    id:
+                      description: ID der Person. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
+                      type: string
+                      readOnly: true
+                      example: a6e1a860-8d44-4b2b-aef7-aa2c8bf5beb5
+                personenkontexte:
+                  type: array
+                  items:
+                    $ref: './components-qs-Personenkontext-GET-request.yaml'
     '400':
       description: |
         Bad Request
