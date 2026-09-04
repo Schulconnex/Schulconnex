@@ -61,7 +61,7 @@ Code | Sub-Code | Titel | Beschreibung
 400 | 08 | `"Attributwerte entsprechen nicht dem gültigen Zeichensatz"` | `"Text von Attribut x entspricht nicht dem Zeichensatz y"`, wobei „x“ der Attributname ist, beispielsweise `person.name` und „y“ der Zeichensatz, beispielsweise UTF-8.
 400 | 09 | `"Datumsattribut hat einen ungültigen Wert"` | `"Datumsformat von Attribut x ist ungültig"`, wobei „x“ der Attributname ist.
 400 | 10 | `"Attributwerte entspricht keinem der erwarteten Werte"` | `"Attribut x muss einen gültigen Wert aus der Werteliste für Attribut x enthalten."`, wenn Attribut „x“ keinen Wert oder einen ungültigen Wert zugewiesen bekommen hat, wobei „x“ der Attributname ist.
-400 | 11 | `"Attribut darf nicht mit diesem Wert gesetzt oder verändert werden."` | `"Attribut x darf aufgrund fehlender Berechtigung nicht mit diesem Wert gesetzt oder verändert werden"`, wobei „x“ der Attributname ist, beispielsweise `person.rolle`.
+400 | 11 | `"Attribut darf nicht oder nicht mit diesem Wert gesetzt oder verändert werden."` | `"Attribut x darf aufgrund fehlender Berechtigung nicht oder nicht mit diesem Wert gesetzt oder verändert werden"`, wobei „x“ der Attributname ist, beispielsweise `person.rolle`.
 400 | 12 | `"Person enthält noch Personenkontexte."` | `"Daten vom Typ „Person“ können nur gelöscht werden, wenn für diese Person keine Personenkontexte mehr existieren."`
 400 | 13 | `"Personenkontext wird genutzt."` | `"Personenkontexte können über die API /personenkontexte/{id} nur dann direkt gelöscht werden, wenn sie von keinem anderen System genutzt wurden. Wurde der Personenkontext bereits extern genutzt, so muss die Löschung über andere APIs erfolgen."`
 400 | 14 | `"Zyklische Referenzgruppe"` | `"Referenzgruppen dürfen keine zirkulären Referenzen haben."`
@@ -70,7 +70,6 @@ Code | Sub-Code | Titel | Beschreibung
 400 | 17 | `"Doppelter Filter"` | `"Jeder Filter darf in der URL nur einmal benutzt werden. Filter wie ?pid=123&pid=124 sind nicht zulässig."`
 400 | 18 | `"Beziehung kann nicht erstellt werden."` | `"Die Beziehung zwischen zwei Personenkontexten darf so nicht erzeugt werden."` + spezifische Fehlermeldung der Schnittstelle.
 400 | 19 | `"Erreichbarkeit kann nicht hinzugefügt werden."` | `"Diese Erreichbarkeit ist so nicht zulässig."` + spezifische Fehlermeldung der Schnittstelle.
-400 | 20 | `"Attribut darf nicht gesetzt oder verändert werden."` | `"Das Attribut darf nicht durch eine Anwendung gesetzt werden."` + spezifische Fehlermeldung der Schnittstelle.
 
 ### `401` - Unauthorized
 
