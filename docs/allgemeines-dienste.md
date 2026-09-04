@@ -26,3 +26,7 @@ ihnen gehaltenen Daten mit den Daten des Schulconnex-Services, ohne dass sich di
 nutzenden Personen aktiv anmelden müssen. Der Zugriff erfolgt mit einem Access-Token,
 den der Authentifizierungsserver und Autorisierungsserver für den Dienst ausstellt. Dieser
 Sicherheitskontext wird aktuell zum periodischen Abgleich von gelöschten Daten verwendet.
+
+import Text from './allgemeines-leere-attribute.md';
+
+<Text />

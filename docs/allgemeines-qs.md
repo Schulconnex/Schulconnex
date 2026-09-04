@@ -9,3 +9,7 @@ durch Quellsysteme nicht verändert werden dürfen, beispielsweise die Mandanten
 können diese Attribute oft weggelassen werden (genaueres ist bei den entsprechenden Funktionen angegeben).
 Werden die Attribute bei der UPDATE-Operation angegeben, so müssen sie allerdings dem vorher ausgelesenen
 Wert entsprechen. Bei einer Abweichung wird eine Fehlermeldung ausgegeben.
+
+import Text from './allgemeines-leere-attribute.md';
+
+<Text />
