@@ -27,6 +27,6 @@ nutzenden Personen aktiv anmelden müssen. Der Zugriff erfolgt mit einem Access-
 den der Authentifizierungsserver und Autorisierungsserver für den Dienst ausstellt. Dieser
 Sicherheitskontext wird aktuell zum periodischen Abgleich von gelöschten Daten verwendet.
 
-import Text from './allgemeines-leere-attribute.md';
+import Text from './allgemeines-leere-inhalte.md';
 
 <Text />
