@@ -2,7 +2,7 @@
 
 Schulconnex-Server dürfen keine JSON-Objekte ohne Inhalte ausliefern.
 
-Das gilt sowohl für einzelne Attribute, für die kein Wert in der Antwort ausgeliefert wird, für Arrays, die keine Elemente enthalten, als auch für komplexere Objekte, welche nur Attribute oder Unter-Objekte ohne Inhalte enthalten.
+Dies gilt sowohl für einzelne Attribute, für die kein Wert in der Antwort ausgeliefert wird, als auch für Arrays, die keine Elemente enthalten, und auch für komplexe JSON-Objekte, welche nur Attribute oder Unter-Objekte ohne Inhalte enthalten.
 
 Ein einzelnes Attribut hat dann keinen Wert, wenn dieser nie gesetzt wurde und in der Spezifikation kein Default-Wert definiert ist, oder wenn ein vorhandener Wert gelöscht oder bei einem PATCH auf `null` gesetzt wurde. Unabhängig davon, ob ein Client im Prinzip auf dieses Attribut zugreifen kann, dürfen solche Attribute von Schulconnex-Servern nicht ausgeliefert werden. 
 
