@@ -6,7 +6,7 @@ Dies gilt sowohl für einzelne Attribute, für die kein Wert in der Antwort ausg
 
 Ein einzelnes Attribut hat dann keinen Wert, wenn dieser nie gesetzt wurde und in der Spezifikation kein Default-Wert definiert ist, oder wenn ein vorhandener Wert gelöscht oder bei einem PATCH auf `null` gesetzt wurde. Unabhängig davon, ob ein Client im Prinzip auf dieses Attribut zugreifen kann, dürfen solche Attribute von Schulconnex-Servern nicht ausgeliefert werden. 
 
-Das gilt auch für komplexe Objekte, wenn alle enthaltenen, für einen Client lesbaren, Attribute leer sind.
+Dies gilt auch für komplexe JSON-Objekte, wenn alle enthaltenen, für einen Client lesbaren, Attribute leer sind.
 
 Ist, beispielsweise, zur Geburt einer Person nur der Ort und nicht das Datum gesetzt, so liefert der Server in der Antwort auch nur:
 ```
