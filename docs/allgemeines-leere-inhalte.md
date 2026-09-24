@@ -1,6 +1,6 @@
 ## Leere Inhalte in JSON-Antworten
 
-Schulconnex-Servern dürfen keine JSON-Objekte ohne Inhalte ausliefern.
+Schulconnex-Server dürfen keine JSON-Objekte ohne Inhalte ausliefern.
 
 Das gilt sowohl für einzelne Attribute, für die kein Wert in der Antwort ausgeliefert wird, für Arrays, die keine Elemente enthalten, als auch für komplexere Objekte, welche nur Attribute oder Unter-Objekte ohne Inhalte enthalten.
 
