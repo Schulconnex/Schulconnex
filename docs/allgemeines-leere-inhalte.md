@@ -18,6 +18,6 @@ Ist auch der Geburtsort nicht gesetzt, so wird das Objekt `geburt` in der Antwor
 
 Hat ein Dienst nur Zugriff auf das Attribut `geburt.datum`, so darf das Objekt `geburt` in beiden Fällen nicht geliefert werden. 
 
-Hierdurch sollen Inkonsistenzen im Verhalten unterschiedlicher Schulconnex-Server vermieden werden und verhindert werden, dass Dienste implizit Rückschlüsse auf für diese nicht freigegebene Attribute ziehen können. 
+Hierdurch sollen Inkonsistenzen im Verhalten unterschiedlicher Schulconnex-Server vermieden werden und verhindert werden, dass Dienste implizit Rückschlüsse auf für diese nicht vertraglich freigegebene Attribute ziehen können. 
 
 Eine Ausnahme von diesem Verhalten besteht bei der Nutzung von Filtern beim Lese-Zugriff auf Daten. Wird, beispielsweise durch die Nutzung von Filtern, auf eine Anfrage kein Rückgabewert geliefert, so muss ein Schulconnex-Server eine leere Liste `[]` liefern.
