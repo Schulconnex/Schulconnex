@@ -1,6 +1,9 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 
 const config: Config = {
   title: 'Schulconnex',
@@ -8,7 +11,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://schulconnex.de',
+  url: 'https://schulconnex.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -30,6 +33,9 @@ const config: Config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
     remarkRehypeOptions: {
       footnoteLabel: 'Fußnoten',
     },
@@ -260,6 +266,21 @@ const config: Config = {
         }
       },
     ]
+    ,
+    function webpackNodePolyfills() {
+      return {
+        name: 'webpack-node-polyfills',
+        configureWebpack() {
+          return {
+            resolve: {
+              fallback: {
+                path: require.resolve('path-browserify'),
+              },
+            },
+          };
+        },
+      };
+    }
   ],
 };
 

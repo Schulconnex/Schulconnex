@@ -136,3 +136,51 @@ code[class*='codeBlockLinesWithNumbering'] > .theme-code-block-highlighted-line 
 .tag-cl-generisch { background: var(--ifm-color-danger-contrast-background); color: var(--ifm-color-danger-contrast-foreground); }
 .tag-cl-lokal { background: var(--ifm-color-success-contrast-background); color: var(--ifm-color-success-contrast-foreground); }
 .tag-cl-system  { background: var(--ifm-color-warning-contrast-background); color: var(--ifm-color-warning-contrast-foreground);  }
+/* Tabellen in Docs: besser lesbar bei vielen Spalten (z.B. "Qualifizierter Name"). */
+.theme-doc-markdown table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  font-size: 0.95em;
+}
+
+.theme-doc-markdown table th,
+.theme-doc-markdown table td {
+  vertical-align: top;
+}
+
+/* Lange URNs/Inline-Code in Tabellen sollen sauber umbrechen können. */
+.theme-doc-markdown table td code,
+.theme-doc-markdown table th code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Toggle: Qualifizierter Name Spalte ein-/ausblenden */
+.qualified-names-table .qualified-name-col {
+  display: none;
+}
+
+html.show-qualified-names .qualified-names-table .qualified-name-col {
+  display: table-cell;
+}
+
+.qualified-names-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--ifm-spacing-horizontal);
+  margin: 0 0 var(--ifm-spacing-vertical);
+  padding: var(--ifm-spacing-vertical) var(--ifm-spacing-horizontal);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-alert-border-radius);
+}
+
+.qualified-names-toggle input[type='checkbox'] {
+  margin: 0;
+}
+
+.qualified-names-toggle label {
+  margin: 0;
+  cursor: pointer;
+}
