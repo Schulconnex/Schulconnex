@@ -25,6 +25,9 @@ Insbesondere sollten:
 # Entfernen von Endpunkten
 Werden spezifizierte Endpunkte nicht unterstützt, so muss bei Aufruf des Endpunktes der Fehler "501/00 Der Endpunkt ist nicht implementiert" geliefert werden, um deutlich zu machen, dass der Endpunkt bewusst nicht bereitgestellt wird. Eine Fehlermeldung "404 Endpunkt existiert nicht" ist nicht ausreichend.
 
+Der Fehler "501/00 Der Endpunkt ist nicht implementiert" ist auch zu liefern, wenn eine Schnittstelle nur intern verfügbar ist, beispielsweise bei eher adminstrativen APIs, wie
+der Veränderung von Organisationsinformationen. Ist die API extern erreichbar, aber nicht für alle Anwendungen zugänglich, so ist "401/00 Zugang verweigert" zu liefern.
+
 Werden Endpunkte entfernt, so ist darauf zu achten, dass dieses konsistent geschieht. Insbesondere ist darauf zu achten, dass Änderungen an der Quellsystem-Schnittstelle auch entsprechend an der Dienste-Schnittstelle vorgenommen werden.
 
 Wird beispielsweise der Endpunkt zum Erstellen von Sichtfreigaben entfernt, so sollte auch der Endpunkt zum Löschen von Sichtfreigaben entfernt werden.
