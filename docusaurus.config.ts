@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://schulconnex.github.io',
+  url: 'https://schulconnex.de',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -19,7 +19,6 @@ const config: Config = {
   projectName: 'schulconnex', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -34,6 +33,9 @@ const config: Config = {
     remarkRehypeOptions: {
       footnoteLabel: 'Fußnoten',
     },
+    hooks: {
+      onBrokenMarkdownLinks: 'throw'
+    }
   },
 
   themes: [
@@ -49,12 +51,8 @@ const config: Config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'Version 1.7',
+              label: 'Version 1.8',
               // path: '1.5',
-            },
-              '1.8-rc1': { 
-              label: 'Version 1.8 Veröffentlichungskandidat 1', 
-              banner: 'unreleased' 
             },
           },
           sidebarPath: './sidebars.ts',

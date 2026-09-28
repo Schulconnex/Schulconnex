@@ -61,7 +61,7 @@ Code | Sub-Code | Titel | Beschreibung
 400 | 08 | `"Attributwerte entsprechen nicht dem gültigen Zeichensatz"` | `"Text von Attribut x entspricht nicht dem Zeichensatz y"`, wobei „x“ der Attributname ist, beispielsweise `person.name` und „y“ der Zeichensatz, beispielsweise UTF-8.
 400 | 09 | `"Datumsattribut hat einen ungültigen Wert"` | `"Datumsformat von Attribut x ist ungültig"`, wobei „x“ der Attributname ist.
 400 | 10 | `"Attributwerte entspricht keinem der erwarteten Werte"` | `"Attribut x muss einen gültigen Wert aus der Werteliste für Attribut x enthalten."`, wenn Attribut „x“ keinen Wert oder einen ungültigen Wert zugewiesen bekommen hat, wobei „x“ der Attributname ist.
-400 | 11 | `"Attribut darf nicht mit diesem Wert gesetzt oder verändert werden."` | `"Attribut x darf aufgrund fehlender Berechtigung nicht mit diesem Wert gesetzt oder verändert werden"`, wobei „x“ der Attributname ist, beispielsweise `person.rolle`.
+400 | 11 | `"Attribut darf nicht oder nicht mit diesem Wert gesetzt oder verändert werden."` | `"Attribut x darf aufgrund fehlender Berechtigung nicht oder nicht mit diesem Wert gesetzt oder verändert werden"`, wobei „x“ der Attributname ist, beispielsweise `person.rolle`.
 400 | 12 | `"Person enthält noch Personenkontexte."` | `"Daten vom Typ „Person“ können nur gelöscht werden, wenn für diese Person keine Personenkontexte mehr existieren."`
 400 | 13 | `"Personenkontext wird genutzt."` | `"Personenkontexte können über die API /personenkontexte/{id} nur dann direkt gelöscht werden, wenn sie von keinem anderen System genutzt wurden. Wurde der Personenkontext bereits extern genutzt, so muss die Löschung über andere APIs erfolgen."`
 400 | 14 | `"Zyklische Referenzgruppe"` | `"Referenzgruppen dürfen keine zirkulären Referenzen haben."`
@@ -131,3 +131,4 @@ Code | Sub-Code | Titel | Beschreibung
 --- | --- | --- | ---
 501 | 00 | `"Der Endpunkt ist nicht implementiert."` | `"Der aufgerufene Endpunkt ist spezifiziert, wird jedoch auf diesem Server nicht bereitgestellt."`
 501 | 01 | `"Der Endpunkt ist noch nicht implementiert."` | `"Der aufgerufene Endpunkt ist spezifiziert, wird jedoch auf diesem Server noch nicht bereitgestellt."`
+501 | 02 | `"Paginierung ist nicht implementiert."` | `"Der Server stellt für diesen Endpunkt keine Paginierung bereit."`

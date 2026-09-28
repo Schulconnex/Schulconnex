@@ -1,0 +1,5 @@
+type: object
+properties:
+  von:
+    nullable: true
+    $ref: './components-Datum-von.yaml'

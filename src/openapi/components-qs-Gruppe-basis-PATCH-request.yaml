@@ -1,0 +1,99 @@
+
+type: object
+required:
+  - revision
+properties:
+  id:
+    description: ID der Gruppe.
+    type: string
+    example: b3201d00-f21f-4986-a39d-02a09c8da26c
+  mandant:
+    description: ID des Mandanten.
+    type: string
+  orgid:
+    description: ID der Organisation.
+    type: string
+    example: 9b3f36ad-9d15-49f9-9660-6cf9746ba446
+    nullable: true
+  referrer:
+    description: ID der Gruppe im Quellsystem.
+    type: string
+    nullable: true
+    example: grup_678
+  bezeichnung:
+    description: Bezeichnung der Gruppe.
+    type: string
+    example: Englisch 6b
+  thema:
+    description: Thema der Gruppe in Kurzform.
+    type: string
+    nullable: true
+  beschreibung:
+    description: Zusätzliche optionale Beschreibung der Gruppe.
+    type: string
+    nullable: true
+    maxLength: 1024
+  typ:
+    $ref: './components-code-Gruppentyp.yaml'
+  bereich:
+    nullable: true
+    $ref: './components-code-Gruppenbereich.yaml'
+  optionen:
+    type: array
+    nullable: true
+    items:
+      $ref: './components-code-Gruppenoption.yaml'
+  differenzierung:
+    nullable: true
+    $ref: './components-code-Gruppendifferenzierung.yaml'
+  bildungsziele:
+    type: array
+    nullable: true
+    items:
+      $ref: './components-code-Bildungsziel.yaml'
+  jahrgangsstufen:
+    type: array
+    nullable: true
+    items:
+      $ref: './components-code-Jahrgangsstufe.yaml'
+  faecher:
+    type: array
+    nullable: true
+    example: [{kennung: "DE", bezeichnung: "Erste Hilfe"}]
+    items:
+     oneOf:
+        - $ref: './components-Gruppe-faecher-kennung.yaml'
+        - $ref: './components-Gruppe-faecher-bezeichnung.yaml'
+        - $ref: './components-Gruppe-faecher-kennung-bezeichnung.yaml'
+  referenzgruppen:
+    type: array
+    nullable: true
+    items:
+      type: object
+      required:
+        - grupid
+      properties:
+        grupid:
+          description: ID der Referenzgruppe.
+          type: string
+          example: e70663cb-65c4-4ad5-a9f1-7edbc3c36c4b
+        rollen:
+          type: array
+          nullable: true
+          items:
+            $ref: './components-code-Gruppenrolle.yaml'
+  laufzeit:
+    type: object
+    nullable: true
+    oneOf:
+      - $ref: './components-Laufzeit-von-bis-PATCH.yaml'
+      - $ref: './components-Laufzeit-vonlernperiode-bislernperiode-PATCH.yaml'
+      - $ref: './components-Laufzeit-von-bislernperiode-PATCH.yaml'
+      - $ref: './components-Laufzeit-vonlernperiode-bis-PATCH.yaml'
+      - $ref: './components-Laufzeit-von-PATCH.yaml'
+      - $ref: './components-Laufzeit-vonlernperiode-PATCH.yaml'
+      - $ref: './components-Laufzeit-bis-PATCH.yaml'
+      - $ref: './components-Laufzeit-bislernperiode-PATCH.yaml'
+  revision:
+    description: Revision der Gruppe.
+    type: string

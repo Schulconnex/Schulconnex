@@ -190,6 +190,7 @@ Attribute | Description
 postleitzahl | ZIP Code.
 ort | Town name.
 ortsteil | Urban district, if a more specific location than town name is required.
+verwaltungspolitischekodierung | Administrative area in which the address is located.
 
 ## Organisationsbeziehung
 
@@ -199,3 +200,12 @@ Attribute | Description
 --- | ---
 orgid | ID of the organisation the current organisation has a „has as“ relation.
 organisationsbeziehung | Type of relation between the organisations.
+
+## VerwaltungspolitischeKodierung
+
+This is the administrative area in which the address is located. Currently only attribute is the 'bundesland' (one of the sixteen German states).
+
+Attribute | Description
+--- | ---
+bundesland | One of the sixteen German states.
+
