@@ -75,7 +75,7 @@ Gruppentyp | Bezeichnung im abgeschlossenen Schuljahr | Aktualisierte Bezeichnun
 --- | --- | ---
 Schulklasse | „Klasse 7a“ | „Klasse 8a“
 Schulklasse | „Qualifikationsphase 1“ | „Qualifikationsphase 2“
-Kurs / Unterricht | „LK Mathematik Q1“ | „LK Mathematik Q1“
+Kurs / Unterricht | „LK Mathematik Q1“ | „LK Mathematik Q2“
 Kurs / Unterricht | „LK Mathematik Abitur 2024“ | nicht aktualisiert
 Kurs / Unterricht | „Deutsch 7a“ | „Deutsch 8a“
 Kurs / Unterricht | „Spanisch 9 I“ | „Spanisch 10 I“

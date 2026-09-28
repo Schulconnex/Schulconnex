@@ -14,6 +14,8 @@ delete:
 
     Im Normalfall wird eine Sichtfreigabe über das in ihr enthaltene Enddatum terminiert.
 
+    Eine Löschung kann sowohl durch die Organisation erfolgen, welche die Sichtfreigabe erstellt hat, als auch durch die Organisation, welche die Sichtfreigabe erhalten hat.
+    
     Ein DELETE muss mit einer HTTP-DELETE Anfrage erfolgen. Die Anfrage-Nutzdaten (Request Payload)
     beinhalten die Revisionsnummer.
 

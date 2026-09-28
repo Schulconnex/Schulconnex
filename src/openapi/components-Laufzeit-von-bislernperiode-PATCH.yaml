@@ -1,0 +1,8 @@
+type: object
+properties:
+  von:
+    nullable: true
+    $ref: './components-Datum-von.yaml'
+  bislernperiode:
+    nullable: true
+    $ref: './components-code-Lernperiode.yaml'

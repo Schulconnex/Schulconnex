@@ -12,3 +12,5 @@ properties:
     description: Teil eines Orts, falls genauere Untergliederung gewünscht.
     type: string
     example: Döhren
+  verwaltungspolitischekodierung:
+    $ref: './components-code-verwaltungspolitischeKodierung.yaml'

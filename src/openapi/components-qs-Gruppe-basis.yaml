@@ -38,7 +38,7 @@ properties:
       $ref: './components-code-Jahrgangsstufe.yaml'
   faecher:
     type: array
-    example: [{kennung: "DE"},{bezeichnung: "Erste Hilfe"}]
+    example: [{kennung: "DE", bezeichnung: "Erste Hilfe"}]
     items:
      oneOf:
         - $ref: './components-Gruppe-faecher-kennung.yaml'
