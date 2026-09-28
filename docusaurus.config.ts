@@ -51,12 +51,8 @@ const config: Config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'Version 1.7',
+              label: 'Version 1.8',
               // path: '1.5',
-            },
-              '1.8-rc1': { 
-              label: 'Version 1.8 Veröffentlichungskandidat 1', 
-              banner: 'unreleased' 
             },
           },
           sidebarPath: './sidebars.ts',
