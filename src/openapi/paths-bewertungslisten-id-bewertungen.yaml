@@ -1,0 +1,73 @@
+post:
+  tags:
+    - Bewertungen
+  operationId: createBewertung
+  security:
+    - oAuthForServices: []
+  summary: Erstellen einer Bewertung
+  description: |
+    Mittels dieser Schnittstelle wird ein neuer Datensatz „Bewertung” erstellt.
+
+    Ein CREATE zum Erstellen von Bewertungen muss mit HTTP-POST auf die API `/bewertungslisten/{id}/bewertung`
+    erfolgen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des
+    Datentyps Bewertung.
+
+    Siehe auch das Datenmodell zu [`Bewertung`](../../../datenmodell-qs/bewertung).
+
+    Die Bewertungs-ID wird vom Schulconnex-Service vergeben und hinzugefügt.
+
+    Bei einer erfolgreichen Anforderung zum Erstellen einer Bewertung wird diese Anforderung
+    mit einer Repräsentation der Bewertung in den Antwort-Nutzdaten (Response Payload) und
+    dem HTTP-Statuscode 201 quittiert.
+  parameters:
+    - in: path
+      name: id
+      schema:
+        type: string
+        example: cbb7bd57-690c-46cc-821b-ba4221913ee2
+      required: true
+      description: Der Pfad-Parameter bezieht sich auf die ID der Bewertungsliste.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: './components-qs-Bewertung-basis.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: './components-qs-Bewertung.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
