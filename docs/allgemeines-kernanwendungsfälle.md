@@ -16,3 +16,37 @@ Ein Zugriff auf die Endpunkte darf nur mit einem gültigen, von diesem Server au
 Access-Token möglich sein. Um Access-Token für die API-Nutzung zu erhalten, müssen
 Quellsysteme und Dienste als Clients mit einer Client-ID registriert sein.
 
+## Grundlegende Datenmodelle
+
+Informationen in Schulconnex werden anhand von vier grundlegenden Datenmodellen strukturiert.
+
+Diese Datenmodelle sind Person, Personenkontext, Gruppe und Gruppenzugehörigkeit.
+
+Vereinfacht ist die Beziehung zwischen den Datenmodellen wie folgt:
+
+```mermaid
+classDiagram
+  Person --> Personenkontext : 0..n
+  Gruppe --> Gruppenzugehörigkeit : 0..n
+  Gruppenzugehörigkeit --> Personenkontext : 1
+  
+
+ 
+  class Person {
+  
+  }
+  class Gruppe {
+ 
+  }
+  class Personenkontext {
+  
+  }
+
+
+
+  class Gruppenzugehörigkeit {
+  
+  }
+
+```
+
