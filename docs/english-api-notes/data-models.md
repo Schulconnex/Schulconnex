@@ -155,9 +155,6 @@ revision | Revision number of the information. This is used to check on updates 
 A teaching period („Lernperiode”) is a time period in which organisations can offer groups.
 In most cases these periods are school years or semesters.
 
-Teaching periods are not modifiable via APIs, they are provided in the same manner as code lists.
-However, as they are not simple lists, but structured objects, their structure is described here.
-
 Attribute | Description
 --- | ---
 code | Code of the teaching period.
