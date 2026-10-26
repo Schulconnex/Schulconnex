@@ -73,7 +73,8 @@ patch:
     Organisation. Siehe auch das Datenmodell zu
     [`Organisation`](../../../datenmodell-qs/organisation).
 
-    Diese API ist häufig nur als interne API für den Betreiber einens Schulconnex-Servers 
+    Diese API ist häufig nur als interne API für den Betreiber eines Schulconnex-Servers 
+```´
     zur Durchführung administrativer Funktionen verfügbar.
 
     Die folgende Tabelle listet die Attribute einer Organisation auf,
