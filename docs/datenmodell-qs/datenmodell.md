@@ -13,6 +13,8 @@ jeweils mit spezifischen Erweiterungen.
 
 ```mermaid
 classDiagram
+  class Verwaltungspolitische_Kodierung["Verwaltungspolitische Kodierung"]
+
   Personendatensatz --> Person : 1
   Personendatensatz --> Personenkontext : 0..n
   Beziehung --> Personenkontext : 1..n
@@ -20,7 +22,7 @@ classDiagram
   Personenkontext --> Organisation : 1
   Personenkontext --> Sichtfreigabe : 0..1
   Organisation --> Anschrift : 0..1
-  Anschrift --> VerwaltungspolitischeKodierung : 0..1
+  Anschrift --> Verwaltungspolitische_Kodierung : 0..1
   Gruppe --> Organisation : 1
   Gruppendatensatz --> Gruppe : 1
   Gruppendatensatz --> Gruppenzugehörigkeit : 0..n
@@ -94,9 +96,9 @@ classDiagram
     postleitzahl
     ort
     ortsteil
-    verwaltungspolitischeKodierung
+    verwaltungspolitischekodierung
   }
-  class VerwaltungspolitischeKodierung {
+  class Verwaltungspolitische_Kodierung {
     bundesland
   }
   class Gruppe {
