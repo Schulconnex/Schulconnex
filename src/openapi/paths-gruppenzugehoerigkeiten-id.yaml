@@ -270,7 +270,7 @@ delete:
     Es ist erforderlich, dass für eine Löschanfrage einer Gruppenzugehörigkeit das
     Attribut `revision` der zugrunde liegenden Gruppenzugehörigkeit mitgeschickt wird.
     Der Schulconnex-Server überprüft anhand des mitgeschickten Werts des Attributs
-    `revision`, ob der Datensatz des Personenkontext in der Zwischenzeit keine Änderung
+    `revision`, ob der Datensatz des Personenkontexts in der Zwischenzeit keine Änderung
     erfahren hat.
 
     Bei einer erfolgreichen Ausführung der Löschanfrage wird es keine Antwort-Nutzdaten
