@@ -79,7 +79,7 @@ GET /v1/policies-info
   "data": [
     {
       "policy": {
-        "id": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+        "uid": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
         "target": {
           "uid": "urn:issuer:medium:12345",
           "partOf": "urn:issuer:catalogue"
@@ -93,7 +93,7 @@ GET /v1/policies-info
     },
     {
       "policy": {
-        "id": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040123bc4",
+        "uid": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040123bc4",
         "target": {
           "uid": "urn:issuer:medium:67890",
           "partOf": "urn:issuer:catalogue"
@@ -107,7 +107,7 @@ GET /v1/policies-info
     },
     {
       "policy": {
-        "id": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad90401211e9",
+        "uid": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad90401211e9",
         "target": {
           "uid": "urn:issuer:medium:abcde",
           "partOf": "urn:issuer2:catalogue"
@@ -146,7 +146,7 @@ GET /v1/policies-info?target.uid=urn:issuer:medium:123456789&target.partOf=urn:i
   "data": [
     {
       "policy": {
-        "id": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
+        "uid": "https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7",
         "target": {
           "uid": "urn:issuer:medium:12345",
           "partOf": "urn:issuer:catalogue"
