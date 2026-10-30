@@ -84,3 +84,8 @@ delete:
         Conflict
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '500':
+      description: |
+        Internal Server Error
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
