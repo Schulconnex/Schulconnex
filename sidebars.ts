@@ -191,6 +191,7 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'praxisleitfaden/ablauf-löschen-dienste',
+        'praxisleitfaden/nutzer-in-gruppentyp',
       ],
     },
 
