@@ -34,7 +34,7 @@ Lokale Codelisten können in unterschiedlichen Domänen voneinander abweichen, z
 Werden innerhalb dieser Schulconnex-Spezifikation konkrete Codewerte genannt, so sind diese als Beispiele zu verstehen und sind nicht verbindlich.
 
 Länderspezifische Codelisten sind [Beziehungen](#beziehungen-lokal), [Bildungsziel](#bildungsziel-lokal), [Fächerkanon](#fächerkanon-lokal), [Gruppenbereich](#gruppenbereich-lokal), [Gruppendifferenzierung](#gruppendifferenzierung-lokal), [Gruppenoption](#gruppenoption-lokal), 
-[Jahrgangsstufe](#jahrgangsstufe-lokal), [Lernperiode](#lernperiode-lokal) und [Lernperiodentyp](#lernperiodentyp-lokal).
+[Jahrgangsstufe](#jahrgangsstufe-lokal) und [Lernperiodentyp](#lernperiodentyp-lokal).
 
 
 ## Zukünftige Nutzung URI-basierter Codelisten
@@ -272,48 +272,6 @@ Code | Bezeichnung
 11 | Jahrgangsstufe 11
 12 | Jahrgangsstufe 12
 13 | Jahrgangsstufe 13
-
-### Lernperiode <span class="tag tag-cl-lokal">Lokal</span>
-
-Lernperioden dienen zur Festlegung des Beginns oder des Endes einer Kurslaufzeit.
-Der Code einer Lernperiode legt sowohl Anfangsdatum, Enddatum, auch den Typ (Schuljahr oder Schulhalbjahr) fest.
-
-Code | Bezeichnung | Beginn | Ende | Typ
---- | --- | --- | --- | ---
-2022 | Schuljahr 2022/23 | 2022-08-01 | 2023-07-31 | SJ
-2022-1 | 1. Halbj. 22/23 | 2022-08-01 | 2023-01-31 | HJ
-2022-2 | 2. Halbj. 22/23 | 2023-02-01 | 2023-07-31 | HJ
-2023 | Schuljahr 2023/24 | 2023-08-01 | 2024-07-31 | SJ
-2023-1 | 1. Halbj. 23/24 | 2023-08-01 | 2024-01-31 | HJ
-2023-2 | 2. Halbj. 23/24 | 2024-02-01 | 2024-07-31 | HJ
-2024 | Schuljahr 2024/25 | 2024-08-01 | 2025-07-31 | SJ
-2024-1 | 1. Halbj. 24/25 | 2024-08-01 | 2025-01-31 | HJ
-2024-2 | 2. Halbj. 24/25 | 2025-02-01 | 2025-07-31 | HJ
-2025 | Schuljahr 2025/26 | 2025-08-01 | 2026-07-31 | SJ
-2025-1 | 1. Halbj. 25/26 | 2025-08-01 | 2026-01-31 | HJ
-2025-2 | 2. Halbj. 25/26 | 2026-02-01 | 2026-07-31 | HJ
-2026 | Schuljahr 2026/27 | 2026-08-01 | 2027-07-31 | SJ
-2026-1 | 1. Halbj. 26/27 | 2026-08-01 | 2027-01-31 | HJ
-2026-2 | 2. Halbj. 26/27 | 2027-02-01 | 2027-07-31 | HJ
-2027 | Schuljahr 2027/28 | 2027-08-01 | 2028-07-31 | SJ
-2027-1 | 1. Halbj. 27/28 | 2027-08-01 | 2028-01-31 | HJ
-2027-2 | 2. Halbj. 27/28 | 2028-02-01 | 2028-07-31 | HJ
-2028 | Schuljahr 2028/29 | 2028-08-01 | 2029-07-31 | SJ
-2028-1 | 1. Halbj. 28/29 | 2028-08-01 | 2029-01-31 | HJ
-2028-2 | 2. Halbj. 28/29 | 2029-02-01 | 2029-07-31 | HJ
-2029 | Schuljahr 2029/30 | 2029-08-01 | 2030-07-31 | SJ
-2029-1 | 1. Halbj. 29/30 | 2029-08-01 | 2030-01-31 | HJ
-2029-2 | 2. Halbj. 29/30 | 2030-02-01 | 2030-07-31 | HJ
-2030 | Schuljahr 2030/31 | 2030-08-01 | 2031-07-31 | SJ
-2030-1 | 1. Halbj. 30/31 | 2030-08-01 | 2031-01-31 | HJ
-2030-2 | 2. Halbj. 30/31 | 2031-02-01 | 2031-07-31 | HJ
-2031 | Schuljahr 2031/32 | 2031-08-01 | 2032-07-31 | SJ
-2031-1 | 1. Halbj. 31/32 | 2031-08-01 | 2032-01-31 | HJ
-2031-2 | 2. Halbj. 31/32 | 2032-02-01 | 2032-07-31 | HJ
-2032 | Schuljahr 2032/33 | 2032-08-01 | 2033-07-31 | SJ
-2032-1 | 1. Halbj. 32/33 | 2032-08-01 | 2033-01-31 | HJ
-2032-2 | 2. Halbj. 32/33 | 2033-02-01 | 2033-07-31 | HJ
-
 
 ### Lernperiodentyp <span class="tag tag-cl-lokal">Lokal</span>
 

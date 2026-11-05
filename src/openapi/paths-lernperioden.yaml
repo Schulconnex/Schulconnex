@@ -1,0 +1,113 @@
+get:
+  tags:
+    - Lernperioden
+  operationId: readLernperioden
+  security:
+    - oAuthForServices: []
+  summary: Auflistung von Lernperioden
+  description: |
+    Die Schnittstelle `/lernperioden` ermöglich die Auflistung von Lernperioden.
+
+    Ein READ muss mit einer HTTP-GET Anfrage erfolgen. Die Antwort-Nutzdaten
+    (Response Payload) beinhalten ein Array von JSON-Objekten vom Datentyp Lernperiode.
+
+    Siehe auch Datenmodell [`Lernperiode`](../../../datenmodell-qs/lernperiode).
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+             $ref: './components-Lernperiode.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+post:
+  tags:
+    - Lernperioden
+  operationId: createLernperiode
+  security:
+    - oAuthForServices: []
+  summary: Erstellen einer Lernperiode
+  description: |
+    Mittels dieser Schnittstelle wird ein neuer Datensatz „Lernperiode” erstellt.
+
+    Ein CREATE zum Erstellen von Lernperioden muss mit HTTP-POST auf die API `/lernperioden`
+    erfolgen. Die Anfrage-Nutzdaten (Request Payload) beinhalten ein JSON-Objekt des
+    Datentyps Lernperiode.
+
+    Siehe auch das Datenmodell zu [`Lernperiode`](../../../datenmodell-qs/lernperiode).
+
+    Der Lernperioden-Code wird vom Schulconnex-Service vergeben und hinzugefügt.
+
+    Bei einer erfolgreichen Anforderung zum Erstellen einer Lernperiode wird diese Anforderung
+    mit einer Repräsentation der Lernperiode in den Antwort-Nutzdaten (Response Payload) und
+    dem HTTP-Statuscode 201 quittiert.
+    
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: './components-qs-Lernperiode-POST-request.yaml'
+  responses:
+    '201':
+      description: OK
+      content:
+        application/json:
+          schema:
+           $ref: './components-qs-Lernperiode.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '409':
+      description: |
+        Conflict
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

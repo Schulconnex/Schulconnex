@@ -1,0 +1,31 @@
+description: Lernperiode.
+type: object
+required:
+  - bezeichnung
+  - typ
+  - beginn
+  - ende
+properties:
+  bezeichnung:
+    description:	Bezeichnung der Lernperiode.
+    type: string
+    example: Schuljahr 2023/2024
+  typ:
+    type: string
+    enum:
+     - SJ
+     - HJ
+    description: >
+      Typ der Lernperiode. Referenz auf einen Code der Codeliste Lernperiodentyp.
+      * SJ Schuljahr
+      * HJ Halbjahr
+    example: SJ
+  beginn:
+    description:	Datum, an dem die Lernperiode beginnt.
+    type: string
+    example: 2027-08-01
+  ende:
+    description:	Datum, an dem die Lernperiode endet.
+    type: string
+    example: 2028-07-31
+
