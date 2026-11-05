@@ -49,19 +49,18 @@ namespace Basis-Datenmodelle   {
   Gruppenzugehörigkeit --> Personenkontext : 1
 ```
 
-Das Datenmodell `Person` enthält Attribute zu Personen, wie Name oder Geburtsdatum.
+Das Datenmodell `Person` enthält Attribute zu Personen wie Name oder Geburtsdatum.
 
-Einer `Person` können Personenkontexte zugeordnet werden, welche die Rolle der `Person` in verschiedenen Kontexten beschreiben. So kann eine Person in einer Organisation die Rolle eines Schulbegleiters oder einer Schulbegleiterin haben, während sie in einer anderen Organisation die Rolle eines oder einer Lehrenden hat. Dabei sind einzelne Personenkontexte so spezifisch wie möglich. Hat eine `Person` in einer Organisation mehrende Rollen (wie Organisationsleitung,
-SysAdmin und Lehrende), so besteht für jede dieser Rollen ein eigenen `Personenkontext`.
+Einer `Person` können Personenkontexte zugeordnet werden, welche die Rolle der `Person` in verschiedenen Kontexten beschreiben. So kann eine Person in einer Organisation die Rolle eines Schulbegleiters oder einer Schulbegleiterin haben, während sie in einer anderen Organisation die Rolle eines oder einer Lehrenden hat. Dabei sind einzelne Personenkontexte so spezifisch wie möglich. Hat eine `Person` in einer Organisation mehrende Rollen (wie Organisationsleitung oder Lehrend), so besteht für jede dieser Rollen ein eigener `Personenkontext`.
 
-Das Datenmodell `Gruppe` enthält Informationen zu zeitlich begrenzten Aktivitäten, meist Schulfächern. Eine `Gruppe`  enthält Attribute wie Jahrgangsstufen, Bildungsziele. Fächer und eine Laufzeit.
+Das Datenmodell `Gruppe` enthält Informationen zu zeitlich begrenzten Aktivitäten, meist Schulfächern. Eine `Gruppe` enthält Attribute wie Jahrgangsstufen, Bildungsziele, Fächer und eine Laufzeit.
 
-Einer `Gruppe` könnnen Gruppenzugehörigkeiten zugeordnet werden. Diese beschreiben Rollen, die innerhalb der Gruppe auftreten, beispielsweise Klassenleitung, Vertretungslehrkraft oder Lernende, sowie einen Zeitraum für die `Gruppenzugehörigkeit`.
+Einer `Gruppe` könnnen Gruppenzugehörigkeiten zugeordnet werden. Diese beschreiben Rollen, die Personenkontexte innerhalb der Gruppe haben, beispielsweise Klassenleitung, Vertretungslehrkraft oder Lernend, sowie einen Zeitraum für die `Gruppenzugehörigkeit`.
 
 Über die ID eines Personenkontextes wird eine Gruppenzugehörigkeit mit einem Personenkontext verknüpft und erlaubt damit, indirekt, die Zuuordnung einer Person zu einer Gruppe.
 
 ## Mandanten und Referrer
 
-Um eine eindeutige Zuordnung von Datensätzen zu der Organisation zu schaffen, welche die datenschutzrechtliche, inhaltliche und systemische Verfügungsgewalt über den Datensatz besitzt, enthalten die grundlegenden Datenmodelle das Attribut `Mandant`. Dieses Attribut enthält die ID der Organisation, welche schreibenden, ändernden oder löschenden Zugriff auf den jeweiligen Datensatz hat. 
+Um eine eindeutige Zuordnung von Datensätzen zu der Organisation zu schaffen, welche die datenschutzrechtliche, inhaltliche und systemische Verfügungsgewalt über den Datensatz besitzt, enthalten die grundlegenden Datenmodelle das Attribut `Mandant`. Dieses Attribut enthält die ID der Organisation, welche schreibenden, bearbeitenden oder löschenden Zugriff auf den jeweiligen Datensatz hat. 
 
-Da Anwendungen, welche mit Schulconnex-Servern Daten austauschen, teilweise eigene Identifikatoren für Datensätze nutzen, erlaubt das Attribut `Referrer` die Angabe einer eigenen ID, zusätzlich zu der von Schulconnex vergebenen ID.
+Da Anwendungen, welche mit Schulconnex-Servern Daten austauschen, teilweise eigene Identifikatoren für Datensätze nutzen, erlaubt das Attribut `Referrer` die Angabe einer eigenen ID zusätzlich zu der von Schulconnex vergebenen ID.
