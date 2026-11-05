@@ -32,10 +32,13 @@ nicht zwingend ein Geburtsdatum geliefert wird.
 
 ```mermaid
 classDiagram
+
+  class Verwaltungspolitische_Kodierung["Verwaltungspolitische Kodierung"]
+
   Person --> Organisation : 0..1
   Personenkontext --> Organisation : 1
   Organisation --> Anschrift : 0..1
-  Anschrift --> VerwaltungspolitischeKodierung : 0..1
+  Anschrift --> Verwaltungspolitische_Kodierung: 0..1
   Gruppe --> Organisation : 1
   Gruppe --> Lernperiode : 0 oder 2
   class Person {
@@ -94,9 +97,9 @@ classDiagram
     postleitzahl
     ort
     ortsteil
-    verwaltungspolitischeKodierung
+    verwaltungspolitischekodierung
   }
-  class VerwaltungspolitischeKodierung {
+  class Verwaltungspolitische_Kodierung {
     bundesland
   }
   class Gruppe {
