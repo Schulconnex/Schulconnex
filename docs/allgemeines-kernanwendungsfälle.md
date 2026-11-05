@@ -30,15 +30,15 @@ Vereinfacht ist die Beziehung zwischen den Datenmodellen wie folgt:
     class:
       hideEmptyMembersBox: true
 ---
-%% Die Option hideEmptyMemberBox unterdrückt das Rendern der leeren
+%% Die Option hideEmptyMembersBox unterdrückt das Rendern der leeren
 %% Felder für die Attribute, welche in dieser Übersichtsgraphik
 %% eher ablenken.
 
 classDiagram
 
-%% Namespacx-Box ist nicht schön, aber ohne die Box rendert
+%% Namespace-Box ist nicht schön, aber ohne die Box rendert
 %% Mermaid die Klassen in einer unübersichtlichen Darstellung.
-%% Die Namespacx-Box sorgt dafür, dass Gruppen und Personen auf einer Höhe sind
+%% Die Namespace-Box sorgt dafür, dass Gruppen und Personen auf einer Höhe sind
 
 namespace Basis-Datenmodelle   {
     class Gruppe
@@ -51,16 +51,16 @@ namespace Basis-Datenmodelle   {
 
 Das Datenmodell `Person` enthält Attribute zu Personen wie Name oder Geburtsdatum.
 
-Einer `Person` können Personenkontexte zugeordnet werden, welche die Rolle der `Person` in verschiedenen Kontexten beschreiben. So kann eine Person in einer Organisation die Rolle eines Schulbegleiters oder einer Schulbegleiterin haben, während sie in einer anderen Organisation die Rolle eines oder einer Lehrenden hat. Dabei sind einzelne Personenkontexte so spezifisch wie möglich. Hat eine `Person` in einer Organisation mehrende Rollen (wie Organisationsleitung oder Lehrend), so besteht für jede dieser Rollen ein eigener `Personenkontext`.
+Einer `Person` können Personenkontexte zugeordnet werden, welche die Rolle der `Person` in verschiedenen Kontexten beschreiben. So kann eine Person in einer Organisation die Rolle eines Schulbegleiters oder einer Schulbegleiterin haben, während sie in einer anderen Organisation die Rolle eines oder einer Lehrenden hat. Dabei sind einzelne Personenkontexte so spezifisch wie möglich. Hat eine `Person` in einer Organisation mehrere Rollen (wie Organisationsleitung oder Lehrende), so besteht für jede dieser Rollen ein eigener `Personenkontext`.
 
 Das Datenmodell `Gruppe` enthält Informationen zu zeitlich begrenzten Aktivitäten, meist Schulfächern. Eine `Gruppe` enthält Attribute wie Jahrgangsstufen, Bildungsziele, Fächer und eine Laufzeit.
 
-Einer `Gruppe` könnnen Gruppenzugehörigkeiten zugeordnet werden. Diese beschreiben Rollen, die Personenkontexte innerhalb der Gruppe haben, beispielsweise Klassenleitung, Vertretungslehrkraft oder Lernend, sowie einen Zeitraum für die `Gruppenzugehörigkeit`.
+Einer `Gruppe` können Gruppenzugehörigkeiten zugeordnet werden. Diese beschreiben Rollen, die Personenkontexte innerhalb der Gruppe haben, beispielsweise Klassenleitung, Vertretungslehrkraft oder Lernende, sowie einen Zeitraum für die `Gruppenzugehörigkeit`.
 
-Über die ID eines Personenkontextes wird eine Gruppenzugehörigkeit mit einem Personenkontext verknüpft und erlaubt damit, indirekt, die Zuuordnung einer Person zu einer Gruppe.
+Über die ID eines Personenkontextes wird eine Gruppenzugehörigkeit mit einem Personenkontext verknüpft und erlaubt damit, indirekt, die Zuordnung einer Person zu einer Gruppe.
 
 ## Mandanten und Referrer
 
-Um eine eindeutige Zuordnung von Datensätzen zu der Organisation zu schaffen, welche die datenschutzrechtliche, inhaltliche und systemische Verfügungsgewalt über den Datensatz besitzt, enthalten die grundlegenden Datenmodelle das Attribut `Mandant`. Dieses Attribut enthält die ID der Organisation, welche schreibenden, bearbeitenden oder löschenden Zugriff auf den jeweiligen Datensatz hat. 
+Um eine eindeutige Zuordnung von Datensätzen zu der Organisation zu schaffen, welche die datenschutzrechtliche, inhaltliche und systemische Verfügungsgewalt über den Datensatz besitzt, enthalten die grundlegenden Datenmodelle das Attribut `Mandant`. Dieses Attribut enthält die ID der Organisation, welche schreibenden, bearbeitenden oder löschenden Zugriff auf den jeweiligen Datensatz hat.
 
 Da Anwendungen, welche mit Schulconnex-Servern Daten austauschen, teilweise eigene Identifikatoren für Datensätze nutzen, erlaubt das Attribut `Referrer` die Angabe einer eigenen ID zusätzlich zu der von Schulconnex vergebenen ID.
