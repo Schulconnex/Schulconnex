@@ -51,7 +51,7 @@ const config: Config = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'Version 1.7',
+              label: 'Version 1.8',
               // path: '1.5',
             },
           },
