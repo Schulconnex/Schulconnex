@@ -429,6 +429,13 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-organisation-id',
+              label: '/organisationen/\u200B:id',
+              key: 'patch-organisation-id',
+              className: 'api-method patch',
+            },
+            {
+              type: 'doc',
               id: 'generated/openapi/quellsysteme/read-organisation-id-organisationsbeziehungen',
               label: '/organisationen/\u200B:id/\u200Borganisationsbeziehungen',
               className: 'api-method get',
