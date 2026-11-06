@@ -73,8 +73,7 @@ patch:
     Organisation. Siehe auch das Datenmodell zu
     [`Organisation`](../../../datenmodell-qs/organisation).
 
-    Diese API ist häufig nur als interne API für den Betreiber eines Schulconnex-Servers 
-```´
+    Diese Funktion ist häufig nur als interne API für den Betreiber eines Schulconnex-Servers 
     zur Durchführung administrativer Funktionen verfügbar.
 
     Die folgende Tabelle listet die Attribute einer Organisation auf,
@@ -85,7 +84,7 @@ patch:
     `id` | nein | ID der Organisation. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
     `revision` | ja | Revision der Organisation. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
     
-    Das Attribut id kann im Request ausgelassen werden. Ist es
+    Das Attribut `id` kann im Request ausgelassen werden. Ist es
     im Request dennoch vorhanden, wird es validiert und führt
     gegebenenfalls zu einer Fehlermeldung.
     

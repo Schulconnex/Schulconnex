@@ -431,6 +431,7 @@ const sidebars: SidebarsConfig = {
               type: 'doc',
               id: 'generated/openapi/quellsysteme/patch-organisation-id',
               label: '/organisationen/\u200B:id',
+              key: 'patch-organisation-id',
               className: 'api-method patch',
             },
             {
