@@ -1,4 +1,0 @@
-type: object
-properties:
-  bundesland:
-    $ref: './components-code-Bundesland.yaml'
