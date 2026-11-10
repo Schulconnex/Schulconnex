@@ -12,7 +12,7 @@ post:
 
     Organisationsbeziehungen sind immer von der Form „hat_als“. Besteht zum Beispiel
     von Organisation A eine Organisationsbeziehung vom Typ `Medienzentrum` zu einer Organisation B,
-    so bedeutet dieses, dass Organisation A die Organisation B als Medienzentrum hat.
+    so bedeutet dies, dass Organisation A die Organisation B als Medienzentrum hat.
 
     Ein CREATE zum Erstellen von Organisationsbeziehungen muss mit HTTP-POST auf die API 
     `/organisationen/{id}/organisationsbeziehungen` erfolgen. Die Anfrage-Nutzdaten
@@ -20,7 +20,7 @@ post:
 
     Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell-qs/organisationsbeziehung).
 
-    Diese API ist häufig nur als interne API für den Betreiber einens Schulconnex-Servers 
+    Diese Funktion ist häufig nur als interne API für den Betreiber einens Schulconnex-Servers 
     zur Durchführung administrativer Funktionen verfügbar.
 
     Bestehen zwischen zwei Organisationen mehrere Organisationsbeziehungen, so ist
