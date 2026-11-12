@@ -15,7 +15,7 @@ delete:
     von Gruppen zu beschreiben. Eine Löschung einer Lernperiode kann daher Auswirkungen
     auf die Geltungsdauer von Gruppen haben, welche mit der Lernperiode verknüpft sind.
 
-    In den meisten Fällen ist es sinnvoller bei der Veränderung der Laufzeiten von Lernperioden
+    In den meisten Fällen ist es sinnvoller, bei der Veränderung der Laufzeiten von Lernperioden
     eine neue, revidierte Lernperiode anzulegen und es Client-Systemen zu überlassen, ob sie
     die alte Lernperiode beibehalten oder auf eine neue Lernperiode wechseln wollen.
 
@@ -34,7 +34,7 @@ delete:
       name: code
       schema:
         type: string
-        example: 1fd95f6f-bc28-408b-8e03-41972b414a07
+        example: "2023"
       required: true
       description: Der Pfad-Parameter bezieht sich auf die Code-ID der Lernperiode.
   responses:

@@ -106,9 +106,9 @@ referenzgruppen.grupid | ID of the reference group.
 referenzgruppe.rollen | Roles in the reference group („Gruppenrollen”) to be selected for the group. If no roles are specified, all persons are selected. (The main purpose for this filter is that a class might contain a teacher and students, but only the students from this reference group participate in another group.)
 laufzeit | Defines the start and end date of a group. Both dates can be either defined by directly specifying a date or, alternatively, by associating a teaching period (like a year or a semester) with the group.
 laufzeit.von | Start date of the group as a date.
-laufzeit.vonlernperiode | Start date of the group as a reference to a teaching period. Refers to code list *Lernperiode*.
+laufzeit.vonlernperiode | Start date of the group as a reference to a teaching period. Refers to the code of a teaching period (see *Lernperiode*).
 laufzeit.bis | End date of the group as a date.
-laufzeit.bislernperiode | End date of the group as a reference to a teaching period. Refers to code list *Lernperiode*.
+laufzeit.bislernperiode | End date of the group as a reference to a teaching period. Refers to the code of a teaching period (see *Lernperiode*).
 revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system.
 
 ## Gruppenzugehörigkeit

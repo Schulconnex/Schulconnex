@@ -23,9 +23,9 @@ properties:
   beginn:
     description:	Datum, an dem die Lernperiode beginnt.
     type: string
-    example: 2027-08-01
+    example: 2023-08-01
   ende:
     description:	Datum, an dem die Lernperiode endet.
     type: string
-    example: 2028-07-31
+    example: 2024-07-31
 
