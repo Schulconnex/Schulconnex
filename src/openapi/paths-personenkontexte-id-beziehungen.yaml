@@ -38,8 +38,7 @@ post:
     Attribut | In den Anfrage-Nutzdaten erforderlich? | Bemerkung
     --- | --- | ---
     `id` | nein | ID der Beziehung. Wird vom Schulconnex-Server vergeben und ist eindeutig. Dieses Attribut ist unveränderbar (immutable).
-    `revision` | nein | Revision der Beziehung. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
-
+  
     Bei einer erfolgreichen Anforderung zum Erstellen einer Beziehung zu einem Personenkontext
     wird diese Anforderung mit einer Repräsentation der Beziehung in den Antwort-Nutzdaten
     und dem HTTP-Statuscode 201 quittiert.

@@ -429,15 +429,51 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-organisation-info',
+              label: '/organisation-info',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
               id: 'generated/openapi/quellsysteme/read-organisation-id-organisationsbeziehungen',
               label: '/organisationen/\u200B:id/\u200Borganisationsbeziehungen',
               className: 'api-method get',
             },
             {
               type: 'doc',
-              id: 'generated/openapi/quellsysteme/read-organisation-info',
-              label: '/organisation-info',
+              id: 'generated/openapi/quellsysteme/create-organisationsbeziehung',
+              label: '/organisationen/\u200B:id/\u200Borganisationsbeziehungen',
+              className: 'api-method post',
+            },
+          ],
+        },
+           {
+          type: 'category',
+          label: 'Organisationsbeziehungen',
+          items: [
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-organisation-id-organisationsbeziehungen',
+              label: '/organisationen/\u200B:id/\u200Borganisationsbeziehungen',
               className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/create-organisationsbeziehung',
+              label: '/organisationen/\u200B:id/\u200Borganisationsbeziehungen',
+              className: 'api-method post',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/read-organisationsbeziehung-id',
+              label: '/organisationsbeziehungen/\u200B:id',
+              className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/delete-organisationsbeziehung-id',
+              label: '/organisationsbeziehungen/\u200B:id',
+              className: 'api-method delete',
             },
           ],
         },

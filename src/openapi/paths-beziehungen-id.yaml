@@ -73,10 +73,6 @@ delete:
 
     Ein DELETE zum Löschen einer Beziehung per `beziehung.id` muss mit HTTP-DELETE auf die API `/beziehungen/{beziehung.id}` erfolgen.
 
-    Es ist erforderlich, dass für eine Löschanfrage einer Beziehung das Attribut `revision`
-    der zugrunde liegenden Beziehung mitgeschickt wird. Der Schulconnex-Server überprüft
-    anhand des mitgeschickten Werts des Attributs `revision`, ob der Datensatz in
-    der Zwischenzeit keine Änderung erfahren hat.
   parameters:
     - in: path
       name: id
@@ -84,18 +80,6 @@ delete:
         type: string
       required: true
       description: Der Pfad-Parameter bezieht sich auf die ID der Beziehung.
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          type: object
-          required:
-            - revision
-          properties:
-            revision:
-              type: string
-              description: Revision der zugrunde liegenden Beziehung. Dieses Feld ist ein Pflichtfeld.
   responses:
     '204':
       description: |
@@ -105,13 +89,6 @@ delete:
     '400':
       description: |
         Bad Request
-
-        Subcode 13: „Personenkontext wird genutzt." Dieser Fehler wird gemeldet, wenn
-        Daten eines Personenkontexts bereits im Zusammenhang mit einem Anmeldevorgang an
-        Dienste weitergeleitet wurden. In dem Fall muss die Löschung durch Setzen eines
-        Löschzeitpunkts erfolgen, um sicherzustellen, dass andere Dienste über die Löschung
-        informiert werden und eventuell existierende Information bei den Diensten gelöscht
-        werden können.
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes)
     '401':
