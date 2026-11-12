@@ -20,7 +20,7 @@ post:
 
     Siehe auch Datenmodell [`Organisationsbeziehung`](../../../datenmodell-qs/organisationsbeziehung).
 
-    Diese Funktion ist häufig nur als interne API für den Betreiber einens Schulconnex-Servers 
+    Diese Funktion ist häufig nur als interne API für den Betreiber eines Schulconnex-Servers 
     zur Durchführung administrativer Funktionen verfügbar.
 
     Bestehen zwischen zwei Organisationen mehrere Organisationsbeziehungen, so ist
@@ -115,7 +115,7 @@ get:
 
     Organisationsbeziehungen sind immer von der Form `hat_als`. Besteht von einer
     Organisation A eine Organisationsbeziehung vom Typ `SchBeh` zu einer
-    Organisation B, so bedeutet dieses, das Organisation A die Organisation B
+    Organisation B, so bedeutet dies, dass Organisation A die Organisation B
     als Schulbehörde hat.
 
     Bestehen zwischen zwei Organisationen mehrere Beziehungen (ist beispielsweise
