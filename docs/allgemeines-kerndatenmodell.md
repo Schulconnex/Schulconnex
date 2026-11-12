@@ -48,4 +48,4 @@ Einer `Gruppe` können Gruppenzugehörigkeiten zugeordnet werden. Diese beschrei
 
 Um eine eindeutige Zuordnung von Datensätzen zu dem Mandanten zu schaffen, welcher die datenschutzrechtliche, inhaltliche und systemische Verfügungsgewalt über den Datensatz besitzt, enthalten alle Datenmodelle des Kerndatenmodells das Attribut `mandant`. Dieses Attribut enthält die ID des Mandanten, welcher schreibenden, bearbeitenden oder löschenden Zugriff auf den jeweiligen Datensatz hat.
 
-Da Quellsysteme teilweise eigene Identifikatoren für Datensätze nutzen, erlaubt das Attribut `referrer` die Angabe einer eigenen ID zusätzlich zu der von Schulconnex vergebenen ID.
+Da Quellsysteme teilweise eigene Identifikatoren für Datensätze nutzen, erlaubt das Attribut `referrer` die Angabe einer eigenen ID zusätzlich zu der vom Schulconnex-Server vergebenen ID.
