@@ -12,7 +12,6 @@ properties:
     example: 58f45270-8e54-40c6-a212-980307fc19be
   organisation:
     type: object
-    nullable: true
     properties:
       id:
         description: ID der Organisation.
@@ -38,6 +37,7 @@ properties:
   rolle:
     $ref: './components-code-Rolle.yaml'
   loeschung:
+    nullable: true
     description: ''
     type: object
     properties:

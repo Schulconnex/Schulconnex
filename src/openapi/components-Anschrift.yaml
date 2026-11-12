@@ -13,4 +13,4 @@ properties:
     type: string
     example: Döhren
   verwaltungspolitischekodierung:
-    $ref: './components-code-verwaltungspolitischeKodierung.yaml'
+    $ref: './components-code-verwaltungspolitischekodierung.yaml'

@@ -2,6 +2,7 @@ type: object
 required:
   - name
   - auskunftssperre
+  - vertrauensstufe
 properties:
   referrer:
     description: Identifikations-ID einer Person. Wird vom Quellsystem vergeben und muss im Quellsystem eindeutig sein (z. B. eine einheitliche Personalnummer).
@@ -16,7 +17,6 @@ properties:
     required:
       - familienname
       - vorname
-      - vertrauensstufe
     properties:
       familienname:
         description: Familienname(n) der Person. Mehrere Familiennamen werden durch Leerzeichen separiert.
