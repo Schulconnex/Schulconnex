@@ -24,6 +24,7 @@ const sidebars: SidebarsConfig = {
       label: 'Allgemeines',
       items: [
         'allgemeines-kernanwendungsfälle',
+        'allgemeines-kerndatenmodell',
         'allgemeines-datenschutz',
       ]
     },
