@@ -23,7 +23,7 @@ classDiagram
   Personenkontext --> Sichtfreigabe : 0..1
   Organisation --> Anschrift : 0..1
   Anschrift --> Verwaltungspolitische_Kodierung : 0..1
-  Gruppe --> Organisation : 1
+  Gruppe --> Organisation : 0..1
   Gruppendatensatz --> Gruppe : 1
   Gruppendatensatz --> Gruppenzugehörigkeit : 0..n
   Gruppe --> Lernperiode : 0 oder 2
