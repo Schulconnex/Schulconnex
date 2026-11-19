@@ -282,6 +282,7 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'praxisleitfaden/ablauf-synchronisation',
+        'praxisleitfaden/ablauf-synchronisation-systemkontext',
         'praxisleitfaden/ablauf-schuljahrwechsel',
         'praxisleitfaden/rolle-in-organisation',
         'praxisleitfaden/ablauf-löschen',
