@@ -198,8 +198,11 @@ Describes the relationship of two organisations.
 
 Attribute | Description
 --- | ---
+id | ID of the relation. Optional until version 2.0 for backward compatibility.
+mandant | ID of the tenant the relation is attached to. Optional until version 2.0 for backward compatibility.
 orgid | ID of the organisation the current organisation has a „has as“ relation.
 organisationsbeziehung | Type of relation between the organisations.
+revision | Revision number of the information. This is mainly used to check on updates and deletes of data sets, whether there have been any changes to the data since it was retrieved by the client system. Optional until version 2.0 for backward compatibility.
 
 ## Verwaltungspolitische Kodierung
 
