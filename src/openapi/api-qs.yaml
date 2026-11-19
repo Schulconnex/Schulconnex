@@ -30,6 +30,8 @@ tags:
     description: Verknüpfung von Personenkontext und Gruppe
   - name: Sichtfreigaben
     description: Regelt zeitliche Sichtfreigabe für Organisationen
+  - name: Lernperioden
+    description: Regelt zeitliche Geltungsdauer von Gruppen 
 paths:
   /personen:
     $ref: './paths-personen.yaml'
@@ -67,6 +69,10 @@ paths:
     $ref: './paths-gruppenzugehoerigkeiten-id.yaml'
   /sichtfreigaben/{id}:
     $ref: './paths-sichtfreigaben-id.yaml'
+  /lernperioden:
+    $ref: './paths-lernperioden.yaml'
+  /lernperioden/{code}:
+    $ref: './paths-lernperioden-code.yaml'
 components:
   securitySchemes:
     oAuthForServices:
