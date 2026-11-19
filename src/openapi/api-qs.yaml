@@ -18,6 +18,8 @@ security:
 tags:
   - name: Organisationen
     description: Schulen oder sonstige relevante Organisationen
+  - name: Organisationsbeziehungen
+    description: Beziehung zwischen Organisationen
   - name: Personen
     description: Alles zu Personen und Personendatensätzen
   - name: Personenkontexte
