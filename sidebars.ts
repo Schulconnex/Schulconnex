@@ -24,6 +24,7 @@ const sidebars: SidebarsConfig = {
       label: 'Allgemeines',
       items: [
         'allgemeines-kernanwendungsfälle',
+        'allgemeines-kerndatenmodell',
         'allgemeines-datenschutz',
       ]
     },
@@ -426,6 +427,13 @@ const sidebars: SidebarsConfig = {
               id: 'generated/openapi/quellsysteme/read-organisation-id',
               label: '/organisationen/\u200B:id',
               className: 'api-method get',
+            },
+            {
+              type: 'doc',
+              id: 'generated/openapi/quellsysteme/patch-organisation-id',
+              label: '/organisationen/\u200B:id',
+              key: 'patch-organisation-id',
+              className: 'api-method patch',
             },
             {
               type: 'doc',
