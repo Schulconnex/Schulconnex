@@ -71,7 +71,7 @@ get:
   operationId: readGruppendatensaetze
   security:
     - oAuthForServices: []
-  summary: Gruppendatensätzen des Quellsystemanbieters
+  summary: Lesen von Gruppendatensätzen des Quellsystemanbieters
   description: |
     Dieser Schnittstellenendpunkt gibt ein Array von Gruppendatensätzen zurück, auf die das Quellsystem zugreifen darf.
 
@@ -118,6 +118,7 @@ get:
     --- | --- | ---
     `referrer` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Fremdschlüssel `referrer` zu filtern.
     `mandant` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `mandant` zu filtern. Der Schulconnex-Server überprüft, ob der Wert des Filterparameters unabhängig von Groß- und Kleinschreibung im Filter-Attribut beinhaltet ist (contains).
+    `orgid` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut `orgid` zu filtern.
     `bezeichnung` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.bezeichnung` zu filtern.
     `optionen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.optionen` zu filtern.
     `differenzierung` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.differenzierung` zu filtern.

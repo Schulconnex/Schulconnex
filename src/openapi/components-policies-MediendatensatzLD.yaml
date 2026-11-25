@@ -7,7 +7,7 @@ properties:
     description: Das Nutzungsrechteobjekt entsprechend der ODRL-Spezifikation
     type: object
     example:
-      odrl:id: https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7,
+      odrl:uid: https://example.com/v1/policies-info/9230294b-68da-4f4f-aa63-ad9040122aa7,
       odrl:target:
         odrl:uid: urn:issuer:medium:123456789,
         odrl:partOf: urn:issuer:catalogue
