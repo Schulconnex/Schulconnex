@@ -82,6 +82,7 @@ get:
             - personenkontexte
             - organisationen
             - gruppen
+            - beziehungen
     - in: query
       name: pid
       schema:
