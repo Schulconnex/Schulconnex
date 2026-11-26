@@ -60,6 +60,11 @@ get:
         Method not allowed
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '500':
+      description: |
+        Internal Server Error
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)        
 put:
   tags:
     - Personenkontexte
@@ -166,6 +171,11 @@ put:
         Conflict
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '500':
+      description: |
+        Internal Server Error
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)        
 patch:
   tags:
     - Personenkontexte
@@ -273,7 +283,12 @@ patch:
       description: |
         Conflict
 
-        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)        
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)      
+    '500':
+      description: |
+        Internal Server Error
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)          
 delete:
   tags:
     - Personenkontexte
@@ -358,3 +373,8 @@ delete:
         Conflict
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '500':
+      description: |
+        Internal Server Error
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)        

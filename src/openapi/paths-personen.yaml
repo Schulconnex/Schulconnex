@@ -104,6 +104,11 @@ get:
         Method not allowed
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '500':
+      description: |
+        Internal Server Error
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)        
 post:
   tags:
     - Personen
@@ -220,3 +225,8 @@ post:
         Conflict
 
         Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '500':
+      description: |
+        Internal Server Error
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)        
