@@ -1,0 +1,123 @@
+get:
+  tags:
+    - Gruppen
+  operationId: readGruppenInfo
+  security:
+    - oAuthForServices: []
+  summary: Lesen von Gruppen einer Organisation
+  description: |
+
+    Die Schnittstelle /gruppen-info ermöglicht die Auflistung der einem Dienst bekannten Gruppen durch Dienste. 
+    Der Zugriff erfordert die Client Credentials eines Dienstes.
+
+    Dieser Schnittstellenendpunkt gibt die Gruppen zurück, die vom Dienst ausgelesen werden dürfen. 
+    
+    Es können bei einem Aufruf nur Gruppen einer einzelnen Organisation abgefragt werden.
+  
+    Ein READ zum Abfragen der Gruppen muss mit HTTP-GET auf die API `/gruppen-info` erfolgen. Die Antwort-Nutzdaten (Response Payload) beinhalten ein
+    JSON-Objekt mit einem Array von Objekten des Datentyps Gruppe. Bei der Abfrage muss der Filter `orgid` genutzt werden. Anfragen ohne diesen 
+    Filter führen zu einem Fehler.
+
+    Siehe auch das Datenmodell zu [`Gruppe`](../../../datenmodell-dienste/gruppe).
+
+    Die Anfrage erfordert keine Nutzdaten (Request Payload).
+    
+    Durch das Setzen von Filterparametern (query-parameter) wird mit der HTTP-GET-Anfrage
+    eine Filteroperation mitgeschickt, welche die Ergebnismenge der Antwort-Nutzdaten
+    (Response Payload) beeinflusst, beispielsweise mit den Filterparametern 
+    `?orgid=9b3f36ad-9d15-49f9-9660-6cf9746ba446&faecher=EN`.
+
+    Werden mehrere Filter angegeben, so sind sie als mit „und“ verknüpft anzusehen.
+
+    Eine mehrfache Nutzung des gleichen Filters in einer Anfrage darf nicht erfolgen. 
+    Entsprechen keine Werte den angegebenen Filtern, so wird als Resultat eine leere Liste geliefert.
+
+    Bei Attributen, welche eine Liste von Codes enthalten können (deren „Anzahl“ im
+    Datenmodell die Form „0..n“ oder „1..n“ hat), kann als Filterwert eine durch Kommas
+    getrennte Liste von Werten angegeben werden. Es werden dann nur die Gruppen zurück
+    geliefert, in denen alle diese Codes in der Liste vorkommen. Die Parameter sind auch
+    hier als mit „und“ verknüpft anzusehen. Der Filter `&faecher=NL,IT,SN` liefert alle Gruppen,
+    in denen kumulativ sowohl Niederländisch, Italienisch und Spanisch gelehrt wird.
+
+    Ein Sonderfall ist bei dem Filter `faecher` gegeben. Ein Suchparameter bei diesem
+    Filter sucht sowohl im Unterattribut `kennung` als auch im Unterattribut `text`. Wird
+    in einer Gruppe beispielsweise das Standard-Fach Englisch unterrichtet und auch das Thema
+    „Filmschnitt“, das nicht in der Fächer-Codeliste vorhanden ist und daher über das Attribut
+    `text` hinzugefügt wurde, so kann diese Gruppe mit dem Filter `&faecher=EN,Filmschnitt`
+    gesucht werden.
+
+    Folgende Tabelle listet die zur Verfügung stehenden Filter:
+
+    Filter | Typ | Beschreibung
+    --- | --- | ---
+    `orgid` | String | Filtern der Ergebnisliste nach der ID einer Organisation. Dieses Filterwert ist notwendig und darf nicht weggelassen werden.
+    `bezeichnung` | String | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.bezeichnung` zu filtern.
+    `optionen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.optionen` zu filtern.
+    `differenzierung` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.differenzierung` zu filtern.
+    `bildungsziele` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.bildungsziele` zu filtern.
+    `jahrgangsstufen` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.jahrgangsstufen` zu filtern.
+    `faecher` | String (Code) | Möglichkeit, die Ergebnisliste der Anfrage nach dem Attribut  `gruppe.faecher.kennung` und  `gruppe.faecher.text` zu filtern.
+  parameters:
+    - in: query
+      name: orgid
+      required: true
+      schema:
+        type: string
+    - in: query
+      name: bezeichnung
+      schema:
+        type: string
+    - in: query
+      name: optionen
+      schema:
+        type: string
+    - in: query
+      name: differenzierung
+      schema:
+        type: string
+    - in: query
+      name: bildungsziele
+      schema:
+        type: string
+    - in: query
+      name: jahrgangsstufen
+      schema:
+        type: string
+    - in: query
+      name: faecher
+      schema:
+        type: string        
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:                      
+              $ref: './components-dienste-Gruppe.yaml'
+    '400':
+      description: |
+        Bad Request
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '401':
+      description: |
+        Unauthorized
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '403':
+      description: |
+        Forbidden
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '404':
+      description: |
+        Not found
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)
+    '405':
+      description: |
+        Method not allowed
+
+        Siehe [Fehlerbehandlung](../../../schnittstellendefinition/http-statuscodes-qs)

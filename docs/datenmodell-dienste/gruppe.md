@@ -15,7 +15,7 @@ id | String (UTF-8) | 1 | nein | ID der Gruppe. Wird vom Schulconnex-Server verg
 orgid | String (UTF-8) | 0/0..1 | ja | ID der Organisation, welcher die Gruppe zugeordnet ist. |
 bezeichnung | String (UTF-8) | 0/1 | ja | Bezeichnung der Gruppe, beispielsweise „Englisch, 2. Klasse“. | `urn:schulconnex:de:kern:gruppe:bezeichnung`
 thema | String (UTF-8) | 0/0..1 | ja | Thema der Gruppe in Kurzform, idealerweise weniger als 35 Zeichen. | `urn:schulconnex:de:kern:gruppe:thema`
-beschreibung | String (1024) (UTF-8) | 0..1 | ja | Zusätzliche optionale Beschreibung der Gruppe. | `urn:schulconnex:de:kern:gruppe:beschreibung`
+beschreibung | String (1024) (UTF-8) | 0/0..1 | ja | Zusätzliche optionale Beschreibung der Gruppe. | `urn:schulconnex:de:kern:gruppe:beschreibung`
 typ | String (Code) | 0/1 | ja | Typ der Gruppe (Klasse, Kurs). Referenz auf Code der Codeliste *Gruppentyp*. | `urn:schulconnex:de:kern:gruppe:typ`
 bereich | String (Code) | 0/0..1 | ja | Art der Gruppe (Pflicht, Wahl, Grundkurs, Leistungskurs…). Referenz auf Code der Codeliste *Gruppenbereich*. | `urn:schulconnex:de:kern:gruppe:bereich`
 optionen | String (Code) | 0/0..n | ja | Zusätzliche Optionen zur Gruppe, meistens sprachbezogen (bilingual, herkunftssprachlich). Referenz auf Code der Codeliste *Gruppenoption*. | `urn:schulconnex:de:kern:gruppe:optionen`
