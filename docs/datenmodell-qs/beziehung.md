@@ -17,3 +17,7 @@ mandant | String (UTF-8) | 1 | ID des Mandanten, dem die Beziehung zugeordnet is
 ktid | String (UTF-8) | 1 | ID des Personenkontexts, zu dem eine Beziehung besteht. |
 beziehung | String (UTF-8) | 1 | Beziehung aus Codeliste *Beziehungen*. | `urn:schulconnex:de:kern:beziehung:art`
 revision | String (UTF-8) | 1 | Revision der Beziehung. Wird vom Schulconnex-Server mit der Erstellung des Datensatzes sowie Aktualisierung generiert. Dieser Wert kann nicht von Quellsystemen oder Diensten gesetzt werden.
+
+Beziehungen können derzeit nur erstellt und gelöscht, aber nicht verändert werden. Das Attribut `revision`
+wird dennoch geführt, damit zukünftig zusätzliche Attribute sowie Aktualisierungen per HTTP-PUT oder
+HTTP-PATCH ergänzt werden können.

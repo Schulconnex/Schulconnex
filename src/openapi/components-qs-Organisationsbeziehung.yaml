@@ -1,5 +1,14 @@
 type: object
 properties:
+  id:
+    description: ID der Organisationsbeziehung.
+    type: string
+    example: 0b8f2b5e-3c7a-4d51-9e0a-6f2d1c4b7a93
+  mandant:
+    description: ID des Mandanten.
+    type: string
+    example: 6325b810-6b27-423d-a16b-f4b4cfa9f073
+    readOnly: true
   orgid:
     description: ID der Organisation.
     type: string
@@ -8,3 +17,7 @@ properties:
     description: Beziehung aus Codeliste [Organisationsbeziehungen](../../../codelisten#organisationsbeziehungen).
     type: string
     example: SchBeh
+  revision:
+    description: Revision der Organisationsbeziehung.
+    type: string
+    example: "1"
