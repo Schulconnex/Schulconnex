@@ -2,9 +2,11 @@ type: string
 enum:
   - Klasse
   - Kurs
+  - Nutzer
   - Sonstig
 description: >
     Wie folgt:
       * Klasse Schulklasse
       * Kurs Kurs/Unterricht
+      * Nutzer Nutzergruppe 
       * Sonstig Sonstige Gruppe
